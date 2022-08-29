@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap opdracht</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- to normalize css -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <style>
+
+    .containerTop {
+      background-color: rgba(149, 149, 149, 0.2);
+    }
+
+    @media screen and (min-width:768px) {
+      .row {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 0 25px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .row {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .block1 , .block2, .block3 {
+        padding-top: 15px;
+      }
+    }
+
+    .container-button {
+      border: 0;
+      height: 45px;
+      border-radius: 40px;
+      /* background-color: lime; */
+      /* width: 50%; */
+      transition: all 0.5s;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: small;
+    }
+
+    .container-button span {
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .container-button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .container-button:hover span {
+      padding-right: 25px;
+    }
+
+    .container-button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .block1,
+    .block2 {
+      font-size: medium;
+    }
+
+    .block1 {
+      background-color: #db9e9f;
+      color: white;
+      padding-bottom: 30px;
+      align-content: center;
+    }
+
+    .block2 {
+      background:#edb8c6;
+      color: white;
+      padding-bottom: 30px;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+    }
+
+    .button2 {
+      background-color: white;
+      color: black;
+      margin-top: 10%;
+      width: 70%;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width:70%;
+        margin-left: 15%;
+    }
+
+    .loginInput {
+        height: 30px;
+        text-align: center;
+        color: black;
+        
+    }
+
+    #login {
+        margin-top: 5px;
+        height: 30px    ;
+    }
+
+  </style>
+</head>
+
+<body>
+
+    <div class="container text-center containerTop" id="loginBlock">
+        <div class="row">
+          <div class="col-sm-12 block1">
+            <h2>inloggen</h2>
+            <div class="column">
+            <input class="loginInput" type="text" id="username" placeholder="Gebruikersnaam">
+            <input class="loginInput" type="password" id="password" placeholder="Wachtwoord">
+            <button id="login" class="container-button button1"><span>inloggen</span></button>
+            <button class="container-button button1"><span>Wachtwoord vergeten?</span></button>
+            </div>
+          </div>
+          <div class="col-sm-6 block2">
+            <h2>Nog geen account?</h2>
+            <button class="container-button button2"><span>registreer hier</span></button>
+          </div>
+          
+        </div>
+      </div>
+</body>
+
+</html>
