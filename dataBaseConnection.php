@@ -1,10 +1,10 @@
 <?php
 
 
-$servername = "localhost:3306";
+$servername = "localhost:3306"; 
 $usernameData = "Admin";
 $passwordData = "Zs4cn*710";
-$DataBaseName = "UserBase";
+$DataBaseName = "userBase";
 
 $mysqli = new mysqli($servername, $usernameData, $passwordData, $DataBaseName);
 

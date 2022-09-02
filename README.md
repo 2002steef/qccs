@@ -1,2 +1,1 @@
-# qccs
-qccs beta omgeving
+# qccs-opdracht
