@@ -34,7 +34,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header("Location:register.php?registerError2");
     } else if ($result = $mysqli->query("SELECT * FROM users WHERE userName='$username'")) {
         // test for username already exists
-        if ($result->num_rows >= 1) {
+        if (mysqli_num_rows($result) > 0) {
             header("Location:register.php?registerError3");
         }
     } else if (empty($password)) {
@@ -46,15 +46,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else if ($password !== $passwordCheck) {
         // test if password = password check/repeat
         header("Location:register.php?registerError6");
-    } else {
-
-        if ($result = $mysqli->query(
-            "INSERT INTO `users` (`userID`, `userName`, `Password`, `fullName`)
-            VALUES ('$username', '$password', '$email');"
-        )) {
+    } else 
+        echo ("<script>console.log('test');</script>");
+    if ($result = $mysqli->query("INSERT INTO `users` (`userName`, `Password`, `email`) VALUES ('$username', '$password', '$email');")) {
             if ($result->num_rows === 1) {
             } else {
-                header("Location:login.php?registerError3");
+                header("Location:home.php?registerSuccess");
                 exit();
             }
             // Free result set
@@ -62,7 +59,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         }
 
         exit();
-    }
+    
 }
 
 exit();
