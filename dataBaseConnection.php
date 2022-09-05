@@ -1,9 +1,9 @@
 <?php
 
 
-$servername = "localhost:3306"; 
-$usernameData = "Admin";
-$passwordData = "Zs4cn*710";
+$servername = "localhost"; 
+$usernameData = "steef";
+$passwordData = "Taxo18#56";
 $DataBaseName = "userBase";
 
 $mysqli = new mysqli($servername, $usernameData, $passwordData, $DataBaseName);
