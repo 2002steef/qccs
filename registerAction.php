@@ -26,17 +26,23 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     $passwordCheck = validate($_POST['passwordCheck']);
 
+    $result = $mysqli->query("SELECT * FROM medewerkers WHERE userName='$username'");
+    
+    // echo ('<script>console.log("'.$password.' en '.$passwordCheck.'")</script>');
+    // if ($password !== $passwordCheck) {
+    //         // test if password = password check/repeat
+    //         echo ('<script>console.log("'.$password.' is niet '.$passwordCheck.'")</script>');
+    //     }
+
     if (empty($email)) {
         // test for empty email input
         header("Location:register.php?registerError1");
     } else if (empty($username)) {
         // test for empty username input
         header("Location:register.php?registerError2");
-    } else if ($result = $mysqli->query("SELECT * FROM users WHERE userName='$username'")) {
+    } else if (mysqli_num_rows($result) > 0) {
         // test for username already exists
-        if (mysqli_num_rows($result) > 0) {
             header("Location:register.php?registerError3");
-        }
     } else if (empty($password)) {
         // test for empty password input
         header("Location:register.php?registerError4");
@@ -46,9 +52,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else if ($password !== $passwordCheck) {
         // test if password = password check/repeat
         header("Location:register.php?registerError6");
-    } else 
-        echo ("<script>console.log('test');</script>");
-    if ($result = $mysqli->query("INSERT INTO `users` (`userName`, `Password`, `email`) VALUES ('$username', '$password', '$email');")) {
+    } else if ($result = $mysqli->query("INSERT INTO `medewerkers` (`userName`, `Password`, `email`) VALUES ('$username', '$password', '$email');")) {
             if ($result->num_rows === 1) {
             } else {
                 header("Location:home.php?registerSuccess");

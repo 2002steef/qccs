@@ -1,6 +1,8 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
 /* to normalize css */
 
+
+
 .container-button {
     /* default button with animation settings */
     /* border: 0; */
@@ -173,6 +175,13 @@
         height: 300px;
         margin-top: 15vh;
     }
+    
+    .register {
+        font-size: 0.9vw;
+    }
+    body {
+        background-color: rgba(149, 149, 149, 0.2);
+    }
 
     @media screen and (max-height:400px) {
         .containerTop {
@@ -180,9 +189,6 @@
         }
     }
 
-    .register {
-        font-size: 0.9vw;
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -218,7 +224,11 @@
 
     .containerTop {
         background-color: rgba(149, 149, 149, 0.2);
+        margin-top: 25vh;
     }
-
+    body {
+        background-color: rgba(149, 149, 149, 0.2);
+    }
+    
 }
 

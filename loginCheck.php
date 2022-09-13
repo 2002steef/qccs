@@ -39,7 +39,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else {
 
         // Perform query
-        if ($result = $mysqli->query("SELECT * FROM users WHERE userName='$username' AND Password='$password'")) {
+        if ($result = $mysqli->query("SELECT * FROM medewerkers WHERE userName='$username' AND Password='$password'")) {
             if ($result->num_rows === 1) {
                 header("Location: home.php?loginSuccess");
             } else {

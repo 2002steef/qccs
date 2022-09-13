@@ -6,13 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="shortcut icon" href="logo.jpg">
 
 </head>
 
 <body>
 
-    <div class="container containerTop">
+    <div class="container containerTop" id="containerTop">
 
         <div class="row">
             <div class="block1" id="block1">
@@ -50,13 +50,25 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         let errorMessage = document.getElementById('loginErrorMessage').offsetHeight;
-        if(errorMessage>20){
+        if (errorMessage > 20) {
             document.getElementById("block1").style.paddingBottom = '10px';
+        }
+
+
+        let elementHeight = document.getElementById("containerTop").offsetHeight;
+        function setCookie() {
+            let timeForOneSec = new Date();
+            timeForOneSec.setTime(now.getTime + 2000);
+            timeForOneSec.toUTCString;
+            document.cookie = "elementHight="+elementHeight+"; expires="+ timeForOneSec +";";
+
+
         }
     });
 </script>
 
 <?php
+
 
 
 if (isset($_GET['loginError1'])) {
