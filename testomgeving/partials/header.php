@@ -18,30 +18,30 @@
     <!-- BEGIN VENDOR CSS-->
 	
     <!-- font icons-->
-    <link rel="stylesheet" type="text/css" href="../assets/fonts/feather/style.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendors/css/perfect-scrollbar.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendors/css/prism.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendors/css/switchery.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendors/css/datatables/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendors/css/sweetalert2.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendors/css/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/pages/authentication.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/switchery.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/datatables/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/pages/authentication.css">
 	
     <!-- END VENDOR CSS-->
     <!-- BEGIN APEX CSS-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/themes/layout-dark.css">
-    <link rel="stylesheet" href="../assets/css/plugins/switchery.css">
-	<link rel="stylesheet" href="../assets/css/plugins/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/themes/layout-dark.css">
+    <link rel="stylesheet" href="assets/css/plugins/switchery.css">
+	<link rel="stylesheet" href="assets/css/plugins/form-validation.css">
     <!-- END APEX CSS-->
     <!-- BEGIN Page Level CSS-->
     <!-- END Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- END: Custom CSS-->
 </head>
