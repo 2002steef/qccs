@@ -6,7 +6,7 @@ function Updateuser()
 {
     global $mysqli;
     if (isset($_POST['save'])) {
-        $query = "UPDATE users SET username = ?, name = ? , email = ? WHERE id = ?";
+        $query = "UPDATE medewerkers SET username = ?, name = ? , email = ? WHERE id = ?";
         $stmt = $mysqli->prepare($query);
 //        $options = ['cost' => 12,];
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
@@ -107,7 +107,7 @@ function UpdateCompanyInfo()
 function Getuser()
 {
     global $mysqli;
-    $sql = "SELECT * FROM users where id= ?";
+    $sql = "SELECT * FROM medewerker where id= ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
@@ -120,7 +120,7 @@ function Changepassword()
 {
     global $mysqli;
     if (isset($_POST['save_password'])) {
-        $sql = 'SELECT password FROM `users` WHERE id = ?';
+        $sql = 'SELECT password FROM `medewerkers` WHERE id = ?';
         if ($stmt = $mysqli->prepare($sql)) {
             $user = $_SESSION['id'];
             $stmt->bind_param('i', $user);
@@ -131,7 +131,7 @@ function Changepassword()
             if ($stmt->num_rows > 0) {
                 if ($_POST['old-password'] == $password) {
                     if ($_POST['new-password'] == $_POST['retype-new-password']) {
-                        $query = "UPDATE `users` SET password = ? WHERE id = ?";
+                        $query = "UPDATE `medewerkers` SET password = ? WHERE id = ?";
                         $stmt = $mysqli->prepare($query);
                         $stmt->bind_param('si', $_POST['retype-new-password'], $_SESSION['id']);
                         $stmt->execute();
@@ -152,7 +152,7 @@ function qron()
 {
     global $mysqli;
     if (isset($_POST['set'])) {
-        $sql = "UPDATE `users` SET `googlecode` = ? WHERE id = ?";
+        $sql = "UPDATE `medewerkers` SET `googlecode` = ? WHERE id = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param(
             "si",
@@ -168,7 +168,7 @@ function qroff()
     global $mysqli;
     if (isset($_POST['del'])) {
         $string = "";
-        $sql_d = "UPDATE `users` SET `googlecode` = ? WHERE id = ?";
+        $sql_d = "UPDATE `medewerkers` SET `googlecode` = ? WHERE id = ?";
         $stmt = $mysqli->prepare($sql_d);
         $stmt->bind_param(
             "si", $string, $_SESSION['id']
@@ -207,7 +207,7 @@ function UploadPic1()
                     move_uploaded_file($tmp_name, $img_upload_path);
 
                     // Insert into Database
-                    $sql_pic = "UPDATE `users` SET `image_url` = ? WHERE id = ?";
+                    $sql_pic = "UPDATE `medewerkers` SET `image_url` = ? WHERE id = ?";
                     $stmt = $mysqli->prepare($sql_pic);
                     $stmt->bind_param(
                         "si", $new_img_name, $_SESSION['id']
@@ -358,7 +358,7 @@ function password_reset($password, $confirmpassword, $email)
         exit('Not all fields are filled in.');
     }
     if ($password == $confirmpassword) {
-        $sqlUpdate = "UPDATE `users` SET `password`= ? WHERE email  = ?";
+        $sqlUpdate = "UPDATE `medewerkers` SET `password`= ? WHERE email  = ?";
         $stmt = $mysqli->prepare($sqlUpdate);
         $stmt->bind_param('ss', $password, $email);
         $stmt->execute();
@@ -530,7 +530,7 @@ function InsertCustomerIndividual()
                     $rowID = $result->fetch_assoc();
                     $stmt->close();
 
-                    $sql = "INSERT INTO `users`(`id`, `email`, `username`, `authentication_level`, `name`, `member_of`, `reset_token`) VALUES (?,?,?,?,?,?,?)";
+                    $sql = "INSERT INTO `medewerkers`(`id`, `email`, `username`, `authentication_level`, `name`, `member_of`, `reset_token`) VALUES (?,?,?,?,?,?,?)";
                     $stmt = $mysqli->prepare($sql);
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
@@ -880,9 +880,9 @@ function ViewUserP()
                                     <div class="form-group">
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
+                                            <label for="medewerkers-edit-username">Voornaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Voornaam" readonly
                                                    aria-invalid="false"
@@ -926,9 +926,9 @@ function ViewUserP()
                                     <div class="form-group">
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
+                                            <label for="medewerkers-edit-username">Straatnaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Straatnaam" readonly
                                                    aria-invalid="false"
@@ -936,9 +936,9 @@ function ViewUserP()
                                                    value="<?= $rowCustomerP["street"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
+                                            <label for="medewerkers-edit-username">Huisnummer</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Huisnummer" readonly
                                                    aria-invalid="false"
@@ -946,9 +946,9 @@ function ViewUserP()
                                                    value="<?= $rowCustomerP["housenumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="medewerkers-edit-username">Postcode</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Postcode" readonly
                                                    aria-invalid="false"
@@ -961,9 +961,9 @@ function ViewUserP()
                                     <div class="form-group">
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
+                                            <label for="medewerkers-edit-email">E-mail</label>
                                             <input type="email"
-                                                   id="users-edit-email"
+                                                   id="medewerkers-edit-email"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Typeemail@hier.com"
                                                    readonly
@@ -1023,9 +1023,9 @@ function ViewC()
                                     <div class="form-group">
                                         <h4>Bedrijfsgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
+                                            <label for="medewerkers-edit-username">Voornaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Voornaam" readonly
                                                    aria-invalid="false"
@@ -1078,9 +1078,9 @@ function ViewC()
                                     <div class="form-group">
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
+                                            <label for="medewerkers-edit-username">Straatnaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Straatnaam" readonly
                                                    aria-invalid="false"
@@ -1088,9 +1088,9 @@ function ViewC()
                                                    value="<?= $row["street"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
+                                            <label for="medewerkers-edit-username">Huisnummer</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Huisnummer" readonly
                                                    aria-invalid="false"
@@ -1098,9 +1098,9 @@ function ViewC()
                                                    value="<?= $row["housenumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="medewerkers-edit-username">Postcode</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Postcode" readonly
                                                    aria-invalid="false"
@@ -1113,9 +1113,9 @@ function ViewC()
                                     <div class="form-group">
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
+                                            <label for="medewerkers-edit-email">E-mail</label>
                                             <input type="email"
-                                                   id="users-edit-email"
+                                                   id="medewerkers-edit-email"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Typeemail@hier.com"
                                                    readonly
@@ -1187,9 +1187,9 @@ function editC()
                                         <div class="form-group">
                                             <h4>Bedrijfsgegevens</h4>
                                             <div class="controls">
-                                                <label for="users-edit-username">Naam</label>
+                                                <label for="medewerkers-edit-username">Naam</label>
                                                 <input type="text"
-                                                       id="users-edit-username"
+                                                       id="medewerkers-edit-username"
                                                        class="form-control text-light round"
                                                        placeholder="Naam"
                                                        required
@@ -1243,9 +1243,9 @@ function editC()
                                         <div class="form-group">
                                             <h4>Adresgegevens</h4>
                                             <div class="controls ">
-                                                <label for="users-edit-username">Straatnaam</label>
+                                                <label for="medewerkers-edit-username">Straatnaam</label>
                                                 <input type="text"
-                                                       id="users-edit-username"
+                                                       id="medewerkers-edit-username"
                                                        class="form-control text-light round"
                                                        placeholder="Straatnaam"
                                                        pattern="[a-zA-Z]{1,15}"
@@ -1256,9 +1256,9 @@ function editC()
                                                        value="<?= $row["street"] ?>">
                                             </div>
                                             <div class="controls">
-                                                <label for="users-edit-username">Huisnummer</label>
+                                                <label for="medewerkers-edit-username">Huisnummer</label>
                                                 <input type="text"
-                                                       id="users-edit-username"
+                                                       id="medewerkers-edit-username"
                                                        class="form-control text-light round"
                                                        placeholder="Huisnummer"
                                                        pattern="[0-9]{1,4}"
@@ -1269,9 +1269,9 @@ function editC()
                                                        value="<?= $row["housenumber"] ?>">
                                             </div>
                                             <div class="controls ">
-                                                <label for="users-edit-username">Postcode</label>
+                                                <label for="medewerkers-edit-username">Postcode</label>
                                                 <input type="text"
-                                                       id="users-edit-username"
+                                                       id="medewerkers-edit-username"
                                                        class="form-control text-light round"
                                                        placeholder="Postcode"
                                                        pattern="[0-9]{4}[A-Za-z]{2}"
@@ -1287,9 +1287,9 @@ function editC()
                                         <div class="form-group">
                                             <h4>Contactgegevens</h4>
                                             <div class="controls">
-                                                <label for="users-edit-email">E-mail</label>
+                                                <label for="medewerkers-edit-email">E-mail</label>
                                                 <input type="email"
-                                                       id="users-edit-email"
+                                                       id="medewerkers-edit-email"
                                                        class="form-control text-light round"
                                                        placeholder="Typeemail@hier.com"
                                                        aria-invalid="false"
@@ -1312,8 +1312,8 @@ function editC()
                                         </div>
                                         <div class="form-group">
                                             <div class="controls">
-                                                <label for="users-edit-role">Status</label>
-                                                <select id="users-edit-role" name="function" class="form-control">
+                                                <label for="medewerkers-edit-role">Status</label>
+                                                <select id="medewerkers-edit-role" name="function" class="form-control">
                                                     <option value="<?= $row["status"] ?>" hidden
                                                             selected><?= $row["status"] ?></option>
                                                     <option value="Actief">Actief</option>
@@ -1390,9 +1390,9 @@ function ViewUserZ()
                                     <div class="form-group">
 
                                         <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
+                                            <label for="medewerkers-edit-username">Voornaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Voornaam" readonly
                                                    aria-invalid="false"
@@ -1449,9 +1449,9 @@ function ViewUserZ()
                                     <div class="form-group">
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
+                                            <label for="medewerkers-edit-username">Straatnaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Straatnaam" readonly
                                                    aria-invalid="false"
@@ -1459,9 +1459,9 @@ function ViewUserZ()
                                                    value="<?= $rowCustomer["street"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
+                                            <label for="medewerkers-edit-username">Huisnummer</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Huisnummer" readonly
                                                    aria-invalid="false"
@@ -1469,9 +1469,9 @@ function ViewUserZ()
                                                    value="<?= $rowCustomer["housenumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="medewerkers-edit-username">Postcode</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Postcode" readonly
                                                    aria-invalid="false"
@@ -1484,9 +1484,9 @@ function ViewUserZ()
                                     <div class="form-group">
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
+                                            <label for="medewerkers-edit-email">E-mail</label>
                                             <input type="email"
-                                                   id="users-edit-email"
+                                                   id="medewerkers-edit-email"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Typeemail@hier.com"
                                                    readonly
@@ -1553,9 +1553,9 @@ function ViewPersonnel()
                                     <div class="form-group">
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
+                                            <label for="medewerkers-edit-username">Voornaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Voornaam" readonly
                                                    aria-invalid="false"
@@ -1601,9 +1601,9 @@ function ViewPersonnel()
                                     <div class="form-group">
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
+                                            <label for="medewerkers-edit-username">Straatnaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Straatnaam" readonly
                                                    aria-invalid="false"
@@ -1612,9 +1612,9 @@ function ViewPersonnel()
                                         </div>
                                         <div class="controls">
 
-                                            <label for="users-edit-username">Huisnummer</label>
+                                            <label for="medewerkers-edit-username">Huisnummer</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Huisnummer" readonly
                                                    aria-invalid="false"
@@ -1622,9 +1622,9 @@ function ViewPersonnel()
                                                    value="<?= $rowPersonnel["housenumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="medewerkers-edit-username">Postcode</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Postcode" readonly
                                                    aria-invalid="false"
@@ -1637,9 +1637,9 @@ function ViewPersonnel()
                                     <div class="form-group">
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
+                                            <label for="medewerkers-edit-email">E-mail</label>
                                             <input type="email"
-                                                   id="users-edit-email"
+                                                   id="medewerkers-edit-email"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Typeemail@hier.com"
                                                    readonly
@@ -1658,9 +1658,9 @@ function ViewPersonnel()
                                                    value="<?= $rowPersonnel["phoneNumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Bedrijf</label>
+                                            <label for="medewerkers-edit-username">Bedrijf</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Postcode"
                                                    readonly
@@ -1706,7 +1706,7 @@ function InsertUserZakelijk() {
         $token = bin2hex(random_bytes(50));
         $rowPersonnel1 = Getpersonnel1();
         $email = $rowPersonnel1['email'];
-        $sql = "INSERT INTO `users`(`username`,`name`,`email`,`reset_token`,`member_of`)VALUES(?,?,?,?,?)";
+        $sql = "INSERT INTO `medewerkers`(`username`,`name`,`email`,`reset_token`,`member_of`)VALUES(?,?,?,?,?)";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param(
             "ssssi",
@@ -1739,7 +1739,7 @@ function InsertUser()
         $token = bin2hex(random_bytes(50));
         $rowPersonnel1 = Getpersonnel1();
         $email = $rowPersonnel1['email'];
-        $sql = "INSERT INTO `users`(`username`,`name`,`email`,`reset_token`,`member_of`)VALUES(?,?,?,?,?)";
+        $sql = "INSERT INTO `medewerkers`(`username`,`name`,`email`,`reset_token`,`member_of`)VALUES(?,?,?,?,?)";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param(
             "ssssi",
@@ -1801,9 +1801,9 @@ function editPersonnel()
                                     <div class="form-group">
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
+                                            <label for="medewerkers-edit-username">Voornaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Voornaam"
                                                    pattern="[a-zA-Z]{1,15}"
@@ -1854,9 +1854,9 @@ function editPersonnel()
                                     <div class="form-group">
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
+                                            <label for="medewerkers-edit-username">Straatnaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Straatnaam"
                                                    aria-invalid="false"
@@ -1865,9 +1865,9 @@ function editPersonnel()
                                                    value="<?= $rowPersonnel["street"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
+                                            <label for="medewerkers-edit-username">Huisnummer</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Huisnummer"
                                                    pattern="[0-9]{1,4}"
@@ -1878,9 +1878,9 @@ function editPersonnel()
                                                    value="<?= $rowPersonnel["housenumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="medewerkers-edit-username">Postcode</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Postcode"
                                                    aria-invalid="false"
@@ -1894,9 +1894,9 @@ function editPersonnel()
                                     <div class="form-group">
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
+                                            <label for="medewerkers-edit-email">E-mail</label>
                                             <input type="email"
-                                                   id="users-edit-email"
+                                                   id="medewerkers-edit-email"
                                                    class="form-control text-light round"
                                                    placeholder="Typeemail@hier.com"
                                                    aria-invalid="false"
@@ -1916,14 +1916,14 @@ function editPersonnel()
                                         </div>
                                     </div>
                                     <div class="controls ">
-                                        <label for="users-edit-username">Bedrijf</label>
+                                        <label for="medewerkers-edit-username">Bedrijf</label>
                                         <br>
                                         <?php ViewCompanyPersonnel(); ?>
                                     </div>
                                     <div class="form-group">
                                         <div class="controls">
-                                            <label for="users-edit-role">Functie</label>
-                                            <select id="users-edit-role" name="function" class="form-control">
+                                            <label for="medewerkers-edit-role">Functie</label>
+                                            <select id="medewerkers-edit-role" name="function" class="form-control">
                                                 <option value="<?= $rowPersonnel["authentication_level"] ?>" hidden
                                                         selected><?= $rowPersonnel["authentication_level"] ?></option>
                                                 <option value="Bedrijfsleider">Bedrijfsleider</option>
@@ -1968,7 +1968,7 @@ function editPersonnel()
     if (isset($_POST["gebruiker"])) {
         global $mysqli;
         $token = bin2hex(random_bytes(50));
-        $sql = "INSERT INTO `users`(`username`,`name`,`email`,`reset_token`)VALUES(?,?,?,?)";
+        $sql = "INSERT INTO `medewerkers`(`username`,`name`,`email`,`reset_token`)VALUES(?,?,?,?)";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param(
             "ssss",
@@ -2030,9 +2030,9 @@ function editUserP()
                                     <div class="form-group">
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
+                                            <label for="medewerkers-edit-username">Voornaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Voornaam"
                                                    pattern="[a-zA-Z]{1,10}"
@@ -2082,9 +2082,9 @@ function editUserP()
                                     <div class="form-group">
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
+                                            <label for="medewerkers-edit-username">Straatnaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Straatnaam"
                                                    aria-invalid="false"
@@ -2093,9 +2093,9 @@ function editUserP()
                                                    value="<?= $rowCustomerP["street"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
+                                            <label for="medewerkers-edit-username">Huisnummer</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    pattern="[0-9]{1,4}"
                                                    title="Aleen cijfers"
@@ -2106,9 +2106,9 @@ function editUserP()
                                                    value="<?= $rowCustomerP["housenumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="medewerkers-edit-username">Postcode</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Postcode"
                                                    aria-invalid="false"
@@ -2122,9 +2122,9 @@ function editUserP()
                                     <div class="form-group">
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
+                                            <label for="medewerkers-edit-email">E-mail</label>
                                             <input type="email"
-                                                   id="users-edit-email"
+                                                   id="medewerkers-edit-email"
                                                    class="form-control text-light round"
                                                    placeholder="Typeemail@hier.com"
                                                    aria-invalid="false"
@@ -2218,9 +2218,9 @@ function editUserZ()
                                     <div class="form-group">
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
+                                            <label for="medewerkers-edit-username">Voornaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Voornaam"
                                                    aria-invalid="false"
@@ -2280,9 +2280,9 @@ function editUserZ()
                                     <div class="form-group">
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
+                                            <label for="medewerkers-edit-username">Straatnaam</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Straatnaam"
                                                    pattern="[a-zA-Z]{1,15}"
@@ -2293,9 +2293,9 @@ function editUserZ()
                                                    value="<?= $rowCustomer["street"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
+                                            <label for="medewerkers-edit-username">Huisnummer</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Huisnummer"
                                                    pattern="[0-9]{1,4}"
@@ -2306,9 +2306,9 @@ function editUserZ()
                                                    value="<?= $rowCustomer["housenumber"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="medewerkers-edit-username">Postcode</label>
                                             <input type="text"
-                                                   id="users-edit-username"
+                                                   id="medewerkers-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Postcode"
                                                    pattern="[0-9]{4}[A-Za-z]{2}"
@@ -2324,9 +2324,9 @@ function editUserZ()
                                     <div class="form-group">
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
+                                            <label for="medewerkers-edit-email">E-mail</label>
                                             <input type="email"
-                                                   id="users-edit-email"
+                                                   id="medewerkers-edit-email"
                                                    class="form-control text-light round"
                                                    placeholder="Typeemail@hier.com"
                                                    aria-invalid="false"
@@ -2347,7 +2347,7 @@ function editUserZ()
                                                    value="<?= $rowCustomer["phoneNumber"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-status">Status</label>
+                                            <label for="medewerkers-edit-status">Status</label>
                                             <select name="status" class="form-control">
                                                 <option value="<?= $rowCustomer["status"] ?>" hidden
                                                         selected><?= $rowCustomer['status'] ?></option>
@@ -2400,7 +2400,7 @@ $stmt->execute();
 $resultData = $stmt->get_result();
 while ($RowNote = $resultData->fetch_array()) {
     $idgebuiker = $RowNote["created_by"];
-    $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
+    $tableData1 = "SELECT * FROM `medewerkers` where `id` = '$idgebuiker'";
     $stmt1 = $mysqli->prepare($tableData1);
     $stmt1->execute();
     $resultData1 = $stmt1->get_result();
@@ -2481,7 +2481,7 @@ function ViewNote2()
         );
 
     $idgebuiker = $RowNote["created_by"];
-        $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
+        $tableData1 = "SELECT * FROM `medewerkers` where `id` = '$idgebuiker'";
         $stmt1 = $mysqli->prepare($tableData1);
         $stmt1->execute();
         $resultData1 = $stmt1->get_result();
