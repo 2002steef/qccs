@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (isset($_POST['email'], $_POST['wachtwoord'])) {
        $_SESSION['email'] = $_POST['email'];
-        if ($stmt = $mysqli->prepare('SELECT `userID`, `userName`, `Password`, `email`, `voornaam`, `tussenvoegsel`, `achternaam`,
+        if ($stmt = $mysqli->prepare('SELECT  `userName`, `Password`, `email`, `voornaam`, `tussenvoegsel`, `achternaam`,
          `telefoon`, `straat`, `huisNummer`, `huisNummerToevoeging`, `postcode`, `plaats` FROM `medewerkers` WHERE email = ?')) {
             // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
             $stmt->bind_param('s', $_POST['email']);
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->store_result();
 
             if ($stmt->num_rows > 0) {
-                $stmt->bind_result($id, $password, $googlecode, $auth_level, $memb_of);
+                $stmt->bind_result($userName, $password);
 //            $stmt->bind_result($id, $password);
                 $stmt->fetch();
                 // Account exists, now we verify the password.
