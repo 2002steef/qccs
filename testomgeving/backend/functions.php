@@ -107,7 +107,7 @@ function UpdateCompanyInfo()
 function Getuser()
 {
     global $mysqli;
-    $sql = "SELECT * FROM medewerkers where id= ?";
+    $sql = "SELECT * FROM medewerkers where userID= ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
