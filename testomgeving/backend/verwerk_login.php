@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
             $stmt->bind_param('s', $_POST['email']);
             $stmt->execute();
+        
             // Store the result so we can check if the account exists in the database.
             $stmt->store_result();
 
@@ -50,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     // } else {
                         if ($_SESSION['memb_of'] == 0) {
-                            header("Location:../bedrijfs_overzicht.php?");
+                            header("Location:../bedrijfs_klanten_overzicht.php?");
                         } else {
                             if (isset($_SESSION['auth']) && isset($_SESSION['memb_of'])) {
                                 if ($_SESSION['auth'] == "Werknemer") {
