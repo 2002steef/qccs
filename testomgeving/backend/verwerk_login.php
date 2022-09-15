@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['loggedin'] = true;
                     $_SESSION['name'] = $_POST['email'];
                     $_SESSION['id'] = $id;
+                    $_SESSION['status'] = "medewerker";
 //            echo 'Welcome ' . $_SESSION['name'] . '!';
                     if (!empty($_POST["remember_me"])) {
                         setcookie("username", $_POST["email"], time() + 3600);

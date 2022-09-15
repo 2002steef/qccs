@@ -91,33 +91,11 @@ $row = Getuser();
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
         <div class="logo clearfix">
-            <?php if (isset($_SESSION["memb_of"])) {if ($_SESSION["memb_of"] == 0) {
-                ?>
+            
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
                     <div class="logo-img"><img src="assets/img/logo.png"/></div>
                     <span class="text">CRM</span>
                 </a>
-                <?php
-            }
-            }if (isset($_SESSION["memb_of"])) {if ($_SESSION["memb_of"] > 0) {
-                if ($_SESSION['auth'] == "Bedrijfsleider") {
-                    ?>
-                    <a class="logo-text float-left"
-                       href="bedrijfs_klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
-                        <div class="logo-img"><img src="assets/img/logo.png"/></div>
-                        <span class="text">CRM</span>
-                    </a>
-                <?php } elseif ($_SESSION['auth'] == "Werknemer" || $row['authentication_level'] === 'user') {
-                    ?>
-                    <a class="logo-text float-left"
-                       href="klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
-                        <div class="logo-img"><img src="assets/img/logo.png"/></div>
-                        <span class="text">CRM</span>
-                    </a>
-                <?php }
-            }
-            }
-            ?>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
                         class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a>
             <a class="nav-close d-block d-lg-block d-xl-none" id="sidebarClose" href="javascript:;"><i
@@ -147,12 +125,12 @@ $row = Getuser();
                                 <i class="ft-bar-chart-2"></i>
                                 <span class="text">Relaties</span>
                             </a>
-                        <?php } elseif ($_SESSION['auth'] == "Werknemer") {
+                        <?php } elseif ($_SESSION["status"] == "medewerker") {
                             ?>
                             <a class=""
                                href="klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
                                 <i class="ft-bar-chart-2"></i>
-                                <span class="text">Relaties</span>
+                                <span class="text">Masseuses</span>
                             </a>
                         <?php }
                     }
