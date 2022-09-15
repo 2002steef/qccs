@@ -361,7 +361,7 @@ if (!isset($_SESSION["loggedin"])) {
     <?php
     include "partials/footer.php";
     ?>
-    <!-- <script>
+    <script>
         /*
         zet script nog in apart bestand wnnr af voor de aapie
     */
@@ -463,7 +463,7 @@ if (!isset($_SESSION["loggedin"])) {
             document.getElementById("straat_z").value = "";
             document.getElementById("plaats_z").value = "";
         }
-    </script> -->
+    </script>
 
 </body>
 <!-- END : Body-->
