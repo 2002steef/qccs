@@ -107,7 +107,7 @@ function UpdateCompanyInfo()
 function Getuser()
 {
     global $mysqli;
-    $sql = "SELECT * FROM werknemers where userID= ?";
+    $sql = "SELECT * FROM medewerkers where userID= ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
@@ -120,7 +120,7 @@ function Changepassword()
 {
     global $mysqli;
     if (isset($_POST['save_password'])) {
-        $sql = 'SELECT password FROM `werknemers` WHERE id = ?';
+        $sql = 'SELECT password FROM `medewerkers` WHERE id = ?';
         if ($stmt = $mysqli->prepare($sql)) {
             $user = $_SESSION['id'];
             $stmt->bind_param('i', $user);
