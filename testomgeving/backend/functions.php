@@ -69,9 +69,8 @@ function InsertBedrijf()
 function GetCompanyInfo()
 {
     global $mysqli;
-    $sql = "SELECT * FROM `organisation` WHERE id = ?";
+    $sql = "SELECT * FROM `bedrijven`";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("i", $_GET["membof"]);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
