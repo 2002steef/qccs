@@ -4,36 +4,6 @@ include "backend/functions.php";
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
-// Authentication Teus test fase
-// Checked of de user toegang heeft tot de pagina.
-// Als user geen toegang heeft wordt hij verstuurd naar correcte pagina.
-$row2 = Getuser();
-if ($row2['authentication_level'] !== 'Admin') {
-    $memb_of = $row2['member_of'];
-    $member_of = $_GET['membof'];
-    if ($memb_of !== 'Bedrijfsleider') {
-        if ($memb_of === 'Werknemer') {
-            header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-        }
-        if ($memb_of === 'user') {
-            header("Location:../klant_overzicht.php?custof=$memb_of&membof=$memb_of");
-        }
-    }
-    // Checked of nummer in de database gelijk is met het nummer in de GET REQUEST.
-    // Nummer uit de database is Numberic.
-    // Nummer uit de GET REQUEST is string.
-    if ($memb_of != $member_of) {
-        header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-    }
-    if ($memb_of != $member_of) {
-        header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-    }
-}
-
-
-
-
-
 
 Sendmail();
 InsertCustomerIndividual();
