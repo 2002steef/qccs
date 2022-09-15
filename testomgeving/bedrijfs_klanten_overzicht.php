@@ -5,16 +5,16 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 
-Sendmail();
-InsertCustomerIndividual();
-UpdateCompanyInfo();
-$rowC = GetCompanyInfo();
-editUserZ();
-editUserP();
-ViewUserP();
-ViewUserZ();
-ViewPersonnel();
-InsertUserZakelijk();
+// Sendmail();
+// InsertCustomerIndividual();
+// UpdateCompanyInfo();
+// $rowC = GetCompanyInfo();
+// editUserZ();
+// editUserP();
+// ViewUserP();
+// ViewUserZ();
+// ViewPersonnel();
+// InsertUserZakelijk();
 
 // Controleer of iemand ingelogd is
 
@@ -387,7 +387,7 @@ InsertUserZakelijk();
     <?php
     include "partials/footer.php";
     ?>
-    <script>
+    <!-- <script>
         /*
         zet script nog in apart bestand wnnr af voor de aapie
     */
@@ -489,7 +489,7 @@ InsertUserZakelijk();
             document.getElementById("straat_z").value = "";
             document.getElementById("plaats_z").value = "";
         }
-    </script>
+    </script> -->
 
 </body>
 <!-- END : Body-->
