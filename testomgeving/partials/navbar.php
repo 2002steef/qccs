@@ -40,23 +40,23 @@ $row = Getuser();
                     <li class="i18n-dropdown dropdown nav-item mr-2"><a
                                 class="nav-link d-flex align-items-center dropdown-toggle dropdown-language"
                                 id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img
-                                    class="langimg selected-flag" src="../assets/img/flags/nl.png" alt="flag"><span
+                                    class="langimg selected-flag" src="assets/img/flags/nl.png" alt="flag"><span
                                     class="selected-language d-md-flex d-none">Nederlands</span></a>
                         <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag"><a
                                     class="dropdown-item" href="javascript:;" data-language="en"><img
-                                        class="langimg mr-2" src="../assets/img/flags/us.png" alt="flag"><span
+                                        class="langimg mr-2" src="assets/img/flags/us.png" alt="flag"><span
                                         class="font-small-3">English</span></a><a class="dropdown-item"
                                                                                   href="javascript:;"
                                                                                   data-language="es"><img
-                                        class="langimg mr-2" src="../assets/img/flags/nl.png" alt="flag"><span
+                                        class="langimg mr-2" src="assets/img/flags/nl.png" alt="flag"><span
                                         class="font-small-3">Nederlands</span></a><a class="dropdown-item"
                                                                                   href="javascript:;"
                                                                                   data-language="pt"><img
-                                        class="langimg mr-2" src="../assets/img/flags/pt.png" alt="flag"><span
+                                        class="langimg mr-2" src="assets/img/flags/pt.png" alt="flag"><span
                                         class="font-small-3">Portuguese</span></a><a class="dropdown-item"
                                                                                      href="javascript:;"
                                                                                      data-language="de"><img
-                                        class="langimg mr-2" src="../assets/img/flags/de.png" alt="flag"><span
+                                        class="langimg mr-2" src="assets/img/flags/de.png" alt="flag"><span
                                         class="font-small-3">German</span></a></div>
                     </li>
                     <li class="dropdown nav-item mr-1"><a
@@ -94,7 +94,7 @@ $row = Getuser();
             <?php if (isset($_SESSION["memb_of"])) {if ($_SESSION["memb_of"] == 0) {
                 ?>
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
-                    <div class="logo-img"><img src="../assets/img/logo.png"/></div>
+                    <div class="logo-img"><img src="assets/img/logo.png"/></div>
                     <span class="text">CRM</span>
                 </a>
                 <?php
@@ -104,14 +104,14 @@ $row = Getuser();
                     ?>
                     <a class="logo-text float-left"
                        href="bedrijfs_klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
-                        <div class="logo-img"><img src="../assets/img/logo.png"/></div>
+                        <div class="logo-img"><img src="assets/img/logo.png"/></div>
                         <span class="text">CRM</span>
                     </a>
                 <?php } elseif ($_SESSION['auth'] == "Werknemer" || $row['authentication_level'] === 'user') {
                     ?>
                     <a class="logo-text float-left"
                        href="klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
-                        <div class="logo-img"><img src="../assets/img/logo.png"/></div>
+                        <div class="logo-img"><img src="assets/img/logo.png"/></div>
                         <span class="text">CRM</span>
                     </a>
                 <?php }
