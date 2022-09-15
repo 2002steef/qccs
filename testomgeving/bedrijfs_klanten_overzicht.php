@@ -11,7 +11,7 @@ if (!isset($_SESSION["loggedin"])) {
 // $rowC = GetCompanyInfo();
 // editUserZ();
 // editUserP();
-// ViewUserP();
+ ViewUserP();
 // ViewUserZ();
 // ViewPersonnel();
 // InsertUserZakelijk();
@@ -117,7 +117,7 @@ if (!isset($_SESSION["loggedin"])) {
                                                                 <thead>
                                                                     <tr>
                                                                         <th>Logo</th>
-                                                                        <th>Naam</th>
+                                                                        <th colspan="3">Naam</th>
                                                                         <th>Handelingen</th>
                                                                     </tr>
                                                                 </thead>
