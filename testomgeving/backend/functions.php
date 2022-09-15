@@ -756,8 +756,10 @@ function GetCustomerZ()
 function GetCustomerP()
 {
     global $mysqli;
-    $DataCustomer_P = "SELECT `userID`, `userName`, `Password`, `email`, `voornaam`, `tussenvoegsel`,
-     `achternaam`, `telefoon`, `straat`, `huisNummer`, `huisNummerToevoeging`, `postcode`, `plaats` FROM `medewerkers`";
+    $DataCustomer_P = "SELECT `masseuseID`, `userName`, `Password`, `email`, 
+    `voornaam`, `tussenvoegsel`, `achternaam`, `telefoon`,
+     `straat`, `huisNummer`,`huisNummerToevoeging`, `postcode`, `plaats`,
+      `website`, `profielFoto`, `vouchersVerzilverd`, `paragraafje` FROM `masseuses` WHERE 1";
     $stmt = $mysqli->prepare($DataCustomer_P);
     $stmt->execute();
     $resultCustomer = $stmt->get_result();
@@ -766,7 +768,7 @@ function GetCustomerP()
         ?>
 
         <tr>
-            <td><?= $rowCustomerP["userID"] ?></td>
+            <td><?= $rowCustomerP["masseuseID"] ?></td>
             <td><?= $rowCustomerP["voornaam"] . " " . $rowCustomerP["tussenvoegsel"] . " " . $rowCustomerP["achternaam"] ?></td>
             <td><?= $rowCustomerP["straat"] . " " . $rowCustomerP["huisNummer"] . " " . $rowCustomerP["huisNummerToevoeging"] ?></td>
             <td><?= $rowCustomerP["telefoon"] ?></td>
