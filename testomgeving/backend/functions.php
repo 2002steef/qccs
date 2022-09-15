@@ -756,16 +756,9 @@ function GetCustomerZ()
 function GetCustomerP()
 {
     global $mysqli;
-    $DataCustomer_P = "SELECT customers_individual.id,customers_individual.status,customers_individual.first_name,customers_individual.last_name_prefix,
-        customers_individual.last_name,customers_individual.street,customers_individual.housenumber,customers_individual.housenumberAddition,
-        customers_individual.housenumberAddition,customers_individual.postalcode,customers_individual.phoneNumber,customers_individual.email,
-       customers_individual.customer_of
- FROM customers_individual 
-     LEFT JOIN organisation 
-         ON customers_individual.customer_of = organisation.id 
- WHERE customers_individual.customer_of = ?";
+    $DataCustomer_P = "SELECT `userID`, `userName`, `Password`, `email`, `voornaam`, `tussenvoegsel`,
+     `achternaam`, `telefoon`, `straat`, `huisNummer`, `huisNummerToevoeging`, `postcode`, `plaats` FROM `medewerkers`";
     $stmt = $mysqli->prepare($DataCustomer_P);
-    $stmt->bind_param("i", $_GET["custof"]);
     $stmt->execute();
     $resultCustomer = $stmt->get_result();
 
@@ -773,33 +766,14 @@ function GetCustomerP()
         ?>
 
         <tr>
-            <td><?= $rowCustomerP["id"] ?></td>
-            <td><?= $rowCustomerP["first_name"] . " " . $rowCustomerP["last_name_prefix"] . " " . $rowCustomerP["last_name"] ?></td>
-            <td><?= $rowCustomerP["street"] . " " . $rowCustomerP["housenumber"] . " " . $rowCustomerP["housenumberAddition"] ?></td>
-            <td><?= $rowCustomerP["phoneNumber"] ?></td>
-            <td><?php
-                if ($rowCustomerP["status"] === "Inactief") { ?>
-                    <span class="badge bg-light-danger">Inactief</span>
-                <?php } elseif ($rowCustomerP["status"] === "Actief") { ?>
-                    <span class="badge bg-light-succes">Actief</span>
-                <?php } ?>            </td>
+            <td><?= $rowCustomerP["userID"] ?></td>
+            <td><?= $rowCustomerP["voornaam"] . " " . $rowCustomerP["tussenvoegsel"] . " " . $rowCustomerP["achternaam"] ?></td>
+            <td><?= $rowCustomerP["straat"] . " " . $rowCustomerP["huisNummer"] . " " . $rowCustomerP["huisNummerToevoeging"] ?></td>
+            <td><?= $rowCustomerP["telefoon"] ?></td>
             <td>
                 <div class="row">
-                    <div class="col-md-0">
-                    </div>
-                    <?php
-                    if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] = "Werknemer") {
-                        ?>
-                        <div class="col-md-5">
-                            <a href="#" data-toggle="modal" data-target="#editP<?= $rowCustomerP["id"] ?>">
-                                <i class="ft-edit"></i>
-                            </a>
-                        </div>
-                        <?php
-                    }
-                    ?>
                     <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?= $rowCustomerP["id"] ?>"
+                        <a data-toggle="modal" data-target="#info"
                            href="modals.php?<?= $rowCustomerP["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
