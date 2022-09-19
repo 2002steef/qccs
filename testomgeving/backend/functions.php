@@ -465,7 +465,7 @@ function masseuseInfo()
         <td>
             <div class="row">
                 <div class="col-md-5">
-                    <a data-toggle="modal" data-target="#extraInfo" href="modals.php?<?= $masseuse["masseuseID"] ?>">
+                    <a data-toggle="modal" data-target="#extraInfo" href="modals.php">
                         <i class="ft-eye"></i>
                     </a>
                 </div>
