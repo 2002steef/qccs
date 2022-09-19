@@ -45,7 +45,7 @@ include "functions.php";
 
     <!-- Navbar (Header) Starts-->
     <?php
-    include "/partials/navbar.php";
+    include "../partials/navbar.php";
     ?>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <!-- / main menu-->
@@ -129,7 +129,7 @@ include "functions.php";
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
     <?php
-    include "/partials/footer.php";
+    include "../partials/footer.php";
     ?>
     <script>
         /*
