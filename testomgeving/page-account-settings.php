@@ -105,13 +105,13 @@ include"partials/header.php";
                                                         <div class="col-12 form-group">
                                                             <label for="username">Username</label>
                                                             <div class="controls">
-                                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php echo $row['username']; ?>" required>
+                                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php echo $row['userName']; ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <label for="name">Name</label>
                                                             <div class="controls">
-                                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php echo $row['name']; ?>" required>
+                                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php echo $row['voornaam']; ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
@@ -122,7 +122,7 @@ include"partials/header.php";
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <div class="controls">
-                                                                <input type="hidden" id="email" name=email"" class="form-control" placeholder="E-mail" value="<?php echo $row['email']; ?>" required>
+                                                                <input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $row['email']; ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
