@@ -92,7 +92,7 @@ masseuseInfo();
                                                                 <thead>
                                                                     <tr>
                                                                         <th>Logo</th>
-                                                                        <th>Masseuses</th>
+                                                                        <th colspan="4">Masseuse info</th>
                                                                         <th>Handelingen</th>
                                                                     </tr>
                                                                 </thead>
