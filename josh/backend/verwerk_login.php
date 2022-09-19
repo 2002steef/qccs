@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     //     //header("Location: ../device_confirmations.php");
 
                     // } else {
-                        if ($_SESSION['memb_of'] == 0) {
-                            header("Location:../bedrijfs_klanten_overzicht.php?");
+                        if ($_SESSION['status'] == "medewerker" ) {
+                            header("Location:medewerker/medewerker.php?");
                         } else {
                             if (isset($_SESSION['auth']) && isset($_SESSION['memb_of'])) {
                                 if ($_SESSION['auth'] == "Werknemer") {
