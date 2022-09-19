@@ -463,16 +463,22 @@ function masseuseInfo()
         <td><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"] ?></td>
         <td><?= $masseuse["telefoon"] ?></td>
         <td>
-            <div class="row">
-                <div class="col-md-5">
-                    <a data-toggle="modal" id="#extraInfo<?= $masseuse["masseuseID"] ?>" data-target="#extraInfo<?= $masseuse["masseuseID"] ?>"
-                     href="modals.php<?= $masseuse["masseuseID"] ?>">
-                        <i class="ft-eye"></i>
-                    </a>
+                <div class="row">
+                    <div class="col-md-0">
+                    </div>
+                        <div class="col-md-5">
+                            <a href="#" data-toggle="modal" data-target="#editP<?= $masseuse["masseuseID"] ?>">
+                                <i class="ft-edit"></i>
+                            </a>
+                        </div>
+                    <div class="col-md-5">
+                        <a data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?>"
+                           href="modals.php?<?= $masseuse["masseuseID"] ?>">
+                            <i class="ft-eye"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </td>
-    </tr>
+            </td>
 </tbody>
   <?php
     }
