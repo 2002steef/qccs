@@ -44,19 +44,19 @@ $row = Getuser();
                                     class="selected-language d-md-flex d-none">Nederlands</span></a>
                         <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag"><a
                                     class="dropdown-item" href="javascript:;" data-language="en"><img
-                                        class="langimg mr-2" src="assets/img/flags/us.png" alt="flag"><span
+                                        class="langimg mr-2" src="../assets/img/flags/us.png" alt="flag"><span
                                         class="font-small-3">English</span></a><a class="dropdown-item"
                                                                                   href="javascript:;"
                                                                                   data-language="es"><img
-                                        class="langimg mr-2" src="assets/img/flags/nl.png" alt="flag"><span
+                                        class="langimg mr-2" src="../assets/img/flags/nl.png" alt="flag"><span
                                         class="font-small-3">Nederlands</span></a><a class="dropdown-item"
                                                                                   href="javascript:;"
                                                                                   data-language="pt"><img
-                                        class="langimg mr-2" src="assets/img/flags/pt.png" alt="flag"><span
+                                        class="langimg mr-2" src="../assets/img/flags/pt.png" alt="flag"><span
                                         class="font-small-3">Portuguese</span></a><a class="dropdown-item"
                                                                                      href="javascript:;"
                                                                                      data-language="de"><img
-                                        class="langimg mr-2" src="assets/img/flags/de.png" alt="flag"><span
+                                        class="langimg mr-2" src="../assets/img/flags/de.png" alt="flag"><span
                                         class="font-small-3">German</span></a></div>
                     </li>
                     <li class="dropdown nav-item mr-1"><a
@@ -110,11 +110,12 @@ $row = Getuser();
         <div class="nav-container">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
-                    <?php if (isset($_SESSION["memb_of"])) { if ($_SESSION["memb_of"] == 0) {
+                    <?php if (isset($_SESSION["status"])) {
+                         if ($_SESSION["status"] == "medewerker") {
                         ?>
                         <a class="" href="bedrijfs_overzicht.php">
                             <i class="ft-align-justify"></i>
-                            <span class="text">CRM Relaties</span>
+                            <span class="text">Masseuses</span>
                         </a>
                         <?php
                     } elseif ($_SESSION["memb_of"] > 0) {
