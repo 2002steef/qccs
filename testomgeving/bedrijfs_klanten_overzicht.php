@@ -95,6 +95,7 @@ if (!isset($_SESSION["loggedin"])) {
                                                                         <th>Handelingen</th>
                                                                         <th></th>
                                                                         <th></th>
+                                                                        <th></th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
