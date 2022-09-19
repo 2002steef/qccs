@@ -2,7 +2,7 @@
 include "backend/functions.php";
 
 
-$user = $_SESSION['name'];
+$user = $_SESSION['userName'];
 $id = $_SESSION['userID'];
 
 // Controleer of iemand ingelogd is
