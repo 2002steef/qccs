@@ -15,6 +15,7 @@ if (!isset($_SESSION["loggedin"])) {
 // ViewUserZ();
 // ViewPersonnel();
 // InsertUserZakelijk();
+masseuseInfo();
 
 // Controleer of iemand ingelogd is
 
