@@ -821,7 +821,7 @@ function GetCustomerZ()
     }
 }
 
-function GetCustomerP()
+function masseuseInfo()
 {
     global $mysqli;
     $DataCustomer_P = "SELECT `masseuseID`, `userName`, `Password`, `email`, 

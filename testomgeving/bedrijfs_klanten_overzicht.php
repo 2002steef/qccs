@@ -100,7 +100,7 @@ if (!isset($_SESSION["loggedin"])) {
                                                                 </thead>
                                                                 <tbody>
                                                                     <?php
-                                                                    GetCustomerP();
+                                                                    masseuseInfo();
                                                                     ?>
                                                                 </tbody>
                                                             </table>

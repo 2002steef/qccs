@@ -1,7 +1,7 @@
 <?php
 $rowVP = GetCustomerP();
 ?>
-<div class="modal fade text-left" id="info<?= $_GET["masseuseID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+<div class="modal fade text-left" id="info<?= $rowVP["masseuseID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
