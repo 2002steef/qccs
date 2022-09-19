@@ -474,7 +474,8 @@ function masseuseInfo()
                     <div class="col-md-5">
                         <a data-toggle="modal" data-target="#info<?=$masseuse["masseuseID"]?>"
                            href="modals.php">
-                            <i class="ft-eye"></i>
+                            <!-- <i class="ft-eye"></i> -->
+                            Test link
                         </a>
                     </div>
                 </div>
