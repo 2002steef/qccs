@@ -15,7 +15,6 @@ if (!isset($_SESSION["loggedin"])) {
 // ViewUserZ();
 // ViewPersonnel();
 // InsertUserZakelijk();
-masseuseInfo();
 
 // Controleer of iemand ingelogd is
 
@@ -92,7 +91,7 @@ masseuseInfo();
                                                                 <thead>
                                                                     <tr>
                                                                         <th>Logo</th>
-                                                                        <th colspan="4">Masseuse info</th>
+                                                                        <th colspan="5">Masseuse info</th>
                                                                         <th>Handelingen</th>
                                                                     </tr>
                                                                 </thead>
