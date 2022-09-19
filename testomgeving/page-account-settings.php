@@ -3,10 +3,7 @@ include "backend/functions.php";
 
 
 $user = $_SESSION['name'];
-$secret = $_SESSION['secret'];
-$id = $_SESSION['id'];
-require_once 'PHPGangsta/GoogleAuthenticator.php';
-$ga = new PHPGangsta_GoogleAuthenticator();
+$id = $_SESSION['userID'];
 
 // Controleer of iemand ingelogd is
 if (!isset($_SESSION["loggedin"])) {
