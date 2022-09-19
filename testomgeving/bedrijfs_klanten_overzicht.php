@@ -11,7 +11,7 @@ if (!isset($_SESSION["loggedin"])) {
 // $rowC = GetCompanyInfo();
 // editUserZ();
 // editUserP();
-//ViewUserP();
+// ViewUserP();
 // ViewUserZ();
 // ViewPersonnel();
 // InsertUserZakelijk();
@@ -93,6 +93,8 @@ if (!isset($_SESSION["loggedin"])) {
                                                                         <th>Logo</th>
                                                                         <th colspan="3">Masseuses</th>
                                                                         <th>Handelingen</th>
+                                                                        <th></th>
+                                                                        <th></th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -120,36 +122,7 @@ if (!isset($_SESSION["loggedin"])) {
         <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
     </div>
-    <div class="col-lg-3 col-md-6 col-12">
-        <!-- Button trigger modal -->
-        <!-- Modal -->
 
-        <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <label class="modal-title text-text-bold-600" id="myModalLabel33">Formulier</label>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                        </button>
-                    </div>
-                    <form method="post">
-                        <div class="modal-body">
-                            <label>Email: </label>
-                            <div class="form-group">
-                                <input type="text" name="Email" placeholder="Email Address" class="form-control">
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
-                            <input type="submit" class="btn btn-primary" name="Verzenden" value="Verzenden">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- /////////////////////////////////////////////////////////////////////////////-->
 
     <div class="sidenav-overlay"></div>
