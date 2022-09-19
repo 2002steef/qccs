@@ -9,16 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (isset($_POST['email'], $_POST['wachtwoord'])) {
        $_SESSION['email'] = $_POST['email'];
-        if ($stmt = $mysqli->prepare('SELECT `id`, `username`, `email`,
-		`password`,`authentication_level` FROM `users` WHERE email = ?')) {
+        if ($stmt = $mysqli->prepare('SELECT  `userName`, `Password`, `email` FROM `medewerkers` WHERE email = ?')) {
             // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
             $stmt->bind_param('s', $_POST['email']);
             $stmt->execute();
+        
             // Store the result so we can check if the account exists in the database.
             $stmt->store_result();
 
             if ($stmt->num_rows > 0) {
-                $stmt->bind_result($id,$username, $email, $password,$auth);
+                $stmt->bind_result($userName, $password, $email);
 //            $stmt->bind_result($id, $password);
                 $stmt->fetch();
                 // Account exists, now we verify the password.
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['loggedin'] = true;
                     $_SESSION['name'] = $_POST['email'];
                     $_SESSION['id'] = $id;
-					$_SESSION['auth'] = $auth;
+                    $_SESSION['status'] = "medewerker";
 //            echo 'Welcome ' . $_SESSION['name'] . '!';
                     if (!empty($_POST["remember_me"])) {
                         setcookie("username", $_POST["email"], time() + 3600);
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     // } else {
                         if ($_SESSION['memb_of'] == 0) {
-                            header("Location:../bedrijfs_overzicht.php?");
+                            header("Location:../bedrijfs_klanten_overzicht.php?");
                         } else {
                             if (isset($_SESSION['auth']) && isset($_SESSION['memb_of'])) {
                                 if ($_SESSION['auth'] == "Werknemer") {
