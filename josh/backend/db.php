@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "Live_testDB";
-$password = "8iK#584gg";
-$db = "live_database";
+$username = "relatietest";
+$password = "Rb4x4y7*3";
+$db = "test_relatiebeheer";
 
 // Create connection
 $mysqli = new mysqli("$servername", "$username", "$password", "$db");
