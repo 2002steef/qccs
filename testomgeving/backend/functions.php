@@ -843,7 +843,7 @@ function GetCustomerP()
             <td>
                 <div class="row">
                     <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?= $rowCustomerP["masseuseID"] ?>" href="../modals.php?<?= $rowCustomerP["masseuseID"] ?>">
+                        <a data-toggle="modal" data-target="#info<?= $rowCustomerP["masseuseID"] ?>" href="modals.php?<?= $rowCustomerP["masseuseID"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
