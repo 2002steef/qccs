@@ -2,14 +2,14 @@
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
 <?php
-include "backend/functions.php";
+include "/backend/functions.php";
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
 
 <?php
-include "partials/header.php";
+include "/partials/header.php";
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
