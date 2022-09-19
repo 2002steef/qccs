@@ -21,16 +21,16 @@ $row = Getuser();
 <!-- BEGIN : Head-->
 
 <?php
-include"partials/header.php";	
+include "partials/header.php";
 ?>
 <!-- END : Head-->
 
 <!-- BEGIN : Body-->
 
 <body class="vertical-layout vertical-menu 2-columns  navbar-static layout-dark layout-transparent bg-glass-1" data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
-<?php	
-	include "partials/navbar.php";
-?>
+    <?php
+    include "partials/navbar.php";
+    ?>
     <div class="wrapper">
         <div class="main-panel">
             <!-- BEGIN : Main Content-->
@@ -86,10 +86,10 @@ include"partials/header.php";
                                                     <img src="uploads/IMG-61b0ee01b38261.71649507.jpg" alt="profile-img" class="rounded mr-3" height="64" width="64">
                                                     <div class="media-body">
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
-<form action="page-account-settings.php" method="post" enctype="multipart/form-data">
-<input type="file" name="my_image" type="button" class="btn btn-sm btn-primary mb-1 mb-sm-0">
-    <input type="submit" class="btn btn-sm btn-primary mb-1 mb-sm-0" name="submitpic" value="Upload">
-</form>
+                                                            <form action="page-account-settings.php" method="post" enctype="multipart/form-data">
+                                                                <input type="file" name="my_image" type="button" class="btn btn-sm btn-primary mb-1 mb-sm-0">
+                                                                <input type="submit" class="btn btn-sm btn-primary mb-1 mb-sm-0" name="submitpic" value="Upload">
+                                                            </form>
                                                         </div>
                                                         <p class="text-muted mb-0 mt-1 mt-sm-0">
                                                             <small>Allowed JPG, GIF or PNG. Max size of 800kB</small>
@@ -131,29 +131,27 @@ include"partials/header.php";
                                                                 <a href="javascript:;" class="alert-link">Resend confirmation</a>
                                                             </div>
                                                         </div>
-														<div style="color: red" class="error-message"><?php
-														if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-															if (isset($error)) {
-																echo $error;
-															}
-														}
-														?>
-													</div>
+                                                        <div style="color: red" class="error-message"><?php
+                                                                                                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                                                                                            if (isset($error)) {
+                                                                                                                echo $error;
+                                                                                                            }
+                                                                                                        }
+                                                                                                        ?>
+                                                        </div>
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                             <button type="submit" name="save" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
-															<a href="<?php if ($_SESSION['memb_of'] == 0) {
-                            echo "../medewerkers.php?";
-                        } else {
-                            if (isset($_SESSION['status']) && isset($_SESSION['loggedin'])) {
-                                if ($_SESSION['status'] == "Werknemer") {
-                                   echo "../medewerkers.php";
-                                } else {
-                                   echo "../medewerkers.php";
-                                }
-                            }
-                        } ?>" class="btn btn-secondary mb-1">
-                                                                    Cancel
-                                                                </a>
+                                                            <a href="<?php
+                                                                        if (isset($_SESSION['status']) && isset($_SESSION['loggedin'])) {
+                                                                            if ($_SESSION['status'] == "Werknemer") {
+                                                                                echo "../medewerkers.php";
+                                                                            } else {
+                                                                                echo "../medewerkers.php";
+                                                                            }
+                                                                        }
+                                                                        ?>" class="btn btn-secondary mb-1">
+                                                                Cancel
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -189,26 +187,26 @@ include"partials/header.php";
                                             <div class="tab-pane" id="connections" role="tabpanel" aria-labelledby="connections-tab">
                                                 <form method="post">
                                                     <div class="row">
-														<div class='d-flex flex-column align-items-center text-center'>
-															<?php
-																if (strlen($secret) > 5) {
-																	echo "<div><h2>Qr code is al ingesteld</h2></div>";
-																}
-																?>
-																<?php
-																if ($secret == "") {
-																	$secret = $ga->createSecret();
-																}
-																//echo $secret	
-																?>
-																														<input hidden name='secret' value='<?php echo $secret ?>'>
+                                                        <div class='d-flex flex-column align-items-center text-center'>
+                                                            <?php
+                                                            if (strlen($secret) > 5) {
+                                                                echo "<div><h2>Qr code is al ingesteld</h2></div>";
+                                                            }
+                                                            ?>
+                                                            <?php
+                                                            if ($secret == "") {
+                                                                $secret = $ga->createSecret();
+                                                            }
+                                                            //echo $secret	
+                                                            ?>
+                                                            <input hidden name='secret' value='<?php echo $secret ?>'>
 
-																<img src='<?php
-																	$qrCodeUrl = $ga->getQRCodeGoogleUrl($user, $secret);
-																	echo $qrCodeUrl;
-																?>'/>
-														</div>
-														 <div>
+                                                            <img src='<?php
+                                                                        $qrCodeUrl = $ga->getQRCodeGoogleUrl($user, $secret);
+                                                                        echo $qrCodeUrl;
+                                                                        ?>' />
+                                                        </div>
+                                                        <div>
                                                             <h2>Google Two Factor Authentication</h2>
                                                             <p>Get Google Authenticator on your phone</p>
                                                             <ul>
@@ -221,8 +219,8 @@ include"partials/header.php";
                                                             </ul>
                                                         </div>
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-															<button type='submit' name='set' class='btn btn-primary mr-sm-2 mb-1'>On</button>
-                                        					<button type='submit' name='del' class='btn btn-secondary mb-1'>Off</button>
+                                                            <button type='submit' name='set' class='btn btn-primary mr-sm-2 mb-1'>On</button>
+                                                            <button type='submit' name='del' class='btn btn-secondary mb-1'>Off</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -287,7 +285,7 @@ include"partials/header.php";
             <!-- END : End Main Content-->
 
             <!-- BEGIN : Footer-->
-          
+
             <!-- End : Footer-->
             <!-- Scroll to top button -->
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
@@ -299,11 +297,12 @@ include"partials/header.php";
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
-<?php
-qron();
-qroff();
-include "partials/footer.php";
-?>
+    <?php
+    qron();
+    qroff();
+    include "partials/footer.php";
+    ?>
 </body>
 <!-- END : Body-->
+
 </html>
