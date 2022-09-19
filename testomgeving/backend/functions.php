@@ -838,8 +838,8 @@ function GetCustomerP()
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
             <td colspan="3"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
-            <!-- <td><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"] ?></td> -->
-            <!-- <td><?= $masseuse["telefoon"] ?></td> -->
+            <td><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"] ?></td>
+            <td><?= $masseuse["telefoon"] ?></td>
             <td>
                 <div class="row">
                     <div class="col-md-5">
