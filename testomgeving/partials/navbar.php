@@ -167,7 +167,6 @@ $row = Getuser();
                                 <span class="text">Werknemers</span>
                             </a>
                             <?php
-
                         }
                     }
                     ?>

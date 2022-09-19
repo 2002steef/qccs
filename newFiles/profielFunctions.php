@@ -22,7 +22,7 @@ function Changepassword()
 {
     global $mysqli;
     if (isset($_POST['save_password'])) {
-        $sql = 'SELECT password FROM `medewerkers` WHERE id = ?';
+        $sql = 'SELECT password FROM `medewerkers` WHERE userID = ?';
         if ($stmt = $mysqli->prepare($sql)) {
             $user = $_SESSION['id'];
             $stmt->bind_param('i', $user);
@@ -101,9 +101,9 @@ function Updateuser()
 {
     global $mysqli;
     if (isset($_POST['save'])) {
-        $query = "UPDATE users SET username = ?, name = ? , email = ? WHERE id = ?";
+        $query = "UPDATE medewerkers SET userName = ?, voornaam = ? , email = ? WHERE userID = ?";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param('sssi', $_POST['username'], $_POST['name'], $_POST['email'], $_SESSION['id']);
+        $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
         $stmt->execute();
     }
 }
