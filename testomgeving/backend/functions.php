@@ -82,7 +82,7 @@ function Changepassword()
 {
     global $mysqli;
     if (isset($_POST['save_password'])) {
-        $sql = 'SELECT password FROM `medewerkers` WHERE id = ?';
+        $sql = 'SELECT password FROM `medewerkers` WHERE userID = ?';
         if ($stmt = $mysqli->prepare($sql)) {
             $user = $_SESSION['id'];
             $stmt->bind_param('i', $user);
@@ -93,7 +93,7 @@ function Changepassword()
             if ($stmt->num_rows > 0) {
                 if ($_POST['old-password'] == $password) {
                     if ($_POST['new-password'] == $_POST['retype-new-password']) {
-                        $query = "UPDATE `users` SET password = ? WHERE id = ?";
+                        $query = "UPDATE `medewerkers` SET password = ? WHERE userID = ?";
                         $stmt = $mysqli->prepare($query);
                         $stmt->bind_param('si', $_POST['retype-new-password'], $_SESSION['id']);
                         $stmt->execute();

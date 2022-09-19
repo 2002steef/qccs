@@ -2,8 +2,8 @@
 include "backend/functions.php";
 
 
-$user = $_SESSION['userName'];
-$id = $_SESSION['userID'];
+$user = $_SESSION['name'];
+$id = $_SESSION['id'];
 
 // Controleer of iemand ingelogd is
 if (!isset($_SESSION["loggedin"])) {
@@ -83,7 +83,7 @@ include"partials/header.php";
                                             <!-- General Tab -->
                                             <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                                 <div class="media">
-                                                    <img src="uploads/<?=$row['image_url']?>" alt="profile-img" class="rounded mr-3" height="64" width="64">
+                                                    <img src="uploads/IMG-61b0ee01b38261.71649507.jpg" alt="profile-img" class="rounded mr-3" height="64" width="64">
                                                     <div class="media-body">
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
 <form action="page-account-settings.php" method="post" enctype="multipart/form-data">
@@ -142,13 +142,13 @@ include"partials/header.php";
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                             <button type="submit" name="save" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
 															<a href="<?php if ($_SESSION['memb_of'] == 0) {
-                            echo "../bedrijfs_overzicht.php?";
+                            echo "../medewerkers.php?";
                         } else {
-                            if (isset($_SESSION['auth']) && isset($_SESSION['memb_of'])) {
-                                if ($_SESSION['auth'] == "Werknemer") {
-                                   echo "klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
+                            if (isset($_SESSION['status']) && isset($_SESSION['loggedin'])) {
+                                if ($_SESSION['status'] == "Werknemer") {
+                                   echo "../medewerkers.php";
                                 } else {
-                                   echo "bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
+                                   echo "../medewerkers.php";
                                 }
                             }
                         } ?>" class="btn btn-secondary mb-1">
