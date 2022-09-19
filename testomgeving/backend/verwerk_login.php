@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     // } else {
                         if ($_SESSION['memb_of'] == 0) {
-                            header("Location:../bedrijfs_klanten_overzicht.php?");
+                            header("Location:../medewerkers.php?");
                         } else {
                             if (isset($_SESSION['auth']) && isset($_SESSION['memb_of'])) {
                                 if ($_SESSION['auth'] == "Werknemer") {
