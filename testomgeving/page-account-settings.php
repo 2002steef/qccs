@@ -144,9 +144,9 @@ include "partials/header.php";
                                                             <a href="<?php
                                                                         if (isset($_SESSION['status']) && isset($_SESSION['loggedin'])) {
                                                                             if ($_SESSION['status'] == "Werknemer") {
-                                                                                echo "../medewerkers.php";
+                                                                                echo "medewerkers.php";
                                                                             } else {
-                                                                                echo "../medewerkers.php";
+                                                                                echo "medewerkers.php";
                                                                             }
                                                                         }
                                                                         ?>" class="btn btn-secondary mb-1">
