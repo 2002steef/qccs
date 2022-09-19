@@ -6,11 +6,11 @@ function Updateuser()
 {
     global $mysqli;
     if (isset($_POST['save'])) {
-        $query = "UPDATE users SET username = ?, name = ? , email = ? WHERE id = ?";
+        $query = "UPDATE medewerkers SET userName = ?, voornaam = ? , email = ? WHERE userID = ?";
         $stmt = $mysqli->prepare($query);
         //        $options = ['cost' => 12,];
         //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
-        $stmt->bind_param('sssi', $_POST['username'], $_POST['name'], $_POST['email'], $_SESSION['id']);
+        $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
         $stmt->execute();
     }
 }
@@ -65,55 +65,6 @@ function InsertBedrijf()
     }
 }
 
-//Functie voor het ophalen van bedrijfsgegevens
-//Functie gebruikt de GET method om uit te vinden van welk bedrijf de gegevens moeten komen
-function GetCompanyInfo()
-{
-    global $mysqli;
-    $sql = "SELECT * FROM `bedrijven`";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    return $result->fetch_array();
-}
-
-function GetCompanyInfoCustomer1()
-{
-    global $mysqli;
-    $sql = "SELECT * FROM `customers_individual` WHERE id = ?";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("i", $_SESSION['id']);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    return $result->fetch_array();
-}
-
-function UpdateCompanyInfo()
-{
-    global $mysqli;
-    if (isset($_POST['Instellingen'])) {
-        $query = "UPDATE `organisation`  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
-                         postalcode = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
-                         iban_nummer = ? WHERE id= ?;";
-        $stmt = $mysqli->prepare($query);
-        $stmt->bind_param(
-            'ssissssiiii',
-            $_POST['name'],
-            $_POST['street'],
-            $_POST['huisnummer'],
-            $_POST['toevoeging'],
-            $_POST['postcode'],
-            $_POST['telefoon'],
-            $_POST['email'],
-            $_POST['kvk'],
-            $_POST['btw'],
-            $_POST['iban'],
-            $_GET['membof']
-        );
-        $stmt->execute();
-    }
-}
-
 
 function Getuser()
 {
@@ -158,36 +109,7 @@ function Changepassword()
 }
 
 
-function qron()
-{
-    global $mysqli;
-    if (isset($_POST['set'])) {
-        $sql = "UPDATE `users` SET `googlecode` = ? WHERE id = ?";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param(
-            "si",
-            $_POST['secret'],
-            $_SESSION['id']
-        );
-        $stmt->execute();
-    }
-}
 
-function qroff()
-{
-    global $mysqli;
-    if (isset($_POST['del'])) {
-        $string = "";
-        $sql_d = "UPDATE `users` SET `googlecode` = ? WHERE id = ?";
-        $stmt = $mysqli->prepare($sql_d);
-        $stmt->bind_param(
-            "si",
-            $string,
-            $_SESSION['id']
-        );
-        $stmt->execute();
-    }
-}
 
 function UploadPic1()
 {
@@ -240,13 +162,10 @@ function UploadPic1()
 function Getpersonnel()
 {
     global $mysqli;
-    $DataCustomer = "SELECT personnel.id,personnel.first_name,personnel.last_name_prefix,
-        personnel.last_name,personnel.street,personnel.housenumber,personnel.email,
-        personnel.housenumberAddition,personnel.postalcode,personnel.phoneNumber,personnel.authentication_level
- FROM personnel 
-     LEFT JOIN organisation 
-         ON personnel.member_of = organisation.id 
- WHERE personnel.member_of = ?";
+    $DataCustomer = "SELECT `userID`, `userName`, `Password`, `email`, `voornaam`, `tussenvoegsel`,
+     `achternaam`, `telefoon`, `straat`, `huisNummer`, `huisNummerToevoeging`, `postcode`, `plaats`
+    FROM `medewerkers` 
+    WHERE userID = ?";
     $stmt = $mysqli->prepare($DataCustomer);
     $stmt->bind_param("i", $_GET["membof"]);
     $stmt->execute();
@@ -254,18 +173,10 @@ function Getpersonnel()
     while ($rowPersonnel = mysqli_fetch_array($resultPersonnel)) {
 ?>
         <tr>
-            <td><?= $rowPersonnel["id"] ?></td>
-            <td><?= $rowPersonnel["first_name"] . " " . $rowPersonnel["last_name_prefix"] . " " . $rowPersonnel["last_name"] ?></td>
+            <td><?= $rowPersonnel["userID"] ?></td>
+            <td><?= $rowPersonnel["voornaam"] . " " . $rowPersonnel["tussenvoegsel"] . " " . $rowPersonnel["achternaam"] ?></td>
             <td><?= $rowPersonnel["email"] ?></td>
-            <td><?= $rowPersonnel["phoneNumber"] ?></td>
-            <td>
-                <?php
-                if ($rowPersonnel["authentication_level"] === "Bedrijfsleider") { ?>
-                    <span class="badge gradient-purple-bliss">Bedrijfsleider</span>
-                <?php } elseif ($rowPersonnel["authentication_level"] === "Werknemer") { ?>
-                    <span class="badge">Werknemer</span>
-                <?php } ?>
-            </td>
+            <td><?= $rowPersonnel["telefoon"] ?></td>
             <td>
                 <div class="row">
                     <div class="col-md-0">
@@ -292,77 +203,6 @@ function Getpersonnel()
     }
 }
 
-function GetCompanyPersonneel()
-{
-    global $mysqli;
-    $tableData = "SELECT * FROM `organisation`";
-    $stmt = $mysqli->prepare($tableData);
-    $stmt->execute();
-    $resultData = $stmt->get_result();
-    while ($row = $resultData->fetch_array()) {
-    ?>
-        <tr>
-            <td><?= $row["id"] ?></td>
-            <td><a href="gebruikers.php?membof=<?= $row["id"] ?>"><?= $row["name"] ?></a></td>
-            <!--            <td>--><? //= $row["logo"]
-                                    ?>
-            <!--</td>-->
-        </tr>
-    <?php
-    }
-}
-
-function GetCompany()
-{
-    global $mysqli;
-    $tableData = "SELECT * FROM `organisation`";
-    $stmt = $mysqli->prepare($tableData);
-    $stmt->execute();
-    $resultData = $stmt->get_result();
-    while ($row = $resultData->fetch_array()) {
-    ?>
-        <tr>
-            <td><?= $row["id"] ?></td>
-            <td>
-                <a data-toggle="tooltip" data-original-title="Bedrijfs instellingen" data-placement="bottom" href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
-            </td>
-            <td><a href="tel:<?= $row["phoneNumber"] ?>"><?= $row["phoneNumber"] ?></a></td>
-            <td><a href="mailto:<?= $row["email"] ?>"><?= $row["email"] ?></a></td>
-            <td><?php
-                if ($row["status"] === "Inactief") { ?>
-                    <span class="badge bg-light-danger">Inactief</span>
-                <?php } elseif ($row["status"] === "Actief") { ?>
-                    <span class="badge bg-light-succes">Actief</span>
-                <?php } ?>
-            </td>
-            <td>
-                <div class="row">
-                    <?php
-                    if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
-                    ?>
-                        <div class="col-md-4">
-                            <a href="#" data-toggle="modal" data-target="#edit<?= $row["id"] ?>">
-                                <i class="ft-edit" data-toggle="tooltip" data-original-title="Snel bewerken" data-placement="bottom"></i>
-                            </a>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                    <div class="col-md-4">
-                        <a data-toggle="modal" data-target="#info<?php echo $row["id"] ?>">
-                            <i class="ft-eye" data-toggle="tooltip" data-original-title="Info bekijken" data-placement="bottom"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>">
-                            <i class="ft-arrow-down"></i>
-                        </a>
-                    </div>
-                </div>
-        </tr>
-    <?php
-    }
-}
 
 
 function password_reset($password, $confirmpassword, $email)
