@@ -200,8 +200,7 @@ include "partials/header.php";
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
     <?php
-    qron();
-    qroff();
+   
     include "partials/footer.php";
     ?>
 </body>
