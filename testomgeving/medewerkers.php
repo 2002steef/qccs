@@ -84,9 +84,6 @@ if (!isset($_SESSION["loggedin"])) {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="table-responsive">
-                                                            <div>
-
-                                                            </div>
                                                             <table class="table table-striped table-bordered file-export">
                                                                 <thead>
                                                                     <tr>
