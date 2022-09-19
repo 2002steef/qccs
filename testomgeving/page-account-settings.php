@@ -60,18 +60,6 @@ include "partials/header.php";
                                         <span class="align-middle">Wachtwoord veranderen</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="connections-tab" data-toggle="tab" href="#connections" role="tab" aria-controls="connections" aria-selected="false">
-                                        <i class="ft-link mr-1 align-middle"></i>
-                                        <span class="align-middle">Extra beveiliging</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
-                                        <i class="ft-bell mr-1 align-middle"></i>
-                                        <span class="align-middle">Accountinstellingen</span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                         <div class="col-md-9">
@@ -184,95 +172,9 @@ include "partials/header.php";
                                                 </form>
                                             </div>
                                             <!-- Connections Tab -->
-                                            <div class="tab-pane" id="connections" role="tabpanel" aria-labelledby="connections-tab">
-                                                <form method="post">
-                                                    <div class="row">
-                                                        <div class='d-flex flex-column align-items-center text-center'>
-                                                            <?php
-                                                            if (strlen($secret) > 5) {
-                                                                echo "<div><h2>Qr code is al ingesteld</h2></div>";
-                                                            }
-                                                            ?>
-                                                            <?php
-                                                            if ($secret == "") {
-                                                                $secret = $ga->createSecret();
-                                                            }
-                                                            //echo $secret	
-                                                            ?>
-                                                            <input hidden name='secret' value='<?php echo $secret ?>'>
-
-                                                            <img src='<?php
-                                                                        $qrCodeUrl = $ga->getQRCodeGoogleUrl($user, $secret);
-                                                                        echo $qrCodeUrl;
-                                                                        ?>' />
-                                                        </div>
-                                                        <div>
-                                                            <h2>Google Two Factor Authentication</h2>
-                                                            <p>Get Google Authenticator on your phone</p>
-                                                            <ul>
-                                                                <li><a class='btn btn-block btn-social' href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en' target='_blank'>
-                                                                        <img src='img/android.png'>
-                                                                    </a></li>
-                                                                <li> <a class='btn btn-block btn-social' href='https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8' target='_blank'>
-                                                                        <img src='img/iphone.png'>
-                                                                    </a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                            <button type='submit' name='set' class='btn btn-primary mr-sm-2 mb-1'>On</button>
-                                                            <button type='submit' name='del' class='btn btn-secondary mb-1'>Off</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                            
                                             <!-- Notifications Tab -->
-                                            <div class="tab-pane" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
-                                                <div class="row">
-                                                    <h6 class="col-12 text-bold-400 pl-0">Activity</h6>
-                                                    <div class="col-12 mb-2">
-                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                            <input id="switch1" type="checkbox" class="custom-control-input" checked>
-                                                            <label for="switch1" class="custom-control-label">Email me when someone comments on my
-                                                                article</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 mb-2">
-                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                            <input id="switch2" type="checkbox" class="custom-control-input" checked>
-                                                            <label for="switch2" class="custom-control-label">Email me when someone answers on my form</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 mb-2">
-                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                            <input id="switch3" type="checkbox" class="custom-control-input" disabled>
-                                                            <label for="switch3" class="custom-control-label">Email me when someone follows me</label>
-                                                        </div>
-                                                    </div>
-                                                    <h6 class="col-12 text-bold-400 pl-0 mt-3">Application</h6>
-                                                    <div class="col-12 mb-2">
-                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                            <input id="switch4" type="checkbox" class="custom-control-input" checked>
-                                                            <label for="switch4" class="custom-control-label">News and announcements</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 mb-2">
-                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                            <input id="switch5" type="checkbox" class="custom-control-input" disabled>
-                                                            <label for="switch5" class="custom-control-label">Weekly product updates</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 mb-2">
-                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                            <input id="switch6" type="checkbox" class="custom-control-input" checked>
-                                                            <label for="switch6" class="custom-control-label">Weekly blog digest</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                        <button type="button" class="btn btn-primary mr-sm-2 mb-1">Save changes</button>
-                                                        <button type="button" class="btn btn-secondary mb-1">Cancel</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        
                                         </div>
                                     </div>
                                 </div>
