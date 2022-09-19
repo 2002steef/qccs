@@ -97,23 +97,9 @@ masseuseInfo();
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr>
-                                                                        <td><?= $resultMasseuse["masseuseID"] ?></td>
-                                                                        <td colspan="3"><?= $resultMasseuse["voornaam"] . " " . $resultMasseuse["tussenvoegsel"] . " " . $resultMasseuse["achternaam"] ?></td>
-                                                                        <td><?= $resultMasseuse["straat"] . " " . $resultMasseuse["huisNummer"] . " " . $resultMasseuse["huisNummerToevoeging"] ?></td>
-                                                                        <td><?= $resultMasseuse["telefoon"] ?></td>
-                                                                        <td></td>
-                                                                        <td>
-                                                                            <div class="row">
-                                                                                <div class="col-md-5">
-                                                                                    <a data-toggle="modal" data-target="#info<?= $resultMasseuse["masseuseID"] ?>" href="#<?= $masseuse["masseuseID"] ?>">
-                                                                                        <i class="ft-eye"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
+                                                                    <?php
+                                                                    masseuseInfo();
+                                                                    ?>
                                                             </table>
                                                         </div>
                                                     </div>
