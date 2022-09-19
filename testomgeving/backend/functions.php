@@ -467,17 +467,10 @@ function masseuseInfo()
                     <div class="col-md-0">
                     </div>
                         <div class="col-md-5">
-                            <a href="#" data-toggle="modal" data-target="#editP<?= $masseuse["masseuseID"] ?>">
+                            <a href="page-account-settings.php" data-toggle="modal" data-target="#editP<?= $masseuse["masseuseID"] ?>">
                                 <i class="ft-edit"></i>
                             </a>
                         </div>
-                    <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?=$masseuse["masseuseID"]?>"
-                           href="page-account-settings.php">
-                            <!-- <i class="ft-eye"></i> -->
-                            Test link
-                        </a>
-                    </div>
                 </div>
             </td>
 </tbody>
