@@ -1,5 +1,5 @@
 <?php
-$rowVP = GetCustomerP();
+$rowVP = masseuseInfo();
 ?>
 <!-- <div class="modal fade text-left" id="info<?= $rowVP["masseuseID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog" role="document">
