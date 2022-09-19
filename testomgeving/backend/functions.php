@@ -836,7 +836,7 @@ function masseuseInfo()
         ?>
         <tr>
         <td><?= $masseuse["masseuseID"] ?></td>
-        <td colspan="3"><?= $resultMasseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
+        <td colspan="3"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
         <td><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"] ?></td>
         <td><?= $masseuse["telefoon"] ?></td>
         <td></td>
