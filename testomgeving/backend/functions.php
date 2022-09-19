@@ -830,9 +830,9 @@ function masseuseInfo()
       `website`, `profielFoto`, `vouchersVerzilverd`, `paragraafje` FROM `masseuses` WHERE 1";
     $stmt = $mysqli->prepare($DataCustomer_P);
     $stmt->execute();
-    $resultCustomer = $stmt->get_result();
+    $resultMasseuse = $stmt->get_result();
 
-    $masseuse = $resultCustomer->fetch_array();
+    $resultMasseuse->fetch_array();
     ?>
 
     <?php

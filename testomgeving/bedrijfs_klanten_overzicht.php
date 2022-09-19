@@ -98,15 +98,15 @@ masseuseInfo();
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td><?= $masseuse["masseuseID"] ?></td>
-                                                                        <td colspan="3"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
-                                                                        <td><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"] ?></td>
-                                                                        <td><?= $masseuse["telefoon"] ?></td>
+                                                                        <td><?= $resultMasseuse["masseuseID"] ?></td>
+                                                                        <td colspan="3"><?= $resultMasseuse["voornaam"] . " " . $resultMasseuse["tussenvoegsel"] . " " . $resultMasseuse["achternaam"] ?></td>
+                                                                        <td><?= $resultMasseuse["straat"] . " " . $resultMasseuse["huisNummer"] . " " . $resultMasseuse["huisNummerToevoeging"] ?></td>
+                                                                        <td><?= $resultMasseuse["telefoon"] ?></td>
                                                                         <td></td>
                                                                         <td>
                                                                             <div class="row">
                                                                                 <div class="col-md-5">
-                                                                                    <a data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?>" href="#<?= $masseuse["masseuseID"] ?>">
+                                                                                    <a data-toggle="modal" data-target="#info<?= $resultMasseuse["masseuseID"] ?>" href="#<?= $masseuse["masseuseID"] ?>">
                                                                                         <i class="ft-eye"></i>
                                                                                     </a>
                                                                                 </div>
