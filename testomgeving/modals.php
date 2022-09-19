@@ -1,7 +1,7 @@
 <?php
 $rowVP = GetCustomerP();
 ?>
-<div class="modal fade text-left" id="info<?= $rowVP["masseuseID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+<!-- <div class="modal fade text-left" id="info<?= $rowVP["masseuseID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -25,6 +25,51 @@ $rowVP = GetCustomerP();
             <div class="modal-footer">
                 <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="col-lg-4 col-md-6 col-12">
+    <h6>Bootstrap Input Style Form</h6>
+    <p>Bootstrap Form using Floating Label fields.</p>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#info<?= $rowVP["masseuseID"] ?>">
+        Launch Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade text-left" id="bootstrap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <fieldset class="form-group floating-label-form-group">
+                            <label for="email">Email Address</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email Address">
+                        </fieldset>
+                        <br>
+                        <fieldset class="form-group floating-label-form-group">
+                            <label for="title">Password</label>
+                            <input type="password" class="form-control" id="title" placeholder="Password">
+                        </fieldset>
+                        <br>
+                        <fieldset class="form-group floating-label-form-group">
+                            <label for="title1">Description</label>
+                            <textarea class="form-control" id="title1" rows="3" placeholder="Description"></textarea>
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
+                        <input type="submit" class="btn btn-primary" value="Login">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
