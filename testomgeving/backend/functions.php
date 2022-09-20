@@ -464,7 +464,7 @@ function masseuseInfo()
             <td><?= $masseuse["telefoon"] ?></td>
             <td>
                 <a href="page-account-settings.php" data-toggle="modal" data-target="#editP<?= $masseuse["masseuseID"] ?>">
-
+                    test link
                 </a>
             </td>
             </tbody>
