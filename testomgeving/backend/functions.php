@@ -463,7 +463,7 @@ function masseuseInfo()
             <td><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"] ?></td>
             <td><?= $masseuse["telefoon"] ?></td>
             <td>
-                <a href="page-account-settings.php" data-toggle="modal">
+                <a href="modals.php?<?= $masseuse["masseuseID"] ?>" data-toggle="modal">
                     test link
                 </a>
             </td>
