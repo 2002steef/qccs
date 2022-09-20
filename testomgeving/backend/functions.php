@@ -468,7 +468,7 @@ function masseuseInfo()
                     </div>
                         <div class="col-md-5">
                             <a href="page-account-settings.php" data-toggle="modal" data-target="#editP<?= $masseuse["masseuseID"] ?>">
-                                <i class="ft-edit"></i>
+                                <i class="ft-edit">a</i>
                             </a>
                         </div>
                 </div>
