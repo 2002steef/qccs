@@ -19,4 +19,4 @@ $masseuse = masseuseInfo();
             </div>
         </div>
     </div>
-</div> -->
+</div> 
