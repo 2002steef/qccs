@@ -447,13 +447,13 @@ function GetCustomerZ()
 function masseuseInfo()
 {
     global $mysqli;
-    $DataCustomer_P = "SELECT `masseuseID`, `userName`, `Password`, `email`, 
+    $DataMasseuse = "SELECT `masseuseID`, `userName`, `Password`, `email`, 
     `voornaam`, `tussenvoegsel`, `achternaam`, `telefoon`,
      `straat`, `huisNummer`,`huisNummerToevoeging`, `postcode`, `plaats`,
       `website`, `profielFoto`, `vouchersVerzilverd`, `paragraafje` FROM `masseuses`
        WHERE masseuseID = ? ";
-    $stmt = $mysqli->prepare($DataCustomer_P);
-    $stmt->bind_param("i", $_GET["id"]);
+    $stmt = $mysqli->prepare($DataMasseuse);
+    $stmt->bind_param("i", $_GET["masseuseID"]);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
 
