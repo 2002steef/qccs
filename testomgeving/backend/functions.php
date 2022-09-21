@@ -458,7 +458,7 @@ function masseuseInfo()
             <td><?= $masseuse["masseuseID"] ?></td>
             <td colspan="5"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
             <td>
-                <a  data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?> ">
+                <a href="modals.php?<?= $masseuse["masseuseID"] ?>" data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?> ">
                     test link
                 </a>
             </td>
