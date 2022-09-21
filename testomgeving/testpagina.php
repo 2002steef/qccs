@@ -1,10 +1,6 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
-
 // Sendmail();
 // InsertCustomerIndividual();
 // UpdateCompanyInfo();
