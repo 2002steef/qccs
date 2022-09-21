@@ -450,10 +450,8 @@ function masseuseInfo()
     $DataMasseuse = "SELECT `masseuseID`, `userName`, `Password`, `email`, 
     `voornaam`, `tussenvoegsel`, `achternaam`, `telefoon`,
      `straat`, `huisNummer`,`huisNummerToevoeging`, `postcode`, `plaats`,
-      `website`, `profielFoto`, `vouchersVerzilverd`, `paragraafje` FROM `masseuses`
-       WHERE masseuseID = ? ";
+      `website`, `profielFoto`, `vouchersVerzilverd`, `paragraafje` FROM `masseuses`";
     $stmt = $mysqli->prepare($DataMasseuse);
-    $stmt->bind_param("i", $_GET["masseuseID"]);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
 
