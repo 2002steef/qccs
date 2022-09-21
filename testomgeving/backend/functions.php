@@ -453,7 +453,7 @@ function masseuseInfo()
       `website`, `profielFoto`, `vouchersVerzilverd`, `paragraafje` FROM `masseuses`
        WHERE masseuseID = ? ";
     $stmt = $mysqli->prepare($DataCustomer_P);
-    $stmt->bind_param("i", $_GET["userID"]);
+    $stmt->bind_param("i", $_SESSION["id"]);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
 
