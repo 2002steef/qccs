@@ -447,7 +447,7 @@ function GetCustomerZ()
 function masseuseInfo()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `masseuses`";
+    $DataMasseuse = "SELECT * FROM `masseuses` ORDER BY masseuseID DESC";
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
