@@ -309,108 +309,7 @@ include "partials/header.php";
                             </div>
                             <!-- 2nd column ends -->
 
-                            <!-- 3rd column starts -->
-                            <div class="col-lg-3 col-12">
-                                <div class="row">
-                                    <!-- Trophy starts -->
-                                    <div class="col-12">
-                                        <div class="card bg-primary white">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <div class="media py-1">
-                                                        <i class="ft-award font-large-2"></i>
-                                                        <div class="ml-1 media-body">
-                                                            <h5 class="white">You reached a new Trophy</h5>
-                                                            <p class="font-small-2 m-0">Biscuit jelly beans dragée candy canes. Jelly beans sugar plum oat cake jelly toffee marshmallow.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Trophy ends -->
-                                    <!-- Gallery starts -->
-                                    <div class="col-lg-12 col-md-6 col-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h4 class="card-title">Gallery</h4>
-                                            </div>
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-2.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-4.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-6.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-8.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-26.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-12.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-14.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-16.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                        <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="img/portrait/small/avatar-s-18.png" class="img-fluid" alt="gallery-avtar">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Gallery ends -->
-
-                                    <!-- News starts -->
-                                    <div class="col-lg-12 col-md-6 col-12">
-                                        <div class="card">
-                                            <div class="card-header d-flex justify-content-between align-items-center">
-                                                <h4 class="card-title m-0">News</h4>
-                                                <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
-                                            </div>
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <ul class="list-unstyled m-0">
-                                                        <li class="d-flex mb-1">
-                                                            <i class="ft-trending-up primary font-medium-2 mr-2 mt-1"></i>
-                                                            <span>There is a meetup in your city on Friday at 16:00. <a href="javascript:;">See Details</a></span>
-                                                        </li>
-                                                        <li class="d-flex mb-1">
-                                                            <i class="ft-trending-up primary font-medium-2 mr-2 mt-1"></i>
-                                                            <span>20% off coupon on selected items at PIXINVENT</span>
-                                                        </li>
-                                                        <li class="d-flex mb-1">
-                                                            <i class="ft-trending-up primary font-medium-2 mr-2 mt-1"></i>
-                                                            <span>Apple has secret team working on satellites to beam data to devices</span>
-                                                        </li>
-                                                        <li class="d-flex mb-1">
-                                                            <i class="ft-trending-up primary font-medium-2 mr-2 mt-1"></i>
-                                                            <span>Towards an era of singularity, where machines will out-think humans</span>
-                                                        </li>
-                                                        <li class="d-flex mb-1">
-                                                            <i class="ft-trending-up primary font-medium-2 mr-2 mt-1"></i>
-                                                            <span>Private equity funds go talent shopping for portfolio companies</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- News ends -->
-                                </div>
-                            </div>
-                            <!-- 3rd column ends -->
+                        
                         </div>
                         <!-- Profile posts and info ends -->
                     </section>
@@ -420,7 +319,7 @@ include "partials/header.php";
 
             <!-- BEGIN : Footer-->
             <footer class="footer undefined undefined">
-                <p class="clearfix text-muted m-0"><span>Copyright &copy; 2020 &nbsp;</span><a href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" id="pixinventLink" target="_blank">PIXINVENT</a><span class="d-none d-sm-inline-block">, All rights reserved.</span></p>
+                <p class="clearfix text-muted m-0"><span>Copyright &copy; 2020 &nbsp;</span><a href="https://qccs.nl" id="pixinventLink" target="_blank">PIXINVENT</a><span class="d-none d-sm-inline-block">, All rights reserved.</span></p>
             </footer>
             <!-- End : Footer-->
             <!-- Scroll to top button -->
