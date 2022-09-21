@@ -451,17 +451,13 @@ function masseuseInfo()
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
-
-    while ($masseuse = $resultMasseuse->fetch_array()) {
-    ?>
+    while ($resultMasseuse->fetch_assoc()) { ?>
         <tr>
-           <td><?=$masseuse["masseuseID"] ?></td>
-           <td colspan="5"><?=$masseuse["masseuseID"] ?></td>
-           <td><?=$masseuse["masseuseID"] ?></td> 
+            <td><?= $resultMasseuse["masseuseID"] ?></td>
+            <td colspan="5"><?= $resultMasseuse["masseuseID"] ?></td>
+            <td><?= $resultMasseuse["masseuseID"] ?></td>
         </tr>
-    <?php
-
-    }
+    <?php }
 }
 
 function GetCompanyName()
