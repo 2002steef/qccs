@@ -101,25 +101,40 @@ if (!isset($_SESSION["loggedin"])) {
                 </div>
             </div>
         </div>
-        <div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Basic Modal</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                                                                    </button>
+                                                                </div>
+                                                                <form>
+                                                                    <div class="modal-body">
+                                                                        <fieldset class="form-group floating-label-form-group">
+                                                                            <label for="email">Email Address</label>
+                                                                            <input type="text" class="form-control" id="email" placeholder="Email Address">
+                                                                        </fieldset>
+                                                                        <br>
+                                                                        <fieldset class="form-group floating-label-form-group">
+                                                                            <label for="title">Password</label>
+                                                                            <input type="password" class="form-control" id="title" placeholder="Password">
+                                                                        </fieldset>
+                                                                        <br>
+                                                                        <fieldset class="form-group floating-label-form-group">
+                                                                            <label for="title1">Description</label>
+                                                                            <textarea class="form-control" id="title1" rows="3" placeholder="Description"></textarea>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
+                                                                        <input type="submit" class="btn btn-primary" value="Login">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
         <!-- END : End Main Content-->
 
         <!-- Scroll to top button -->
