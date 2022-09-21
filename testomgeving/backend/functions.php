@@ -455,7 +455,7 @@ function masseuseInfo()
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
             <td colspan="5"><?= $masseuse["masseuseID"] ?></td>
-            <td><?= $masseuse["masseuseID"] ?></td>
+            <td><a href="modals.php?<?= $masseuse["masseuseID"] ?>"><?= $masseuse["masseuseID"] ?> </a></td>
         </tr>
     <?php }
 }
