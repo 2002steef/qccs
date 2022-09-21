@@ -19,13 +19,7 @@ include "partials/navbar.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><?= $masseuse["masseuseID"] ?></td>
-                                <td><?= $masseuse["voornaam"] ?></td>
-                                <td><a data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?>" href="modals.php?<?= $masseuse["masseuseID"] ?>">
-                                        <i class="ft-eye"></i>
-                                    </a></td>
-                            </tr>
+                            <?php masseuseInfo(); ?>
                         </tbody>
                     </table>
                 </div>
