@@ -19,7 +19,11 @@ include "partials/navbar.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php masseuseInfo(); ?>
+                            <tr>
+                                <td><a data-toggle="modal" data-target="#info">
+                                        <i class="ft-eye"></i>
+                                    </a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -27,7 +31,7 @@ include "partials/navbar.php";
         </div>
     </div>
 </div>
-<div class="modal fade text-left" id="info<?= $_GET["masseuseID"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+<div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
