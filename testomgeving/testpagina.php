@@ -1,6 +1,6 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
-include "backend/functions.php";
+
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
