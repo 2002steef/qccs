@@ -118,7 +118,40 @@ if (!isset($_SESSION["loggedin"])) {
         <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
     </div>
-
+    <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                                                                    </button>
+                                                                </div>
+                                                                <form>
+                                                                    <div class="modal-body">
+                                                                        <fieldset class="form-group floating-label-form-group">
+                                                                            <label for="email">Email Address</label>
+                                                                            <input type="text" class="form-control" id="email" placeholder="Email Address">
+                                                                        </fieldset>
+                                                                        <br>
+                                                                        <fieldset class="form-group floating-label-form-group">
+                                                                            <label for="title">Password</label>
+                                                                            <input type="password" class="form-control" id="title" placeholder="Password">
+                                                                        </fieldset>
+                                                                        <br>
+                                                                        <fieldset class="form-group floating-label-form-group">
+                                                                            <label for="title1">Description</label>
+                                                                            <textarea class="form-control" id="title1" rows="3" placeholder="Description"></textarea>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
+                                                                        <input type="submit" class="btn btn-primary" value="Login">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
     <!-- /////////////////////////////////////////////////////////////////////////////-->
 
     <div class="sidenav-overlay"></div>
