@@ -72,14 +72,9 @@ if (!isset($_SESSION["loggedin"])) {
                             <div class="card-content">
                                 <div class="card-body">
                                     <section id="file-export">
-                                        <ul class="nav nav-tabs" role="tablist" id="tabs">
-                                            <li class="nav-item active">
-                                                <a href="#Particulier" role="tab" id="account-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="account" aria-selected="true">
-                                                    <i class="ft-user mr-1"></i>
-                                                    <span class="d-none d-sm-block">Masseuses</span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <i class="ft-user mr-1"></i>
+                                        <span class="d-none d-sm-block">Masseuses</span>
+
 
                                         <table class="table table-striped table-bordered file-export">
                                             <thead>
@@ -91,15 +86,36 @@ if (!isset($_SESSION["loggedin"])) {
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <?php masseuseInfo(); ?>
+
+                                                    <td><a data-toggle="modal" data-target="#info">
+                                                            <i class="ft-eye"></i>
+                                                        </a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
-
                                     </section>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Basic Modal</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -118,109 +134,5 @@ if (!isset($_SESSION["loggedin"])) {
     <?php
     include "partials/footer.php";
     ?>
-    <script>
-        /*
-        zet script nog in apart bestand wnnr af voor de aapie
-    */
-        var e = "FbW29C_969cyVfAKrj";
-        var postcode = "";
-        var huisnr = "";
-        var toevoeging = "";
-
-        function check_pc(wat, waarde) {
-            if (wat === "postcode") {
-                var pc = waarde.trim();
-                if (pc.length < 6) {
-                    maak_leeg();
-                    return;
-                } // moet minimaal 6 characters hebben
-                var num_deel = pc.substr(0, 4);
-                if (parseFloat(num_deel) < 1000) {
-                    maak_leeg();
-                    return;
-                } // moet minaal 1000 zijn
-                var alpha_deel = pc.substr(-2);
-                if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122) {
-                    maak_leeg();
-                    return;
-                } // DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
-                alpha_deel = alpha_deel.toUpperCase();
-
-                // de checker niffo
-
-                postcode = num_deel + alpha_deel;
-                document.getElementById("postcode_p").value = postcode;
-                document.getElementById("postcode_z").value = postcode;
-            }
-
-            if (wat === "huisnr") {
-                huisnr = parseFloat(waarde);
-                if (!huisnr) {
-                    maak_leeg();
-                    return;
-                }
-                document.getElementById("huisnr_p").value = huisnr;
-                document.getElementById("huisnr_z").value = huisnr;
-            }
-
-            if (wat === "toevoeging") {
-                toevoeging = waarde.trim();
-                document.getElementById("toevoeging_p").value = toevoeging;
-                document.getElementById("toevoeging_z").value = toevoeging;
-            }
-
-            if (huisnr === 0) {
-                return;
-            }
-
-            var getadrlnk = 'https://bwnr.nl/postcode.php?pc=' + postcode + '&hn=' + huisnr + '&tv=' + toevoeging + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj'; // e moet uw apikey bevattten.
-
-            var xmlhttp = new XMLHttpRequest();
-
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState === 4 && this.status === 200) {
-                    rString = this.responseText;
-                    if (rString === "Geen resultaat.") {
-                        maak_leeg();
-                        return;
-                    }
-                    if (rString === "Input onvolledig.") {
-                        maak_leeg();
-                        return;
-                    }
-                    if (rString === "Onbekende API Key.") {
-                        maak_leeg();
-                        return;
-                    }
-                    if (rString === "Over quota") {
-                        maak_leeg();
-                        return;
-                    }
-                    if (rString === "Onjuiste API Key.") {
-                        maak_leeg();
-                        alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');
-                        return;
-                    }
-                    // 0 = straat - 1 = plaats
-                    aResponse = rString.split(";");
-                    document.getElementById("straat_p").value = aResponse[0];
-                    document.getElementById("straat_z").value = aResponse[0];
-                    document.getElementById("plaats_p").value = aResponse[1];
-                    document.getElementById("plaats_z").value = aResponse[1];
-                }
-            };
-
-            xmlhttp.open("GET", getadrlnk, true);
-            xmlhttp.send();
-        }
-
-        function maak_leeg() {
-            document.getElementById("straat_p").value = "";
-            document.getElementById("plaats_p").value = "";
-            document.getElementById("straat_z").value = "";
-            document.getElementById("plaats_z").value = "";
-        }
-    </script>
-
 </body>
 <!-- END : Body-->
