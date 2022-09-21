@@ -96,29 +96,6 @@ include "partials/header.php";
                                     </div>
                                     <!-- Info ends -->
 
-                                    <!-- Followers starts -->
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="card-body d-flex justify-content-between">
-                                                    <div class="followers-posts text-center">
-                                                        <h4 class="m-0">400</h4>
-                                                        <small class="text-muted">Posts</small>
-                                                    </div>
-                                                    <div class="followers text-center">
-                                                        <h4 class="m-0">194k</h4>
-                                                        <small class="text-muted">Followers</small>
-                                                    </div>
-                                                    <div class="followers-following text-center">
-                                                        <h4 class="m-0">248</h4>
-                                                        <small class="text-muted">Following</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Followers ends -->
-
                                     <!-- Skills starts -->
                                     <div class="col-12">
                                         <div class="card">
@@ -141,26 +118,7 @@ include "partials/header.php";
                                     <!-- Skills ends -->
 
                                     <!-- Friends starts -->
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-header d-flex justify-content-between align-items-center">
-                                                <h4 class="card-title m-0">Friends</h4>
-                                                <a href="javascript:;">See All</a>
-                                            </div>
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <img src="img/portrait/small/avatar-s-15.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="/portrait/small/avatar-s-10.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="img/portrait/small/avatar-s-11.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="img/portrait/small/avatar-s-9.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="img/portrait/small/avatar-s-24.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="img/portrait/small/avatar-s-19.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="img/portrait/small/avatar-s-26.png" alt="" class="img-fluid avatar mb-1" width="35" height="35">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Friends ends -->
+                                    
                                 </div>
                             </div>
                             <!-- 1st column ends -->
@@ -187,64 +145,6 @@ include "partials/header.php";
                                         </div>
                                     </div>
                                     <!-- Post ends -->
-
-                                    <!-- Profile Slider starts -->
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <h5 class="card-title mb-2">Stories</h5>
-                                                    <div class="user-profile-stories swiper-container pt-1">
-                                                        <div class="swiper-wrapper">
-                                                            <div class="swiper-slide">
-                                                                <img src="img/profile/profile-portrait-1.jpg" class="rounded user-profile-stories-image" alt="story-image-1">
-                                                                <div class="card-img-overlay bg-overlay">
-                                                                    <div class="user-swiper-text">devine_lena</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <img src="img/profile/profile-portrait-2.jpg" class="rounded user-profile-stories-image" alt="story-image-2">
-                                                                <div class="card-img-overlay bg-overlay">
-                                                                    <div class="user-swiper-text">ureka_23</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <img src="img/profile/profile-portrait-3.jpg" class="rounded user-profile-stories-image" alt="story-image-3">
-                                                                <div class="card-img-overlay bg-overlay">
-                                                                    <div class="user-swiper-text">venice_like852</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <img src="img/profile/profile-portrait-6.jpg" class="rounded user-profile-stories-image" alt="story-image-4">
-                                                                <div class="card-img-overlay bg-overlay">
-                                                                    <div class="user-swiper-text">june5211</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <img src="img/profile/profile-portrait-7.jpg" class="rounded user-profile-stories-image" alt="story-image-5">
-                                                                <div class="card-img-overlay bg-overlay">
-                                                                    <div class="user-swiper-text">defloya_456</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <img src="img/profile/profile-portrait-8.jpg" class="rounded user-profile-stories-image" alt="story-image-6">
-                                                                <div class="card-img-overlay bg-overlay">
-                                                                    <div class="user-swiper-text">allen5196</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <img src="img/profile/profile-portrait-9.jpg" class="rounded user-profile-stories-image" alt="story-image-7">
-                                                                <div class="card-img-overlay bg-overlay">
-                                                                    <div class="user-swiper-text">cecilia_698</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Profile Slider ends -->
 
                                     <!-- Job History starts -->
                                     <div class="col-12">
