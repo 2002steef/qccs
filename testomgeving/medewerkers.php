@@ -118,7 +118,7 @@ if (!isset($_SESSION["loggedin"])) {
         <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
     </div>
-    <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+    <div class="modal fade text-left" id="info1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
