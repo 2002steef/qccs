@@ -93,9 +93,11 @@ if (!isset($_SESSION["loggedin"])) {
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <?php
-                                                                    masseuseInfo();
-                                                                    ?>
+                                                                    <tr>
+                                                                        <td><?= $masseuse["masseuseID"] ?></td>
+                                                                        <td colspan="5"><?= $masseuse["masseuseID"] ?></td>
+                                                                        <td><?= $masseuse["masseuseID"] ?></td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -228,6 +230,6 @@ if (!isset($_SESSION["loggedin"])) {
             document.getElementById("plaats_z").value = "";
         }
     </script>
-    
+
 </body>
 <!-- END : Body-->
