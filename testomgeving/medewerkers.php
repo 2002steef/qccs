@@ -95,9 +95,9 @@ masseuseInfo();
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td><?= $masseuse["masseuseID"] ?></td>
-                                                                        <td colspan="5"><?= $masseuse["masseuseID"] ?></td>
-                                                                        <td><?= $masseuse["masseuseID"] ?></td>
+                                                                        <td></td>
+                                                                        <td colspan="5"></td>
+                                                                        <td></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
