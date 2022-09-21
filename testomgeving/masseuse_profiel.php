@@ -4,7 +4,7 @@ include "backend/functions.php";
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <?php
-include "backend/header.php";
+include "partials/header.php";
 ?>
 <!-- BEGIN : Body-->
 
