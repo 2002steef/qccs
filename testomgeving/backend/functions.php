@@ -447,7 +447,7 @@ function GetCustomerZ()
 function masseuseInfo()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `masseuses` ORDER BY masseuseID DESC";
+    $DataMasseuse = "SELECT * FROM `masseuses`";
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
@@ -458,7 +458,7 @@ function masseuseInfo()
             <td><?= $masseuse["masseuseID"] ?></td>
             <td colspan="5"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
             <td>
-                <a href="modals.php" data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?> ">
+                <a  data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?> ">
                     test link
                 </a>
             </td>
