@@ -85,6 +85,7 @@ if (!isset($_SESSION["loggedin"])) {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="table-responsive">
+                                                        <?php masseuseInfo(); ?>
                                                             <table class="table table-striped table-bordered file-export">
                                                                 <thead>
                                                                     <tr>
@@ -94,7 +95,11 @@ if (!isset($_SESSION["loggedin"])) {
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <?php masseuseInfo(); ?>
+                                                                    <tr>
+                                                                        <td><?= $masseuseID ?></td>
+                                                                        <td><?= $masseuseNaam ?></td>
+                                                                        <td><?= $masseuseWebsite ?></td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
