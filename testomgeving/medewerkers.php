@@ -96,9 +96,9 @@ if (!isset($_SESSION["loggedin"])) {
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td><?= $masseuseID ?></td>
-                                                                        <td><?= $masseuseNaam ?></td>
-                                                                        <td><?= $masseuseWebsite ?></td>
+                                                                        <td><?php masseuseInfo(); $masseuseID ?></td>
+                                                                        <td><?php masseuseInfo(); $masseuseID ?></td>
+                                                                        <td><?php masseuseInfo(); $masseuseID ?></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
