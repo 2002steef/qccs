@@ -455,7 +455,7 @@ function masseuseInfo()
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
             <td><?= $masseuse["voornaam"] ?></td>
-            <td><a href="#" class="btn bg-light-primary" data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?>">
+            <td><a href="#"  data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?>">
                     <i class="ft-eye"></i>
                 </a></td>
         </tr>
