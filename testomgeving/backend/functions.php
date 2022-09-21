@@ -465,6 +465,7 @@ function masseuseInfo()
                     test link
                 </a>
             </td>
+        </tr>
             </tbody>
          
         <?php
