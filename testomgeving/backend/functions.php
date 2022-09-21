@@ -455,7 +455,7 @@ function masseuseInfo()
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
             <td><?= $masseuse["voornaam"] ?></td>
-            <td><a href="bedrijf_profiel.php">
+            <td><a href="massaeuse_profiel.php">
                             <i class="ft-eye" data-toggle="tooltip" data-original-title="Info bekijken" data-placement="bottom"></i>
                         </a></td>
                         <td></td>
