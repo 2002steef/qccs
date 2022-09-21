@@ -10,32 +10,26 @@ include "partials/header.php";
     <?php
     include "partials/navbar.php";
     ?>
-    <div class="tab-content">
-        <div class="tab-pane fade mt-2 show active" id="Particulier" role="tabpanel" aria-labelledby="account-tab">
-            <div class="row">
-                <div class="col-12">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered file-export">
-                            <thead>
-                                <tr>
-                                    <th>Logo</th>
-                                    <th colspan="5">Masseuse info</th>
-                                    <th>Handelingen</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a data-toggle="modal" data-target="#info">
-                                            <i class="ft-eye"></i>
-                                        </a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+    <table class="table table-striped table-bordered file-export">
+        <thead>
+            <tr>
+                <th>Logo</th>
+                <th colspan="5">Masseuse info</th>
+                <th>Handelingen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a data-toggle="modal" data-target="#info">
+                        <i class="ft-eye"></i>
+                    </a></td>
+            </tr>
+        </tbody>
+    </table>
+
+
     <div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
