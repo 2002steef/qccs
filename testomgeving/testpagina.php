@@ -101,7 +101,14 @@ if (!isset($_SESSION["loggedin"])) {
                 </div>
             </div>
         </div>
-        <div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+        
+        <!-- END : End Main Content-->
+
+        <!-- Scroll to top button -->
+        <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
+
+    </div>
+    <div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
@@ -135,13 +142,6 @@ if (!isset($_SESSION["loggedin"])) {
                                                             </div>
                                                         </div>
                                                     </div>
-        <!-- END : End Main Content-->
-
-        <!-- Scroll to top button -->
-        <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
-
-    </div>
-
     <!-- /////////////////////////////////////////////////////////////////////////////-->
 
     <div class="sidenav-overlay"></div>
