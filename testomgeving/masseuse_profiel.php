@@ -118,7 +118,7 @@ include "partials/header.php";
                                     <!-- Skills ends -->
 
                                     <!-- Friends starts -->
-                                    
+
                                 </div>
                             </div>
                             <!-- 1st column ends -->
@@ -208,26 +208,18 @@ include "partials/header.php";
                                 </div>
                             </div>
                             <!-- 2nd column ends -->
-
-                        
                         </div>
-                        <!-- Profile posts and info ends -->
                     </section>
                 </div>
             </div>
             <!-- END : End Main Content-->
 
-            <!-- BEGIN : Footer-->
-            <footer class="footer undefined undefined">
-                <p class="clearfix text-muted m-0"><span>Copyright &copy; 2020 &nbsp;</span><a href="https://qccs.nl" id="pixinventLink" target="_blank">PIXINVENT</a><span class="d-none d-sm-inline-block">, All rights reserved.</span></p>
-            </footer>
-            <!-- End : Footer-->
             <!-- Scroll to top button -->
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
         </div>
     </div>
-   
+
     <?php
     include "partials/footer.php";
     ?>
