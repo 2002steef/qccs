@@ -455,9 +455,9 @@ function masseuseInfo()
     while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
         <tr>
-           <td></td>
-           <td colspan="5"></td>
-           <td></td> 
+           <td><?=$masseuse["masseuseID"] ?></td>
+           <td colspan="5"><?=$masseuse["masseuseID"] ?></td>
+           <td><?=$masseuse["masseuseID"] ?></td> 
         </tr>
     <?php
 
