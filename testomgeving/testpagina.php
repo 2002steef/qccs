@@ -1,11 +1,13 @@
 <?php
 include "backend/functions.php";
-include "partials/header.php";
-
 
 
 ?>
-
+<head>
+    <?php
+    include "partials/header.php";
+    ?>
+</head>
 <body class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1" data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
     <?php
     include "partials/navbar.php";
