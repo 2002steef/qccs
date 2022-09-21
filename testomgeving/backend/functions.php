@@ -459,9 +459,7 @@ function masseuseInfo()
     ?>
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
-            <td colspan="3"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
-            <td><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"] ?></td>
-            <td><?= $masseuse["telefoon"] ?></td>
+            <td colspan="5"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
             <td>
                 <a href="modals.php?<?= $masseuse["masseuseID"] ?>" data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?> ">
                     test link
