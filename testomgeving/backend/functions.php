@@ -451,7 +451,7 @@ function masseuseInfo()
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
-    while ($masseuse = $resultMasseuse->fetch_assoc()) { ?>
+    while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
             <td colspan="5"><?= $masseuse["masseuseID"] ?></td>
