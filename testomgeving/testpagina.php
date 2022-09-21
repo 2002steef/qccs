@@ -87,9 +87,9 @@ if (!isset($_SESSION["loggedin"])) {
                                             <tbody>
                                                 <tr>
 
-                                                    <td><a data-toggle="modal" data-target="#info">
-                                                            <i class="ft-eye"></i>
-                                                        </a></td>
+                                                    <td><button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#info">
+                                                        Launch Modal
+                                                    </button></td>
                                                 </tr>
                                             </tbody>
                                         </table>
