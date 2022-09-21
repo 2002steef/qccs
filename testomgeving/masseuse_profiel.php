@@ -25,9 +25,9 @@ include "partials/header.php";
                                 <div class="card">
                                     <div class="user-profile-images">
                                         <!-- user timeline image -->
-                                        <img src="../../../app-assets/img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
+                                        <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
-                                        <img src="../../../app-assets/img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
+                                        <img src="img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
                                         <h4 class="profile-text-color mb-0">Martina Ash</h4>
@@ -149,13 +149,13 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-15.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-10.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-11.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-9.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-24.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-19.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
-                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-26.png" alt="" class="img-fluid avatar mb-1" width="35" height="35">
+                                                    <img src="img/portrait/small/avatar-s-15.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
+                                                    <img src="/portrait/small/avatar-s-10.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
+                                                    <img src="img/portrait/small/avatar-s-11.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
+                                                    <img src="img/portrait/small/avatar-s-9.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
+                                                    <img src="img/portrait/small/avatar-s-24.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
+                                                    <img src="img/portrait/small/avatar-s-19.png" alt="" class="img-fluid avatar mb-1 mr-1" width="35" height="35">
+                                                    <img src="img/portrait/small/avatar-s-26.png" alt="" class="img-fluid avatar mb-1" width="35" height="35">
                                                 </div>
                                             </div>
                                         </div>
@@ -170,14 +170,14 @@ include "partials/header.php";
                                     <!-- Post starts -->
                                     <div class="col-12">
                                         <div class="card profile-post overflow-hidden">
-                                            <img src="../../../app-assets/img/banner/banner-15.jpg" class="img-fluid profile-post-img" alt="Post Image">
+                                            <img src="img/banner/banner-15.jpg" class="img-fluid profile-post-img" alt="Post Image">
                                             <div class="card-content">
                                                 <div class="card-body">
                                                     <h5 class="primary">User Friendly</h5>
                                                     <h4>Time to break up with your web host</h4>
                                                     <p class="m-0">Gummi bears gummi bears cake jelly-o. Bear claw marshmallow lemon drops biscuit caramels. Tart jelly-o muffin. Toffee pie cheesecake apple pie sesame snaps. Candy canes candy canes dragée chocolate pudding. Soufflé chocolate bar pastry jujubes.</p>
                                                     <div class="media d-flex align-items-center pb-0">
-                                                        <img src="../../../app-assets/img/portrait/small/avatar-s-11.png" class="mr-2 avatar" alt="Avatar" height="40" width="40">
+                                                        <img src="img/portrait/small/avatar-s-11.png" class="mr-2 avatar" alt="Avatar" height="40" width="40">
                                                         <div class="media-body">
                                                             <h5 class="m-0">David Carter</h5>
                                                         </div>
@@ -197,43 +197,43 @@ include "partials/header.php";
                                                     <div class="user-profile-stories swiper-container pt-1">
                                                         <div class="swiper-wrapper">
                                                             <div class="swiper-slide">
-                                                                <img src="../../../app-assets/img/profile/profile-portrait-1.jpg" class="rounded user-profile-stories-image" alt="story-image-1">
+                                                                <img src="img/profile/profile-portrait-1.jpg" class="rounded user-profile-stories-image" alt="story-image-1">
                                                                 <div class="card-img-overlay bg-overlay">
                                                                     <div class="user-swiper-text">devine_lena</div>
                                                                 </div>
                                                             </div>
                                                             <div class="swiper-slide">
-                                                                <img src="../../../app-assets/img/profile/profile-portrait-2.jpg" class="rounded user-profile-stories-image" alt="story-image-2">
+                                                                <img src="img/profile/profile-portrait-2.jpg" class="rounded user-profile-stories-image" alt="story-image-2">
                                                                 <div class="card-img-overlay bg-overlay">
                                                                     <div class="user-swiper-text">ureka_23</div>
                                                                 </div>
                                                             </div>
                                                             <div class="swiper-slide">
-                                                                <img src="../../../app-assets/img/profile/profile-portrait-3.jpg" class="rounded user-profile-stories-image" alt="story-image-3">
+                                                                <img src="img/profile/profile-portrait-3.jpg" class="rounded user-profile-stories-image" alt="story-image-3">
                                                                 <div class="card-img-overlay bg-overlay">
                                                                     <div class="user-swiper-text">venice_like852</div>
                                                                 </div>
                                                             </div>
                                                             <div class="swiper-slide">
-                                                                <img src="../../../app-assets/img/profile/profile-portrait-6.jpg" class="rounded user-profile-stories-image" alt="story-image-4">
+                                                                <img src="img/profile/profile-portrait-6.jpg" class="rounded user-profile-stories-image" alt="story-image-4">
                                                                 <div class="card-img-overlay bg-overlay">
                                                                     <div class="user-swiper-text">june5211</div>
                                                                 </div>
                                                             </div>
                                                             <div class="swiper-slide">
-                                                                <img src="../../../app-assets/img/profile/profile-portrait-7.jpg" class="rounded user-profile-stories-image" alt="story-image-5">
+                                                                <img src="img/profile/profile-portrait-7.jpg" class="rounded user-profile-stories-image" alt="story-image-5">
                                                                 <div class="card-img-overlay bg-overlay">
                                                                     <div class="user-swiper-text">defloya_456</div>
                                                                 </div>
                                                             </div>
                                                             <div class="swiper-slide">
-                                                                <img src="../../../app-assets/img/profile/profile-portrait-8.jpg" class="rounded user-profile-stories-image" alt="story-image-6">
+                                                                <img src="img/profile/profile-portrait-8.jpg" class="rounded user-profile-stories-image" alt="story-image-6">
                                                                 <div class="card-img-overlay bg-overlay">
                                                                     <div class="user-swiper-text">allen5196</div>
                                                                 </div>
                                                             </div>
                                                             <div class="swiper-slide">
-                                                                <img src="../../../app-assets/img/profile/profile-portrait-9.jpg" class="rounded user-profile-stories-image" alt="story-image-7">
+                                                                <img src="img/profile/profile-portrait-9.jpg" class="rounded user-profile-stories-image" alt="story-image-7">
                                                                 <div class="card-img-overlay bg-overlay">
                                                                     <div class="user-swiper-text">cecilia_698</div>
                                                                 </div>
@@ -255,7 +255,7 @@ include "partials/header.php";
                                                         <div class="col-12">
                                                             <div class="d-sm-flex justify-content-between align-items-center mb-2">
                                                                 <div class="d-flex">
-                                                                    <img src="../../../app-assets/img/portrait/small/avatar-s-10.png" class="avatar mr-3" alt="Avatar" width="50" height="50">
+                                                                    <img src="img/portrait/small/avatar-s-10.png" class="avatar mr-3" alt="Avatar" width="50" height="50">
                                                                     <div class="align-self-center">
                                                                         <h6 class="m-0">UX Designer</h6>
                                                                         <small class="text-muted font-small-2">PIXINVENT</small>
@@ -269,8 +269,8 @@ include "partials/header.php";
                                                             <h6>Media Files (2)</h6>
                                                             <table class="table table-borderless">
                                                                 <tr>
-                                                                    <td class="pl-0 py-0 pr-1"><img src="../../../app-assets/img/banner/banner-28.jpg" class="img-fluid" alt="Pic1"></td>
-                                                                    <td class="pr-0 py-0 pl-1"><img src="../../../app-assets/img/banner/banner-24.jpg" class="img-fluid" alt="Pic2"></td>
+                                                                    <td class="pl-0 py-0 pr-1"><img src="img/banner/banner-28.jpg" class="img-fluid" alt="Pic1"></td>
+                                                                    <td class="pr-0 py-0 pl-1"><img src="img/banner/banner-24.jpg" class="img-fluid" alt="Pic2"></td>
                                                                 </tr>
                                                             </table>
                                                             <hr>
@@ -280,7 +280,7 @@ include "partials/header.php";
                                                         <div class="col-12">
                                                             <div class="d-sm-flex justify-content-between align-items-center mb-2">
                                                                 <div class="d-flex">
-                                                                    <img src="../../../app-assets/img/icons/sketch-mac-icon.png" class="mr-3" alt="Avatar" width="50" height="50">
+                                                                    <img src="img/icons/sketch-mac-icon.png" class="mr-3" alt="Avatar" width="50" height="50">
                                                                     <div class="align-self-center">
                                                                         <h6 class="m-0">Lead Designer</h6>
                                                                         <small class="text-muted font-small-2">Sketch App</small>
@@ -294,8 +294,8 @@ include "partials/header.php";
                                                             <h6>Media Files (2)</h6>
                                                             <table class="table table-borderless m-0">
                                                                 <tr>
-                                                                    <td class="pl-0 py-0 pr-1"><img src="../../../app-assets/img/banner/banner-34.jpg" class="img-fluid" alt="Pic1"></td>
-                                                                    <td class="pr-0 py-0 pl-1"><img src="../../../app-assets/img/banner/banner-21.jpg" class="img-fluid" alt="Pic2"></td>
+                                                                    <td class="pl-0 py-0 pr-1"><img src="img/banner/banner-34.jpg" class="img-fluid" alt="Pic1"></td>
+                                                                    <td class="pr-0 py-0 pl-1"><img src="img/banner/banner-21.jpg" class="img-fluid" alt="Pic2"></td>
                                                                 </tr>
                                                             </table>
                                                         </div>
@@ -339,31 +339,31 @@ include "partials/header.php";
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-2.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-2.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-4.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-4.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-6.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-6.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-8.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-8.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-26.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-26.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-12.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-12.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-14.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-14.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-16.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-16.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                         <div class="col-4 pl-1 pr-0 pb-1">
-                                                            <img src="../../../app-assets/img/portrait/small/avatar-s-18.png" class="img-fluid" alt="gallery-avtar">
+                                                            <img src="img/portrait/small/avatar-s-18.png" class="img-fluid" alt="gallery-avtar">
                                                         </div>
                                                     </div>
                                                 </div>
