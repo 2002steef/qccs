@@ -458,6 +458,8 @@ function masseuseInfo()
             <td><a href="modals.php?1" data-toggle="modal" data-target="#info1">
                             <i class="ft-eye" data-toggle="tooltip" data-original-title="Info bekijken" data-placement="bottom"></i>
                         </a></td>
+                        <td></td>
+                        <td></td>
         </tr>
     <?php }
 }
