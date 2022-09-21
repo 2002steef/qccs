@@ -456,7 +456,7 @@ function masseuseInfo()
     ?>
         <tr>
            <td></td>
-           <td></td>
+           <td colspan="5"></td>
            <td></td> 
         </tr>
     <?php
