@@ -451,11 +451,11 @@ function masseuseInfo()
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
-    while ($resultMasseuse->fetch_assoc()) { ?>
+    while ($masseuse = $resultMasseuse->fetch_assoc()) { ?>
         <tr>
-            <td><?= $resultMasseuse["masseuseID"] ?></td>
-            <td colspan="5"><?= $resultMasseuse["masseuseID"] ?></td>
-            <td><?= $resultMasseuse["masseuseID"] ?></td>
+            <td><?= $masseuse["masseuseID"] ?></td>
+            <td colspan="5"><?= $masseuse["masseuseID"] ?></td>
+            <td><?= $masseuse["masseuseID"] ?></td>
         </tr>
     <?php }
 }
