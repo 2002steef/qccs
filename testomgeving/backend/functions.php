@@ -455,15 +455,10 @@ function masseuseInfo()
     while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
         <tr>
-            <td><?= $masseuse["masseuseID"] ?></td>
-            <td colspan="5"><?= $masseuse["voornaam"] . " " . $masseuse["tussenvoegsel"] . " " . $masseuse["achternaam"] ?></td>
-            <td>
-                <a href="modals.php?<?= $masseuse["masseuseID"] ?>" data-toggle="modal" data-target="#info<?= $masseuse["masseuseID"] ?> ">
-                    test link
-                </a>
-            </td>
+           <td></td>
+           <td></td>
+           <td></td> 
         </tr>
-        </tbody>
     <?php
 
     }
