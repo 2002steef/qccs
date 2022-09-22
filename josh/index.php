@@ -1,3 +1,7 @@
+<?php
+include "backend/voucherFunctions.php" ;
+?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
