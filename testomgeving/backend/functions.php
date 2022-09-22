@@ -80,7 +80,7 @@ function Getuser()
 function GetMasseuse()
 {
     global $mysqli;
-    $sql = "SELECT * FROM masseuse where masseuseID = ?";
+    $sql = "SELECT * FROM masseuses where masseuseID = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('i', $_GET['masseuseID']);
     $stmt->execute();
