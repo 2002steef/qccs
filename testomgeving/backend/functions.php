@@ -77,6 +77,17 @@ function Getuser()
     return $result->fetch_array();
 }
 
+function GetMasseuse()
+{
+    global $mysqli;
+    $sql = "SELECT * FROM masseuse where masseuseID = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('i', $_GET['masseuseID']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+}
+
 
 function Changepassword()
 {
@@ -455,7 +466,7 @@ function masseuseInfo()
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
             <td><?= $masseuse["voornaam"] ?></td>
-            <td><a href="masseuse_profiel.php">
+            <td><a href="masseuse_profiel.php?<?= $masseuse["masseuseID"] ?>">
                             <i class="ft-eye" data-toggle="tooltip" data-original-title="Info bekijken" data-placement="bottom"></i>
                         </a></td>
                         <td></td>
