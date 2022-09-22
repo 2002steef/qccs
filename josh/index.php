@@ -9,7 +9,7 @@
     <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Buttons - Apex responsive bootstrap 4 admin template</title>
+    <title>Voucher sturen</title>
     <link rel="shortcut icon" type="image/x-icon" href="app-assets/img/ico/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="app-assets/img/ico/favicon-32.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -76,7 +76,7 @@
                                             <div class="row">
                                                 <!-- block button -->
                                                 <div class="col-12 col-md-12 mb-2 mb-md-0">
-                                                    <button type="button" class="btn btn-outline-primary btn-block">Send Voucher</button>
+                                                    <button type="button" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
                                                 </div>
                                             </div>
                                         </div>
