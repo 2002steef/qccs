@@ -86,16 +86,9 @@ function GetMasseuse()
     $stmt->execute();
     $result = $stmt->get_result();
     while($result->fetch_array()){
-        $masseuseID = $result["masseuseID"];
-        $masseuseVoornaam = $result["voornaam"];
-        $masseuseAchternaam = $result["achternaam"];
-        $masseuseEmail = $result["email"];
-        $masseuseTelefoon = $result["telefoon"];
-        $masseuseHuisnummer = $result["huisnummer"];
-        $masseusePostcode = $result["postcode"];
-        $masseuseWebsite = $result["website"];
-        $masseuseParagraafje = $result["paragraafje"];
+        $masseuse = $result;
     }
+    return $masseuse;
 }
 
 
