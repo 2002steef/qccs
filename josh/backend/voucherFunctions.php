@@ -15,7 +15,6 @@ function createRandomVoucher()
     }
 
     return $voucher;
-    echo $voucher;
 }
 
 
