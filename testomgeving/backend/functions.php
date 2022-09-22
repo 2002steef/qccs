@@ -88,7 +88,6 @@ function GetMasseuse()
     while($result->fetch_array()){
         $masseuse = $result;
     }
-    return $masseuse;
 }
 
 
