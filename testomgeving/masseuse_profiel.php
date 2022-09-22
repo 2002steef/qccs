@@ -1,5 +1,6 @@
 <?php
 include "backend/functions.php";
+Updateuser();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
