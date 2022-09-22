@@ -1,7 +1,7 @@
 <?php
 include "backend/functions.php";
 Updateuser();
-$masseuse = GetMasseuse();
+GetMasseuse();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -32,7 +32,7 @@ include "partials/header.php";
                                         <img src="img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
-                                        <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"] ?></h4>
+                                        <h4 class="profile-text-color mb-0"><?= $masseuseVoornaam ?></h4>
                                         <small>Masseuse</small>
                                     </div>
                                     <!-- user profile body start -->
@@ -62,7 +62,7 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <p class="m-0"><?= $masseuse["paragraafje"] ?><a href="javascript:;">MORE</a></p>
+                                                    <p class="m-0"><?= $masseuseParagraafje ?><a href="javascript:;">MORE</a></p>
                                                 </div>
                                             </div>
                                         </div>
