@@ -32,7 +32,7 @@
 <!-- BEGIN: Custom CSS-->
 <script src="assets/js/scripts.js"></script>
 <footer class="footer undefined undefined">
-        <p class="clearfix text-muted m-0"><span>Copyright &copy; 2021 &nbsp;</span><a
+        <p class="clearfix text-muted m-0"><span>Copyright &copy; 2022 &nbsp;</span><a
                     href="https://qccs.nl/" id="pixinventLink"
                     target="_blank">QCCS</a><span
                     class="d-none d-sm-inline-block">, All rights reserved.</span></p>

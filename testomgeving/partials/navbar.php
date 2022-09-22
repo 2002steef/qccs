@@ -118,8 +118,8 @@ $row = Getuser();
                             <span class="text">Masseuses</span>
                         </a>
                         <?php
-                    } elseif ($_SESSION["memb_of"] > 0) {
-                        if ($_SESSION['auth'] == "Bedrijfsleider") {
+                    } elseif ($_SESSION["status"] == "Masseuse" ) {
+                        
                             ?>
                             <a class=""
                                href="bedrijfs_klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
@@ -134,7 +134,6 @@ $row = Getuser();
                                 <span class="text">Masseuses</span>
                             </a>
                         <?php }
-                    }
                     }
                     ?>
                 </li>
@@ -155,23 +154,7 @@ $row = Getuser();
                     }
                     ?>
                 </li>
-                <li class="nav-item">
-                    <?php
-                    if(isset($_GET['membof'])) {
-                        if ($row['authentication_level'] === 'Admin' || $row['authentication_level'] === 'Bedrijfsleider') {
-                            $memb_of = $_GET['membof'];
-                            ?>
-                            <a class="" href="<?php
-                            echo "bedrijf_werknemer_overzicht.php?custof=$memb_of&membof=$memb_of";
-                            ?>">
-                                <i class="icon-users"></i>
-                                <span class="text">Werknemers</span>
-                            </a>
-                            <?php
-                        }
-                    }
-                    ?>
-                </li>
+                
                 <li class="nav-item">
                     <?php
                     if(isset($_GET['membof'])) {
