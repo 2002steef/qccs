@@ -68,14 +68,14 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title">Block Level Buttons</h4>
+                                        <h4 class="card-title">Voucher sturen</h4>
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <p>Create block level buttons—those that span the full width of a parent — by adding <code>.btn-block</code></p>
+                                            <p>Stuur voucher code</p>
                                             <div class="row">
                                                 <!-- block button -->
-                                                <div class="col-12 col-md-6 mb-2 mb-md-0">
+                                                <div class="col-12 col-md-12 mb-2 mb-md-0">
                                                     <button type="button" class="btn btn-outline-primary btn-block">Send Voucher</button>
                                                 </div>
                                             </div>
