@@ -93,7 +93,6 @@ include "backend/voucherFunctions.php" ;
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
                                                     </div>
                                                 </form>
-
                                             </div>
                                         </div>
                                     </div>

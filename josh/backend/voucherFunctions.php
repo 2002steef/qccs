@@ -1,25 +1,23 @@
 <?php
-function createRandomVoucher()
-{
 
-    $chars = "abcdefghijkmnopqrstuvwxyz023456789";
-    srand((float)microtime() * 1000000);
-    $i = 0;
-    $voucher = '';
-
-    while ($i <= 12) {
-        $num = rand() % 33;
-        $tmp = substr($chars, $num, 1);
-        $voucher = $voucher . $tmp;
-        $i++;
+function createRandomVoucher(
+    int $length = 64,
+    string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+): string {
+    if ($length < 1) {
+        throw new \RangeException("Length must be a positive integer");
     }
-
-    return $voucher;
+    $pieces = [];
+    $max = mb_strlen($keyspace, '8bit') - 1;
+    for ($i = 0; $i < $length; ++$i) {
+        $pieces []= $keyspace[random_int(0, $max)];
+    }
+    return implode('', $pieces);
 }
 
 
 if (isset($_POST['VoucherSturen'])) {
-   createRandomVoucher();
+  echo createRandomVoucher();
 }
 
 // $stmt = $mysqli->prepare("INSERT INTO `vouchers`(`userID`, `voucher`) VALUES ('1',?)");
