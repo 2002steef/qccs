@@ -79,7 +79,7 @@ include "backend/voucherFunctions.php" ;
                                             <p>Stuur voucher code</p>
                                             <div class="row">
                                                 <!-- block button -->
-                                                <p class=" mb-2 mb-md-0">uw code is: </p>
+                                                <div class=" mb-2 mb-md-0">uw code is: </div>
                                                 <?php
                                                 if (isset($_POST['VoucherSturen'])) {
                                                     echo createRandomVoucher();
