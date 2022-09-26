@@ -93,8 +93,8 @@ $row = Getuser();
         <div class="logo clearfix">
             
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
-                    <div class="logo-img"><img src="assets/img/logo.png"/></div>
-                    <span class="text">CRM</span>
+                    <div class="logo-img"><img src="assets/img/BMA-Logo.png"/></div>
+                    <span class="text">BMA</span>
                 </a>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
                         class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a>
