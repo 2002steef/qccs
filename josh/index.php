@@ -69,7 +69,7 @@ include "backend/voucherFunctions.php" ;
                     <!-- Block level buttons start -->
                     <section id="block-level-buttons">
                         <div class="row">
-                            <div class="col-6 col-md-3">
+                            <div class="col-6 align-self-center">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title">Voucher sturen</h4>
