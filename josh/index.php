@@ -77,7 +77,7 @@ include "backend/voucherFunctions.php" ;
                                     <div class="card-content">
                                         <div class="card-body">
                                             <p>Stuur voucher code</p>
-                                            <div class=" mb-2 mb-md-0">uw code is: </div>
+                                            
                                                 <?php
                                                 if (isset($_POST['VoucherSturen'])) {
                                                     $token = createRandomVoucher();
