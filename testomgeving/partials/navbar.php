@@ -9,8 +9,8 @@ $row = Getuser();
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
-<body class="vertical-layout vertical-menu 2-columns  navbar-sticky bg-glass-1"
-      data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
+<body class="vertical-layout vertical-menu 2-columns  navbar-sticky "
+     data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
 <nav class="navbar navbar-expand-lg  header-navbar navbar-static">
