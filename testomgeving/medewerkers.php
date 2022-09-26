@@ -42,7 +42,7 @@ if (!isset($_SESSION["loggedin"])) {
 <!-- END : Head-->
 <!-- BEGIN : Body-->
 
-<body class="horizontal-layout horizontal-menu horizontal-menu-padding 2-columns chat-application navbar-sticky layout-dark" data-open="hover" data-menu="horizontal-menu" data-col="2-columns">
+<body class="vertical-layout vertical-menu 2-columns  navbar-sticky" data-menu="vertical-menu" data-col="2-columns">
 
     <!-- Navbar (Header) Starts-->
     <?php
