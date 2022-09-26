@@ -86,14 +86,14 @@ $row = Getuser();
     </div>
 </nav>
 <!-- Navbar (Header) Ends-->
-<div class="app-sidebar menu-fixed  primary"   data-scroll-to-active="true">
+<div class="app-sidebar menu-fixed "   data-scroll-to-active="true">
     <!--     main menu header-->
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
         <div class="logo clearfix">
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
                     <div class="logo-img"><img src="assets/img/BMA-Logo.png"/></div>
-                    <span class="text" .#364E49 >BMA</span>
+                    <span class="text"  >BMA</span>
                 </a>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
                         class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a>
@@ -107,7 +107,7 @@ $row = Getuser();
     <!--    main menu content-->
     <div class="sidebar-content main-menu-content" >
         <div class="nav-container">
-            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <ul class="navigation navigation-main" text-color="#364E49" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
                     <?php if (isset($_SESSION["status"])) {
                          if ($_SESSION["status"] == "medewerker") {
