@@ -9,11 +9,11 @@ $row = Getuser();
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
-<body class="vertical-layout vertical-menu 2-columns  navbar-sticky "
+<body class="vertical-layout vertical-menu 2-columns bg-transparant navbar-sticky "
      data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
-<nav class="navbar navbar-expand-lg  header-navbar navbar-static">
+<nav class="navbar navbar-expand-lg  header-navbar bg-transparant navbar-static">
     <div class="container-fluid navbar-wrapper">
         <div class="navbar-header d-flex">
             <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center"
