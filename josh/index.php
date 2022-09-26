@@ -69,7 +69,7 @@ include "backend/voucherFunctions.php" ;
                     <!-- Block level buttons start -->
                     <section id="block-level-buttons">
                         <div class="row">
-                            <div class="col-6 align-self-center">
+                            <div class="col-12 ">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title">Voucher sturen</h4>
@@ -81,15 +81,15 @@ include "backend/voucherFunctions.php" ;
                                                 <!-- block button -->
 
                                                 <form action="" method="POST">
-                                                    <div class="form-group col-12 col-md-12 mb-2 mb-md-0">
+                                                    <div class="form-group mb-2 mb-md-0">
                                                             <label class="label_txt">Email Klant</label>
                                                             <input type="text" name="KlantMail" class="form-control">
                                                     </div>
-                                                    <div class="form-group col-12 col-md-12 mb-2 mb-md-0">
+                                                    <div class="form-group col-md-12 mb-2 mb-md-0">
                                                         <label class="label_txt">Email Masseuse</label>
                                                         <input type="text" name="MasseuseMail" class="form-control">
                                                     </div>
-                                                    <div class="col-12 col-md-12 mb-2 mb-md-0">
+                                                    <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
                                                     </div>
                                                 </form>
