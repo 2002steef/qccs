@@ -86,7 +86,7 @@ $row = Getuser();
     </div>
 </nav>
 <!-- Navbar (Header) Ends-->
-<div class="app-sidebar menu-fixed "   data-scroll-to-active="true">
+<div class="app-sidebar menu-fixed " data-background-color="primary"  data-scroll-to-active="true">
     <!--     main menu header-->
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
@@ -107,7 +107,7 @@ $row = Getuser();
     <!--    main menu content-->
     <div class="sidebar-content main-menu-content" >
         <div class="nav-container">
-            <ul class="navigation navigation-main" text-color="#364E49" id="main-menu-navigation" data-menu="menu-navigation">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
                     <?php if (isset($_SESSION["status"])) {
                          if ($_SESSION["status"] == "medewerker") {
