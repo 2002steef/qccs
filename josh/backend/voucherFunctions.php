@@ -16,9 +16,7 @@ function createRandomVoucher(
 }
 
 
-if (isset($_POST['VoucherSturen'])) {
-  echo createRandomVoucher();
-}
+
 
 // $stmt = $mysqli->prepare("INSERT INTO `vouchers`(`userID`, `voucher`) VALUES ('1',?)");
 // $voucher = createRandomVoucher();
