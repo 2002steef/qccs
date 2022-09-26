@@ -89,12 +89,11 @@ $row = Getuser();
 <div class="app-sidebar menu-fixed"   data-scroll-to-active="true">
     <!--     main menu header-->
     <!--     Sidebar Header For Starter Kit starts-->
-    <div class="sidebar-header" color="#342E49">
+    <div class="sidebar-header">
         <div class="logo clearfix">
-            
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
                     <div class="logo-img"><img src="assets/img/BMA-Logo.png"/></div>
-                    <span class="text " color="#342E49">BMA</span>
+                    <span class="text" .#364E49 >BMA</span>
                 </a>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
                         class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a>
@@ -106,7 +105,7 @@ $row = Getuser();
     <!--     Sidebar Header Ends-->
     <!--     / main menu header-->
     <!--    main menu content-->
-    <div class="sidebar-content main-menu-content" color="#342E49">
+    <div class="sidebar-content main-menu-content" >
         <div class="nav-container">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
