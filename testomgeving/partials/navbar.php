@@ -9,11 +9,11 @@ $row = Getuser();
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
-<body class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1"
+<body class="vertical-layout vertical-menu 2-columns  navbar-sticky bg-glass-1"
       data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
-<nav class="navbar navbar-expand-lg navbar-light header-navbar navbar-static">
+<nav class="navbar navbar-expand-lg  header-navbar navbar-static">
     <div class="container-fluid navbar-wrapper">
         <div class="navbar-header d-flex">
             <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center"
@@ -86,7 +86,7 @@ $row = Getuser();
     </div>
 </nav>
 <!-- Navbar (Header) Ends-->
-<div class="app-sidebar menu-fixed" data-background-color="" data-image="" data-scroll-to-active="true">
+<div class="app-sidebar menu-fixed"  data-image="" data-scroll-to-active="true">
     <!--     main menu header-->
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
