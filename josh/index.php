@@ -82,8 +82,6 @@ include "backend/voucherFunctions.php" ;
                                                 if (isset($_POST['VoucherSturen'])) {
                                                     $token = createRandomVoucher();
                                                     $email = $_POST["KlantMail"];
-                                                    echo $token;
-                                                    echo $email;
                                                     if ($email) {
                                                         $to = $email;
                                                         $subject = "Voucher code";
