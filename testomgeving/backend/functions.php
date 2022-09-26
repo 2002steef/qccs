@@ -467,7 +467,7 @@ function masseuseInfo()
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
             <td ><?= $masseuse["masseuseID"] ?></td>
-            <td colspan="8"><?= $masseuse["voornaam"] ?></td>
+            <td ><?= $masseuse["voornaam"] ?></td>
             <td ><a class="btn btn-outline-primary" href="masseuse_profiel.php?<?= $masseuse["masseuseID"] ?>">
                             Meer info
                         </a></a>
