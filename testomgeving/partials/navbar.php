@@ -13,7 +13,7 @@ $row = Getuser();
      data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
-<nav class="navbar navbar-expand-lg  header-navbar bg-transparant navbar-static">
+<nav class="navbar navbar-expand-lg  header-navbar bg-transparant navbar-static" data-background-color="man-of-steel" data-image="assets/img/sidebar-bg/01.jpg">
     <div class="container-fluid navbar-wrapper">
         <div class="navbar-header d-flex">
             <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center"
