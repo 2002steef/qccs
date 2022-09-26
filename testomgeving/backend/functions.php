@@ -466,9 +466,9 @@ function masseuseInfo()
     $resultMasseuse = $stmt->get_result();
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
-            <td><?= $masseuse["masseuseID"] ?></td>
-            <td colspan="5"><?= $masseuse["voornaam"] ?></td>
-            <td><a class="col-md-6 btn btn-outline-primary" href="masseuse_profiel.php?<?= $masseuse["masseuseID"] ?>">
+            <td class="col-md-3"><?= $masseuse["masseuseID"] ?></td>
+            <td class="col-md-6"><?= $masseuse["voornaam"] ?></td>
+            <td><a class="col-md-3 btn btn-outline-primary" href="masseuse_profiel.php?<?= $masseuse["masseuseID"] ?>">
                             Meer info
                         </a></a>
         </tr>
