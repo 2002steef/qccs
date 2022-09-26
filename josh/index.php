@@ -81,11 +81,11 @@ include "backend/voucherFunctions.php" ;
                                                 <!-- block button -->
 
                                                 <form action="" method="POST">
-                                                    <div class="form-group">
+                                                    <div class="form-group col-12 col-md-12 mb-2 mb-md-0">
                                                             <label class="label_txt">Email Klant</label>
                                                             <input type="text" name="KlantMail" class="form-control">
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group col-12 col-md-12 mb-2 mb-md-0">
                                                         <label class="label_txt">Email Masseuse</label>
                                                         <input type="text" name="MasseuseMail" class="form-control">
                                                     </div>
