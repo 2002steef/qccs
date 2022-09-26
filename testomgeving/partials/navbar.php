@@ -86,7 +86,7 @@ $row = Getuser();
     </div>
 </nav>
 <!-- Navbar (Header) Ends-->
-<div class="app-sidebar menu-fixed" data-background-color="man-of-steel" data-image="assets/img/sidebar-bg/01.jpg"  data-image="man-of-steel" data-scroll-to-active="true">
+<div class="app-sidebar menu-fixed"  data-scroll-to-active="true">
     <!--     main menu header-->
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
