@@ -468,7 +468,7 @@ function masseuseInfo()
         <tr>
             <td><?= $masseuse["masseuseID"] ?></td>
             <td colspan="5"><?= $masseuse["voornaam"] ?></td>
-            <td><button class=" btn btn-outline-primary" href="masseuse_profiel.php?<?= $masseuse["masseuseID"] ?>">
+            <td><button class="col-md-6 btn btn-outline-primary" href="masseuse_profiel.php?<?= $masseuse["masseuseID"] ?>">
                             Meer info
                         </a></button>
         </tr>
