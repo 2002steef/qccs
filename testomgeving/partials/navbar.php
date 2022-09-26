@@ -13,7 +13,7 @@ $row = Getuser();
      data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
-<nav class="navbar navbar-expand-lg  header-navbar bg-transparant navbar-static" data-background-color="man-of-steel" data-image="assets/img/sidebar-bg/01.jpg">
+<nav class="navbar navbar-expand-lg  header-navbar bg-transparant navbar-static" >
     <div class="container-fluid navbar-wrapper">
         <div class="navbar-header d-flex">
             <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center"
@@ -86,7 +86,7 @@ $row = Getuser();
     </div>
 </nav>
 <!-- Navbar (Header) Ends-->
-<div class="app-sidebar menu-fixed"  data-image="" data-scroll-to-active="true">
+<div class="app-sidebar menu-fixed" data-background-color="man-of-steel" data-image="assets/img/sidebar-bg/01.jpg"  data-image="man-of-steel" data-scroll-to-active="true">
     <!--     main menu header-->
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
