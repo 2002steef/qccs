@@ -80,7 +80,17 @@ include "backend/voucherFunctions.php" ;
                                             <div class=" mb-2 mb-md-0">uw code is: </div>
                                                 <?php
                                                 if (isset($_POST['VoucherSturen'])) {
-                                                    echo createRandomVoucher();
+                                                    $token = createRandomVoucher();
+                                                    $email = $_GET["KlantMail"];
+                                                    if (isset($email)) {
+                                                        $to = $email;
+                                                        $subject = "Voucher code";
+                                                        $msg = "Uw voucher code is . $token ";
+                                                        $msg = wordwrap($msg, 70);
+                                                        $headers = "From: Admin@qccs.nl";
+                                                        mail($to, $subject, $msg, $headers);
+                                                        header('location:index.php');
+                                                    }
                                                   }
                                                 ?>
                                             <div class="row">
