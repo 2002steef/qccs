@@ -85,7 +85,7 @@ include "backend/voucherFunctions.php" ;
                                                             <label class="label_txt">Email Klant</label>
                                                             <input type="text" name="KlantMail" class="form-control">
                                                     </div>
-                                                    <div class="form-group col-md-12 mb-2 mb-md-0">
+                                                    <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Email Masseuse</label>
                                                         <input type="text" name="MasseuseMail" class="form-control">
                                                     </div>
