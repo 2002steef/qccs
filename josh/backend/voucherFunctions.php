@@ -1,7 +1,7 @@
 <?php
 
 function createRandomVoucher(
-    int $length = 12,
+    int $length = 18,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 ): string {
     if ($length < 1) {
