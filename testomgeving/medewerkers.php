@@ -70,7 +70,7 @@ if (!isset($_SESSION["loggedin"])) {
                             </div>
 
                             <div class="card-content light-gray">
-                                <div class="card-body">
+                                <div class="card-body light-gray">
                                     <section id="file-export">
                                         <ul class="nav nav-tabs light-gray" role="tablist" id="tabs">
                                             <li class="nav-item active light-gray">
