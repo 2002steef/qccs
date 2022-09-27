@@ -13,7 +13,7 @@ $row = Getuser();
      data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
-<nav class="navbar navbar-expand-lg  header-navbar  navbar-static" >
+<nav class="navbar navbar-expand-lg  header-navbar  navbar-static light-gray" >
     <div class="container-fluid navbar-wrapper">
         <div class="navbar-header d-flex">
             <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center"
@@ -21,7 +21,7 @@ $row = Getuser();
             <ul class="navbar-nav">
                 <li class="nav-item mr-2 d-none d-lg-block"><a class="nav-link apptogglefullscreen"
                                                                id="navbar-fullscreen" href="javascript:;"><i
-                                class="ft-maximize font-medium-3"></i></a></li>
+                                class="ft-maximize font-medium-3 light-gray"></i></a></li>
                 <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="javascript:"><i
                                 class="ft-search font-medium-3"></i></a>
                     <div class="search-input">
@@ -41,41 +41,41 @@ $row = Getuser();
                                 class="nav-link d-flex align-items-center dropdown-toggle dropdown-language"
                                 id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img
                                     class="langimg selected-flag" src="assets/img/flags/nl.png" alt="flag"><span
-                                    class="selected-language d-md-flex d-none">Nederlands</span></a>
+                                    class="selected-language d-md-flex d-none light-gray">Nederlands</span></a>
                         <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag"><a
                                     class="dropdown-item" href="javascript:;" data-language="en"><img
                                         class="langimg mr-2" src="../assets/img/flags/us.png" alt="flag"><span
-                                        class="font-small-3">English</span></a><a class="dropdown-item"
+                                        class="font-small-3 light-gray">English</span></a><a class="dropdown-item"
                                                                                   href="javascript:;"
                                                                                   data-language="es"><img
                                         class="langimg mr-2" src="../assets/img/flags/nl.png" alt="flag"><span
-                                        class="font-small-3">Nederlands</span></a><a class="dropdown-item"
+                                        class="font-small-3 light-gray">Nederlands</span></a><a class="dropdown-item"
                                                                                   href="javascript:;"
                                                                                   data-language="pt"><img
                                         class="langimg mr-2" src="../assets/img/flags/pt.png" alt="flag"><span
-                                        class="font-small-3">Portuguese</span></a><a class="dropdown-item"
+                                        class="font-small-3 light-gray">Portuguese</span></a><a class="dropdown-item"
                                                                                      href="javascript:;"
                                                                                      data-language="de"><img
                                         class="langimg mr-2" src="../assets/img/flags/de.png" alt="flag"><span
-                                        class="font-small-3">German</span></a></div>
+                                        class="font-small-3 light-gray">German</span></a></div>
                     </li>
                     <li class="dropdown nav-item mr-1"><a
                                 class="nav-link dropdown-toggle user-dropdown d-flex align-items-end"
                                 id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                             <div class="user d-md-flex d-none mr-2"><span
                                         class="text-right"><?php if (isset($_SESSION["name"])) {echo $_SESSION["name"]; } ?></span><span
-                                        class="text-right text-muted font-small-3">Beschikbaar</span></div>
+                                        class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
                             <img class="avatar" src="uploads/IMG-61b0ee01b38261.71649507.jpg?>" alt="avatar"
                                  height="35" width="35">
                         </a>
                         <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0"
                              aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php">
                                 <div class="d-flex align-items-center"><i
-                                            class="ft-edit mr-2"></i><span>Profiel settings</span></div>
+                                            class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>
                             </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="backend/logout.php">
-                                <div class="d-flex align-items-center"><i class="ft-power mr-2"></i><span>Logout</span>
+                                <div class="d-flex align-items-center light-gray"><i class="ft-power mr-2"></i><span>Logout</span>
                                 </div>
                             </a>
                         </div>
@@ -93,7 +93,7 @@ $row = Getuser();
         <div class="logo clearfix">
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
                     <div class="logo-img"><img height="50px" width="50px" src="assets/img/BMA-Logo.png"/></div>
-                    <span class="light-gray"  >BMA</span>
+                    <span class="light-gray" >BMA</span>
                 </a>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
                         class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a>

@@ -7,7 +7,7 @@
     <meta name="keywords"
           content="QCCS, Relatiebeheer, CRM, Customer Relationship Management, Project, ROC, KW1C">
     <meta name="author" content="QCCS">
-    <title>QCCS, Relatiebeheer systeem ROC/KW1C</title>
+    <title>BMA, Massage abonnementen</title>
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/ico/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="../assets/img/ico/favicon-32.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
