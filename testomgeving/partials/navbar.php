@@ -106,8 +106,8 @@ $row = Getuser();
     <!--     / main menu header-->
     <!--    main menu content-->
     <div class="sidebar-content main-menu-content" >
-        <div class="nav-container">
-            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+        <div class="nav-container bg-transparent">
+            <ul class="navigation navigation-main bg-transparent" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
                     <?php if (isset($_SESSION["status"])) {
                          if ($_SESSION["status"] == "medewerker") {
