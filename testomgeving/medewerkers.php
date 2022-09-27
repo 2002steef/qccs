@@ -74,8 +74,8 @@ if (!isset($_SESSION["loggedin"])) {
                                     <section id="file-export">
                                         <ul class="nav nav-tabs" role="tablist" id="tabs">
                                             <li class="nav-item active">
-                                                <a href="#Particulier" role="tab" id="account-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="account" aria-selected="true">
-                                                    <i class="ft-user mr-1"></i>
+                                                <a href="#Particulier" role="tab" id="account-tab" class="nav-link d-flex align-items-center active light-gray" data-toggle="tab" aria-controls="account" aria-selected="true">
+                                                    <i class="ft-user mr-1 light-gray"></i>
                                                     <span class="d-none d-sm-block light-gray">Masseuses</span>
                                                 </a>
                                             </li>
