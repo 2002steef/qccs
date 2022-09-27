@@ -3013,13 +3013,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light-grey {
-  color: #342E49;
-  border-color: #342E49;
+  color: #975AFF;
+  border-color: #975AFF;
 }
 .btn-outline-light-grey:hover {
   color: #fccfcf;
-  background-color: #342E49;
-  border-color: #342E49;
+  background-color: #975AFF;
+  border-color: #975AFF;
 }
 
 .btn-outline-light-grey:focus,
