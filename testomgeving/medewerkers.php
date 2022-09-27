@@ -63,9 +63,9 @@ if (!isset($_SESSION["loggedin"])) {
                                 <h4 class="card-title"></h4>
 
                                 <ul class="breadcrumb bg-transparent">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Bedrijfs klanten overzicht</a></li>
+                                    <li class="breadcrumb-item light-gray"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item light-gray"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
+                                    <li class="breadcrumb-item light-gray"><a href="#">Bedrijfs klanten overzicht</a></li>
                                 </ul>
                             </div>
 

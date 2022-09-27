@@ -25,7 +25,7 @@ $row = Getuser();
                 <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="javascript:"><i
                                 class="ft-search font-medium-3"></i></a>
                     <div class="search-input">
-                        <div class="search-input-icon"><i class="ft-search font-medium-3"></i></div>
+                        <div class="search-input-icon"><i class="ft-search font-medium-3 light-gray"></i></div>
                         <input class="input light-gray" type="text" placeholder="Explore QCCS..." tabindex="0"
                                data-search="template-search">
                         <div class="search-input-close"><i class="ft-x font-medium-3"></i></div>

@@ -73,7 +73,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  color: #342E49; }
 
 abbr[title],
 abbr[data-original-title] {
@@ -92,13 +93,15 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  color: #342E49; }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: #342E49; }
 
 dt {
   font-weight: 700; }
@@ -131,11 +134,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #975AFF;
+  color: #342E49;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #8741ff;
+    color: #342E49;
     text-decoration: none; }
 
 a:not([href]) {
