@@ -16,12 +16,12 @@ $row = Getuser();
 <nav class="navbar navbar-expand-lg  header-navbar  navbar-static light-gray" >
     <div class="container-fluid navbar-wrapper">
         <div class="navbar-header d-flex">
-            <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center light-gray"
-                 data-toggle="collapse"><i class="ft-menu font-medium-3 light-gray"></i></div>
+            <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center "
+                 data-toggle="collapse"><i class="ft-menu font-medium-3 "></i></div>
             <ul class="navbar-nav">
-                <li class="nav-item mr-2 d-none d-lg-block"><a class="nav-link apptogglefullscreen light-gray"
+                <li class="nav-item mr-2 d-none d-lg-block"><a class="nav-link apptogglefullscreen"
                                                                id="navbar-fullscreen" href="javascript:;"><i
-                                class="ft-maximize font-medium-3 light-gray"></i></a></li>
+                                class="ft-maximize font-medium-3 "></i></a></li>
                 <li class="nav-item nav-search"><a class="nav-link nav-link-search light-gray" href="javascript:"><i
                                 class="ft-search font-medium-3"></i></a>
                     <div class="search-input">
@@ -93,7 +93,7 @@ $row = Getuser();
         <div class="logo clearfix">
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
                     <div class="logo-img"><img height="50px" width="50px" src="assets/img/BMA-Logo.png"/></div>
-                    <span class="light-gray" >BMA</span>
+                    <span class="" >BMA</span>
                 </a>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
                         class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a>
