@@ -26,7 +26,7 @@ $row = Getuser();
                                 class="ft-search font-medium-3"></i></a>
                     <div class="search-input">
                         <div class="search-input-icon"><i class="ft-search font-medium-3"></i></div>
-                        <input class="input" type="text" placeholder="Explore QCCS..." tabindex="0"
+                        <input class="input light-gray" type="text" placeholder="Explore QCCS..." tabindex="0"
                                data-search="template-search">
                         <div class="search-input-close"><i class="ft-x font-medium-3"></i></div>
                         <ul class="search-list"></ul>
@@ -63,7 +63,7 @@ $row = Getuser();
                                 class="nav-link dropdown-toggle user-dropdown d-flex align-items-end"
                                 id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                             <div class="user d-md-flex d-none mr-2"><span
-                                        class="text-right"><?php if (isset($_SESSION["name"])) {echo $_SESSION["name"]; } ?></span><span
+                                        class="text-right light-gray"><?php if (isset($_SESSION["name"])) {echo $_SESSION["name"]; } ?></span><span
                                         class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
                             <img class="avatar" src="uploads/IMG-61b0ee01b38261.71649507.jpg?>" alt="avatar"
                                  height="35" width="35">
