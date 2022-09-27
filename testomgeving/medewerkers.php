@@ -81,7 +81,7 @@ if (!isset($_SESSION["loggedin"])) {
                                             </li>
                                         </ul>
                                         <div class="tab-content">
-                                            <div class="tab-pane fade mt-2 show active" id="Particulier" role="tabpanel" aria-labelledby="account-tab">
+                                            <div class="tab-pane fade mt-2 show active light-gray" id="Particulier" role="tabpanel" aria-labelledby="account-tab">
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="table-responsive">
