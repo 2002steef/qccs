@@ -89,19 +89,12 @@ $row = Getuser();
 <div class="app-sidebar menu-fixed" data-scroll-to-active="true">
     <!--     main menu header-->
     <!--     Sidebar Header For Starter Kit starts-->
-    <div class="sidebar-header">
-        <div class="logo clearfix">
-                <a class="logo-text float-left" href="bedrijfs_overzicht.php">
-                    <div class="logo-img"><img height="50px" width="50px" src="assets/img/BMA-Logo.png"/></div>
-                    <span class="light-gray" >BMA</span>
-                </a>
-            <a class="nav-toggle d-none d-lg-none d-xl-block light-gray" id="sidebarToggle" href="javascript:;"><i
-                        class="toggle-icon ft-toggle-right light-gray" data-toggle="expanded"></i></a>
-            <a class="nav-close d-block d-lg-block d-xl-none light-gray" id="sidebarClose" href="javascript:;"><i
-                        class="ft-x light-gray"></i>
-            </a>
-        </div>
-    </div>
+    
+            <div class="sidebar-header">
+                <div class="logo clearfix"><a class="logo-text float-left" href="index.html">
+                        <div class="logo-img"><img src="assets/img/BMA-Logo.png" alt="BMA Logo" /></div><span class="text">BMA</span>
+                    </a><a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a><a class="nav-close d-block d-lg-block d-xl-none" id="sidebarClose" href="javascript:;"><i class="ft-x"></i></a></div>
+            </div>
     <!--     Sidebar Header Ends-->
     <!--     / main menu header-->
     <!--    main menu content-->
