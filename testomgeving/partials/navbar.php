@@ -17,7 +17,7 @@ $row = Getuser();
     <div class="container-fluid navbar-wrapper">
         <div class="navbar-header d-flex">
             <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center light-grey"
-                 data-toggle="collapse"><i class="ft-menu font-medium-3"></i></div>
+                 data-toggle="collapse"><i class="ft-menu font-medium-3 light-grey"></i></div>
             <ul class="navbar-nav">
                 <li class="nav-item mr-2 d-none d-lg-block"><a class="nav-link apptogglefullscreen light-grey"
                                                                id="navbar-fullscreen" href="javascript:;"><i
