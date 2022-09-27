@@ -22,7 +22,7 @@ $row = Getuser();
                 <li class="nav-item mr-2 d-none d-lg-block"><a class="nav-link apptogglefullscreen light-gray"
                                                                id="navbar-fullscreen" href="javascript:;"><i
                                 class="ft-maximize font-medium-3 light-gray"></i></a></li>
-                <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="javascript:"><i
+                <li class="nav-item nav-search"><a class="nav-link nav-link-search light-gray" href="javascript:"><i
                                 class="ft-search font-medium-3"></i></a>
                     <div class="search-input">
                         <div class="search-input-icon"><i class="ft-search font-medium-3 light-gray"></i></div>
