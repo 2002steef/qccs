@@ -112,7 +112,7 @@ $row = Getuser();
                     <?php if (isset($_SESSION["status"])) {
                          if ($_SESSION["status"] == "medewerker") {
                         ?>
-                        <a class="gray" href="medewerkers.php">
+                        <a class="alert-white" href="medewerkers.php">
                             <i class="ft-align-justify"></i>
                             <span class="text">Masseuses</span>
                         </a>
