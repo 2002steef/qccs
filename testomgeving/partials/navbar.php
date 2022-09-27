@@ -114,7 +114,7 @@ $row = Getuser();
                         ?>
                         <a class="" href="medewerkers.php">
                             <i class="ft-align-justify"></i>
-                            <span class="text">Masseuses</span>
+                            <span class="light-gray">Masseuses</span>
                         </a>
                         <?php
                     } elseif ($_SESSION["status"] == "Masseuse" ) {
