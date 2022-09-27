@@ -108,13 +108,13 @@ $row = Getuser();
     <div class="sidebar-content main-menu-content  " >
         <div class="nav-container">
             <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation">
-                <li class="nav-item light-gray">
+                <li class="nav-item ">
                     <?php if (isset($_SESSION["status"])) {
                          if ($_SESSION["status"] == "medewerker") {
                         ?>
                         <a class="" href="medewerkers.php">
-                            <i class="ft-align-justify"></i>
-                            <span class="">Masseuses</span>
+                            <i class="ft-align-justify light-gray"></i>
+                            <span class=" light-gray">Masseuses</span>
                         </a>
                         <?php
                     } elseif ($_SESSION["status"] == "Masseuse" ) {
