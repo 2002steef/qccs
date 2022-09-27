@@ -1161,12 +1161,12 @@ pre {
   .table td {
     padding: 1.15rem 2rem;
     vertical-align: top;
-    border-top: 1px solid #E0E0E0; }
+    border-top: 1px solid #342E49; }
   .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #E0E0E0; }
+    border-bottom: 2px solid #342E49; }
   .table tbody + tbody {
-    border-top: 2px solid #E0E0E0; }
+    border-top: 2px solid #342E49; }
 
 .table-sm th,
 .table-sm td {
