@@ -105,16 +105,16 @@ $row = Getuser();
     <!--     Sidebar Header Ends-->
     <!--     / main menu header-->
     <!--    main menu content-->
-    <div class="sidebar-content main-menu-content light-gray " >
+    <div class="sidebar-content main-menu-content  " >
         <div class="nav-container">
             <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation">
-                <li class="nav-item">
+                <li class="nav-item light-gray">
                     <?php if (isset($_SESSION["status"])) {
                          if ($_SESSION["status"] == "medewerker") {
                         ?>
                         <a class="" href="medewerkers.php">
                             <i class="ft-align-justify"></i>
-                            <span class="light-gray">Masseuses</span>
+                            <span class="">Masseuses</span>
                         </a>
                         <?php
                     } elseif ($_SESSION["status"] == "Masseuse" ) {
