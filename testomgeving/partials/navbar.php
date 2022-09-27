@@ -107,12 +107,12 @@ $row = Getuser();
     <!--    main menu content-->
     <div class="sidebar-content main-menu-content" >
         <div class="nav-container">
-            <ul class="navigation navigation-main primary" id="main-menu-navigation" data-menu="menu-navigation">
+            <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
                     <?php if (isset($_SESSION["status"])) {
                          if ($_SESSION["status"] == "medewerker") {
                         ?>
-                        <a class="" href="medewerkers.php">
+                        <a class="primary" href="medewerkers.php">
                             <i class="ft-align-justify"></i>
                             <span class="text">Masseuses</span>
                         </a>
@@ -120,14 +120,14 @@ $row = Getuser();
                     } elseif ($_SESSION["status"] == "Masseuse" ) {
                         
                             ?>
-                            <a class=""
+                            <a class="primary"
                                href="bedrijfs_klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
                                 <i class="ft-bar-chart-2"></i>
                                 <span class="text">Relaties</span>
                             </a>
                         <?php } elseif ($_SESSION["status"] == "medewerker") {
                             ?>
-                            <a class=""
+                            <a class="primary"
                                href="klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
                                 <i class="ft-bar-chart-2"></i>
                                 <span class="text">Masseuses</span>
