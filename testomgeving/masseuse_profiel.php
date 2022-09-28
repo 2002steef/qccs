@@ -29,7 +29,7 @@ include "partials/header.php";
                                         <!-- user timeline image -->
                                         <img src="assets/img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
-                                        <img src="assets/img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
+                                        <img src="assets/img/profile/<?= $masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
                                         <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
