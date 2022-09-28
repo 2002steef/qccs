@@ -92,7 +92,7 @@ $row = Getuser();
     
             <div class="sidebar-header">
                 <div class="logo clearfix"><a class="logo-text float-left" href="index.html">
-                        <div class="logo-img"><img height="50" width="50" src="assets/img/BMA-Logo.png" alt="BMA Logo" /></div><div><span class="text light-gray">BMA</span></div>
+                        <div class="logo-img"><img height="50" width="50" src="assets/img/BMA-Logo.png" alt="BMA Logo" /><span class="text light-gray">BMA</span></div>
                     </a><a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i class="toggle-icon ft-toggle-right light-gray" data-toggle="expanded"></i></a><a class="nav-close d-block d-lg-block d-xl-none" id="sidebarClose" href="javascript:;"><i class="ft-x"></i></a></div>
             </div>
     <!--     Sidebar Header Ends-->
