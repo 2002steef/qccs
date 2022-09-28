@@ -464,11 +464,11 @@ function masseuseInfo()
     $resultMasseuse = $stmt->get_result();
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
-            <td ><?= $masseuse["masseuseID"] ?></td>
-            <td ><?= $masseuse["voornaam"] ?></td>
-            <td ><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
-                            Meer info
-                        </a>
+            <td><?= $masseuse["masseuseID"] ?></td>
+            <td><?= $masseuse["voornaam"] ?></td>
+            <td><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
+                    Meer info
+                </a>
             </td>
         </tr>
     <?php }
@@ -482,10 +482,10 @@ function bedrijfsInfo()
     $resultMasseuse = $stmt->get_result();
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
-            <td ><?= $masseuse["bedrijfID"] ?></td>
-            <td ><?= $masseuse["userName"] ?></td>
-            <td ><?= $masseuse["postcode"] ?> <?= $masseuse["huisNummer"] ?> <?= $masseuse["straat"] ?> <?= $masseuse["plaats"] ?></td>
-            <td ><?= $masseuse["voucherAantal"] ?></td>
+            <td><?= $masseuse["bedrijfID"] ?></td>
+            <td><?= $masseuse["userName"] ?></td>
+            <td><?= $masseuse["postcode"] ?> <?= $masseuse["huisNummer"] ?> <?= $masseuse["straat"] ?> <?= $masseuse["plaats"] ?></td>
+            <td><?= $masseuse["voucherAantal"] ?></td>
         </tr>
     <?php }
 }

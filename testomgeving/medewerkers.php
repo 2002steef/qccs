@@ -94,9 +94,9 @@ if (!isset($_SESSION["loggedin"])) {
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr>
+                                                                
                                                                         <?php masseuseInfo(); ?>
-                                                                    </tr>
+                                                                
                                                                 </tbody>
                                                             </table>
                                                         </div>
