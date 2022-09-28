@@ -2555,7 +2555,7 @@ body[data-menu="horizontal-menu"] .app-sidebar .navigation li.active > a:before 
   .drag-target {
     z-index: 0; }
   body.nav-collapsed .app-sidebar {
-    width: 60px; }
+    width: 75px; }
   body.nav-collapsed:not(.sidebar-sm):not(.sidebar-lg) .app-sidebar:hover {
     width: 250px; }
   body.nav-collapsed.sidebar-sm .app-sidebar:hover {
