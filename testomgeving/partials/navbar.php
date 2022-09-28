@@ -73,17 +73,20 @@ $row = Getuser();
             <div class="nav-container">
                 <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation">
                     <li class=" nav-item">
-                        <a href="https://pixinvent.com/apex-angular-4-bootstrap-admin-template/html-documentation" target="_blank"><i class="ft-book light-gray"></i><span class="menu-title light-gray" data-i18n="Documentation">Documentation</span>
+                        <a href="https://pixinvent.com/apex-angular-4-bootstrap-admin-template/html-documentation" target="_blank">
+                            <i class="ft-book light-gray"></i>
+                            <span class="menu-title light-gray" data-i18n="Documentation">Documentation</span>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <?php if (isset($_SESSION["status"])) {
                             if ($_SESSION["status"] == "medewerker") {
                         ?>
-                                <a class="" href="medewerkers.php">
-                                    <i class="ft-align-justify light-gray menu-title"></i>
-                                    <span class=" light-gray">Masseuses</span>
-                                </a>
+                        <a href="medewerkers.php" target="_blank">
+                            <i class="ft-user light-gray"></i>
+                            <span class="menu-title light-gray" data-i18n="Masseuses">Masseuses</span>
+                        </a>
+                    </li>
                             <?php
                             } elseif ($_SESSION["status"] == "Masseuse") {
 
