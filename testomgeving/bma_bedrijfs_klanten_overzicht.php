@@ -142,7 +142,7 @@ include "backend/functions.php";
                                                                 </thead>
                                                                 <tbody>
                                                                     <?php
-                                                                    masseuseInfo();
+                                                                    bedrijfsInfo();
                                                                     ?>
                                                                 </tbody>
                                                             </table>
