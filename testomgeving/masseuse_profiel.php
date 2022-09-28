@@ -16,7 +16,7 @@ include "partials/header.php";
     ?>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">
-        <div class="main-panel">
+    <div class="main-panel">
             <!-- BEGIN : Main Content-->
             <div class="main-content">
                 <div class="content-overlay"></div>
@@ -27,20 +27,20 @@ include "partials/header.php";
                                 <div class="card">
                                     <div class="user-profile-images">
                                         <!-- user timeline image -->
-                                        <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
+                                        <img src="../../../assets/img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
-                                        <img src="img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
+                                        <img src="../../../assets/img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
-                                        <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]?></h4>
-                                        <small>Masseuse</small>
+                                        <h4 class="profile-text-color mb-0">Martina Ash</h4>
+                                        <small>Devloper</small>
                                     </div>
                                     <!-- user profile body start -->
                                     <div class="card-content">
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn btn-primary mr-3">Follow</button>
-                                                <a href="bma_bedrijfs_klanten_overzicht.php" class="btn bg-light-gray">Edit</a>
+                                                <button class="btn bg-light-primary">Edit</button>
                                             </div>
                                         </div>
                                         <!-- user profile body ends -->
@@ -51,45 +51,42 @@ include "partials/header.php";
                         <!-- Profile posts and info starts -->
                         <div class="row profile-info-posts">
                             <!-- 1st column starts -->
-                            <div class="col-lg-3 col-12">
+                            <div class="col-lg-4 col-12">
                                 <div class="row">
-                                    <!-- About starts -->
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-header d-flex justify-content-between align-items-center">
-                                                <h4 class="card-title m-0">About</h4>
-                                                <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
-                                            </div>
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <p class="m-0"><?= $masseuse["paragraafje"] ?><a href="javascript:;">MORE</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- About ends -->
 
                                     <!-- Info starts -->
                                     <div class="col-12">
-                                        <div class="card">
+                                        <div class="card" id="masseuseSkills">
                                             <div class="card-header d-flex justify-content-between align-items-center">
-                                                <h4 class="card-title m-0">Info</h4>
+                                                <h4 class="card-title m-0">skills / diensten</h4>
                                                 <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
                                                     <ul class="list-unstyled mb-0">
                                                         <li class="d-flex align-items-center">
-                                                            <i class="ft-briefcase mr-2 cursor-pointer"></i><span>UX Designer at <a href="https://pixinvent.com/" target="_blank">PIXINVENT</a></span>
+                                                            <span>body to body massage</span>
                                                         </li>
                                                         <li class="d-flex align-items-center">
-                                                            <i class="ft-briefcase mr-2 cursor-pointer"></i><span>Former UI Designer at <a href="javascript:;">CBI</a></span>
+                                                            <span>deep tissue</span>
                                                         </li>
                                                         <li class="d-flex align-items-center">
-                                                            <i class="ft-file-text mr-2 cursor-pointer"></i><span>Studied <a href="javascript:;">IT science</a> at <a href="javascript:;">Torronto</a></span>
+                                                            <span>massage3</span>
                                                         </li>
                                                         <li class="d-flex align-items-center">
-                                                            <i class="ft-file-text mr-2 cursor-pointer"></i><span>Studied at <a href="javascript:;">College of New Jersey</a></span>
+                                                            <span>nog een massage</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <span>body to body massage</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <span>deep tissue</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <span>massage3</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <span>nog een massage</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -98,124 +95,99 @@ include "partials/header.php";
                                     </div>
                                     <!-- Info ends -->
 
-                                    <!-- Skills starts -->
+                                    <!-- contact starts -->
                                     <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h4 class="card-title">Skills</h4>
+                                        <div class="card" id="contactProfile">
+                                            <div class="card-header d-flex justify-content-between align-items-center">
+                                                <h4 class="card-title m-0">Contact</h4>
+                                                <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <span class="badge badge-pill bg-light-primary mr-1 mb-1">Product Design</span>
-                                                    <span class="badge badge-pill bg-light-secondary mr-1 mb-1">Technology</span>
-                                                    <span class="badge badge-pill bg-light-warning mr-1 mb-1">Wordpress</span>
-                                                    <span class="badge badge-pill bg-light-info mr-1 mb-1">Sketch</span>
-                                                    <span class="badge badge-pill bg-light-danger mr-1 mb-1">Mobile App</span>
-                                                    <span class="badge badge-pill bg-light-primary mr-1 mb-1">UI</span>
-                                                    <span class="badge badge-pill bg-light-secondary mr-1 mb-1">UX</span>
+                                                    <p class="m-0">Ice cream sweet chupa chups oat cake croissant halvah cake. Halvah macaroon jelly-o gingerbread cheesecake carrot cake. Muffin donut ice cream brownie cheesecake halvah...</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Skills ends -->
+                                    <!-- contact ends -->
 
-                                    <!-- Friends starts -->
+                                    <!-- adress starts -->
+                                    <div class="col-12">
+                                        <div class="card" id="adressProfile">
+                                            <div class="card-header d-flex justify-content-between align-items-center">
+                                                <h4 class="card-title m-0">Adress</h4>
+                                                <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <p class="m-0">
+                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres 
+                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres 
+                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- adress ends -->
 
                                 </div>
                             </div>
                             <!-- 1st column ends -->
                             <!-- 2nd column starts -->
-                            <div class="col-lg-6 col-12">
+                            <div class="col-lg-8 col-12">
                                 <div class="row">
-                                    <!-- Post starts -->
-                                    <div class="col-12">
-                                        <div class="card profile-post overflow-hidden">
-                                            <img src="img/banner/banner-15.jpg" class="img-fluid profile-post-img" alt="Post Image">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <h5 class="primary">User Friendly</h5>
-                                                    <h4>Time to break up with your web host</h4>
-                                                    <p class="m-0">Gummi bears gummi bears cake jelly-o. Bear claw marshmallow lemon drops biscuit caramels. Tart jelly-o muffin. Toffee pie cheesecake apple pie sesame snaps. Candy canes candy canes dragée chocolate pudding. Soufflé chocolate bar pastry jujubes.</p>
-                                                    <div class="media d-flex align-items-center pb-0">
-                                                        <img src="img/portrait/small/avatar-s-11.png" class="mr-2 avatar" alt="Avatar" height="40" width="40">
-                                                        <div class="media-body">
-                                                            <h5 class="m-0">David Carter</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post ends -->
 
-                                    <!-- Job History starts -->
+                                    <!-- About company starts -->
                                     <div class="col-12">
-                                        <div class="card profile-job-history">
+                                        <div class="card" id="aboutCompany">
+                                            <div class="card-header d-flex justify-content-between align-items-center">
+                                                <h4 class="card-title m-0">About</h4>
+                                                <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
+                                            </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div class="d-sm-flex justify-content-between align-items-center mb-2">
-                                                                <div class="d-flex">
-                                                                    <img src="img/portrait/small/avatar-s-10.png" class="avatar mr-3" alt="Avatar" width="50" height="50">
-                                                                    <div class="align-self-center">
-                                                                        <h6 class="m-0">UX Designer</h6>
-                                                                        <small class="text-muted font-small-2">PIXINVENT</small>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="text-muted cursor-pointer mt-2 mt-sm-0"><i class="ft-map-pin"></i> New York, USA</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <p>Cookie cake cupcake jelly marzipan cake cookie bonbon. Liquorice lollipop danish liquorice. Caramels dragée candy tootsie roll tart icing chocolate cake. Cake chocolate bar sweet biscuit bear claw.</p>
-                                                            <h6>Media Files (2)</h6>
-                                                            <table class="table table-borderless">
-                                                                <tr>
-                                                                    <td class="pl-0 py-0 pr-1"><img src="img/banner/banner-28.jpg" class="img-fluid" alt="Pic1"></td>
-                                                                    <td class="pr-0 py-0 pl-1"><img src="img/banner/banner-24.jpg" class="img-fluid" alt="Pic2"></td>
-                                                                </tr>
-                                                            </table>
-                                                            <hr>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div class="d-sm-flex justify-content-between align-items-center mb-2">
-                                                                <div class="d-flex">
-                                                                    <img src="img/icons/sketch-mac-icon.png" class="mr-3" alt="Avatar" width="50" height="50">
-                                                                    <div class="align-self-center">
-                                                                        <h6 class="m-0">Lead Designer</h6>
-                                                                        <small class="text-muted font-small-2">Sketch App</small>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="text-muted cursor-pointer mt-2 mt-sm-0"><i class="ft-map-pin"></i> London, UK</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <p>Lemon drops apple pie tart sweet roll gummi bears caramels tart. Powder sweet powder chocolate brownie. Cupcake fruitcake chocolate bar cake marzipan dessert candy gingerbread.</p>
-                                                            <h6>Media Files (2)</h6>
-                                                            <table class="table table-borderless m-0">
-                                                                <tr>
-                                                                    <td class="pl-0 py-0 pr-1"><img src="img/banner/banner-34.jpg" class="img-fluid" alt="Pic1"></td>
-                                                                    <td class="pr-0 py-0 pl-1"><img src="img/banner/banner-21.jpg" class="img-fluid" alt="Pic2"></td>
-                                                                </tr>
-                                                            </table>
-                                                        </div>
-                                                    </div>
+                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                        mollit anim id est laborum.
+                                                        </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Job History ends -->
+                                    <!-- About company ends -->
+
+                                    <!-- Basic map start -->
+                                    <div class="col-12">
+                                        <div class="card" id="profileMap">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <h5 class="card-title mb-2">Basic Map</h5>
+                                                    <div id="maps-leaflet-basic" class="maps-leaflet-container"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Basic map end -->
                                 </div>
                             </div>
                             <!-- 2nd column ends -->
+
                         </div>
+                        <!-- Profile posts and info ends -->
                     </section>
                 </div>
             </div>
             <!-- END : End Main Content-->
 
+            <!-- BEGIN : Footer-->
+            <?php
+            include "partials/footer.php";
+            ?>
+            <!-- End : Footer-->
             <!-- Scroll to top button -->
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
