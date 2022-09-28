@@ -113,15 +113,15 @@ $row = Getuser();
                     } elseif ($_SESSION["status"] == "Masseuse" ) {
                         
                             ?>
-                            <a class="primary"
-                               href="bedrijfs_klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
+                            <a class="light-gray"
+                               href="masseuse_profiel.php">
                                 <i class="ft-bar-chart-2"></i>
-                                <span class="text">Relaties</span>
+                                <span class="text">Masseuse Profiel</span>
                             </a>
                         <?php } elseif ($_SESSION["status"] == "medewerker") {
                             ?>
-                            <a class="primary"
-                               href="klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
+                            <a class="light-gray"
+                               href="medewerkers.php">
                                 <i class="ft-bar-chart-2"></i>
                                 <span class="text">Masseuses</span>
                             </a>
