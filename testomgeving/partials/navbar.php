@@ -83,7 +83,7 @@ $masseuse = GetMasseuse();
                         <?php if (isset($_SESSION["status"])) {
                             if ($_SESSION["status"] == "medewerker") {
                         ?>
-                        <a href="medewerkers.php" target="_blank">
+                        <a href="medewerkers.php">
                             <i class="ft-user light-gray"></i>
                             <span class="menu-title light-gray" data-i18n="Masseuses">Masseuses</span>
                         </a>
