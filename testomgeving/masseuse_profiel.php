@@ -123,7 +123,7 @@ include "partials/header.php";
                                             <div class="card-content">
                                                 <div class="card-body">
                                                     <p class="m-0">
-                                                    <p>Postcode <?= $masseuse["postcode"]; ?> <?= $masseuse["plaats"]; ?> </p>
+                                                    <p>Postcode: <?= $masseuse["postcode"]; ?> <?= $masseuse["plaats"]; ?> </p>
                                                     <p>Straatnaam: <?= $masseuse["straat"]; ?> <?= $masseuse["huisNummerToevoeging"]; ?> <?= $masseuse["huisNummer"]; ?></p>
                                                     </p>
                                                 </div>
