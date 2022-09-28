@@ -69,7 +69,7 @@ function InsertBedrijf()
 function Getuser()
 {
     global $mysqli;
-    $sql = "SELECT * FROM medewerkers where userID= ?";
+    $sql = "SELECT * FROM medewerkers where userID = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
@@ -82,12 +82,10 @@ function GetMasseuse()
     global $mysqli;
     $sql = "SELECT * FROM masseuses where masseuseID = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('i', $_GET['masseuseID']);
+    $stmt->bind_param('i', $_POST['masseuseID']);
     $stmt->execute();
     $result = $stmt->get_result();
-    while($result->fetch_array()){
-        $masseuse = $result;
-    }
+    return $result->fetch_array();
 }
 
 
@@ -468,7 +466,7 @@ function masseuseInfo()
         <tr>
             <td ><?= $masseuse["masseuseID"] ?></td>
             <td ><?= $masseuse["voornaam"] ?></td>
-            <td ><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?<?= $masseuse["masseuseID"] ?>">
+            <td ><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
                             Meer info
                         </a></a>
         </tr>
