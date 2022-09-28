@@ -141,10 +141,9 @@ include "backend/functions.php";
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <td><?= $masseuse["masseuseID"]; ?></td>
-                                                                    <td><?= $masseuse["voornaam"] + " " + $masseuse["tussenvoegsel"] + " " + $masseuse["achternaam"] ?></td>
-                                                                    <td><?= $masseuse["postcode"] + " " + $masseuse["huisnummer"] ?></td>
-                                                                    <td><?= $masseuse["website"] ?></td>
+                                                                    <?php
+                                                                    masseuseInfo();
+                                                                    ?>
                                                                 </tbody>
                                                             </table>
                                                         </div>
