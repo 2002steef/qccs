@@ -57,7 +57,7 @@ $(document).ready(function() {
       mainMenu.attr("data-background-color", "black");
     });
     $("#ll-switch").on("click", function() {
-      $(".sidebar-background").css("background-image","../../../app-assets2/img/sidebar-bg/01.jpg");
+      $(".sidebar-background").css("background-image","../../../assets/img/sidebar-bg/01.jpg");
     });
   }
 
@@ -113,10 +113,10 @@ $(document).ready(function() {
 
     mainMenu.attr("data-background-color", bgColor);
     if (bgColor == "white") {
-      $(".logo-img img").attr("src", "../../../app-assets2/img/logo-dark.png");
+      $(".logo-img img").attr("src", "../../../assets/img/logo-dark.png");
     } else {
-      if ($(".logo-img img").attr("src") =="../../../app-assets2/img/logo-dark.png") {
-        $(".logo-img img").attr("src", "../../../app-assets2/img/logo.png");
+      if ($(".logo-img img").attr("src") =="../../../assets/img/logo-dark.png") {
+        $(".logo-img img").attr("src", "../../../assets/img/logo.png");
       }
     }
   });
@@ -198,10 +198,10 @@ $(document).ready(function() {
     $(".sb-color-options").find(".selected").removeClass("selected");
     $(".sb-color-options").find(".gradient-man-of-steel").addClass("selected");
     if($(body).data('menu') == "horizontal-menu"){
-      $(".logo-img img").attr("src", "../../../app-assets2/img/logo-dark.png");
+      $(".logo-img img").attr("src", "../../../assets/img/logo-dark.png");
     }
     else{
-      $(".logo-img img").attr("src", "../../../app-assets2/img/logo.png");
+      $(".logo-img img").attr("src", "../../../assets/img/logo.png");
     }
     $(".navbar").removeAttr('style');
     // Selected Image
@@ -222,7 +222,7 @@ $(document).ready(function() {
         "layout-transparent bg-glass-hibiscus bg-glass-purple-pizzazz bg-glass-blue-lagoon bg-glass-electric-violet bg-glass-portage bg-glass-tundora bg-glass-1 bg-glass-2 bg-glass-3 bg-glass-4"
       ).removeAttr('data-bg-img');
       $("body").addClass("layout-dark");
-      $(".sidebar-background").css("background-image","url(../../../app-assets2/img/sidebar-bg/01.jpg)");
+      $(".sidebar-background").css("background-image","url(../../../assets/img/sidebar-bg/01.jpg)");
       $(".navbar").removeAttr('style');
       mainMenu.attr("data-background-color", "black");
     } else {
@@ -231,7 +231,7 @@ $(document).ready(function() {
       $(".sb-color-options span.selected").removeClass("selected");
       $(".sb-color-options .bg-black").addClass("selected");
       mainMenu.attr("data-background-color", "black");
-      $(".logo-img img").attr("src", "../../../app-assets2/img/logo.png");
+      $(".logo-img img").attr("src", "../../../assets/img/logo.png");
     }
   });
   // To Toggle Transparent Layout
@@ -246,7 +246,7 @@ $(document).ready(function() {
     $(".tl-bg-img .rounded.selected").removeClass("selected");
     $(".cz-tl-bg-image .bg-glass-1").addClass("selected");
     $(".sidebar-background").css("background-image", "none");
-    $(".logo-img img").attr("src", "../../../app-assets2/img/logo.png");
+    $(".logo-img img").attr("src", "../../../assets/img/logo.png");
 
     var tl = $(".layout-dark.layout-transparent");
     var tl_bg_color = tl.attr("data-bg-img");
