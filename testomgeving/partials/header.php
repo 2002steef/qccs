@@ -42,6 +42,6 @@
     <!-- BEGIN Page Level CSS-->
     <!-- END Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-
+    <link rel="stylesheet" href="assets/css/style.css">    
     <!-- END: Custom CSS-->
 </head>

@@ -1,0 +1,18 @@
+#aboutCompany {
+    overflow: auto;
+}
+
+#profileMap {
+    min-height: 500px;
+    max-height: 500px;
+}
+
+#adressProfile {
+    height: 235px;
+    overflow: auto;
+}
+
+#contactProfile {
+    height: 235px;
+    overflow: auto;
+}
