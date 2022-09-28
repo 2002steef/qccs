@@ -32,7 +32,7 @@ include "partials/header.php";
                                         <img src="assets/img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
-                                        <h4 class="profile-text-color mb-0">Martina Ash</h4>
+                                        <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
                                         <small>Devloper</small>
                                     </div>
                                     <!-- user profile body start -->
@@ -104,7 +104,9 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <p class="m-0">Ice cream sweet chupa chups oat cake croissant halvah cake. Halvah macaroon jelly-o gingerbread cheesecake carrot cake. Muffin donut ice cream brownie cheesecake halvah...</p>
+                                                    <p><?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></p>
+                                                    <p>Telefoonnummer <a href="tel:<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a> </p>
+                                                    <p>Email: <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -121,9 +123,9 @@ include "partials/header.php";
                                             <div class="card-content">
                                                 <div class="card-body">
                                                     <p class="m-0">
-                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres
-                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres
-                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres
+                                                    <p><?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></p>
+                                                    <p>Postcode <?= $masseuse["postcode"]; ?> </p>
+                                                    <p>Straatnaam: <?= $masseuse["straat"]; ?> <?= $masseuse["huisNummerToevoeging"]; ?> <?= $masseuse["huisNummer"]; ?></p>
                                                     </p>
                                                 </div>
                                             </div>
@@ -147,12 +149,8 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                                        mollit anim id est laborum.
+                                                    <p class="m-0">
+                                                    <?= $masseuse["paragraafje"]; ?>
                                                     </p>
                                                 </div>
                                             </div>
