@@ -41,16 +41,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         setcookie("password", "");
                         echo "Cookies Not Set";
                     }
-                    
-                } 
-                if (isset($_SESSION['status']) ) {
-                    if ($_SESSION['status'] == "medewerker") {
-                        header("Location:../medewerkers.php");
-                    } 
-                }else {
+                    if (isset($_SESSION['status']) ) {
+                        if ($_SESSION['status'] == "medewerker") {
+                            header("Location:../medewerkers.php");
+                        } 
+                    }
+                } else {
                     // Incorrect password
                     header("Location:../index.php?login=foutecombi");
                 }
+                
             }
         }
     }
