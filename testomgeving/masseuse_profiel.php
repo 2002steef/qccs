@@ -10,13 +10,13 @@ include "partials/header.php";
 ?>
 <!-- BEGIN : Body-->
 
-<body class="vertical-layout vertical-menu 2-columns menu-collapsed nav-collapsed navbar-static layout-dark layout-transparent bg-glass-1" data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
+<body class="vertical-layout vertical-menu 2-columns menu-collapsed nav-collapsed navbar-static" data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
     <?php
     include "partials/navbar.php";
     ?>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">
-    <div class="main-panel">
+        <div class="main-panel">
             <!-- BEGIN : Main Content-->
             <div class="main-content">
                 <div class="content-overlay"></div>
@@ -27,9 +27,9 @@ include "partials/header.php";
                                 <div class="card">
                                     <div class="user-profile-images">
                                         <!-- user timeline image -->
-                                        <img src="../../../assets/img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
+                                        <img src="assets/img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
-                                        <img src="../../../assets/img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
+                                        <img src="assets/img/portrait/small/avatar-s-20.png" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
                                         <h4 class="profile-text-color mb-0">Martina Ash</h4>
@@ -121,9 +121,9 @@ include "partials/header.php";
                                             <div class="card-content">
                                                 <div class="card-body">
                                                     <p class="m-0">
-                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres 
-                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres 
-                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres 
+                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres
+                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres
+                                                        adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres adres
                                                     </p>
                                                 </div>
                                             </div>
@@ -153,7 +153,7 @@ include "partials/header.php";
                                                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                                                         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                                                         mollit anim id est laborum.
-                                                        </p>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -182,15 +182,8 @@ include "partials/header.php";
                 </div>
             </div>
             <!-- END : End Main Content-->
-
-            <!-- BEGIN : Footer-->
-            <?php
-            include "partials/footer.php";
-            ?>
-            <!-- End : Footer-->
             <!-- Scroll to top button -->
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
-
         </div>
     </div>
 
