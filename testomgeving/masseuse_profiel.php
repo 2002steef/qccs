@@ -40,7 +40,7 @@ include "partials/header.php";
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn btn-primary mr-3">Follow</button>
-                                                <a href="bma_bedrijfs_klanten_overzicht.php" class="btn bg-light-primary">Edit</a>
+                                                <a href="bma_bedrijfs_klanten_overzicht.php" class="btn bg-light-gray">Edit</a>
                                             </div>
                                         </div>
                                         <!-- user profile body ends -->
