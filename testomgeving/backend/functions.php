@@ -483,7 +483,7 @@ function bedrijfsInfo()
         <tr>
             <td ><?= $masseuse["bedrijfID"] ?></td>
             <td ><?= $masseuse["userName"] ?></td>
-            <td ><?= $masseuse["postcode"] ?> <?= $masseuse["huisnummer"] ?> <?= $masseuse["straat"] ?> <?= $masseuse["plaats"] ?></td>
+            <td ><?= $masseuse["postcode"] ?> <?= $masseuse["huisNummer"] ?> <?= $masseuse["straat"] ?> <?= $masseuse["plaats"] ?></td>
             <td ><?= $masseuse["voucherAantal"] ?></td>
         </tr>
     <?php }
