@@ -1,30 +1,28 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
+
 // Authentication Teus test fase
 // Checked of de user toegang heeft tot de pagina.
 // Als user geen toegang heeft wordt hij verstuurd naar correcte pagina.
 
-if ($_SESSION["status"] !== 'bedrijf') {
-    if ($_SESSION["status"] !== 'medewerker') {
-        header("Location:medewerkers.php");
-    }
-    if ($_SESSION["status"] === 'masseur') {
-        header("Location:klant_overzicht.php?custof=$memb_of&membof=$memb_of");
-    }
-}
+// if ($_SESSION["status"] !== 'bedrijf') {
+//     if ($_SESSION["status"] !== 'medewerker') {
+//         header("Location:medewerkers.php");
+//     }
+//     if ($_SESSION["status"] === 'masseur') {
+//         header("Location:klant_overzicht.php?custof=$memb_of&membof=$memb_of");
+//     }
+// }
 
-// Nummer uit de database is Numberic.
-// Nummer uit de GET REQUEST is string.
-if ($memb_of != $member_of) {
-    header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-}
-if ($memb_of != $member_of) {
-    header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-}
+// // Nummer uit de database is Numberic.
+// // Nummer uit de GET REQUEST is string.
+// if ($memb_of != $member_of) {
+//     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+// }
+// if ($memb_of != $member_of) {
+//     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+// }
 $masseuse = GetMasseuse();
 
 // Sendmail();
