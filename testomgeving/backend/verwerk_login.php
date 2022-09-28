@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } 
                 if (isset($_SESSION['status']) ) {
                     if ($_SESSION['status'] == "medewerker") {
-                        header("Location:medewerkers.php");
+                        header("Location:../medewerkers.php");
                     } 
                 }else {
                     // Incorrect password
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } 
                 if (isset($_SESSION['status']) ) {
                     if ($_SESSION['status'] == "bedrijf") {
-                        header("Location:bma_bedrijfs_klanten_overzicht.php");
+                        header("Location:../bma_bedrijfs_klanten_overzicht.php");
                     } 
                 }else {
                     // Incorrect password
