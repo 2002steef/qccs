@@ -8,7 +8,7 @@
           content="QCCS, Relatiebeheer, CRM, Customer Relationship Management, Project, ROC, KW1C">
     <meta name="author" content="QCCS">
     <title>BMA, Massage abonnementen</title>
-    <link rel="shortcut icon"  href="../img/logo.png">
+    <link rel="shortcut icon"  href="img/logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
