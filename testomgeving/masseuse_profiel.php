@@ -1,7 +1,7 @@
 <?php
 include "backend/functions.php";
 Updateuser();
-GetMasseuse();
+$masseuse = GetMasseuse();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
