@@ -41,7 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         setcookie("password", "");
                         echo "Cookies Not Set";
                     }
-                } else {
+                    
+                } 
+                if (isset($_SESSION['status']) ) {
+                    if ($_SESSION['status'] == "medewerker") {
+                        header("Location:medewerkers.php");
+                    } 
+                }else {
                     // Incorrect password
                     header("Location:../index.php?login=foutecombi");
                 }
@@ -67,8 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['loggedin'] = true;
                     $_SESSION['name'] = $_POST['email'];
                     $_SESSION['id'] = $id;
-                    $_SESSION['status'] = "medewerker";
-                    $_SESSION["voornaam"] = $voornaam;
+                    $_SESSION['status'] = "bedrijf";
                     if (!empty($_POST["remember_me"])) {
                         setcookie("username", $_POST["email"], time() + 3600);
                         setcookie("password", $_POST["wachtwoord"], time() + 3600);
@@ -78,7 +83,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         setcookie("password", "");
                         echo "Cookies Not Set";
                     }
-                } else {
+                } 
+                if (isset($_SESSION['status']) ) {
+                    if ($_SESSION['status'] == "bedrijf") {
+                        header("Location:bma_bedrijfs_klanten_overzicht.php");
+                    } 
+                }else {
                     // Incorrect password
                     header("Location:../index.php?login=foutecombi");
                 }
