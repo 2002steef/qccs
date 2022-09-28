@@ -32,7 +32,7 @@
     <!-- END VENDOR CSS-->
     <!-- BEGIN APEX CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-extended.css"> 
     <link rel="stylesheet" type="text/css" href="assets/css/colors.css">
     <link rel="stylesheet" type="text/css" href="assets/css/components.css">
     <link rel="stylesheet" type="text/css" href="assets/css/themes/layout-dark.css">
@@ -42,6 +42,6 @@
     <!-- BEGIN Page Level CSS-->
     <!-- END Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     <!-- END: Custom CSS-->
 </head>
