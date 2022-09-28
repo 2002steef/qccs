@@ -2,28 +2,7 @@
 <?php
 include "backend/functions.php";
 
-// Authentication Teus test fase
-// Checked of de user toegang heeft tot de pagina.
-// Als user geen toegang heeft wordt hij verstuurd naar correcte pagina.
 
-// if ($_SESSION["status"] !== 'bedrijf') {
-//     if ($_SESSION["status"] !== 'medewerker') {
-//         header("Location:medewerkers.php");
-//     }
-//     if ($_SESSION["status"] === 'masseur') {
-//         header("Location:klant_overzicht.php?custof=$memb_of&membof=$memb_of");
-//     }
-// }
-
-// // Nummer uit de database is Numberic.
-// // Nummer uit de GET REQUEST is string.
-// if ($memb_of != $member_of) {
-//     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-// }
-// if ($memb_of != $member_of) {
-//     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-// }
-$masseuse = GetMasseuse();
 
 // Sendmail();
 // InsertCustomerIndividual();
@@ -56,6 +35,7 @@ $masseuse = GetMasseuse();
 <head>
     <?php
     include "partials/header.php";
+    $masseuse = GetMasseuse();
     ?>
 </head>
 <!-- END : Head-->
@@ -79,7 +59,7 @@ $masseuse = GetMasseuse();
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title"><?php GetCompanyName(); ?></h4>
+                                <h4 class="card-title">BMA</h4>
 
                                 <ul class="breadcrumb bg-transparent">
                                     <li class="breadcrumb-item"><a class="text-light-gray" href="#">Home</a></li>
@@ -104,12 +84,6 @@ $masseuse = GetMasseuse();
                                                     <span class="d-none d-sm-block">Masseurs</span>
                                                 </a>
                                             </li>
-                                            <li class="nav-item active">
-                                                <a href="#Werknemers" role="tab" id="account-tab" class="nav-link d-flex align-items-center " data-toggle="tab" aria-controls="account" aria-selected="true">
-                                                    <i class="ft-user mr-1"></i>
-                                                    <span class="d-none d-sm-block">Werknemers</span>
-                                                </a>
-                                            </li>
                                             <li class="nav-tabs">
                                                 <a type="button" class="nav-link d-flex align-items-end" data-toggle="modal" data-target="#large">
                                                     <i class="ft-plus mr-1"></i>
@@ -120,12 +94,6 @@ $masseuse = GetMasseuse();
                                                 <a type="button" class="nav-link d-flex align-items-end" data-toggle="modal" data-target="#inlineForm">
                                                     <i class="ft-plus mr-1"></i>
                                                     <span class="d-none d-sm-block">Formulier</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item active">
-                                                <a href="#Settings" role="tab" id="account-tab" class="nav-link d-flex align-items-center " data-toggle="tab" aria-controls="account" aria-selected="true">
-                                                    <i class="ft-settings mr-1"></i>
-                                                    <span class="d-none d-sm-block">Instellingen</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -174,7 +142,7 @@ $masseuse = GetMasseuse();
                                                                 </thead>
                                                                 <tbody>
                                                                     <td><?= $masseuse["masseuseID"]; ?></td>
-                                                                    <td><?= $masseuse["masseuseVoornaam"] + " " + $masseuse["tussenvoegsel"] + " " + $masseuse["achternaam"] ?></td>
+                                                                    <td><?= $masseuse["voornaam"] + " " + $masseuse["tussenvoegsel"] + " " + $masseuse["achternaam"] ?></td>
                                                                     <td><?= $masseuse["postcode"] + " " + $masseuse["huisnummer"] ?></td>
                                                                     <td><?= $masseuse["website"] ?></td>
                                                                 </tbody>
@@ -221,10 +189,7 @@ $masseuse = GetMasseuse();
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <td><?= $masseuse["masseuseID"]; ?></td>
-                                                                    <td><?= $masseuse["masseuseVoornaam"] + " " + $masseuse["tussenvoegsel"] + " " + $masseuse["achternaam"] ?></td>
-                                                                    <td><?= $masseuse["postcode"] + " " + $masseuse["huisnummer"] ?></td>
-                                                                    <td><?= $masseuse["website"] ?></td>
+                                                                    <?php masseuseInfo(); ?>
                                                                 </tbody>
                                                             </table>
                                                         </div>
