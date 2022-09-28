@@ -6,6 +6,7 @@
 <?php
 include "header.php";
 $row = Getuser();
+$masseuse = masseuseInfo();
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
@@ -39,7 +40,7 @@ $row = Getuser();
                                 <div class="user d-md-flex d-none mr-2"><span class="text-right light-gray"><?php if (isset($_SESSION["voornaam"])) {
                                                                                                                 echo $_SESSION["voornaam"];
                                                                                                             } ?></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
-                                <img class="avatar" src="assets/img/profile/profile-portrait-1.jpg?>" alt="avatar" height="35" width="35">
+                                <img class="avatar" src="assets/img/profile/<?= $masseuse["profielFoto"]; ?>>" alt="avatar" height="35" width="35">
                             </a>
                             <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php">
                                     <div class="d-flex align-items-center"><i class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>

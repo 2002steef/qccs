@@ -464,7 +464,7 @@ function masseuseInfo()
     $resultMasseuse = $stmt->get_result();
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
-            <td><?= $masseuse["masseuseID"] ?></td>
+            <td><img src="img/profile/<?= $masseuse["profielFoto"] ?>" height="75px" width="75px" alt="masseuse foto"></td>
             <td><?= $masseuse["voornaam"] ?></td>
             <td><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
                     Meer info
