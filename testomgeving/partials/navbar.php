@@ -6,7 +6,7 @@
 <?php
 include "header.php";
 $row = Getuser();
-$masseuse = masseuseInfo();
+$masseuse = GetMasseuse();
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
