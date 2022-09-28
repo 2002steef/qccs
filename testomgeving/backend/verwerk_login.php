@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (isset($_POST['email'], $_POST['wachtwoord'])) {
        $_SESSION['email'] = $_POST['email'];
-        if ($stmt = $mysqli->prepare('SELECT userID, `userName`, `Password`, `email` FROM `medewerkers` WHERE email = ?')) {
+        if ($stmt = $mysqli->prepare('SELECT userID, `userName`, `Password`, `email`,`voornaam` FROM `medewerkers` WHERE email = ?')) {
             // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
             $stmt->bind_param('s', $_POST['email']);
             $stmt->execute();
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->store_result();
 
             if ($stmt->num_rows > 0) {
-                $stmt->bind_result($id,$userName, $password, $email);
+                $stmt->bind_result($id,$userName, $password, $email,$voornaam);
 //            $stmt->bind_result($id, $password);
                 $stmt->fetch();
                 // Account exists, now we verify the password.
@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['name'] = $_POST['email'];
                     $_SESSION['id'] = $id;
                     $_SESSION['status'] = "medewerker";
+                    $_SESSION["voornaam"] = $voornaam;
 //            echo 'Welcome ' . $_SESSION['name'] . '!';
                     if (!empty($_POST["remember_me"])) {
                         setcookie("username", $_POST["email"], time() + 3600);
