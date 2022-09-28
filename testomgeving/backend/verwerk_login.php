@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Incorrect password
                     header("Location:../index.php?login=foutecombi");
                 }
-            }else
+            }elseif($stmt->num_rows == 0 )
             {
                 $stmt = $mysqli->prepare(('SELECT `bedrijfID`, `userName`, `Password`, `email` FROM `bedrijven` WHERE ?'));
                  // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
