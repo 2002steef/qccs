@@ -45,7 +45,7 @@ $rowMw = Getuser();
                                                                                 echo $rowBd["profielFoto"];
                                                                             } elseif($_SESSION["status"] == "masseuse") {
                                                                                 echo $rowMs["profielFoto"];
-                                                                            }elseif( $_SESSION["status"] == "medewewerker") {
+                                                                            }elseif( $_SESSION["status"] == "medewerker") {
                                                                                 echo "standaard.png";
                                                                             } ?>" alt="avatar" height="35" width="35">
                             </a>
