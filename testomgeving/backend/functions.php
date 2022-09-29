@@ -5,27 +5,20 @@ include "error.php";
 function UpdateProfiel()
 {
     global $mysqli;
-     if ($_SESSION["status"] == "bedrijf") {
-        if (isset($_POST['save'])) {
-            $query = "UPDATE bedrijven SET userName = ?, voornaam = ? , email = ? WHERE bedrijfID = ?";
-            $stmt = $mysqli->prepare($query);
-            //        $options = ['cost' => 12,];
-            //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
-            $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
-            $stmt->execute();
-        }
-    } elseif ($_SESSION["status"] == "masseuse") {
-        if (isset($_POST['save'])) {
-            $query = "UPDATE masseuses SET userName = ?, voornaam = ? , email = ? WHERE masseuseID = ?";
-            $stmt = $mysqli->prepare($query);
-            //        $options = ['cost' => 12,];
-            //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
-            $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
-            $stmt->execute();
-        }
-    } 
-    
-    
+
+
+    if (isset($_POST['saveBd'])) {
+        $query = "UPDATE bedrijven SET userName = ?, voornaam = ? , email = ? WHERE bedrijfID = ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
+        $stmt->execute();
+    } else
+        if (isset($_POST['saveMs'])) {
+        $query = "UPDATE masseuses SET userName = ?, voornaam = ? , email = ? WHERE userID = ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
+        $stmt->execute();
+    }
 }
 
 function InsertBedrijf()
@@ -147,7 +140,7 @@ function Changepassword()
 
 function UploadPic()
 {
-    if($_SESSION["status"]=="masseuse"){
+    if ($_SESSION["status"] == "masseuse") {
         if (isset($_POST['submitpic']) && isset($_FILES['my_image'])) {
             global $mysqli;
 
@@ -192,7 +185,7 @@ function UploadPic()
                 }
             }
         }
-    }  elseif($_SESSION["status"] == "bedrijf"){
+    } elseif ($_SESSION["status"] == "bedrijf") {
         if (isset($_POST['submitpic']) && isset($_FILES['my_image'])) {
             global $mysqli;
 
@@ -237,7 +230,7 @@ function UploadPic()
                 }
             }
         }
-    } 
+    }
 }
 
 

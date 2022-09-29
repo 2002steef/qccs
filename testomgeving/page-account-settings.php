@@ -159,15 +159,21 @@ include "partials/header.php";
                                                                                                         ?>
                                                         </div>
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                            <button type="submit" name="save" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
+                                                            <?php
+                                                            if ($_SESSION["status"] == "bedrijf") { ?>
+                                                                <button type="submit" name="saveBd" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
+                                                            <?php
+                                                            } elseif ($_SESSION["status"] == "masseuse") { ?>
+                                                                <button type="submit" name="saveMs" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                             <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="<?php
-
                                                                                                                         if ($_SESSION['status'] == "bedrijf") {
                                                                                                                             echo "bma_bedrijfs_overzicht.php";
                                                                                                                         } else {
                                                                                                                             echo "masseuse_profiel.php?masseuseID=" + $rowMs["masseuseID"];
                                                                                                                         }
-
                                                                                                                         ?>">
                                                                 Cancel
                                                             </a>
