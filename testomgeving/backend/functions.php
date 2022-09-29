@@ -82,7 +82,17 @@ function GetMasseuse()
     global $mysqli;
     $sql = "SELECT * FROM masseuses where masseuseID = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('i', $_GET['masseuseID']);
+    $stmt->bind_param('i', $_SESSION['id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+}
+function GetBedrijf()
+{
+    global $mysqli;
+    $sql = "SELECT * FROM bedrijven where bedrijvenID = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
