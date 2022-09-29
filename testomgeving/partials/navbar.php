@@ -49,7 +49,7 @@ $rowMw = Getuser();
                                                                                 echo "standaard.png";
                                                                             } ?>" alt="avatar" height="35" width="35">
                             </a>
-                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php">
+                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?id=<?= $_SESSION["id"]?>">
                                     <div class="d-flex align-items-center"><i class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>
                                 </a>
                                 <div class="dropdown-divider"></div>
