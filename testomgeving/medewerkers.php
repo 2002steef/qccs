@@ -64,8 +64,6 @@ if (!isset($_SESSION["loggedin"])) {
 
                                 <ul class="breadcrumb bg-transparent">
                                     <li class="breadcrumb-item light-gray"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item light-gray"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
-                                    <li class="breadcrumb-item light-gray"><a href="#">Bedrijfs klanten overzicht</a></li>
                                 </ul>
                             </div>
 
@@ -88,8 +86,8 @@ if (!isset($_SESSION["loggedin"])) {
                                                             <table class="table table-striped table-bordered file-export">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Logo</th>
-                                                                        <th >Masseuse info</th>
+                                                                        <th colspan="1">Logo</th>
+                                                                        <th colspan="3">Masseuse info</th>
                                                                         <th >Info</th>
                                                                     </tr>
                                                                 </thead>
