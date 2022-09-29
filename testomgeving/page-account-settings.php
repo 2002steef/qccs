@@ -12,13 +12,13 @@ if (!isset($_SESSION["loggedin"])) {
 // Changepassword();
 // Updateuser();
 // UploadPic1();
-UpdateProfielBedrijf();
-UpdateProfielMasseuse();
+
 $rowBd = GetBedrijf();
 $rowMs = GetMasseuse();
 $rowMw = Getuser();
 UploadPic();
-
+UpdateProfielBedrijf();
+UpdateProfielMasseuse();
 
 ?>
 <!DOCTYPE html>
