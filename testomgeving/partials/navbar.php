@@ -83,154 +83,45 @@ $masseuse = GetMasseuse();
                         <?php if (isset($_SESSION["status"])) {
                             if ($_SESSION["status"] == "medewerker") {
                         ?>
-                        <a href="medewerkers.php">
-                            <i class="ft-user light-gray"></i>
-                            <span class="menu-title light-gray" data-i18n="Masseuses">Masseuses</span>
+                                <a href="medewerkers.php">
+                                    <i class="ft-user light-gray"></i>
+                                    <span class="menu-title light-gray" data-i18n="Masseuses">Masseuses</span>
+                                </a>
+                    </li>
+                <?php
+                            } elseif ($_SESSION["status"] == "masseuse") {
+                ?>
+                    <li>
+                        <a class="light-gray" href="masseuse_profiel.php">
+                            <i class="ft-bar-chart-2"></i>
+                            <span class="text">Masseuse Profiel</span>
                         </a>
                     </li>
-                            <?php
-                            } elseif ($_SESSION["status"] == "Masseuse") {
-
-                            ?>
-                                <a class="light-gray" href="masseuse_profiel.php">
-                                    <i class="ft-bar-chart-2"></i>
-                                    <span class="text">Masseuse Profiel</span>
-                                </a>
-                            <?php } elseif ($_SESSION["status"] == "medewerker") {
-                            ?>
-                                <a class="light-gray" href="medewerkers.php">
-                                    <i class="ft-bar-chart-2"></i>
-                                    <span class="text">Masseuses</span>
-                                </a>
-                        <?php }
-                        }
-                        ?>
+                <?php } elseif ($_SESSION["status"] == "bedrijf") {
+                ?>
+                    <li>
+                        <a class="light-gray" href="bma_bedrijfs_klanten_overzicht.php">
+                            <i class="ft-bar-chart-2"></i>
+                            <span class="text">Overzicht</span>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <?php
-                        if (isset($_GET['membof'])) {
-                            if ($row['authentication_level'] === 'Admin') {
-                                $memb_of = $_GET['membof'];
-                        ?>
-                                <a class="" href="<?php
-                                                    echo "bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
-                                                    ?>">
-                                    <i class="ft-bar-chart-2"></i>
-                                    <span class="text">Relaties</span>
-                                </a>
-                        <?php
-                            }
+                    <!-- <li>
+                        <a class="light-gray" href="medewerkers.php">
+                            <i class="ft-bar-chart-2"></i>
+                            <span class="text">Masseuses</span>
+                        </a>
+                    </li> -->
+                <?php }
+                ?>
+                <li class="nav-item">
+                    <a class="text-light-gray" href="page-account-settings.php">
+                        <i class="icon-settings"></i>
+                        <span class="text">Mijn account</span>
+                    </a>
+                <?php
                         }
-                        ?>
-                    </li>
-
-                    <li class="nav-item">
-                        <?php
-                        if (isset($_GET['membof'])) {
-                            if ($row['authentication_level'] === 'Admin' || $row['authentication_level'] === 'Bedrijfsleider') {
-                                $memb_of = $_GET['membof'];
-                        ?>
-                                <a class="" href="<?php
-                                                    echo "communicatie.php?custof=$memb_of&membof=$memb_of";
-                                                    ?>">
-                                    <i class="icon-speech"></i>
-                                    <span class="text">Communicatie</span>
-                                </a>
-                        <?php
-
-                            }
-                        }
-                        ?>
-                    </li>
-                    <li class="nav-item">
-                        <?php
-                        if (isset($_GET['membof'])) {
-                            if ($row['authentication_level'] === 'Admin' || $row['authentication_level'] === 'Bedrijfsleider') {
-                                $memb_of = $_GET['membof'];
-                        ?>
-                                <a class="" href="<?php
-                                                    echo "bedrijf_facturen.php?custof=$memb_of&membof=$memb_of";
-                                                    ?>">
-                                    <i class="ft-file-text"></i>
-                                    <span class="text">Facturen</span>
-                                </a>
-                        <?php
-
-                            }
-                        }
-                        ?>
-                    <li class="nav-item">
-                        <?php
-                        if (isset($_GET['membof'])) {
-                            if ($row['authentication_level'] === 'Admin' || $row['authentication_level'] === 'Bedrijfsleider') {
-                                $memb_of = $_GET['membof'];
-                        ?>
-                                <a class="" href="<?php
-                                                    echo "bedrijf_instellingen.php?custof=$memb_of&membof=$memb_of";
-                                                    ?>">
-                                    <i class="icon-settings"></i>
-                                    <span class="text">Instellingen</span>
-                                </a>
-                        <?php
-
-                            }
-                        }
-                        ?>
-                    </li>
-                    <li class="nav-item">
-                        <?php
-                        if (isset($_GET['membof'])) {
-                            if ($row['authentication_level'] === 'user') {
-                                $memb_of = $_GET['membof'];
-                        ?>
-                                <a class="" href="<?php
-                                                    echo "klant_overzicht.php?custof=$memb_of&membof=$memb_of";
-                                                    ?>">
-                                    <i class="icon-settings"></i>
-                                    <span class="text">Home</span>
-                                </a>
-                        <?php
-
-                            }
-                        }
-                        ?>
-                    </li>
-                    <li class="nav-item">
-                        <?php
-                        if (isset($_GET['membof'])) {
-                            if ($row['authentication_level'] === 'user') {
-                                $memb_of = $_GET['membof'];
-                        ?>
-                                <a class="" href="<?php
-                                                    echo "klant_bedrijf_info.php?custof=$memb_of&membof=$memb_of";
-                                                    ?>">
-                                    <i class="icon-settings"></i>
-                                    <span class="text">Bedrijf Info</span>
-                                </a>
-                        <?php
-
-                            }
-                        }
-                        ?>
-                    </li>
-                    <li class="nav-item">
-                        <?php
-                        if (isset($_GET['membof'])) {
-                            if ($row['authentication_level'] === 'user') {
-                                $memb_of = $_GET['membof'];
-                        ?>
-                                <a class="" href="<?php
-                                                    echo "page-account-settings.php";
-                                                    ?>">
-                                    <i class="icon-settings"></i>
-                                    <span class="text">Mijn account</span>
-                                </a>
-                        <?php
-
-                            }
-                        }
-                        ?>
-                    </li>
+                ?>
+                </li>
                 </ul>
             </div>
         </div>
