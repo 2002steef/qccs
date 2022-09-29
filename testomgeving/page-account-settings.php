@@ -165,15 +165,15 @@ include "partials/header.php";
                                                             <?php
                                                             if ($_SESSION["status"] == "bedrijf") { ?>
                                                                 <button type="submit" name="saveBd" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
-                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="bma_bedrijfs_klanten_overzicht.php?<?=$_SESSION["id"]?>">
-                                                                Cancel
-                                                            </a>
+                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="bma_bedrijfs_klanten_overzicht.php?<?= $_SESSION["id"] ?>">
+                                                                    Cancel
+                                                                </a>
                                                             <?php
                                                             } elseif ($_SESSION["status"] == "masseuse") { ?>
                                                                 <button type="submit" name="saveMs" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
-                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="masseuse_profiel.php?<?=$_SESSION["id"]?>">
-                                                                Cancel
-                                                            </a>
+                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="masseuse_profiel.php?<?= $_SESSION["id"] ?>">
+                                                                    Cancel
+                                                                </a>
                                                             <?php
                                                             }
                                                             ?>
@@ -209,6 +209,9 @@ include "partials/header.php";
                                                 </form>
                                             </div>
                                             <!-- voucher Tab -->
+                                            <?php
+                                            if($_SESSION["status"] == "masseuse"){
+                                            ?>
                                             <div class="tab-pane" id="voucher-verzileren" role="tabpanel" aria-labelledby="voucher-verzileren-tab">
                                                 <form method="post">
                                                     <div class="form-group">
@@ -219,6 +222,8 @@ include "partials/header.php";
                                                     </div>
                                                 </form>
                                             </div>
+<?php }
+?>
                                             <!-- Notifications Tab -->
 
                                         </div>
