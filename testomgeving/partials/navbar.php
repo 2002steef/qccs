@@ -5,8 +5,9 @@
 <!-- BEGIN : Head-->
 <?php
 include "header.php";
-$row = Getuser();
-$masseuse = GetMasseuse();
+$rowBd = GetBedrijf();
+$rowMs = GetMasseuse();
+$rowMw = Getuser();
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
