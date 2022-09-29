@@ -80,7 +80,7 @@ include "partials/header.php";
                                                 <div class="media">
                                                     <img src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                 echo $rowBd["profielFoto"];
-                                                                            } elseif($_SESSION["status"] == "masseuse") {
+                                                                            } elseif ($_SESSION["status"] == "masseuse") {
                                                                                 echo $rowMs["profielFoto"];
                                                                             } ?>" alt="profile-img" class="rounded mr-3" height="64" width="64">
                                                     <div class="media-body">
@@ -104,44 +104,40 @@ include "partials/header.php";
                                                         <div class="col-12 form-group">
                                                             <label for="username">Username</label>
                                                             <div class="controls">
-                                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username"
-                                                                 value="<?php if ($_SESSION["status"] == "bedrijf") {
-                                                                                echo $rowBd["userName"];
-                                                                            } elseif ($_SESSION["status"] == "masseuse") {
-                                                                                echo $rowMs["userName"];
-                                                                            } ?>" required>
+                                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php if ($_SESSION["status"] == "bedrijf") {
+                                                                                                                                                                        echo $rowBd["userName"];
+                                                                                                                                                                    } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                                        echo $rowMs["userName"];
+                                                                                                                                                                    } ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <label for="name">Name</label>
                                                             <div class="controls">
-                                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name"
-                                                                 value="<?php if ($_SESSION["status"] == "bedrijf") {
-                                                                                echo $rowBd["userName"];
-                                                                            } elseif ($_SESSION["status"] == "masseuse") {
-                                                                                echo $rowMs["voornaam"];
-                                                                            } ?>" required>
+                                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php if ($_SESSION["status"] == "bedrijf") {
+                                                                                                                                                            echo $rowBd["userName"];
+                                                                                                                                                        } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                            echo $rowMs["voornaam"];
+                                                                                                                                                        } ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <label for="name">E-mail</label>
                                                             <div class="controls">
-                                                                <input type="email" id="email" name="email" class="form-control" placeholder="E-mail"
-                                                                 value="<?php if ($_SESSION["status"] == "bedrijf") {
-                                                                                echo $rowBd["email"];
-                                                                            } elseif ($_SESSION["status"] == "masseuse") {
-                                                                                echo $rowMs["email"];
-                                                                            } ?>" required>
+                                                                <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] == "bedrijf") {
+                                                                                                                                                                    echo $rowBd["email"];
+                                                                                                                                                                } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                                    echo $rowMs["email"];
+                                                                                                                                                                } ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <div class="controls">
-                                                                <input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail"
-                                                                 value="<?php if ($_SESSION["status"] == "bedrijf") {
-                                                                                echo $rowBd["email"];
-                                                                            } elseif ($_SESSION["status"] == "masseuse") {
-                                                                                echo $rowMs["email"];
-                                                                            } ?>" required>
+                                                                <input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] == "bedrijf") {
+                                                                                                                                                                    echo $rowBd["email"];
+                                                                                                                                                                } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                                    echo $rowMs["email"];
+                                                                                                                                                                } ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
@@ -164,14 +160,14 @@ include "partials/header.php";
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                             <button type="submit" name="save" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
                                                             <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="<?php
-                                                                        if (isset($_SESSION['status']) && isset($_SESSION['loggedin'])) {
-                                                                            if ($_SESSION['status'] == "bedrijf") {
-                                                                                echo "bma_bedrijfs_overzicht.php";
-                                                                            } else {
-                                                                                echo "masseuse_profiel.php?masseuseID=" + $rowMs["masseuseID"];
-                                                                            }
-                                                                        }
-                                                                        ?>" class="btn btn-secondary mb-1">
+
+                                                                                                                        if ($_SESSION['status'] == "bedrijf") {
+                                                                                                                            echo "bma_bedrijfs_overzicht.php";
+                                                                                                                        } else {
+                                                                                                                            echo "masseuse_profiel.php?masseuseID=" + $rowMs["masseuseID"];
+                                                                                                                        }
+
+                                                                                                                        ?>">
                                                                 Cancel
                                                             </a>
                                                         </div>
