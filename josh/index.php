@@ -87,7 +87,7 @@ include "backend/voucherFunctions.php" ;
                                                         $subject = "Voucher code";
                                                         $msg = "Uw voucher code is . $token ";
                                                         $msg = wordwrap($msg, 70);
-                                                        $headers = "From: Admin@qccs.nl";
+                                                        $headers = "From: Josh@qccs.nl";
                                                         mail($to, $subject, $msg, $headers);
                                                         header('location:index.php');
                                                     }
