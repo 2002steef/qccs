@@ -12,12 +12,13 @@ if (!isset($_SESSION["loggedin"])) {
 // Changepassword();
 // Updateuser();
 // UploadPic1();
+UpdateProfielBedrijf();
+UpdateProfielMasseuse();
 $rowBd = GetBedrijf();
 $rowMs = GetMasseuse();
 $rowMw = Getuser();
 UploadPic();
-UpdateProfielBedrijf();
-UpdateProfielMasseuse();
+
 
 ?>
 <!DOCTYPE html>
@@ -164,21 +165,18 @@ include "partials/header.php";
                                                             <?php
                                                             if ($_SESSION["status"] == "bedrijf") { ?>
                                                                 <button type="submit" name="saveBd" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
+                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="bma_bedrijfs_klanten_overzicht.php?<?=$_SESSION["id"]?>">
+                                                                Cancel
+                                                            </a>
                                                             <?php
                                                             } elseif ($_SESSION["status"] == "masseuse") { ?>
                                                                 <button type="submit" name="saveMs" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
+                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="masseuse_profiel.php?<?=$_SESSION["id"]?>">
+                                                                Cancel
+                                                            </a>
                                                             <?php
                                                             }
                                                             ?>
-                                                            <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="<?php
-                                                                                                                        if ($_SESSION['status'] == "bedrijf") {
-                                                                                                                            echo "bma_bedrijfs_overzicht.php";
-                                                                                                                        } else {
-                                                                                                                            echo "masseuse_profiel.php?masseuseID=" + $rowMs["masseuseID"];
-                                                                                                                        }
-                                                                                                                        ?>">
-                                                                Cancel
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </form>
