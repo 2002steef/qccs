@@ -94,7 +94,7 @@ $masseuse = GetMasseuse();
                     <li>
                         <a class="light-gray" href="masseuse_profiel.php">
                             <i class="ft-user light-gray"></i>
-                            <span class="text-light-gray">Masseuse Profiel</span>
+                            <span class=" menu-title text light-gray">Masseuse Profiel</span>
                         </a>
                     </li>
                 <?php } elseif ($_SESSION["status"] == "bedrijf") {
@@ -102,7 +102,7 @@ $masseuse = GetMasseuse();
                     <li>
                         <a class="light-gray" href="bma_bedrijfs_klanten_overzicht.php">
                             <i class="ft-user light-gray"></i>
-                            <span class="text-light-gray">Overzicht</span>
+                            <span class="menu-title text light-gray">Overzicht</span>
                         </a>
                     </li>
                     <!-- <li>
@@ -114,9 +114,9 @@ $masseuse = GetMasseuse();
                 <?php }
                 ?>
                 <li class="nav-item">
-                    <a class="text-light-gray" href="page-account-settings.php">
-                        <i class="icon-settings"></i>
-                        <span class="text">Mijn account</span>
+                    <a class="text light-gray" href="page-account-settings.php">
+                        <i class="icon-settings light-gray"></i>
+                        <span class="menu-title text light-gray">Mijn account</span>
                     </a>
                 <?php
                         }
