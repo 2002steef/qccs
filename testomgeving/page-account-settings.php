@@ -15,6 +15,7 @@ if (!isset($_SESSION["loggedin"])) {
 $rowBd = GetBedrijf();
 $rowMs = GetMasseuse();
 $rowMw = Getuser();
+UploadPic();
 
 ?>
 <!DOCTYPE html>
