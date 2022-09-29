@@ -65,12 +65,16 @@ include "partials/header.php";
                                         <span class="align-middle">Wachtwoord veranderen</span>
                                     </a>
                                 </li>
+                                <?php
+                                            if($_SESSION["status"] == "masseuse"){
+                                            ?>
                                 <li class="nav-item">
                                     <a class="nav-link" id="voucher-verzileren-tab" data-toggle="tab" href="#voucher-verzileren" role="tab" aria-controls="voucher-verzileren" aria-selected="false">
                                         <i class="ft-lock mr-1 align-middle"></i>
                                         <span class="align-middle">Voucher verzilveren</span>
                                     </a>
                                 </li>
+                                <?php }?>
                             </ul>
                         </div>
                         <div class="col-md-9">
