@@ -77,7 +77,7 @@ include "partials/header.php";
                                             <!-- General Tab -->
                                             <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                                 <div class="media">
-                                                    <img src="uploads/IMG-61b0ee01b38261.71649507.jpg" alt="profile-img" class="rounded mr-3" height="64" width="64">
+                                                    <img src="assets/img/BMA-Logo.png" alt="profile-img" class="rounded mr-3" height="64" width="64">
                                                     <div class="media-body">
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
                                                             <form action="page-account-settings.php" method="post" enctype="multipart/form-data">
