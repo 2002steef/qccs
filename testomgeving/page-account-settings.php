@@ -163,7 +163,7 @@ include "partials/header.php";
                                                         </div>
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                             <button type="submit" name="save" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
-                                                            <a href="<?php
+                                                            <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="<?php
                                                                         if (isset($_SESSION['status']) && isset($_SESSION['loggedin'])) {
                                                                             if ($_SESSION['status'] == "bedrijf") {
                                                                                 echo "bma_bedrijfs_overzicht.php";
