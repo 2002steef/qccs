@@ -14,7 +14,7 @@ if (!isset($_SESSION["loggedin"])) {
 // UploadPic1();
 
 $rowBd = GetBedrijf();
-$rowMs = GetMasseuse();
+$rowMs = GetMasseuseInfo();
 $rowMw = Getuser();
 UploadPic();
 UpdateProfielBedrijf();
