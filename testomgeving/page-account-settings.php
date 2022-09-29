@@ -168,7 +168,7 @@ include "partials/header.php";
                                                                             if ($_SESSION['status'] == "bedrijf") {
                                                                                 echo "bma_bedrijfs_overzicht.php";
                                                                             } else {
-                                                                                echo "masseuse_profiel.php?masseuseID=" + $rowMs["id"];
+                                                                                echo "masseuse_profiel.php?masseuseID=" + $rowMs["masseuseID"];
                                                                             }
                                                                         }
                                                                         ?>" class="btn btn-secondary mb-1">
