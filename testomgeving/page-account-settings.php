@@ -85,7 +85,10 @@ include "partials/header.php";
                                         <div class="tab-content">
                                             <!-- General Tab -->
                                             <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
-                                                <div class="media">
+                                            <?php 
+                                            if($_SESSION["status"]!=="medewerker"){
+                                            ?>  
+                                            <div class="media">
                                                     <img src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                 echo $rowBd["profielFoto"];
                                                                             } elseif ($_SESSION["status"] == "masseuse") {
@@ -106,6 +109,7 @@ include "partials/header.php";
                                                         </p>
                                                     </div>
                                                 </div>
+                                                <?php }?>
                                                 <hr class="mt-1 mt-sm-2">
                                                 <form method="post" action="page-account-settings.php">
                                                     <div class="row">
