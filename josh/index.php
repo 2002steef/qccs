@@ -78,21 +78,7 @@ include "backend/voucherFunctions.php" ;
                                         <div class="card-body">
                                             <p>Stuur voucher code</p>
                                             
-                                                <?php
-                                                if (isset($_POST['VoucherSturen'])) {
-                                                    $token = createRandomVoucher();
-                                                    $email = $_POST["KlantMail"];
-                                                    if ($email) {
-                                                        $to = $email;
-                                                        $subject = "Voucher code";
-                                                        $msg = "Uw voucher code is . $token ";
-                                                        $msg = wordwrap($msg, 70);
-                                                        $headers = "From: Josh@qccs.nl";
-                                                        mail($to, $subject, $msg, $headers);
-                                                        header('location:index.php');
-                                                    }
-                                                  }
-                                                ?>
+
                                             <div class="row">
                                                 <!-- block button -->
                                                 
