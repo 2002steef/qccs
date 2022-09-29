@@ -118,7 +118,7 @@ include "partials/header.php";
                                                             <div class="controls">
                                                                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                                                                                                         echo $rowBd["userName"];
-                                                                                                                                                                    } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                                    } else {
                                                                                                                                                                         echo $rowMs["userName"];
                                                                                                                                                                     } ?>" required>
                                                             </div>
