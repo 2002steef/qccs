@@ -185,8 +185,17 @@ include "partials/header.php";
                                                     </div>
                                                 </form>
                                             </div>
-                                            <!-- Connections Tab -->
-
+                                            <!-- voucher Tab -->
+                                            <div class="tab-pane" id="voucher-verzileren" role="tabpanel" aria-labelledby="voucher-verzileren-tab">
+                                                <form method="post">
+                                                    <div class="form-group">
+                                                        <label for="voucher-verzilveren">voucher-verzilveren</label>
+                                                        <div class="controls">
+                                                            <input type="text" name="voucherCode" id="voucherCode" class="form-control" placeholder="Vul voucher in" required>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                             <!-- Notifications Tab -->
 
                                         </div>
