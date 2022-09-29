@@ -93,16 +93,16 @@ $masseuse = GetMasseuse();
                 ?>
                     <li>
                         <a class="light-gray" href="masseuse_profiel.php">
-                            <i class="ft-bar-chart-2"></i>
-                            <span class="text">Masseuse Profiel</span>
+                            <i class="ft-user light-gray"></i>
+                            <span class="text-light-gray">Masseuse Profiel</span>
                         </a>
                     </li>
                 <?php } elseif ($_SESSION["status"] == "bedrijf") {
                 ?>
                     <li>
                         <a class="light-gray" href="bma_bedrijfs_klanten_overzicht.php">
-                            <i class="ft-bar-chart-2"></i>
-                            <span class="text">Overzicht</span>
+                            <i class="ft-user light-gray"></i>
+                            <span class="text-light-gray">Overzicht</span>
                         </a>
                     </li>
                     <!-- <li>
