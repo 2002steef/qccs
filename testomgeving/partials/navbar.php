@@ -41,13 +41,14 @@ $rowMw = Getuser();
                                 <div class="user d-md-flex d-none mr-2"><span class="text-right light-gray"><?php if (isset($_SESSION["voornaam"])) {
                                                                                                                 echo $_SESSION["voornaam"];
                                                                                                             } ?></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
-                                <img class="avatar" src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
-                                                                            echo $rowBd["profielFoto"];
-                                                                        } elseif ($_SESSION["status"] == "masseuse") {
-                                                                            echo $rowMs["profielFoto"];
-                                                                        } elseif ($_SESSION["status"] == "medewerker") {
-                                                                            echo "standaard.png";
-                                                                        } ?>" alt="avatar" height="35" width="35">
+                                <?php if ($_SESSION["status"] == "bedrijf") { ?>
+                                    <img class="avatar" src="img/uploads/<?= $rowBd["profielFoto"] ?>" alt="avatar" height="35" width="35">
+                                <?php } elseif ($_SESSION["status"] == "masseuse") { ?>
+                                    <img class="avatar" src="img/uploads/<?= $rowMs["profielFoto"] ?>" alt="avatar" height="35" width="35">
+                                <?php
+                                } elseif ($_SESSION["status"] == "medewerker") { ?>
+                                    <img class="avatar" src="img/uploads/standaard.png ?>" alt="avatar" height="35" width="35">
+                                <?php  } ?>
                             </a>
                             <?php if ($_SESSION["status"] == "bedrijf") { ?>
                                 <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?bedrijfID=<?= $_SESSION["id"] ?>">
@@ -131,27 +132,27 @@ $rowMw = Getuser();
                 <?php }
                 ?>
                 <li class="nav-item">
-                <?php if ($_SESSION["status"] == "bedrijf") { ?>
-                    <a class="text light-gray" href="page-account-settings.php?bedrijfID=<?= $_SESSION["id"] ?>">
-                        <i class="icon-settings light-gray"></i>
-                        <span class="menu-title text light-gray">Mijn account</span>
-                    </a>                                    <?php
+                    <?php if ($_SESSION["status"] == "bedrijf") { ?>
+                        <a class="text light-gray" href="page-account-settings.php?bedrijfID=<?= $_SESSION["id"] ?>">
+                            <i class="icon-settings light-gray"></i>
+                            <span class="menu-title text light-gray">Mijn account</span>
+                        </a> <?php
 
-                                } elseif ($_SESSION["status"] == "masseuse") { ?>
- <a class="text light-gray" href="page-account-settings.php?masseuseID=<?= $_SESSION["id"] ?>">
-                        <i class="icon-settings light-gray"></i>
-                        <span class="menu-title text light-gray">Mijn account</span>
-                    </a>                                            <?php    } elseif ($_SESSION["status"] == "medewerker") { ?>
-                                                <a class="text light-gray" href="page-account-settings.php?userID=<?= $_SESSION["id"] ?>">
-                        <i class="icon-settings light-gray"></i>
-                        <span class="menu-title text light-gray">Mijn account</span>
-                    </a>                                                    <?php
-                                                } ?>
-                   
+                            } elseif ($_SESSION["status"] == "masseuse") { ?>
+                        <a class="text light-gray" href="page-account-settings.php?masseuseID=<?= $_SESSION["id"] ?>">
+                            <i class="icon-settings light-gray"></i>
+                            <span class="menu-title text light-gray">Mijn account</span>
+                        </a> <?php    } elseif ($_SESSION["status"] == "medewerker") { ?>
+                        <a class="text light-gray" href="page-account-settings.php?userID=<?= $_SESSION["id"] ?>">
+                            <i class="icon-settings light-gray"></i>
+                            <span class="menu-title text light-gray">Mijn account</span>
+                        </a> <?php
+                            } ?>
+
                 <?php
                         }
                 ?>
-                
+
                 </li>
                 </ul>
             </div>
