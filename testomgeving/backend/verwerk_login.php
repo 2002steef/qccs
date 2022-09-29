@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         } 
                     }
                 }
-            }elseif ($stmtBd->num_rows == 0 && $stmtMw->num_rows == 0) {
+            }else{
                 $stmtMs = $mysqli->prepare('SELECT `masseuseID`, `userName`, `Password`, `email`  FROM `masseuses` WHERE email = ?');
                 $stmtMs->bind_param('s', $_POST['email']);
                 $stmtMs->execute();
