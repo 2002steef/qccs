@@ -6,9 +6,9 @@ function UpdateProfielBedrijf()
 {
     global $mysqli;
     if (isset($_POST['saveBd'])) {
-        $query = "UPDATE bedrijven SET userName = ?, voornaam = ? , email = ? WHERE bedrijfID = ?";
+        $query = "UPDATE bedrijven SET userName = ?, email = ? WHERE bedrijfID = ?";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
+        $stmt->bind_param('ssi', $_POST['userName'], $_POST['email'], $_SESSION['userID']);
         $stmt->execute();
     }
 }
@@ -16,7 +16,7 @@ function UpdateProfielMasseuse()
 {
     global $mysqli;
     if (isset($_POST['saveMs'])) {
-        $query = "UPDATE masseuses SET userName = ?, voornaam = ? , email = ? WHERE userID = ?";
+        $query = "UPDATE masseuses SET userName = ?, voornaam = ? , email = ? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
         $stmt->execute();
