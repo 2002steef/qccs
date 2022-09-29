@@ -9,11 +9,12 @@ $id = $_SESSION['id'];
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
-Changepassword();
-Updateuser();
-UploadPic1();
-$row = Getuser();
-
+// Changepassword();
+// Updateuser();
+// UploadPic1();
+$rowBd = GetBedrijf();
+$rowMs = GetMasseuse();
+$rowMw = Getuser();
 
 ?>
 <!DOCTYPE html>
@@ -77,7 +78,11 @@ include "partials/header.php";
                                             <!-- General Tab -->
                                             <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                                 <div class="media">
-                                                    <img src="assets/img/BMA-Logo.png" alt="profile-img" class="rounded mr-3" height="64" width="64">
+                                                    <img src="img/uploads/<?php if (isset($_SESSION["status"]) == "bedrijf") {
+                                                                                echo $rowBd["profielFoto"];
+                                                                            } else {
+                                                                                echo $rowMs["profielFoto"];
+                                                                            } ?>" alt="profile-img" class="rounded mr-3" height="64" width="64">
                                                     <div class="media-body">
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
                                                             <form action="page-account-settings.php" method="post" enctype="multipart/form-data">
@@ -87,7 +92,7 @@ include "partials/header.php";
                                                         </div>
                                                         <p class="text-muted mb-0 mt-1 mt-sm-0">
                                                             <small>Allowed JPG, GIF or PNG. Max size of 800kB</small>
-                                                            <?php if(isset($err)){
+                                                            <?php if (isset($err)) {
                                                                 echo $err;
                                                             }  ?>
                                                         </p>
@@ -192,7 +197,7 @@ include "partials/header.php";
                                                 </form>
                                             </div>
                                             <!-- Notifications Tab -->
-                                        
+
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +223,7 @@ include "partials/header.php";
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
     <?php
-   
+
     include "partials/footer.php";
     ?>
 </body>
