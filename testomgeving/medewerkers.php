@@ -86,9 +86,9 @@ if (!isset($_SESSION["loggedin"])) {
                                                             <table class="table table-striped table-bordered file-export">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th colspan="1">Logo</th>
-                                                                        <th colspan="3">Masseuse info</th>
-                                                                        <th colspan="1">Info</th>
+                                                                        <th >Logo</th>
+                                                                        <th >Masseuse info</th>
+                                                                        <th>Info</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
