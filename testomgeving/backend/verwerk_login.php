@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header("Location:../index.php?login=foutecombi");
                 }
             } elseif ($stmtMw->num_rows == 0) {
-                $stmtBd = $mysqli->prepare('SELECT `bedrijfID`, `userName`, `Password`, `email`, `voornaam`  FROM `bedrijven` WHERE email = ?');
+                $stmtBd = $mysqli->prepare('SELECT `bedrijfID`, `userName`, `Password`, `email`  FROM `bedrijven` WHERE email = ?');
                 $stmtBd->bind_param('s', $_POST['email']);
                 $stmtBd->execute();
                 $stmtBd->store_result();
