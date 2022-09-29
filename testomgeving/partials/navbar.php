@@ -42,22 +42,32 @@ $rowMw = Getuser();
                                                                                                                 echo $_SESSION["voornaam"];
                                                                                                             } ?></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
                                 <img class="avatar" src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
-                                                                                echo $rowBd["profielFoto"];
-                                                                            } elseif($_SESSION["status"] == "masseuse") {
-                                                                                echo $rowMs["profielFoto"];
-                                                                            }elseif( $_SESSION["status"] == "medewerker") {
-                                                                                echo "standaard.png";
-                                                                            } ?>" alt="avatar" height="35" width="35">
+                                                                            echo $rowBd["profielFoto"];
+                                                                        } elseif ($_SESSION["status"] == "masseuse") {
+                                                                            echo $rowMs["profielFoto"];
+                                                                        } elseif ($_SESSION["status"] == "medewerker") {
+                                                                            echo "standaard.png";
+                                                                        } ?>" alt="avatar" height="35" width="35">
                             </a>
-                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?id=<?= $_SESSION["id"]?>">
-                                    <div class="d-flex align-items-center"><i class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="backend/logout.php">
-                                    <div class="d-flex align-items-center light-gray"><i class="ft-power mr-2"></i><span>Logout</span>
-                                    </div>
-                                </a>
-                            </div>
+                            <?php if ($_SESSION["status"] == "bedrijf") { ?>
+                                <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?bedrijfID=<?= $_SESSION["id"] ?>">
+                                    <?php
+
+                                } elseif ($_SESSION["status"] == "masseuse") { ?>
+                                        <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?masseuseID=<?= $_SESSION["id"] ?>">
+                                            <?php    } elseif ($_SESSION["status"] == "medewerker") { ?>
+                                                <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?medewerkerID=<?= $_SESSION["id"] ?>">
+                                                    <?php
+                                                } ?>
+
+                                                    <div class="d-flex align-items-center"><i class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>
+                                                    </a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="backend/logout.php">
+                                                        <div class="d-flex align-items-center light-gray"><i class="ft-power mr-2"></i><span>Logout</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
                         </li>
                     </ul>
                 </div>
@@ -99,7 +109,7 @@ $rowMw = Getuser();
                             } elseif ($_SESSION["status"] == "masseuse") {
                 ?>
                     <li>
-                        <a class="light-gray" href="masseuse_profiel.php?masseuseID=<?=$_SESSION["id"] ?>">
+                        <a class="light-gray" href="masseuse_profiel.php?masseuseID=<?= $_SESSION["id"] ?>">
                             <i class="ft-user light-gray"></i>
                             <span class=" menu-title text light-gray">Masseuse Profiel</span>
                         </a>
