@@ -121,8 +121,8 @@ include "backend/functions.php";
                                                                 <thead>
                                                                     <tr>
                                                                         <th colspan="1">ID</th>
-                                                                        <th colspan="4">BedrijfsNaam</th>
-                                                                        <th >Adres</th>
+                                                                        <th>BedrijfsNaam</th>
+                                                                        <th>Adres</th>
                                                                         <th colspan="1">Aantal vouchers</th>
                                                                     </tr>
                                                                 </thead>
