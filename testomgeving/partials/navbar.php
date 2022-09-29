@@ -131,13 +131,27 @@ $rowMw = Getuser();
                 <?php }
                 ?>
                 <li class="nav-item">
-                    <a class="text light-gray" href="page-account-settings.php">
+                <?php if ($_SESSION["status"] == "bedrijf") { ?>
+                    <a class="text light-gray" href="page-account-settings.php?bedrijfID=<?= $_SESSION["id"] ?>">
                         <i class="icon-settings light-gray"></i>
                         <span class="menu-title text light-gray">Mijn account</span>
-                    </a>
+                    </a>                                    <?php
+
+                                } elseif ($_SESSION["status"] == "masseuse") { ?>
+ <a class="text light-gray" href="page-account-settings.php?masseuseID=<?= $_SESSION["id"] ?>">
+                        <i class="icon-settings light-gray"></i>
+                        <span class="menu-title text light-gray">Mijn account</span>
+                    </a>                                            <?php    } elseif ($_SESSION["status"] == "medewerker") { ?>
+                                                <a class="text light-gray" href="page-account-settings.php?userID=<?= $_SESSION["id"] ?>">
+                        <i class="icon-settings light-gray"></i>
+                        <span class="menu-title text light-gray">Mijn account</span>
+                    </a>                                                    <?php
+                                                } ?>
+                   
                 <?php
                         }
                 ?>
+                
                 </li>
                 </ul>
             </div>
