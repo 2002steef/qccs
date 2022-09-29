@@ -122,7 +122,7 @@ include "backend/functions.php";
                                                                     <tr>
                                                                         <th colspan="1">ID</th>
                                                                         <th colspan="4">BedrijfsNaam</th>
-                                                                        <th colspan="4">Adres</th>
+                                                                        <th >Adres</th>
                                                                         <th colspan="1">Aantal vouchers</th>
                                                                     </tr>
                                                                 </thead>
