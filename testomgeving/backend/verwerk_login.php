@@ -115,6 +115,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         } 
                     }
                 }
+            }elseif ($stmtBd && $stmtMw->num_rows == 0) {
+                $stmtMs = $mysqli->prepare('SELECT `masseuseID`, `userName`, `Password`, `email`  FROM `masseuse` WHERE email = ?');
+                $stmtMs->bind_param('s', $_POST['email']);
+                $stmtMs->execute();
+                $stmtMs->store_result();
+                if ($stmtMs->num_rows > 0) {
+                    $stmtMs->bind_result($id, $userName, $password, $email);
+                    //            $stmt->bind_result($id, $password);
+                    $stmtMs->fetch();
+                    // Account exists, now we verify the password.
+                    // Note: remember to use password_hash in your registration file to store the hashed passwords.
+                    //            if (password_verify($_POST['wachtwoord'], $password)) {
+                    if ($_POST['wachtwoord'] == $password) {
+                        //                $row = $stmt->get_result();
+                        // Verification success! User has logged-in!
+                        // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
+                        session_regenerate_id();
+                        $_SESSION['loggedin'] = true;
+                        $_SESSION['name'] = $_POST['email'];
+                        $_SESSION['id'] = $id;
+                        $_SESSION['status'] = "masseuse";
+                        //            echo 'Welcome ' . $_SESSION['name'] . '!';
+                        if (!empty($_POST["remember_me"])) {
+                            setcookie("username", $_POST["email"], time() + 3600);
+                            setcookie("password", $_POST["wachtwoord"], time() + 3600);
+                            //                    echo $_COOKIE['username'];
+                            //                    echo $_COOKIE['password'];
+                            echo "Cookies Set Successfuly";
+                        } else {
+                            setcookie("username", "");
+                            setcookie("password", "");
+                            echo "Cookies Not Set";
+                        }
+                        // echo "Je bent ingelogd";
+                        // if (!empty($googlecode)) {
+                        //     header("Location: ../googlecode.php");
+                        //     //header("Location: ../device_confirmations.php");
+
+                        // } else {
+                        if ($_SESSION['status'] == "masseuse") {
+                            header("Location:../masseuse_profiel.php?masseuseID=$id");
+                        } 
+                    }
+                }
             }
             $stmt->close();
         }
