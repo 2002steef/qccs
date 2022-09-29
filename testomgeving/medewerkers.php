@@ -88,7 +88,7 @@ if (!isset($_SESSION["loggedin"])) {
                                                                     <tr>
                                                                         <th colspan="1">Logo</th>
                                                                         <th colspan="3">Masseuse info</th>
-                                                                        <th >Info</th>
+                                                                        <th colspan="1">Info</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
