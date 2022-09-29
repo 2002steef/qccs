@@ -90,7 +90,7 @@ function GetMasseuse()
 function GetBedrijf()
 {
     global $mysqli;
-    $sql = "SELECT * FROM bedrijven where bedrijvenID = ?";
+    $sql = "SELECT * FROM bedrijven where bedrijfID = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
