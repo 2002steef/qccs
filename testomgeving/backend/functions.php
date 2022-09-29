@@ -547,7 +547,7 @@ function bedrijfsInfo()
     $resultMasseuse = $stmt->get_result();
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
-            <td><?= $masseuse["bedrijfID"] ?></td>
+            <td><?= $masseuse["profielFoto"] ?></td>
             <td><?= $masseuse["userName"] ?></td>
             <td><?= $masseuse["postcode"] ?> <?= $masseuse["huisNummer"] ?> <?= $masseuse["straat"] ?> <?= $masseuse["plaats"] ?></td>
             <td><?= $masseuse["voucherAantal"] ?></td>
