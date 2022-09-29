@@ -1,6 +1,6 @@
 <?php
 include "backend/functions.php";
-UpdateProfiel();
+
 $masseuse = GetMasseuse();
 ?>
 <!DOCTYPE html>

@@ -2,25 +2,26 @@
 include "db.php";
 session_start();
 include "error.php";
-function UpdateProfiel()
+function UpdateProfielBedrijf()
 {
     global $mysqli;
-
-
     if (isset($_POST['saveBd'])) {
         $query = "UPDATE bedrijven SET userName = ?, voornaam = ? , email = ? WHERE bedrijfID = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
         $stmt->execute();
-    } else
-        if (isset($_POST['saveMs'])) {
+    }
+}
+function UpdateProfielMasseuse()
+{
+    global $mysqli;
+    if (isset($_POST['saveMs'])) {
         $query = "UPDATE masseuses SET userName = ?, voornaam = ? , email = ? WHERE userID = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('sssi', $_POST['userName'], $_POST['voornaam'], $_POST['email'], $_SESSION['userID']);
         $stmt->execute();
     }
 }
-
 function InsertBedrijf()
 {
     global $mysqli;
