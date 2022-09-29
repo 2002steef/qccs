@@ -78,7 +78,7 @@ function Getuser()
     global $mysqli;
     $sql = "SELECT * FROM medewerkers where userID = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('i', $_SESSION['id']);
+    $stmt->bind_param('i', $_GET['userID']);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();

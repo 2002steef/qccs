@@ -56,7 +56,7 @@ $rowMw = Getuser();
                                 } elseif ($_SESSION["status"] == "masseuse") { ?>
                                         <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?masseuseID=<?= $_SESSION["id"] ?>">
                                             <?php    } elseif ($_SESSION["status"] == "medewerker") { ?>
-                                                <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?medewerkerID=<?= $_SESSION["id"] ?>">
+                                                <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?userID=<?= $_SESSION["id"] ?>">
                                                     <?php
                                                 } ?>
 
