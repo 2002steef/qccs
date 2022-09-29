@@ -139,7 +139,7 @@ function UploadPic1()
         if ($error === 0) {
             if ($img_size > 1250000) {
                 $em = "Sorry, your file is too large.";
-                header("Location: index.php?error=$em");
+                header("Location: profiel-account-settings.php?error=$em");
             } else {
                 $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
                 $img_ex_lc = strtolower($img_ex);
@@ -152,7 +152,7 @@ function UploadPic1()
                     move_uploaded_file($tmp_name, $img_upload_path);
 
                     // Insert into Database
-                    $sql_pic = "UPDATE `masseuse` SET `profielFoto` = ? WHERE id = ?";
+                    $sql_pic = "UPDATE `masseuses` SET `profielFoto` = ? WHERE masseuseID = ?";
                     $stmt = $mysqli->prepare($sql_pic);
                     $stmt->bind_param(
                         "si",
