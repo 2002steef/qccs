@@ -41,7 +41,7 @@ $rowMw = Getuser();
                                 <div class="user d-md-flex d-none mr-2"><span class="text-right light-gray"><?php if (isset($_SESSION["voornaam"])) {
                                                                                                                 echo $_SESSION["voornaam"];
                                                                                                             } ?></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
-                                <img class="avatar" src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
+                                <img class="avatar" src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf" && $_SESSION["status"] == "medewewerker") {
                                                                                 echo $rowBd["profielFoto"];
                                                                             } elseif($_SESSION["status"] == "masseuse") {
                                                                                 echo $rowMs["profielFoto"];
