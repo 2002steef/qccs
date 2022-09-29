@@ -116,39 +116,39 @@ include "partials/header.php";
                                                         <div class="col-12 form-group">
                                                             <label for="username">Username</label>
                                                             <div class="controls">
-                                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php if ($_SESSION["status"] !== "bedrijf") {
-                                                                                                                                                                        echo $rowMs["userName"];
-                                                                                                                                                                    } else {
+                                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                                                                                                         echo $rowBd["userName"];
+                                                                                                                                                                    } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                                        echo $rowMs["userName"];
                                                                                                                                                                     } ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <label for="name">Name</label>
                                                             <div class="controls">
-                                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php if ($_SESSION["status"] !== "bedrijf") {
-                                                                                                                                                            echo $rowMs["voornaam"];
-                                                                                                                                                        } else {
+                                                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                                                                                             echo $rowBd["userName"];
+                                                                                                                                                        } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                            echo $rowMs["voornaam"];
                                                                                                                                                         } ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <label for="name">E-mail</label>
-                                                            <div class="controls">!
-                                                                <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] !== "bedrijf") {
-                                                                                                                                                                    echo $rowMs["email"];
-                                                                                                                                                                } else {
+                                                            <div class="controls">
+                                                                <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                                                                                                     echo $rowBd["email"];
+                                                                                                                                                                } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                                    echo $rowMs["email"];
                                                                                                                                                                 } ?>" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 form-group">
                                                             <div class="controls">
-                                                                <input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] !== "bedrijf") {
-                                                                                                                                                                    echo $rowMs["email"];
-                                                                                                                                                                } else {
+                                                                <input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                                                                                                     echo $rowBd["email"];
+                                                                                                                                                                } elseif ($_SESSION["status"] == "masseuse") {
+                                                                                                                                                                    echo $rowMs["email"];
                                                                                                                                                                 } ?>" required>
                                                             </div>
                                                         </div>
