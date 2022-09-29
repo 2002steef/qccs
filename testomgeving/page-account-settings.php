@@ -80,7 +80,7 @@ include "partials/header.php";
                                                 <div class="media">
                                                     <img src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                 echo $rowBd["profielFoto"];
-                                                                            } else {
+                                                                            } elseif($_SESSION["status"] == "masseuse") {
                                                                                 echo $rowMs["profielFoto"];
                                                                             } ?>" alt="profile-img" class="rounded mr-3" height="64" width="64">
                                                     <div class="media-body">

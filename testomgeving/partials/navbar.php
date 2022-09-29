@@ -42,7 +42,7 @@ $masseuse = GetMasseuse();
                                                                                                             } ?></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
                                 <img class="avatar" src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                 echo $rowBd["profielFoto"];
-                                                                            } else {
+                                                                            } elseif($_SESSION["status"] == "masseuse") {
                                                                                 echo $rowMs["profielFoto"];
                                                                             } ?>" alt="avatar" height="35" width="35">
                             </a>
