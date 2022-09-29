@@ -47,7 +47,7 @@ $rowMw = Getuser();
                                     <img class="avatar" src="img/uploads/<?= $rowMs["profielFoto"] ?>" alt="avatar" height="35" width="35">
                                 <?php
                                 } elseif ($_SESSION["status"] == "medewerker") { ?>
-                                    <img class="avatar" src="img/uploads/standaard.png ?>" alt="avatar" height="35" width="35">
+                                    <img class="avatar" src="img/uploads/standaard.png" alt="avatar" height="35" width="35">
                                 <?php  } ?>
                             </a>
                             <?php if ($_SESSION["status"] == "bedrijf") { ?>
