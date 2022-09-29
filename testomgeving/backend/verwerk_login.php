@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Store the result so we can check if the account exists in the database.
             $stmtMw->store_result();
 
-            if ($ststmtMwmt->num_rows > 0) {
+            if ($stmtMw->num_rows > 0) {
                 $stmtMw->bind_result($id, $userName, $password, $email);
                 //            $stmt->bind_result($id, $password);
                 $stmtMw->fetch();
