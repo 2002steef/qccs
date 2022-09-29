@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             }
-            $stmtMs->close();
+            $conn->close();
         }
     }
 }
