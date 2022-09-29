@@ -78,7 +78,7 @@ include "partials/header.php";
                                             <!-- General Tab -->
                                             <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                                 <div class="media">
-                                                    <img src="img/uploads/<?php if (isset($_SESSION["status"]) == "bedrijf") {
+                                                    <img src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
                                                                                 echo $rowBd["profielFoto"];
                                                                             } else {
                                                                                 echo $rowMs["profielFoto"];
