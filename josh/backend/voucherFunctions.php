@@ -24,7 +24,7 @@ function createRandomVoucher(
             $msg = wordwrap($msg, 70);
             $headers = "From: Josh@qccs.nl";
             mail($to, $subject, $msg, $headers);
-            header('location:../index.php');
+            header('location:index.php');
 
             // $stmt = $mysqli->prepare("INSERT INTO `vouchers`(`userID`, `voucher`) VALUES ('1',?)");
             // $voucher = createRandomVoucher();
