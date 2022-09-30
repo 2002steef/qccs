@@ -1,5 +1,5 @@
 <?php
-include "backend/voucherFunctions.php";
+// include "backend/voucherFunctions.php" ;
 ?>
 
 <!DOCTYPE html>
@@ -77,14 +77,29 @@ include "backend/voucherFunctions.php";
                                     <div class="card-content">
                                         <div class="card-body">
                                             <p>Stuur voucher code</p>
-
+                                            
+                                                <!-- <?php
+                                                if (isset($_POST['VoucherSturen'])) {
+                                                    $token = createRandomVoucher();
+                                                    $email = $_POST["KlantMail"];
+                                                    if ($email) {
+                                                        $to = $email;
+                                                        $subject = "Voucher code";
+                                                        $msg = "Uw voucher code is . $token ";
+                                                        $msg = wordwrap($msg, 70);
+                                                        $headers = "From: Josh@qccs.nl";
+                                                        mail($to, $subject, $msg, $headers);
+                                                        header('location:index.php');
+                                                    }
+                                                  }
+                                                ?> -->
                                             <div class="row">
                                                 <!-- block button -->
-
-                                                <form action="voucherFunctions.php" method="POST">
+                                                
+                                                <form action="backend/voucherFunctions.php" method="POST">
                                                     <div class="form-group mb-2 mb-md-0">
-                                                        <label class="label_txt">Email Klant</label>
-                                                        <input type="text" name="KlantMail" class="form-control">
+                                                            <label class="label_txt">Email Klant</label>
+                                                            <input type="text" name="KlantMail" class="form-control">
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
