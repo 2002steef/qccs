@@ -1,5 +1,5 @@
 <?php
-include "backend/voucherFunctions.php";
+include "voucherFunctions.php";
 ?>
 
 <!DOCTYPE html>
@@ -72,11 +72,11 @@ include "backend/voucherFunctions.php";
                             <div class="col-6 ">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title">Voucher sturen</h4>
+                                        <h4 class="card-title">Voucher sturen naar mail</h4>
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <p>Stuur voucher code</p>
+                                            <p>Stuur voucher code hier</p>
 
                                             <div class="row">
                                                 <!-- block button -->
