@@ -96,7 +96,7 @@ include "voucherFunctions.php" ;
                                             <div class="row">
                                                 <!-- block button -->
 
-                                                <form action="voucherFunctions.php" method="POST">
+                                                <form action="" method="POST">
                                                     <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Email Klant</label>
                                                         <input type="text" name="KlantMail" class="form-control">
