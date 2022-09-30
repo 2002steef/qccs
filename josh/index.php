@@ -1,5 +1,5 @@
 <?php
-include "voucherFunctions.php" ;
+// include "backend/voucherFunctions.php" ;
 ?>
 
 <!DOCTYPE html>
@@ -78,25 +78,10 @@ include "voucherFunctions.php" ;
                                         <div class="card-body">
                                             <p>Stuur voucher code</p>
 
-                                            <?php
-                                            if (isset($_POST['VoucherSturen'])) {
-                                                $token = createRandomVoucher();
-                                                $email = $_POST["KlantMail"];
-                                                if ($email) {
-                                                    $to = $email;
-                                                    $subject = "Voucher code";
-                                                    $msg = "Uw voucher code is . $token ";
-                                                    $msg = wordwrap($msg, 70);
-                                                    $headers = "From: Josh@qccs.nl";
-                                                    mail($to, $subject, $msg, $headers);
-                                                    header('location:index.php');
-                                                }
-                                            }
-                                            ?>
                                             <div class="row">
                                                 <!-- block button -->
 
-                                                <form action="" method="POST">
+                                                <form action="backend/voucherFunctions.php" method="POST">
                                                     <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Email Klant</label>
                                                         <input type="text" name="KlantMail" class="form-control">

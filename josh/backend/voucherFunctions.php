@@ -14,27 +14,26 @@ function createRandomVoucher(
     }
     return implode('', $pieces);
 
-    header('location:index.php');
+    if (isset($_POST['VoucherSturen'])) {
+        $token = createRandomVoucher();
+        $email = $_POST["KlantMail"];
+        if ($email) {
+            $to = $email;
+            $subject = "Voucher code";
+            $msg = "Uw voucher code is . $token ";
+            $msg = wordwrap($msg, 70);
+            $headers = "From: Josh@qccs.nl";
+            mail($to, $subject, $msg, $headers);
+            header('location:../index.php');
 
-    // if (isset($_POST['VoucherSturen'])) {
-    //     $token = createRandomVoucher();
-    //     $email = $_POST["KlantMail"];
-    //     if ($email) {
-    //         $to = $email;
-    //         $subject = "Voucher code";
-    //         $msg = "Uw voucher code is . $token ";
-    //         $msg = wordwrap($msg, 70);
-    //         $headers = "From: Josh@qccs.nl";
-    //         mail($to, $subject, $msg, $headers);
+            // $stmt = $mysqli->prepare("INSERT INTO `vouchers`(`userID`, `voucher`) VALUES ('1',?)");
+            // $voucher = createRandomVoucher();
+            // $stmt->bind_param("s", $voucher);
+            // $stmt->execute();
+            // if ($stmt->num_rows > 0) {
+            //     echo "Code gemaakt en in database gezet";
+            // }
 
-    // $stmt = $mysqli->prepare("INSERT INTO `vouchers`(`userID`, `voucher`) VALUES ('1',?)");
-    // $voucher = createRandomVoucher();
-    // $stmt->bind_param("s", $voucher);
-    // $stmt->execute();
-    // if ($stmt->num_rows > 0) {
-    //     echo "Code gemaakt en in database gezet";
-    // }
-
-    //     }
-    // }
+        }
+    }
 }
