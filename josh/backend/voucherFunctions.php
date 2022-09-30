@@ -1,5 +1,6 @@
 <?php
 include "backend/db.php";
+echo('<script>console.log("test")</script>');
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
