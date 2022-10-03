@@ -1,5 +1,5 @@
 <?php
-
+include "db.php";
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -15,15 +15,16 @@ function createRandomVoucher(
     return implode('', $pieces);
 
 
-    // $stmt = $mysqli->prepare("INSERT INTO `vouchers`(`userID`, `voucher`) VALUES ('1',?)");
-    // $voucher = createRandomVoucher();
-    // $stmt->bind_param("s", $voucher);
-    // $stmt->execute();
-    // if ($stmt->num_rows > 0) {
-    //     echo "Code gemaakt en in database gezet";
-    // }
+    $stmt = $mysqli->prepare("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('', '1', 'testvoucher', '1')");
+    $voucher = createRandomVoucher();
+    $stmt->bind_param("s", $voucher);
+    $stmt->execute();
+    if ($stmt->num_rows > 0) {
+        echo "Code gemaakt en in database gezet";
+    }
 
 }
+
 
 if (isset($_POST['VoucherSturen'])) {
     $token = createRandomVoucher();

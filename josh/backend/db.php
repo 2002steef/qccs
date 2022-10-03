@@ -15,5 +15,5 @@ if (!$con) {
 
 function getSQLConnect()
 {
-    return $mysqli;
+    // return $mysqli;
 }
