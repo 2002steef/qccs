@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#scroll').DataTable({
+    $('.scroll').DataTable({
       "scrollY": "200px",
       "scrollCollapse": true,
     });
