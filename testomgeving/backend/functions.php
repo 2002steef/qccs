@@ -178,17 +178,17 @@ function UploadPic()
                         $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
                         $img_upload_path = 'img/uploads/' . $new_img_name;
                         move_uploaded_file($tmp_name, $img_upload_path);
-
+                        $id = $_SESSION['id'];
                         // Insert into Database
                         $sql_pic = "UPDATE `masseuses` SET `profielFoto` = ? WHERE masseuseID = ?";
                         $stmt = $mysqli->prepare($sql_pic);
                         $stmt->bind_param(
                             "si",
                             $new_img_name,
-                            $_SESSION['id']
+                            $id
                         );
                         $stmt->execute();
-                        header("Location: page-account-settings.php");
+                        header("Location: page-account-settings.php?masseuseID=$id");
                     } else {
                         $em = "You can't upload files of this type";
                         header("Location: index.php?error=$em");
@@ -199,8 +199,7 @@ function UploadPic()
     } elseif ($_SESSION["status"] == "bedrijf") {
         if (isset($_POST['submitpic']) && isset($_FILES['my_image'])) {
             global $mysqli;
-
-            echo "<pre>";
+             echo "<pre>";
             print_r($_FILES['my_image']);
             echo "</pre>";
 
@@ -223,6 +222,7 @@ function UploadPic()
                         $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
                         $img_upload_path = 'img/uploads/' . $new_img_name;
                         move_uploaded_file($tmp_name, $img_upload_path);
+                        $id = $_SESSION['id'];
 
                         // Insert into Database
                         $sql_pic = "UPDATE `bedrijven` SET `profielFoto` = ? WHERE bedrijfID = ?";
@@ -230,10 +230,10 @@ function UploadPic()
                         $stmt->bind_param(
                             "si",
                             $new_img_name,
-                            $_SESSION['id']
+                            $id
                         );
                         $stmt->execute();
-                        header("Location: page-account-settings.php");
+                        header("Location: page-account-settings.php?bedrijfID=$id");
                     } else {
                         $em = "You can't upload files of this type";
                         header("Location: index.php?error=$em");
