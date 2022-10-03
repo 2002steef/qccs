@@ -83,7 +83,7 @@ if (!isset($_SESSION["loggedin"])) {
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="table">
-                                                        <table class="table thead-light-gray table-bordered file-export">
+                                                        <table class="table thead-dark table-bordered file-export">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Masseuse</th>
