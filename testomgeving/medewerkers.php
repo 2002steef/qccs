@@ -78,28 +78,28 @@ if (!isset($_SESSION["loggedin"])) {
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade mt-2 show active light-gray" id="Particulier" role="tabpanel" aria-labelledby="account-tab">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="table">
-                                                            <table class="table thead-dark table-bordered file-export">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th >Masseuse</th>
-                                                                        <th >Masseuse info</th>
-                                                                        <th>Info</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                        <?php masseuseInfo(); ?>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
+
+                                        <div class="tab-pane fade mt-2 show active light-gray" id="Particulier" role="tabpanel" aria-labelledby="account-tab">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="table">
+                                                        <table class="table thead-light-gray table-bordered file-export">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Masseuse</th>
+                                                                    <th>Masseuse info</th>
+                                                                    <th>Info</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <?php masseuseInfo(); ?>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </section>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ if (!isset($_SESSION["loggedin"])) {
         <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
     </div>
- 
+
     <!-- /////////////////////////////////////////////////////////////////////////////-->
 
     <div class="sidenav-overlay"></div>
