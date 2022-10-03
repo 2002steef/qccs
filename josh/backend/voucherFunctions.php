@@ -19,13 +19,13 @@ function createRandomVoucher(
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    $stmt = $mysqli->prepare("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')");
+    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')");
     $voucher = createRandomVoucher();
     // $stmt->bind_param("s", $voucher);
-    $stmt->execute();
-    if ($stmt->num_rows > 0) {
-        echo "Code gemaakt en in database gezet";
-    }
+    // $stmt->execute();
+    // if ($stmt->num_rows > 0) {
+        // echo "Code gemaakt en in database gezet";
+    // }
 }
 
 
@@ -39,6 +39,6 @@ if (isset($_POST['VoucherSturen'])) {
         $msg = wordwrap($msg, 70);
         $headers = "From: Josh@qccs.nl";
         mail($to, $subject, $msg, $headers);
-        header('location:index.php');
+        // header('location:index.php');
     }
 }
