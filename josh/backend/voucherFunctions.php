@@ -21,7 +21,7 @@ function createRandomVoucher(
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $stmt = $mysqli->prepare("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')");
     $voucher = createRandomVoucher();
-    $stmt->bind_param("s", $voucher);
+    // $stmt->bind_param("s", $voucher);
     $stmt->execute();
     if ($stmt->num_rows > 0) {
         echo "Code gemaakt en in database gezet";
