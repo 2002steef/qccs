@@ -19,7 +19,7 @@ function createRandomVoucher(
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    $stmt = $mysqli->prepare("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('', '1', 'testvoucher', '1')");
+    $stmt = $mysqli->prepare("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')");
     $voucher = createRandomVoucher();
     $stmt->bind_param("s", $voucher);
     $stmt->execute();
