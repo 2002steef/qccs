@@ -83,11 +83,11 @@ if (!isset($_SESSION["loggedin"])) {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="table-responsive">
-                                                            <table class="table table-striped table-bordered file-export">
+                                                            <table class="table table-striped file-export">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th colspan="1" >Masseuse</th>
-                                                                        <th colspan="3">Masseuse info</th>
+                                                                        <th >Masseuse</th>
+                                                                        <th >Masseuse info</th>
                                                                         <th>Info</th>
                                                                     </tr>
                                                                 </thead>
