@@ -181,7 +181,7 @@ include "partials/header.php";
                                                             <?php
                                                             } elseif ($_SESSION["status"] == "masseuse") { ?>
                                                                 <button type="submit" name="saveMs" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
-                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="masseuse_profiel.php?masseuseID<?= $_SESSION["id"] ?>">
+                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="masseuse_profiel.php?masseuseID=<?= $_SESSION["id"] ?>">
                                                                     Cancel
                                                                 </a>
                                                             <?php
