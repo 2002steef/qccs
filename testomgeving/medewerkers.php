@@ -86,15 +86,13 @@ if (!isset($_SESSION["loggedin"])) {
                                                             <table class="table table-striped table-bordered file-export">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>Masseuse</th>
+                                                                        <th class="md-6">Masseuse</th>
                                                                         <th>Masseuse info</th>
                                                                         <th>Info</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                
                                                                         <?php masseuseInfo(); ?>
-                                                                
                                                                 </tbody>
                                                             </table>
                                                         </div>
