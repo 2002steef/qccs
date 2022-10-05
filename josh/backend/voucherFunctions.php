@@ -52,7 +52,7 @@ function GetMasseuseInfo()
     $stmt->execute();
     
     while($result = $stmt->get_result()){
-    $result->fetch_array();
+    return $result->fetch_array();
     }
 }
 function GetUserInfo()
