@@ -191,8 +191,6 @@ include "partials/header.php";
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
         </div>
     </div>
-    <script src="assets/js/scripts.js"></script>
-    <script src="assets/js/profileHeight.js"></script>
     <script>
         function ClickEdit() {
             document.getElementById("editMasseuse").readOnly = false;
@@ -200,6 +198,9 @@ include "partials/header.php";
             document.getElementById("editMasseuseMail").readOnly = false;
         }
     </script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/profileHeight.js"></script>
+   
     <?php
     include "partials/footer.php";
     ?>
