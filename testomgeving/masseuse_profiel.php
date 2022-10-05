@@ -191,7 +191,9 @@ include "partials/header.php";
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
         </div>
     </div>
+    
     <script  src="assets/js/scripts.js"></script>
+    <script  src="assets/js/editMasseuse.js"></script>
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
