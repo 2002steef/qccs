@@ -102,7 +102,7 @@ include "partials/header.php";
                                                 <h4 class="card-title m-0">Contact</h4>
                                                 <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                             </div>
-                                            <div class="card-content">
+                                            <div class="card-content scrolltext">
                                                 <form action="" method="POST" class="form-control-plaintext">
                                                     <div class="card-body hidescroll">
                                                         <label for="editMasseuse">Voornaam & achternaam: </label>
