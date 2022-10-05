@@ -27,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="assets/vendors/css/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="assets/vendors/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/pages/authentication.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pages/page-user-profile.css">
+
 	
     <!-- END VENDOR CSS-->
     <!-- BEGIN APEX CSS-->
