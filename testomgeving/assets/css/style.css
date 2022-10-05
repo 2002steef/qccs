@@ -27,7 +27,6 @@
 .scrolltext{
     overflow-y:scroll;
     right:-30px;
-    width:100%;
 }
 .hidescroll{
     position:relative;
