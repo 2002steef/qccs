@@ -21,9 +21,9 @@ function createRandomVoucher(
     $sql = "INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')";
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     if ($mysqli->query($sql) === TRUE){
-        header('location:index.php?tuuter');
+        // header('location:index.php?tuuter');
     }
-    $voucher = createRandomVoucher();
+    // $voucher = createRandomVoucher();
     // $stmt->bind_param("s", $voucher);
     // $stmt->execute();
     // if ($stmt->num_rows > 0) {
