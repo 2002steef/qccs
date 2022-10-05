@@ -33,7 +33,7 @@ include "partials/header.php";
                                     </div>
                                     <div class="user-profile-text">
                                         <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
-                                        <small>Masseuse</small>
+                                        <small><?= $masseuse["plaats"]; ?></small>
                                     </div>
                                     <!-- user profile body start -->
                                     <div class="card-content">
