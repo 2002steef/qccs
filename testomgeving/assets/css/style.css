@@ -16,3 +16,6 @@
     height: 235px;
     overflow: auto;
 }
+.txtarea{
+    overflow:hidden;
+}
