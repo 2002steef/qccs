@@ -60,12 +60,6 @@ include "partials/header.php";
                                                         <button name="login" type="submit" class="btn btn-primary">Inloggen</button>
                                                     </div>
                                                     <hr>
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <h6 class="text-primary m-0">Of Log In Met</h6>
-                                                        <div class="login-options">
-                                                            <?= "<a class='btn btn-sm btn-social-icon btn-facebook mr-1' href='" . $client->createAuthUrl() . "'><span class='fa fa-google'></span></a>"; ?>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

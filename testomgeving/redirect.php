@@ -4,7 +4,7 @@ include "google/vendor/autoload.php";
 //google connect gegevens
 $clientID = '591697308405-egi2n151rhfm0i6ovcjnagsf50v413f3.apps.googleusercontent.com';
 $clientSecret = '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';
-$redirectUri = 'https://relatiebeheer.qccstest.nl/redirect.php';
+$redirectUri = 'https://program.betaomgeving.nl/testomgeving/redirect.php';
 
 // init configuration
 $client = new Google_Client();
