@@ -38,7 +38,7 @@ function GetUserInfo()
         <?php
     }
 }
-function InsertVoucher()
+function InsertVoucher($voucher)
 {
     $servername = "localhost";
     $username = "relatietest";
@@ -47,7 +47,6 @@ function InsertVoucher()
     $userID = $_POST['medewerker'];
     $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    $voucher = createRandomVoucher();
     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
     if ($mysqli->num_rows > 0) {
         echo "Toegevoegd";
@@ -55,14 +54,13 @@ function InsertVoucher()
 }
 
 if (isset($_POST['VoucherSturen'])) {
-    $token = InsertVoucher($voucher);
     $email = $_POST["KlantMail"];
-
-
+    $voucher = createRandomVoucher();
+    InsertVoucher($voucher);
     if ($email) {
         $to = $email;
         $subject = "Voucher code";
-        $msg = "Uw voucher code is . $token ";
+        $msg = "Uw voucher code is . $voucher ";
         $msg = wordwrap($msg, 70);
         $headers = "From: Josh@qccs.nl";
         mail($to, $subject, $msg, $headers);
