@@ -33,7 +33,7 @@ include "partials/header.php";
                                     </div>
                                     <div class="user-profile-text">
                                         <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
-                                        <small>Devloper</small>
+                                        <small>Masseuse</small>
                                     </div>
                                     <!-- user profile body start -->
                                     <div class="card-content">
@@ -105,7 +105,7 @@ include "partials/header.php";
                                             <div class="card-content">
                                                 <div class="card-body">
                                                     <p>Voornaam & achternaam: </p>
-                                                    <input type="text" class="editMasseuse"> <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></input>
+                                                    <input type="text" class="editMasseuse " > <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></input>
                                                     <p>Telefoonnummer:</p>
                                                     <input type="text" class="editMasseuse" value="<a href=tel:<?= $masseuse["telefoon"]; ?>><?= $masseuse["telefoon"]; ?></a>"> </input>
                                                    <p>Email:</p>
