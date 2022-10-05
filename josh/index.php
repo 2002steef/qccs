@@ -88,8 +88,6 @@ include "backend/voucherFunctions.php";
 
 
                                                         <div class="col-md-6 col-12">
-                                                            <h6>Custom Select</h6>
-                                                            <p>Use <code>select.custom-select</code> for Custom select control.</p>
                                                             <fieldset class="form-group">
                                                                 <select class="custom-select" id="customSelect">
                                                                     <option selected>Open this menu</option>
