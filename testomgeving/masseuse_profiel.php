@@ -155,7 +155,7 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <p class="m-0">
-                                                            <input type="text" readonly value="<?= $masseuse["paragraafje"]; ?>">
+                                                            <textarea type="text" class="form-control-plaintext" readonly value="<?= $masseuse["paragraafje"]; ?>"> </textarea>
                                                         </p>
                                                     </div>
                                                 </div>
