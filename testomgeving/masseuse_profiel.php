@@ -191,15 +191,7 @@ include "partials/header.php";
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
         </div>
     </div>
-    <script>
-        function ClickEdit() {
-            document.getElementById("editMasseuse").readOnly = false;
-            document.getElementById("editMasseuseTel").readOnly = false;
-            document.getElementById("editMasseuseMail").readOnly = false;
-            document.getElementById("editMasseuseParagraafje").readOnly = false;
-        }
-    </script>
-    <script src="assets/js/scripts.js"></script>
+    <script  src="assets/js/scripts.js"></script>
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
