@@ -15,7 +15,8 @@ function createRandomVoucher(
     return implode('', $pieces);
 }
 
-function InsertVoucher(){
+function InsertVoucher()
+{
     $servername = "localhost";
     $username = "relatietest";
     $password = "Rb4x4y7*3";
@@ -25,7 +26,7 @@ function InsertVoucher(){
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $voucher = createRandomVoucher();
     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
-    if($mysqli->num_rows > 0){
+    if ($mysqli->num_rows > 0) {
         echo "Toegevoegd";
     }
 }
@@ -51,8 +52,10 @@ function GetMasseuseInfo()
     $stmt = $mysqli->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
-    while($result->fetch_array()){
-    return $result ;
+    while ($rowMs = $result->fetch_array()) { ?>
+        <option value="<?= $rowMs["voornaam"] ?>"><?= $rowMs["voornaam"] ?></option>
+        
+        <?php
     }
 }
 function GetUserInfo()
