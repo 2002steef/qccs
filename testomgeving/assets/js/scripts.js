@@ -44,7 +44,7 @@
         });
     });
     $(document).ready(function () {
-        document.getElementsByClassName("editMasseuse").readOnly = false;
+        document.getElementsByClassName("form-control-plaintext").readOnly = true;
     
     });
 })(window);
