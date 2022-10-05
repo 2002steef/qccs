@@ -43,7 +43,8 @@
             }
         });
     });
-    function editMasseuse() {
+    $(document).ready(function () {
         document.getElementsByClassName("editMasseuse").readOnly = false;
-      }
+    
+    });
 })(window);
