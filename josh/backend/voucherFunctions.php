@@ -13,22 +13,6 @@ function createRandomVoucher(
         $pieces[] = $keyspace[random_int(0, $max)];
     }
     return implode('', $pieces);
-
-    $servername = "localhost";
-    $username = "relatietest";
-    $password = "Rb4x4y7*3";
-    $db = "test_relatiebeheer";
-    $sql = "INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')";
-    $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    if ($mysqli->query($sql) === TRUE){
-        // header('location:index.php?tuuter');
-    }
-    // $voucher = createRandomVoucher();
-    // $stmt->bind_param("s", $voucher);
-    // $stmt->execute();
-    // if ($stmt->num_rows > 0) {
-        // echo "Code gemaakt en in database gezet";
-    // }
 }
 
 function InsertVoucher(){
@@ -36,9 +20,11 @@ function InsertVoucher(){
     $username = "relatietest";
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
+    $userID = $_POST['userID'];
+    $masseuseID = $_POST['masseuseID'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $voucher = createRandomVoucher();
-    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', '$voucher', '1')");
+    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
     if($mysqli->num_rows > 0){
         echo "Toegevoegd";
     }

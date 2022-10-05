@@ -85,6 +85,10 @@ include "backend/voucherFunctions.php" ;
                                                     <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Email Klant</label>
                                                         <input type="text" name="KlantMail" class="form-control">
+                                                        <label class="label_txt">masseuseID</label>
+                                                        <input type="text" name="masseuseID" class="form-control">
+                                                        <label class="label_txt">userID</label>
+                                                        <input type="text" name="userID" class="form-control">
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
