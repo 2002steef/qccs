@@ -31,9 +31,21 @@ function createRandomVoucher(
     // }
 }
 
+function InsertVoucher(){
+    $servername = "localhost";
+    $username = "relatietest";
+    $password = "Rb4x4y7*3";
+    $db = "test_relatiebeheer";
+    $mysqli = new mysqli("$servername", "$username", "$password", "$db");
+    $voucher = createRandomVoucher();
+    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', '$voucher', '1')");
+    if($mysqli->num_rows > 0){
+        echo "Toegevoegd";
+    }
+}
 
 if (isset($_POST['VoucherSturen'])) {
-    $token = createRandomVoucher();
+    $token = InsertVoucher($voucher);
     $email = $_POST["KlantMail"];
     if ($email) {
         $to = $email;
