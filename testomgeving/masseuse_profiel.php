@@ -106,11 +106,11 @@ include "partials/header.php";
                                                 <form action="" method="POST" class="form-control-plaintext">
                                                     <div class="card-body">
                                                         <p>Voornaam & achternaam: </p>
-                                                        <input type="text" class="editMasseuse" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <input type="text" class="editMasseuse form-control-plaintext" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <p>Telefoonnummer:</p>
-                                                        <input type="text" class="editMasseuse" readonly value="<a href=tel:<?= $masseuse["telefoon"]; ?>><?= $masseuse["telefoon"]; ?></a>"> </input>
+                                                        <input type="text" class="editMasseuse form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <p>Email:</p>
-                                                        <input type="text" class="editMasseuse" readonly value="<a href=mailto:<?= $masseuse["email"]; ?><?= $masseuse["email"]; ?></a>"> </input>
+                                                        <input type="text" class="editMasseuse form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
                                                     </div>
                                                 </form>
                                             </div>
