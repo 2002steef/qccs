@@ -1,5 +1,5 @@
 <?php
-include "backend/voucherFunctions.php" ;
+include "backend/voucherFunctions.php";
 ?>
 
 <!DOCTYPE html>
@@ -85,6 +85,23 @@ include "backend/voucherFunctions.php" ;
                                                     <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Email Klant</label>
                                                         <input type="text" name="KlantMail" class="form-control">
+
+
+                                                        <!-- <div class="col-md-6 col-12"> -->
+                                                            <fieldset class="form-group">
+                                                                <select class="custom-select" id="customSelect">
+                                                                    <option selected>Open this menu</option>
+                                                                    <option value="IT">IT</option>
+                                                                    <option value="Blade Runner">Blade Runner</option>
+                                                                    <option value="Thor Ragnarok">Thor Ragnarok</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        <!-- </div> -->
+
+
+
+                                                        <label class="label_txt">userID</label>
+                                                        <input type="text" name="userID" class="form-control">
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
