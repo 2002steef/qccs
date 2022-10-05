@@ -153,7 +153,7 @@ include "partials/header.php";
                                                     <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
                                                 <div class="card-content">
-                                                    <div class="card-body">
+                                                    <div class="card-body hidescroll">
                                                         <p class="m-0">
                                                             <textarea rows="6" type="text" class="form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
                                                         </p>

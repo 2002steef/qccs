@@ -17,5 +17,16 @@
     overflow: auto;
 }
 .txtarea{
+    overflow-y:scroll;
+    height:200px;
+    width:100%;
+    position:absolute;
+    right:-30px;
+}
+.hidescroll{
+    position:relative;
     overflow:hidden;
+    height:200px;
+    width:100%;
+    
 }
