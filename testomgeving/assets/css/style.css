@@ -18,15 +18,11 @@
 }
 .txtarea{
     overflow-y:scroll;
-    height:200px;
-    width:100%;
-    position:absolute;
-    right:-30px;
+}
+.form-control-plaintext{
+    overflow-y:scroll;
 }
 .hidescroll{
     position:relative;
     overflow:hidden;
-    height:200px;
-    width:100%;
-    
 }
