@@ -22,7 +22,7 @@ function GetMasseuseInfo()
     $stmt->execute();
     $result = $stmt->get_result();
     while ($rowMs = $result->fetch_array()) { ?>
-        <option value="<?= $rowMs["voornaam"] ?>"><?= $rowMs["voornaam"] ?></option>
+        <option value="<?= $rowMs["masseuseID"] ?>"><?= $rowMs["voornaam"] ?></option>
         <?php
     }
 }
@@ -34,7 +34,7 @@ function GetUserInfo()
     $stmt->execute();
     $result = $stmt->get_result();
     while ($rowMd = $result->fetch_array()) { ?>
-        <option value="<?= $rowMd["voornaam"] ?>"><?= $rowMd["voornaam"] ?></option>
+        <option value="<?= $rowMd["userID"] ?>"><?= $rowMd["voornaam"] ?></option>
         <?php
     }
 }
