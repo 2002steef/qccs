@@ -54,7 +54,6 @@ function GetMasseuseInfo()
     $result = $stmt->get_result();
     while ($rowMs = $result->fetch_array()) { ?>
         <option value="<?= $rowMs["voornaam"] ?>"><?= $rowMs["voornaam"] ?></option>
-        
         <?php
     }
 }
