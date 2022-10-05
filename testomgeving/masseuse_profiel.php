@@ -104,13 +104,13 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <form action="" method="POST" class="form-control-plaintext">
-                                                    <div class="card-body">
+                                                    <div class="card-body hidescroll">
                                                         <label for="editMasseuse">Voornaam & achternaam: </label>
-                                                        <input type="text" id="editMasseuse" class=" form-control-plaintext" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuse" class="txtarea form-control-plaintext" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <label for="">Telefoonnummer:</label>
-                                                        <input type="text" id="editMasseuseTel" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuseTel" class="txtarea form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <label for="">Email:</label>
-                                                        <input type="text" id="editMasseuseMail" class=" form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuseMail" class="txtarea form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
                                                     </div>
                                                 </form>
                                             </div>
