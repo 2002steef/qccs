@@ -40,7 +40,7 @@ include "partials/header.php";
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn btn-primary mr-3">Follow</button>
-                                                <button class="btn bg-light-primary">Edit</button>
+                                                <button class="btn bg-light-primary"  onclick="editMasseuse()" >Edit</button>
                                             </div>
                                         </div>
                                         <!-- user profile body ends -->
@@ -63,7 +63,7 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <ul class="list-unstyled mb-0">
+                                                <ul class="list-unstyled mb-0">
                                                         <li class="d-flex align-items-center">
                                                             <span>body to body massage</span>
                                                         </li>
@@ -104,9 +104,9 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <p> Voornaam & achternaam: <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></p>
-                                                    <p>Telefoonnummer: <a href="tel:<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a> </p>
-                                                    <p>Email: <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a></p>
+                                                    <input type="text" class="editMasseuse"> Voornaam & achternaam: <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></input>
+                                                    <input type="text" class="editMasseuse">Telefoonnummer: <a href="tel:<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a> </input>
+                                                    <input type="text" class="editMasseuse">Email: <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a></input>
                                                 </div>
                                             </div>
                                         </div>
