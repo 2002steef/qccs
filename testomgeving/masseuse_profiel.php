@@ -155,7 +155,7 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
                                                         <p class="m-0">
-                                                            <textarea rows="6" type="text" class="form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
+                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class="form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -196,6 +196,7 @@ include "partials/header.php";
             document.getElementById("editMasseuse").readOnly = false;
             document.getElementById("editMasseuseTel").readOnly = false;
             document.getElementById("editMasseuseMail").readOnly = false;
+            document.getElementById("editMasseuseParagraafje").readOnly = false;
         }
     </script>
     <script src="assets/js/scripts.js"></script>
