@@ -43,3 +43,22 @@ if (isset($_POST['VoucherSturen'])) {
         // header('location:index.php');
     }
 }
+
+function GetMasseuseInfo()
+{
+    global $mysqli;
+    $sql = "SELECT * FROM masseuses";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+}
+function GetUserInfo()
+{
+    global $mysqli;
+    $sql = "SELECT * FROM medewerkers where userID";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+}

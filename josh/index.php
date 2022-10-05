@@ -1,5 +1,7 @@
 <?php
 include "backend/voucherFunctions.php";
+$rowMs = GetmasseuseInfo();
+$rowMd = GetUserInfo();
 ?>
 
 <!DOCTYPE html>
@@ -91,9 +93,9 @@ include "backend/voucherFunctions.php";
                                                             <fieldset class="form-group">
                                                                 <select class="custom-select" id="customSelect">
                                                                     <option selected>MasseuseID</option>
-                                                                    <option value="IT">1</option>
-                                                                    <option value="Blade Runner">2</option>
-                                                                    <option value="Thor Ragnarok">3</option>
+                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMs ?></option>
+                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMs ?></option>
+                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMs ?></option>
                                                                 </select>
                                                             </fieldset>
                                                         <!-- </div> -->
