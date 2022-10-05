@@ -194,7 +194,7 @@ include "partials/header.php";
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/profileHeight.js"></script>
     <script> function ClickEdit(){
-         document.getElementById("editMasseuse").readOnly = false;
+         document.getElementById("editMasseuse").readOnly = true;
     }</script>
     <?php
     include "partials/footer.php";
