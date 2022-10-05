@@ -18,9 +18,10 @@ function createRandomVoucher(
     $username = "relatietest";
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
+    $sql = "INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')";
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    if ($result =$mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')")){
-        
+    if ($mysqli->query($sql) === TRUE){
+        header('location:index.php?tuuter');
     }
     $voucher = createRandomVoucher();
     // $stmt->bind_param("s", $voucher);
