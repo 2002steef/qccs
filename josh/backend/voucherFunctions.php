@@ -13,8 +13,6 @@ function createRandomVoucher(
         $pieces[] = $keyspace[random_int(0, $max)];
     }
     return implode('', $pieces);
-<<<<<<< HEAD
-=======
 
     $servername = "localhost";
     $username = "relatietest";
@@ -26,7 +24,6 @@ function createRandomVoucher(
         header('location:index.php?tuuter');
     }
     $voucher = createRandomVoucher();
->>>>>>> f846bdba7c96db512abed7002d4178b4d7c0443b
     // $stmt->bind_param("s", $voucher);
     // $stmt->execute();
     // if ($stmt->num_rows > 0) {
