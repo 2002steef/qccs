@@ -44,8 +44,8 @@ function InsertVoucher()
     $username = "relatietest";
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
-    $userID = $_POST['userID'];
-    $masseuseID = $_POST['masseuseID'];
+    $userID = $_GET['userID'];
+    $masseuseID = $_GET['masseuseID'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $voucher = createRandomVoucher();
     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
