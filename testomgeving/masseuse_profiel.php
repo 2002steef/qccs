@@ -166,7 +166,7 @@ include "partials/header.php";
                                                     <div id="maps-leaflet-basic" class="maps-leaflet-container">
                                                     <div class="mapouter">    
                                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79350.60592332779!2d4.9686496953033705!3d51.57361500652063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6be1d126870f3%3A0xaa2d2182f3b09727!2sTilburg!5e0!3m2!1snl!2snl!4v1664958888148!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                                <style>.gmap_canvas {margin-bottom: 10px;text-align:center;overflow:auto;background:none!important;height: 475px;width: 800px;}</style>
+                                                                <style>.gmap_canvas {margin:auto;overflow:auto;background:none!important;height: 475px;width: 800px;}</style>
                                                             </div>
                                                     </div>
                                                 </div>
