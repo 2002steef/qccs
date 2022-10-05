@@ -90,7 +90,7 @@ include "backend/voucherFunctions.php";
                                                         <!-- <div class="col-md-6 col-12"> -->
                                                             <fieldset class="form-group">
                                                                 <label for="customSelectMs">Masseuse</label>
-                                                                <select class="custom-select" id="customSelectMs">
+                                                                <select name="masseuse" class="custom-select" id="customSelectMs">
                                                                     <option selected hidden>Kies een masseuse...</option>
                                                                    <?php GetMasseuseInfo() ;?>
                                                                 </select>
@@ -101,7 +101,7 @@ include "backend/voucherFunctions.php";
 
                                                         <label class="label_txt" for="customSelectMd">Medewerker</label>
                                                         <fieldset class="form-group">
-                                                                <select class="custom-select" id="customSelectMd">
+                                                                <select name="medewerker" class="custom-select" id="customSelectMd">
                                                                 <option selected hidden>Kies een medewerker...</option>
                                                                    <?php GetUserInfo() ;?>
                                                                 </select>
