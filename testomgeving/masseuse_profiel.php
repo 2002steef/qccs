@@ -40,7 +40,7 @@ include "partials/header.php";
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn btn-primary mr-3">Follow</button>
-                                                <button class="btn bg-light-primary" onclick="editMasseuse()">Edit</button>
+                                                <button class="btn bg-light-primary" onclick="ClickEdit()">Edit</button>
                                             </div>
                                         </div>
                                         <!-- user profile body ends -->
@@ -193,6 +193,9 @@ include "partials/header.php";
     </div>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/profileHeight.js"></script>
+    <script> function ClickEdit(){
+         document.getElementsByClassName("editMasseuse").readOnly = false;
+    }</script>
     <?php
     include "partials/footer.php";
     ?>

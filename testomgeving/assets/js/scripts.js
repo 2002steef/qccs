@@ -43,8 +43,4 @@
             }
         });
     });
-    $(document).ready(function () {
-        document.getElementsByClassName("form-control-plaintext").readOnly = true;
-    
-    });
 })(window);
