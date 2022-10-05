@@ -29,7 +29,7 @@ include "partials/header.php";
                                         <!-- user timeline image -->
                                         <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
-                                        <img src="img/uploads/<?=$masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
+                                        <img src="img/uploads/<?= $masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
                                         <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
@@ -40,7 +40,7 @@ include "partials/header.php";
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn btn-primary mr-3">Follow</button>
-                                                <button class="btn bg-light-primary"  onclick="editMasseuse()" >Edit</button>
+                                                <button class="btn bg-light-primary" onclick="editMasseuse()">Edit</button>
                                             </div>
                                         </div>
                                         <!-- user profile body ends -->
@@ -63,7 +63,7 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                <ul class="list-unstyled mb-0">
+                                                    <ul class="list-unstyled mb-0">
                                                         <li class="d-flex align-items-center">
                                                             <span>body to body massage</span>
                                                         </li>
@@ -103,14 +103,16 @@ include "partials/header.php";
                                                 <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                             </div>
                                             <div class="card-content">
-                                                <div class="card-body">
-                                                    <p>Voornaam & achternaam: </p>
-                                                    <input type="text" class="editMasseuse " > <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></input>
-                                                    <p>Telefoonnummer:</p>
-                                                    <input type="text" class="editMasseuse" value="<a href=tel:<?= $masseuse["telefoon"]; ?>><?= $masseuse["telefoon"]; ?></a>"> </input>
-                                                   <p>Email:</p>
-                                                    <input type="text" class="editMasseuse" value="<a href=mailto:<?= $masseuse["email"]; ?><?= $masseuse["email"]; ?></a>"> </input>
-                                                </div>
+                                                <form action="" method="POST" class="form-control-plaintext">
+                                                    <div class="card-body">
+                                                        <p>Voornaam & achternaam: </p>
+                                                        <input type="text" class="editMasseuse" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <p>Telefoonnummer:</p>
+                                                        <input type="text" class="editMasseuse" readonly value="<a href=tel:<?= $masseuse["telefoon"]; ?>><?= $masseuse["telefoon"]; ?></a>"> </input>
+                                                        <p>Email:</p>
+                                                        <input type="text" class="editMasseuse" readonly value="<a href=mailto:<?= $masseuse["email"]; ?><?= $masseuse["email"]; ?></a>"> </input>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -152,7 +154,7 @@ include "partials/header.php";
                                             <div class="card-content">
                                                 <div class="card-body">
                                                     <p class="m-0">
-                                                    <?= $masseuse["paragraafje"]; ?>
+                                                        <?= $masseuse["paragraafje"]; ?>
                                                     </p>
                                                 </div>
                                             </div>
@@ -167,20 +169,20 @@ include "partials/header.php";
                                                 <div class="card-body">
                                                     <h5 class="card-title mb-2">Locatie</h5>
                                                     <div id="maps-leaflet-basic" class="maps-leaflet-container">
-                                                    <div class="mapouter">    
-                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79350.60592332779!2d4.9686496953033705!3d51.57361500652063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6be1d126870f3%3A0xaa2d2182f3b09727!2sTilburg!5e0!3m2!1snl!2snl!4v1664958888148!5m2!1snl!2snl" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        <div class="mapouter">
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79350.60592332779!2d4.9686496953033705!3d51.57361500652063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6be1d126870f3%3A0xaa2d2182f3b09727!2sTilburg!5e0!3m2!1snl!2snl!4v1664958888148!5m2!1snl!2snl" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- Basic map end -->
                                     </div>
-                                    <!-- Basic map end -->
                                 </div>
-                            </div>
-                            <!-- 2nd column ends -->
+                                <!-- 2nd column ends -->
 
-                        </div>
-                        <!-- Profile posts and info ends -->
+                            </div>
+                            <!-- Profile posts and info ends -->
                     </section>
                 </div>
             </div>
