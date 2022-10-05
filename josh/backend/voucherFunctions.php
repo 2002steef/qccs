@@ -51,7 +51,7 @@ function GetMasseuseInfo()
     $stmt = $mysqli->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
-    return $result->fetch_array();
+    return $result->fetch_assoc();
 }
 function GetUserInfo()
 {
