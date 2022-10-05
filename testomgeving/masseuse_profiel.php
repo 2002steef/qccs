@@ -105,12 +105,12 @@ include "partials/header.php";
                                             <div class="card-content">
                                                 <form action="" method="POST" class="form-control-plaintext">
                                                     <div class="card-body">
-                                                        <p>Voornaam & achternaam: </p>
-                                                        <input type="text" id="editMasseuse" class="editMasseuse form-control-plaintext" readonly  value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
-                                                        <p>Telefoonnummer:</p>
-                                                        <input type="text" class="editMasseuse form-control-plaintext"  value="<?= $masseuse["telefoon"]; ?>"> </input>
-                                                        <p>Email:</p>
-                                                        <input type="text" class="editMasseuse form-control-plaintext"  value="<?= $masseuse["email"]; ?>"> </input>
+                                                        <label for="editMasseuse">Voornaam & achternaam: </label>
+                                                        <input type="text" id="editMasseuse" class=" form-control-plaintext" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <label for="">Telefoonnummer:</label>
+                                                        <input type="text" id="editMasseuseTel" class=" form-control-plaintext" value="<?= $masseuse["telefoon"]; ?>"> </input>
+                                                        <label for="">Email:</label>
+                                                        <input type="text" id="editMasseuseMail" class=" form-control-plaintext" value="<?= $masseuse["email"]; ?>"> </input>
                                                     </div>
                                                 </form>
                                             </div>
@@ -193,9 +193,13 @@ include "partials/header.php";
     </div>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/profileHeight.js"></script>
-    <script> function ClickEdit(){
-         document.getElementById("editMasseuse").readOnly = false;
-    }</script>
+    <script>
+        function ClickEdit() {
+            document.getElementById("editMasseuse").readOnly = false;
+            document.getElementById("editMasseuseTel").readOnly = false;
+            document.getElementById("editMasseuseMail").readOnly = false;
+        }
+    </script>
     <?php
     include "partials/footer.php";
     ?>
