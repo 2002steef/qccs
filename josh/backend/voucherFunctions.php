@@ -45,7 +45,7 @@ function InsertVoucher(){
 }
 
 if (isset($_POST['VoucherSturen'])) {
-    $token = InsertVOucher($voucher);
+    $token = InsertVoucher($voucher);
     $email = $_POST["KlantMail"];
     if ($email) {
         $to = $email;
