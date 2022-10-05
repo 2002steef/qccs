@@ -91,7 +91,7 @@ $rowMd = GetUserInfo();
                                                         <!-- <div class="col-md-6 col-12"> -->
                                                             <fieldset class="form-group">
                                                                 <select class="custom-select" id="customSelect">
-                                                                    <option selected>MasseuseID</option>
+                                                                    <option selected>Masseuse</option>
                                                                    <?php GetMasseuseInfo() ;?>
                                                                 </select>
                                                             </fieldset>
