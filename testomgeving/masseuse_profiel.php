@@ -29,7 +29,7 @@ include "partials/header.php";
                                         <!-- user timeline image -->
                                         <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
-                                        <img src="img/uploads/<?=$masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
+                                        <img src="img/uploads/<?= $masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
                                     <div class="user-profile-text">
                                         <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
@@ -40,7 +40,7 @@ include "partials/header.php";
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn btn-primary mr-3">Follow</button>
-                                                <button class="btn bg-light-primary">Edit</button>
+                                                <button class="btn bg-light-primary" onclick="editMasseuse()">Edit</button>
                                             </div>
                                         </div>
                                         <!-- user profile body ends -->
@@ -104,9 +104,12 @@ include "partials/header.php";
                                             </div>
                                             <div class="card-content">
                                                 <div class="card-body">
-                                                    <p> Voornaam & achternaam: <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?></p>
-                                                    <p>Telefoonnummer: <a href="tel:<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a> </p>
-                                                    <p>Email: <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a></p>
+                                                    <p>Voornaam & achternaam:</p>
+                                                    <textarea type="text" class="editMasseuse" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>">  </textarea>
+                                                    <p>Telefoonnummer:</p>
+                                                    <textarea type="text" class="editMasseuse" readonly value="<a href= tel:<?= $masseuse["telefoon"]; ?>"> <?= $masseuse["telefoon"]; ?></a> </textarea>
+                                                   <p>Email:</p>
+                                                   <textarea type="text" class="editMasseuse" readonly value="<a href=mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a></textarea>
                                                 </div>
                                             </div>
                                         </div>
