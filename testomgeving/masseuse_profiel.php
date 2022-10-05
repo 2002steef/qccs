@@ -96,8 +96,8 @@ include "partials/header.php";
                                     <!-- Info ends -->
 
                                     <!-- contact starts -->
-                                    <div class="col-12 scrolltext">
-                                        <div class="card" id="contactProfile">
+                                    <div class="col-12">
+                                        <div class="card" id="contactProfile scrolltext">
                                             <div class="card-header d-flex justify-content-between align-items-center">
                                                 <h4 class="card-title m-0">Contact</h4>
                                                 <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
