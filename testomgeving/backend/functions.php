@@ -551,16 +551,16 @@ function masseuseInfo()
 function bedrijfsInfo()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `bedrijven`";
-    $stmt = $mysqli->prepare($DataMasseuse);
+    $DataBedrijf = "SELECT * FROM `bedrijven`";
+    $stmt = $mysqli->prepare($DataBedrijf);
     $stmt->execute();
-    $resultMasseuse = $stmt->get_result();
-    while ($masseuse = $resultMasseuse->fetch_array()) { ?>
+    $resultBedrijf = $stmt->get_result();
+    while ($bedrijf = $resultBedrijf->fetch_array()) { ?>
         <tr>
-            <td><?= $masseuse["profielFoto"] ?></td>
-            <td><?= $masseuse["userName"] ?></td>
-            <td><?= $masseuse["postcode"] ?> <?= $masseuse["huisNummer"] ?> <?= $masseuse["straat"] ?> <?= $masseuse["plaats"] ?></td>
-            <td><?= $masseuse["voucherAantal"] ?></td>
+            <td><img src="img/uploads/<?= $bedrijf["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
+            <td><?= $bedrijf["userName"] ?></td>
+            <td><?= $bedrijf["postcode"] ?> <?= $bedrijf["huisNummer"] ?> <?= $bedrijf["straat"] ?> <?= $bedrijf["plaats"] ?></td>
+            <td><?= $bedrijf["voucherAantal"] ?></td>
         </tr>
     <?php }
 }
