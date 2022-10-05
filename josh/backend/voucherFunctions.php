@@ -50,9 +50,9 @@ function GetMasseuseInfo()
     $sql = "SELECT * FROM masseuses";
     $stmt = $mysqli->prepare($sql);
     $stmt->execute();
-    
-    while($result = $stmt->get_result()){
-    return $result->fetch_array();
+    $result = $stmt->get_result();
+    while($result->fetch_array()){
+    return $result ;
     }
 }
 function GetUserInfo()
