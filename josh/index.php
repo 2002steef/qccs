@@ -93,9 +93,9 @@ $rowMd = GetUserInfo();
                                                             <fieldset class="form-group">
                                                                 <select class="custom-select" id="customSelect">
                                                                     <option selected>MasseuseID</option>
-                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMs ?></option>
-                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMs ?></option>
-                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMs ?></option>
+                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMss["voornaam"] ?></option>
+                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMss["masseuseID"] ?></option>
+                                                                    <option value="<?=$rowMs["voornaam"] ?>"><?= $rowMss["achternaam"] ?></option>
                                                                 </select>
                                                             </fieldset>
                                                         <!-- </div> -->
