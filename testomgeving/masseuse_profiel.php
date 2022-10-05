@@ -102,9 +102,9 @@ include "partials/header.php";
                                                 <h4 class="card-title m-0">Contact</h4>
                                                 <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                             </div>
-                                            <div class="card-content scrolltext">
+                                            <div class="card-content hidescroll">
                                                 <form action="" method="POST" class="form-control-plaintext ">
-                                                    <div class="card-body hidescroll">
+                                                    <div class="card-body scrolltext">
                                                         <label for="editMasseuse">Voornaam & achternaam: </label>
                                                         <input type="text" id="editMasseuse" class=" form-control-plaintext" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <label for="">Telefoonnummer:</label>
