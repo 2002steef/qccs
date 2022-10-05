@@ -164,7 +164,13 @@ include "partials/header.php";
                                                 <div class="card-body">
                                                     <h5 class="card-title mb-2">Basic Map</h5>
                                                     <div id="maps-leaflet-basic" class="maps-leaflet-container">
-                                                    <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br><style>.mapouter{position:relative;text-align:right;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
+                                                    <div class="mapouter">
+                                                        <div class="gmap_canvas">
+                                                            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                                                <a href="https://2piratebay.org">pirate bay</a><br><style>.mapouter{position:relative;text-align:right;height: 500px;width: 600px;}</style><a href="https://www.embedgooglemap.net"></a>
+                                                                <style>.gmap_canvas {overflow:hidden;background:none!important;height: 500px;width: 600px;}</style>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
