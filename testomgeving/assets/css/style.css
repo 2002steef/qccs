@@ -21,8 +21,8 @@
     height:200px;
     width:100%;
     position:absolute;
-    right:-10px;
-    padding-right: 10px;
+    right:-20px;
+    padding-right: 20px;
 }
 .form-control-plaintext{
     overflow-y:scroll;
