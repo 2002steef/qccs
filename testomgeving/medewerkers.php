@@ -82,7 +82,7 @@ if (!isset($_SESSION["loggedin"])) {
                                         <div class="tab-pane fade mt-2 show active light-gray" id="Particulier" role="tabpanel" aria-labelledby="account-tab">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <div class="table-responsive col-10">
+                                                    <div class="table-responsive col-12">
                                                         <table  class="table thead-dark table-bordered file-export">
                                                             <thead>
                                                                 <tr>
