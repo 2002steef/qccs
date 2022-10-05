@@ -87,7 +87,7 @@ include "backend/voucherFunctions.php";
                                                         <input type="text" name="KlantMail" class="form-control">
 
 
-                                                        <div class="col-md-6 col-12">
+                                                        <!-- <div class="col-md-6 col-12"> -->
                                                             <fieldset class="form-group">
                                                                 <select class="custom-select" id="customSelect">
                                                                     <option selected>Open this menu</option>
@@ -96,7 +96,7 @@ include "backend/voucherFunctions.php";
                                                                     <option value="Thor Ragnarok">Thor Ragnarok</option>
                                                                 </select>
                                                             </fieldset>
-                                                        </div>
+                                                        <!-- </div> -->
 
 
 
