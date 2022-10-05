@@ -106,7 +106,7 @@ include "partials/header.php";
                                                 <form action="" method="POST" class="form-control-plaintext">
                                                     <div class="card-body">
                                                         <p>Voornaam & achternaam: </p>
-                                                        <input type="text" class="editMasseuse form-control-plaintext"  value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuse" class="editMasseuse form-control-plaintext"  value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <p>Telefoonnummer:</p>
                                                         <input type="text" class="editMasseuse form-control-plaintext"  value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <p>Email:</p>
@@ -194,7 +194,7 @@ include "partials/header.php";
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/profileHeight.js"></script>
     <script> function ClickEdit(){
-         document.getElementsByClassName("editMasseuse").readOnly = false;
+         document.getElementById("editMasseuse").readOnly = false;
     }</script>
     <?php
     include "partials/footer.php";
