@@ -167,8 +167,8 @@ include "backend/functions.php";
                                                             <table class="table table-striped table-bordered file-export">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th colspan="1">Masseuse</th>
-                                                                        <th colspan="1">Volledige Naam</th>
+                                                                        <th >Masseuse</th>
+                                                                        <th >Volledige Naam</th>
                                                                         <th> Info</th>
                                                                         <th>website</th>
                                                                     </tr>
