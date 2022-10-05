@@ -44,8 +44,8 @@ function InsertVoucher()
     $username = "relatietest";
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
-    $userID = $_GET['userID'];
-    $masseuseID = $_GET['masseuseID'];
+    $userID = $_POST['medewerker'];
+    $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $voucher = createRandomVoucher();
     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
@@ -57,6 +57,8 @@ function InsertVoucher()
 if (isset($_POST['VoucherSturen'])) {
     $token = InsertVoucher($voucher);
     $email = $_POST["KlantMail"];
+
+
     if ($email) {
         $to = $email;
         $subject = "Voucher code";
