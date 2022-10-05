@@ -13,6 +13,20 @@ function createRandomVoucher(
         $pieces[] = $keyspace[random_int(0, $max)];
     }
     return implode('', $pieces);
+<<<<<<< HEAD
+=======
+
+    $servername = "localhost";
+    $username = "relatietest";
+    $password = "Rb4x4y7*3";
+    $db = "test_relatiebeheer";
+    $sql = "INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('1', '1', 'testvoucher', '1')";
+    $mysqli = new mysqli("$servername", "$username", "$password", "$db");
+    if ($mysqli->query($sql) === TRUE){
+        header('location:index.php?tuuter');
+    }
+    $voucher = createRandomVoucher();
+>>>>>>> f846bdba7c96db512abed7002d4178b4d7c0443b
     // $stmt->bind_param("s", $voucher);
     // $stmt->execute();
     // if ($stmt->num_rows > 0) {
