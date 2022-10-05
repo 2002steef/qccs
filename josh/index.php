@@ -1,6 +1,5 @@
 <?php
 include "backend/voucherFunctions.php";
-$rowMd = GetUserInfo();
 ?>
 
 <!DOCTYPE html>
@@ -90,8 +89,9 @@ $rowMd = GetUserInfo();
 
                                                         <!-- <div class="col-md-6 col-12"> -->
                                                             <fieldset class="form-group">
-                                                                <select class="custom-select" id="customSelect">
-                                                                    <option selected>Masseuse</option>
+                                                                <label for="customSelectMs">Masseuse</label>
+                                                                <select class="custom-select" id="customSelectMs">
+                                                                    <option selected hidden>Kies een masseuse...</option>
                                                                    <?php GetMasseuseInfo() ;?>
                                                                 </select>
                                                             </fieldset>
@@ -99,8 +99,14 @@ $rowMd = GetUserInfo();
 
 
 
-                                                        <label class="label_txt">userID</label>
+                                                        <label class="label_txt" for="customSelectMd">Medewerker</label>
                                                         <input type="text" name="userID" class="form-control">
+                                                        <fieldset class="form-group">
+                                                                <select class="custom-select" id="customSelectMd">
+                                                                <option selected hidden>Kies een medewerker...</option>
+                                                                   <?php GetUserInfo() ;?>
+                                                                </select>
+                                                            </fieldset>
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
