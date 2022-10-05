@@ -100,7 +100,6 @@ include "backend/voucherFunctions.php";
 
 
                                                         <label class="label_txt" for="customSelectMd">Medewerker</label>
-                                                        <input type="text" name="userID" class="form-control">
                                                         <fieldset class="form-group">
                                                                 <select class="custom-select" id="customSelectMd">
                                                                 <option selected hidden>Kies een medewerker...</option>
