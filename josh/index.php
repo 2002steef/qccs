@@ -90,10 +90,10 @@ include "backend/voucherFunctions.php";
                                                         <!-- <div class="col-md-6 col-12"> -->
                                                             <fieldset class="form-group">
                                                                 <select class="custom-select" id="customSelect">
-                                                                    <option selected>Open this menu</option>
-                                                                    <option value="IT">IT</option>
-                                                                    <option value="Blade Runner">Blade Runner</option>
-                                                                    <option value="Thor Ragnarok">Thor Ragnarok</option>
+                                                                    <option selected>MasseuseID</option>
+                                                                    <option value="IT">1</option>
+                                                                    <option value="Blade Runner">2</option>
+                                                                    <option value="Thor Ragnarok">3</option>
                                                                 </select>
                                                             </fieldset>
                                                         <!-- </div> -->
