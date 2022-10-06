@@ -140,7 +140,7 @@ include "partials/header.php";
                                                                 <input class="form-control-plaintext " readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
                                                             </div>
                                                             <div class="col">
-                                                                <input class="form-control-plaintext  readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
+                                                                <input class="form-control-plaintext  readonly" type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
                                                             </div>
                                                             <div>
                                                                 </p>
@@ -154,9 +154,8 @@ include "partials/header.php";
                                         </div>
                                         <!-- 1st column ends -->
                                         <!-- 2nd column starts -->
-                                        <div class="col-lg-8 col-12">
-                                            <div class="row">
-
+                                        <div class="row">
+                                            <div class="col-lg-8 col-12">
                                                 <!-- About company starts -->
                                                 <div class="col-12">
 
