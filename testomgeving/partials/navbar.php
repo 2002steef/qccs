@@ -38,7 +38,13 @@ $rowMw = Getuser();
                             <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="javascript:;" data-language="en"><img class="langimg mr-2" src="../assets/img/flags/us.png" alt="flag"><span class="font-small-3 light-gray">English</span></a><a class="dropdown-item" href="javascript:;" data-language="es"><img class="langimg mr-2" src="../assets/img/flags/nl.png" alt="flag"><span class="font-small-3 light-gray">Nederlands</span></a><a class="dropdown-item" href="javascript:;" data-language="pt"><img class="langimg mr-2" src="../assets/img/flags/pt.png" alt="flag"><span class="font-small-3 light-gray">Portuguese</span></a><a class="dropdown-item" href="javascript:;" data-language="de"><img class="langimg mr-2" src="../assets/img/flags/de.png" alt="flag"><span class="font-small-3 light-gray">German</span></a></div>
                         </li>
                         <li class="dropdown nav-item mr-1"><a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
-                                <div class="user d-md-flex d-none mr-2"><span class="text-right light-gray"></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
+                                <div class="user d-md-flex d-none mr-2"><span class="text-right light-gray"><?php if (isset($_SESSION["status"]) && $_SESSION["status"] =="bedrijf") {
+                                                                                                                echo $rowBd["voornaam"];
+                                                                                                            }elseif(isset($_SESSION["status"]) && $_SESSION["status"] =="masseuse"){
+                                                                                                                echo $rowMs["voornaam"];
+                                                                                                            }elseif(isset($_SESSION["status"]) && $_SESSION["status"] =="medewerker"){
+                                                                                                                echo $rowMd["voornaam"];
+                                                                                                            } ?></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
                                 <?php if ($_SESSION["status"] == "bedrijf") { ?>
                                     <img class="avatar" src="img/uploads/<?= $rowBd["profielFoto"] ?>" alt="avatar" height="35" width="35">
                                 <?php } elseif ($_SESSION["status"] == "masseuse") { ?>
