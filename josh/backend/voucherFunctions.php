@@ -62,7 +62,7 @@ if (isset($_POST['VoucherSturen'])) {
         $subject = "Voucher code";
         $msg = "Uw voucher code is . $voucher ";
         $msg = wordwrap($msg, 70);
-        $headers = "From: Josh@qccs.nl";
+        $headers = "From: Admin@bma.nl";
         mail($to, $subject, $msg, $headers);
         // header('location:index.php');
     }
