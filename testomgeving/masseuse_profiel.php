@@ -132,20 +132,9 @@ include "partials/header.php";
                                                             <label for="plaats">Plaats : </label>
                                                             <input class="form-control-plaintext col-3" type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
                                                             <label for="straat">Straat & huisnummer</label>
-                                                        <div class="">
-                                                            <div class="">
-                                                                <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext"></input>
-                                                            </div>
-                                                            <div class="">
-                                                                <input class="form-control-plaintext " readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
-                                                            </div>
-                                                            <div class="">
-                                                                <input class="form-control-plaintext  readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
-                                                            </div>
-                                                            <div>
-                                                                </p>
-                                                            </div>
-                                                        </div>
+                                                            <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext"></input>
+                                                            <input class="form-control-plaintext " readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
+                                                            <input class="form-control-plaintext  readonly" type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
                                                     </div>
                                                 </div>
                                                 <!-- adress ends -->
@@ -156,7 +145,6 @@ include "partials/header.php";
                                         <!-- 2nd column starts -->
                                         <div class="col-lg-8 col-12">
                                             <div class="row">
-
                                                 <!-- About company starts -->
                                                 <div class="col-12">
 
