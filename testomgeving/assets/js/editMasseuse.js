@@ -31,4 +31,5 @@ function ButtonShower(){
     document.getElementById("editMasseusePlaats").readOnly = true;
     document.getElementById("editMasseuseHN").readOnly = true;
     document.getElementById("editMasseuseHNT").readOnly = true;
+    document.getElementById("btnSaveMasseuse").submit();
 }
