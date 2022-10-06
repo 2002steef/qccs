@@ -22,33 +22,34 @@ include "partials/header.php";
                 <div class="content-overlay"></div>
                 <div class="content-wrapper">
                     <section class="page-user-profile">
-                        <form action="" id="editMasseuseForm" class="form-control-plaintext">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="user-profile-images">
-                                            <!-- user timeline image -->
-                                            <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
-                                            <!-- user profile image -->
-                                            <img src="img/uploads/<?= $masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
-                                        </div>
-                                        <div class="user-profile-text">
-                                            <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
-                                            <small><?= $masseuse["plaats"]; ?></small>
-                                        </div>
-                                        <!-- user profile body start -->
-                                        <div class="card-content">
-                                            <div class="card-body">
-                                                <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
-                                                    <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();ButtonShower()">Edit</button>
-                                                    <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
-                                                </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="user-profile-images">
+                                        <!-- user timeline image -->
+                                        <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
+                                        <!-- user profile image -->
+                                        <img src="img/uploads/<?= $masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
+                                    </div>
+                                    <div class="user-profile-text">
+                                        <h4 class="profile-text-color mb-0"><?= $masseuse["voornaam"]; ?></h4>
+                                        <small><?= $masseuse["plaats"]; ?></small>
+                                    </div>
+                                    <!-- user profile body start -->
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
+                                                <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();ButtonShower()">Edit</button>
+                                                <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
                                             </div>
-                                            <!-- user profile body ends -->
                                         </div>
+                                        <!-- user profile body ends -->
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <form action="" id="editMasseuseForm" class="form-control-plaintext">
+
                             <!-- Profile posts and info starts -->
                             <div class="row profile-info-posts">
                                 <!-- 1st column starts -->
