@@ -175,7 +175,7 @@ include "partials/header.php";
                                                     <div class="card-body">
                                                         <h5 class="card-title mb-2">Locatie</h5>
                                                         <div class="mapouter">
-                                                        <iframe src="<?= $$masseuse["maps"]?>" width="750" height="425" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                                        </div>
+                                                        <iframe src="<?= $masseuse["maps"]?>" width="750" height="425" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
