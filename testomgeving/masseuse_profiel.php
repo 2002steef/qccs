@@ -39,7 +39,6 @@ include "partials/header.php";
                                     <div class="card-content">
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
-                                                <button class="btn btn-primary mr-3">Follow</button>
                                                 <button class="btn bg-light-primary" onclick="ClickEdit()">Edit</button>
                                             </div>
                                         </div>
