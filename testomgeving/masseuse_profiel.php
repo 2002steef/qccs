@@ -126,17 +126,16 @@ include "partials/header.php";
                                                 <div class="card-content  hidescroll">
                                                     <div class="card-body scrolltext ">
                                                         <div class="m-0 ">
-                                                            
-                                                                <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                                <label for="postcode">Postcode:</label>
-                                                                <input name="postcode" readonly value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
-                                                                <label for="plaats">Plaats : </label>
-                                                                <input class="form-control-plaintext " type="text" readonly value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
-                                                                <label for="straat">Straat & huisnummer</label>
-                                                                <div class="row">
-                                                                <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext "></input>
-                                                                <input class="form-control-plaintext " readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
-                                                                <input class="form-control-plaintext " readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
+                                                            <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
+                                                            <label for="postcode">Postcode:</label>
+                                                            <input name="postcode" readonly value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
+                                                            <label for="plaats">Plaats : </label>
+                                                            <input class="form-control-plaintext " type="text" readonly value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
+                                                            <label for="straat">Straat & huisnummer</label>
+                                                            <div class="form-row">
+                                                                <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext col-md-6 col-12 "></input>
+                                                                <input class="form-control-plaintext col-md-3 col-12" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
+                                                                <input class="form-control-plaintext col-md-3 col-12" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -144,7 +143,6 @@ include "partials/header.php";
                                             </div>
                                         </div>
                                         <!-- adress ends -->
-
                                     </div>
                                 </div>
                                 <!-- 1st column ends -->
