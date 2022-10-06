@@ -104,11 +104,11 @@ include "partials/header.php";
                                                 <div class="card-content hidescroll">
                                                     <div class="card-body scrolltext">
                                                         <label for="editMasseuse">Voornaam & achternaam: </label>
-                                                        <input type="text" id="editMasseuse"readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuse" class=" form-control-plaintext " readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <label for="">Telefoonnummer:</label>
-                                                        <input type="text" id="editMasseuseTel"  readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuseTel" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <label for="">Email:</label>
-                                                        <input type="text" id="editMasseuseMail"  readonly value="<?= $masseuse["email"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuseMail" class=" form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
                                                     </div>
                                                 </div>
                                             </div>
@@ -152,7 +152,7 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
                                                         <p class="m-0">
-                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class="  txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
+                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
                                                         </p>
                                                     </div>
                                                 </div>
