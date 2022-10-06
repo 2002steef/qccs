@@ -123,9 +123,9 @@ include "partials/header.php";
                                                     <h4 class="card-title m-0">Adress</h4>
                                                     <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
-                                                <div class="card-content hidescroll ">
+                                                <div class="card-content  ">
                                                     <div class="card-body ">
-                                                        <div class="m-0 ">
+                                                        <div class="m-0  hidescroll">
                                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                             <label for="postcode">Postcode:</label>
                                                             <input name="postcode" value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
