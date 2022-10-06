@@ -38,12 +38,14 @@ include "partials/header.php";
                                     <!-- user profile body start -->
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <?php if(isset($_SESSION["status"]) && $_SESSION["status"]== "masseuse" ){?>
+
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
-                                                <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();">Edit</button>
-                                                <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
+                                                <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
+                                                    <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();">Edit</button>
+                                                    <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
+                                                <?php } ?>
                                             </div>
-                                           <?php } ?>
+
 
                                         </div>
                                         <!-- user profile body ends -->
@@ -131,12 +133,12 @@ include "partials/header.php";
                                                         <div class="m-0 ">
                                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                             <label for="postcode">Postcode:</label>
-                                                            <input class="form-control-plaintext" readonly type="text" name="postcode"  value="<?= $masseuse["postcode"]; ?>" id="editMasseusePostcode" > </input>
+                                                            <input class="form-control-plaintext" readonly type="text" name="postcode" value="<?= $masseuse["postcode"]; ?>" id="editMasseusePostcode"> </input>
                                                             <label for="plaats">Plaats : </label>
                                                             <input class="form-control-plaintext" readonly type="text" name="plaats" value="<?= $masseuse["plaats"]; ?>" id="editMasseusePlaats"></input>
                                                             <label for="straat">Straat & huisnummer</label>
                                                             <div class="form-row">
-                                                                <input class="form-control-plaintext col-md-6 col-12" readonly type="text" name="straat"  value="<?= $masseuse["straat"]; ?>" id="editMasseuseStraat"></input>
+                                                                <input class="form-control-plaintext col-md-6 col-12" readonly type="text" name="straat" value="<?= $masseuse["straat"]; ?>" id="editMasseuseStraat"></input>
                                                                 <input class="form-control-plaintext col-md-3 col-12" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>" id="editMasseuseHN"></input>
                                                                 <input class="form-control-plaintext col-md-3 col-12" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>" id="editMasseuseHNT"></input>
                                                             </div>
@@ -178,7 +180,8 @@ include "partials/header.php";
                                                     <div class="card-body">
                                                         <h5 class="card-title mb-2">Locatie</h5>
                                                         <div class="mapouter">
-                                                        <iframe src="<?= $masseuse["maps"]?>" width="750" height="425" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                                        </div>
+                                                            <iframe src="<?= $masseuse["maps"] ?>" width="750" height="425" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
