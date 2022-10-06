@@ -476,7 +476,7 @@ function UpdateMasseuse()
     }
 }
 
-UpdateCustomerI();
+UpdateMasseuse();
 
 function GetCustomerZ()
 {
