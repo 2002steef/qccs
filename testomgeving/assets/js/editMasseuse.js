@@ -13,8 +13,6 @@ function ButtonShower(){
       x.style.display = "none";
     }
 }
-$(document).ready(function(){
-    $("#btnSaveMasseuse").click(function(){        
-        $(".MasseuseForm").submit(); // Submit the form
-    });
-});
+function btnSaveMasseuse(){
+    document.getElementById("btnSaveMasseuse").submit();
+}
