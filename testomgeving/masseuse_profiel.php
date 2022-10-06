@@ -124,19 +124,17 @@ include "partials/header.php";
                                                     <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
                                                 <div class="card-content  ">
-                                                    <div class="card-body ">
-                                                        <div class="m-0  hidescroll">
+                                                    <div class="card-body hidescroll ">
+                                                        <div class="m-0 scrolltext">
                                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                             <label for="postcode">Postcode:</label>
                                                             <input name="postcode" value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
                                                             <label for="plaats">Plaats : </label>
                                                             <input class="form-control-plaintext " type="text" readonly value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
                                                             <label for="straat">Straat & huisnummer</label>
-                                                            <div class="scrolltext">
-                                                                <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext "></input>
-                                                                <input class="form-control-plaintext" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
-                                                                <input class="form-control-plaintext" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
-                                                            </div>
+                                                            <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext "></input>
+                                                            <input class="form-control-plaintext" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
+                                                            <input class="form-control-plaintext" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
                                                         </div>
                                                     </div>
                                                 </div>
