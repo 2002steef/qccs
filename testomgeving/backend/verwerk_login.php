@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     session_regenerate_id();
                     $_SESSION['loggedin'] = true;
                     $_SESSION['name'] = $_POST['email'];
-                    $_SESSION['voornaam'] = $userName;
                     $_SESSION['id'] = $id;
                     $_SESSION['status'] = "medewerker";
                     //            echo 'Welcome ' . $_SESSION['name'] . '!';
@@ -81,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         session_regenerate_id();
                         $_SESSION['loggedin'] = true;
                         $_SESSION['name'] = $_POST['email'];
-                        $_SESSION['voornaam'] = $userName;
                         $_SESSION['id'] = $id;
                         $_SESSION['status'] = "bedrijf";
                         //            echo 'Welcome ' . $_SESSION['name'] . '!';
