@@ -52,7 +52,6 @@ include "partials/header.php";
                             <!-- 1st column starts -->
                             <div class="col-lg-4 col-12">
                                 <div class="row">
-
                                     <!-- Info starts -->
                                     <div class="col-12">
                                         <div class="card" id="masseuseSkills">
@@ -190,9 +189,9 @@ include "partials/header.php";
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
         </div>
     </div>
-    
-    <script  src="assets/js/scripts.js"></script>
-    <script  src="assets/js/editMasseuse.js"></script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/editMasseuse.js"></script>
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
