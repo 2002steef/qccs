@@ -42,8 +42,6 @@ $rowMw = Getuser();
                                                                                                                 echo $rowBd["voornaam"];
                                                                                                             }elseif(isset($_SESSION["status"]) && $_SESSION["status"] =="masseuse"){
                                                                                                                 echo $rowMs["voornaam"];
-                                                                                                            }elseif(isset($_SESSION["status"]) && $_SESSION["status"] =="medewerker"){
-                                                                                                                echo $rowMd["voornaam"];
                                                                                                             } ?></span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
                                 <?php if ($_SESSION["status"] == "bedrijf") { ?>
                                     <img class="avatar" src="img/uploads/<?= $rowBd["profielFoto"] ?>" alt="avatar" height="35" width="35">
