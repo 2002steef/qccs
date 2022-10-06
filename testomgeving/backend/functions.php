@@ -444,29 +444,30 @@ function UpdateCustomerB()
 
 UpdateCustomerB();
 
-function UpdateCustomerI()
+function UpdateMasseuse()
 {
     global $mysqli;
-    if (isset($_POST['saveIndividual'])) {
-        $query = "UPDATE `customers_individual` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
-                                `street`= ?,`housenumber`=?,`housenumberAddition`=?,`postalcode`=?,`phoneNumber`=?,
-                                `email`= ?, `status`= ? WHERE id = ?";
+    if (isset($_POST['btnSaveMasseuse'])) {
+        $query = "UPDATE `masseuses` SET `voornaam`=?,`tussenvoegsel`=?,`achternaam`=?,`email`=?,
+        `telefoon`=?,`straat`=?,`huisNummer`=?,`huisNummerToevoeging`=?,`postcode`=?,
+        `plaats`=?,`website`=?,`paragraafje`=? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
-        //        $options = ['cost' => 12,];
-        //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
+        
         $stmt->bind_param(
-            'ssssssssssi',
-            $_POST["voornaam_p"],
-            $_POST["tussenvoegsel_p"],
-            $_POST["achternaam_p"],
-            $_POST["straatnaam_p"],
-            $_POST["huisnummer_p"],
-            $_POST["huisnummertoevoeging_p"],
-            $_POST["postcode_p"],
-            $_POST["telefoonnummer_p"],
-            $_POST["email_p"],
-            $_POST["status"],
-            $_POST["id_p"]
+            'sssssssssi',
+            $_POST["voornaam"],
+            $_POST["tussenvoegsel"],
+            $_POST["achternaam"],
+            $_POST["email"],
+            $_POST["telefoon"],
+            $_POST["straat"],
+            $_POST["huisNummer"],
+            $_POST["huisNummerToevoeging"],
+            $_POST["postcode"],
+            $_POST["plaats"],
+            $_POST["website"],
+            $_POST["paragraafje"],
+            $_POST["masseuseID"]
         );
         $stmt->execute();
     }
