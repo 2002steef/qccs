@@ -12,4 +12,8 @@ function ButtonShower(){
     } else {
       x.style.display = "none";
     }
+    document.getElementById("editMasseuse").readOnly = true;
+    document.getElementById("editMasseuseTel").readOnly = true;
+    document.getElementById("editMasseuseMail").readOnly = true;
+    document.getElementById("editMasseuseParagraafje").readOnly = true;
 }
