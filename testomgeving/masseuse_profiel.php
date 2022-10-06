@@ -133,7 +133,7 @@ include "partials/header.php";
                                                             <input class="form-control-plaintext col-3" type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
                                                             <label for="straat">Straat & huisnummer</label>
                                                         <div class="form-row">
-                                                            <div class="col">
+                                                            <div class="col-6">
                                                                 <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext"></input>
                                                             </div>
                                                             <div class="col">
