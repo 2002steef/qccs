@@ -40,7 +40,7 @@ include "partials/header.php";
                                         <div class="card-body">
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();ButtonShower()">Edit</button>
-                                                <button class="btn bg-light-primary" id="btnSaveMasseuse" onclick="ButtonShower()">Opslaan</button>
+                                                <button class="btn bg-light-primary" id="btnSaveMasseuse" onclick="ButtonShower()" type="submit">Opslaan</button>
                                             </div>
                                         </div>
                                         <!-- user profile body ends -->
@@ -102,10 +102,10 @@ include "partials/header.php";
                                                 <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                             </div>
                                             <div class="card-content hidescroll">
-                                                <form action="" method="POST" class="form-control-plaintext ">
+                                                <form action="" method="POST" class="form-control-plaintext MasseuseForm ">
                                                     <div class="card-body scrolltext">
                                                         <label for="editMasseuse">Voornaam & achternaam: </label>
-                                                        <input type="text" id="editMasseuse" class=" form-control-plaintext" readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuse" class=" form-control-plaintext " readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <label for="">Telefoonnummer:</label>
                                                         <input type="text" id="editMasseuseTel" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <label for="">Email:</label>
@@ -154,7 +154,9 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
                                                         <p class="m-0">
+                                                        <form action="" method="POST" class="MasseuseForm">
                                                             <textarea rows="6" type="text" id="editMasseuseParagraafje" class="form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
+                                                        </form>
                                                         </p>
                                                     </div>
                                                 </div>
