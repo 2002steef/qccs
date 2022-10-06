@@ -105,11 +105,11 @@ include "partials/header.php";
                                                 <div class="card-content hidescroll">
                                                     <div class="card-body scrolltext">
                                                         <label for="editMasseuse">Voornaam & achternaam: </label>
-                                                        <input type="text" id="editMasseuse" class=" form-control-plaintext " readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuse" name="voornaam" class=" form-control-plaintext " readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <label for="">Telefoonnummer:</label>
-                                                        <input type="text" id="editMasseuseTel" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuseTel" name="telefoon" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <label for="">Email:</label>
-                                                        <input type="text" id="editMasseuseMail" class=" form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
+                                                        <input type="text" id="editMasseuseMail" name="email" class=" form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
                                                     </div>
                                                 </div>
                                             </div>
@@ -126,8 +126,12 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <p class="m-0">
-                                                        <p>Postcode: <?= $masseuse["postcode"]; ?> <?= $masseuse["plaats"]; ?> </p>
-                                                        <p>Straatnaam: <?= $masseuse["straat"]; ?> <?= $masseuse["huisNummerToevoeging"]; ?> <?= $masseuse["huisNummer"]; ?></p>
+                                                            <label for="postcode">Postcode:</label>
+                                                        <input name="postcode" value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
+                                                        <label for="plaats">Plaats : </label>
+                                                        <input type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
+                                                        <label for="straat">Straat & huisnummer</label>
+                                                        <input type="text" name="straat" value="straat" class="form-control-plaintext"></input><input class="form-control-plaintext" type="text" name="huisNummer" value="huisNummer"></input><input class="form-control-plaintext" type="text" name="huisNummerToevoeging" value="huisNummerToevoeging"></input>
                                                         </p>
                                                     </div>
                                                 </div>
