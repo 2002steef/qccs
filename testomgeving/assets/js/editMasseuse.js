@@ -13,6 +13,3 @@ function ButtonShower(){
       x.style.display = "none";
     }
 }
-function btnSaveMasseuse(){
-    document.getElementById("btnSaveMasseuse").submit();
-}
