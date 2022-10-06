@@ -10,6 +10,7 @@ function ClickEdit() {
     document.getElementById("editMasseuseMail").readOnly = false;
     document.getElementById("editMasseuseParagraafje").readOnly = false;
     document.getElementById("editMasseusePostcode").readOnly = false;
+    document.getElementById("editMasseuseStraat").readOnly = false;
     document.getElementById("editMasseusePlaats").readOnly = false;
     document.getElementById("editMasseuseHN").readOnly = false;
     document.getElementById("editMasseuseHNT").readOnly = false;
@@ -26,6 +27,7 @@ function ButtonShower(){
     document.getElementById("editMasseuseMail").readOnly = true;
     document.getElementById("editMasseuseParagraafje").readOnly = true;
     document.getElementById("editMasseusePostcode").readOnly = true;
+    document.getElementById("editMasseuseStraat").readOnly = true;
     document.getElementById("editMasseusePlaats").readOnly = true;
     document.getElementById("editMasseuseHN").readOnly = true;
     document.getElementById("editMasseuseHNT").readOnly = true;
