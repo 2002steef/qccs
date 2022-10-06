@@ -125,7 +125,7 @@ include "partials/header.php";
                                                 </div>
                                                 <div class="card-content  hidescroll">
                                                     <div class="card-body  ">
-                                                        <div class="m-0 scrolltext">
+                                                        <div class="m-0 scrolltext form-row">
                                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                             <label for="postcode">Postcode:</label>
                                                             <input name="postcode" value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
