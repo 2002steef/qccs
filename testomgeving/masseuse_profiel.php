@@ -126,12 +126,13 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <p class="m-0">
+                                                            <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                             <label for="postcode">Postcode:</label>
-                                                        <input name="postcode" value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
-                                                        <label for="plaats">Plaats : </label>
-                                                        <input type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
-                                                        <label for="straat">Straat & huisnummer</label>
-                                                        <input type="text" name="straat" value="straat" class="form-control-plaintext"></input><input class="form-control-plaintext" type="text" name="huisNummer" value="huisNummer"></input><input class="form-control-plaintext" type="text" name="huisNummerToevoeging" value="huisNummerToevoeging"></input>
+                                                            <input name="postcode" value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
+                                                            <label for="plaats">Plaats : </label>
+                                                            <input type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
+                                                            <label for="straat">Straat & huisnummer</label>
+                                                            <input type="text" name="straat" value="straat" class="form-control-plaintext"></input><input class="form-control-plaintext" type="text" name="huisNummer" value="huisNummer"></input><input class="form-control-plaintext" type="text" name="huisNummerToevoeging" value="huisNummerToevoeging"></input>
                                                         </p>
                                                     </div>
                                                 </div>

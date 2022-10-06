@@ -199,7 +199,7 @@ function UploadPic()
     } elseif ($_SESSION["status"] == "bedrijf") {
         if (isset($_POST['submitpic']) && isset($_FILES['my_image'])) {
             global $mysqli;
-             echo "<pre>";
+            echo "<pre>";
             print_r($_FILES['my_image']);
             echo "</pre>";
 
@@ -452,7 +452,7 @@ function UpdateMasseuse()
         `telefoon`=?,`straat`=?,`huisNummer`=?,`huisNummerToevoeging`=?,`postcode`=?,
         `plaats`=?,`website`=?,`paragraafje`=? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
-        
+        $id = $_POST["masseuseID"];
         $stmt->bind_param(
             'sssssssssi',
             $_POST["voornaam"],
@@ -467,9 +467,12 @@ function UpdateMasseuse()
             $_POST["plaats"],
             $_POST["website"],
             $_POST["paragraafje"],
-            $_POST["masseuseID"]
+            $id
         );
         $stmt->execute();
+        if ($stmt->num_rows > 0) {
+            header("Location:../masseuse_profiel.php?masseuseID=$id");
+        }
     }
 }
 
@@ -540,9 +543,9 @@ function masseuseInfo()
     $resultMasseuse = $stmt->get_result();
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
-            <td ><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
+            <td><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
             <td class="td-width"><?= $masseuse["paragraafje"] ?></td>
-            <td ><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
+            <td><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
                     Meer info
                 </a>
             </td>
