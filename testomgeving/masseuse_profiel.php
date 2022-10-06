@@ -38,7 +38,7 @@ include "partials/header.php";
                                     <!-- user profile body start -->
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <?php if(isset($_SESSION["status"]) && $_SESSION["masseuse"]){?>
+                                            <?php if(isset($_SESSION["status"]) && $_SESSION["status"]== "masseuse" ){?>
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();">Edit</button>
                                                 <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
