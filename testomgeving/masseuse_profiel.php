@@ -126,13 +126,13 @@ include "partials/header.php";
                                                 <div class="card-content  hidescroll">
                                                     <div class="card-body scrolltext ">
                                                         <div class="m-0 ">
-                                                            <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                            <label for="postcode">Postcode:</label>
-                                                            <input name="postcode" readonly value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
-                                                            <label for="plaats">Plaats : </label>
-                                                            <input class="form-control-plaintext " type="text" readonly value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
-                                                            <label for="straat">Straat & huisnummer</label>
                                                             <div class="row">
+                                                                <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
+                                                                <label for="postcode">Postcode:</label>
+                                                                <input name="postcode" readonly value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
+                                                                <label for="plaats">Plaats : </label>
+                                                                <input class="form-control-plaintext " type="text" readonly value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
+                                                                <label for="straat">Straat & huisnummer</label>
                                                                 <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext col-6 "></input>
                                                                 <input class="form-control-plaintext col-2" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
                                                                 <input class="form-control-plaintext col-2" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
