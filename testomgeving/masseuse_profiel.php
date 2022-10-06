@@ -128,14 +128,14 @@ include "partials/header.php";
                                                         <p class="m-0">
                                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                             <label for="postcode">Postcode:</label>
-                                                            <input name="postcode" value="<?= $masseuse["postcode"]; ?>" class="form-control-plaintext"> </input>
+                                                            <input class="form-control-plaintext col-3" name="postcode" value="<?= $masseuse["postcode"]; ?>" > </input>
                                                             <label for="plaats">Plaats : </label>
-                                                            <input type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
+                                                            <input class="form-control-plaintext col-3" type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
                                                             <label for="straat">Straat & huisnummer</label>
                                                         <p>
-                                                            <input type="text" name="straat" value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext col-6"></input>
-                                                            <input class="form-control-plaintext col-3" type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
-                                                            <input class="form-control-plaintext col-3" type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
+                                                            <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext col-6"></input>
+                                                            <input class="form-control-plaintext col-3" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
+                                                            <input class="form-control-plaintext col-3" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
                                                         </p>
                                                         </p>
                                                     </div>
