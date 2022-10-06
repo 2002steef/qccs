@@ -132,10 +132,10 @@ include "partials/header.php";
                                                             <label for="plaats">Plaats : </label>
                                                             <input class="form-control-plaintext " type="text" readonly value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
                                                             <label for="straat">Straat & huisnummer</label>
-                                                            <div class=" row scrolltext">
-                                                                <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext col"></input>
-                                                                <input class="form-control-plaintext col" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
-                                                                <input class="form-control-plaintext col" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
+                                                            <div class="scrolltext">
+                                                                <input type="text" name="straat" readonly value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext "></input>
+                                                                <input class="form-control-plaintext" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
+                                                                <input class="form-control-plaintext" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
                                                             </div>
                                                         </div>
                                                     </div>
