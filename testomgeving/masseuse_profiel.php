@@ -43,7 +43,9 @@ include "partials/header.php";
                                                 <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
                                                     <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();">Edit</button>
                                                     <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
-                                                <?php } ?>
+                                                <?php }elseif(isset($_SESSION["status"]) && $_SESSION["status"] == "medewerker"){?>
+                                                    <button class="btn bg-light-primary" id="btnAfspraak" onclick="">Afspraak Maken</button>
+                                              <?php  } ?>
                                             </div>
 
 
