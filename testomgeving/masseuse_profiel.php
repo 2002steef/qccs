@@ -176,7 +176,7 @@ include "partials/header.php";
                                                     <div class="card-body">
                                                         <h5 class="card-title mb-2">Locatie</h5>
                                                         <div class="mapouter">
-                                                            <iframe src="https://g.page/LunaNovaMassage?share" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                            <iframe src="https://www.google.com/maps/place/LunaNova+Massage+%26+Kruidengeneeskunde/@51.4963749,4.2754758,18z/data=!4m5!3m4!1s0x47c46d9c67c72d0d:0xe59edc8eceaaf671!8m2!3d51.4951338!4d4.2781775" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                                         </div>
                                                     </div>
                                                 </div>
