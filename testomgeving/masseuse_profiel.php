@@ -132,8 +132,8 @@ include "partials/header.php";
                                                             <label for="plaats">Plaats : </label>
                                                             <input type="text" value="<?= $masseuse["plaats"]; ?>" name="plaats"></input>
                                                             <label for="straat">Straat & huisnummer</label>
-                                                        <p class="row">
-                                                            <input type="text" name="straat" value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext col-2"></input>
+                                                        <p class="form-row">
+                                                            <input type="text" name="straat" value="<?= $masseuse["straat"]; ?>" class="form-control-plaintext col-6"></input>
                                                             <input class="form-control-plaintext col-2" type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>"></input>
                                                             <input class="form-control-plaintext col-2" type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>"></input>
                                                         </p>
