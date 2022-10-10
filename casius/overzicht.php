@@ -106,53 +106,9 @@ include "backend/functions.php";
                                                                 <thead>
                                                                     <tr>
                                                                         <th colspan="1">ID</th>
-                                                                        <th>BedrijfsNaam</th>
+                                                                        <th>Klant Naam</th>
                                                                         <th>Adres</th>
-                                                                        <th colspan="1">Aantal vouchers</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade mt-2 show " id="Masseurs" role="tabpanel" aria-labelledby="account-tab">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="table-responsive">
-                                                            <div>
-                                                                <?php
-                                                                if (isset($_GET["toevoegenZak"])) {
-                                                                    if ($_GET["toevoegenZak"] == "empty") {
-                                                                        echo "<p class='text-danger'>Vul alle velden in aub</p>";
-                                                                    } elseif ($_GET["toevoegenZak"] == "namefout") {
-                                                                        echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
-                                                                    } elseif ($_GET["toevoegenZak"] == "telfout") {
-                                                                        echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
-                                                                    } elseif ($_GET["toevoegenZak"] == "mailfout") {
-                                                                        echo "<p class='text-danger'>Email klopt niet</p>";
-                                                                    } elseif ($_GET["toevoegenZak"] == "emaildupli") {
-                                                                        echo "<p class='text-danger'>Email bestaat al</p>";
-                                                                    } elseif ($_GET["toevoegenZak"] == "straatfout") {
-                                                                        echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
-                                                                    } elseif ($_GET["toevoegenZak"] == "postcodefout") {
-                                                                        echo "<p class='text-danger'>Ongeldige postcode !</p>";
-                                                                    }
-                                                                    if ($_GET["toevoegenZak"] == "succes") {
-                                                                        echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
-                                                                    }
-                                                                }
-                                                                ?>
-                                                            </div>
-                                                            <table class="table table-striped table-bordered file-export">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th >Masseuse</th>
-                                                                        <th >Volledige Naam</th>
-                                                                        <th> Info</th>
-                                                                        <th>website</th>
+                                                                        <th colspan="1">Extra info</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -238,7 +194,7 @@ include "backend/functions.php";
                                                 </li>
                                             </ul>
                                             <div class="tab-content">
-                                           
+
                                             </div>
                                         </div>
                                     </div>
