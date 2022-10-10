@@ -25,7 +25,7 @@ include "partials/header.php";
                                                 </div>
                                                 <div class="col-lg-6 col-12 px-4 py-3">
                                                     <h4 class="mb-2 card-title">Login</h4>
-                                                    <p>Welcome back, please login to your account.</p>
+                                                    <p>Welkom terug Jerry, Log in AUB</p>
                                                     <input type="text" class="form-control mb-3" placeholder="Username">
                                                     <input type="password" class="form-control mb-2" placeholder="Password">
                                                     <div class="d-sm-flex justify-content-between mb-3 font-small-2">
@@ -35,20 +35,12 @@ include "partials/header.php";
                                                                 <label for="auth-ligin"><span>Remember Me</span></label>
                                                             </div>
                                                         </div>
-                                                        <a href="auth-forgot-password.html">Forgot Password?</a>
+                                                        <a href="auth-forgot-password.html">Wachtwoord Vergeten?</a>
                                                     </div>
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                        <a href="auth-register.html" class="btn bg-light-primary mb-2 mb-sm-0">Register</a>
-                                                        <a href="dashboard1.html" class="btn btn-primary">Login</a>
+                                                        <a href="#" class="btn btn-primary">Login</a>
                                                     </div>
                                                     <hr>
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <h6 class="text-primary m-0">Or Login With</h6>
-                                                        <div class="login-options">
-                                                            <a class="btn btn-sm btn-social-icon btn-facebook mr-1"><span class="fa fa-facebook"></span></a>
-                                                            <a class="btn btn-sm btn-social-icon btn-twitter mr-1"><span class="fa fa-twitter"></span></a>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
