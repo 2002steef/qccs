@@ -2,7 +2,7 @@
 <?php
 include "backend/functions.php";
 $klant = klantInfo();
-klantModal();
+
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -217,6 +217,7 @@ klantModal();
     </div>
     <?php
     include "partials/footer.php";
+    klantModal();
     ?>
     <script>
         /*
