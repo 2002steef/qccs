@@ -5,7 +5,7 @@ include "partials/header.php";
 
 <!-- BEGIN : Body-->
 
-<body class="vertical-layout vertical-menu 1-column auth-page navbar-sticky blank-page" data-menu="vertical-menu" data-col="1-column">
+<body class="vertical-layout vertical-menu 1-column auth-page blank-page" data-menu="vertical-menu" data-col="1-column">
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">
         <div class="main-panel">
