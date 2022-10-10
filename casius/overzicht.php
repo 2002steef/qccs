@@ -216,7 +216,7 @@ include "backend/functions.php";
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel16">Basic Modal</h4>
+                        <h4 class="modal-title" id="myModalLabel16">Klant gegevens</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
@@ -227,9 +227,6 @@ include "backend/functions.php";
                             <div class="row match-height">
                                 <div class="col-12">
                                     <div class="card">
-                                        <div class="card-header">
-                                            <h4 class="card-title">Klantgegevens</h4>
-                                        </div>
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <div class="row">
