@@ -27,8 +27,8 @@ include "partials/header.php";
                                                 <div class="col-lg-6 col-12 px-4 py-3">
                                                     <h4 class="mb-2 card-title">Login</h4>
                                                     <p>Welkom terug Jerry, Log in AUB</p>
-                                                    <input type="text" class="form-control mb-3" placeholder="Username">
-                                                    <input type="password" class="form-control mb-2" placeholder="Password">
+                                                    <input type="text" name="email" class="form-control mb-3" placeholder="Username">
+                                                    <input type="password" name="wachtwoord" class="form-control mb-2" placeholder="Password">
                                                     <div class="d-sm-flex justify-content-between mb-3 font-small-2">
                                                         <div class="remember-me mb-2 mb-sm-0">
                                                             <div class="checkbox auth-checkbox">
@@ -39,7 +39,7 @@ include "partials/header.php";
                                                         <a href="auth-forgot-password.html">Wachtwoord Vergeten?</a>
                                                     </div>
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                        <a href="#" class="btn btn-primary">Login</a>
+                                                    <button name="login" type="submit" class="btn btn-outline-light-grey">Inloggen</button>
                                                     </div>
                                                     <hr>
                                                 </div>
