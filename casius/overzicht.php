@@ -258,24 +258,24 @@ include "backend/functions.php";
                                                 <div class="row mb-md-3">
                                                     <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-3">Username</label>
-                                                            <div class="col-md-8">
+                                                            <label class="col-md-6 col-form-label" for="horizontal-form-3">Postcode</label>
+                                                            <div class="col-md-6">
                                                                 <input type="text" class="form-control square" id="horizontal-form-3" name="username">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-4">Nick Name</label>
-                                                            <div class="col-md-8">
+                                                            <label class="col-md-6 col-form-label" for="horizontal-form-4">Huisnummer</label>
+                                                            <div class="col-md-6">
                                                                 <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-4">Nick Name</label>
-                                                            <div class="col-md-8">
+                                                            <label class="col-md-6 col-form-label" for="horizontal-form-4">Straatnaam</label>
+                                                            <div class="col-md-6">
                                                                 <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
                                                             </div>
                                                         </div>
