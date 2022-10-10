@@ -24,7 +24,7 @@ function klantInfoTabel()
     while ($klant = $resultKlant->fetch_array()) { ?>
         <tr>
         <td><?= $klant["klant_ID"] ?></td>
-            <td><?=$klant["voornaam"]?> <?=$klant["tussenvoegsel"]?> <?=$klant["achternaam"]?></td>
+            <td><?=$klant["Voornaam"]?> <?=$klant["Tussenvoegsel"]?> <?=$klant["Achternaam"]?></td>
             <td class="td-width"><?= $klant["notitie"] ?></td>
             <td><a class="btn btn-outline-light-gray" href="#<?= $klant["klant_ID"] ?>">
                     Meer info
