@@ -255,9 +255,7 @@ $klant = klantInfo();
                                                     </a>
                                                 </li>
                                             </ul>
-                                            <form action="" method="POST">
-
-                                                <!-- Horizontal Form Layout starts -->
+                                            <!-- Horizontal Form Layout starts -->
                                                 <form method="POST">
                                                     <div class="row match-height">
                                                         <div class="col-12">
@@ -370,7 +368,6 @@ $klant = klantInfo();
                                     </div>
                                 </div>
                             </div>
-                            </form>
                     </div>
                 </div>
             </div>
