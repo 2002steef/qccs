@@ -28,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     //                $row = $stmt->get_result();
                     // Verification success! User has logged-in!
                     // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
+                    session_start();
                     session_regenerate_id();
                     $_SESSION['loggedin'] = true;
                     $_SESSION['name'] = $username;
                     $_SESSION['id'] = $id;
-                    $_SESSION['status'] = "medewerker";
                     //            echo 'Welcome ' . $_SESSION['name'] . '!';
                     if (!empty($_POST["remember_me"])) {
                         setcookie("username", $_POST["email"], time() + 3600);
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     //                $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
                     header("Location:../index.php?login=foutecombi");
                 }
-            } 
+            }
             $stmtMs->close();
         }
     }
