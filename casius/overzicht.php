@@ -230,7 +230,7 @@ $klant = klantInfo();
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-md-4 col-12">
+                                                    <div class="col-md-6 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-6 col-form-label" for="horizontal-form-1">Voornaam</label>
                                                             <div class="col-md-6">
@@ -238,7 +238,7 @@ $klant = klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4 col-12">
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-6 col-form-label" for="horizontal-form-2">Tussenvoegsel</label>
                                                             <div class="col-md-6">
@@ -246,7 +246,7 @@ $klant = klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4 col-12">
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-5 col-form-label" for="horizontal-form-2">Achternaam</label>
                                                             <div class="col-md-7">
