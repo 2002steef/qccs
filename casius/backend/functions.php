@@ -26,7 +26,7 @@ function klantInfoTabel()
             <td><?= $klant["klant_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" href="#klant_ID=<?= $klant["klant_ID"]?>" >
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" href="#" >
                     Meer info
                 </a>
             </td>
@@ -36,9 +36,8 @@ function klantInfoTabel()
 
 function klantModal(){
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `klanten` WHERE `klant_ID` = ? ";
-    $stmt = $mysqli->prepare($DataMasseuse);
-    $stmt->bind_param("s", $_GET["klant_ID"]);
+    $DataKlant = "SELECT * FROM `klanten` WHERE `klant_ID` ";
+    $stmt = $mysqli->prepare($DataKlant);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) {?>
