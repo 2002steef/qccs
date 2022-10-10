@@ -232,25 +232,25 @@ $klant = klantInfo();
                                                 <div class="row">
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-1">Voornaam</label>
+                                                            <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" class="form-control square" id="horizontal-form-1" name="first-name">
+                                                                <input type="text" class="form-control square" id="Voornaam" name="Voornaam">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-8 col-form-label" for="horizontal-form-2">Tussenvoegsel</label>
-                                                            <div class="col-md-4">
-                                                                <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
+                                                            <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
+                                                            <div class="col-md-5">
+                                                                <input type="text" class="form-control square" id="tussenvoegsel" name="tussenvoegsel">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-6 col-form-label" for="horizontal-form-2">Achternaam</label>
+                                                            <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
                                                             <div class="col-md-6">
-                                                                <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
+                                                                <input type="text" class="form-control square" id="achternaam" name="achternaam">
                                                             </div>
                                                         </div>
                                                     </div>
