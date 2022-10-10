@@ -57,9 +57,15 @@ $klant = klantInfo();
                                     <section id="file-export">
                                         <ul class="nav nav-tabs text-light-gray" role="tablist" id="tabs">
                                             <li class="nav-item active">
-                                                <a href="#Abonnementhouders" role="tab" id="Abonnementhouders-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="Abonnementhouders" aria-selected="true">
+                                                <a href="#ZakelijkeKlanten" role="tab" id="Zakelijke-Klanten" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="ZakelijkeKlanten" aria-selected="true">
                                                     <i class="ft-user mr-1"></i>
-                                                    <span class="d-none d-sm-block text-light-gray">Klanten</span>
+                                                    <span class="d-none d-sm-block text-light-gray">Zakelijke Klanten</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a href="#ParticuliereKlanten" role="tab" id="Particuliere-Klanten" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="ParticuliereKlanten" aria-selected="true">
+                                                    <i class="ft-user mr-1"></i>
+                                                    <span class="d-none d-sm-block text-light-gray">Particuliere Klanten</span>
                                                 </a>
                                             </li>
                                             <li class="nav-tabs">
@@ -70,7 +76,59 @@ $klant = klantInfo();
                                             </li>
                                         </ul>
                                         <div class="tab-content">
-                                            <div class="tab-pane fade mt-2 show active" id="Abonnementhouders" role="tabpanel" aria-labelledby="account-tab">
+                                            <div class="tab-pane fade mt-2 show active" id="ZakelijkeKlanten" role="tabpanel" aria-labelledby="account-tab">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="table-responsive">
+                                                            <div>
+                                                                <?php
+                                                                if (isset($_GET["toevoegenPart"])) {
+                                                                    if ($_GET["toevoegenPart"] == "empty") {
+                                                                        echo "<p class='text-danger'>Vul alle velden in aub</p>";
+                                                                    } elseif ($_GET["toevoegenPart"] == "namefout") {
+                                                                        echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
+                                                                    } elseif ($_GET["toevoegenPart"] == "telfout") {
+                                                                        echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
+                                                                    } elseif ($_GET["toevoegenPart"] == "mailfout") {
+                                                                        echo "<p class='text-danger'>Email klopt niet</p>";
+                                                                    } elseif ($_GET["toevoegenPart"] == "emaildupli") {
+                                                                        echo "<p class='text-danger'>Email bestaat al</p>";
+                                                                    } elseif ($_GET["toevoegenPart"] == "straatfout") {
+                                                                        echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
+                                                                    } elseif ($_GET["toevoegenPart"] == "postcodefout") {
+                                                                        echo "<p class='text-danger'>Ongeldige postcode ! </p>";
+                                                                    }
+                                                                    if ($_GET["toevoegenPart"] == "succes") {
+                                                                        echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+                                                                    }
+                                                                    if ($_GET["toevoegenPart"] == "Formulier") {
+                                                                        echo "<p class='text-success'>Email succesvol verstuurd !</p>";
+                                                                    } else {
+                                                                        echo "<p class='text-danger'>Email is niet succesvol verstuurd !</p>";
+                                                                    }
+                                                                }
+                                                                ?>
+                                                            </div>
+                                                            <table class="table table-striped table-bordered file-export text-light-gray">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="1">ID</th>
+                                                                        <th>Klant Naam</th>
+                                                                        <th>Adres</th>
+                                                                        <th colspan="1">Extra info</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php
+                                                                    klantInfoTabel();
+                                                                    ?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade mt-2 show active" id="ParticuliereKlanten" role="tabpanel" aria-labelledby="account-tab">
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="table-responsive">
