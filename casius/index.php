@@ -55,7 +55,7 @@ include "partials/header.php";
                                                         <a href="wachtwoord_vergeten.php">Wachtwoord vergeten?</a>
                                                     </div>
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                        <button name="login" type="submit" class="btn btn-outline-light-grey">Inloggen</button>
+                                                        <button name="login" type="submit" class="btn btn-outline-light-gray">Inloggen</button>
                                                     </div>
                                                     <hr>
                                                 </div>
