@@ -43,7 +43,7 @@ include "backend/fnctLogin.php";
                                                             <a href="auth-forgot-password.html">Wachtwoord Vergeten?</a>
                                                         </div>
                                                         <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                            <button name="login" type="submit" class="btn btn-outline-light-grey">Inloggen</button>
+                                                            <button name="login" type="submit" class="btn btn-outline-light-grAy">Inloggen</button>
                                                         </div>
                                                         <hr>
                                                     </div>

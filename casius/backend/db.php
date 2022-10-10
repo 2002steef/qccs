@@ -7,9 +7,10 @@ $password = "9Y%k98sf3";
 $db = "casius";
 
 // Create connection
-$con = mysqli_connect($servername, $username, $password, $db);
+$mysqli = new mysqli("$servername", "$username", "$password", "$db");
+
 
 // Check connection
-if (!$con) {
+if (!$mysqli) {
     die("Connection failed: " . mysqli_connect_error());
 }
