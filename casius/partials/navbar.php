@@ -31,7 +31,7 @@ include "header.php";
             <div class="navbar-container">
                 <div class="collapse navbar-collapse d-block" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="i18n-dropdown dropdown nav-item mr-2"><a class="nav-link d-flex align-items-center dropdown-toggle dropdown-language" id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img class="langimg selected-flag" src="app-assets/img/flags/nl.png" alt="flag"><span class="selected-language d-md-flex d-none light-gray">Nederlands</span></a>
+                        <li class="i18n-dropdown dropdown nav-item mr-2"><a class="nav-link d-flex align-items-center dropdown-toggle dropdown-language text-light-gray" id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img class="langimg selected-flag" src="app-assets/img/flags/nl.png" alt="flag"><span class="selected-language d-md-flex d-none light-gray">Nederlands</span></a>
                             <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag">
                             <a class="dropdown-item text-light-gray" href="javascript:;" data-language="en"><img class="langimg mr-2" src="app-assets/img/flags/us.png" alt="flag"><span class="font-small-3 light-gray">English</span></a>
                             <a class="dropdown-item text-light-gray" href="javascript:;" data-language="es"><img class="langimg mr-2" src="app-assets/img/flags/nl.png" alt="flag"><span class="font-small-3 light-gray">Nederlands</span></a>
