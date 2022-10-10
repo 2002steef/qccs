@@ -312,8 +312,8 @@ $klant = klantInfo();
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-9">Notities</label>
-                                                            <div class="col-md-8">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
+                                                            <div class="col-md-9">
                                                                 <textarea id="horizontal-form-9" rows="6" value="<?= $klant["notities"] ?>" class="form-control square" name="comment3"></textarea>
                                                             </div>
                                                         </div>
