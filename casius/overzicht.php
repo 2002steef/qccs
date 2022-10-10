@@ -235,24 +235,24 @@ include "backend/functions.php";
                                                 <div class="row">
                                                     <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-1">Voornaam</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-1">Voornaam</label>
+                                                            <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-1" name="first-name">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-1 col-form-label" for="horizontal-form-2">Tussenvoegsel</label>
-                                                            <div class="col-md-3">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-2">Tussenvoegsel</label>
+                                                            <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-1 col-form-label" for="horizontal-form-2">Achternaam</label>
-                                                            <div class="col-md-3">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-2">Achternaam</label>
+                                                            <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
                                                             </div>
                                                         </div>
