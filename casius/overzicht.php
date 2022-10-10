@@ -1,7 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
-
+$klant = klantInfo();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -256,7 +256,7 @@ include "backend/functions.php";
                                                     </div>
                                                 </div>
                                                 <div class="row mb-md-3">
-                                                    <div class="col-md-4 col-12">
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-6 col-form-label" for="horizontal-form-3">Postcode</label>
                                                             <div class="col-md-6">
@@ -264,15 +264,23 @@ include "backend/functions.php";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4 col-12">
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-6 col-form-label" for="horizontal-form-4">Huisnummer</label>
                                                             <div class="col-md-6">
-                                                                <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                                <input type="text" value="<?= $klant["huisnummer"] ?>" class="form-control square" id="horizontal-form-4" name="nick-name">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4 col-12">
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-6 col-form-label" for="horizontal-form-4">Huisnummer</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" value="<?= $klant["huisnummerToevoeging"] ?>" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-6 col-form-label" for="horizontal-form-4">Straatnaam</label>
                                                             <div class="col-md-6">
@@ -286,27 +294,27 @@ include "backend/functions.php";
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
                                                             <div class="col-md-8">
-                                                                <input type="email" class="form-control square" id="horizontal-form-5" name="e-mail">
+                                                                <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="e-mail">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-6">Website</label>
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
                                                             <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-6" name="website">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-7">Contact Number</label>
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                             <div class="col-md-8">
-                                                                <input type="number" class="form-control square" id="horizontal-form-7" name="phone-number">
+                                                                <input type="number" value="<?= $klant["Telefoonnummer"] ?>"  class="form-control square" id="horizontal-form-7" name="phone-number">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-4 col-form-label" for="horizontal-form-9">About Project</label>
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-9">Notities</label>
                                                             <div class="col-md-8">
-                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="comment3"></textarea>
+                                                                <textarea id="horizontal-form-9" rows="6" value="<?= $klant["notities"] ?>" class="form-control square" name="comment3"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
