@@ -19,7 +19,7 @@ include "partials/header.php";
                 <div class="content-overlay"></div>
                 <div class="content-wrapper">
                     <!--Login Page Starts-->
-                    <form method="post" action="backend/verwerk_login.php" >
+                    <form method="post" action="backend/fnctLogin.php" >
                     <section id="login" class="auth-height">
                         <div class="row full-height-vh m-0">
                             <div class="col-12 d-flex align-items-center justify-content-center">
