@@ -258,16 +258,16 @@ include "backend/functions.php";
                                                 <div class="row mb-md-3">
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-3">Username</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-3">Username</label>
+                                                            <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-3" name="username">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-4">Nick Name</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-4">Nick Name</label>
+                                                            <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
                                                             </div>
                                                         </div>
@@ -276,28 +276,28 @@ include "backend/functions.php";
                                                 <div class="row">
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-5">Email</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
+                                                            <div class="col-md-8">
                                                                 <input type="email" class="form-control square" id="horizontal-form-5" name="e-mail">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-6">Website</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-6">Website</label>
+                                                            <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-6" name="website">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-7">Contact Number</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-7">Contact Number</label>
+                                                            <div class="col-md-8">
                                                                 <input type="number" class="form-control square" id="horizontal-form-7" name="phone-number">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-9">About Project</label>
-                                                            <div class="col-md-9">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-9">About Project</label>
+                                                            <div class="col-md-8">
                                                                 <textarea id="horizontal-form-9" rows="6" class="form-control square" name="comment3"></textarea>
                                                             </div>
                                                         </div>
