@@ -256,7 +256,7 @@ include "backend/functions.php";
                                                     </div>
                                                 </div>
                                                 <div class="row mb-md-3">
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-4 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="horizontal-form-3">Username</label>
                                                             <div class="col-md-8">
@@ -264,7 +264,7 @@ include "backend/functions.php";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-4 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="horizontal-form-4">Nick Name</label>
                                                             <div class="col-md-8">
@@ -272,7 +272,7 @@ include "backend/functions.php";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-4 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="horizontal-form-4">Nick Name</label>
                                                             <div class="col-md-8">
