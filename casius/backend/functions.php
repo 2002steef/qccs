@@ -172,8 +172,8 @@ function klantModal()
     }
     if (isset($_POST['updateKlant'])) {
 
-        $voornaam = ucfirst($_POST['voornaam']);
-        $straatnaam = ucfirst($_POST['street']);
+        $voornaam = ucfirst($_POST['Voornaam']);
+        $straatnaam = ucfirst($_POST['straatnaam']);
 
         $query = "UPDATE `klanten` SET `Voornaam`=?,`Tussenvoegsel`=?,
            `Achternaam`=?,`Email`=?,`Telefoonnummer`=?,`straat`=?,`postcode`=?
