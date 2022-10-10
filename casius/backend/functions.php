@@ -25,7 +25,7 @@ function klantInfoTabel()
         <tr>
         <td><?= $klant["klant_ID"] ?></td>
             <td><?=$klant["Voornaam"]?> <?=$klant["Tussenvoegsel"]?> <?=$klant["Achternaam"]?></td>
-            <td class="td-width"><?= $klant["notities"] ?></td>
+            <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
             <td><a class="btn btn-outline-light-gray" href="#<?= $klant["klant_ID"] ?>">
                     Meer info
                 </a>
