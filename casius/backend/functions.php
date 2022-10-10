@@ -138,7 +138,7 @@ function klantModal()
                                                             <div class="form-group row">
                                                                 <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                                 <div class="col-md-8">
-                                                                    <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="phone-number">
+                                                                    <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -146,7 +146,7 @@ function klantModal()
                                                             <div class="form-group row">
                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
                                                                 <div class="col-md-9">
-                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="comment3"><?= $klant["notities"] ?></textarea>
+                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -195,6 +195,11 @@ function klantModal()
             $_POST["klantID"]
         );
         $stmt->execute();
+        if($stmt->num_rows < 1){
+            var_dump($voornaam,$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"],$_POST["telefoonnummer"]
+            ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$_POST["toevoeging"],$_POST["notities"]
+            );
+        }
         header("Location:overzicht.php");
     }
 }
