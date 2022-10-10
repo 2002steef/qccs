@@ -278,8 +278,8 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                                 <div class="col-md-8">
-                                                                    <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["Voornaam"] ?>" id="Voornaam" name="Voornaam">
+                                                                    <input type="hidden" class="form-control square" id="klant_ID" name="klantID">
+                                                                    <input type="text" class="form-control square"  id="Voornaam" name="Voornaam">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -287,7 +287,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
                                                                 <div class="col-md-5">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["Tussenvoegsel"] ?>" id="tussenvoegsel" name="tussenvoegsel">
+                                                                    <input type="text" class="form-control square"id="tussenvoegsel" name="tussenvoegsel">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -295,7 +295,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
                                                                 <div class="col-md-6">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["Achternaam"] ?>" id="achternaam" name="achternaam">
+                                                                    <input type="text" class="form-control square"  id="achternaam" name="achternaam">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -305,7 +305,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
                                                                 <div class="col-md-4">
-                                                                    <input type="text" value="<?= $klant["huisnummer"] ?>" class="form-control square" id="huisnummer" name="huisnummer">
+                                                                    <input type="text"class="form-control square" id="huisnummer" name="huisnummer">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -313,7 +313,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
                                                                 <div class="col-md-5">
-                                                                    <input type="text" value="<?= $klant["huisnummerToevoeging"] ?>" class="form-control square" id="toevoeging" name="toevoeging">
+                                                                    <input type="text" class="form-control square" id="toevoeging" name="toevoeging">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -321,7 +321,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
                                                                 <div class="col-md-8">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["straat"] ?>" id="straatnaam" name="straatnaam">
+                                                                    <input type="text" class="form-control square"id="straatnaam" name="straatnaam">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -329,7 +329,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
                                                                 <div class="col-md-7">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["postcode"] ?>" id="postcode" name="postcode">
+                                                                    <input type="text" class="form-control square"id="postcode" name="postcode">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -339,7 +339,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
                                                                 <div class="col-md-8">
-                                                                    <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="email">
+                                                                    <input type="email"  class="form-control square" id="horizontal-form-5" name="email">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
@@ -351,7 +351,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                                 <div class="col-md-8">
-                                                                    <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
+                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="telefoonnummer">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -359,7 +359,7 @@ $klant = klantInfo();
                                                             <div class="form-group row">
                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
                                                                 <div class="col-md-9">
-                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
+                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
