@@ -45,9 +45,9 @@ include "backend/functions.php";
                                 <h4 class="card-title">Casius</h4>
 
                                 <ul class="breadcrumb bg-transparent">
-                                    <li class="breadcrumb-item"><a class="text light-gray" href="#">Home</a></li>
-                                    <li class="breadcrumb-item"><a class="text light-gray" href="bedrijfs_overzicht.php">Relaties</a></li>
-                                    <li class="breadcrumb-item"><a class="text light-gray" href="#">Klanten overzicht</a></li>
+                                    <li class="breadcrumb-item"><a class="text text-light-gray" href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text text-light-gray" href="bedrijfs_overzicht.php">Relaties</a></li>
+                                    <li class="breadcrumb-item"><a class="text text-light-gray" href="#">Klanten overzicht</a></li>
                                 </ul>
                             </div>
 
@@ -58,19 +58,13 @@ include "backend/functions.php";
                                             <li class="nav-item active">
                                                 <a href="#Abonnementhouders" role="tab" id="Abonnementhouders-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="Abonnementhouders" aria-selected="true">
                                                     <i class="ft-user mr-1"></i>
-                                                    <span class="d-none d-sm-block light-gray">Klanten</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#Masseurs" role="tab" id="Masseurs-tab" class="nav-link d-flex align-items-center " data-toggle="tab" aria-controls="Masseurs" aria-selected="false">
-                                                    <i class="ft-info mr-1"></i>
-                                                    <span class="d-none d-sm-block light-gray">Masseurs</span>
+                                                    <span class="d-none d-sm-block text-light-gray">Klanten</span>
                                                 </a>
                                             </li>
                                             <li class="nav-tabs">
                                                 <a type="button" class="nav-link d-flex align-items-end" data-toggle="modal" data-target="#large">
                                                     <i class="ft-plus mr-1"></i>
-                                                    <span class="d-none d-sm-block light-gray">Toevoegen</span>
+                                                    <span class="d-none d-sm-block text-light-gray">Toevoegen</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -108,7 +102,7 @@ include "backend/functions.php";
                                                                 }
                                                                 ?>
                                                             </div>
-                                                            <table class="table table-striped table-bordered file-export light-gray">
+                                                            <table class="table table-striped table-bordered file-export text-light-gray">
                                                                 <thead>
                                                                     <tr>
                                                                         <th colspan="1">ID</th>
