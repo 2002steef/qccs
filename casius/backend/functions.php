@@ -143,7 +143,7 @@ function klantModal(){
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
                                                             <div class="col-md-9">
-                                                                <textarea id="horizontal-form-9" rows="6" placeholder="<?= $klant["notities"] ?>" class="form-control square" name="comment3"></textarea>
+                                                                <textarea id="horizontal-form-9" rows="6"  class="form-control square" name="comment3"><?= $klant["notities"] ?>"</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
