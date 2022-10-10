@@ -1,5 +1,6 @@
+<!-- login functie -->
 <?php
-
+session_start();
 include "db.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $mysqli;
@@ -28,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     //                $row = $stmt->get_result();
                     // Verification success! User has logged-in!
                     // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
-                    session_start();
                     session_regenerate_id();
                     $_SESSION['loggedin'] = true;
                     $_SESSION['name'] = $username;
