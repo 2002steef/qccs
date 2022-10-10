@@ -33,10 +33,10 @@ include "header.php";
                     <ul class="navbar-nav">
                         <li class="i18n-dropdown dropdown nav-item mr-2"><a class="nav-link d-flex align-items-center dropdown-toggle dropdown-language" id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img class="langimg selected-flag" src="app-assets/img/flags/nl.png" alt="flag"><span class="selected-language d-md-flex d-none light-gray">Nederlands</span></a>
                             <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag">
-                            <a class="dropdown-item" href="javascript:;" data-language="en"><img class="langimg mr-2" src="app-assets/img/flags/us.png" alt="flag"><span class="font-small-3 light-gray">English</span></a>
-                            <a class="dropdown-item" href="javascript:;" data-language="es"><img class="langimg mr-2" src="app-assets/img/flags/nl.png" alt="flag"><span class="font-small-3 light-gray">Nederlands</span></a>
-                            <a class="dropdown-item" href="javascript:;" data-language="pt"><img class="langimg mr-2" src="app-assets/img/flags/pt.png" alt="flag"><span class="font-small-3 light-gray">Portuguese</span></a>
-                            <a class="dropdown-item" href="javascript:;" data-language="de"><img class="langimg mr-2" src="assets/img/flags/de.png" alt="flag"><span class="font-small-3 light-gray">German</span></a></div>
+                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="en"><img class="langimg mr-2" src="app-assets/img/flags/us.png" alt="flag"><span class="font-small-3 light-gray">English</span></a>
+                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="es"><img class="langimg mr-2" src="app-assets/img/flags/nl.png" alt="flag"><span class="font-small-3 light-gray">Nederlands</span></a>
+                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="pt"><img class="langimg mr-2" src="app-assets/img/flags/pt.png" alt="flag"><span class="font-small-3 light-gray">Portuguese</span></a>
+                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="de"><img class="langimg mr-2" src="assets/img/flags/de.png" alt="flag"><span class="font-small-3 light-gray">German</span></a></div>
                         </li>
                         <li class="dropdown nav-item mr-1"><a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                                 <div class="user d-md-flex d-none mr-2"><span class="text-right text-light-gray">Jerry</span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
