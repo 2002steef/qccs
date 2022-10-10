@@ -45,17 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         setcookie("password", "");
                         echo "Cookies Not Set";
                     }
-                    // echo "Je bent ingelogd";
-                    // if (!empty($googlecode)) {
-                    //     header("Location: ../googlecode.php");
-                    //     //header("Location: ../device_confirmations.php");
-
-                    // } else {
-                    if ($_SESSION['status'] == "medewerker") {
-                        header("Location:pages/overzicht.php");
-                    }
-
-                    // }
+                    header("Location:pages/overzicht.php");
                 } else {
                     // Incorrect password
                     //                $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
