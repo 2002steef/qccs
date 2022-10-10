@@ -112,6 +112,9 @@ include "backend/functions.php";
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    <?php
+                                                                    klantInfoTabel();
+                                                                    ?>
                                                                 </tbody>
                                                             </table>
                                                         </div>
