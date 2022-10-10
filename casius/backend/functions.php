@@ -195,5 +195,6 @@ function klantModal()
             $_POST["klantID"]
         );
         $stmt->execute();
+        header("Location:overzicht.php");
     }
 }
