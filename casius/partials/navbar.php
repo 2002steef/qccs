@@ -78,7 +78,7 @@ include "header.php";
                 <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation">
                     <li class=" nav-item">
                         <a href="https://pixinvent.com/apex-angular-4-bootstrap-admin-template/html-documentation" target="_blank">
-                            <i class="ft-book light-gray"></i>
+                            <i class="ft-book text-light-gray"></i>
                             <span class="menu-title text-light-gray" data-i18n="Documentation">Documentation</span>
                         </a>
                     </li>
