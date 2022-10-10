@@ -105,7 +105,7 @@ function klantModal(){
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" class="form-control square"value="<?= $klant["straatnaam"] ?>" id="straatnaam" name="straatnaam">
+                                                                <input type="text" class="form-control square"value="<?= $klant["straat"] ?>" id="straatnaam" name="straatnaam">
                                                             </div>
                                                         </div>
                                                     </div>
