@@ -211,7 +211,7 @@ include "backend/functions.php";
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
     <div class="col-lg-3 col-md-6 col-12">
-            <!-- Modal -->
+        <!-- Modal -->
         <div class="modal fade text-left" id="xlarge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -222,12 +222,91 @@ include "backend/functions.php";
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h5>Check First Paragraph</h5>
-                        <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                        <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                        <hr>
-                        <h5>Some More Text</h5>
-                        <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
+     <!-- Horizontal Form Layout starts -->
+                        <div class="row match-height">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Horizontal Form</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-1">First Name</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control square" id="horizontal-form-1" name="first-name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-2">Last Name</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-md-3">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-3">Username</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control square" id="horizontal-form-3" name="username">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-4">Nick Name</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-5">Email</label>
+                                                            <div class="col-md-9">
+                                                                <input type="email" class="form-control square" id="horizontal-form-5" name="e-mail">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-6">Website</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control square" id="horizontal-form-6" name="website">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-7">Contact Number</label>
+                                                            <div class="col-md-9">
+                                                                <input type="number" class="form-control square" id="horizontal-form-7" name="phone-number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-9">About Project</label>
+                                                            <div class="col-md-9">
+                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="comment3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary mr-2"><i class="ft-check-square mr-1"></i>Save</button>
+                                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- Horizontal Form Layout ends -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
