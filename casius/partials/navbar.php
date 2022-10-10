@@ -39,18 +39,18 @@ include "header.php";
                             <a class="dropdown-item" href="javascript:;" data-language="de"><img class="langimg mr-2" src="assets/img/flags/de.png" alt="flag"><span class="font-small-3 light-gray">German</span></a></div>
                         </li>
                         <li class="dropdown nav-item mr-1"><a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
-                                <div class="user d-md-flex d-none mr-2"><span class="text-right light-gray">Jerry</span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
+                                <div class="user d-md-flex d-none mr-2"><span class="text-right text-light-gray">Jerry</span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
 
                                 <img class="avatar" src="app-assets/img/jerry.jpg" alt="avatar" height="35" width="35">
 
                             </a>
 
                             <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
-                                    <div class="d-flex align-items-center"><i class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>
+                                    <div class="d-flex align-items-center"><i class="ft-edit mr-2 text-light-gray"></i><span>Profiel settings</span></div>
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="backend/logout.php">
-                                    <div class="d-flex align-items-center light-gray"><i class="ft-power mr-2"></i><span>Logout</span>
+                                    <div class="d-flex align-items-center text-light-gray"><i class="ft-power mr-2"></i><span>Logout</span>
                                     </div>
                                 </a>
                             </div>
@@ -79,20 +79,20 @@ include "header.php";
                     <li class=" nav-item">
                         <a href="https://pixinvent.com/apex-angular-4-bootstrap-admin-template/html-documentation" target="_blank">
                             <i class="ft-book light-gray"></i>
-                            <span class="menu-title light-gray" data-i18n="Documentation">Documentation</span>
+                            <span class="menu-title text-light-gray" data-i18n="Documentation">Documentation</span>
                         </a>
                     </li>
                     <li class="nav-item ">
 
                         <a href="overzicht.php">
-                            <i class="ft-user light-gray"></i>
-                            <span class="menu-title light-gray" data-i18n="Masseuses">Overzicht</span>
+                            <i class="ft-user text-light-gray"></i>
+                            <span class="menu-title text-light-gray" data-i18n="Masseuses">Overzicht</span>
                         </a>
                     </li>
                     <li>
-                        <a class="light-gray" href="account_settings.php/user_ID=<?= $_SESSION["id"] ?>">
-                            <i class="ft-settings light-gray"></i>
-                            <span class=" menu-title text light-gray">Account Settings</span>
+                        <a class="text-light-gray" href="account_settings.php/user_ID=<?= $_SESSION["id"] ?>">
+                            <i class="ft-settings text-light-gray"></i>
+                            <span class=" menu-title text text-light-gray">Account Settings</span>
                         </a>
                     </li>
                 </ul>
