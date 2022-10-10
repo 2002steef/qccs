@@ -28,7 +28,7 @@ include "partials/header.php";
                                         <div class="card-body auth-img">
                                             <div class="row m-0">
                                                 <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center auth-img-bg p-3">
-                                                    <img src="assets/img/logo2.png" alt="" class="img-fluid" width="300" height="230">
+                                                    <img src="app-assets/img/logo_qccs.png" alt="" class="img-fluid" width="300" height="230">
                                                 </div>
                                                 <div class="col-lg-6 col-12 px-4 py-3">
                                                     <h4 class="mb-2 card-title">Login</h4>
