@@ -45,9 +45,9 @@
                                 <h4 class="card-title">Casius</h4>
 
                                 <ul class="breadcrumb bg-transparent">
-                                    <li class="breadcrumb-item"><a class="text-light-gray" href="#">Home</a></li>
-                                    <li class="breadcrumb-item"><a class="text-light-gray" href="bedrijfs_overzicht.php">Relaties</a></li>
-                                    <li class="breadcrumb-item"><a class="text-light-gray" href="#">Klanten overzicht</a></li>
+                                    <li class="breadcrumb-item"><a class="text light-gray" href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text light-gray" href="bedrijfs_overzicht.php">Relaties</a></li>
+                                    <li class="breadcrumb-item"><a class="text light-gray" href="#">Klanten overzicht</a></li>
                                 </ul>
                             </div>
 
