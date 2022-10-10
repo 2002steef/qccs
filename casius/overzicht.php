@@ -128,7 +128,7 @@ $klant = klantInfo();
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade mt-2 show active" id="ParticuliereKlanten" role="tabpanel" aria-labelledby="account-tab">
+                                            <div class="tab-pane fade mt-2  " id="ParticuliereKlanten" role="tabpanel" aria-labelledby="account-tab">
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="table-responsive">
