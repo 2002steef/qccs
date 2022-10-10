@@ -256,15 +256,7 @@ $klant = klantInfo();
                                                     </div>
                                                 </div>
                                                 <div class="row mb-md-3">
-                                                    <div class="col-md-2 col-12">
-                                                        <div class="form-group row">
-                                                            <label class="col-md-7 col-form-label" for="horizontal-form-3">Postcode</label>
-                                                            <div class="col-md-5">
-                                                                <input type="text" class="form-control square" id="horizontal-form-3" name="username">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 col-12">
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-7 col-form-label" for="horizontal-form-4">Huisnummer</label>
                                                             <div class="col-md-5">
@@ -272,7 +264,7 @@ $klant = klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 col-12">
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-7 col-form-label" for="horizontal-form-4">Huisnummer toevoeging</label>
                                                             <div class="col-md-5">
@@ -280,11 +272,19 @@ $klant = klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-3 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-5 col-form-label" for="horizontal-form-4">Straatnaam</label>
-                                                            <div class="col-md-7">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-4">Straatnaam</label>
+                                                            <div class="col-md-8">
                                                                 <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-3">Postcode</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control square" id="horizontal-form-3" name="username">
                                                             </div>
                                                         </div>
                                                     </div>
