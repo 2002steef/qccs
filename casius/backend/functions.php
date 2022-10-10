@@ -26,14 +26,23 @@ function klantInfoTabel()
             <td><?= $klant["klant_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" href="#">
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" href="#<?= $klant["klant_ID"]?>" >
                     Meer info
                 </a>
             </td>
         </tr>
-        </tbody>
-        </table>
-        <div class="modal fade text-left" id="klantInfo<?= $klant["klant_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+<?php }
+}
+
+function klantModal(){
+    global $mysqli;
+    $DataMasseuse = "SELECT * FROM `klanten` WHERE `klant_ID` = ? ";
+    $stmt = $mysqli->prepare($DataMasseuse);
+    $stmt->bind_param("s", $_GET["klant_ID"]);
+    $stmt->execute();
+    $resultKlant = $stmt->get_result();
+    while ($klant = $resultKlant->fetch_array()) {?>
+<div class="modal fade text-left" id="klantInfo<?= $klant["klant_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -156,5 +165,6 @@ function klantInfoTabel()
                 </div>
             </div>
         </div>
-<?php }
+        <?php
+    }
 }

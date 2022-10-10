@@ -2,6 +2,7 @@
 <?php
 include "backend/functions.php";
 $klant = klantInfo();
+klantModal();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -115,6 +116,8 @@ $klant = klantInfo();
                                                                     <?php
                                                                     klantInfoTabel();
                                                                     ?>
+                                                                </tbody>
+                                                            </table>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -210,7 +213,7 @@ $klant = klantInfo();
     <div class="drag-target"></div>
     <div class="col-lg-3 col-md-6 col-12">
         <!-- Modal -->
-       
+
     </div>
     <?php
     include "partials/footer.php";
