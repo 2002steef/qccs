@@ -272,6 +272,14 @@ include "backend/functions.php";
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-4">Nick Name</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6 col-12">
