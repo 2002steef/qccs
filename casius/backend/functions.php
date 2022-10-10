@@ -126,7 +126,7 @@ function klantModal()
                                                             <div class="form-group row">
                                                                 <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
                                                                 <div class="col-md-8">
-                                                                    <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="e-mail">
+                                                                    <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="email">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
