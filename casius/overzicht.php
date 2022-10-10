@@ -212,7 +212,7 @@ $klant = klantInfo();
     <div class="drag-target"></div>
     <div class="col-lg-3 col-md-6 col-12">
         <!-- Modal -->
-        <div class="modal fade text-left" id="xlarge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+        <div class="modal fade text-left" id="klantInfo<?= $klant["klant_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -306,7 +306,7 @@ $klant = klantInfo();
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                             <div class="col-md-8">
-                                                                <input type="number" value="<?= $klant["Telefoonnummer"] ?>"  class="form-control square" id="horizontal-form-7" name="phone-number">
+                                                                <input type="text" value="<?= $klant["Telefoonnummer"] ?>"  class="form-control square" id="horizontal-form-7" name="phone-number">
                                                             </div>
                                                         </div>
                                                     </div>
