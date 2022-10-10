@@ -31,25 +31,28 @@ include "header.php";
             <div class="navbar-container">
                 <div class="collapse navbar-collapse d-block" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="i18n-dropdown dropdown nav-item mr-2"><a class="nav-link d-flex align-items-center dropdown-toggle dropdown-language" id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img class="langimg selected-flag" src="assets/img/flags/nl.png" alt="flag"><span class="selected-language d-md-flex d-none light-gray">Nederlands</span></a>
-                            <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="javascript:;" data-language="en"><img class="langimg mr-2" src="../assets/img/flags/us.png" alt="flag"><span class="font-small-3 light-gray">English</span></a><a class="dropdown-item" href="javascript:;" data-language="es"><img class="langimg mr-2" src="../assets/img/flags/nl.png" alt="flag"><span class="font-small-3 light-gray">Nederlands</span></a><a class="dropdown-item" href="javascript:;" data-language="pt"><img class="langimg mr-2" src="../assets/img/flags/pt.png" alt="flag"><span class="font-small-3 light-gray">Portuguese</span></a><a class="dropdown-item" href="javascript:;" data-language="de"><img class="langimg mr-2" src="../assets/img/flags/de.png" alt="flag"><span class="font-small-3 light-gray">German</span></a></div>
+                        <li class="i18n-dropdown dropdown nav-item mr-2"><a class="nav-link d-flex align-items-center dropdown-toggle dropdown-language" id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img class="langimg selected-flag" src="../app-assets/img/flags/nl.png" alt="flag"><span class="selected-language d-md-flex d-none light-gray">Nederlands</span></a>
+                            <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="javascript:;" data-language="en"><img class="langimg mr-2" src="../app-assets/img/flags/us.png" alt="flag"><span class="font-small-3 light-gray">English</span></a>
+                            <a class="dropdown-item" href="javascript:;" data-language="es"><img class="langimg mr-2" src="../app-assets/img/flags/nl.png" alt="flag"><span class="font-small-3 light-gray">Nederlands</span></a>
+                            <a class="dropdown-item" href="javascript:;" data-language="pt"><img class="langimg mr-2" src="../app-assets/img/flags/pt.png" alt="flag"><span class="font-small-3 light-gray">Portuguese</span></a>
+                            <a class="dropdown-item" href="javascript:;" data-language="de"><img class="langimg mr-2" src="../assets/img/flags/de.png" alt="flag"><span class="font-small-3 light-gray">German</span></a></div>
                         </li>
                         <li class="dropdown nav-item mr-1"><a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                                 <div class="user d-md-flex d-none mr-2"><span class="text-right light-gray">Jerry</span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
-                   
-                                    <img class="avatar" src="app-assets/img/jerry.jpg" alt="avatar" height="35" width="35">
-                               
+
+                                <img class="avatar" src="app-assets/img/jerry.jpg" alt="avatar" height="35" width="35">
+
                             </a>
-                        
-                                        <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
-                                                    <div class="d-flex align-items-center"><i class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>
-                                                    </a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="backend/logout.php">
-                                                        <div class="d-flex align-items-center light-gray"><i class="ft-power mr-2"></i><span>Logout</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
+
+                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
+                                    <div class="d-flex align-items-center"><i class="ft-edit mr-2 light-gray"></i><span>Profiel settings</span></div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="backend/logout.php">
+                                    <div class="d-flex align-items-center light-gray"><i class="ft-power mr-2"></i><span>Logout</span>
+                                    </div>
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -79,11 +82,11 @@ include "header.php";
                         </a>
                     </li>
                     <li class="nav-item ">
-                    
-                                <a href="overzicht.php">
-                                    <i class="ft-user light-gray"></i>
-                                    <span class="menu-title light-gray" data-i18n="Masseuses">Overzicht</span>
-                                </a>
+
+                        <a href="overzicht.php">
+                            <i class="ft-user light-gray"></i>
+                            <span class="menu-title light-gray" data-i18n="Masseuses">Overzicht</span>
+                        </a>
                     </li>
                     <li>
                         <a class="light-gray" href="account_settings.php/user_ID=<?= $_SESSION["id"] ?>">
