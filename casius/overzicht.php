@@ -222,28 +222,36 @@ include "backend/functions.php";
                         </button>
                     </div>
                     <div class="modal-body">
-     <!-- Horizontal Form Layout starts -->
-                        <div class="row match-height">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Horizontal Form</h4>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-body">
-                                            <form>
+                        <!-- Horizontal Form Layout starts -->
+                        <form method="POST" >
+                            <div class="row match-height">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Klantgegevens</h4>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-1">First Name</label>
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-1">Voornaam</label>
                                                             <div class="col-md-9">
                                                                 <input type="text" class="form-control square" id="horizontal-form-1" name="first-name">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-4 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label" for="horizontal-form-2">Last Name</label>
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-2">Tussenvoegsel</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-2">Achternaam</label>
                                                             <div class="col-md-9">
                                                                 <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
                                                             </div>
@@ -298,15 +306,14 @@ include "backend/functions.php";
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="btn btn-primary mr-2"><i class="ft-check-square mr-1"></i>Save</button>
-                                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
-                                            </form>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <!-- Horizontal Form Layout ends -->
+                        </form>
+                        <!-- Horizontal Form Layout ends -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
