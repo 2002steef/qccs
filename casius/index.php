@@ -1,6 +1,9 @@
 <!-- Login pagina -->
 <?php 
 include "partials/header.php";
+include "backend/fnctLogin.php";
+
+
 ?>
 
 <!-- BEGIN : Body-->
