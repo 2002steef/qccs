@@ -40,6 +40,7 @@ include "backend/fnctLogin.php";
                                                                     <label for="auth-ligin"><span>Remember Me</span></label>
                                                                 </div>
                                                             </div>
+                                                            <hr>
                                                             <a href="auth-forgot-password.html">Wachtwoord Vergeten?</a>
                                                         </div>
                                                         <div class="d-flex justify-content-between flex-sm-row flex-column">
