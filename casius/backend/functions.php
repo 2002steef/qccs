@@ -26,22 +26,23 @@ function klantInfoTabel()
             <td><?= $klant["klant_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" href="#" >
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" href="#">
                     Meer info
                 </a>
             </td>
         </tr>
-<?php }
+    <?php }
 }
 
-function klantModal(){
+function klantModal()
+{
     global $mysqli;
     $DataKlant = "SELECT * FROM `klanten` WHERE `klant_ID` ";
     $stmt = $mysqli->prepare($DataKlant);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
-    while ($klant = $resultKlant->fetch_array()) {?>
-<div class="modal fade text-left" id="klantInfo<?= $klant["klant_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+    while ($klant = $resultKlant->fetch_array()) { ?>
+        <div class="modal fade text-left" id="klantInfo<?= $klant["klant_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -63,6 +64,7 @@ function klantModal(){
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                             <div class="col-md-8">
+                                                                <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
                                                                 <input type="text" class="form-control square" value="<?= $klant["Voornaam"] ?>" id="Voornaam" name="Voornaam">
                                                             </div>
                                                         </div>
@@ -105,7 +107,7 @@ function klantModal(){
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" class="form-control square"value="<?= $klant["straat"] ?>" id="straatnaam" name="straatnaam">
+                                                                <input type="text" class="form-control square" value="<?= $klant["straat"] ?>" id="straatnaam" name="straatnaam">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -143,7 +145,7 @@ function klantModal(){
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
                                                             <div class="col-md-9">
-                                                                <textarea id="horizontal-form-9" rows="6"  class="form-control square" name="comment3"><?= $klant["notities"] ?></textarea>
+                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="comment3"><?= $klant["notities"] ?></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -159,11 +161,37 @@ function klantModal(){
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="submit" name="updateKlant" class="btn btn-outline-light-gray">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
-        <?php
+<?php
+    }
+    if (isset($_POST['updateKlant'])) {
+
+        $voornaam = ucfirst($_POST['name']);
+        $straatnaam = ucfirst($_POST['street']);
+
+        $query = "UPDATE `klanten` SET `Voornaam`=?,`Tussenvoegsel`=?,
+           `Achternaam`=?,`Email`=?,`Telefoonnummer`=?,`straat`=?,`postcode`=?
+           ,`huisnummer`=?,`huisnummerToevoeging`=?,`notities`=?
+           WHERE id = ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param(
+            'ssssssssssi',
+            $voornaam,
+            $_POST["tussenvoegsel"],
+            $_POST["achternaam"],
+            $_POST["email"],
+            $_POST["telefoonnummer"],
+            $straatnaam,
+            $_POST["postcode"],
+            $_POST["huisnummer"],
+            $_POST["toevoeging"],
+            $_POST["notities"],
+            $_POST["klantID"]
+        );
+        $stmt->execute();
     }
 }
