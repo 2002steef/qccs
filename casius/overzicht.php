@@ -115,8 +115,6 @@ $klant = klantInfo();
                                                                     <?php
                                                                     klantInfoTabel();
                                                                     ?>
-                                                                </tbody>
-                                                            </table>
                                                         </div>
                                                     </div>
                                                 </div>

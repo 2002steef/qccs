@@ -23,14 +23,16 @@ function klantInfoTabel()
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) { ?>
         <tr>
-        <td><?= $klant["klant_ID"] ?></td>
-            <td><?=$klant["Voornaam"]?> <?=$klant["Tussenvoegsel"]?> <?=$klant["Achternaam"]?></td>
+            <td><?= $klant["klant_ID"] ?></td>
+            <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
             <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" href="#">
                     Meer info
                 </a>
             </td>
         </tr>
+        </tbody>
+        </table>
         <div class="modal fade text-left" id="klantInfo<?= $klant["klant_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -42,7 +44,7 @@ function klantInfoTabel()
                     </div>
                     <div class="modal-body">
                         <!-- Horizontal Form Layout starts -->
-                        <form method="POST" >
+                        <form method="POST">
                             <div class="row match-height">
                                 <div class="col-12">
                                     <div class="card">
@@ -125,7 +127,7 @@ function klantInfoTabel()
                                                         <div class="form-group row">
                                                             <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                             <div class="col-md-8">
-                                                                <input type="text" value="<?= $klant["Telefoonnummer"] ?>"  class="form-control square" id="horizontal-form-7" name="phone-number">
+                                                                <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="phone-number">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -154,6 +156,5 @@ function klantInfoTabel()
                 </div>
             </div>
         </div>
-    <?php }
-
+<?php }
 }
