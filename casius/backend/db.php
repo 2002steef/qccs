@@ -1,3 +1,5 @@
+<!-- database connectie -->
+
 <?php
 $servername = "localhost";
 $username = "admin_casius";

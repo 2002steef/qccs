@@ -1,3 +1,4 @@
+<!-- Login pagina -->
 <?php 
 include "partials/header.php";
 ?>
