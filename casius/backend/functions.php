@@ -87,17 +87,17 @@ function klantModal(){
                                                 <div class="row mb-md-3">
                                                     <div class="col-md-3 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-8 col-form-label" for="horizontal-form-4">Huisnummer</label>
+                                                            <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
                                                             <div class="col-md-4">
-                                                                <input type="text" value="<?= $klant["huisnummer"] ?>" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                                <input type="text" value="<?= $klant["huisnummer"] ?>" class="form-control square" id="huisnummer" name="huisnummer">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 col-12">
                                                         <div class="form-group row">
-                                                            <label class="col-md-7 col-form-label" for="horizontal-form-4">Huisnummer toevoeging</label>
+                                                            <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
                                                             <div class="col-md-5">
-                                                                <input type="text" value="<?= $klant["huisnummerToevoeging"] ?>" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                                <input type="text" value="<?= $klant["huisnummerToevoeging"] ?>" class="form-control square" id="toevoeging" name="toevoeging">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -143,7 +143,7 @@ function klantModal(){
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
                                                             <div class="col-md-9">
-                                                                <textarea id="horizontal-form-9" rows="6"  class="form-control square" name="comment3"><?= $klant["notities"] ?>"</textarea>
+                                                                <textarea id="horizontal-form-9" rows="6"  class="form-control square" name="comment3"><?= $klant["notities"] ?></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
