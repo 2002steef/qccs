@@ -256,16 +256,7 @@ $klant = klantInfo();
                                                 </li>
                                             </ul>
                                             <form action="" method="POST">
-            <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel16">Klant gegevens</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
+           
                             <!-- Horizontal Form Layout starts -->
                             <form method="POST">
                                 <div class="row match-height">
@@ -364,7 +355,6 @@ $klant = klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
