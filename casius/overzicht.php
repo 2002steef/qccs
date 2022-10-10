@@ -1,6 +1,6 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
-// Controleer of iemand ingelogd is
+include "backend/functions.php";
 
 ?>
 <!DOCTYPE html>

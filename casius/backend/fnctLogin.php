@@ -1,7 +1,7 @@
 <!-- login functie -->
 <?php
 session_start();
-include "db.php";
+include "functions.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $mysqli;
     if (!isset($_POST['email'], $_POST['wachtwoord'])) {
