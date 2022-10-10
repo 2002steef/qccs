@@ -9,9 +9,9 @@
     <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Login Page - Apex responsive bootstrap 4 admin template</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../app-assets/img/ico/favicon.ico">
-    <link rel="shortcut icon" type="image/png" href="../app-assets/img/ico/favicon-32.png">
+    <title>Casius</title>
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/img/logo_qccs.png">
+    <link rel="shortcut icon" type="image/png" href="app-assets/img/logo_qccs.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
