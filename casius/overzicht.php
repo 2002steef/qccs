@@ -54,7 +54,7 @@ include "backend/functions.php";
                             <div class="card-content">
                                 <div class="card-body">
                                     <section id="file-export">
-                                        <ul class="nav nav-tabs" role="tablist" id="tabs">
+                                        <ul class="nav nav-tabs text-light-gray" role="tablist" id="tabs">
                                             <li class="nav-item active">
                                                 <a href="#Abonnementhouders" role="tab" id="Abonnementhouders-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="Abonnementhouders" aria-selected="true">
                                                     <i class="ft-user mr-1"></i>
