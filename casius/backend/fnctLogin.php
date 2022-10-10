@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         setcookie("password", "");
                         echo "Cookies Not Set";
                     }
-                    header("Location:../pages/overzicht.php");
+                    header("Location:../overzicht.php");
                 } else {
                     // Incorrect password
                     //                $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
