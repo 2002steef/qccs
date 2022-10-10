@@ -264,7 +264,7 @@ $klant = klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-1 col-12">
+                                                    <div class="col-md-2 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-7 col-form-label" for="horizontal-form-4">Huisnummer</label>
                                                             <div class="col-md-5">
@@ -280,7 +280,7 @@ $klant = klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-7 col-12">
+                                                    <div class="col-md-6 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-5 col-form-label" for="horizontal-form-4">Straatnaam</label>
                                                             <div class="col-md-7">
