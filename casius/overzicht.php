@@ -63,7 +63,7 @@ $klant = klantInfo();
                                                 </a>
                                             </li>
                                             <li class="nav-item active">
-                                                <a href="#ParticuliereKlanten" role="tab" id="Particuliere-Klanten" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="ParticuliereKlanten" aria-selected="true">
+                                                <a href="#ParticuliereKlanten" role="tab" id="Particuliere-Klanten" class="nav-link d-flex align-items-center" data-toggle="tab" aria-controls="ParticuliereKlanten" aria-selected="true">
                                                     <i class="ft-user mr-1"></i>
                                                     <span class="d-none d-sm-block text-light-gray">Particuliere Klanten</span>
                                                 </a>
