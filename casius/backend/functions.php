@@ -195,7 +195,7 @@ function klantModal()
             $_POST["klantID"]
         );
         $stmt->execute();
-        if($stmt->num_rows < 1){
+        if($stmt->num_rows == 0){
             var_dump($voornaam,$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"],$_POST["telefoonnummer"]
             ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$_POST["toevoeging"],$_POST["notities"]
             );
