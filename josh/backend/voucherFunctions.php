@@ -68,7 +68,7 @@ if (isset($_POST['VoucherSturen'])) {
     }
 }
 
-if (isset($_POST['VoucherVerzilveren'])) {
+if   (isset($_POST['VoucherVerzilveren'])) {
     $servername = "localhost";
     $username = "relatietest";
     $password = "Rb4x4y7*3";
@@ -76,8 +76,9 @@ if (isset($_POST['VoucherVerzilveren'])) {
     $voucher = $_POST["voucherCode"];
     $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
+    $mysqli2 = new mysqli("$servername", "$username", "$password", "$db");
     $mysqli->query('SELECT * FROM vouchers WHERE masseuseID = '.$masseuseID.' && voucherCode ='.$voucher);
     if ($mysqli->num_rows > 0) {
-        $mysqli->query("UPDATE vouchers SET status = 0 WHERE masseuseID = ".$masseuseID." && voucherCode =".$voucher);
+        $mysqli2->query("UPDATE vouchers SET status = 0 WHERE masseuseID = ".$masseuseID." && voucherCode =".$voucher);
     }
 }
