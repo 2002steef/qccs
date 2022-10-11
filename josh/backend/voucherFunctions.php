@@ -76,9 +76,9 @@ if   (isset($_POST['VoucherVerzilveren'])) {
     $voucher = $_POST["voucherCode"];
     $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    $mysqli2 = new mysqli("$servername", "$username", "$password", "$db");
-    $mysqli->query('SELECT * FROM vouchers WHERE masseuseID = '.$masseuseID.' && voucherCode ='.$voucher);
+    $mysqli->query('SELECT * FROM vouchers WHERE masseuseID = '.$masseuseID.' && voucherCode ='."$voucher");
+    
     if ($mysqli->num_rows > 0) {
-        $mysqli2->query("UPDATE vouchers SET status = 0 WHERE masseuseID = ".$masseuseID." && voucherCode =".$voucher);
+        $mysqli->query("UPDATE vouchers SET status = 0 WHERE masseuseID = '".$masseuseID."' && voucherCode ='".$voucher."'");
     }
 }
