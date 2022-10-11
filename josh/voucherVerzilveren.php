@@ -102,7 +102,7 @@ include "backend/voucherFunctions.php";
                                                         
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
-                                                        <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherVerzilveren">Send Voucher</button>
+                                                        <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherVerzilveren">verzilver Voucher</button>
                                                     </div>
                                                 </form>
                                             </div>
