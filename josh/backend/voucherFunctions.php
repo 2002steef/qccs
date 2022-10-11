@@ -40,10 +40,10 @@ function GetUserInfo()
 }
 function InsertVoucher($voucher)
 {
-    $servername = "localhost";
-    $username = "relatietest";
-    $password = "Rb4x4y7*3";
-    $db = "test_relatiebeheer";
+    // $servername = "localhost";
+    // $username = "relatietest";
+    // $password = "Rb4x4y7*3";
+    // $db = "test_relatiebeheer";
     $userID = $_POST['medewerker'];
     $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
@@ -68,4 +68,12 @@ if (isset($_POST['VoucherSturen'])) {
     }
 }
 
-
+if (isset($_POST['VoucherVerzilveren'])) {
+    $voucher = $_POST["voucherCode"];
+    $masseuseID = $_POST['masseuse'];
+    $mysqli = new mysqli("$servername", "$username", "$password", "$db");
+    $mysqli->query('SELECT * FROM VOUCHERS WHERE masseuseID = '.$masseuseID.' && voucherCode ='.$voucher);
+    if ($mysqli->num_rows > 0) {
+        $mysqli->query("UPDATE 'voucher' SET status = 0 WHERE masseuseID = ".$masseuseID." && voucherCode =".$voucher);
+    }
+}
