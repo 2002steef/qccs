@@ -40,10 +40,10 @@ function GetUserInfo()
 }
 function InsertVoucher($voucher)
 {
-    // $servername = "localhost";
-    // $username = "relatietest";
-    // $password = "Rb4x4y7*3";
-    // $db = "test_relatiebeheer";
+    $servername = "localhost";
+    $username = "relatietest";
+    $password = "Rb4x4y7*3";
+    $db = "test_relatiebeheer";
     $userID = $_POST['medewerker'];
     $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
