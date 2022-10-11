@@ -69,6 +69,10 @@ if (isset($_POST['VoucherSturen'])) {
 }
 
 if (isset($_POST['VoucherVerzilveren'])) {
+    $servername = "localhost";
+    $username = "relatietest";
+    $password = "Rb4x4y7*3";
+    $db = "test_relatiebeheer";
     $voucher = $_POST["voucherCode"];
     $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
