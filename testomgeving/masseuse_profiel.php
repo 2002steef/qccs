@@ -132,9 +132,8 @@ include "partials/header.php";
                                                         </p>
                                                     </div>
                                                 </div>
+                                                <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right"> <span class="ft-edit">Bewerken</span></a>
                                             </div>
-                                            <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right"> <span class="ft-edit">Bewerken</span></a>
-
                                         </div>
                                         <!-- contact ends -->
                                     </div>
