@@ -103,11 +103,15 @@ include "partials/header.php";
                                         </div>
                                         <!-- Info ends -->
                                         <!-- contact starts -->
+<<<<<<< Updated upstream
                                         <div class="col-12">
                                             <div class="card" id="contactProfile">
+=======
+                                        <div class="col-12" id="contactProfile">
+                                            <div class="card">
+>>>>>>> Stashed changes
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">Contact</h4>
-                                                    <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body">
@@ -128,8 +132,10 @@ include "partials/header.php";
                                                             <br>
                                                             <?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?>
                                                             <br>
-                                                            <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?></p>
+                                                            <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?>
+                                                        </p>
                                                     </div>
+                                                    <a href="" data-target="modal" data-toggle="modal" class="btn btn-outline-light-gray align-right"> <span class="ft-edit"></span></a>
                                                 </div>
                                             </div>
                                         </div>
