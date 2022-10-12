@@ -1,8 +1,7 @@
 <?php
 include "backend/functions.php";
 $masseuse = GetMasseuse();
-MasseuseParagraafModal();
-MasseuseInfoModal();
+
 UpdateMasseuse();
 UpdateMasseuseParagraaf();
 
@@ -200,7 +199,8 @@ include "partials/header.php";
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
-   
+   MasseuseParagraafModal();
+   MasseuseInfoModal();
     include "partials/footer.php";
     ?>
 </body>
