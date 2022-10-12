@@ -109,39 +109,22 @@ include "partials/header.php";
                                                     <h4 class="card-title m-0">Contact</h4>
                                                     <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
-                                                <div class="card-content hidescroll">
-                                                    <div class="card-body scrolltext">
-                                                        <label for="editMasseuse">Voornaam & achternaam: </label>
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <label for="editMasseuse">Contact persoon </label>
                                                         <input type="text" id="editMasseuse" name="voornaam" class=" form-control-plaintext " readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <label for="">Telefoonnummer:</label>
                                                         <input type="text" id="editMasseuseTel" name="telefoon" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <label for="">Email:</label>
                                                         <input type="text" id="editMasseuseMail" name="email" class=" form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- contact ends -->
-
-                                        <!-- adress starts -->
-                                        <div class="col-12">
-                                            <div class="card" id="adressProfile">
-                                                <div class="card-header d-flex justify-content-between align-items-center">
-                                                    <h4 class="card-title m-0">Adress</h4>
-                                                    <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div class="card-body">
-                                                        <div class="m-0 ">
-                                                            <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
+                                                        <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                             <p><?= $masseuse["straat"] ." " .$masseuse["huisNummer"]." ".$masseuse["huisNummerToevoeging"]; ?></p>
                                                             <p><?= $masseuse["postcode"]." ".$masseuse["plaats"]; ?></p>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- adress ends -->
+                                        <!-- contact ends -->                
                                     </div>
                                 </div>
                                 <!-- 1st column ends -->
