@@ -40,3 +40,8 @@
     display: none;
     margin-left:  20px;
 }
+
+.overZichtTableHeader {
+    padding-left: 70px;
+    padding-right: 70px;
+}
