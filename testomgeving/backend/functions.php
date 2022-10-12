@@ -452,7 +452,7 @@ function UpdateMasseuse()
         `telefoon`=?,`straat`=?,`huisNummer`=?,`huisNummerToevoeging`=?,`postcode`=?,
         `plaats`=? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
-        $id = $_POST["masseuseID"];
+        $id = $_POST["id"];
         $stmt->bind_param(
             'sssssssssi',
             $_POST["voornaam"],
@@ -706,6 +706,7 @@ function MasseuseParagraafModal()
                     <div class="modal-body">
                         <form method="post">
                             <div class="">
+                                <input type="hidden" value="<?= $masseuse["masseuseID"]?>" name="masseuseID">
                                 <textarea type="text" id="editMasseuseParagraafje" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
                             </div>
                         </form>
