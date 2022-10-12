@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     // Incorrect password
                     //                $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
-                    header("Location:index.php?login=foutecombi");
+                    header("Location:../index.php?login=foutecombi");
                 }
             }
             $stmtMs->close();
