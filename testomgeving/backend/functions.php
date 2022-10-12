@@ -546,14 +546,13 @@ function masseuseInfo()
             <td><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
             <td class="td-width">
                 <h3>
-                    <span class="ft-tag"></span>
                     <?= $masseuse["bedrijfsNaam"] ?></h3>
                 <p><b>
-                    <span class="ft-users"></span>
-                    <?= $masseuse["voornaam"]; ?>
-                    <?= $masseuse["tussenvoegsel"]; ?>
-                    <?= $masseuse["achternaam"]; ?>
-                </b></p>
+                        <span class="ft-user"></span>
+                        <?= $masseuse["voornaam"]; ?>
+                        <?= $masseuse["tussenvoegsel"]; ?>
+                        <?= $masseuse["achternaam"]; ?>
+                    </b></p>
                 <p>
                     <span class="ft-home"></span>
                     <?= $masseuse["straat"]; ?>
@@ -563,6 +562,7 @@ function masseuseInfo()
                     <?= $masseuse["plaats"]; ?>
                 </p>
                 <div class="row">
+                    <span class="ft-tag"></span>
                     <div class="col">
                         1 of 5
                     </div>
@@ -664,16 +664,16 @@ function MasseuseInfoModal()
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
                                             <label for="users-edit-username">Voornaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Voornaam"  aria-invalid="false" name="voornaam" value="<?= $masseuse["voornaam"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Voornaam" aria-invalid="false" name="voornaam" value="<?= $masseuse["voornaam"] ?>">
                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="id">
                                         </div>
                                         <div class="controls">
                                             <label for="tussenvoegsel">Tussenvoegsel</label>
-                                            <input type="text" id="tussenvoegsel" class="form-control text-light-gray round"  placeholder="Tussenvoegsel" aria-invalid="false" name="tussenvoegsel" value="<?= $masseuse["tussenvoegsel"] ?>">
+                                            <input type="text" id="tussenvoegsel" class="form-control text-light-gray round" placeholder="Tussenvoegsel" aria-invalid="false" name="tussenvoegsel" value="<?= $masseuse["tussenvoegsel"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="achternaam">Achternaam</label>
-                                            <input type="text" id="achternaam" class="form-control text-light-gray round" placeholder="Achternaam"  aria-invalid="false" name="achternaam" value="<?= $masseuse["achternaam"] ?>">
+                                            <input type="text" id="achternaam" class="form-control text-light-gray round" placeholder="Achternaam" aria-invalid="false" name="achternaam" value="<?= $masseuse["achternaam"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -682,15 +682,15 @@ function MasseuseInfoModal()
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
                                             <label for="users-edit-username">Straatnaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Straatnaam"  aria-invalid="false" name="straatnaam" value="<?= $masseuse["straat"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Straatnaam" aria-invalid="false" name="straatnaam" value="<?= $masseuse["straat"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer"  aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                         <div class="controls ">
                                             <label for="users-edit-username">Postcode</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Postcode"  aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -699,11 +699,11 @@ function MasseuseInfoModal()
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
                                             <label for="users-edit-email">E-mail</label>
-                                            <input type="email" id="users-edit-email" class="form-control text-light-gray round" placeholder="Typeemail@hier.com"  aria-invalid="false" name="email" value="<?= $masseuse["email"] ?>">
+                                            <input type="email" id="users-edit-email" class="form-control text-light-gray round" placeholder="Typeemail@hier.com" aria-invalid="false" name="email" value="<?= $masseuse["email"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="telefoonnummer">Telefoonnummer</label>
-                                            <input type="text" id="telefoonnummer" class="form-control text-light-gray round" placeholder="Telefoonnummer"  aria-invalid="false" name="telefoonnummer" value="<?= $masseuse["telefoon"] ?>">
+                                            <input type="text" id="telefoonnummer" class="form-control text-light-gray round" placeholder="Telefoonnummer" aria-invalid="false" name="telefoonnummer" value="<?= $masseuse["telefoon"] ?>">
                                         </div>
                                     </div>
                                 </div>
