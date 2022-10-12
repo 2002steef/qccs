@@ -43,9 +43,9 @@ include "partials/header.php";
                                                 <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
                                                     <button hidden class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();">Edit</button>
                                                     <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
-                                                <?php }elseif(isset($_SESSION["status"]) && $_SESSION["status"] == "medewerker"){?>
+                                                <?php } elseif (isset($_SESSION["status"]) && $_SESSION["status"] == "medewerker") { ?>
                                                     <button class="btn bg-light-primary" id="btnAfspraak" onclick="">Afspraak Maken</button>
-                                              <?php  } ?>
+                                                <?php  } ?>
                                             </div>
 
 
@@ -111,20 +111,21 @@ include "partials/header.php";
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body">
-                                                        <label for="editMasseuse">Contact persoon </label>
-                                                        <input type="text" id="editMasseuse" name="voornaam" class=" form-control-plaintext " readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
-                                                        <label for="">Telefoonnummer:</label>
-                                                        <input type="text" id="editMasseuseTel" name="telefoon" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
-                                                        <label for="">Email:</label>
-                                                        <input type="text" id="editMasseuseMail" name="email" class=" form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
+                                                        <P>Contact persoon :</p>
+                                                        <p><?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?> </p>
+                                                        <p>Telefoonnummer:</p>
+                                                        <p><?= $masseuse["telefoon"]; ?> </p>
+                                                        <p>Email:</label>
+                                                        <p><?= $masseuse["email"]; ?></p>
                                                         <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                            <p><?= $masseuse["straat"] ." " .$masseuse["huisNummer"]." ".$masseuse["huisNummerToevoeging"]; ?></p>
-                                                            <p><?= $masseuse["postcode"]." ".$masseuse["plaats"]; ?></p>
+                                                        <p>Adres : </p>
+                                                        <p><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?></p>
+                                                        <p><?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- contact ends -->                
+                                        <!-- contact ends -->
                                     </div>
                                 </div>
                                 <!-- 1st column ends -->
