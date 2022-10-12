@@ -647,7 +647,7 @@ function MasseuseInfoModal()
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i></h4>
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken Masseuse Info</i></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
@@ -731,7 +731,7 @@ function MasseuseParagraafModal()
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2">Bewerken masseuse info</i></h4>
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken masseuse info</i></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
