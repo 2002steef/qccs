@@ -507,13 +507,16 @@ function masseuseInfo()
         <tr>
             <td><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
             <td class="td-width">
-                <h3><?= $masseuse["bedrijfsNaam"] ?></h3>
+                <h3>
+                    <?= $masseuse["bedrijfsNaam"] ?></h3>
                 <p><b>
+                        <span class="ft-user"></span>
                         <?= $masseuse["voornaam"]; ?>
                         <?= $masseuse["tussenvoegsel"]; ?>
                         <?= $masseuse["achternaam"]; ?>
                     </b></p>
                 <p>
+                    <span class="ft-home"></span>
                     <?= $masseuse["straat"]; ?>
                     <?= $masseuse["huisNummer"]; ?>
                     <?= $masseuse["huisNummerToevoeging"]; ?>,
@@ -521,6 +524,7 @@ function masseuseInfo()
                     <?= $masseuse["plaats"]; ?>
                 </p>
                 <div class="row">
+                    <span class="ft-tag"></span>
                     <div class="col">
                         1 of 5
                     </div>
