@@ -546,11 +546,11 @@ function masseuseInfo()
             <td><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
             <td class="td-width">
                 <h3><?= $masseuse["bedrijfsNaam"] ?></h3>
-                <h4>
+                <p><b>
                     <?= $masseuse["voornaam"]; ?>
                     <?= $masseuse["tussenvoegsel"]; ?>
                     <?= $masseuse["achternaam"]; ?>
-                </h4>
+                </b></p>
                 <p>
                     <?= $masseuse["straat"]; ?>
                     <?= $masseuse["huisNummer"]; ?>
