@@ -140,9 +140,7 @@ include "partials/header.php";
                                                             <input class="form-control-plaintext" readonly type="text" name="plaats" value="<?= $masseuse["plaats"]; ?>" id="editMasseusePlaats"></input>
                                                             <p>Straat & huisnummer</p>
                                                             <div class="form-row">
-                                                                <p><?= $masseuse["straat"]; ?>></p>
-                                                                <p><?= $masseuse["huisNummer"]; ?></p>
-                                                                <p><?= $masseuse["huisNummerToevoeging"]; ?></p>
+                                                                <p><?= $masseuse["straat"] ." " .$masseuse["huisNummer"]." ".$masseuse["huisNummerToevoeging"]; ?></p>
                                                             </div>
                                                         </div>
                                                     </div>
