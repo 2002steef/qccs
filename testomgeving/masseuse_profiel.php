@@ -125,7 +125,9 @@ include "partials/header.php";
                                                             <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a>
                                                         </p>
                                                         <p>Adres :
+                                                            <br>
                                                             <?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?>
+                                                            <br>
                                                             <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?></p>
                                                     </div>
                                                 </div>
