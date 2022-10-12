@@ -103,8 +103,8 @@ include "partials/header.php";
                                         </div>
                                         <!-- Info ends -->
                                         <!-- contact starts -->
-                                        <div class="col-12" id="contactProfile">
-                                            <div class="card">
+                                        <div class="col-12" >
+                                            <div class="card " id="contactProfile">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">Contact</h4>
                                                 </div>
