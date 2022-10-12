@@ -104,12 +104,12 @@ include "partials/header.php";
                                         <!-- Info ends -->
                                         <!-- contact starts -->
                                         <div class="col-12">
-                                            <div class="card" >
+                                            <div class="card"  id="contactProfile" >
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">Contact</h4>
                                                     <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
-                                                <div class="card-content"  id="contactProfile" >
+                                                <div class="card-content">
                                                     <div class="card-body">
                                                         <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                         <P>Contact persoon :
