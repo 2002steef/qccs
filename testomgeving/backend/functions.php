@@ -682,7 +682,7 @@ function MasseuseInfoModal()
                                         </div>
                                         <div class="controls">
                                             <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Huisnummer" readonly aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisnummer"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Huisnummer" readonly aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                         <div class="controls ">
                                             <label for="users-edit-username">Postcode</label>
@@ -699,7 +699,7 @@ function MasseuseInfoModal()
                                         </div>
                                         <div class="controls">
                                             <label for="telefoonnummer">Telefoonnummer</label>
-                                            <input type="text" id="telefoonnummer" class="form-control-plaintext text-light round" placeholder="Telefoonnummer" readonly aria-invalid="false" name="telefoonnummer" value="<?= $masseuse["telefoonnummer"] ?>">
+                                            <input type="text" id="telefoonnummer" class="form-control-plaintext text-light round" placeholder="Telefoonnummer" readonly aria-invalid="false" name="telefoonnummer" value="<?= $masseuse["telefoon"] ?>">
                                         </div>
                                     </div>
                                 </div>
