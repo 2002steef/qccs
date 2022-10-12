@@ -109,7 +109,7 @@ include "partials/header.php";
                                                     <h4 class="card-title m-0">Contact</h4>
                                                     <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
-                                                <div class="card-content">
+                                                <div class="card-content"  id="contactProfile" >
                                                     <div class="card-body">
                                                         <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                         <P>Contact persoon :
