@@ -134,10 +134,8 @@ include "partials/header.php";
                                                     <div class="card-body">
                                                         <div class="m-0 ">
                                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                            <p>Postcode:</p>
-                                                            <p> <?= $masseuse["postcode"]; ?></p>
-                                                            <p >Plaats : </p>
-                                                            <input class="form-control-plaintext" readonly type="text" name="plaats" value="<?= $masseuse["plaats"]; ?>" id="editMasseusePlaats"></input>
+                                                            <p>Postcode: <?= $masseuse["postcode"]; ?></p>
+                                                            <p >Plaats : <?= $masseuse["plaats"]; ?></p>
                                                             <p>Straat & huisnummer</p>
                                                             <div class="form-row">
                                                                 <p><?= $masseuse["straat"] ." " .$masseuse["huisNummer"]." ".$masseuse["huisNummerToevoeging"]; ?></p>
