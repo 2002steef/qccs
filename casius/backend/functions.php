@@ -170,21 +170,21 @@ function klantModal()
     }
     if (isset($_POST['updateKlant'])) {
 
-        // $voornaam = ucfirst($_POST['Voornaam']);
-        // $straatnaam = ucfirst($_POST['straat']);
+         $voornaam = ucfirst($_POST['Voornaam']);
+        $straatnaam = ucfirst($_POST['straat']);
 
         $query = "UPDATE `klanten` SET `Voornaam`=?,`Tussenvoegsel`=?,
            `Achternaam`=?,`Email`=?,`Telefoonnummer`=?,`straat`=?,`postcode`=?
            ,`huisnummer`=?,`huisnummerToevoeging`=?,`notities`=?
-           WHERE id = ?";
+           WHERE klantID = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param(
             'ssssssssssi',
-            $_POST['Voornaam'],
+            $voornaam,
             $_POST["tussenvoegsel"],
             $_POST["achternaam"],
             $_POST["email"],
-            $_POST["telefoonnummer"],
+            $straatnaam,
             $_POST['straat'],
             $_POST["postcode"],
             $_POST["huisnummer"],
