@@ -4,8 +4,6 @@ let aboutCompany = document.getElementById('aboutCompany');
 let aboutCompanyHeight = aboutCompany.offsetHeight;
 let contact = document.getElementById('contactProfile');
 let contactHeight = contact.offsetHeight;
-let profileMap = document.getElementById('profileMap');
-let profileMapHeight = profileMap.offsetHeight;
 // console.log(masseuseSkillsHeight + " en " + aboutCompanyHeight + " en " + contactHeight);
 if (masseuseSkillsHeight > aboutCompanyHeight) {
     aboutCompany.style.height = masseuseSkillsHeight + "px";
