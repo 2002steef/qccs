@@ -554,8 +554,8 @@ function masseuseInfo()
                 <p>
                     <?= $masseuse["plaats"]; ?>
                     <?= $masseuse["straat"]; ?>
-                    <?= $masseuse["huisnummer"]; ?>
-                    <?= $masseuse["huisnummerToevoeging"]; ?>
+                    <?= $masseuse["huisNummer"]; ?>
+                    <?= $masseuse["huisNummerToevoeging"]; ?>
                     </p>
                 <div class="row">
                     <div class="col">
