@@ -112,32 +112,23 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                        <div>
-                                                            <P>Contact persoon :
-                                                                <br>
-                                                                <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>
-                                                            </p>
-                                                        </div>
-                                                        <div>
-                                                            <p>Telefoonnummer:
-                                                                <br>
-                                                                <a href="tel:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a>
-                                                            </p>
-                                                        </div>
-                                                        <div>
-                                                            <p>Email:
-                                                                <br>
-                                                                <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a>
-                                                            </p>
-                                                        </div>
-                                                        <div>
-                                                            <p>Adres :
-                                                                <br>
-                                                                <?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?>
-                                                                <br>
-                                                                <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?>
-                                                            </p>
-                                                        </div>
+                                                        <P>Contact persoon :
+                                                            <br>
+                                                            <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>
+                                                        </p>
+                                                        <p>Telefoonnummer:
+                                                            <br>
+                                                            <a href="tel:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a>
+                                                        </p>
+                                                        <p>Email:
+                                                            <br>
+                                                            <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a>
+                                                        </p>
+                                                        <p>Adres :
+                                                            <br>
+                                                            <?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?>
+                                                            <br>
+                                                            <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?></p>
                                                     </div>
                                                 </div>
                                             </div>
