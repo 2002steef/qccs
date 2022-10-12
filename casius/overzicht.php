@@ -1,6 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
+klantModal();
 $klant = klantInfo();
 
 ?>
@@ -384,7 +385,6 @@ $klant = klantInfo();
     </div>
     <?php
     include "partials/footer.php";
-    klantModal();
     ?>
     <script>
         /*

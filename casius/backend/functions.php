@@ -193,19 +193,6 @@ function klantModal()
             $_POST["klantID"]
         );
         $stmt->execute();
-        if ($stmt->num_rows == 0) {
-            var_dump(
-                $_POST["tussenvoegsel"],
-                $_POST["achternaam"],
-                $_POST["email"],
-                $_POST["telefoonnummer"],
-                $_POST["straat"],
-                $_POST["postcode"],
-                $_POST["huisnummer"],
-                $_POST["toevoeging"],
-                $_POST["notities"]
-            );
-        }
         header("Location:overzicht.php");
     }
 }
