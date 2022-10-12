@@ -132,7 +132,6 @@ include "partials/header.php";
                                                     </div>
                                                 </div>
                                                 <a href="" data-target="modal" data-toggle="modal" class="btn btn-outline-light-grey align-right"> <span class="ft-edit">Bewerken</span></a>
-
                                             </div>
                                         </div>
                                         <!-- contact ends -->
