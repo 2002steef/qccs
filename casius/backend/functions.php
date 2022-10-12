@@ -26,7 +26,7 @@ function klantInfoTabel()
             <td><?= $klant["klant_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>" >
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>">
                     Meer info
                 </a>
             </td>
@@ -54,110 +54,108 @@ function klantModal()
                         </div>
                         <div class="modal-body">
                             <!-- Horizontal Form Layout starts -->
-                            <form method="POST">
-                                <div class="row match-height">
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-md-6 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
-                                                                <div class="col-md-8">
-                                                                    <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["Voornaam"] ?>" id="Voornaam" name="Voornaam">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
-                                                                <div class="col-md-5">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["Tussenvoegsel"] ?>" id="tussenvoegsel" name="tussenvoegsel">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
-                                                                <div class="col-md-6">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["Achternaam"] ?>" id="achternaam" name="achternaam">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-md-3">
-                                                        <div class="col-md-3 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
-                                                                <div class="col-md-4">
-                                                                    <input type="text" value="<?= $klant["huisnummer"] ?>" class="form-control square" id="huisnummer" name="huisnummer">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
-                                                                <div class="col-md-5">
-                                                                    <input type="text" value="<?= $klant["huisnummerToevoeging"] ?>" class="form-control square" id="toevoeging" name="toevoeging">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
-                                                                <div class="col-md-8">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["straat"] ?>" id="straatnaam" name="straatnaam">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
-                                                                <div class="col-md-7">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["postcode"] ?>" id="postcode" name="postcode">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-6 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
-                                                                <div class="col-md-8">
-                                                                    <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="email">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
-                                                                <div class="col-md-8">
-                                                                    <input type="text" class="form-control square" id="horizontal-form-6" name="website">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
-                                                                <div class="col-md-8">
-                                                                    <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
-                                                                <div class="col-md-9">
-                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
+                            <div class="row match-height">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
+                                                            <div class="col-md-8">
+                                                                <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
+                                                                <input type="text" class="form-control square" value="<?= $klant["Voornaam"] ?>" id="Voornaam" name="Voornaam">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
+                                                            <div class="col-md-5">
+                                                                <input type="text" class="form-control square" value="<?= $klant["Tussenvoegsel"] ?>" id="tussenvoegsel" name="tussenvoegsel">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" class="form-control square" value="<?= $klant["Achternaam"] ?>" id="achternaam" name="achternaam">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-md-3">
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
+                                                            <div class="col-md-4">
+                                                                <input type="text" value="<?= $klant["huisnummer"] ?>" class="form-control square" id="huisnummer" name="huisnummer">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
+                                                            <div class="col-md-5">
+                                                                <input type="text" value="<?= $klant["huisnummerToevoeging"] ?>" class="form-control square" id="toevoeging" name="toevoeging">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control square" value="<?= $klant["straat"] ?>" id="straat" name="straat">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
+                                                            <div class="col-md-7">
+                                                                <input type="text" class="form-control square" value="<?= $klant["postcode"] ?>" id="postcode" name="postcode">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
+                                                            <div class="col-md-8">
+                                                                <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control square" id="horizontal-form-6" name="website">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
+                                                            <div class="col-md-8">
+                                                                <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
+                                                            <div class="col-md-9">
+                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                             <!-- Horizontal Form Layout ends -->
                         </div>
                         <div class="modal-footer">
@@ -173,7 +171,7 @@ function klantModal()
     if (isset($_POST['updateKlant'])) {
 
         $voornaam = ucfirst($_POST['Voornaam']);
-        $straatnaam = ucfirst($_POST['straatnaam']);
+        $straatnaam = ucfirst($_POST['straat']);
 
         $query = "UPDATE `klanten` SET `Voornaam`=?,`Tussenvoegsel`=?,
            `Achternaam`=?,`Email`=?,`Telefoonnummer`=?,`straat`=?,`postcode`=?
@@ -195,9 +193,18 @@ function klantModal()
             $_POST["klantID"]
         );
         $stmt->execute();
-        if($stmt->num_rows == 0){
-            var_dump($voornaam,$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"],$_POST["telefoonnummer"]
-            ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$_POST["toevoeging"],$_POST["notities"]
+        if ($stmt->num_rows == 0) {
+            var_dump(
+                $voornaam,
+                $_POST["tussenvoegsel"],
+                $_POST["achternaam"],
+                $_POST["email"],
+                $_POST["telefoonnummer"],
+                $_POST["straat"],
+                $_POST["postcode"],
+                $_POST["huisnummer"],
+                $_POST["toevoeging"],
+                $_POST["notities"]
             );
         }
         header("Location:overzicht.php");
