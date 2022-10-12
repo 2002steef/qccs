@@ -93,12 +93,6 @@ $rowMw = Getuser();
         <div class="sidebar-content main-menu-content">
             <div class="nav-container">
                 <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation">
-                    <li class=" nav-item">
-                        <a href="https://pixinvent.com/apex-angular-4-bootstrap-admin-template/html-documentation" target="_blank">
-                            <i class="ft-book light-gray"></i>
-                            <span class="menu-title light-gray" data-i18n="Documentation">Documentation</span>
-                        </a>
-                    </li>
                     <li class="nav-item ">
                         <?php if (isset($_SESSION["status"])) {
                             if ($_SESSION["status"] == "medewerker") {
