@@ -86,8 +86,8 @@ if (!isset($_SESSION["loggedin"])) {
                                                         <table  class="table thead-dark table-bordered">
                                                             <thead>
                                                                 <tr>
-                                                                    <th class="overZichtTableHeader">Masseuse</th>
-                                                                    <th class="overZichtTableHeader" >Masseuse info</th>
+                                                                    <th>Masseuse</th>
+                                                                    <th>Masseuse info</th>
                                                                     <th class="overZichtTableHeader">Info</th>
                                                                 </tr>
                                                             </thead>
