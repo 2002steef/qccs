@@ -111,16 +111,24 @@ include "partials/header.php";
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body">
-                                                        <P>Contact persoon :</p>
-                                                        <p><?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?> </p>
-                                                        <p>Telefoonnummer:</p>
-                                                        <p> <a href="tel:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a></p>
-                                                        <p>Email:</label>
-                                                        <p><a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a></p>
                                                         <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                        <p>Adres : </p>
-                                                        <p><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?></p>
-                                                        <p><?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?></p>
+                                                        <P>Contact persoon :
+                                                            <br>
+                                                            <?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>
+                                                        </p>
+                                                        <p>Telefoonnummer:
+                                                            <br>
+                                                            <a href="tel:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a>
+                                                        </p>
+                                                        <p>Email:
+                                                            <br>
+                                                            <a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a>
+                                                        </p>
+                                                        <p>Adres :
+                                                            <br>
+                                                            <?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?>
+                                                            <br>
+                                                            <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?></p>
                                                     </div>
                                                 </div>
                                             </div>
