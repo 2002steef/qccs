@@ -545,9 +545,19 @@ function masseuseInfo()
         <tr>
             <td><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
             <td class="td-width">
-                <h3>BedrijfNaam</h3>
-                <h4>Masseuse Naam</h4>
-                <p>Dit is de locatie</p>
+                <h3><?= $masseuse["bedrijfsNaam"] ?></h3>
+                <p><b>
+                    <?= $masseuse["voornaam"]; ?>
+                    <?= $masseuse["tussenvoegsel"]; ?>
+                    <?= $masseuse["achternaam"]; ?>
+                </b></p>
+                <p>
+                    <?= $masseuse["straat"]; ?>
+                    <?= $masseuse["huisNummer"]; ?>
+                    <?= $masseuse["huisNummerToevoeging"]; ?>,
+                    <?= $masseuse["postcode"]; ?><br>
+                    <?= $masseuse["plaats"]; ?>
+                    </p>
                 <div class="row">
                     <div class="col">
                         1 of 5
@@ -565,7 +575,7 @@ function masseuseInfo()
                         5 of 5
                     </div>
                 </div>
-                <?= $masseuse["paragraafje"] ?>
+
             </td>
             <td><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
                     Meer info
