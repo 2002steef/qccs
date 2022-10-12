@@ -552,10 +552,11 @@ function masseuseInfo()
                     <?= $masseuse["achternaam"]; ?>
                 </h4>
                 <p>
-                    <?= $masseuse["plaats"]; ?>
                     <?= $masseuse["straat"]; ?>
                     <?= $masseuse["huisNummer"]; ?>
-                    <?= $masseuse["huisNummerToevoeging"]; ?>
+                    <?= $masseuse["huisNummerToevoeging"]; ?>,
+                    <?= $masseuse["postcode"]; ?><br>
+                    <?= $masseuse["plaats"]; ?>
                     </p>
                 <div class="row">
                     <div class="col">
