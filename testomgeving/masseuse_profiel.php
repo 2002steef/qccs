@@ -1,11 +1,12 @@
 <?php
 include "backend/functions.php";
+$masseuse = GetMasseuse();
 MasseuseParagraafModal();
 MasseuseInfoModal();
 UpdateMasseuse();
 UpdateMasseuseParagraaf();
 
-$masseuse = GetMasseuse();
+
 
 ?>
 <!DOCTYPE html>
