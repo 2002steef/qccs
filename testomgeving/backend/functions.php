@@ -708,6 +708,7 @@ function MasseuseInfoModal()
 
                     </div>
                     <div class="modal-footer">
+                        <button type="submit" class="btn bg-light-secondary" data-dismiss="modal">Opslaan</button>
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -739,11 +740,12 @@ function MasseuseParagraafModal()
                     <div class="modal-body">
                         <form method="post">
                             <div class="">
-                                <textarea type="text"  id="editMasseuseParagraafje" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
+                                <textarea type="text" id="editMasseuseParagraafje" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
+                        <button type="submit" class="btn bg-light-secondary" data-dismiss="modal">Opslaan</button>
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
