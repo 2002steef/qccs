@@ -90,7 +90,7 @@ include "header.php";
                         </a>
                     </li>
                     <li>
-                        <a class="text-light-gray" href="account_settings.php/user_ID=<?= $_SESSION["id"] ?>">
+                        <a class="text-light-gray" href="account-settings.php/user_ID=<?= $_SESSION["id"] ?>">
                             <i class="ft-settings text-light-gray"></i>
                             <span class=" menu-title text text-light-gray">Account Settings</span>
                         </a>
