@@ -447,10 +447,10 @@ UpdateCustomerB();
 function UpdateMasseuse()
 {
     global $mysqli;
-    if (isset($_POST['btnSaveMasseuse'])) {
+    if (isset($_POST['btnMasseuseInfoSave'])) {
         $query = "UPDATE `masseuses` SET `voornaam`=?,`tussenvoegsel`=?,`achternaam`=?,`email`=?,
         `telefoon`=?,`straat`=?,`huisNummer`=?,`huisNummerToevoeging`=?,`postcode`=?,
-        `plaats`=?,`website`=?,`paragraafje`=? WHERE masseuseID = ?";
+        `plaats`=? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
         $id = $_POST["masseuseID"];
         $stmt->bind_param(
@@ -465,8 +465,6 @@ function UpdateMasseuse()
             $_POST["huisNummerToevoeging"],
             $_POST["postcode"],
             $_POST["plaats"],
-            $_POST["website"],
-            $_POST["paragraafje"],
             $id
         );
         $stmt->execute();
@@ -478,61 +476,25 @@ function UpdateMasseuse()
 
 UpdateMasseuse();
 
-function GetCustomerZ()
+function UpdateMasseuseParagraaf()
 {
     global $mysqli;
-    $DataCustomer = "SELECT customers_business.id,customers_business.status,customers_business.first_name,customers_business.last_name_prefix,
-        customers_business.last_name,customers_business.street,customers_business.housenumber,customers_business.housenumberAddition,
-        customers_business.housenumberAddition,customers_business.postalcode,customers_business.phoneNumber,customers_business.business,
-       customers_business.customer_of
- FROM customers_business 
-     LEFT JOIN organisation 
-         ON customers_business.customer_of = organisation.id 
- WHERE customers_business.customer_of = ?";
-    $stmt = $mysqli->prepare($DataCustomer);
-    $stmt->bind_param("i", $_GET["custof"]);
-    $stmt->execute();
-    $resultCustomer = $stmt->get_result();
-
-    while ($rowCustomer = $resultCustomer->fetch_array()) {
-    ?>
-        <tr>
-            <td><?= $rowCustomer["id"] ?></td>
-            <td><?= $rowCustomer["first_name"] . " " . $rowCustomer["last_name_prefix"] . " " . $rowCustomer["last_name"] ?></td>
-            <td><?= $rowCustomer["phoneNumber"] ?></td>
-            <td><?= $rowCustomer["business"] ?></td>
-            <td><?php
-                if ($rowCustomer["status"] === "Inactief") { ?>
-                    <span class="badge bg-light-danger">Inactief</span>
-                <?php } elseif ($rowCustomer["status"] === "Actief") { ?>
-                    <span class="badge bg-light-succes">Actief</span>
-                <?php } ?>
-            </td>
-            <td>
-                <div class="row">
-                    <div class="col-md-0">
-                    </div>
-                    <?php
-                    if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
-                    ?>
-                        <div class="col-md-5">
-                            <a href="#" data-toggle="modal" data-target="#editZ<?= $rowCustomer["id"] ?>">
-                                <i class="ft-edit"></i>
-                            </a>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                    <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?= $rowCustomer["id"] ?>" href="modals.php?<?= $rowCustomer["id"] ?>">
-                            <i class="ft-eye"></i>
-                        </a>
-                    </div>
-                </div>
-        </tr>
-    <?php
+    if (isset($_POST['btnMasseuseParagraafSave'])) {
+        $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
+        $stmt = $mysqli->prepare($query);
+        $id = $_POST["masseuseID"];
+        $stmt->bind_param(
+            'si',
+            $_POST["paragraafje"],
+            $id
+        );
+        $stmt->execute();
+        if ($stmt->num_rows > 0) {
+            header("Location:../masseuse_profiel.php?masseuseID=$id");
+        }
     }
 }
+UpdateMasseuseParagraaf();
 
 function masseuseInfo()
 {
@@ -660,16 +622,16 @@ function MasseuseInfoModal()
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
                                             <label for="users-edit-username">Voornaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Voornaam"  aria-invalid="false" name="voornaam" value="<?= $masseuse["voornaam"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Voornaam" aria-invalid="false" name="voornaam" value="<?= $masseuse["voornaam"] ?>">
                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="id">
                                         </div>
                                         <div class="controls">
                                             <label for="tussenvoegsel">Tussenvoegsel</label>
-                                            <input type="text" id="tussenvoegsel" class="form-control text-light-gray round"  placeholder="Tussenvoegsel" aria-invalid="false" name="tussenvoegsel" value="<?= $masseuse["tussenvoegsel"] ?>">
+                                            <input type="text" id="tussenvoegsel" class="form-control text-light-gray round" placeholder="Tussenvoegsel" aria-invalid="false" name="tussenvoegsel" value="<?= $masseuse["tussenvoegsel"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="achternaam">Achternaam</label>
-                                            <input type="text" id="achternaam" class="form-control text-light-gray round" placeholder="Achternaam"  aria-invalid="false" name="achternaam" value="<?= $masseuse["achternaam"] ?>">
+                                            <input type="text" id="achternaam" class="form-control text-light-gray round" placeholder="Achternaam" aria-invalid="false" name="achternaam" value="<?= $masseuse["achternaam"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -678,15 +640,15 @@ function MasseuseInfoModal()
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
                                             <label for="users-edit-username">Straatnaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Straatnaam"  aria-invalid="false" name="straatnaam" value="<?= $masseuse["straat"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Straatnaam" aria-invalid="false" name="straatnaam" value="<?= $masseuse["straat"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer"  aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                         <div class="controls ">
                                             <label for="users-edit-username">Postcode</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Postcode"  aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -695,11 +657,11 @@ function MasseuseInfoModal()
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
                                             <label for="users-edit-email">E-mail</label>
-                                            <input type="email" id="users-edit-email" class="form-control text-light-gray round" placeholder="Typeemail@hier.com"  aria-invalid="false" name="email" value="<?= $masseuse["email"] ?>">
+                                            <input type="email" id="users-edit-email" class="form-control text-light-gray round" placeholder="Typeemail@hier.com" aria-invalid="false" name="email" value="<?= $masseuse["email"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="telefoonnummer">Telefoonnummer</label>
-                                            <input type="text" id="telefoonnummer" class="form-control text-light-gray round" placeholder="Telefoonnummer"  aria-invalid="false" name="telefoonnummer" value="<?= $masseuse["telefoon"] ?>">
+                                            <input type="text" id="telefoonnummer" class="form-control text-light-gray round" placeholder="Telefoonnummer" aria-invalid="false" name="telefoonnummer" value="<?= $masseuse["telefoon"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -752,6 +714,32 @@ function MasseuseParagraafModal()
             </div>
         </div>
     <?php
+    }
+}
+function UpdateMasseuseInfo()
+{
+    if (isset($_POST['btnMasseuseInfoSave'])) {
+        global $mysqli;
+        $voornaam = ucfirst($_POST['name']);
+        $straatnaam = ucfirst($_POST['street']);
+
+        $query = "UPDATE masseuses SET  ";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param(
+            'ssssssssssi',
+            $voornaam,
+            $_POST["kvk_nummer"],
+            $_POST["btw_nummer"],
+            $_POST["iban_nummer"],
+            $straatnaam,
+            $_POST["housenumber"],
+            $_POST["postalcode"],
+            $_POST["phoneNumber"],
+            $_POST["email"],
+            $_POST["status"],
+            $_POST["id"]
+        );
+        $stmt->execute();
     }
 }
 
