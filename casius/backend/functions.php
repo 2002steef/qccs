@@ -176,7 +176,7 @@ function klantModal()
         $query = "UPDATE `klanten` SET `Voornaam`=?,`Tussenvoegsel`=?,
            `Achternaam`=?,`Email`=?,`Telefoonnummer`=?,`straat`=?,`postcode`=?
            ,`huisnummer`=?,`huisnummerToevoeging`=?,`notities`=?
-           WHERE klantID = ?";
+           WHERE klant_ID = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param(
             'ssssssssssi',
