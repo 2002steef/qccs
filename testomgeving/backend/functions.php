@@ -609,17 +609,17 @@ function MasseuseInfoModal()
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
-        <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken Masseuse Info</i></h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post">
+        <form method="post">
+            <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken Masseuse Info</i></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
                             <div class="row">
                                 <div class="col-12 col-md-4">
                                     <div class="form-group">
@@ -670,16 +670,15 @@ function MasseuseInfoModal()
                                     </div>
                                 </div>
                             </div>
-                        </form>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn bg-light-secondary" data-dismiss="modal" name="btnMasseuseInfoSave">Opslaan</button>
-                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn bg-light-secondary" data-dismiss="modal" name="btnMasseuseInfoSave">Opslaan</button>
+                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     <?php
     }
 }
@@ -706,7 +705,7 @@ function MasseuseParagraafModal()
                     <div class="modal-body">
                         <form method="post">
                             <div class="">
-                                <input type="hidden" value="<?= $masseuse["masseuseID"]?>" name="masseuseID">
+                                <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                 <textarea type="text" id="editMasseuseParagraafje" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
                             </div>
                         </form>
