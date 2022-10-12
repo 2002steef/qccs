@@ -739,10 +739,9 @@ function MasseuseParagraafModal()
                     <div class="modal-body">
                         <form method="post">
                     
-                                <textarea type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
+                                <textarea rows="10" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
                         
                         </form>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
