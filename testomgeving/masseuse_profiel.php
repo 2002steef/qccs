@@ -156,8 +156,8 @@ include "partials/header.php";
                                                             <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
                                                         </p>
                                                     </div>
-                                                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
-                                                        <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey text-align-right"> <span class="ft-edit">Bewerken</span></a>
+                                                    <div class="d-flex justify-content-between align-items-right cursor-pointer">
+                                                        <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey"> <span class="ft-edit">Bewerken</span></a>
                                                     </div>
                                                 </div>
                                             </div>
