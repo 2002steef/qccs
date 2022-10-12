@@ -2,6 +2,7 @@
 include "backend/functions.php";
 UpdateMasseuse();
 $masseuse = GetMasseuse();
+
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -103,7 +104,7 @@ include "partials/header.php";
                                         </div>
                                         <!-- Info ends -->
                                         <!-- contact starts -->
-                                        <div class="col-12" >
+                                        <div class="col-12">
                                             <div class="card " id="contactProfile">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">Contact</h4>
@@ -117,7 +118,7 @@ include "partials/header.php";
                                                         </p>
                                                         <p>Telefoonnummer:
                                                             <br>
-                                                            <a href="tel:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a>
+                                                            <a href="tel3:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a>
                                                         </p>
                                                         <p>Email:
                                                             <br>
@@ -130,8 +131,9 @@ include "partials/header.php";
                                                             <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?>
                                                         </p>
                                                     </div>
+                                                    <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
+
                                                 </div>
-                                                <a href="" data-target="modal" data-toggle="modal" class="btn btn-outline-light-grey align-right"> <span class="ft-edit">Bewerken</span></a>
                                             </div>
                                         </div>
                                         <!-- contact ends -->
@@ -148,7 +150,6 @@ include "partials/header.php";
                                             <div class="card" id="aboutCompany">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">About</h4>
-                                                    <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
@@ -156,6 +157,7 @@ include "partials/header.php";
                                                             <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
                                                         </p>
                                                     </div>
+                                                        <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -193,6 +195,8 @@ include "partials/header.php";
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
+    MasseuseParagraafModal();
+    MasseuseInfoModal();
     include "partials/footer.php";
     ?>
 </body>

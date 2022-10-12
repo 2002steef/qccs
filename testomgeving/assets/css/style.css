@@ -44,3 +44,9 @@
 .overZichtTableHeader {
     min-width: 175px;
 }
+#editMasseuseParagraafje
+{
+    padding: 25px;
+    height: 500px;
+    margin: auto;
+}
