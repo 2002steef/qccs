@@ -3036,7 +3036,7 @@ fieldset:disabled a.btn {
 .btn-outline-light-grey:not(:disabled):not(.disabled):active,
 .btn-outline-light-grey:not(:disabled):not(.disabled).active,
 .show>.btn-outline-light-grey.dropdown-toggle {
-  color: #fff;
+  color: #342E49;
   background-color: #975AFF;
   border-color: #975AFF;
 }
@@ -3044,7 +3044,7 @@ fieldset:disabled a.btn {
 .btn-outline-light-grey:not(:disabled):not(.disabled):active:focus,
 .btn-outline-light-grey:not(:disabled):not(.disabled).active:focus,
 .show>.btn-outline-light-grey.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(151, 90, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(61, 57, 67, 0.5);
 }
 
 .btn-outline-primary {
