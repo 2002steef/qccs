@@ -114,9 +114,9 @@ include "partials/header.php";
                                                         <P>Contact persoon :</p>
                                                         <p><?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?> </p>
                                                         <p>Telefoonnummer:</p>
-                                                        <p><?= $masseuse["telefoon"]; ?> </p>
+                                                        <p> <a href="tel:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a></p>
                                                         <p>Email:</label>
-                                                        <p><?= $masseuse["email"]; ?></p>
+                                                        <p><a href="mailto:<?= $masseuse["email"]; ?>"><?= $masseuse["email"]; ?></a></p>
                                                         <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
                                                         <p>Adres : </p>
                                                         <p><?= $masseuse["straat"] . " " . $masseuse["huisNummer"] . " " . $masseuse["huisNummerToevoeging"]; ?></p>
