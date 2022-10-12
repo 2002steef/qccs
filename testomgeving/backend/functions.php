@@ -636,9 +636,8 @@ function GetCompanyNamePersonnel()
 function MasseuseInfoModal()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `masseuses` WHERE masseuseID = ?";
+    $DataMasseuse = "SELECT * FROM `masseuses` WHERE masseuseID";
     $stmt = $mysqli->prepare($DataMasseuse);
-    $stmt->bind_param("i", $_GET["masseuseID"]);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
 
