@@ -11,12 +11,11 @@ if (masseuseSkillsHeight > aboutCompanyHeight) {
     aboutCompany.style.height = masseuseSkillsHeight + "px";
 } else if (masseuseSkillsHeight < aboutCompanyHeight ) {
     masseuseSkills.style.height = aboutCompanyHeight + "px";
-} else if( profileMapHeight > contactHeight ){
+} 
+
+if( profileMapHeight > contactHeight ){
+    contact.style.height = contactHeight + "px";
+} else if ( profileMapHeight > contactHeight ){
     profileMap.style.height = contactHeight + "px";
 }
-
-// if (contactHeight+adressHeight>profileMapHeight) {
-//     adress.style.height = profileMapHeight/2+"px";
-//     contact.style.height = profileMapHeight/2+"px";
-// }
 
