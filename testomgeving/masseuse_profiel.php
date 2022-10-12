@@ -104,7 +104,7 @@ include "partials/header.php";
                                         </div>
                                         <!-- Info ends -->
                                         <!-- contact starts -->
-                                        <div class="col-12" >
+                                        <div class="col-12">
                                             <div class="card " id="contactProfile">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">Contact</h4>
@@ -149,7 +149,6 @@ include "partials/header.php";
                                             <div class="card" id="aboutCompany">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">About</h4>
-                                                    <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
@@ -157,8 +156,9 @@ include "partials/header.php";
                                                             <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
                                                         </p>
                                                     </div>
-                                                    <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey text-align-right"> <span class="ft-edit">Bewerken</span></a>
-
+                                                    <div class="d-flex justify-content-between align-items-center cursor-pointer">
+                                                        <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey text-align-right"> <span class="ft-edit">Bewerken</span></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
