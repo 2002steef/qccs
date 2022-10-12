@@ -546,17 +546,17 @@ function masseuseInfo()
             <td><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
             <td class="td-width">
                 <h3><?= $masseuse["bedrijfsNaam"] ?></h3>
-                <h4><?= 
-                    $masseuse["voornaam"];
-                    $masseuse["tussenvoegsel"];
-                    $masseuse["achternaam"];
-                    ?></h4>
-                <p><?= 
-                    $masseuse["plaats"];
-                    $masseuse["straat"];
-                    $masseuse["huisnummer"];
-                    $masseuse["huisnummerToevoeging"];
-                    ?></p>
+                <h4>
+                    <?= $masseuse["voornaam"]; ?>
+                    <?= $masseuse["tussenvoegsel"]; ?>
+                    <?= $masseuse["achternaam"]; ?>
+                </h4>
+                <p>
+                    <?= $masseuse["plaats"]; ?>
+                    <?= $masseuse["straat"]; ?>
+                    <?= $masseuse["huisnummer"]; ?>
+                    <?= $masseuse["huisnummerToevoeging"]; ?>
+                    </p>
                 <div class="row">
                     <div class="col">
                         1 of 5
