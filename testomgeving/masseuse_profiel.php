@@ -2,7 +2,7 @@
 include "backend/functions.php";
 UpdateMasseuse();
 $masseuse = GetMasseuse();
-// MasseuseInfoModal();
+
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -194,6 +194,7 @@ include "partials/header.php";
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
+    MasseuseInfoModal();
     include "partials/footer.php";
     ?>
 </body>
