@@ -3013,8 +3013,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light-grey {
-  color: #F5F5F5;
-  border-color: #342E49;
+  color: #342E49;
+  border-color: #2d293c;
 }
 .btn-outline-light-grey:hover {
   color: #fccfcf;
