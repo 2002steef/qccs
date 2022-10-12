@@ -2,6 +2,7 @@
 include "backend/functions.php";
 UpdateMasseuse();
 $masseuse = GetMasseuse();
+MasseuseInfoModal();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -131,7 +132,7 @@ include "partials/header.php";
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <a href="" data-target="modal" data-toggle="modal" class="btn btn-outline-light-grey align-right"> <span class="ft-edit">Bewerken</span></a>
+                                                <a href="" data-target="info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey align-right"> <span class="ft-edit">Bewerken</span></a>
                                             </div>
                                         </div>
                                         <!-- contact ends -->

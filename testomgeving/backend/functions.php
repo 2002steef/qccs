@@ -591,6 +591,8 @@ function bedrijfsInfo()
     <?php }
 }
 
+
+
 function GetCompanyName()
 {
     if (isset($_GET["custof"])) {
@@ -621,29 +623,22 @@ function GetCompanyNamePersonnel()
     }
 }
 
-function ViewUserP()
+function MasseuseInfoModal()
 {
     global $mysqli;
-    $DataCustomer_P = "SELECT customers_individual.id,customers_individual.status,customers_individual.first_name,customers_individual.last_name_prefix,
-        customers_individual.last_name,customers_individual.street,customers_individual.housenumber,customers_individual.housenumberAddition,
-        customers_individual.housenumberAddition,customers_individual.postalcode,customers_individual.phoneNumber,customers_individual.email,
-       customers_individual.customer_of,customers_individual.notes
- FROM customers_individual 
-     LEFT JOIN organisation 
-         ON customers_individual.customer_of = organisation.id 
- WHERE customers_individual.customer_of = ?";
-    $stmt = $mysqli->prepare($DataCustomer_P);
-    $stmt->bind_param("i", $_GET["custof"]);
+    $DataMasseuse = "SELECT * FROM `masseuses` WHERE masseuseID = ?";
+    $stmt = $mysqli->prepare($DataMasseuse);
+    $stmt->bind_param("i", $_SESSION["id"]);
     $stmt->execute();
-    $resultCustomer = $stmt->get_result();
+    $resultMasseuse = $stmt->get_result();
 
-    while ($masseuse = $resultCustomer->fetch_array()) {
+    while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
         <div class="modal fade text-left" id="info<?= $masseuse["id"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Basic Modal</h4>
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
@@ -656,20 +651,16 @@ function ViewUserP()
                                         <h4>Klantgegevens</h4>
                                         <div class="controls">
                                             <label for="users-edit-username">Voornaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Voornaam" readonly aria-invalid="false" name="voornaam_p" value="<?= $masseuse["first_name"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Voornaam" readonly aria-invalid="false" name="voornaam" value="<?= $masseuse["voornaam"] ?>">
                                             <input type="hidden" value="<?= $masseuse["id"] ?>" name="id_p">
                                         </div>
                                         <div class="controls">
                                             <label for="tussenvoegsel">Tussenvoegsel</label>
-                                            <input type="text" id="tussenvoegsel" class="form-control-plaintext text-light round" readonly placeholder="Tussenvoegsel" aria-invalid="false" name="tussenvoegsel_p" value="<?= $masseuse["last_name_prefix"] ?>">
+                                            <input type="text" id="tussenvoegsel" class="form-control-plaintext text-light round" readonly placeholder="Tussenvoegsel" aria-invalid="false" name="tussenvoegsel" value="<?= $masseuse["tussenvoegsel"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="achternaam">Achternaam</label>
-                                            <input type="text" id="achternaam" class="form-control-plaintext text-light round" placeholder="Achternaam" readonly aria-invalid="false" name="achternaam_p" value="<?= $masseuse["last_name"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="notities">Notities</label>
-                                            <textarea placeholder="Plaats hier je notities" id="notities" readonly name="notities_z" rows="6" cols="50" maxlength="600"><?php echo $masseuse['notes']; ?></textarea>
+                                            <input type="text" id="achternaam" class="form-control-plaintext text-light round" placeholder="Achternaam" readonly aria-invalid="false" name="achternaam" value="<?= $masseuse["achternaam"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -678,15 +669,15 @@ function ViewUserP()
                                         <h4>Adresgegevens</h4>
                                         <div class="controls ">
                                             <label for="users-edit-username">Straatnaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Straatnaam" readonly aria-invalid="false" name="straatnaam_p" value="<?= $masseuse["street"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Straatnaam" readonly aria-invalid="false" name="straatnaam" value="<?= $masseuse["straat"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Huisnummer" readonly aria-invalid="false" name="huisnummer_p" value="<?= $masseuse["housenumber"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Huisnummer" readonly aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisnummer"] ?>">
                                         </div>
                                         <div class="controls ">
                                             <label for="users-edit-username">Postcode</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Postcode" readonly aria-invalid="false" name="postcode_p" value="<?= $masseuse["postalcode"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Postcode" readonly aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -695,11 +686,11 @@ function ViewUserP()
                                         <h4>Contactgegevens</h4>
                                         <div class="controls">
                                             <label for="users-edit-email">E-mail</label>
-                                            <input type="email" id="users-edit-email" class="form-control-plaintext text-light round" placeholder="Typeemail@hier.com" readonly aria-invalid="false" name="email_p" value="<?= $masseuse["email"] ?>">
+                                            <input type="email" id="users-edit-email" class="form-control-plaintext text-light round" placeholder="Typeemail@hier.com" readonly aria-invalid="false" name="email" value="<?= $masseuse["email"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="telefoonnummer">Telefoonnummer</label>
-                                            <input type="text" id="telefoonnummer" class="form-control-plaintext text-light round" placeholder="Telefoonnummer" readonly aria-invalid="false" name="telefoonnummer_p" value="<?= $masseuse["phoneNumber"] ?>">
+                                            <input type="text" id="telefoonnummer" class="form-control-plaintext text-light round" placeholder="Telefoonnummer" readonly aria-invalid="false" name="telefoonnummer" value="<?= $masseuse["telefoonnummer"] ?>">
                                         </div>
                                     </div>
                                 </div>
