@@ -2,7 +2,7 @@
 include "backend/functions.php";
 UpdateMasseuse();
 $masseuse = GetMasseuse();
-MasseuseInfoModal();
+// MasseuseInfoModal();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
