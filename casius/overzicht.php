@@ -2,7 +2,7 @@
 <?php
 include "backend/functions.php";
 klantModal();
-$klant = klantInfo();
+klantInfo();
 
 ?>
 <!DOCTYPE html>
