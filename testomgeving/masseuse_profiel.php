@@ -41,7 +41,7 @@ include "partials/header.php";
 
                                             <div class="user-profile-buttons d-flex justify-content-center justify-content-sm-start">
                                                 <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
-                                                    <button class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();">Edit</button>
+                                                    <button hidden class="btn bg-light-primary" id="btnEditMasseuse" onclick="ClickEdit();">Edit</button>
                                                     <button class="btn bg-light-primary" name="btnSaveMasseuse" id="btnSaveMasseuse" onclick="ButtonShower();">Opslaan</button>
                                                 <?php }elseif(isset($_SESSION["status"]) && $_SESSION["status"] == "medewerker"){?>
                                                     <button class="btn bg-light-primary" id="btnAfspraak" onclick="">Afspraak Maken</button>
@@ -103,53 +103,28 @@ include "partials/header.php";
                                         </div>
                                         <!-- Info ends -->
                                         <!-- contact starts -->
-                                        <div class="col-12">
+                                        <div class="col-12 row-4">
                                             <div class="card" id="contactProfile">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">Contact</h4>
                                                     <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
-                                                <div class="card-content hidescroll">
-                                                    <div class="card-body scrolltext">
-                                                        <label for="editMasseuse">Voornaam & achternaam: </label>
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <label for="editMasseuse">Contact persoon </label>
                                                         <input type="text" id="editMasseuse" name="voornaam" class=" form-control-plaintext " readonly value="<?= $masseuse["voornaam"]; ?> <?= $masseuse["tussenvoegsel"]; ?> <?= $masseuse["achternaam"]; ?>"> </input>
                                                         <label for="">Telefoonnummer:</label>
                                                         <input type="text" id="editMasseuseTel" name="telefoon" class=" form-control-plaintext" readonly value="<?= $masseuse["telefoon"]; ?>"> </input>
                                                         <label for="">Email:</label>
                                                         <input type="text" id="editMasseuseMail" name="email" class=" form-control-plaintext" readonly value="<?= $masseuse["email"]; ?>"> </input>
+                                                        <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
+                                                            <p><?= $masseuse["straat"] ." " .$masseuse["huisNummer"]." ".$masseuse["huisNummerToevoeging"]; ?></p>
+                                                            <p><?= $masseuse["postcode"]." ".$masseuse["plaats"]; ?></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- contact ends -->
-
-                                        <!-- adress starts -->
-                                        <div class="col-12">
-                                            <div class="card" id="adressProfile">
-                                                <div class="card-header d-flex justify-content-between align-items-center">
-                                                    <h4 class="card-title m-0">Adress</h4>
-                                                    <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
-                                                </div>
-                                                <div class="card-content  hidescroll">
-                                                    <div class="card-body scrolltext ">
-                                                        <div class="m-0 ">
-                                                            <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                            <label for="postcode">Postcode:</label>
-                                                            <input class="form-control-plaintext" readonly type="text" name="postcode" value="<?= $masseuse["postcode"]; ?>" id="editMasseusePostcode"> </input>
-                                                            <label for="plaats">Plaats : </label>
-                                                            <input class="form-control-plaintext" readonly type="text" name="plaats" value="<?= $masseuse["plaats"]; ?>" id="editMasseusePlaats"></input>
-                                                            <label for="straat">Straat & huisnummer</label>
-                                                            <div class="form-row">
-                                                                <input class="form-control-plaintext col-md-6 col-12" readonly type="text" name="straat" value="<?= $masseuse["straat"]; ?>" id="editMasseuseStraat"></input>
-                                                                <input class="form-control-plaintext col-md-3 col-12" readonly type="text" name="huisNummer" value="<?= $masseuse["huisNummer"]; ?>" id="editMasseuseHN"></input>
-                                                                <input class="form-control-plaintext col-md-3 col-12" readonly type="text" name="huisNummerToevoeging" value="<?= $masseuse["huisNummerToevoeging"]; ?>" id="editMasseuseHNT"></input>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- adress ends -->
+                                        <!-- contact ends -->                
                                     </div>
                                 </div>
                                 <!-- 1st column ends -->
