@@ -118,7 +118,7 @@ include "partials/header.php";
                                                         </p>
                                                         <p>Telefoonnummer:
                                                             <br>
-                                                            <a href="tel:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a>
+                                                            <a href="tel3:+<?= $masseuse["telefoon"]; ?>"><?= $masseuse["telefoon"]; ?></a>
                                                         </p>
                                                         <p>Email:
                                                             <br>
@@ -132,7 +132,7 @@ include "partials/header.php";
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <a href="" data-target="info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey"> <span class="ft-edit">Bewerken</span></a>
+                                                <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey"> <span class="ft-edit">Bewerken</span></a>
                                             </div>
                                         </div>
                                         <!-- contact ends -->
