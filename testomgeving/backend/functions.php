@@ -638,13 +638,13 @@ function MasseuseInfoModal()
     global $mysqli;
     $DataMasseuse = "SELECT * FROM `masseuses` WHERE masseuseID = ?";
     $stmt = $mysqli->prepare($DataMasseuse);
-    $stmt->bind_param("i", $_SESSION["id"]);
+    $stmt->bind_param("i", $_GET["masseuseID"]);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
-        <div class="modal fade text-left" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -662,7 +662,7 @@ function MasseuseInfoModal()
                                         <div class="controls">
                                             <label for="users-edit-username">Voornaam</label>
                                             <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Voornaam" readonly aria-invalid="false" name="voornaam" value="<?= $masseuse["voornaam"] ?>">
-                                            <input type="hidden" value="<?= $masseuse["id"] ?>" name="id_p">
+                                            <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="id_p">
                                         </div>
                                         <div class="controls">
                                             <label for="tussenvoegsel">Tussenvoegsel</label>
