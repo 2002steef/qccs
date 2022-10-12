@@ -547,17 +547,17 @@ function masseuseInfo()
             <td class="td-width">
                 <h3><?= $masseuse["bedrijfsNaam"] ?></h3>
                 <p><b>
-                    <?= $masseuse["voornaam"]; ?>
-                    <?= $masseuse["tussenvoegsel"]; ?>
-                    <?= $masseuse["achternaam"]; ?>
-                </b></p>
+                        <?= $masseuse["voornaam"]; ?>
+                        <?= $masseuse["tussenvoegsel"]; ?>
+                        <?= $masseuse["achternaam"]; ?>
+                    </b></p>
                 <p>
                     <?= $masseuse["straat"]; ?>
                     <?= $masseuse["huisNummer"]; ?>
                     <?= $masseuse["huisNummerToevoeging"]; ?>,
                     <?= $masseuse["postcode"]; ?><br>
                     <?= $masseuse["plaats"]; ?>
-                    </p>
+                </p>
                 <div class="row">
                     <div class="col">
                         1 of 5
@@ -643,7 +643,7 @@ function MasseuseInfoModal()
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
-        <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"]?>" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -704,6 +704,43 @@ function MasseuseInfoModal()
                                     </div>
                                 </div>
                             </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php
+    }
+}
+
+function MasseuseParagraafModal()
+{
+    global $mysqli;
+    $DataMasseuse = "SELECT * FROM `masseuses` WHERE masseuseID";
+    $stmt = $mysqli->prepare($DataMasseuse);
+    $stmt->execute();
+    $resultMasseuse = $stmt->get_result();
+
+    while ($masseuse = $resultMasseuse->fetch_array()) {
+    ?>
+        <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post">
+                            <p class="m-0">
+                                <textarea rows="8" col="10" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= $masseuse["paragraafje"]; ?> </textarea>
+                            </p>
                         </form>
 
                     </div>
