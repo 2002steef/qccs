@@ -454,7 +454,7 @@ function UpdateMasseuse()
         $stmt = $mysqli->prepare($query);
         $id = $_POST["id"];
         $stmt->bind_param(
-            'sssssssssi',
+            'ssssssssssi',
             $_POST["voornaam"],
             $_POST["tussenvoegsel"],
             $_POST["achternaam"],
@@ -567,38 +567,6 @@ function bedrijfsInfo()
     <?php }
 }
 
-
-
-function GetCompanyName()
-{
-    if (isset($_GET["custof"])) {
-        global $mysqli;
-        $sql = "SELECT name from `organisation` WHERE id = ? ";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("i", $_GET["custof"]);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($data = $result->fetch_assoc()) {
-            echo $data["name"];
-        }
-    }
-}
-
-function GetCompanyNamePersonnel()
-{
-    if (isset($_GET["membof"])) {
-        global $mysqli;
-        $sql = "SELECT name from `organisation` WHERE id = ? ";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("i", $_GET["membof"]);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($data = $result->fetch_assoc()) {
-            echo $data["name"];
-        }
-    }
-}
-
 function MasseuseInfoModal()
 {
     global $mysqli;
@@ -651,7 +619,8 @@ function MasseuseInfoModal()
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
+                                            <label for="users-edit-username">Plaats</label>
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Plaats" aria-invalid="false" name="plaats" value="<?= $masseuse["plaats"] ?>">
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
                                         </div>
                                     </div>
