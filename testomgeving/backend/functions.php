@@ -618,7 +618,7 @@ function MasseuseInfoModal()
                                             <label for="users-edit-username">Huisnummer</label>
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
-                                        <div class="controls ">
+                                        <div class="controls row">
                                             <label for="users-edit-username">Plaats</label>
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Plaats" aria-invalid="false" name="plaats" value="<?= $masseuse["plaats"] ?>">
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
