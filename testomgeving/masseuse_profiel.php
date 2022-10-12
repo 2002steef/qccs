@@ -131,9 +131,10 @@ include "partials/header.php";
                                                             <?= $masseuse["postcode"] . " " . $masseuse["plaats"]; ?>
                                                         </p>
                                                     </div>
+                                                    <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right"> <span class="ft-edit">Bewerken</span></a>
+
                                                 </div>
                                             </div>
-                                            <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right"> <span class="ft-edit">Bewerken</span></a>
                                         </div>
                                         <!-- contact ends -->
                                     </div>
