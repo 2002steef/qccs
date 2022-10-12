@@ -544,7 +544,29 @@ function masseuseInfo()
     while ($masseuse = $resultMasseuse->fetch_array()) { ?>
         <tr>
             <td><img src="img/uploads/<?= $masseuse["profielFoto"] ?>" width="150px" height="150px" alt="masseuse foto"></td>
-            <td class="td-width"><?= $masseuse["paragraafje"] ?></td>
+            <td class="td-width">
+                <h3>BedrijfNaam</h3>
+                <h4>Masseuse Naam</h4>
+                <p>Dit is de locatie</p>
+                <div class="row">
+                    <div class="col">
+                        1 of 5
+                    </div>
+                    <div class="col">
+                        2 of 5
+                    </div>
+                    <div class="col">
+                        3 of 5
+                    </div>
+                    <div class="col">
+                        4 of 5
+                    </div>
+                    <div class="col">
+                        5 of 5
+                    </div>
+                </div>
+                <?= $masseuse["paragraafje"] ?>
+            </td>
             <td><a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
                     Meer info
                 </a>
