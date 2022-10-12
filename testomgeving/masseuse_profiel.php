@@ -134,8 +134,7 @@ include "partials/header.php";
                                                     <div class="card-body">
                                                         <div class="m-0 ">
                                                             <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                                            <p>Postcode: <?= $masseuse["postcode"]; ?></p>
-                                                            <p >Plaats : <?= $masseuse["plaats"]; ?></p>
+                                                            <p>Plaats :<?= $masseuse["postcode"]." ".$masseuse["plaats"]; ?></p>
                                                             <p>Straat & huisnummer</p>
                                                             <div class="form-row">
                                                                 <p><?= $masseuse["straat"] ." " .$masseuse["huisNummer"]." ".$masseuse["huisNummerToevoeging"]; ?></p>
