@@ -131,8 +131,9 @@ include "partials/header.php";
                                                         </p>
                                                     </div>
                                                 </div>
+                                                <a href="" data-target="modal" data-toggle="modal" class="btn btn-outline-light-gray align-right"> <span class="ft-edit">Bewerken</span></a>
+
                                             </div>
-                                            <a href="" data-target="modal" data-toggle="modal" class="btn btn-outline-light-gray align-right"> <span class="ft-edit">Bewerken</span></a>
                                         </div>
                                         <!-- contact ends -->
                                     </div>
