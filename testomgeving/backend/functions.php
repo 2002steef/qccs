@@ -444,6 +444,95 @@ function UpdateCustomerB()
 
 UpdateCustomerB();
 
+function UpdateMasseuse()
+{
+    global $mysqli;
+    if (isset($_POST['btnSaveMasseuse'])) {
+        $query = "UPDATE `masseuses` SET `voornaam`=?,`tussenvoegsel`=?,`achternaam`=?,`email`=?,
+        `telefoon`=?,`straat`=?,`huisNummer`=?,`huisNummerToevoeging`=?,`postcode`=?,
+        `plaats`=?,`website`=?,`paragraafje`=? WHERE masseuseID = ?";
+        $stmt = $mysqli->prepare($query);
+        $id = $_POST["masseuseID"];
+        $stmt->bind_param(
+            'sssssssssi',
+            $_POST["voornaam"],
+            $_POST["tussenvoegsel"],
+            $_POST["achternaam"],
+            $_POST["email"],
+            $_POST["telefoon"],
+            $_POST["straat"],
+            $_POST["huisNummer"],
+            $_POST["huisNummerToevoeging"],
+            $_POST["postcode"],
+            $_POST["plaats"],
+            $_POST["website"],
+            $_POST["paragraafje"],
+            $id
+        );
+        $stmt->execute();
+        if ($stmt->num_rows > 0) {
+            header("Location:../masseuse_profiel.php?masseuseID=$id");
+        }
+    }
+}
+
+UpdateMasseuse();
+
+function GetCustomerZ()
+{
+    global $mysqli;
+    $DataCustomer = "SELECT customers_business.id,customers_business.status,customers_business.first_name,customers_business.last_name_prefix,
+        customers_business.last_name,customers_business.street,customers_business.housenumber,customers_business.housenumberAddition,
+        customers_business.housenumberAddition,customers_business.postalcode,customers_business.phoneNumber,customers_business.business,
+       customers_business.customer_of
+ FROM customers_business 
+     LEFT JOIN organisation 
+         ON customers_business.customer_of = organisation.id 
+ WHERE customers_business.customer_of = ?";
+    $stmt = $mysqli->prepare($DataCustomer);
+    $stmt->bind_param("i", $_GET["custof"]);
+    $stmt->execute();
+    $resultCustomer = $stmt->get_result();
+
+    while ($rowCustomer = $resultCustomer->fetch_array()) {
+    ?>
+        <tr>
+            <td><?= $rowCustomer["id"] ?></td>
+            <td><?= $rowCustomer["first_name"] . " " . $rowCustomer["last_name_prefix"] . " " . $rowCustomer["last_name"] ?></td>
+            <td><?= $rowCustomer["phoneNumber"] ?></td>
+            <td><?= $rowCustomer["business"] ?></td>
+            <td><?php
+                if ($rowCustomer["status"] === "Inactief") { ?>
+                    <span class="badge bg-light-danger">Inactief</span>
+                <?php } elseif ($rowCustomer["status"] === "Actief") { ?>
+                    <span class="badge bg-light-succes">Actief</span>
+                <?php } ?>
+            </td>
+            <td>
+                <div class="row">
+                    <div class="col-md-0">
+                    </div>
+                    <?php
+                    if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
+                    ?>
+                        <div class="col-md-5">
+                            <a href="#" data-toggle="modal" data-target="#editZ<?= $rowCustomer["id"] ?>">
+                                <i class="ft-edit"></i>
+                            </a>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                    <div class="col-md-5">
+                        <a data-toggle="modal" data-target="#info<?= $rowCustomer["id"] ?>" href="modals.php?<?= $rowCustomer["id"] ?>">
+                            <i class="ft-eye"></i>
+                        </a>
+                    </div>
+                </div>
+        </tr>
+    <?php
+    }
+}
 
 function masseuseInfo()
 {
@@ -472,7 +561,7 @@ function masseuseInfo()
                     <?= $masseuse["postcode"]; ?><br>
                     <?= $masseuse["plaats"]; ?>
                 </p>
-                <div class="row" style="margin: 0;">
+                <div class="row noMargin">
                     <span class="ft-tag"></span>
                     <div class="col">
                         1 of 5
@@ -516,6 +605,38 @@ function bedrijfsInfo()
     <?php }
 }
 
+
+
+function GetCompanyName()
+{
+    if (isset($_GET["custof"])) {
+        global $mysqli;
+        $sql = "SELECT name from `organisation` WHERE id = ? ";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("i", $_GET["custof"]);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($data = $result->fetch_assoc()) {
+            echo $data["name"];
+        }
+    }
+}
+
+function GetCompanyNamePersonnel()
+{
+    if (isset($_GET["membof"])) {
+        global $mysqli;
+        $sql = "SELECT name from `organisation` WHERE id = ? ";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("i", $_GET["membof"]);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($data = $result->fetch_assoc()) {
+            echo $data["name"];
+        }
+    }
+}
+
 function MasseuseInfoModal()
 {
     global $mysqli;
@@ -526,18 +647,17 @@ function MasseuseInfoModal()
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
-
         <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <form method="post">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken Masseuse Info</i></h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken Masseuse Info</i></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post">
                             <div class="row">
                                 <div class="col-12 col-md-4">
                                     <div class="form-group">
@@ -573,6 +693,7 @@ function MasseuseInfoModal()
                                         <div class="controls col-12 row">
                                             <input type="text" id="postcode" class="form-control text-light-gray round col-8" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
                                             <input type="text" id="huisnummer" class="form-control text-light-gray round col-4" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
+
                                         </div>
                                     </div>
                                 </div>
@@ -590,52 +711,17 @@ function MasseuseInfoModal()
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn bg-light-secondary" data-dismiss="modal" name="btnMasseuseInfoSave">Opslaan</button>
-                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </form>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn bg-light-secondary" data-dismiss="modal" name="btnMasseuseInfoSave">Opslaan</button>
+                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <?php
-        if (isset($_POST['btnMasseuseInfoSave'])) {
-            global $mysqli;
-            $voornaam = ucfirst($_POST['voornaam']);
-            $straatnaam = ucfirst($_POST['straat']);
-
-            $query = "UPDATE
-        `masseuses`
-    SET
-       `voornaam` = ?,
-       `tussenvoegsel`= ?,
-       `achternaam` = ?,
-       `straat` = ?,
-       `huisNummer` = ?,
-       `plaats` = ?,
-       `postcode` = ?,
-       `email` = ?,
-       `telefoon` = ?
-    WHERE
-        `masseuseID` = ?";
-            $stmt = $mysqli->prepare($query);
-            $stmt->bind_param(
-                'sssssssssi',
-                $voornaam,
-                $_POST["tussenvoegsel"],
-                $_POST["achternaam"],
-                $straatnaam,
-                $_POST["huisNummer"],
-                $_POST["plaats"],
-                $_POST["postcode"],
-                $_POST["email"],
-                $_POST["telefoon"],
-                $_POST["id"]
-            );
-            $stmt->execute();
-        }
+    <?php
     }
 }
 
@@ -648,7 +734,7 @@ function MasseuseParagraafModal()
     $resultMasseuse = $stmt->get_result();
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
-        ?>
+    ?>
         <div class="modal fade text-left" id="paragraaf<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -662,8 +748,11 @@ function MasseuseParagraafModal()
                         <div class="modal-body">
 
                             <div class="">
-                                <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                <textarea type="text" id="editMasseuseParagraafje" name="paragraafje" value="<?= $masseuse["paragraafje"]; ?>" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
+                                <<<<<<< Updated upstream <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
+                                    <textarea type="text" id="editMasseuseParagraafje" name="paragraafje" value="<?= $masseuse["paragraafje"]; ?>" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
+                                    =======
+                                    <textarea type="text" id="editMasseuseParagraafje" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
+                                    >>>>>>> Stashed changes
                             </div>
 
                         </div>
@@ -675,22 +764,7 @@ function MasseuseParagraafModal()
                 </form>
             </div>
         </div>
-        <?php
-        global $mysqli;
-        if (isset($_POST['btnMasseuseParagraafSave'])) {
-            $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
-            $stmt = $mysqli->prepare($query);
-            $id = $_POST["masseuseID"];
-            $stmt->bind_param(
-                'si',
-                $_POST["paragraafje"],
-                $id
-            );
-            $stmt->execute();
-            if ($stmt->num_rows > 0) {
-                header("Location:../masseuse_profiel.php?masseuseID=$id");
-            }
-        }
+    <?php
     }
 }
 
@@ -702,86 +776,70 @@ function ViewC()
     $stmt->execute();
     $resultData = $stmt->get_result();
     while ($row = $resultData->fetch_array()) {
-        ?>
-        <div class="modal fade text-left" id="info<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Klantgegevens</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post">
-                            <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Bedrijfsgegevens</h4>
-                                        <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Voornaam" readonly aria-invalid="false" name="voornaam_p" value="<?= $row["name"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="achternaam">Kvk nummer</label>
-                                            <input type="text" id="achternaam" class="form-control-plaintext text-light round" placeholder="Achternaam" readonly aria-invalid="false" name="achternaam" value="<?= $row["kvk_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="business">Btw nummer</label>
-                                            <input type="text" id="business" class="form-control-plaintext text-light round" placeholder="Bedrijf" readonly aria-invalid="false" name="business" value="<?= $row["btw_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="notities">Iban nummer</label>
-                                            <input type="text" id="business" class="form-control-plaintext text-light round" placeholder="Bedrijf" readonly aria-invalid="false" name="business" value="<?= $row["iban_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="notities">Notities</label>
-                                            <textarea placeholder="Plaats hier je notities" id="notities" name="notities_z" readonly rows="6" cols="50" maxlength="600"><?php echo $row['notes']; ?></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Adresgegevens</h4>
-                                        <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Straatnaam" readonly aria-invalid="false" name="straatnaam" value="<?= $row["street"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Huisnummer" readonly aria-invalid="false" name="huisnummer" value="<?= $row["housenumber"] ?>">
-                                        </div>
-                                        <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
-                                            <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Postcode" readonly aria-invalid="false" name="postcode" value="<?= $row["postalcode"] ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Contactgegevens</h4>
-                                        <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
-                                            <input type="email" id="users-edit-email" class="form-control-plaintext text-light round" placeholder="Typeemail@hier.com" readonly aria-invalid="false" name="email" value="<?= $row["email"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="telefoonnummer">Telefoonnummer</label>
-                                            <input type="text" id="telefoonnummer" class="form-control-plaintext text-light round" placeholder="Telefoonnummer" readonly aria-invalid="false" name="telefoonnummer" value="<?= $row["phoneNumber"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="tussenvoegsel">Website</label>
-                                            <input type="text" id="tussenvoegsel" class="form-control-plaintext text-light round" placeholder="Tussenvoegsel" readonly aria-invalid="false" name="tussenvoegsel" value="<?= $row["website"] ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                    </div>
+    ?>
+        <label for="users-edit-username">Voornaam</label>
+        <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Voornaam" readonly aria-invalid="false" name="voornaam_p" value="<?= $row["name"] ?>">
+        </div>
+        <div class="controls">
+            <label for="achternaam">Kvk nummer</label>
+            <input type="text" id="achternaam" class="form-control-plaintext text-light round" placeholder="Achternaam" readonly aria-invalid="false" name="achternaam" value="<?= $row["kvk_nummer"] ?>">
+        </div>
+        <div class="controls">
+            <label for="business">Btw nummer</label>
+            <input type="text" id="business" class="form-control-plaintext text-light round" placeholder="Bedrijf" readonly aria-invalid="false" name="business" value="<?= $row["btw_nummer"] ?>">
+        </div>
+        <div class="controls">
+            <label for="notities">Iban nummer</label>
+            <input type="text" id="business" class="form-control-plaintext text-light round" placeholder="Bedrijf" readonly aria-invalid="false" name="business" value="<?= $row["iban_nummer"] ?>">
+        </div>
+        <div class="controls">
+            <label for="notities">Notities</label>
+            <textarea placeholder="Plaats hier je notities" id="notities" name="notities_z" readonly rows="6" cols="50" maxlength="600"><?php echo $row['notes']; ?></textarea>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <h4>Adresgegevens</h4>
+                <div class="controls ">
+                    <label for="users-edit-username">Straatnaam</label>
+                    <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Straatnaam" readonly aria-invalid="false" name="straatnaam" value="<?= $row["street"] ?>">
+                </div>
+                <div class="controls">
+                    <label for="users-edit-username">Huisnummer</label>
+                    <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Huisnummer" readonly aria-invalid="false" name="huisnummer" value="<?= $row["housenumber"] ?>">
+                </div>
+                <div class="controls ">
+                    <label for="users-edit-username">Postcode</label>
+                    <input type="text" id="users-edit-username" class="form-control-plaintext text-light round" placeholder="Postcode" readonly aria-invalid="false" name="postcode" value="<?= $row["postalcode"] ?>">
                 </div>
             </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <h4>Contactgegevens</h4>
+                <div class="controls">
+                    <label for="users-edit-email">E-mail</label>
+                    <input type="email" id="users-edit-email" class="form-control-plaintext text-light round" placeholder="Typeemail@hier.com" readonly aria-invalid="false" name="email" value="<?= $row["email"] ?>">
+                </div>
+                <div class="controls">
+                    <label for="telefoonnummer">Telefoonnummer</label>
+                    <input type="text" id="telefoonnummer" class="form-control-plaintext text-light round" placeholder="Telefoonnummer" readonly aria-invalid="false" name="telefoonnummer" value="<?= $row["phoneNumber"] ?>">
+                </div>
+                <div class="controls">
+                    <label for="tussenvoegsel">Website</label>
+                    <input type="text" id="tussenvoegsel" class="form-control-plaintext text-light round" placeholder="Tussenvoegsel" readonly aria-invalid="false" name="tussenvoegsel" value="<?= $row["website"] ?>">
+                </div>
+            </div>
+        </div>
+        </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        </div>
         </div>
     <?php
     }
