@@ -1,6 +1,9 @@
 <?php
 include "backend/functions.php";
-
+ShowMoreParagraafModal();
+MasseuseParagraafModal();
+MasseuseInfoModal();
+$masseuse = GetMasseuse();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -152,7 +155,7 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
                                                         <p class="m-0">
-                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= substr($masseuse["paragraafje"], 0, 500). "..."; ?>...  </textarea>
+                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= substr($masseuse["paragraafje"], 0, 500) . "..."; ?>...  </textarea>
                                                         </p>
                                                     </div>
                                                     <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
@@ -197,10 +200,7 @@ include "partials/header.php";
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
-    ShowMoreParagraafModal();
-    MasseuseParagraafModal();
-    MasseuseInfoModal();
-    $masseuse = GetMasseuse();
+
     include "partials/footer.php";
     ?>
 </body>
