@@ -771,7 +771,7 @@ function MasseuseParagraafModal()
 function ShowMoreParagraafModal()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT `paragraafje` FROM `masseuses`";
+    $DataMasseuse = "SELECT * FROM `masseuses`";
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultMasseuse = $stmt->get_result();
