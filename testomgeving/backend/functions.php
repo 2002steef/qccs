@@ -714,7 +714,7 @@ function MasseuseInfoModal()
                         </div>
                         <div class="modal-footer">
                             <button name="btnMasseuseInfoSave" type="submit" class="btn bg-light-secondary" >Opslaan</button>
-                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                     </form>
                 </div>
@@ -790,7 +790,7 @@ function MasseuseParagraafModal()
                         </div>
                         <div class="modal-footer">
                             <button name="btnMasseuseParagraafSave" type="submit" class="btn bg-light-secondary">Opslaan</button>
-                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                 </div>
                 </form>
@@ -845,7 +845,7 @@ function ShowMoreParagraafModal()
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                 </div>
                 </form>
