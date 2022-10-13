@@ -452,7 +452,7 @@ function UpdateMasseuse()
         `telefoon`=?,`straat`=?,`huisNummer`=?,`huisNummerToevoeging`=?,`postcode`=?,
         `plaats`=? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
-        $id = $_POST["id"];
+        $id = $_GET["id"];
         $stmt->bind_param(
             'ssssssssssi',
             $_POST["voornaam"],
@@ -481,7 +481,7 @@ function UpdateMasseuseParagraaf()
     if (isset($_POST['btnMasseuseParagraafSave'])) {
         $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
-        $id = $_POST["masseuseID"];
+        $id = $_GET["masseuseID"];
         $stmt->bind_param(
             'si',
             $_POST["paragraafje"],
