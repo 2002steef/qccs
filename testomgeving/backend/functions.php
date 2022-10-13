@@ -751,7 +751,7 @@ function MasseuseInfoModal()
                 $_POST["plaats"],
                 $_POST["postcode"],
                 $_POST["email"],
-                $_POST["telefoon"],
+                $_POST["telefoonnummer"],
                 $_POST["id"]
             );
             $stmt->execute();
