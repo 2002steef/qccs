@@ -724,7 +724,7 @@ function MasseuseInfoModal()
         if (isset($_POST['btnMasseuseInfoSave'])) {
 
             $voornaam = ucfirst($_POST['voornaam']);
-            $straatnaam = ucfirst($_POST['straat']);
+            $straatnaam = ucfirst($_POST['straatnaam']);
 
             $query = "UPDATE
             `masseuses`
