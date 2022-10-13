@@ -713,7 +713,7 @@ function MasseuseInfoModal()
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn bg-light-secondary" data-dismiss="modal" name="btnMasseuseInfoSave">Opslaan</button>
+                            <button name="btnMasseuseInfoSave" type="submit" class="btn bg-light-secondary" >Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </form>
