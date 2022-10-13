@@ -779,7 +779,7 @@ function ShowMoreParagraafModal()
     while ($masseuse = $resultMasseuse->fetch_array()) {
         
         ?>
-        <div class="modal fade text-left" id="paragraaf<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="readMore<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <form method="post">
