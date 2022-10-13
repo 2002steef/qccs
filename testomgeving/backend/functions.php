@@ -565,14 +565,14 @@ function MasseuseInfoModal()
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Straatnaam" aria-invalid="false" name="straatnaam" value="<?= $masseuse["straat"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username"> Plaats</label>
+                                            <label for="plaats"> Plaats</label>
                                             <input type="text" id="plaats" class="form-control text-light-gray round" placeholder="Plaats" aria-invalid="false" name="plaats" value="<?= $masseuse["plaats"] ?>">
 
                                         </div>
-                                        <label for="plaats">Postcode & Huisnummer</label>
+                                        <label for="postcode">Postcode & Huisnummer</label>
                                         <div class="controls col-12 row">
-                                        <input type="text" id="users-edit-username" class="form-control text-light-gray round col-8" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
-                                        <input type="text" id="users-edit-username" class="form-control text-light-gray round col-4" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
+                                        <input type="text" id="postcode" class="form-control text-light-gray round col-8" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
+                                        <input type="text" id="huisnummer" class="form-control text-light-gray round col-4" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                     </div>
                                 </div>
