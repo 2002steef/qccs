@@ -9,18 +9,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (isset($_POST['email'], $_POST['wachtwoord'])) {
         $_SESSION['email'] = $_POST['email'];
-        if ($stmtMw = $mysqli->prepare('SELECT `user_ID`, `userName`, `password`, `email` FROM `login` WHERE email = ?')) {
+        if ($stmt = $mysqli->prepare('SELECT `user_ID`, `userName`, `password`, `email` FROM `login` WHERE email = ?')) {
             // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
-            $stmtMw->bind_param('s', $_POST['email']);
-            $stmtMw->execute();
+            $stmt->bind_param('s', $_POST['email']);
+            $stmt->execute();
 
             // Store the result so we can check if the account exists in the database.
-            $stmtMw->store_result();
+            $stmt->store_result();
 
-            if ($stmtMw->num_rows > 0) {
-                $stmtMw->bind_result($id, $userName, $password, $email);
+            if ($stmt->num_rows > 0) {
+                $stmt->bind_result($id, $userName, $password, $email);
                 //            $stmt->bind_result($id, $password);
-                $stmtMw->fetch();
+                $stmt->fetch();
                 // Account exists, now we verify the password.
                 // Note: remember to use password_hash in your registration file to store the hashed passwords.
                 //            if (password_verify($_POST['wachtwoord'], $password)) {
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo "Cookies Not Set";
                     }
                     header("Location:../overzicht.php");
-                } else {
+                } elseif($stmt->num_rows == 0 ) {
                     // Incorrect password
                     //                $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
                     header("Location:../index.php?login=foutecombi");
