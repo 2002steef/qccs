@@ -153,9 +153,9 @@ include "partials/header.php";
                                                     <h4 class="card-title m-0">About</h4>
                                                 </div>
                                                 <div class="card-content">
-                                                    <div class="card-body hidescroll">
+                                                    <div class="card-body">
                                                         <p class="m-0">
-                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= substr($masseuse["paragraafje"], 0, 500) . "..."; ?>...  </textarea>
+                                                            <textarea  type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= substr($masseuse["paragraafje"], 0, 500) . "..."; ?>...  </textarea>
                                                         </p>
                                                     </div>
                                                     <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
