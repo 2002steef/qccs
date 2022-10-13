@@ -162,7 +162,7 @@ include "partials/header.php";
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
+                                                <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
                                             </div>
                                         </div>
                                         <!-- About company ends -->
