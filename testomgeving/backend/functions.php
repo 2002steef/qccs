@@ -810,7 +810,7 @@ function MasseuseParagraafModal()
         $stmt->bind_param(
             'ssssssssssi', 
             $_POST["paragraafje"],
-            $_POST["id"]
+            $_POST["masseuseID"]
         );
         $stmt->execute();
     }
