@@ -16,37 +16,45 @@
     height: 235px;
     overflow: auto;
 }
-.txtarea{
-    overflow-y:scroll;
-    width:100%;
-    position:absolute;
-    right:-20px;
+
+.txtarea {
+    overflow-y: scroll;
+    width: 100%;
+    position: absolute;
+    right: -20px;
     padding-right: 20px;
 }
-.scrolltext{
-    overflow-y:scroll;
-    height:200px;
-    width:100%;
-    position:absolute;
-    right:-30px;
+
+.scrolltext {
+    overflow-y: scroll;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    right: -30px;
 }
-.hidescroll{
-    position:relative;
-    overflow:hidden;
-    height:200px;
-    width:100%;
+
+.hidescroll {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
 }
-#btnSaveMasseuse{
+
+#btnSaveMasseuse {
     display: none;
-    margin-left:  20px;
+    margin-left: 20px;
 }
 
 .overZichtTableHeader {
     min-width: 175px;
 }
-#editMasseuseParagraafje
-{
+
+#editMasseuseParagraafje {
     padding: 25px;
     height: 500px;
     margin: auto;
+}
+
+.noMargin {
+    margin: 0;
 }
