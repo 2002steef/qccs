@@ -565,14 +565,14 @@ function MasseuseInfoModal()
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Straatnaam" aria-invalid="false" name="straatnaam" value="<?= $masseuse["straat"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
-                                        </div>
-                                        <label for="plaats">Plaats</label>
-                                        <div class="controls col-12">
-
+                                            <label for="users-edit-username"> Plaats</label>
                                             <input type="text" id="plaats" class="form-control text-light-gray round col-7" placeholder="Plaats" aria-invalid="false" name="plaats" value="<?= $masseuse["plaats"] ?>">
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round col-5" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
+
+                                        </div>
+                                        <label for="plaats">Postcode & Huisnummer</label>
+                                        <div class="controls col-12">
+                                        <input type="text" id="users-edit-username" class="form-control text-light-gray round col-5" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
+                                        <input type="text" id="users-edit-username" class="form-control text-light-gray round" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                     </div>
                                 </div>
