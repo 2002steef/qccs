@@ -25,20 +25,6 @@
     padding-right: 20px;
 }
 
-.scrolltext {
-    overflow-y: scroll;
-    height: 200px;
-    width: 100%;
-    position: absolute;
-    right: -30px;
-}
-
-.hidescroll {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-    width: 100%;
-}
 
 #btnSaveMasseuse {
     display: none;
