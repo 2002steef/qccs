@@ -743,7 +743,7 @@ function MasseuseInfoModal()
             `masseuseID` = ?;";
             $stmt = $mysqli->prepare($query);
             $stmt->bind_param(
-                'ssssssssssi',
+                'sssssssssi',
                 $voornaam,
                 $_POST["tussenvoegsel"],
                 $_POST["achternaam"],
