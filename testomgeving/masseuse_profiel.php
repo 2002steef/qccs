@@ -132,8 +132,9 @@ include "partials/header.php";
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
-
+                                                <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
+                                                    <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
+                                                    <?php }?>
                                             </div>
                                         </div>
                                         <!-- contact ends -->
