@@ -152,11 +152,14 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
                                                         <p class="m-0">
-                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?=  substr($masseuse["paragraafje"],0, 500);?>  </textarea>
+                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?= substr($masseuse["paragraafje"], 0, 500); ?>  </textarea>
                                                         </p>
-                                                        <a href="#" data-target="readMore<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Lees meer</a>
                                                     </div>
-                                                    <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
+                                                    <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
+                                                        <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
+                                                    <?php } else { ?>
+                                                        <a href="#" data-target="readMore<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Lees meer</a>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
