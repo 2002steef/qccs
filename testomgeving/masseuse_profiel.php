@@ -152,7 +152,8 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body hidescroll">
                                                         <p class="m-0">
-                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?php $ParagraafKort =  substr($masseuse["paragraafje"],0, 500); echo $ParagraafKort . "<a data-target='#readMore<?= $masseuse[1] ?>' data-toggle='modal'>...</a>";  ?>  </textarea>
+                                                            <textarea rows="6" type="text" id="editMasseuseParagraafje" class=" form-control-plaintext txtarea" readonly><?=  substr($masseuse["paragraafje"],0, 500);?>  </textarea>
+                                                            <a href="#" data-target="readMore<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Lees meer</a>
                                                         </p>
                                                     </div>
                                                     <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
