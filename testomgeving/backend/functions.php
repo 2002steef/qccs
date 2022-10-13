@@ -663,7 +663,7 @@ function MasseuseParagraafModal()
 
                             <div class="">
                                 <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                <textarea type="text" id="editMasseuseParagraafje" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
+                                <textarea type="text" id="editMasseuseParagraafje" value="<?= $masseuse["paragraafje"]; ?>" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
                             </div>
 
                         </div>
