@@ -789,7 +789,6 @@ function MasseuseParagraafModal()
 
                         </div>
                         <div class="modal-footer">
-                            <button name="btnMasseuseParagraafSave" type="submit" class="btn bg-light-secondary">Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                         </div>
                 </div>
