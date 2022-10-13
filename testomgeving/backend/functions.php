@@ -571,8 +571,8 @@ function MasseuseInfoModal()
                                         </div>
                                         <label for="postcode">Postcode & Huisnummer</label>
                                         <div class="controls col-12 row">
-                                        <input type="text" id="postcode" class="form-control text-light-gray round col-8" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
-                                        <input type="text" id="huisnummer" class="form-control text-light-gray round col-4" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
+                                            <input type="text" id="postcode" class="form-control text-light-gray round col-8" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
+                                            <input type="text" id="huisnummer" class="form-control text-light-gray round col-4" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -667,7 +667,7 @@ function MasseuseParagraafModal()
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn bg-light-secondary" data-dismiss="modal" name="btnMasseuseParagraafSave">Opslaan</button>
+                        <button name="btnMasseuseParagraafSave" type="submit" class="btn bg-light-secondary"  >Opslaan</button>
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
