@@ -749,11 +749,8 @@ function MasseuseParagraafModal()
                         <div class="modal-body">
 
                             <div class="">
-                                <<<<<<< Updated upstream <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                    <textarea type="text" id="editMasseuseParagraafje" name="paragraafje" value="<?= $masseuse["paragraafje"]; ?>" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
-                                    =======
-                                    <textarea type="text" id="editMasseuseParagraafje" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
-                                    >>>>>>> Stashed changes
+                               <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
+                                    <textarea type="text" id="editMasseuseParagraafje" name="paragraafje" value="<?= $masseuse["paragraafje"]; ?>" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>                                   
                             </div>
 
                         </div>
