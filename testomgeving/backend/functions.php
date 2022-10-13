@@ -526,10 +526,11 @@ function MasseuseInfoModal()
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
     ?>
-        <form method="post">
-            <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
+
+        <div class="modal fade text-left" id="info<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <form method="post">
                         <div class="modal-header">
                             <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken Masseuse Info</i></h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -569,7 +570,7 @@ function MasseuseInfoModal()
                                         </div>
                                         <label for="plaats">Plaats</label>
                                         <div class="controls col-12 row">
-                                    
+
                                             <input type="text" id="plaats" class="form-control text-light-gray round col-10" placeholder="Plaats" aria-invalid="false" name="plaats" value="<?= $masseuse["plaats"] ?>">
                                             <input type="text" id="users-edit-username" class="form-control text-light-gray round col-2" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
                                         </div>
@@ -594,17 +595,18 @@ function MasseuseInfoModal()
                             <button type="submit" class="btn bg-light-secondary" data-dismiss="modal" name="btnMasseuseInfoSave">Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </form>
-    <?php
-    if (isset($_POST['btnMasseuseInfoSave'])) {
-        global $mysqli;
-        $voornaam = ucfirst($_POST['voornaam']);
-        $straatnaam = ucfirst($_POST['straat']);
+        </div>
 
-        $query = "UPDATE
+        <?php
+        if (isset($_POST['btnMasseuseInfoSave'])) {
+            global $mysqli;
+            $voornaam = ucfirst($_POST['voornaam']);
+            $straatnaam = ucfirst($_POST['straat']);
+
+            $query = "UPDATE
         `masseuses`
     SET
        `voornaam` = ?,
@@ -618,22 +620,22 @@ function MasseuseInfoModal()
        `telefoon` = ?
     WHERE
         `masseuseID` = ?";
-        $stmt = $mysqli->prepare($query);
-        $stmt->bind_param(
-            'sssssssssi',
-            $voornaam,
-            $_POST["tussenvoegsel"],
-            $_POST["achternaam"],
-            $straatnaam,
-            $_POST["huisNummer"],
-            $_POST["plaats"],
-            $_POST["postcode"],
-            $_POST["email"],
-            $_POST["telefoon"],
-            $_POST["id"]
-        );
-        $stmt->execute();
-    }
+            $stmt = $mysqli->prepare($query);
+            $stmt->bind_param(
+                'sssssssssi',
+                $voornaam,
+                $_POST["tussenvoegsel"],
+                $_POST["achternaam"],
+                $straatnaam,
+                $_POST["huisNummer"],
+                $_POST["plaats"],
+                $_POST["postcode"],
+                $_POST["email"],
+                $_POST["telefoon"],
+                $_POST["id"]
+            );
+            $stmt->execute();
+        }
     }
 }
 
@@ -646,7 +648,7 @@ function MasseuseParagraafModal()
     $resultMasseuse = $stmt->get_result();
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
-    ?>
+        ?>
         <div class="modal fade text-left" id="paragraaf<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -671,22 +673,22 @@ function MasseuseParagraafModal()
                 </div>
             </div>
         </div>
-    <?php
-    global $mysqli;
-    if (isset($_POST['btnMasseuseParagraafSave'])) {
-        $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
-        $stmt = $mysqli->prepare($query);
-        $id = $_POST["masseuseID"];
-        $stmt->bind_param(
-            'si',
-            $_POST["paragraafje"],
-            $id
-        );
-        $stmt->execute();
-        if ($stmt->num_rows > 0) {
-            header("Location:../masseuse_profiel.php?masseuseID=$id");
+        <?php
+        global $mysqli;
+        if (isset($_POST['btnMasseuseParagraafSave'])) {
+            $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
+            $stmt = $mysqli->prepare($query);
+            $id = $_POST["masseuseID"];
+            $stmt->bind_param(
+                'si',
+                $_POST["paragraafje"],
+                $id
+            );
+            $stmt->execute();
+            if ($stmt->num_rows > 0) {
+                header("Location:../masseuse_profiel.php?masseuseID=$id");
+            }
         }
-    }
     }
 }
 
@@ -698,7 +700,7 @@ function ViewC()
     $stmt->execute();
     $resultData = $stmt->get_result();
     while ($row = $resultData->fetch_array()) {
-    ?>
+        ?>
         <div class="modal fade text-left" id="info<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
