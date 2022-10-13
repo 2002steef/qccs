@@ -649,9 +649,8 @@ function MasseuseInfoModal()
         </form>
     <?php
     }
-    UpdateMasseuse();
-
 }
+UpdateMasseuse();
 
 function MasseuseParagraafModal()
 {
@@ -689,9 +688,9 @@ function MasseuseParagraafModal()
         </div>
     <?php
     }
-    UpdateMasseuseParagraaf();
-
 }
+UpdateMasseuseParagraaf();
+
 function UpdateMasseuseInfo()
 {
     if (isset($_POST['btnMasseuseInfoSave'])) {
