@@ -676,7 +676,7 @@ function MasseuseParagraafModal()
     if (isset($_POST['btnMasseuseParagraafSave'])) {
         $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
-        $id = $_GET["masseuseID"];
+        $id = $_POST["masseuseID"];
         $stmt->bind_param(
             'si',
             $_POST["paragraafje"],
