@@ -158,7 +158,7 @@ include "partials/header.php";
                                                     <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
                                                         <a href="" data-target="#paragraaf<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
                                                     <?php } else { ?>
-                                                        <a href="#" data-target="readMore<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Lees meer</a>
+                                                        <a href="" data-target="readMore<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="float-right">Lees meer</a>
                                                     <?php } ?>
                                                 </div>
                                             </div>
@@ -197,6 +197,7 @@ include "partials/header.php";
     <script src="assets/js/profileHeight.js"></script>
 
     <?php
+    ShowMoreParagraafModal();
     MasseuseParagraafModal();
     MasseuseInfoModal();
     include "partials/footer.php";
