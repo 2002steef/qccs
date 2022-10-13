@@ -601,23 +601,35 @@ function MasseuseInfoModal()
     <?php
     if (isset($_POST['btnMasseuseInfoSave'])) {
         global $mysqli;
-        $voornaam = ucfirst($_POST['name']);
-        $straatnaam = ucfirst($_POST['street']);
+        $voornaam = ucfirst($_POST['voornaam']);
+        $straatnaam = ucfirst($_POST['straat']);
 
-        $query = "UPDATE masseuses SET  ";
+        $query = "UPDATE
+        `masseuses`
+    SET
+       `voornaam` = ?,
+       `tussenvoegsel`= ?,
+       `achternaam` = ?,
+       `straat` = ?,
+       `huisNummer` = ?,
+       `plaats` = ?,
+       `postcode` = ?,
+       `email` = ?,
+       `telefoon` = ?
+    WHERE
+        `masseuseID` = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param(
-            'ssssssssssi',
+            'sssssssssi',
             $voornaam,
-            $_POST["kvk_nummer"],
-            $_POST["btw_nummer"],
-            $_POST["iban_nummer"],
+            $_POST["tussenvoegsel"],
+            $_POST["achternaam"],
             $straatnaam,
-            $_POST["housenumber"],
-            $_POST["postalcode"],
-            $_POST["phoneNumber"],
+            $_POST["huisNummer"],
+            $_POST["plaats"],
+            $_POST["postcode"],
             $_POST["email"],
-            $_POST["status"],
+            $_POST["telefoon"],
             $_POST["id"]
         );
         $stmt->execute();
