@@ -17,6 +17,16 @@
     overflow: auto;
 }
 
+.txtarea {
+    overflow-y: scroll;
+    width: 100%;
+    position: absolute;
+    right: -20px;
+    padding-right: 20px;
+}
+
+
+
 #btnSaveMasseuse {
     display: none;
     margin-left: 20px;
@@ -24,6 +34,12 @@
 
 .overZichtTableHeader {
     min-width: 175px;
+}
+
+#editMasseuseParagraafje {
+    padding: 25px;
+    height: 500px;
+    margin: auto;
 }
 
 .noMargin {
