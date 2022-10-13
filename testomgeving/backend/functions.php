@@ -474,7 +474,6 @@ function UpdateMasseuse()
     }
 }
 
-UpdateMasseuse();
 
 function UpdateMasseuseParagraaf()
 {
@@ -494,7 +493,6 @@ function UpdateMasseuseParagraaf()
         }
     }
 }
-UpdateMasseuseParagraaf();
 
 function masseuseInfo()
 {
@@ -651,6 +649,8 @@ function MasseuseInfoModal()
         </form>
     <?php
     }
+    UpdateMasseuse();
+
 }
 
 function MasseuseParagraafModal()
@@ -689,6 +689,8 @@ function MasseuseParagraafModal()
         </div>
     <?php
     }
+    UpdateMasseuseParagraaf();
+
 }
 function UpdateMasseuseInfo()
 {
