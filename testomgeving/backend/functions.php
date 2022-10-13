@@ -721,7 +721,42 @@ function MasseuseInfoModal()
                 </div>
             </div>
         </div>
-    <?php
+        <?php
+        if (isset($_POST['btnMasseuseInfoSave'])) {
+
+            $voornaam = ucfirst($_POST['voornaam']);
+            $straatnaam = ucfirst($_POST['straat']);
+
+            $query = "UPDATE
+            `masseuses`
+        SET
+           `voornaam` = ?,
+           `tussenvoegsel`= ?,
+           `achternaam` = ?,
+           `straat` = ?,
+           `huisNummer` = ?,
+           `plaats` = ?,
+           `postcode` = ?,
+           `email` = ?,
+           `telefoon` = ?
+        WHERE
+            `masseuseID` = ?;";
+            $stmt = $mysqli->prepare($query);
+            $stmt->bind_param(
+                'ssssssssssi',
+                $voornaam,
+                $_POST["tussenvoegsel"],
+                $_POST["achternaam"],
+                $straatnaam,
+                $_POST["huisNummer"],
+                $_POST["plaats"],
+                $_POST["postcode"],
+                $_POST["email"],
+                $_POST["telefoon"],
+                $_POST["id"]
+            );
+            $stmt->execute();
+        }
     }
 }
 
@@ -735,7 +770,7 @@ function MasseuseParagraafModal()
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
 
-    ?>
+        ?>
         <div class="modal fade text-left" id="paragraaf<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -749,8 +784,8 @@ function MasseuseParagraafModal()
                         <div class="modal-body">
 
                             <div class="">
-                               <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
-                                    <textarea type="text" id="editMasseuseParagraafje" name="paragraafje" value="<?= $masseuse["paragraafje"]; ?>" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>                                   
+                                <input type="hidden" value="<?= $masseuse["masseuseID"] ?>" name="masseuseID">
+                                <textarea type="text" id="editMasseuseParagraafje" name="paragraafje" value="<?= $masseuse["paragraafje"]; ?>" class="row col-12"><?= $masseuse["paragraafje"]; ?> </textarea>
                             </div>
 
                         </div>
@@ -763,6 +798,22 @@ function MasseuseParagraafModal()
             </div>
         </div>
     <?php
+    if (isset($_POST['btnMasseuseParagraafSave'])) {
+
+        $query = "UPDATE
+        `masseuses`
+    SET
+       `paragraafje` = ?
+    WHERE
+        `masseuseID` = ?;";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param(
+            'ssssssssssi', 
+            $_POST["paragraafje"],
+            $_POST["id"]
+        );
+        $stmt->execute();
+    }
     }
 }
 function ShowMoreParagraafModal()
@@ -774,8 +825,8 @@ function ShowMoreParagraafModal()
     $resultMasseuse = $stmt->get_result();
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
-        
-        ?>
+
+    ?>
         <div class="modal fade text-left" id="readMore<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -802,7 +853,7 @@ function ShowMoreParagraafModal()
                 </form>
             </div>
         </div>
-        <?php
+    <?php
     }
 }
 
@@ -1005,7 +1056,6 @@ function editC()
         //        }
     }
 }
-
 
 function ViewUserZ()
 {
