@@ -134,7 +134,7 @@ include "partials/header.php";
                                                 </div>
                                                 <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
                                                     <a href="" data-target="#info<?= $masseuse["masseuseID"] ?>" data-toggle="modal" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer"> <span class="ft-edit">Bewerken</span></a>
-                                                    <?php }?>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                         <!-- contact ends -->
@@ -203,6 +203,8 @@ include "partials/header.php";
     ShowMoreParagraafModal();
     MasseuseParagraafModal();
     MasseuseInfoModal();
+    GetMasseuse();
+
     include "partials/footer.php";
     ?>
 </body>
