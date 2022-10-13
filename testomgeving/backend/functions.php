@@ -472,7 +472,7 @@ function masseuseInfo()
                     <?= $masseuse["postcode"]; ?><br>
                     <?= $masseuse["plaats"]; ?>
                 </p>
-                <div class="row">
+                <div class="row" style="margin: 0;">
                     <span class="ft-tag"></span>
                     <div class="col">
                         1 of 5
