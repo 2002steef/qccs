@@ -444,55 +444,6 @@ function UpdateCustomerB()
 
 UpdateCustomerB();
 
-function UpdateMasseuse()
-{
-    global $mysqli;
-    if (isset($_POST['btnMasseuseInfoSave'])) {
-        $query = "UPDATE `masseuses` SET `voornaam`=?,`tussenvoegsel`=?,`achternaam`=?,`email`=?,
-        `telefoon`=?,`straat`=?,`huisNummer`=?,`huisNummerToevoeging`=?,`postcode`=?,
-        `plaats`=? WHERE masseuseID = ?";
-        $stmt = $mysqli->prepare($query);
-        $id = $_GET["id"];
-        $stmt->bind_param(
-            'ssssssssssi',
-            $_POST["voornaam"],
-            $_POST["tussenvoegsel"],
-            $_POST["achternaam"],
-            $_POST["email"],
-            $_POST["telefoon"],
-            $_POST["straat"],
-            $_POST["huisNummer"],
-            $_POST["huisNummerToevoeging"],
-            $_POST["postcode"],
-            $_POST["plaats"],
-            $id
-        );
-        $stmt->execute();
-        if ($stmt->num_rows > 0) {
-            header("Location:../masseuse_profiel.php?masseuseID=$id");
-        }
-    }
-}
-
-
-function UpdateMasseuseParagraaf()
-{
-    global $mysqli;
-    if (isset($_POST['btnMasseuseParagraafSave'])) {
-        $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
-        $stmt = $mysqli->prepare($query);
-        $id = $_GET["masseuseID"];
-        $stmt->bind_param(
-            'si',
-            $_POST["paragraafje"],
-            $id
-        );
-        $stmt->execute();
-        if ($stmt->num_rows > 0) {
-            header("Location:../masseuse_profiel.php?masseuseID=$id");
-        }
-    }
-}
 
 function masseuseInfo()
 {
@@ -648,9 +599,31 @@ function MasseuseInfoModal()
             </div>
         </form>
     <?php
+    if (isset($_POST['btnMasseuseInfoSave'])) {
+        global $mysqli;
+        $voornaam = ucfirst($_POST['name']);
+        $straatnaam = ucfirst($_POST['street']);
+
+        $query = "UPDATE masseuses SET  ";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param(
+            'ssssssssssi',
+            $voornaam,
+            $_POST["kvk_nummer"],
+            $_POST["btw_nummer"],
+            $_POST["iban_nummer"],
+            $straatnaam,
+            $_POST["housenumber"],
+            $_POST["postalcode"],
+            $_POST["phoneNumber"],
+            $_POST["email"],
+            $_POST["status"],
+            $_POST["id"]
+        );
+        $stmt->execute();
+    }
     }
 }
-UpdateMasseuse();
 
 function MasseuseParagraafModal()
 {
@@ -687,34 +660,21 @@ function MasseuseParagraafModal()
             </div>
         </div>
     <?php
-    }
-}
-UpdateMasseuseParagraaf();
-
-function UpdateMasseuseInfo()
-{
-    if (isset($_POST['btnMasseuseInfoSave'])) {
-        global $mysqli;
-        $voornaam = ucfirst($_POST['name']);
-        $straatnaam = ucfirst($_POST['street']);
-
-        $query = "UPDATE masseuses SET  ";
+    global $mysqli;
+    if (isset($_POST['btnMasseuseParagraafSave'])) {
+        $query = "UPDATE `masseuses` SET `paragraafje` = ? WHERE masseuseID = ?";
         $stmt = $mysqli->prepare($query);
+        $id = $_GET["masseuseID"];
         $stmt->bind_param(
-            'ssssssssssi',
-            $voornaam,
-            $_POST["kvk_nummer"],
-            $_POST["btw_nummer"],
-            $_POST["iban_nummer"],
-            $straatnaam,
-            $_POST["housenumber"],
-            $_POST["postalcode"],
-            $_POST["phoneNumber"],
-            $_POST["email"],
-            $_POST["status"],
-            $_POST["id"]
+            'si',
+            $_POST["paragraafje"],
+            $id
         );
         $stmt->execute();
+        if ($stmt->num_rows > 0) {
+            header("Location:../masseuse_profiel.php?masseuseID=$id");
+        }
+    }
     }
 }
 

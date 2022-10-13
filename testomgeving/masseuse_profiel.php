@@ -1,12 +1,6 @@
 <?php
 include "backend/functions.php";
 $masseuse = GetMasseuse();
-
-UpdateMasseuse();
-UpdateMasseuseParagraaf();
-
-
-
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
