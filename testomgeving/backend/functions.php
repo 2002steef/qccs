@@ -572,7 +572,7 @@ function MasseuseInfoModal()
                                         <label for="plaats">Postcode & Huisnummer</label>
                                         <div class="controls col-12 row">
                                         <input type="text" id="users-edit-username" class="form-control text-light-gray round col-8" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
-                                        <input type="text" id="users-edit-username" class="form-control text-light-gray round col-4" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
+                                        <input type="text" id="users-edit-username" class="form-control text-light-gray round col-5" placeholder="Huisnummer" aria-invalid="false" name="huisnummer" value="<?= $masseuse["huisNummer"] ?>">
                                         </div>
                                     </div>
                                 </div>
