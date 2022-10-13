@@ -747,7 +747,7 @@ function MasseuseInfoModal()
                 $_POST["tussenvoegsel"],
                 $_POST["achternaam"],
                 $straatnaam,
-                $_POST["huisNummer"],
+                $_POST["huisnummer"],
                 $_POST["plaats"],
                 $_POST["postcode"],
                 $_POST["email"],
