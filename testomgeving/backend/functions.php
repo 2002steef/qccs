@@ -572,7 +572,7 @@ function MasseuseInfoModal()
                                         <div class="controls col-12 row">
 
                                             <input type="text" id="plaats" class="form-control text-light-gray round col-9" placeholder="Plaats" aria-invalid="false" name="plaats" value="<?= $masseuse["plaats"] ?>">
-                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round col-4" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
+                                            <input type="text" id="users-edit-username" class="form-control text-light-gray round col-3" placeholder="Postcode" aria-invalid="false" name="postcode" value="<?= $masseuse["postcode"] ?>">
                                         </div>
                                     </div>
                                 </div>
