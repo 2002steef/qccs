@@ -1,6 +1,6 @@
 <?php
 include "backend/functions.php";
-$masseuse = GetMasseuse();
+
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -200,6 +200,7 @@ include "partials/header.php";
     ShowMoreParagraafModal();
     MasseuseParagraafModal();
     MasseuseInfoModal();
+    $masseuse = GetMasseuse();
     include "partials/footer.php";
     ?>
 </body>
