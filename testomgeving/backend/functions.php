@@ -808,7 +808,7 @@ function MasseuseParagraafModal()
         `masseuseID` = ?;";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param(
-            'ssssssssssi', 
+            'si', 
             $_POST["paragraafje"],
             $_POST["masseuseID"]
         );
