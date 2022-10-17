@@ -68,7 +68,6 @@ include "partials/header.php";
                                             <div class="card" id="masseuseSkills">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
                                                     <h4 class="card-title m-0">skills / diensten</h4>
-                                                    <span class="cursor-pointer"><i class="ft-more-vertical-"></i></span>
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body">
