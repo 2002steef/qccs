@@ -788,11 +788,11 @@ function BewerkDienstenModal()
                             <div class="container box">
                                 <form method="post">
                                     <input type="hidden" name="masseuseID" value="<?= $masseuse["masseuseID"] ?>">
-                                    <p><input type="checkbox" name="language[]" value="C" /> C</p>
-                                    <p><input type="checkbox" name="language[]" value="C++" /> C++</p>
-                                    <p><input type="checkbox" name="language[]" value="C#" /> C#</p>
-                                    <p><input type="checkbox" name="language[]" value="Java" /> Java</p>
-                                    <p><input type="checkbox" name="language[]" value="PHP" /> PHP</p>
+                                    <p><input type="checkbox" name="dienst[]" value="1" /> Body To Body Massage</p>
+                                    <p><input type="checkbox" name="dienst[]" value="2" /> Body To Head Massage</p>
+                                    <p><input type="checkbox" name="dienst[]" value="3" /> Voet Massage</p>
+                                    <p><input type="checkbox" name="dienst[]" value="4" /> Thaise Massage</p>
+                                    <p><input type="checkbox" name="dienst[]" value="5" /> Italiaanse Massage</p>
                                     <p><input type="submit" name="submit" class="btn btn-info" value="Submit" /></p>
                                 </form>
                             </div>
@@ -813,9 +813,9 @@ function BewerkDienstenModal()
         global $mysqli;
         $id = $_POST["masseuseID"];
          $for_query = '';
-         if(!empty($_POST["language"]))
+         if(!empty($_POST["dienst"]))
          {
-          foreach($_POST["language"] as $language)
+          foreach($_POST["dienst"] as $language)
           {
            $for_query .= $language . ', ';
           }
