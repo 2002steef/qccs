@@ -98,6 +98,7 @@ include "partials/header.php";
                                                             </li>
                                                         </ul>
                                                     </div>
+                                                    <a href="" data-target="#diensten<?=$masseuse["skills"] ?>" data-toggle="modal">Bewerk diensten</a>
                                                 </div>
                                             </div>
                                         </div>

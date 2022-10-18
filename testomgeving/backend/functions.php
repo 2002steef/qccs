@@ -718,7 +718,7 @@ function MasseuseInfoModal()
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button name="btnMasseuseInfoSave" type="submit" class="btn bg-light-secondary" >Opslaan</button>
+                            <button name="btnMasseuseInfoSave" type="submit" class="btn bg-light-secondary">Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                     </form>
@@ -764,6 +764,75 @@ function MasseuseInfoModal()
     }
 }
 
+function BewerkDienstenModal()
+{
+    global $mysqli;
+    $DataMasseuse = "SELECT * FROM `masseuses`";
+    $stmt = $mysqli->prepare($DataMasseuse);
+    $stmt->execute();
+    $resultMasseuse = $stmt->get_result();
+
+    while ($masseuse = $resultMasseuse->fetch_array()) {
+        ?>
+        <div class="modal fade text-left" id="diensten<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <form method="post">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel2"><i class="ft-edit mr-2"> Bewerken Masseuse Info</i></h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container box">
+                                <form method="post">
+                                    <p><input type="checkbox" name="language[]" value="C" /> C</p>
+                                    <p><input type="checkbox" name="language[]" value="C++" /> C++</p>
+                                    <p><input type="checkbox" name="language[]" value="C#" /> C#</p>
+                                    <p><input type="checkbox" name="language[]" value="Java" /> Java</p>
+                                    <p><input type="checkbox" name="language[]" value="PHP" /> PHP</p>
+                                    <p><input type="submit" name="submit" class="btn btn-info" value="Submit" /></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button name="btnMasseuseInfoSave" type="submit" class="btn bg-light-secondary">Opslaan</button>
+                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php
+        if(isset($_POST["submit"]))
+        {
+        global $mysqli;
+
+         $for_query = '';
+         if(!empty($_POST["language"]))
+         {
+          foreach($_POST["language"] as $language)
+          {
+           $for_query .= $language . ', ';
+          }
+          $for_query = substr($for_query, 0, -2);
+          $query = "INSERT INTO masseuses (skills) VALUES (?)";
+          $stmt->bind_param('s',$for_query);
+          $stmt = $mysqli->prepare($query);
+          if($stmt->execute())
+          {
+           echo '<h3>You have select following language</h3>';
+              echo '<label class="text-success">' . $for_query . '</label>';
+          }
+         }
+         else
+         {
+          echo "<label class='text-danger'>* Please Select Atleast one Programming language</label>";
+         }
+        }
+    }
+}
 function MasseuseParagraafModal()
 {
     global $mysqli;
