@@ -23,7 +23,7 @@ function GetMasseuseInfo()
     $result = $stmt->get_result();
     while ($rowMs = $result->fetch_array()) { ?>
         <option value="<?= $rowMs["masseuseID"] ?>"><?= $rowMs["voornaam"] ?></option>
-        <?php
+    <?php
     }
 }
 function GetUserInfo()
@@ -35,7 +35,7 @@ function GetUserInfo()
     $result = $stmt->get_result();
     while ($rowMd = $result->fetch_array()) { ?>
         <option value="<?= $rowMd["userID"] ?>"><?= $rowMd["voornaam"] ?></option>
-        <?php
+<?php
     }
 }
 function InsertVoucher($voucher)
@@ -68,7 +68,7 @@ if (isset($_POST['VoucherSturen'])) {
     }
 }
 
-if   (isset($_POST['VoucherVerzilveren'])) {
+if (isset($_POST['VoucherVerzilveren'])) {
     $servername = "localhost";
     $username = "relatietest";
     $password = "Rb4x4y7*3";
@@ -76,8 +76,19 @@ if   (isset($_POST['VoucherVerzilveren'])) {
     $voucher = $_POST["VoucherCodeVerzilveren"];
     $masseuseID = $_POST['masseuseVerzilveren'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    $result = $mysqli->query("SELECT * FROM vouchers WHERE masseuseID = '".$masseuseID."' && voucherCode = '".$voucher."'");
+    $result = $mysqli->query("SELECT * FROM vouchers WHERE masseuseID = '" . $masseuseID . "' && voucherCode = '" . $voucher . "'");
     if ($result->num_rows > 0) {
-        $mysqli->query("UPDATE vouchers SET status = 0 WHERE masseuseID = '".$masseuseID."' && voucherCode ='".$voucher."'");
+        $mysqli->query("UPDATE vouchers SET status = 0 WHERE masseuseID = '" . $masseuseID . "' && voucherCode ='" . $voucher . "'");
+    } else {
+        // TODO function voor error code klopt niet
     }
+}
+
+function voucherPopup()
+{
+    echo ("
+        <div class='popupBackground'>
+            <div class='popup'></div>
+        </div>
+    ");
 }
