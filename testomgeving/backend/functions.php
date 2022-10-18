@@ -811,7 +811,7 @@ function BewerkDienstenModal()
     if(isset($_POST["submit"]))
         {
         global $mysqli;
-
+        $id = $_POST["masseuseID"];
          $for_query = '';
          if(!empty($_POST["language"]))
          {
@@ -820,8 +820,8 @@ function BewerkDienstenModal()
            $for_query .= $language . ', ';
           }
           $for_query = substr($for_query, 0, -2);
-          $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = ?";
-          $stmt->bind_param('i',$_POST["masseuseID"]);
+          $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = $id";
+
           $stmt = $mysqli->prepare($query);
           if($stmt->execute())
           {
