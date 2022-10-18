@@ -805,7 +805,9 @@ function BewerkDienstenModal()
             </div>
         </div>
         <?php
-        if(isset($_POST["submit"]))
+        
+    }
+    if(isset($_POST["submit"]))
         {
         global $mysqli;
 
@@ -830,7 +832,6 @@ function BewerkDienstenModal()
           echo "<label class='text-danger'>* Please Select Atleast one Programming language</label>";
          }
         }
-    }
 }
 function MasseuseParagraafModal()
 {
