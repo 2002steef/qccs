@@ -1,0 +1,6 @@
+{
+    "name": "senne/project_1_crm",
+    "require": {
+        "google/apiclient": "^2.0"
+    }
+}
