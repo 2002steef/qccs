@@ -815,9 +815,9 @@ function BewerkDienstenModal()
          $for_query = '';
          if(!empty($_POST["dienst"]))
          {
-          foreach($_POST["dienst"] as $language)
+          foreach($_POST["dienst"] as $dienst)
           {
-           $for_query .= $language . ', ';
+           $for_query .= $dienst . ', ';
           }
           $for_query = substr($for_query, 0, -2);
           $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = $id";
