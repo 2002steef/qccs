@@ -792,7 +792,7 @@ function BewerkDienstenModal()
                                     <p><input type="checkbox" name="dienst[]" value="Italiaanse Massage" /> Italiaanse Massage</p>
                         </div>
                         <div class="modal-footer">
-                            <button name="btnMasseuseInfoSave" name="submit" type="submit" class="btn bg-light-secondary">Opslaan</button>
+                            <button  name="submit" type="submit" class="btn bg-light-secondary">Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                     </form>
