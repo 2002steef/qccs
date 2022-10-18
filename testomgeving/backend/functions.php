@@ -586,7 +586,7 @@ function masseuseInfo()
                 </a>
                 <br>
                 <br>
-                <a class="btn btn-outline-light-grey" href="masseuse_profiel.php?masseuseID=<?= $masseuse["masseuseID"] ?>">
+                <a class="btn btn-outline-light-grey" id="btnMaakAfspraak">
                     Maak Afspraak
                 </a>
             </td>
