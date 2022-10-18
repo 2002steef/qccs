@@ -817,8 +817,7 @@ function BewerkDienstenModal()
            $for_query .= $language . ', ';
           }
           $for_query = substr($for_query, 0, -2);
-          $query = "INSERT INTO masseuses (skills) VALUES (?)";
-          $stmt->bind_param('s',$for_query);
+          $query = "INSERT INTO masseuses (skills) VALUES ('$for_query')";
           $stmt = $mysqli->prepare($query);
           if($stmt->execute())
           {
