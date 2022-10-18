@@ -823,18 +823,10 @@ function BewerkDienstenModal()
           $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = $id";
 
           $stmt = $mysqli->prepare($query);
-          if($stmt->execute())
-          {
-           echo '<h3>You have select following language</h3>';
-              echo '<label class="text-success">' . $for_query . '</label>';
-          }
-         }
-         else
-         {
-          echo "<label class='text-danger'>* Please Select Atleast one Programming language</label>";
-         }
         }
+    }
 }
+
 function MasseuseParagraafModal()
 {
     global $mysqli;

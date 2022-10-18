@@ -72,6 +72,20 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <ul class="list-unstyled mb-0">
+                                                            <?php 
+                                                            while($skill = explode(',',$masseuse["skills"])){?>
+                                                            <li class="d-flex align-items-center">
+                                                                <span><?= $skill[0] ?></span>
+                                                            </li>
+                                                            <li class="d-flex align-items-center">
+                                                                <span><?=$skill[1] ?></span>
+                                                            </li>
+                                                            <li class="d-flex align-items-center">
+                                                                <span><?=$skill[2] ?></span>
+                                                            </li>
+                                                            <li class="d-flex align-items-center">
+                                                                <span>nog een massage</span>
+                                                            </li>
                                                             <li class="d-flex align-items-center">
                                                                 <span>body to body massage</span>
                                                             </li>
@@ -84,18 +98,7 @@ include "partials/header.php";
                                                             <li class="d-flex align-items-center">
                                                                 <span>nog een massage</span>
                                                             </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>body to body massage</span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>deep tissue</span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>massage3</span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>nog een massage</span>
-                                                            </li>
+                                                            <?php } ?>
                                                         </ul>
                                                     </div>
                                                     <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?=$masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
