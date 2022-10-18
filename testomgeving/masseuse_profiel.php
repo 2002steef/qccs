@@ -73,32 +73,10 @@ include "partials/header.php";
                                                     <div class="card-body">
                                                         <ul class="list-unstyled mb-0">
                                                             <?php 
-                                                            while($masseuse["skills"]){
-                                                                $skill = explode(',',$masseuse["skills"])
+                                                            while($skill = explode(',',$masseuse["skills"])){
                                                                 ?>
                                                             <li class="d-flex align-items-center">
-                                                                <span><?= $skill[0] ?></span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span><?=$skill[1] ?></span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span><?=$skill[2] ?></span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>nog een massage</span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>body to body massage</span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>deep tissue</span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>massage3</span>
-                                                            </li>
-                                                            <li class="d-flex align-items-center">
-                                                                <span>nog een massage</span>
+                                                                <span><?= $skill ?></span>
                                                             </li>
                                                             <?php } ?>
                                                         </ul>
