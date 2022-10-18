@@ -73,7 +73,9 @@ include "partials/header.php";
                                                     <div class="card-body">
                                                         <ul class="list-unstyled mb-0">
                                                             <?php 
-                                                            while($skill = explode(',',$masseuse["skills"])){?>
+                                                            while($masseuse["skills"]){
+                                                                $skill = explode(',',$masseuse["skills"])
+                                                                ?>
                                                             <li class="d-flex align-items-center">
                                                                 <span><?= $skill[0] ?></span>
                                                             </li>
@@ -98,7 +100,7 @@ include "partials/header.php";
                                                             <li class="d-flex align-items-center">
                                                                 <span>nog een massage</span>
                                                             </li>
-                                                            <?php } ?>
+                                                             } ?>
                                                         </ul>
                                                     </div>
                                                     <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?=$masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
