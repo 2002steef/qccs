@@ -49,18 +49,16 @@
 .popupBackground {
     background-color: black;
     opacity: 25%;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 
 .popupContent {
     background-color: white;
-    width: 20vw;
-    height: 20vh;
-    margin-top: 40vh;
-    margin-left: 40vw;
-    position: fixed;
-    z-index: 1;
+    width: 500px;
+    margin: 15% auto;
+    padding: 20px;
+    /* z-index: 1; */
 }
