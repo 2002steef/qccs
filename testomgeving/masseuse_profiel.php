@@ -100,7 +100,7 @@ include "partials/header.php";
                                                             <li class="d-flex align-items-center">
                                                                 <span>nog een massage</span>
                                                             </li>
-                                                             } ?>
+                                                            <?php } ?>
                                                         </ul>
                                                     </div>
                                                     <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?=$masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
