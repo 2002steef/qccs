@@ -784,21 +784,15 @@ function BewerkDienstenModal()
                                 <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <div class="container box">
-                                <form method="post">
-                                    <input type="hidden" name="masseuseID" value="<?= $masseuse["masseuseID"] ?>">
+                        <div class="modal-body">                                    <input type="hidden" name="masseuseID" value="<?= $masseuse["masseuseID"] ?>">
                                     <p><input type="checkbox" name="dienst[]" value="Body To Body Massage" /> Body To Body Massage</p>
                                     <p><input type="checkbox" name="dienst[]" value="Body To Head Massage" /> Body To Head Massage</p>
                                     <p><input type="checkbox" name="dienst[]" value="Voet Massage" /> Voet Massage</p>
                                     <p><input type="checkbox" name="dienst[]" value="Thaise Massage" /> Thaise Massage</p>
                                     <p><input type="checkbox" name="dienst[]" value="Italiaanse Massage" /> Italiaanse Massage</p>
-                                    <p><input type="submit" name="submit" class="btn btn-info" value="Submit" /></p>
-                                </form>
-                            </div>
                         </div>
                         <div class="modal-footer">
-                            <button name="btnMasseuseInfoSave" type="submit" class="btn bg-light-secondary">Opslaan</button>
+                            <button name="btnMasseuseInfoSave" name="submit" type="submit" class="btn bg-light-secondary">Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                     </form>
