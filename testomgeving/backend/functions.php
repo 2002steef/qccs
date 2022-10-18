@@ -558,7 +558,7 @@ function masseuseInfo()
                     <?= $masseuse["straat"]; ?>
                     <?= $masseuse["huisNummer"]; ?>
                     <?= $masseuse["huisNummerToevoeging"]; ?>,
-                    <?= $masseuse["postcode"]; ?>
+                    <?= $masseuse["postcode"]; ?>,
                     <?= $masseuse["plaats"]; ?>
                 </p>
                 <div class="row noMargin">
