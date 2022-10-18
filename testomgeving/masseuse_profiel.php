@@ -98,7 +98,7 @@ include "partials/header.php";
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <a href="" data-target="#diensten<?=$masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
+                                                    <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?=$masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
                                                 </div>
                                             </div>
                                         </div>
