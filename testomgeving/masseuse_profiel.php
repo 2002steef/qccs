@@ -203,6 +203,7 @@ include "partials/header.php";
     ShowMoreParagraafModal();
     MasseuseParagraafModal();
     MasseuseInfoModal();
+    BewerkDienstenModal();
     GetMasseuse();
 
     include "partials/footer.php";
