@@ -787,6 +787,7 @@ function BewerkDienstenModal()
                         <div class="modal-body">
                             <div class="container box">
                                 <form method="post">
+                                    <input type="hidden" name="masseuseID" value="<?= $masseuse["masseuseID"] ?>">
                                     <p><input type="checkbox" name="language[]" value="C" /> C</p>
                                     <p><input type="checkbox" name="language[]" value="C++" /> C++</p>
                                     <p><input type="checkbox" name="language[]" value="C#" /> C#</p>
@@ -819,7 +820,8 @@ function BewerkDienstenModal()
            $for_query .= $language . ', ';
           }
           $for_query = substr($for_query, 0, -2);
-          $query = "INSERT INTO masseuses (skills) VALUES ('$for_query')";
+          $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = ?";
+          $stmt->bind_param('i',$_POST["masseuseID"]);
           $stmt = $mysqli->prepare($query);
           if($stmt->execute())
           {
