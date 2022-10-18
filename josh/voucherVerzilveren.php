@@ -84,7 +84,7 @@ include "backend/voucherFunctions.php";
                                                 <form action="" method="POST">
                                                     <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Vouchercode</label>
-                                                        <input type="text" name="VoucherCode" class="form-control">
+                                                        <input type="text" name="VoucherCodeVerzilveren" class="form-control">
 
 
                                                         <!-- <div class="col-md-6 col-12"> -->

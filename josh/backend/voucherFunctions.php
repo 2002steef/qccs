@@ -73,7 +73,7 @@ if   (isset($_POST['VoucherVerzilveren'])) {
     $username = "relatietest";
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
-    $voucher = $_POST["voucherCode"];
+    $voucher = $_POST["VoucherCodeVerzilveren"];
     $masseuseID = $_POST['masseuseVerzilveren'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $mysqli->query("SELECT * FROM vouchers WHERE masseuseID = '".$masseuseID."' && voucherCode = '".$voucher."'");
