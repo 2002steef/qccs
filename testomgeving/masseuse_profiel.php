@@ -72,12 +72,15 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <ul class="list-unstyled mb-0">
-                                                            <li class="d-flex align-items-center">
+                                                            
                                                                 <?php
                                                                 $skills = explode(',', $masseuse["skills"]);
                                                                 foreach ($skills as $dienst) {
-                                                                    echo"<span class='ft-tag'></span>{$dienst}" . "<br>";} ?>
-                                                            </li>
+                                                                    echo"
+                                                                    <li class='d-flex align-items-center'>
+                                                                    <span class='ft-tag'></span>{$dienst}" . "<br>
+                                                                    </li>";} ?>
+                                                            
                                                         </ul>
                                                     </div>
                                                     <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
