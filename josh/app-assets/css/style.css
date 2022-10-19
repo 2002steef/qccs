@@ -46,7 +46,7 @@
     margin: 0;
 }
 
-.popupBackground {
+#popupBackground {
     background-color: black;
     opacity: 25%;
     position: fixed;
@@ -59,7 +59,7 @@
     /* padding-top: 800px; */
 }
 
-.popupContent {
+#popupContent {
     background-color: white;
     width: 500px;
     height: 300px;

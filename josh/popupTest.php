@@ -125,11 +125,19 @@ include "backend/voucherFunctions.php";
 
             <!-- POPUP STARTS -->
 
-            <div class="popupBackground">
-                <div class="popupContent">
+            <div id="popupBackground">
+                <div id="popupContent">
                     <p>dit is popup tekst voorbeeld</p>
+                    <span id="closePopup">accepteer voorwaarden <b>&times;</b></span>
                 </div>
             </div>
+
+            <script>
+                document.getElementById("closePopup").addEventListener(function(){
+                    document.getElementById('popupBackground').style.position='none';
+                    document.getElementById('popupContent').style.position='none';
+                })
+            </script>
 
             <!-- POPUP END -->
 
