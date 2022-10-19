@@ -134,6 +134,7 @@ include "backend/voucherFunctions.php";
 
             <script>
                 document.getElementById("closePopup").addEventListener(function(){
+                    console.log('test1');
                     document.getElementById('popupBackground').style.position='none';
                     document.getElementById('popupContent').style.position='none';
                 })
