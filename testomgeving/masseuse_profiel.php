@@ -83,7 +83,9 @@ include "partials/header.php";
                                                             
                                                         </ul>
                                                     </div>
+                                                    <?php if(isset($_SESSION["status"]) == "masseuse"){ ?>
                                                     <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
+                                                <?php }?>
                                                 </div>
                                             </div>
                                         </div>
