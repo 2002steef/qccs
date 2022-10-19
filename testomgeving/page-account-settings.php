@@ -17,6 +17,7 @@ $rowBd = GetBedrijf();
 $rowMs = GetMasseuse();
 $rowMw = Getuser();
 UploadPic();
+UploadBanner();
 UpdateProfielBedrijf();
 UpdateProfielMasseuse();
 
