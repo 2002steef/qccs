@@ -244,6 +244,55 @@ function UploadPic()
     }
 }
 
+function UploadBanner()
+{
+    if ($_SESSION["status"] == "masseuse") {
+        if (isset($_POST['submitBanner']) && isset($_FILES['my_banner'])) {
+            global $mysqli;
+
+            echo "<pre>";
+            print_r($_FILES['my_banner']);
+            echo "</pre>";
+
+            $img_name = $_FILES['my_banner']['name'];
+            $img_size = $_FILES['my_banner']['size'];
+            $tmp_name = $_FILES['my_banner']['tmp_name'];
+            $error = $_FILES['my_banner']['error'];
+
+            if ($error === 0) {
+                if ($img_size > 1250000) {
+                    $em = "Sorry, your file is too large.";
+                    header("Location: profiel-account-settings.php?error=$em");
+                } else {
+                    $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+                    $img_ex_lc = strtolower($img_ex);
+
+                    $allowed_exs = array("jpg", "jpeg", "png");
+
+                    if (in_array($img_ex_lc, $allowed_exs)) {
+                        $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
+                        $img_upload_path = 'img/uploads/' . $new_img_name;
+                        move_uploaded_file($tmp_name, $img_upload_path);
+                        $id = $_SESSION['id'];
+                        // Insert into Database
+                        $sql_pic = "UPDATE `masseuses` SET `bannerFoto` = ? WHERE masseuseID = ?";
+                        $stmt = $mysqli->prepare($sql_pic);
+                        $stmt->bind_param(
+                            "si",
+                            $new_img_name,
+                            $id
+                        );
+                        $stmt->execute();
+                        header("Location: page-account-settings.php?masseuseID=$id");
+                    } else {
+                        $em = "You can't upload files of this type";
+                        header("Location: index.php?error=$em");
+                    }
+                }
+            }
+        }
+    }
+}
 
 function Getpersonnel()
 {

@@ -28,7 +28,7 @@ include "partials/header.php";
                                 <div class="card">
                                     <div class="user-profile-images">
                                         <!-- user timeline image -->
-                                        <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
+                                        <img src="img/uploads/<?= $masseuse["bannerFoto"]; ?>" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
                                         <img src="img/uploads/<?= $masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
@@ -71,18 +71,19 @@ include "partials/header.php";
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body">
-                                                        <ul class="list-unstyled mb-0">    
-                                                            <?php
-                                                             while ($skills = explode(',',$masseuse["skills"])) {?>
-
-                                                                <li class="d-flex align-items-center">
-                                                                <span class="ft-tag"></span><?= $skills[0] ?>
-                                                            </li>
-                                                           <?php } ?>
-                                                                
+                                                        <ul class="list-unstyled mb-0">
+                                                            
+                                                                <?php
+                                                                $skills = explode(',', $masseuse["skills"]);
+                                                                foreach ($skills as $dienst) {
+                                                                    echo"
+                                                                    <li class='d-flex align-items-center'>
+                                                                    <span class='ft-tag'></span>{$dienst}" . "<br>
+                                                                    </li>";} ?>
+                                                            
                                                         </ul>
                                                     </div>
-                                                    <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?=$masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
+                                                    <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
                                                 </div>
                                             </div>
                                         </div>
