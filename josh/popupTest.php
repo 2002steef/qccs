@@ -41,7 +41,7 @@ include "backend/voucherFunctions.php";
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/horizontal-menu.css">
     <!-- END Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/style.css">
     <!-- END: Custom CSS-->
 </head>
 <!-- END : Head-->
