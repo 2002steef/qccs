@@ -71,18 +71,16 @@ include "partials/header.php";
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body">
-                                                        <ul class="list-unstyled mb-0">    
-                                                            <?php
-                                                             while ($skills = explode(',',$masseuse["skills"])) {?>
-
-                                                                <li class="d-flex align-items-center">
-                                                                <span class="ft-tag"></span><?= $skills[0] ?>
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li class="d-flex align-items-center">
+                                                                <?php
+                                                                $skills = explode(',', $masseuse["skills"]);
+                                                                foreach ($skills as $dienst) {
+                                                                    echo"<span class='ft-tag'></span>{$dienst}";} ?>
                                                             </li>
-                                                           <?php } ?>
-                                                                
                                                         </ul>
                                                     </div>
-                                                    <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?=$masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
+                                                    <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
                                                 </div>
                                             </div>
                                         </div>
