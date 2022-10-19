@@ -78,7 +78,7 @@ include "partials/header.php";
                                                                 foreach ($skills as $dienst) {
                                                                     echo"
                                                                     <li class='d-flex align-items-center'>
-                                                                    <span class='ft-tag'></span>{$dienst}" . "<br>
+                                                                    <span class='ft-tag'></span> {$dienst}" . "<br>
                                                                     </li>";} ?>
                                                             
                                                         </ul>
