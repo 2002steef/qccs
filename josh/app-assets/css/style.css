@@ -72,5 +72,5 @@
 }
 
 .popupText {
-    color: black;
+    color: black !important;
 }
