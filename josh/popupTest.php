@@ -127,8 +127,8 @@ include "backend/voucherFunctions.php";
 
             <div id="popupBackground">
                 <div id="popupContent">
-                    <h1 class="popupText">Weet u zeker dat u bij -masseusebedrijf- een afspraak wilt maken?</h1>
-                    <p class="popupText">uitleg over hoe het werkt en zomeer regel 1<br>
+                    <h1 class="popupText" style="color: black">Weet u zeker dat u bij -masseusebedrijf- een afspraak wilt maken?</h1>
+                    <p class="popupText" style="color: black">>uitleg over hoe het werkt en zomeer regel 1<br>
                         uitleg over hoe het werkt en zomeer regel 2<br>
                         uitleg over hoe het werkt en zomeer regel 3<br>
                         uitleg over hoe het werkt en zomeer regel 4<br>
