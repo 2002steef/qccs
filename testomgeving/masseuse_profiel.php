@@ -28,7 +28,7 @@ include "partials/header.php";
                                 <div class="card">
                                     <div class="user-profile-images">
                                         <!-- user timeline image -->
-                                        <img src="img/banner/profile-image.jpg" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
+                                        <img src="img/uploads/<?= $masseuse["bannerFoto"]; ?>" class="img-fluid rounded-top user-timeline-image" alt="User Timeline Image">
                                         <!-- user profile image -->
                                         <img src="img/uploads/<?= $masseuse["profielFoto"]; ?>" class="user-profile-image rounded" alt="User Profile Image" height="140" width="140">
                                     </div>
