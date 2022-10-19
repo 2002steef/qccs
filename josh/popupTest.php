@@ -88,24 +88,24 @@ include "backend/voucherFunctions.php";
 
 
                                                         <!-- <div class="col-md-6 col-12"> -->
-                                                            <fieldset class="form-group">
-                                                                <label for="customSelectMs">Masseuse</label>
-                                                                <select name="masseuse" class="custom-select" id="customSelectMs">
-                                                                    <option selected hidden>Kies een masseuse...</option>
-                                                                   <?php GetMasseuseInfo() ;?>
-                                                                </select>
-                                                            </fieldset>
+                                                        <fieldset class="form-group">
+                                                            <label for="customSelectMs">Masseuse</label>
+                                                            <select name="masseuse" class="custom-select" id="customSelectMs">
+                                                                <option selected hidden>Kies een masseuse...</option>
+                                                                <?php GetMasseuseInfo(); ?>
+                                                            </select>
+                                                        </fieldset>
                                                         <!-- </div> -->
 
 
 
                                                         <label class="label_txt" for="customSelectMd">Medewerker</label>
                                                         <fieldset class="form-group">
-                                                                <select name="medewerker" class="custom-select" id="customSelectMd">
+                                                            <select name="medewerker" class="custom-select" id="customSelectMd">
                                                                 <option selected hidden>Kies een medewerker...</option>
-                                                                   <?php GetUserInfo() ;?>
-                                                                </select>
-                                                            </fieldset>
+                                                                <?php GetUserInfo(); ?>
+                                                            </select>
+                                                        </fieldset>
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherSturen">Send Voucher</button>
@@ -127,16 +127,21 @@ include "backend/voucherFunctions.php";
 
             <div id="popupBackground">
                 <div id="popupContent">
-                    <p>dit is popup tekst voorbeeld</p>
+                    <h1>Weet u zeker dat u bij -masseusebedrijf- een afspraak wilt maken?</h1>
+                    <p>uitleg over hoe het werkt en zomeer regel 1<br>
+                        uitleg over hoe het werkt en zomeer regel 2<br>
+                        uitleg over hoe het werkt en zomeer regel 3<br>
+                        uitleg over hoe het werkt en zomeer regel 4<br>
+                        uitleg over hoe het werkt en zomeer regel 5</p>
                     <button id="closePopup">accepteer voorwaarden <b>&times;</b></button>
                 </div>
             </div>
 
             <script>
-                document.getElementById("closePopup").addEventListener('click', function(){
+                document.getElementById("closePopup").addEventListener('click', function() {
                     console.log('test1');
-                    document.getElementById('popupBackground').style.display='none';
-                    document.getElementById('popupContent').style.display='none';
+                    document.getElementById('popupBackground').style.display = 'none';
+                    document.getElementById('popupContent').style.display = 'none';
                 })
             </script>
 
