@@ -76,7 +76,7 @@ include "partials/header.php";
                                                                 <?php
                                                                 $skills = explode(',', $masseuse["skills"]);
                                                                 foreach ($skills as $dienst) {
-                                                                    echo"<span class='ft-tag'></span>{$dienst}";} ?>
+                                                                    echo"<span class='ft-tag'></span>{$dienst}" . "<br>";} ?>
                                                             </li>
                                                         </ul>
                                                     </div>
