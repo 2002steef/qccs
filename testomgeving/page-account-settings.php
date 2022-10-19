@@ -118,8 +118,8 @@ include "partials/header.php";
                                                         <div class="media-body">
                                                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
                                                                 <form action="page-account-settings.php" method="post" enctype="multipart/form-data">
-                                                                    <input type="file" name="my_banner" type="button" class="btn btn-sm btn-primary mb-1 mb-sm-0">
-                                                                    <input type="submit" class="btn btn-sm btn-primary mb-1 mb-sm-0" name="submitBanner" value="Upload">
+                                                                    <input type="file" name="my_banner" type="button" class="btn btn-sm btn-outline-light-grey mb-1 mb-sm-0">
+                                                                    <input type="submit" class="btn btn-sm btn-outline-light-grey mb-1 mb-sm-0" name="submitBanner" value="Upload">
                                                                 </form>
                                                             </div>
                                                             <p class="text-muted mb-0 mt-1 mt-sm-0">
