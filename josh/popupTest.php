@@ -128,7 +128,7 @@ include "backend/voucherFunctions.php";
             <div id="popupBackground">
                 <div id="popupContent">
                     <p>dit is popup tekst voorbeeld</p>
-                    <span id="closePopup">accepteer voorwaarden <b>&times;</b></span>
+                    <button id="closePopup">accepteer voorwaarden <b>&times;</b></button>
                 </div>
             </div>
 
