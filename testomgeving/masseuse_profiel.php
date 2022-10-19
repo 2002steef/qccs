@@ -67,13 +67,13 @@ include "partials/header.php";
                                         <div class="col-12">
                                             <div class="card" id="masseuseSkills">
                                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                                    <h4 class="card-title m-0">skills / diensten</h4>
+                                                    <h4 class="card-title m-0">Diensten</h4>
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <ul class="list-unstyled mb-0">    
                                                                 <li class="d-flex align-items-center">
-                                                                <span class="ft-tag"><?= $masseuse["skills"] ?></span>
+                                                                <span class="ft-tag"></span><?= $masseuse["skills"] ?>
                                                             </li>
                                                         </ul>
                                                     </div>
