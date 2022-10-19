@@ -153,14 +153,14 @@ include "partials/header.php";
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
                                                             <?php
                                                             if ($_SESSION["status"] == "bedrijf") { ?>
-                                                                <button type="submit" name="saveBd" class="btn btn-primary mr-sm-2 mb-1">Opslaan</button>
-                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="bma_bedrijfs_klanten_overzicht.php?bedrijfID=<?= $_SESSION["id"] ?>">
+                                                                <button type="submit" name="saveBd" class="btn btn-light-grey mr-sm-2 mb-1">Opslaan</button>
+                                                                <a class="btn btn-outline-light-grey mr-sm-2 mb-1-" href="bma_bedrijfs_klanten_overzicht.php?bedrijfID=<?= $_SESSION["id"] ?>">
                                                                     Annuleren
                                                                 </a>
                                                             <?php
                                                             } elseif ($_SESSION["status"] == "masseuse") { ?>
-                                                                <button type="submit" name="saveMs" class="btn btn-primary mr-sm-2 mb-1">Opslaan</button>
-                                                                <a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="masseuse_profiel.php?masseuseID=<?= $_SESSION["id"] ?>">
+                                                                <button type="submit" name="saveMs" class="btn btn-light-grey mr-sm-2 mb-1">Opslaan</button>
+                                                                <a class="btn btn-outline-light-grey mr-sm-2 mb-1-" href="masseuse_profiel.php?masseuseID=<?= $_SESSION["id"] ?>">
                                                                     Annuleren
                                                                 </a>
                                                             <?php
