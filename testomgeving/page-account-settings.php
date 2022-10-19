@@ -102,6 +102,7 @@ include "partials/header.php";
                                                                 </form>
                                                             </div>
                                                             <p class="text-muted mb-0 mt-1 mt-sm-0">
+                                                                <small>Upload hier up profiel foto</small>
                                                                 <small>Allowed JPG, GIF or PNG. Max size of 800kB</small>
                                                                 <?php if (isset($err)) {
                                                                     echo $err;
