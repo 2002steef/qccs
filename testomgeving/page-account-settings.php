@@ -103,6 +103,7 @@ include "partials/header.php";
                                                             </div>
                                                             <p class="text-muted mb-0 mt-1 mt-sm-0">
                                                                 <small>Upload hier up profiel foto</small>
+                                                                <br>
                                                                 <small>Toegestaan JPG, GIF or PNG. Max grootte van 800kB</small>
                                                                 <?php if (isset($err)) {
                                                                     echo $err;
@@ -123,6 +124,7 @@ include "partials/header.php";
                                                             </div>
                                                             <p class="text-muted mb-0 mt-1 mt-sm-0">
                                                                 <small>Upload hier up banner foto</small>
+                                                                <br>
                                                                 <small>Toegestaan JPG, GIF or PNG. Max grootte van 800kB</small>
                                                                 <?php if (isset($err)) {
                                                                     echo $err;
