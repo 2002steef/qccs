@@ -103,7 +103,7 @@ include "partials/header.php";
                                                             </div>
                                                             <p class="text-muted mb-0 mt-1 mt-sm-0">
                                                                 <small>Upload hier up profiel foto</small>
-                                                                <small>Allowed JPG, GIF or PNG. Max size of 800kB</small>
+                                                                <small>Toegestaan JPG, GIF or PNG. Max grootte van 800kB</small>
                                                                 <?php if (isset($err)) {
                                                                     echo $err;
                                                                 }  ?>
@@ -111,6 +111,26 @@ include "partials/header.php";
                                                         </div>
                                                     </div>
                                                 <?php } ?>
+                                                <?php if ($_SESSION["status"] == "masseuse") { ?>
+                                                <div class="media">
+                                                        <img src="img/uploads/<?= $rowMs["bannerFoto"];?>" alt="banner-img" class="rounded mr-3" height="64" width="64">
+                                                        <div class="media-body">
+                                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
+                                                                <form action="page-account-settings.php" method="post" enctype="multipart/form-data">
+                                                                    <input type="file" name="my_banner" type="button" class="btn btn-sm btn-primary mb-1 mb-sm-0">
+                                                                    <input type="submit" class="btn btn-sm btn-primary mb-1 mb-sm-0" name="submitBanner" value="Upload">
+                                                                </form>
+                                                            </div>
+                                                            <p class="text-muted mb-0 mt-1 mt-sm-0">
+                                                                <small>Upload hier up banner foto</small>
+                                                                <small>Toegestaan JPG, GIF or PNG. Max grootte van 800kB</small>
+                                                                <?php if (isset($err)) {
+                                                                    echo $err;
+                                                                }  ?>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <?php }?>
                                                 <hr class="mt-1 mt-sm-2">
                                                 <form method="post" action="page-account-settings.php">
                                                     <div class="row">
