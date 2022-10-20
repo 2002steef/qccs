@@ -2,8 +2,7 @@
 <?php
 include "backend/functions.php";
 klantModal();
-ToevoegenParticulier();
-ToevoegenZakelijk();
+
 klantInfo();
 
     include "partials/header.php";
@@ -448,6 +447,8 @@ klantInfo();
     </div>
     <?php
     include "partials/footer.php";
+    ToevoegenParticulier();
+	ToevoegenZakelijk();
     ?>
     <script>
         /*
