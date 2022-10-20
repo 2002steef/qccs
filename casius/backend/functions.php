@@ -270,7 +270,6 @@ function ToevoegenParticulier()
                 '?',
                 '?',
                 '?',
-                '?',
                 '?'             
                 )";
     $stmt = $mysqli->prepare($sql);
