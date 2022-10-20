@@ -232,7 +232,7 @@ klantInfo();
                                             </ul>
                                              <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="relatie_particulier" aria-expanded="true" aria-labelledby="base-tab11">
-                                                 <form method="POST">
+                                                     <form method="POST">
                                                     <div class="row match-height">
                                                         <div class="col-12">
                                                             <div class="card">
@@ -337,9 +337,9 @@ klantInfo();
                                                 </form>
                                                 </div>
                                                 <div class="tab-pane" id="relatie_zakelijk" aria-labelledby="base-tab12">
-                                                     <form method="POST">
-                                                        <div class="row match-height">
-                                                         <div class="col-12">
+                                                    <form method="POST">
+                                                    <div class="row match-height">
+                                                        <div class="col-12">
                                                             <div class="card">
                                                                 <div class="card-content">
                                                                     <div class="card-body">
