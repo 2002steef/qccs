@@ -307,12 +307,7 @@ klantInfo();
                                                                                         <input type="email" class="form-control square" id="horizontal-form-5" name="email">
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="website">
-                                                                                    </div>
-                                                                                </div>
+
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                                                     <div class="col-md-8">
