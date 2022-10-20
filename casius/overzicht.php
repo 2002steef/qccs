@@ -47,8 +47,8 @@ klantInfo();
                                 <h4 class="card-title">Casius</h4>
 
                                 <ul class="breadcrumb bg-transparent">
-                                    <li class="breadcrumb-item"><a class="text text-light-gray" href="#">Home</a></li>
-                                    <li class="breadcrumb-item"><a class="text text-light-gray" href="bedrijfs_overzicht.php">Relaties</a></li>
+                                    <li class="breadcrumb-item"><a class="text text-light-gray" href="overzicht.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text text-light-gray" href="overzicht.php">Relaties</a></li>
                                     <li class="breadcrumb-item"><a class="text text-light-gray" href="#">Klanten overzicht</a></li>
                                 </ul>
                             </div>
@@ -198,33 +198,7 @@ klantInfo();
     </div>
     <div class="col-lg-3 col-md-6 col-12">
         <!-- Button trigger modal -->
-        <!-- Modal -->
-
-        <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <label class="modal-title text-text-bold-600" id="myModalLabel33">Formulier</label>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                        </button>
-                    </div>
-                    <form method="post">
-                        <div class="modal-body">
-                            <label>Email: </label>
-                            <div class="form-group">
-                                <input type="text" name="Email" placeholder="Email Address" class="form-control">
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
-                            <input type="submit" class="btn btn-primary" name="Verzenden" value="Verzenden">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <!-- Modals -->
 
         <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
@@ -244,7 +218,7 @@ klantInfo();
                                             <!-- Nav-tabs -->
                                             <ul class="nav nav-tabs" role="tablist">
                                                 <li class="nav-item">
-                                                    <a href="#relatie_particulier" role="tab" id="account-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="account" aria-selected="true">
+                                                    <a href="#relatie_particulier" role="tab" id="toevoegen_part" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="account" aria-selected="true">
                                                         <i class="ft-user mr-1"></i>
                                                         <span class="d-none d-sm-block">Particulier</span>
                                                     </a>
@@ -256,6 +230,216 @@ klantInfo();
                                                     </a>
                                                 </li>
                                             </ul>
+                                              <div class="tab-pane fade mt-2  " id="relatie_particulier" role="tabpanel" aria-labelledby="account-tab">
+                                              <form method="POST">
+                                                    <div class="row match-height">
+                                                        <div class="col-12">
+                                                            <div class="card">
+                                                                <div class="card-content">
+                                                                    <div class="card-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="hidden" class="form-control square" id="klant_ID" name="klantID">
+                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Voornaam">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
+                                                                                    <div class="col-md-5">
+                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="tussenvoegsel">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
+                                                                                    <div class="col-md-6">
+                                                                                        <input type="text" class="form-control square" id="achternaam" name="achternaam">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mb-md-3">
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
+                                                                                    <div class="col-md-4">
+                                                                                        <input type="text" class="form-control square" id="huisnummer" name="huisnummer">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
+                                                                                    <div class="col-md-5">
+                                                                                        <input type="text" class="form-control square" id="toevoeging" name="toevoeging">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="text" class="form-control square" id="straatnaam" name="straatnaam">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
+                                                                                    <div class="col-md-7">
+                                                                                        <input type="text" class="form-control square" id="postcode" name="postcode">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="email">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="website">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
+                                                                                    <div class="col-md-9">
+                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                              <div class="tab-pane fade mt-2  " id="relatie_zakelijk" role="tabpanel" aria-labelledby="account-tab">
+                                                <form method="POST">
+                                                    <div class="row match-height">
+                                                        <div class="col-12">
+                                                            <div class="card">
+                                                                <div class="card-content">
+                                                                    <div class="card-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="hidden" class="form-control square" id="klant_ID" name="klantID">
+                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Voornaam">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
+                                                                                    <div class="col-md-5">
+                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="tussenvoegsel">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
+                                                                                    <div class="col-md-6">
+                                                                                        <input type="text" class="form-control square" id="achternaam" name="achternaam">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mb-md-3">
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
+                                                                                    <div class="col-md-4">
+                                                                                        <input type="text" class="form-control square" id="huisnummer" name="huisnummer">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
+                                                                                    <div class="col-md-5">
+                                                                                        <input type="text" class="form-control square" id="toevoeging" name="toevoeging">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="text" class="form-control square" id="straatnaam" name="straatnaam">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-3 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
+                                                                                    <div class="col-md-7">
+                                                                                        <input type="text" class="form-control square" id="postcode" name="postcode">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="email">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="website">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
+                                                                                    <div class="col-md-9">
+                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                             <!-- Horizontal Form Layout starts -->
                                                 <form method="POST">
                                                     <div class="row match-height">
