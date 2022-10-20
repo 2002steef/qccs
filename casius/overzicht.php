@@ -245,7 +245,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="hidden" class="form-control square" id="klant_ID" name="klantID">
+                                                                                        <input type="hidden" class="form-control square" id="parti_status" name="Parti_status" value="Particulier">
                                                                                         <input type="text" class="form-control square" id="Voornaam" name="Parti_voornaam">
                                                                                     </div>
                                                                                 </div>
@@ -345,7 +345,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="hidden" class="form-control square" id="klant_ID" name="klantID">
+                                                                                        <input type="hidden" class="form-control square" id="zak_status" name="Zak_status" value="Zakelijk">
                                                                                         <input type="text" class="form-control square" id="Voornaam" name="Zak_voornaam">
                                                                                     </div>
                                                                                 </div>
