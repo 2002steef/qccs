@@ -15,9 +15,6 @@ include "partials/header.php";
     <div class="wrapper">
         <div class="main-panel">
             <!-- BEGIN : Main Content-->
-            <div class="main-content">
-                <div class="content-overlay"></div>
-                <div class="content-wrapper">
                     <!--Login Page Starts-->
                     <form method="post" action="backend/fnctLogin.php" >
                     <section id="login" class="auth-height">
@@ -68,8 +65,6 @@ include "partials/header.php";
                     </section>
                     </form>
                     <!--Login Page Ends-->
-                </div>
-            </div>
             <!-- END : End Main Content-->
         </div>
     </div>
