@@ -242,3 +242,83 @@ function UploadPic()
         }
     }
 }
+
+function ToevoegenParticulier()
+{
+    global $mysqli;
+    $sql = "INSERT INTO `klanten`(
+    `Voornaam`,
+    `Tussenvoegsel`,
+    `Achternaam`,
+    `Email`,
+    `Telefoonnummer`,
+    `straat`,
+    `postcode`,
+    `huisnummer`,
+    `huisnummerToevoeging`,
+    `notities`,
+    `status`,
+    `bedrijfsnaam`
+            )
+            VALUES(
+                '?',
+                '?',
+                '?',
+                '?',
+                '?',
+                '?',
+                '?',
+                '?',
+                '?',
+                '?',
+                )";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('sssssssssss',$_POST["Parti_voornaam"],$_POST["Parti_tussenvoegsel"],$_POST["Parti_achternaam"],$_POST["Parti_voornaam"],$_POST["Parti_email"]
+        ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$_POST["Parti_huisnummertoevoeging"],
+        $_POST["Parti_notities"]);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if($result->num_rows > 0){
+		echo "Toegoegen gelukt !";
+							  }
+}
+function ToevoegenZakelijk()
+{
+    global $mysqli;
+    $sql = "INSERT INTO `klanten`(
+    `Voornaam`,
+    `Tussenvoegsel`,
+    `Achternaam`,
+    `Email`,
+    `Telefoonnummer`,
+    `straat`,
+    `postcode`,
+    `huisnummer`,
+    `huisnummerToevoeging`,
+    `notities`,
+    `status`,
+    `bedrijfsnaam`
+)
+VALUES(
+    '?',
+    '?',
+    '?',
+    '?',
+    '?',
+    '?',
+    '?',
+    '?',
+    '?',
+    '?',
+    )";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('ssssssssssss',$_POST["Zak_voornaam"],$_POST["Zak_tussenvoegsel"],$_POST["Zak_achternaam"],$_POST["Zak_voornaam"],$_POST["Zak_email"]
+        ,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$_POST["Zak_huisnummertoevoeging"],
+        $_POST["Zak_notities"],$_POST["Zak_bedrijfsnaam"]);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+	if($result->num_rows > 0){
+		echo "Toegoegen gelukt !";
+	}
+}

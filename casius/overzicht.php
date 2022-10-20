@@ -2,6 +2,8 @@
 <?php
 include "backend/functions.php";
 klantModal();
+ToevoegenParticulier();
+ToevoegenZakelijk();
 klantInfo();
 
 ?>
@@ -244,7 +246,7 @@ klantInfo();
                                                                                     <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                                                     <div class="col-md-8">
                                                                                         <input type="hidden" class="form-control square" id="klant_ID" name="klantID">
-                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Voornaam">
+                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Parti_voornaam">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -252,7 +254,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
                                                                                     <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="tussenvoegsel">
+                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="Parti_tussenvoegsel">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -260,7 +262,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
                                                                                     <div class="col-md-6">
-                                                                                        <input type="text" class="form-control square" id="achternaam" name="achternaam">
+                                                                                        <input type="text" class="form-control square" id="achternaam" name="Parti_achternaam">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -270,7 +272,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
                                                                                     <div class="col-md-4">
-                                                                                        <input type="text" class="form-control square" id="huisnummer" name="huisnummer">
+                                                                                        <input type="text" class="form-control square" id="huisnummer" name="Parti_huisnummer">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -278,7 +280,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
                                                                                     <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="toevoeging" name="toevoeging">
+                                                                                        <input type="text" class="form-control square" id="toevoeging" name="Parti_toevoeging">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -286,7 +288,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="straatnaam" name="straatnaam">
+                                                                                        <input type="text" class="form-control square" id="straatnaam" name="Parti_straatnaam">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -294,7 +296,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
                                                                                     <div class="col-md-7">
-                                                                                        <input type="text" class="form-control square" id="postcode" name="postcode">
+                                                                                        <input type="text" class="form-control square" id="postcode" name="Parti_postcode">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -304,14 +306,14 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="email">
+                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="Parti_email">
                                                                                     </div>
                                                                                 </div>
 
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="Parti_telefoonnummer">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -319,7 +321,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
                                                                                     <div class="col-md-9">
-                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"></textarea>
+                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="Parti_notities"></textarea>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -344,7 +346,7 @@ klantInfo();
                                                                                     <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                                                     <div class="col-md-8">
                                                                                         <input type="hidden" class="form-control square" id="klant_ID" name="klantID">
-                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Voornaam">
+                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Zak_voornaam">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -352,7 +354,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
                                                                                     <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="tussenvoegsel">
+                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="Zak_tussenvoegsel">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -360,7 +362,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
                                                                                     <div class="col-md-6">
-                                                                                        <input type="text" class="form-control square" id="achternaam" name="achternaam">
+                                                                                        <input type="text" class="form-control square" id="achternaam" name="Zak_achternaam">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -370,7 +372,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
                                                                                     <div class="col-md-4">
-                                                                                        <input type="text" class="form-control square" id="huisnummer" name="huisnummer">
+                                                                                        <input type="text" class="form-control square" id="huisnummer" name="Zak_huisnummer">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -378,7 +380,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
                                                                                     <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="toevoeging" name="toevoeging">
+                                                                                        <input type="text" class="form-control square" id="toevoeging" name="Zak_toevoeging">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -386,7 +388,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="straatnaam" name="straatnaam">
+                                                                                        <input type="text" class="form-control square" id="straatnaam" name="Zak_straatnaam">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -394,7 +396,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
                                                                                     <div class="col-md-7">
-                                                                                        <input type="text" class="form-control square" id="postcode" name="postcode">
+                                                                                        <input type="text" class="form-control square" id="postcode" name="Zak_postcode">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -404,19 +406,19 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="email">
+                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="Zak_email">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="website">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="Zak_website">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="Zak_telefoonnummer">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -424,7 +426,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
                                                                                     <div class="col-md-9">
-                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"></textarea>
+                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="Zak_notities"></textarea>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -442,7 +444,7 @@ klantInfo();
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                            <button type="submit" name="updateKlant" class="btn btn-outline-light-gray">Save changes</button>
+                                            <button type="submit" name="ToevoegenKlant" class="btn btn-outline-light-gray">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
