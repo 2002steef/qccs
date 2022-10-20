@@ -18,6 +18,7 @@ include "partials/header.php";
                     <!--Login Page Starts-->
                     <form method="post" action="backend/fnctLogin.php" >
                     <section id="login" class="auth-height">
+                        <div class="row full-height-vh m-0">
                             <div class="col-12 d-flex align-items-center justify-content-center">
                                 <div class="card overflow-hidden">
                                     <div class="card-content">
@@ -60,6 +61,7 @@ include "partials/header.php";
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </section>
                     </form>
                     <!--Login Page Ends-->
