@@ -193,6 +193,7 @@ klantInfo();
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
                     </div>
+                <form method="POST">
                     <div class="modal-body">
                         <section class="users-edit">
                             <div class="row">
@@ -216,7 +217,6 @@ klantInfo();
                                             </ul>
                                              <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="relatie_particulier" aria-expanded="true" aria-labelledby="base-tab11">
-                                                     <form method="POST">
                                                     <div class="row match-height">
                                                         <div class="col-12">
                                                             <div class="card">
@@ -312,11 +312,10 @@ klantInfo();
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                     </div>
-                                                </form>
                                                 </div>
                                                 <div class="tab-pane fade" id="relatie_zakelijk" aria-labelledby="base-tab12">
-                                                    <form method="POST">
                                                     <div class="row match-height">
                                                         <div class="col-12">
                                                             <div class="card">
@@ -418,7 +417,6 @@ klantInfo();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </form>
                                                 </div>
                                             </div>
                                             <!-- Horizontal Form Layout starts -->
@@ -432,6 +430,7 @@ klantInfo();
                                 </div>
                             </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
