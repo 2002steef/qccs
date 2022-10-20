@@ -6,25 +6,8 @@ ToevoegenParticulier();
 ToevoegenZakelijk();
 klantInfo();
 
-?>
-<!DOCTYPE html>
-<html class="loading" lang="en">
-<!-- BEGIN : Head-->
-<style>
-    br {
-        line-height: 75%;
-    }
-
-    /*input::placeholder {*/
-    /*   color: red;  !important;*/
-    /*}*/
-</style>
-
-<head>
-    <?php
     include "partials/header.php";
-    ?>
-</head>
+?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
 
