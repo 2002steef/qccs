@@ -12,9 +12,7 @@ include "partials/header.php";
 
 <body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="1-column">
     <!-- ////////////////////////////////////////////////////////////////////////////-->
-    <div class="wrapper">
-        <div class="main-panel">
-            <!-- BEGIN : Main Content-->
+    <div class="wrapper">            <!-- BEGIN : Main Content-->
                     <!--Login Page Starts-->
                     <form method="post" action="backend/fnctLogin.php" >
                     <section id="login" class="auth-height">
@@ -66,8 +64,7 @@ include "partials/header.php";
                     </form>
                     <!--Login Page Ends-->
             <!-- END : End Main Content-->
-        </div>
-    </div>
+            </div>
 </body>
 <!-- END : Body-->
 </html>
