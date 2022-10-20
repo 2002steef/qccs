@@ -45,12 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo "Cookies Not Set";
                     }
                     header("Location:../overzicht.php");
-                } elseif($stmt->num_rows == 0 ) {
+                } 
+            }
+            elseif($stmt->num_rows < 1 ) {
                     // Incorrect password
-                    //                $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
                     header("Location:../index.php?login=foutecombi");
                 }
-            }
             $stmt->close();
         }
     }
