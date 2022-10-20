@@ -137,7 +137,7 @@ include "backend/voucherFunctions.php";
                             uitleg over hoe het werkt en zomeer regel 5
                         </b>
                     </p>
-                    <button id="closePopup" class="popupText">accepteer voorwaarden <b>&times;</b></button>
+                    <button id="closePopup" class="popupText"><b>accepteer voorwaarden</b></button>
                 </div>
             </div>
 
