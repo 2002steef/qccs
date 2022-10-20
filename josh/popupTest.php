@@ -129,11 +129,13 @@ include "backend/voucherFunctions.php";
                 <div id="popupContent">
                     <h1 class="popupText">Weet u zeker dat u bij -masseusebedrijf- een afspraak wilt maken?</h1>
                     <p class="popupText">
-                        uitleg over hoe het werkt en zomeer regel 1<br>
-                        uitleg over hoe het werkt en zomeer regel 2<br>
-                        uitleg over hoe het werkt en zomeer regel 3<br>
-                        uitleg over hoe het werkt en zomeer regel 4<br>
-                        uitleg over hoe het werkt en zomeer regel 5
+                        <b>
+                            uitleg over hoe het werkt en zomeer regel 1<br>
+                            uitleg over hoe het werkt en zomeer regel 2<br>
+                            uitleg over hoe het werkt en zomeer regel 3<br>
+                            uitleg over hoe het werkt en zomeer regel 4<br>
+                            uitleg over hoe het werkt en zomeer regel 5
+                        </b>
                     </p>
                     <button id="closePopup" class="popupText">accepteer voorwaarden <b>&times;</b></button>
                 </div>
