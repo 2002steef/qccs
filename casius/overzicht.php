@@ -231,7 +231,7 @@ klantInfo();
                                                 </li>
                                             </ul>
                                              <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane-fade active" id="relatie_particulier" aria-expanded="true" aria-labelledby="base-tab11">
+                                                <div role="tabpanel" class="tab-pane fade active" id="relatie_particulier" aria-expanded="true" aria-labelledby="base-tab11">
                                                      <form method="POST">
                                                     <div class="row match-height">
                                                         <div class="col-12">
@@ -331,7 +331,7 @@ klantInfo();
                                                     </div>
                                                 </form>
                                                 </div>
-                                                <div class="tab-pane" id="relatie_zakelijk" aria-labelledby="base-tab12">
+                                                <div class="tab-pane fade" id="relatie_zakelijk" aria-labelledby="base-tab12">
                                                     <form method="POST">
                                                     <div class="row match-height">
                                                         <div class="col-12">
