@@ -160,7 +160,7 @@ include "backend/voucherFunctions.php";
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" id="myModalLabel1">Basic Modal</h4>
+                                <h4 class="modal-title" id="myModalLabel1">-masseusebedrijf-</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                                 </button>
@@ -168,9 +168,9 @@ include "backend/voucherFunctions.php";
                             <div class="modal-body">
                                 <h5>Voucher gebruiken?</h5>
                                 <p>
-                                    Weet u zeker dat u de voucher wilt gebruiken bij -masseusebedrijf- ? <br>
-                                    Zodra u op accepteren klikt, zal er een voucher naar uw mail gestuurd worden<br>
-                                    Vervolgens zal het er contact met u worden opgenomen door -masseusebedrijf- om een afspraak te plannen.<br>
+                                    Weet u zeker dat u de voucher wilt gebruiken bij -masseusebedrijf- ? <br><br>
+                                    Zodra u op accepteren klikt, zal er een voucher naar uw mail gestuurd worden<br><Br>
+                                    Vervolgens zal het er contact met u worden opgenomen door -masseusebedrijf- om een afspraak te plannen.<br><br>
                                     Wanneer u bij -masseusebedrijf- langs gaat, geeft u de code van de voucher. De masseuse zal deze verzilveren en de massage geven.
                                 </p>
                             </div>
