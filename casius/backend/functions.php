@@ -269,8 +269,10 @@ function ToevoegenParticulier()
         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
         $stmt = $mysqli->prepare($sql);
         
-        if ($stmt->num_rows == 0 ) {
-        $stmt->Close();
+        if ($stmt->num_rows > 0 ) {
+        header("Location: overzicht.php");
+        exit();
+        }
             $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
                     `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
                     VALUES
