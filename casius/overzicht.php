@@ -3,7 +3,8 @@
 include "backend/functions.php";
 klantModal();
 
-klantInfo();
+PartklantInfoTabel();
+ZakklantInfoTabel();
 
     include "partials/header.php";
 ?>
