@@ -285,10 +285,6 @@ function ToevoegenParticulier()
             $_POST["Parti_notities"],$_POST["Parti_status"]);
         $stmt->execute();
             $result = $stmt->get_result();
-
-         header("Location:overzicht.php");
-
-     exit();
     }
 }
 function ToevoegenZakelijk()
@@ -322,6 +318,4 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
     $stmt->execute();
     $result = $stmt->get_result();
-    header("Location:overzicht.php");
-     exit();
 }
