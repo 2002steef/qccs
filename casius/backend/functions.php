@@ -322,7 +322,6 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
     $stmt->execute();
     $result = $stmt->get_result();
-      $stmt->close();
     header("Location:overzicht.php");
      exit();
 }
