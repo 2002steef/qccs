@@ -14,10 +14,29 @@ function klantInfo()
     return $result->fetch_array();
 }
 
-function klantInfoTabel()
+function PartklantInfoTabel()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `klanten`";
+    $DataMasseuse = "SELECT * FROM `klanten` WHERE `status` = 'Particulier'";
+    $stmt = $mysqli->prepare($DataMasseuse);
+    $stmt->execute();
+    $resultKlant = $stmt->get_result();
+    while ($klant = $resultKlant->fetch_array()) { ?>
+        <tr>
+            <td><?= $klant["klant_ID"] ?></td>
+            <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
+            <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>">
+                    Meer info
+                </a>
+            </td>
+        </tr>
+    <?php }
+}
+function ZakklantInfoTabel()
+{
+    global $mysqli;
+    $DataMasseuse = "SELECT * FROM `klanten` WHERE `status` = 'Zakelijk'";
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
@@ -266,9 +285,6 @@ function ToevoegenParticulier()
             $_POST["Parti_notities"],$_POST["Parti_status"]);
         $stmt->execute();
         $result = $stmt->get_result();
-        if($result->num_rows > 0){
-		    echo "Toegoegen gelukt !";
-							      }
     }
 }
 function ToevoegenZakelijk()
@@ -288,22 +304,10 @@ function ToevoegenZakelijk()
     `status`,
     `bedrijfsnaam`
 )
-VALUES(
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',    
-    )";
+VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('ssssssssssss',$_POST["Zak_voornaam"],$_POST["Zak_tussenvoegsel"],$_POST["Zak_achternaam"],$_POST["Zak_email"]
+    $stmt->bind_param('ssssssssssss',
+        $_POST["Zak_voornaam"],$_POST["Zak_tussenvoegsel"],$_POST["Zak_achternaam"],$_POST["Zak_email"]
         ,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$_POST["Zak_toevoeging"],
         $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["Zak_bedrijfsnaam"]);
     $stmt->execute();
