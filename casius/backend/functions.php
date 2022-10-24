@@ -247,7 +247,7 @@ function ToevoegenParticulier()
 {
     global $mysqli;
     $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
-            `straat``postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
+            `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
             VALUES
             ('?','?','?','?','?','?','?','?','?','?','?')";
     $stmt = $mysqli->prepare($sql);
