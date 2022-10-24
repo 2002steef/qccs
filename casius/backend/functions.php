@@ -289,8 +289,8 @@ function ToevoegenParticulier()
             $stmt->execute();
             $stmt->exit();
             $mysqli->Close();
-             }
-        }else 
+        
+            }else 
         {
              header("Location:overzicht.php");
              exit();
