@@ -147,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             }
-            elseif($stmtMw && $stmtBd->num_rows < 1 ) {
+            elseif($stmtMs->num_rows < 1 ) {
                 // Incorrect password
                 header("Location:../index.php?login=foutecombi");
             }
