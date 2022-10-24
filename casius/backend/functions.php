@@ -284,7 +284,8 @@ function ToevoegenParticulier()
             ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
             $_POST["Parti_notities"],$_POST["Parti_status"]);
         $stmt->execute();
-        $result = $stmt->get_result();
+       $stmt->close();
+       $mysqli->close();
          header("Location:overzicht.php");
      exit();
     }
@@ -319,7 +320,8 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         ,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$_POST["Zak_toevoeging"],
         $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
     $stmt->execute();
-    $result = $stmt->get_result();
-    header("Location:overzicht.php");
+  $stmt->close();
+       $mysqli->close();    
+       header("Location:overzicht.php");
      exit();
 }
