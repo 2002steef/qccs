@@ -266,24 +266,34 @@ function ToevoegenParticulier()
 {
     if (isset($_POST["ToevoegenPart"])) {
         global $mysqli;
-        $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
-                `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
-                VALUES
-                (?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
         $stmt = $mysqli->prepare($sql);
-        if(empty($_POST["Parti_tussenvoegsel"])){
-		    $tussenvoegsel = " ";
-	    }
-	    if(empty($_POST["Parti_toevoeging"])){
-		    $toevoeging = " ";
-	    }
-        $stmt->bind_param('sssssssssss',
-            $_POST["Parti_voornaam"],$tussenvoegsel,$_POST["Parti_achternaam"],$_POST["Parti_email"]
-            ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
-            $_POST["Parti_notities"],$_POST["Parti_status"]);
-        $stmt->execute();
-        $stmt->exit();
-        $mysqli->Close();
+        $stmt->Close();
+        if ($stmt->num_rows == 0 ) {
+
+            $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
+                    `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
+                    VALUES
+                    (?,?,?,?,?,?,?,?,?,?,?)";
+            $stmt = $mysqli->prepare($sql);
+            if(empty($_POST["Parti_tussenvoegsel"])){
+		        $tussenvoegsel = " ";
+	        }
+	        if(empty($_POST["Parti_toevoeging"])){
+		        $toevoeging = " ";
+	        }
+            $stmt->bind_param('sssssssssss',
+                $_POST["Parti_voornaam"],$tussenvoegsel,$_POST["Parti_achternaam"],$_POST["Parti_email"]
+                ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
+                $_POST["Parti_notities"],$_POST["Parti_status"]);
+            $stmt->execute();
+            $stmt->exit();
+            $mysqli->Close();
+             }
+        }else 
+        {
+             header("Location:overzicht.php");
+             exit();
         }
         header("Location:overzicht.php");
         exit();
