@@ -150,205 +150,37 @@ include "backend/voucherFunctions.php";
             </script> -->
 
 
-            <div class="card-content">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-6 col-12 mb-2">
-                                                    <h6>Default Modal</h6>
-                                                    <p>Toggle a modal via JavaScript by clicking the button above.</p>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#default">Launch Modal</button>
-                                                    <!-- Modal -->
-                                                    <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="myModalLabel1">Basic Modal</h4>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <h5>Check First Paragraph</h5>
-                                                                    <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                                                                    <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                                                                    <hr>
-                                                                    <h5>Some More Text</h5>
-                                                                    <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mb-2">
-                                                    <h6>Modal With Icons</h6>
-                                                    <p> With some icons and success alert to give success message.</p>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#iconModal">Launch Modal</button>
-                                                    <!-- Modal -->
-                                                    <div class="modal fade text-left" id="iconModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Basic Modal</h4>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <h5><i class="ft-arrow-right mr-1"></i>Check First Paragraph</h5>
-                                                                    <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                                                                    <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                                                                    <hr>
-                                                                    <h5><i class="ft-award mr-1"></i>Some More Text</h5>
-                                                                    <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
-                                                                    <div class="alert alert-success" role="alert">
-                                                                        <span class="text-bold-600">Well done!</span> You successfully read this important alert
-                                                                        message.
-                                                                    </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mb-2">
-                                                    <h6>Disable Keyboard</h6>
-                                                    <p> By Default, closes the modal when escape key is pressed. Disable keyboard interaction using data-backdrop="false".</p>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn bg-light-primary" data-toggle="modal" data-keyboard="false" data-target="#keyboard">Launch Modal</button>
-                                                    <!-- Modal -->
-                                                    <div class="modal fade text-left" id="keyboard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="myModalLabel3">Basic Modal</h4>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <h5>Check First Paragraph</h5>
-                                                                    <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                                                                    <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                                                                    <hr>
-                                                                    <h5>Some More Text</h5>
-                                                                    <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mb-2">
-                                                    <h6>Disable Backdrop</h6>
-                                                    <p>Disable backdrop element using data-backdrop="false", it includes a modal-backdrop element. Alternatively, specify static for a backdrop which doesn't close the modal on outsidedata-backdrop="false" click.</p>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn bg-light-primary" data-toggle="modal" data-backdrop="false" data-target="#backdrop">Launch Modal</button>
-                                                    <!-- Modal -->
-                                                    <div class="modal fade text-left" id="backdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="myModalLabel4">Basic Modal</h4>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <h5>Check First Paragraph</h5>
-                                                                    <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                                                                    <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                                                                    <hr>
-                                                                    <h5>Some More Text</h5>
-                                                                    <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-12 mb-2">
-                                                    <h6>Modal Show</h6>
-                                                    <p>Manually opens a modal. Returns to the caller before the modal has actually been shown.</p>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn bg-light-primary" data-toggle="modal" data-show="false" data-target="#show">Launch Modal</button>
-                                                    <!-- Modal -->
-                                                    <div class="modal fade text-left" id="show" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="myModalLabel5">Basic Modal</h4>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <h5>Check First Paragraph</h5>
-                                                                    <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                                                                    <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                                                                    <hr>
-                                                                    <h5>Some More Text</h5>
-                                                                    <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-12">
-                                                    <h6>Disable Animation</h6>
-                                                    <p>For modals that simply appear rather than fade in to view, remove the .fade class from your modal markup.</p>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#animation">Launch Modal</button>
-                                                    <!-- Modal -->
-                                                    <div class="modal text-left" id="animation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6" aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 class="modal-title" id="myModalLabel6"><i class="ft-bookmark mr-2"></i>Basic Modal</h4>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <h5><i class="ft-arrow-right mr-1"></i>Check First Paragraph</h5>
-                                                                    <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                                                                    <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                                                                    <hr>
-                                                                    <h5>Some More Text</h5>
-                                                                    <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
-                                                                    <div class="alert alert-success" role="alert">
-                                                                        <span class="text-bold-600">Well done!</span> You successfully read this important alert message.
-                                                                    </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-2">
+                <h6>Default Modal</h6>
+                <p>Toggle a modal via JavaScript by clicking the button above.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#default">Launch Modal</button>
+                <!-- Modal -->
+                <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel1">Basic Modal</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Check First Paragraph</h5>
+                                <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
+                                <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
+                                <hr>
+                                <h5>Some More Text</h5>
+                                <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <!-- POPUP END -->
@@ -383,7 +215,7 @@ include "backend/voucherFunctions.php";
     <script src="app-assets/js/scroll-top.js"></script>
     <!-- END APEX JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/components-modal.min.js"></script>
+    <script src="/app-assets/js/components-modal.min.js"></script>
     <!-- END PAGE LEVEL JS-->
     <!-- BEGIN: Custom CSS-->
     <script src="assets/js/scripts.js"></script>
