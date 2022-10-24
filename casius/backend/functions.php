@@ -252,7 +252,7 @@ function ToevoegenParticulier()
         $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
                 `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
                 VALUES
-                ('?','?','?','?','?','?','?','?','?','?','?')";
+                (?,?,?,?,?,?,?,?,?,?,?)";
         $stmt = $mysqli->prepare($sql);
         if(empty($_POST["Parti_tussenvoegsel"])){
 		    $tussenvoegsel = " ";
