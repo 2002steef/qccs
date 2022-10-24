@@ -283,8 +283,8 @@ function ToevoegenParticulier()
             $_POST["Parti_notities"],$_POST["Parti_status"]);
         $stmt->execute();
         $stmt->exit();
-            $result = $stmt->get_result();
-    }
+        $mysqli->Close();
+        }
 }
 function ToevoegenZakelijk()
 {
@@ -320,6 +320,7 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         ,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$_POST["Zak_toevoeging"],
         $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
     $stmt->execute();
-    $result = $stmt->get_result();
+           $stmt->Close();
+        $mysqli->Close();
     }
 }
