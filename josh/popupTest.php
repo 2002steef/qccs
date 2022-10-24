@@ -215,7 +215,7 @@ include "backend/voucherFunctions.php";
     <script src="app-assets/js/scroll-top.js"></script>
     <!-- END APEX JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="/app-assets/js/components-modal.min.js"></script>
+    <script src="app-assets/js/components-modal.min.js"></script>
     <!-- END PAGE LEVEL JS-->
     <!-- BEGIN: Custom CSS-->
     <script src="assets/js/scripts.js"></script>
