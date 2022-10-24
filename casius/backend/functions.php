@@ -244,27 +244,32 @@ function UploadPic()
 }
 
 function ToevoegenParticulier()
-{
-    global $mysqli;
-    $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
-            `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
-            VALUES
-            ('?','?','?','?','?','?','?','?','?','?','?')";
-    $stmt = $mysqli->prepare($sql);
-    if(empty($_POST["Parti_tussenvoegsel"])){
-		$tussenvoegsel = " ";
-	}
-	if(empty($_POST["Parti_toevoeging"])){
-		$toevoeging = " ";
-	}
-    $stmt->bind_param('sssssssssss',$_POST["Parti_voornaam"],$tussenvoegsel,$_POST["Parti_achternaam"],$_POST["Parti_email"]
-        ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
-        $_POST["Parti_notities"],$_POST["Parti_status"]);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    if($result->num_rows > 0){
-		echo "Toegoegen gelukt !";
-							  }
+{if (isset($_POST["ToevoegenPart"])) {
+	# code...
+
+
+        global $mysqli;
+        $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
+                `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
+                VALUES
+                ('?','?','?','?','?','?','?','?','?','?','?')";
+        $stmt = $mysqli->prepare($sql);
+        if(empty($_POST["Parti_tussenvoegsel"])){
+		    $tussenvoegsel = " ";
+	    }
+	    if(empty($_POST["Parti_toevoeging"])){
+		    $toevoeging = " ";
+	    }
+        $stmt->bind_param('sssssssssss',
+            $_POST["Parti_voornaam"],$tussenvoegsel,$_POST["Parti_achternaam"],$_POST["Parti_email"]
+            ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
+            $_POST["Parti_notities"],$_POST["Parti_status"]);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows > 0){
+		    echo "Toegoegen gelukt !";
+							      }
+    }
 }
 function ToevoegenZakelijk()
 {
