@@ -263,10 +263,8 @@ function UploadPic()
 }
 
 function ToevoegenParticulier()
-{if (isset($_POST["ToevoegenPart"])) {
-	# code...
-
-
+{
+    if (isset($_POST["ToevoegenPart"])) {
         global $mysqli;
         $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
                 `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
