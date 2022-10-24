@@ -255,7 +255,7 @@ function ToevoegenParticulier()
     `postcode`,
     `huisnummer`,
     `notities`,
-    `status`,
+    `status`
             )
             VALUES(
                 '?',
