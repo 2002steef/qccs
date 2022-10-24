@@ -312,8 +312,4 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["Zak_bedrijfsnaam"]);
     $stmt->execute();
     $result = $stmt->get_result();
-    return $result->fetch_array();
-	if($result->num_rows > 0){
-		echo "Toegoegen gelukt !";
-	}
 }
