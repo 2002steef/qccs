@@ -3,8 +3,7 @@
 include "backend/functions.php";
 klantModal();
 
-PartklantInfoTabel();
-ZakklantInfoTabel();
+klantInfo();
 
     include "partials/header.php";
 ?>
@@ -105,8 +104,8 @@ ZakklantInfoTabel();
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <?php
-                                                                    klantInfoTabel();
+                                                                    <?php 
+                                                                    ZakklantInfoTabel();   
                                                                     ?>
                                                                 </tbody>
                                                             </table>
@@ -158,7 +157,7 @@ ZakklantInfoTabel();
                                                                 </thead>
                                                                 <tbody>
                                                                     <?php
-                                                                    klantInfoTabel();
+                                                                   PartklantInfoTabel();
                                                                     ?>
                                                                 </tbody>
                                                             </table>
