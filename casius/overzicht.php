@@ -313,7 +313,7 @@ klantInfo();
                                                             </div>
                                                         </div>
                                                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="submit" name="toevoegenPart"  class="btn btn-outline-light-gray">Save changes</button>
+                                                        <button type="submit" name="ToevoegenPart"  class="btn btn-outline-light-gray">Save changes</button>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="relatie_zakelijk" aria-labelledby="base-tab12">

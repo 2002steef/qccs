@@ -288,6 +288,10 @@ function ToevoegenParticulier()
 }
 function ToevoegenZakelijk()
 {
+if (isset($_POST["ToevoegenZak"])) {
+	# code...
+
+
     global $mysqli;
     $sql = "INSERT INTO `klanten`(
     `Voornaam`,
@@ -317,4 +321,5 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
     $stmt->execute();
     $result = $stmt->get_result();
+    }
 }
