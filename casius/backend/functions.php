@@ -246,32 +246,10 @@ function UploadPic()
 function ToevoegenParticulier()
 {
     global $mysqli;
-    $sql = "INSERT INTO `klanten`(
-    `Voornaam`,
-    `Tussenvoegsel`,
-    `Achternaam`,
-    `Email`,
-    `Telefoonnummer`,
-    `straat`,
-    `postcode`,
-    `huisnummer`,
-    `huisnummerToevoeging`,
-    `notities`,
-    `status`
-            )
-            VALUES(
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?'             
-                )";
+    $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
+            `straat``postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
+            VALUES
+            ('?','?','?','?','?','?','?','?','?','?','?')";
     $stmt = $mysqli->prepare($sql);
     if(empty($_POST["Parti_tussenvoegsel"])){
 		$tussenvoegsel = " ";
