@@ -285,6 +285,9 @@ function ToevoegenParticulier()
         $stmt->exit();
         $mysqli->Close();
         }
+        header("Location:overzicht.php");
+        exit();
+
 }
 function ToevoegenZakelijk()
 {
@@ -323,4 +326,6 @@ VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
            $stmt->Close();
         $mysqli->Close();
     }
+    header("Location:overzicht.php");
+        exit();
 }
