@@ -394,7 +394,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="Zak_website">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="bedrijfsnaam">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">

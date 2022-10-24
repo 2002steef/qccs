@@ -306,10 +306,16 @@ function ToevoegenZakelijk()
 )
 VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = $mysqli->prepare($sql);
+       if(empty($_POST["Zak_tussenvoegsel"])){
+		    $tussenvoegsel = " ";
+	    }
+	    if(empty($_POST["Zak_toevoeging"])){
+		    $toevoeging = " ";
+	    }
     $stmt->bind_param('ssssssssssss',
         $_POST["Zak_voornaam"],$_POST["Zak_tussenvoegsel"],$_POST["Zak_achternaam"],$_POST["Zak_email"]
         ,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$_POST["Zak_toevoeging"],
-        $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["Zak_bedrijfsnaam"]);
+        $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
     $stmt->execute();
     $result = $stmt->get_result();
 }
