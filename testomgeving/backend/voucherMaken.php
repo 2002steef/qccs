@@ -48,15 +48,16 @@ function InsertVoucher($voucher)
     $username = "relatietest";
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
-    $userID = $_POST['medewerker'];
-    $masseuseID = $_POST['masseuse'];
+    $userID = "3";
+    $masseuseID = "1";
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '2', '$voucher', '1')");
+    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
     if ($mysqli->num_rows > 0) {
         echo "Toegevoegd";
     }
 }
 
+if (isset($_POST['acceptTermsVoucher'])) {
     $medewerkerID = $_SESSION["id"];
     $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
     $stmt = $mysqli->prepare($sql);
@@ -64,12 +65,13 @@ function InsertVoucher($voucher)
     $email = $stmt->get_result();
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    // if ($email) {
+    if ($email) {
         $to = $email;
         $subject = "Voucher code";
         $msg = "Uw voucher code is . $voucher ";
         $msg = wordwrap($msg, 70);
         $headers = "From: Admin@bma.nl";
-        mail($email, $subject, $msg, $headers);
+        mail('steefertjappie@gmail.com', $subject, $msg, $headers);
         // header('location:index.php');
-    // }
+    }
+}
