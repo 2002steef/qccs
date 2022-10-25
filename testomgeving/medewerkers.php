@@ -139,10 +139,11 @@ if (!isset($_SESSION["loggedin"])) {
         </div>
 
         <script>
-            function changepopup(masseuseID){
+            function changepopup(bedrijfNaam){
                 // console.log(masseuseID);
-                let masseuseBedrijfNaam = '<?php echo($masseuse["bedrijfsNaam"]) ?>';
-                console.log(masseuseBedrijfNaam);
+                document.getElementsByClassName("popupEdit")[0].innerHTML=bedrijfNaam;
+                document.getElementsByClassName("popupEdit")[1].innerHTML=bedrijfNaam;
+                document.getElementsByClassName("popupEdit")[2].innerHTML=bedrijfNaam;
             }
         </script>
 

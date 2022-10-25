@@ -638,7 +638,7 @@ function masseuseInfo()
                 </a>
                 <br>
                 <br>
-                <button type="button" onclick='changepopup(<?= $masseuse["masseuseID"] ?>)' class="btn btn-outline-light-grey" data-toggle="modal" data-target="#default">Maak afspraak</button>
+                <button type="button" onclick='changepopup(<?= $masseuse["bedrijfsNaam"] ?>)' class="btn btn-outline-light-grey" data-toggle="modal" data-target="#default">Maak afspraak</button>
             </td>
         </tr>
     <?php }
