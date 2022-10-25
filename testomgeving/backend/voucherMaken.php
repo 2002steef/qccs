@@ -43,7 +43,7 @@ function getEmail(){
 }
 
 
-// if (isset($_POST['acceptTermsVoucher'])) {
+if (isset($_POST['acceptTermsVoucher'])) {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
     $email = 'steefertjappie@gmail.com';
@@ -55,4 +55,4 @@ function getEmail(){
         $headers = "From: Admin@bma.nl";
         mail($to, $subject, $msg, $headers);
     }
-// }
+}
