@@ -139,10 +139,13 @@ if (!isset($_SESSION["loggedin"])) {
         </div>
 
         <script>
-            function changepopup(masseuseID){
+            function changepopup(bedrijfNaam){
                 // console.log(masseuseID);
-                let masseuseBedrijfNaam = <?= $masseuse["bedrijfsNaam"] ?>;
-                console.log(masseuseBedrijfNaam);
+                let Replace = bedrijfNaam;
+                document.getElementsByClassName("popupEdit")[0].innerHTML=Replace;
+                document.getElementsByClassName("popupEdit")[1].innerHTML=Replace;
+                document.getElementsByClassName("popupEdit")[2].innerHTML=Replace;
+                document.getElementsByClassName("popupEdit")[3].innerHTML=Replace;
             }
         </script>
 
