@@ -145,6 +145,7 @@ if (!isset($_SESSION["loggedin"])) {
                 document.getElementsByClassName("popupEdit")[0].innerHTML=Replace;
                 document.getElementsByClassName("popupEdit")[1].innerHTML=Replace;
                 document.getElementsByClassName("popupEdit")[2].innerHTML=Replace;
+                document.getElementsByClassName("popupEdit")[3].innerHTML=Replace;
             }
         </script>
 
