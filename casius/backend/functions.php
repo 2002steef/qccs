@@ -271,8 +271,9 @@ function ToevoegenParticulier()
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('s', $_POST["Parti_email"]);
         $stmt->execute();
-        
-        if ($stmt->num_rows > 0 ) {
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0 ) {
 			header("Location: overzicht.php");
 			exit();
         }else{
