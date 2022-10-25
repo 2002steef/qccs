@@ -1,5 +1,5 @@
 <?php
-include "db.php";
+// include "db.php";
 
 function createRandomVoucher(
     int $length = 10,
