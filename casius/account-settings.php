@@ -7,8 +7,8 @@ $id = $_SESSION['id'];
 // Controleer of iemand ingelogd is
 // Changepassword();
 // UpdateKlant();
-UploadPic();
-$klant = klantInfo();
+//UploadPic();
+//$klant = klantInfo();
 
 
 ?>
