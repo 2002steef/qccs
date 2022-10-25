@@ -9,6 +9,10 @@ $id = $_SESSION['id'];
 // Changepassword();
 // Updateuser();
 // UploadPic1();
+
+$rowMw = Getuser();
+UploadPic();
+
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
