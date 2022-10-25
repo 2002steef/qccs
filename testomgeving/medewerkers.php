@@ -1,7 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
-// include "backend/voucherMaken.php";
+include "backend/voucherMaken.php";
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
@@ -132,7 +132,7 @@ if (!isset($_SESSION["loggedin"])) {
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <form action="backend/voucherMaken.php" method="POST">
+                        <form action="" method="POST">
                             <button type="submit" name="acceptTermsVoucher" class="btn btn-outline-light-grey" data-dismiss="modal">accepteer</button>
                         </form>
                     </div>
