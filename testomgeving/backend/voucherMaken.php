@@ -64,7 +64,7 @@ function InsertVoucher($voucher)
     $email = $stmt->get_result();
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    if ($email) {
+    // if ($email) {
         $to = $email;
         $subject = "Voucher code";
         $msg = "Uw voucher code is . $voucher ";
@@ -72,4 +72,4 @@ function InsertVoucher($voucher)
         $headers = "From: Admin@bma.nl";
         mail($email, $subject, $msg, $headers);
         // header('location:index.php');
-    }
+    // }
