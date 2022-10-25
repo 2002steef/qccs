@@ -1,5 +1,5 @@
 <?php
-include "functions.php";
+
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -43,7 +43,7 @@ function getEmail(){
 }
 
 
-if (isset($_POST['acceptTermsVoucher'])) {
+// if (isset($_POST['acceptTermsVoucher'])) {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
     if ($email) {
@@ -54,4 +54,4 @@ if (isset($_POST['acceptTermsVoucher'])) {
         $headers = "From: Admin@bma.nl";
         mail('steefertjappie@gmail.com', $subject, $msg, $headers);
     }
-}
+// }
