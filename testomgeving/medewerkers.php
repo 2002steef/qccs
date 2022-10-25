@@ -141,7 +141,7 @@ if (!isset($_SESSION["loggedin"])) {
         <script>
             function changepopup(masseuseID){
                 // console.log(masseuseID);
-                let masseuseBedrijfNaam = <?= $masseuse["bedrijfsNaam"] ?>;
+                let masseuseBedrijfNaam = '<?= $masseuse["bedrijfsNaam"] ?>';
                 console.log(masseuseBedrijfNaam);
             }
         </script>
