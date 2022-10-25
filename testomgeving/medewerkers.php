@@ -131,7 +131,7 @@ if (!isset($_SESSION["loggedin"])) {
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <form method="POST">
+                        <form method="POST" action="voucherMaken.php">
                             <button type="button" name="acceptTermsVoucher" class="btn btn-outline-light-grey" data-dismiss="modal">accepteer</button>
                         </form>
                     </div>
