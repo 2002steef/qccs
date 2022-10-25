@@ -5,7 +5,7 @@ use Google\Service\CloudNaturalLanguage\Document;
 include "db.php";
 session_start();
 include "error.php";
-include "voucherMaken.php";
+// include "voucherMaken.php";
 function UpdateProfielBedrijf()
 {
     global $mysqli;
@@ -837,41 +837,38 @@ function BewerkDienstenModal()
                                 <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                             </button>
                         </div>
-                        <div class="modal-body">                                    
+                        <div class="modal-body">
                             <input type="hidden" name="masseuseID" value="<?= $masseuse["masseuseID"] ?>">
-                                    <p><input type="checkbox" name="dienst[]" value="Body To Body Massage" /> Body To Body Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Body To Head Massage" /> Body To Head Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Voet Massage" /> Voet Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Thaise Massage" /> Thaise Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Italiaanse Massage" /> Italiaanse Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Body To Body Massage" /> Body To Body Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Body To Head Massage" /> Body To Head Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Voet Massage" /> Voet Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Thaise Massage" /> Thaise Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Italiaanse Massage" /> Italiaanse Massage</p>
                         </div>
                         <div class="modal-footer">
-                            <button  name="submit" type="submit" class="btn bg-light-secondary">Opslaan</button>
+                            <button name="submit" type="submit" class="btn bg-light-secondary">Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <?php
-        
+    <?php
+
     }
-    if(isset($_POST["submit"]))
-        {
+    if (isset($_POST["submit"])) {
         global $mysqli;
         $id = $_POST["masseuseID"];
-         $for_query = '';
-         if(!empty($_POST["dienst"]))
-         {
-          foreach($_POST["dienst"] as $dienst)
-          {
-           $for_query .= $dienst . ', ';
-          }
-          $for_query = substr($for_query, 0, -2);
-          $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = $id";
+        $for_query = '';
+        if (!empty($_POST["dienst"])) {
+            foreach ($_POST["dienst"] as $dienst) {
+                $for_query .= $dienst . ', ';
+            }
+            $for_query = substr($for_query, 0, -2);
+            $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = $id";
 
-          $stmt = $mysqli->prepare($query);
-          $stmt->execute();
+            $stmt = $mysqli->prepare($query);
+            $stmt->execute();
         }
     }
 }
@@ -886,7 +883,7 @@ function MasseuseParagraafModal()
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
 
-        ?>
+    ?>
         <div class="modal fade text-left" id="paragraaf<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -2258,5 +2255,52 @@ function EditNNote()
                     mail($to, $subject, $msg, $headers);
                     header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=Formulier");
                 }
+            }
+        }
+
+        // voucher functions:
+
+        function InsertVoucher($voucher)
+        {
+            $servername = "localhost";
+            $username = "relatietest";
+            $password = "Rb4x4y7*3";
+            $db = "test_relatiebeheer";
+            $userID = "3";
+            $masseuseID = "1";
+            $mysqli = new mysqli("$servername", "$username", "$password", "$db");
+            $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
+            // if ($mysqli->num_rows > 0) {
+            //     echo ('<script>console.log("toegevoegd")</script>');
+            // }
+        }
+
+        function createRandomVoucher(
+            int $length = 10,
+            string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        ): string {
+            if ($length < 1) {
+                throw new \RangeException("Length must be a positive integer");
+            }
+            $pieces = [];
+            $max = mb_strlen($keyspace, '8bit') - 1;
+            for ($i = 0; $i < $length; ++$i) {
+                $pieces[] = $keyspace[random_int(0, $max)];
+            }
+            return implode('', $pieces);
+        }
+
+        function voucherGebruiken()
+        {
+            $voucher = createRandomVoucher();
+            InsertVoucher($voucher);
+            $email = 'steefertjappie@gmail.com';
+            if ($email) {
+                $to = $email;
+                $subject = "Voucher code";
+                $msg = "Uw voucher code is . $voucher ";
+                $msg = wordwrap($msg, 70);
+                $headers = "From: Admin@bma.nl";
+                mail($to, $subject, $msg, $headers);
             }
         }

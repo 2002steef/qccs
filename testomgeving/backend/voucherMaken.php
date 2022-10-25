@@ -43,7 +43,7 @@ function getEmail(){
 }
 
 
-if (isset($_POST['acceptTermsVoucher'])) {
+function voucherGebruiken(){
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
     $email = 'steefertjappie@gmail.com';
