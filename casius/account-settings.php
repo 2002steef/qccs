@@ -58,16 +58,14 @@ include "partials/header.php";
 										<span class="align-middle">Wachtwoord veranderen</span>
 									</a>
 								</li>
-								<?php
-                                if ($_SESSION["status"] == "masseuse") {
-                                ?>
+							
 								<li class="nav-item">
 									<a class="nav-link" id="voucher-verzileren-tab" data-toggle="tab" href="#voucher-verzileren" role="tab" aria-controls="voucher-verzileren" aria-selected="false">
 										<i class="ft-lock mr-1 align-middle"></i>
 										<span class="align-middle">Voucher verzilveren</span>
 									</a>
 								</li>
-								<?php } ?>
+						
 							</ul>
 						</div>
 						<div class="col-md-9">
@@ -78,15 +76,8 @@ include "partials/header.php";
 										<div class="tab-content">
 											<!-- General Tab -->
 											<div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
-												<?php
-                                                if ($_SESSION["status"] !== "medewerker") {
-                                                ?>
 												<div class="media">
-													<img src="img/uploads/<?php if ($_SESSION["status"] == "bedrijf") {
-                                                                                    echo $rowBd["profielFoto"];
-                                                                                } elseif ($_SESSION["status"] == "masseuse") {
-                                                                                    echo $rowMs["profielFoto"];
-                                                                                } ?>"
+													<img src="img/uploads/<?php     echo $rowBd["profielFoto"];?>"
 														alt="profile-img" class="rounded mr-3" height="64" width="64" />
 													<div class="media-body">
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
@@ -105,60 +96,26 @@ include "partials/header.php";
 														</p>
 													</div>
 												</div>
-												<?php } ?>
-												<?php if ($_SESSION["status"] == "masseuse") { ?>
-												<div class="media">
-													<img src="img/uploads/<?= $rowMs["bannerFoto"];?>" alt="banner-img" class="rounded mr-3" height="64" width="64" />
-													<div class="media-body">
-														<div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
-															<form action="page-account-settings.php" method="post" enctype="multipart/form-data">
-																<input type="file" name="my_banner" type="button" class="btn btn-sm btn-outline-light-grey mb-1 mb-sm-0" />
-																<input type="submit" class="btn btn-sm btn-outline-light-grey mb-1 mb-sm-0" name="submitBanner" value="Upload" />
-															</form>
-														</div>
-														<p class="text-muted mb-0 mt-1 mt-sm-0">
-															<small>Upload hier up banner foto</small>
-															<br />
-															<small>Toegestaan JPG, GIF or PNG. Max grootte van 800kB</small>
-															<?php if (isset($err)) {
-																	  echo $err;
-																  }  ?>
-														</p>
-													</div>
-												</div>
-												<?php }?>
 												<hr class="mt-1 mt-sm-2" />
 												<form method="post" action="page-account-settings.php">
 													<div class="row">
 														<div class="col-12 form-group">
 															<label for="name">Account Naam</label>
 															<div class="controls">
-																<input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php if ($_SESSION["status"] == "bedrijf") {
-																																								  echo $rowBd["userName"];
-																																							  } elseif ($_SESSION["status"] == "masseuse") {
-																																								  echo $rowMs["voornaam"];
-																																							  } ?>"
+																<input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php  echo $rowBd["userName"]; ?>"
 																	required />
 															</div>
 														</div>
 														<div class="col-12 form-group">
 															<label for="name">E-mail</label>
 															<div class="controls">
-																<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] == "bedrijf") {
-																																									   echo $rowBd["email"];
-																																								   } elseif ($_SESSION["status"] == "masseuse") {
-																																									   echo $rowMs["email"];
-																																								   } ?>"
+																<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $rowBd["email"]; ?>"
 																	required />
 															</div>
 														</div>
 														<div class="col-12 form-group">
 															<div class="controls">
-																<input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php if ($_SESSION["status"] == "bedrijf") {
-																																										echo $rowBd["email"];
-																																									} elseif ($_SESSION["status"] == "masseuse") {
-																																										echo $rowMs["email"];
-																																									} ?>"
+																<input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $rowBd["email"];?>"
 																	required />
 															</div>
 														</div>
@@ -172,21 +129,10 @@ include "partials/header.php";
                                                             ?>
 														</div>
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-															<?php
-                                                            if ($_SESSION["status"] == "bedrijf") { ?>
 															<button type="submit" name="saveBd" class="btn btn-light-grey mr-sm-2 mb-1">Opslaan</button>
 															<a class="btn btn-outline-light-grey mr-sm-2 mb-1-" href="bma_bedrijfs_klanten_overzicht.php?bedrijfID=<?= $_SESSION["id"] ?>">
 																Annuleren
 															</a>
-															<?php
-                                                            } elseif ($_SESSION["status"] == "masseuse") { ?>
-															<button type="submit" name="saveMs" class="btn btn-light-grey mr-sm-2 mb-1">Opslaan</button>
-															<a class="btn btn-outline-light-grey mr-sm-2 mb-1-" href="masseuse_profiel.php?masseuseID=<?= $_SESSION["id"] ?>">
-																Annuleren
-															</a>
-															<?php
-                                                            }
-                                                            ?>
 														</div>
 													</div>
 												</form>
