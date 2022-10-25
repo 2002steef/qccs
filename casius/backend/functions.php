@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
 require_once "db.php";
 session_start();
@@ -268,11 +269,15 @@ function ToevoegenParticulier()
         global $mysqli;
         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
         $stmt = $mysqli->prepare($sql);
-        
-        if ($stmt->num_rows > 0 ) {
-        header("Location: overzicht.php");
-        exit();
-        }
+        $stmt->bind_param('s', $_POST["Parti_email"]);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0 ) {
+			header("Location: overzicht.php");
+			exit();
+        }else{
+            $stmt->close();
             $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
                     `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
                     VALUES
@@ -289,14 +294,9 @@ function ToevoegenParticulier()
                 ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
                 $_POST["Parti_notities"],$_POST["Parti_status"]);
             $stmt->execute();
-            $stmt->exit();
-            $mysqli->Close();
-        
-            }else 
-        {
-             header("Location:overzicht.php");
-             exit();
-        }
+            $stmt->close();
+		}
+	}
         header("Location:overzicht.php");
         exit();
 
