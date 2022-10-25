@@ -1,4 +1,7 @@
 <?php
+
+use Google\Service\CloudNaturalLanguage\Document;
+
 include "db.php";
 session_start();
 include "error.php";
@@ -635,10 +638,12 @@ function masseuseInfo()
                 </a>
                 <br>
                 <br>
-                <button type="button" class="btn btn-outline-light-grey" data-toggle="modal" data-target="#default">Maak afspraak</button>
+                <button type="button" onclick='changepopup(<?= $masseuse["masseuseID"] ?>)' class="btn btn-outline-light-grey" data-toggle="modal" data-target="#default">Maak afspraak</button>
             </td>
         </tr>
     <?php }
+
+    
 }
 function bedrijfsInfo()
 {
