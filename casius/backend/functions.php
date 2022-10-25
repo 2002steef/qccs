@@ -292,7 +292,7 @@ function ToevoegenParticulier()
                 ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
                 $_POST["Parti_notities"],$_POST["Parti_status"]);
             $stmt->execute();
-            $stmt->exit();
+            $stmt->close();
 		}
         header("Location:overzicht.php");
         exit();
