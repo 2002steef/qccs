@@ -133,7 +133,7 @@ if (!isset($_SESSION["loggedin"])) {
                     </div>
                     <div class="modal-footer">
                         <form action="" method="POST">
-                            <button type="submit" name="acceptTermsVoucher" class="btn btn-outline-light-grey" data-dismiss="modal">accepteer</button>
+                            <button type="submit" name="submit" value="submit" class="btn btn-outline-light-grey" data-dismiss="modal">accepteer</button>
                         </form>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ if (!isset($_SESSION["loggedin"])) {
             }
         </script>
 
-        <?php if(isset($_POST['acceptTermsVoucher'])){echo('<script>console.log("test")</script>');}; ?>
+        <?php if(isset($_POST['submit'])){echo('<script>console.log("test")</script>');}; ?>
         <!-- END POPUP MODAL -->
 
         <!-- END : End Main Content-->
