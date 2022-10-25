@@ -57,19 +57,19 @@ function InsertVoucher($voucher)
     }
 }
 
-$medewerkerID = $_SESSION["id"];
-$sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
-$stmt = $mysqli->prepare($sql);
-$stmt->execute();
-$email = $stmt->get_result();
-$voucher = createRandomVoucher();
-InsertVoucher($voucher);
-// if ($email) {
-    $to = $email;
-    $subject = "Voucher code";
-    $msg = "Uw voucher code is . $voucher ";
-    $msg = wordwrap($msg, 70);
-    $headers = "From: Admin@bma.nl";
-    mail('steefertjappie@gmail.com', $subject, $msg, $headers);
-    // header('location:index.php');
-// }
+    $medewerkerID = $_SESSION["id"];
+    $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->execute();
+    $email = $stmt->get_result();
+    $voucher = createRandomVoucher();
+    InsertVoucher($voucher);
+    if ($email) {
+        $to = $email;
+        $subject = "Voucher code";
+        $msg = "Uw voucher code is . $voucher ";
+        $msg = wordwrap($msg, 70);
+        $headers = "From: Admin@bma.nl";
+        mail($email, $subject, $msg, $headers);
+        // header('location:index.php');
+    }
