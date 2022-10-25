@@ -315,6 +315,7 @@ if (isset($_POST["ToevoegenZak"])) {
 			header("Location: overzicht.php");
 			exit();
         }else{
+            $stmt->close();
 			$sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`, `Email`,`Telefoonnummer`,`straat`,
                     `postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`, `bedrijfsnaam`)
                      VALUES
@@ -332,7 +333,6 @@ if (isset($_POST["ToevoegenZak"])) {
 				$_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
 			$stmt->execute();
 			$stmt->Close();
-			$mysqli->Close();
 		}
     }
     header("Location:overzicht.php");
