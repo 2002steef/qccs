@@ -117,7 +117,7 @@ if (!isset($_SESSION["loggedin"])) {
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title popupEdit" id="myModalLabel1">-masseusebedrijf-</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close btn btn-outline-light-grey" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
                     </div>
@@ -132,7 +132,7 @@ if (!isset($_SESSION["loggedin"])) {
                     </div>
                     <div class="modal-footer">
                         <form method="POST">
-                            <button type="submit" name="acceptTermsVoucher" class="btn bg-light-secondary" data-dismiss="modal">accepteer</button>
+                            <button type="button" name="acceptTermsVoucher" class="btn bg-light-secondary" data-dismiss="modal">accepteer</button>
                         </form>
                     </div>
                 </div>
