@@ -5,22 +5,10 @@ include "backend/functions.php";
 $user = $_SESSION['name'];
 $id = $_SESSION['id'];
 
-// Controleer of iemand ingelogd is
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
+
 // Changepassword();
 // Updateuser();
 // UploadPic1();
-
-$rowBd = GetBedrijf();
-$rowMs = GetMasseuse();
-$rowMw = Getuser();
-UploadPic();
-UploadBanner();
-UpdateProfielBedrijf();
-UpdateProfielMasseuse();
-
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
