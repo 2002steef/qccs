@@ -151,7 +151,7 @@ if (!isset($_SESSION["loggedin"])) {
             }
         </script>
 
-        <?php if(isset($_POST['acceptTermsVoucher'])){voucherGebruiken();}; ?>
+        <?php if(isset($_POST['acceptTermsVoucher'])){echo('<script>console.log("test")</script>');}; ?>
         <!-- END POPUP MODAL -->
 
         <!-- END : End Main Content-->
