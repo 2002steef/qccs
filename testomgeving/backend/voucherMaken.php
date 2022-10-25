@@ -58,8 +58,14 @@ function InsertVoucher($voucher)
 }
 
 if (isset($_POST['acceptTermsVoucher'])) {
+    $servername = "localhost";
+    $username = "relatietest";
+    $password = "Rb4x4y7*3";
+    $db = "test_relatiebeheer";
+    $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $medewerkerID = $_SESSION["id"];
-    $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
+    // $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
+    $sql = "SELECT email FROM medewerkers where userID = 3";
     $stmt = $mysqli->prepare($sql);
     $stmt->execute();
     $email = $stmt->get_result();
