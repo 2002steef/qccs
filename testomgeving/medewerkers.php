@@ -133,7 +133,7 @@ if (!isset($_SESSION["loggedin"])) {
                     </div>
                     <div class="modal-footer">
                         <form method="POST">
-                            <input type="submit" name="submit" value="submit" class="btn btn-outline-light-grey" data-dismiss="modal">accepteer</inp>
+                            <input type="submit" name="submit" value="accepteren" class="btn btn-outline-light-grey" data-dismiss="modal"></input>
                         </form>
                     </div>
                 </div>
