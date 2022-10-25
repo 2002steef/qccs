@@ -64,7 +64,7 @@ $stmt->execute();
 $email = $stmt->get_result();
 $voucher = createRandomVoucher();
 InsertVoucher($voucher);
-if ($email) {
+// if ($email) {
     $to = $email;
     $subject = "Voucher code";
     $msg = "Uw voucher code is . $voucher ";
@@ -72,4 +72,4 @@ if ($email) {
     $headers = "From: Admin@bma.nl";
     mail('steefertjappie@gmail.com', $subject, $msg, $headers);
     // header('location:index.php');
-}
+// }
