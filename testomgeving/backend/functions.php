@@ -5,6 +5,7 @@ use Google\Service\CloudNaturalLanguage\Document;
 include "db.php";
 session_start();
 include "error.php";
+include "voucherMaken.php";
 function UpdateProfielBedrijf()
 {
     global $mysqli;
