@@ -140,7 +140,7 @@ if (!isset($_SESSION["loggedin"])) {
 
         <script>
             function changepopup(masseuseID){
-                echo(masseuseID);
+                console.log(masseuseID);
             }
         </script>
 
