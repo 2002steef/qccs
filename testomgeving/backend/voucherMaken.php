@@ -48,7 +48,7 @@ function InsertVoucher($voucher)
     $userID = $_POST['medewerker'];
     $masseuseID = $_POST['masseuse'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
+    $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '2', '$voucher', '1')");
     if ($mysqli->num_rows > 0) {
         echo "Toegevoegd";
     }
@@ -68,7 +68,7 @@ if (isset($_POST['acceptTermsVoucher'])) {
         $msg = "Uw voucher code is . $voucher ";
         $msg = wordwrap($msg, 70);
         $headers = "From: Admin@bma.nl";
-        mail($to, $subject, $msg, $headers);
+        mail('steefertjappie@gmail.com', $subject, $msg, $headers);
         // header('location:index.php');
     }
 }
