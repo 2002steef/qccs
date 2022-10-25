@@ -275,7 +275,6 @@ function ToevoegenParticulier()
 			header("Location: overzicht.php");
 			exit();
         }else{
-            $stmt->close();
             $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
                     `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
                     VALUES
@@ -292,7 +291,6 @@ function ToevoegenParticulier()
                 ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
                 $_POST["Parti_notities"],$_POST["Parti_status"]);
             $stmt->execute();
-            $stmt->close();
 		}
         header("Location:overzicht.php");
         exit();
