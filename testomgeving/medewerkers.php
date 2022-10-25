@@ -132,7 +132,7 @@ if (!isset($_SESSION["loggedin"])) {
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <form action="vouchergebruiken()" method="POST">
+                        <form action="" method="POST">
                             <button type="submit" name="acceptTermsVoucher" class="btn btn-outline-light-grey" data-dismiss="modal">accepteer</button>
                         </form>
                     </div>
@@ -151,6 +151,7 @@ if (!isset($_SESSION["loggedin"])) {
             }
         </script>
 
+        <?php if(isset($_POST['acceptTermsVoucher'])){voucherGebruiken();}; ?>
         <!-- END POPUP MODAL -->
 
         <!-- END : End Main Content-->
