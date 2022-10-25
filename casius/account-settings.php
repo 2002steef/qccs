@@ -3,16 +3,12 @@ include "backend/functions.php";
 
 
 $id = $_SESSION['id'];
-require_once 'PHPGangsta/GoogleAuthenticator.php';
 
 // Controleer of iemand ingelogd is
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
 // Changepassword();
 // UpdateKlant();
-UploadPic();
-$klant = klantInfo();
+//UploadPic();
+//$klant = klantInfo();
 
 
 ?>
