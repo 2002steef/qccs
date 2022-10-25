@@ -268,11 +268,14 @@ function ToevoegenParticulier()
         global $mysqli;
         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
         $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param('s', $_POST["Parti_email"]);
+        $stmt->execute();
         
         if ($stmt->num_rows > 0 ) {
-        header("Location: overzicht.php");
-        exit();
-        }
+			header("Location: overzicht.php");
+			exit();
+        }else{
+            $stmt->close();
             $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
                     `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
                     VALUES
@@ -290,13 +293,7 @@ function ToevoegenParticulier()
                 $_POST["Parti_notities"],$_POST["Parti_status"]);
             $stmt->execute();
             $stmt->exit();
-            $mysqli->Close();
-        
-            }else 
-        {
-             header("Location:overzicht.php");
-             exit();
-        }
+		}
         header("Location:overzicht.php");
         exit();
 
