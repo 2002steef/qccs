@@ -292,6 +292,7 @@ function ToevoegenParticulier()
                 $_POST["Parti_notities"],$_POST["Parti_status"]);
             $stmt->execute();
 		}
+	}
         header("Location:overzicht.php");
         exit();
 
