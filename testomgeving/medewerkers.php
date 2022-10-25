@@ -157,6 +157,6 @@ if (!isset($_SESSION["loggedin"])) {
     <script src="assets/js/tabel-scroll.js">
     </script>
     <script src="assets/js/postcode-api.js"></script>
-    <script src="app-assets/js/components-modal.min.js"></script>
+    <script src="assets/js/components-modal.min.js"></script>
 </body>
 <!-- END : Body-->
