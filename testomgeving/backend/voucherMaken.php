@@ -16,32 +16,6 @@ function createRandomVoucher(
     return implode('', $pieces);
 }
 
-function GetMasseuseInfo()
-{
-    global $mysqli;
-    $sql = "SELECT * FROM masseuses";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    while ($rowMs = $result->fetch_array()) { ?>
-        <option value="<?= $rowMs["masseuseID"] ?>"><?= $rowMs["voornaam"] ?></option>
-    <?php
-    }
-}
-function GetUserInfo()
-{
-    global $mysqli;
-    $sql = "SELECT * FROM medewerkers where userID";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    while ($rowMd = $result->fetch_array()) { ?>
-        <option value="<?= $rowMd["userID"] ?>"><?= $rowMd["voornaam"] ?></option>
-<?php
-    }
-}
-
-
 function InsertVoucher($voucher)
 {
     $servername = "localhost";
