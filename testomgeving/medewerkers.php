@@ -131,21 +131,22 @@ if (!isset($_SESSION["loggedin"])) {
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">accepteer</button>
-
+                        <form method="POST">
+                            <button type="submit" name="acceptTermsVoucher" class="btn bg-light-secondary" data-dismiss="modal">accepteer</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
 
         <script>
-            function changepopup(bedrijfNaam){
+            function changepopup(bedrijfNaam) {
                 // console.log(masseuseID);
                 let Replace = bedrijfNaam;
-                document.getElementsByClassName("popupEdit")[0].innerHTML=Replace;
-                document.getElementsByClassName("popupEdit")[1].innerHTML=Replace;
-                document.getElementsByClassName("popupEdit")[2].innerHTML=Replace;
-                document.getElementsByClassName("popupEdit")[3].innerHTML=Replace;
+                document.getElementsByClassName("popupEdit")[0].innerHTML = Replace;
+                document.getElementsByClassName("popupEdit")[1].innerHTML = Replace;
+                document.getElementsByClassName("popupEdit")[2].innerHTML = Replace;
+                document.getElementsByClassName("popupEdit")[3].innerHTML = Replace;
             }
         </script>
 
