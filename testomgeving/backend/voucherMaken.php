@@ -1,5 +1,6 @@
 <?php
 include "db.php";
+include "backend/voucherMaken.php";
 
 function createRandomVoucher(
     int $length = 10,
