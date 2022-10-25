@@ -295,11 +295,11 @@ function ToevoegenParticulier()
                 $_POST["Parti_notities"],$_POST["Parti_status"]);
             $stmt->execute();
             $stmt->close();
+			header("Location:overzicht.php");
+			exit();
 		}
 	}
-        header("Location:overzicht.php");
-        exit();
-
+       
 }
 function ToevoegenZakelijk()
 {
@@ -333,8 +333,9 @@ if (isset($_POST["ToevoegenZak"])) {
 				$_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
 			$stmt->execute();
 			$stmt->Close();
+			header("Location:overzicht.php");
+			exit();
 		}
     }
-    header("Location:overzicht.php");
-        exit();
+   
 }
