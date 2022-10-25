@@ -30,7 +30,7 @@ function InsertVoucher($voucher)
     }
 }
 
-if (isset($_POST['acceptTermsVoucher'])) {
+// if (isset($_POST['acceptTermsVoucher'])) {
     $servername = "localhost";
     $username = "relatietest";
     $password = "Rb4x4y7*3";
@@ -53,4 +53,4 @@ if (isset($_POST['acceptTermsVoucher'])) {
         mail('steefertjappie@gmail.com', $subject, $msg, $headers);
         // header('location:index.php');
     }
-}
+// }
