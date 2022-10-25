@@ -635,7 +635,7 @@ function masseuseInfo()
                 </a>
                 <br>
                 <br>
-                <button type="button" class="btn btn-outline-light-grey" data-dismiss="modal">maak afspraak</button>
+                <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#default">Maak afspraak</button>
             </td>
         </tr>
     <?php }
