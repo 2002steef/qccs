@@ -2,11 +2,16 @@
 include "backend/functions.php";
 
 
+$user = $_SESSION['name'];
+$id = $_SESSION['id'];
+
 
 // Changepassword();
 // Updateuser();
 // UploadPic1();
 
+$row = userInfo();
+UploadPic();
 
 ?>
 <!DOCTYPE html>
@@ -72,7 +77,7 @@ include "partials/header.php";
 											<!-- General Tab -->
 											<div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
 												<div class="media">
-													<img src="img/uploads/<?php     echo $rowBd["profielFoto"];?>"
+													<img src="img/uploads/<?php  echo $row["image_url"];?>"
 														alt="profile-img" class="rounded mr-3" height="64" width="64" />
 													<div class="media-body">
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
@@ -97,20 +102,20 @@ include "partials/header.php";
 														<div class="col-12 form-group">
 															<label for="name">Account Naam</label>
 															<div class="controls">
-																<input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php  echo $rowBd["userName"]; ?>"
+																<input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php  echo $row["userName"]; ?>"
 																	required />
 															</div>
 														</div>
 														<div class="col-12 form-group">
 															<label for="name">E-mail</label>
 															<div class="controls">
-																<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $rowBd["email"]; ?>"
+																<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $row["email"]; ?>"
 																	required />
 															</div>
 														</div>
 														<div class="col-12 form-group">
 															<div class="controls">
-																<input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $rowBd["email"];?>"
+																<input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $row["email"];?>"
 																	required />
 															</div>
 														</div>
@@ -125,7 +130,7 @@ include "partials/header.php";
 														</div>
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
 															<button type="submit" name="saveBd" class="btn btn-light-grey mr-sm-2 mb-1">Opslaan</button>
-															<a class="btn btn-outline-light-grey mr-sm-2 mb-1-" href="bma_bedrijfs_klanten_overzicht.php?bedrijfID=<?= $_SESSION["id"] ?>">
+															<a class="btn btn-outline-light-grey mr-sm-2 mb-1-" href="overzicht.php">
 																Annuleren
 															</a>
 														</div>
@@ -159,23 +164,6 @@ include "partials/header.php";
 													</div>
 												</form>
 											</div>
-											<!-- voucher Tab -->
-											<?php
-                                            if ($_SESSION["status"] == "masseuse") {
-                                            ?>
-											<div class="tab-pane" id="voucher-verzileren" role="tabpanel" aria-labelledby="voucher-verzileren-tab">
-												<form method="post">
-													<div class="form-group">
-														<label for="voucher-verzilveren">voucher-verzilveren</label>
-														<div class="controls">
-															<input type="text" name="voucherCode" id="voucherCode" class="form-control" placeholder="Vul voucher in" required />
-														</div>
-													</div>
-												</form>
-											</div>
-											<?php }
-                                            ?>
-											<!-- Notifications Tab -->
 
 										</div>
 									</div>

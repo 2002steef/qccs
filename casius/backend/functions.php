@@ -9,12 +9,22 @@ function klantInfo()
     global $mysqli;
     $sql = "SELECT * FROM klanten where klant_ID = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('i', $_GET['userID']);
+    $stmt->bind_param('i', $_GET['klant_ID']);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
 }
 
+function userInfo()
+{
+    global $mysqli;
+    $sql = "SELECT * FROM `login` where user_ID = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('i', $_GET['userID']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+}
 function PartklantInfoTabel()
 {
     global $mysqli;
@@ -337,5 +347,4 @@ if (isset($_POST["ToevoegenZak"])) {
 			exit();
 		}
     }
-   
 }
