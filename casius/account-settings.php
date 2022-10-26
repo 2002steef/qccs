@@ -122,7 +122,7 @@ include "partials/header.php";
                                                             ?>
 														</div>
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-															<button type="submit" name="saveBd" class="btn btn-light-gray mr-sm-2 mb-1">Opslaan</button>
+															<button type="submit" name="saveBd" class="btn btn-outline-light-gray mr-sm-2 mb-1">Opslaan</button>
 															<a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="overzicht.php">
 																Annuleren
 															</a>
