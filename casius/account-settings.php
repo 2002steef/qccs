@@ -70,7 +70,7 @@ include "partials/header.php";
 											<!-- General Tab -->
 											<div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
 												<div class="media">
-													<img src="app-assets/img/uploads/<?php  echo $row["image_url"];?>"
+													<img src="app-assets/img/uploads/<?= $row["image_url"];?>"
 														alt="profile-img" class="rounded mr-3" height="64" width="64" />
 													<div class="media-body">
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
