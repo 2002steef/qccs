@@ -102,20 +102,20 @@ include "partials/header.php";
 														<div class="col-12 form-group">
 															<label for="name">Account Naam</label>
 															<div class="controls">
-																<input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php  echo $row["userName"]; ?>"
+																<input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?= $row["userName"]; ?>"
 																	required />
 															</div>
 														</div>
 														<div class="col-12 form-group">
 															<label for="name">E-mail</label>
 															<div class="controls">
-																<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $row["email"]; ?>"
+																<input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?= $row["email"]; ?>"
 																	required />
 															</div>
 														</div>
 														<div class="col-12 form-group">
 															<div class="controls">
-																<input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $row["email"];?>"
+																<input type="hidden" id="email" name="email" class="form-control" placeholder="E-mail" value="<?= $row["email"];?>"
 																	required />
 															</div>
 														</div>
