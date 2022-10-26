@@ -2,16 +2,11 @@
 include "backend/functions.php";
 
 
-$user = $_SESSION['name'];
-$id = $_SESSION['id'];
-
 
 // Changepassword();
 // Updateuser();
 // UploadPic1();
 
-$rowMw = Getuser();
-UploadPic();
 
 ?>
 <!DOCTYPE html>
