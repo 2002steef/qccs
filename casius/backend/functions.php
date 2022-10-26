@@ -25,6 +25,17 @@ function userInfo()
     $result = $stmt->get_result();
     return $result->fetch_array();
 }
+function UpdateUser()
+{
+    if(isset($_POST["btnUserUpdate"])){
+		global $mysqli;
+
+		$sql = "UPDATE `login` SET userName = ?, email = ? WHERE user_ID = ?";
+		$stmt = $mysqli->prepare($sql);
+		$stmt->bind_param('ssi',$_POST["name"],$_POST["email"], $_GET['user_ID']);
+		$stmt->execute();
+	}
+}
 function PartklantInfoTabel()
 {
     global $mysqli;
