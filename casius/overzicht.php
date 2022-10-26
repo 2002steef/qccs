@@ -193,7 +193,7 @@ klantInfo();
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
                     </div>
-                <form method="POST">
+                <form method="POST" action="overzicht.php">
                     <div class="modal-body">
                         <section class="users-edit">
                             <div class="row">
