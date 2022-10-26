@@ -90,7 +90,7 @@ include "partials/header.php";
 													</div>
 												</div>
 												<hr class="mt-1 mt-sm-2" />
-												<form method="post" action="account-settings.php">
+												<form method="post" action="account-settings.php?user_ID=<?php echo $_SESSION["id"] ?> ">
 													<div class="row">
 														<div class="col-12 form-group">
 															<label for="name">Account Naam</label>
