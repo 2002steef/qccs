@@ -122,8 +122,8 @@ include "partials/header.php";
                                                             ?>
 														</div>
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-															<button type="submit" name="saveBd" class="btn btn-light-grey mr-sm-2 mb-1">Opslaan</button>
-															<a class="btn btn-outline-light-grey mr-sm-2 mb-1-" href="overzicht.php">
+															<button type="submit" name="saveBd" class="btn btn-light-gray mr-sm-2 mb-1">Opslaan</button>
+															<a class="btn btn-outline-light-gray mr-sm-2 mb-1-" href="overzicht.php">
 																Annuleren
 															</a>
 														</div>
@@ -152,8 +152,8 @@ include "partials/header.php";
 														</div>
 													</div>
 													<div class="d-flex flex-sm-row flex-column justify-content-end">
-														<button name="save_password" type="submit" class="btn btn-outline-light-grey mr-sm-2 mb-1">Save Changes</button>
-														<button type="reset" class="btn btn-outline-light-grey mb-1">Cancel</button>
+														<button name="save_password" type="submit" class="btn btn-outline-light-gray mr-sm-2 mb-1">Save Changes</button>
+														<button type="reset" class="btn btn-outline-light-gray mb-1">Cancel</button>
 													</div>
 												</form>
 											</div>
