@@ -18,9 +18,8 @@ function klantInfo()
 function userInfo()
 {
     global $mysqli;
-    $sql = "SELECT * FROM `login` where user_ID = ?";
+    $sql = "SELECT * FROM `login`";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('i', $_GET['user_ID']);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
