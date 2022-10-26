@@ -255,12 +255,12 @@ function UploadPic()
                     $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
                     $img_upload_path = 'app-assets/img/uploads/' . $new_img_name;
                     move_uploaded_file($tmp_name, $img_upload_path);
-
+                    $id = $_SESSION['id'];
                     // Insert into Database
                     $sql_pic = "UPDATE `login` SET `image_url` = ? WHERE id = ?";
                     $stmt = $mysqli->prepare($sql_pic);
                     $stmt->bind_param(
-                        "si", $new_img_name, $_SESSION['id']
+                        "si", $new_img_name,$id 
                     );
                     $stmt->execute();
                     header("Location: account-settings.php");
