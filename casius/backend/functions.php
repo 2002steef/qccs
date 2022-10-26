@@ -244,7 +244,7 @@ function UploadPic()
         if ($error === 0) {
             if ($img_size > 1250000) {
                 $em = "Sorry, your file is too large.";
-                header("Location: account-settings.php.php?error=$em");
+                header("Location: account-settings.php.php?user_ID=$id&error=$em");
             } else {
                 $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
                 $img_ex_lc = strtolower($img_ex);
@@ -263,10 +263,10 @@ function UploadPic()
                         "si", $new_img_name,$id 
                     );
                     $stmt->execute();
-                    header("Location: account-settings.php");
+                    header("Location: account-settings.php?user_ID=$id");
                 } else {
                     $em = "You can't upload files of this type";
-                    header("Location: account-settings.php.php?error=$em");
+                    header("Location: account-settings.php.php?user_ID=$id&error=$em");
                 }
             }
         }
