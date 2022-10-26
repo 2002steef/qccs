@@ -74,7 +74,7 @@ include "partials/header.php";
 														alt="profile-img" class="rounded mr-3" height="64" width="64" />
 													<div class="media-body">
 														<div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
-															<form action="page-account-settings.php" method="post" enctype="multipart/form-data">
+															<form action="account-settings.php" method="post" enctype="multipart/form-data">
 																<input type="file" name="my_image" type="button" class="btn btn-sm btn-primary mb-1 mb-sm-0" />
 																<input type="submit" class="btn btn-sm btn-primary mb-1 mb-sm-0" name="submitpic" value="Upload" />
 															</form>
@@ -90,7 +90,7 @@ include "partials/header.php";
 													</div>
 												</div>
 												<hr class="mt-1 mt-sm-2" />
-												<form method="post" action="page-account-settings.php">
+												<form method="post" action="account-settings.php">
 													<div class="row">
 														<div class="col-12 form-group">
 															<label for="name">Account Naam</label>
