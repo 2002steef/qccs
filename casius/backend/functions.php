@@ -257,7 +257,7 @@ function UploadPic()
                     move_uploaded_file($tmp_name, $img_upload_path);
                     $id = $_SESSION['id'];
                     // Insert into Database
-                    $sql_pic = "UPDATE `login` SET `image_url` = ? WHERE id = ?";
+                    $sql_pic = "UPDATE `login` SET `image_url` = ? WHERE user_ID = ?";
                     $stmt = $mysqli->prepare($sql_pic);
                     $stmt->bind_param(
                         "si", $new_img_name,$id 
