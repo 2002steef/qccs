@@ -1,7 +1,3 @@
-<!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
-
-<!DOCTYPE html>
-<html class="loading" lang="en">
 <!-- BEGIN : Head-->
 <?php
 include "header.php";

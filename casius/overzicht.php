@@ -2,7 +2,6 @@
 <?php
 include "backend/functions.php";
 klantModal();
-
 klantInfo();
 
     include "partials/header.php";
