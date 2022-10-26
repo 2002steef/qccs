@@ -45,7 +45,7 @@ include "header.php";
 
                             </a>
 
-                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
+                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
                                     <div class="d-flex align-items-center"><i class="ft-edit mr-2 text-light-gray"></i><span>Profiel settings</span></div>
                                 </a>
                                 <div class="dropdown-divider"></div>
