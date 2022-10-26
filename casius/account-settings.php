@@ -12,6 +12,7 @@ $id = $_SESSION['id'];
 
 $row = userInfo();
 UploadPic();
+UpdateUser();
 
 ?>
 <!DOCTYPE html>
