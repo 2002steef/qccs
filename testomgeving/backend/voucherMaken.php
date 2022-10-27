@@ -35,10 +35,11 @@
         $medewerkerID = $_SESSION["id"];
         $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
         global $mysqli;
-        $email = $mysqli->query($sql);
-        $emailReturn = $email->fetch_assoc();
-        $emailReturn = $emailReturn['email'];
-        return $emailReturn;
+        $result = $mysqli->query($sql);
+        $row = $result -> fetch_assoc();
+        printf ("%s\n", $row["email"]);
+        $result -> free_result();
+        return $result;
     }
 
 
