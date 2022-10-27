@@ -32,8 +32,8 @@ function InsertVoucher($voucher)
 
 function getEmail()
 {
-    function mysqli_resultFixer($result, $row, $field=0) {
-        $result->data_seek($row);
+    function mysqli_resultFixer($result, $field=0) {
+        $result->data_seek(0);
         $datarow = $result->fetch_array();
         return $datarow[$field];
     }
