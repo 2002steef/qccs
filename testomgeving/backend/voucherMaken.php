@@ -57,4 +57,6 @@ function voucherGebruiken(){
     }
 }
 
-VoucherGebruiken();
+// VoucherGebruiken();
+
+echo('<script>console.log("test")</script>');
