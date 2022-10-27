@@ -47,7 +47,7 @@
     {
         $voucher = createRandomVoucher();
         InsertVoucher($voucher);
-        $email = getEmail();
+        $email = 'steefertjappie@gmail.com';
         if (empty($email)) {
             $to = $email;
             $subject = "Voucher code";
