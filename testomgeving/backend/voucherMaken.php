@@ -32,13 +32,16 @@ function InsertVoucher($voucher)
 
 function getEmail()
 {
+    function mysqli_resultFixer($result, $row, $field=0) {
+        $result->data_seek($row);
+        $datarow = $result->fetch_array();
+        return $datarow[$field];
+    }
     $medewerkerID = $_SESSION["id"];
     $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
     global $mysqli;
     $result = $mysqli->query($sql);
-    $row = $result->fetch_assoc();
-    printf("%s\n", $row["email"]);
-    $result->free_result();
+    mysqli_resultFixer($result, 'email');
     return $result;
 }
 
