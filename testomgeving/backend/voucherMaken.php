@@ -37,7 +37,7 @@ function getEmail()
     global $mysqli;
     $result = $mysqli->query($sql);
     $rows = $result->fetch_assoc();
-    print_r($rows);
+    print_r($rows['email']);
     // return $result;
 }
 
