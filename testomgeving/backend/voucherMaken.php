@@ -1,6 +1,5 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     function createRandomVoucher(
         int $length = 10,
@@ -61,7 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // VoucherGebruiken();
+    VoucherGebruiken();
 
-    mail('steefertjappie@gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl');
-}
+    // mail('steefertjappie@gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl');
