@@ -1,5 +1,5 @@
 <?php
-    include("functions.php");
+    // include("functions.php");
 
     function createRandomVoucher(
         int $length = 10,
@@ -24,7 +24,7 @@
         $db = "test_relatiebeheer";
         $userID = $_SESSION["id"];
         $masseuseID = $_POST['modalMasseuseID'];
-        // $mysqli = new mysqli("$servername", "$username", "$password", "$db");
+        $mysqli = new mysqli("$servername", "$username", "$password", "$db");
         $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
     }
 
