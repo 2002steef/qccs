@@ -132,8 +132,8 @@ if (!isset($_SESSION["loggedin"])) {
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <form method="POST">
-                            <input type="submit" name="submit" value="accepteren" class="btn btn-outline-light-grey" data-dismiss="modal"></input>
+                        <form action="backend/voucherMaken.php" method="POST">
+                            <button type="submit" name="acceptTermsVoucher" class="btn btn-outline-light-grey" data-dismiss="modal">accepteer</button>
                         </form>
                     </div>
                 </div>
@@ -151,7 +151,6 @@ if (!isset($_SESSION["loggedin"])) {
             }
         </script>
 
-        <?php if(isset($_POST['submit'])){echo('<script>console.log("test")</script>');}; ?>
         <!-- END POPUP MODAL -->
 
         <!-- END : End Main Content-->

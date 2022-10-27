@@ -56,3 +56,5 @@ function voucherGebruiken(){
         mail($to, $subject, $msg, $headers);
     }
 }
+
+VoucherGebruiken();
