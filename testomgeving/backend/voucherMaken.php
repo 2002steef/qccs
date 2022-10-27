@@ -37,7 +37,7 @@ function getEmail()
     global $mysqli;
     $result = $mysqli->query($sql);
     $rows = $result->fetch_assoc();
-    print_r($rows['email']);
+    return($rows['email']);
     // return $result;
 }
 
@@ -52,7 +52,7 @@ function voucherGebruiken()
     $msg = "Uw voucher code is . $voucher ";
     $msg = wordwrap($msg, 70);
     $headers = "From: Admin@bma.nl";
-    // mail($to, $subject, $msg, $headers);
+    mail($to, $subject, $msg, $headers);
     header("location: ../voucherGebruikt.php");
 }
 
