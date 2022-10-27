@@ -55,7 +55,7 @@
             $headers = "From: Admin@bma.nl";
             mail($to, $subject, $msg, $headers);
         } else {
-            header($_SERVER['HTTP_REFERER'].'?noMail');
+            header("../voucherGebruikt.php?errorTest");
             
         }
 
