@@ -36,7 +36,8 @@ function getEmail()
     $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
     global $mysqli;
     $result = $mysqli->query($sql);
-    print_r($result[0]);
+    $rows = $result->fetch_assoc();
+    print_r($rows);
     // return $result;
 }
 
