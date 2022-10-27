@@ -133,7 +133,7 @@ if (!isset($_SESSION["loggedin"])) {
                     </div>
                     <div class="modal-footer">
                         <form action="backend/voucherMaken.php" method="post">
-                            <input type="number" name="masseuseID" value="" id="modalMasseuseID">
+                            <input type="number" name="modalMasseuseID" value="" id="modalMasseuseID">
                             <button type="submit" name="acceptTermsVoucher" class="btn btn-outline-light-grey">accepteer</button>
                         </form>
                     </div>
