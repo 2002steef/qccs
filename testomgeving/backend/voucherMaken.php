@@ -47,7 +47,7 @@ function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    $email = 'steefertjappie@gmail.com';
+    $email = getEmail();
 
     $to = $email;
     $subject = "Voucher code";
@@ -55,7 +55,6 @@ function voucherGebruiken()
     $msg = wordwrap($msg, 70);
     $headers = "From: Admin@bma.nl";
     mail($to, $subject, $msg, $headers);
-
     header("location: ../voucherGebruikt.php");
 }
 
