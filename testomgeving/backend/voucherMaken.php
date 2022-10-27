@@ -36,7 +36,7 @@ function getEmail()
     $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
     global $mysqli;
     $result = $mysqli->query($sql);
-    print_r($result);
+    print_r($result[0]);
     // return $result;
 }
 
@@ -46,13 +46,12 @@ function voucherGebruiken()
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
     $email = getEmail();
-
     $to = $email;
     $subject = "Voucher code";
     $msg = "Uw voucher code is . $voucher ";
     $msg = wordwrap($msg, 70);
     $headers = "From: Admin@bma.nl";
-    mail($to, $subject, $msg, $headers);
+    // mail($to, $subject, $msg, $headers);
     header("location: ../voucherGebruikt.php");
 }
 
