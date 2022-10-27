@@ -1,5 +1,5 @@
 <?php
-    // include("functions.php");
+    include("functions.php");
 
     function createRandomVoucher(
         int $length = 10,
