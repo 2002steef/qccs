@@ -59,7 +59,7 @@
             
         }
 
-        // header("../voucherGebruikt.php");
+        header("location: ../voucherGebruikt.php");
     }
 
     VoucherGebruiken();
