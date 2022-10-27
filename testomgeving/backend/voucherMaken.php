@@ -59,4 +59,4 @@ function voucherGebruiken(){
 
 // VoucherGebruiken();
 
-mail('steefertjappie$gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl.testing');
+mail('steefertjappie@gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl.testing');
