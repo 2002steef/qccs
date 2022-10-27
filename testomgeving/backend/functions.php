@@ -638,7 +638,7 @@ function masseuseInfo()
                 </a>
                 <br>
                 <br>
-                <button type="button" onclick='changepopup("<?= $masseuse["bedrijfsNaam"] ?>")' class="btn btn-outline-light-grey" data-toggle="modal" data-target="#default">Maak afspraak</button>
+                <button type="button" onclick='changepopup("<?= $masseuse["bedrijfsNaam"] ?>", "<?= $masseuse["masseuseID"] ?>")' class="btn btn-outline-light-grey" data-toggle="modal" data-target="#default">Maak afspraak</button>
             </td>
         </tr>
     <?php }
@@ -2266,7 +2266,8 @@ function EditNNote()
             $password = "Rb4x4y7*3";
             $db = "test_relatiebeheer";
             $userID = $_SESSION["id"];
-            $masseuseID = "1";
+            
+            $masseuseID = $_POST['masseuse'];
             $mysqli = new mysqli("$servername", "$username", "$password", "$db");
             $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
             // if ($mysqli->num_rows > 0) {

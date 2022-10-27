@@ -45,3 +45,7 @@
 .noMargin {
     margin: 0;
 }
+
+#modalMasseuseID {
+    display: hidden;
+}

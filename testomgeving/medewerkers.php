@@ -133,6 +133,7 @@ if (!isset($_SESSION["loggedin"])) {
                     </div>
                     <div class="modal-footer">
                         <form action="backend/voucherMaken.php" method="post">
+                            <input type="number" name="masseuseID" value="" id="modalMasseuseID">
                             <button type="submit" name="acceptTermsVoucher" class="btn btn-outline-light-grey">accepteer</button>
                         </form>
                     </div>
@@ -141,13 +142,14 @@ if (!isset($_SESSION["loggedin"])) {
         </div>
 
         <script>
-            function changepopup(bedrijfNaam) {
+            function changepopup(bedrijfNaam, masseuseID) {
                 // console.log(masseuseID);
                 let Replace = bedrijfNaam;
                 document.getElementsByClassName("popupEdit")[0].innerHTML = Replace;
                 document.getElementsByClassName("popupEdit")[1].innerHTML = Replace;
                 document.getElementsByClassName("popupEdit")[2].innerHTML = Replace;
                 document.getElementsByClassName("popupEdit")[3].innerHTML = Replace;
+                document.getElementById('modalMasseuseID').value = masseuseID;
             }
         </script>
 
