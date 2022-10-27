@@ -55,11 +55,11 @@
             $headers = "From: Admin@bma.nl";
             mail($to, $subject, $msg, $headers);
         } else {
-            header("../voucherGebruikt.php?errorTest");
+            // header("../voucherGebruikt.php?errorTest");
             
         }
 
-        header("../voucherGebruikt.php");
+        // header("../voucherGebruikt.php");
     }
 
     VoucherGebruiken();
