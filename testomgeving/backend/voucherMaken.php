@@ -1,35 +1,32 @@
 <?php
+    include("functions.php");
 
+    // function createRandomVoucher(
+    //     int $length = 10,
+    //     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    // ): string {
+    //     if ($length < 1) {
+    //         throw new \RangeException("Length must be a positive integer");
+    //     }
+    //     $pieces = [];
+    //     $max = mb_strlen($keyspace, '8bit') - 1;
+    //     for ($i = 0; $i < $length; ++$i) {
+    //         $pieces[] = $keyspace[random_int(0, $max)];
+    //     }
+    //     return implode('', $pieces);
+    // }
 
-    function createRandomVoucher(
-        int $length = 10,
-        string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    ): string {
-        if ($length < 1) {
-            throw new \RangeException("Length must be a positive integer");
-        }
-        $pieces = [];
-        $max = mb_strlen($keyspace, '8bit') - 1;
-        for ($i = 0; $i < $length; ++$i) {
-            $pieces[] = $keyspace[random_int(0, $max)];
-        }
-        return implode('', $pieces);
-    }
-
-    function InsertVoucher($voucher)
-    {
-        $servername = "localhost";
-        $username = "relatietest";
-        $password = "Rb4x4y7*3";
-        $db = "test_relatiebeheer";
-        $userID = "3";
-        $masseuseID = "1";
-        $mysqli = new mysqli("$servername", "$username", "$password", "$db");
-        $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
-        // if ($mysqli->num_rows > 0) {
-        //     echo ('<script>console.log("toegevoegd")</script>');
-        // }
-    }
+    // function InsertVoucher($voucher)
+    // {
+    //     $servername = "localhost";
+    //     $username = "relatietest";
+    //     $password = "Rb4x4y7*3";
+    //     $db = "test_relatiebeheer";
+    //     $userID = "3";
+    //     $masseuseID = "1";
+    //     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
+    //     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
+    // }
 
     function getEmail()
     {
