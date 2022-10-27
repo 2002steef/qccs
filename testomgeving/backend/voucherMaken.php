@@ -52,12 +52,13 @@ function voucherGebruiken()
     $msg = "Uw voucher code is . $voucher ";
     $msg = wordwrap($msg, 70);
     $headers = "From: Admin@bma.nl";
-    mail($to, $subject, $msg, $headers);
-    header("location: ../voucherGebruikt.php");
+    echo($to. " " .$subject. " " . $msg. " " . $headers);
+    // mail($to, $subject, $msg, $headers);
+    // header("location: ../voucherGebruikt.php");
 }
 
 // VoucherGebruiken();
 
-getEmail();
+// getEmail();
 
     // mail('steefertjappie@gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl');
