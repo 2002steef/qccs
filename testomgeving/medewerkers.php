@@ -6,6 +6,10 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 
+if (isset($_GET['noMail'])) {
+
+}
+
 // Sendmail();
 // InsertCustomerIndividual();
 // UpdateCompanyInfo();
