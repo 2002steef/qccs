@@ -33,12 +33,8 @@
         $medewerkerID = $_SESSION["id"];
         $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
         global $mysqli;
-        $stmt = $mysqli->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        while ($rowMd = $result->fetch_array()) {
-            return ($rowMd['email']);
-        }
+        $email = $mysqli->query($sql)->fetch_object()->email;
+        return $email;
     }
 
 
