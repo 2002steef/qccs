@@ -45,16 +45,16 @@ function getEmail()
 function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
-    // InsertVoucher($voucher);
+    InsertVoucher($voucher);
     $email = getEmail();
     $to = $email;
     $subject = "Voucher code";
     $msg = "Uw voucher code is . $voucher ";
     $msg = wordwrap($msg, 70);
     $headers = "From: Admin@bma.nl";
-    echo($to. " " .$subject. " " . $msg. " " . $headers);
-    // mail($to, $subject, $msg, $headers);
-    // header("location: ../voucherGebruikt.php");
+    // echo($to. " " .$subject. " " . $msg. " " . $headers);
+    mail($to, $subject, $msg, $headers);
+    header("location: ../voucherGebruikt.php");
 }
 
 VoucherGebruiken();
