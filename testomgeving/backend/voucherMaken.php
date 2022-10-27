@@ -45,7 +45,7 @@ function getEmail()
 function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
-    InsertVoucher($voucher);
+    // InsertVoucher($voucher);
     $email = getEmail();
     $to = $email;
     $subject = "Voucher code";
@@ -57,7 +57,7 @@ function voucherGebruiken()
     // header("location: ../voucherGebruikt.php");
 }
 
-// VoucherGebruiken();
+VoucherGebruiken();
 
 // getEmail();
 
