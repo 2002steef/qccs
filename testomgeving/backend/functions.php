@@ -2265,7 +2265,7 @@ function EditNNote()
             $username = "relatietest";
             $password = "Rb4x4y7*3";
             $db = "test_relatiebeheer";
-            $userID = "3";
+            $userID = $_SESSION["id"];
             $masseuseID = "1";
             $mysqli = new mysqli("$servername", "$username", "$password", "$db");
             $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
