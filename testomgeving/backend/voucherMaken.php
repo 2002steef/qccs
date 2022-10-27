@@ -32,17 +32,12 @@ function InsertVoucher($voucher)
 
 function getEmail()
 {
-    function mysqli_resultFixer($result, $field=0) {
-        $result->data_seek(0);
-        $datarow = $result->fetch_array();
-        return $datarow[$field];
-    }
     $medewerkerID = $_SESSION["id"];
     $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
     global $mysqli;
     $result = $mysqli->query($sql);
-    mysqli_resultFixer($result, 'email');
-    return $result;
+    printf($result);
+    // return $result;
 }
 
 
@@ -61,6 +56,8 @@ function voucherGebruiken()
     header("location: ../voucherGebruikt.php");
 }
 
-VoucherGebruiken();
+// VoucherGebruiken();
+
+getEmail();
 
     // mail('steefertjappie@gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl');
