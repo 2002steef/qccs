@@ -135,117 +135,104 @@ klantModal();
                         </button>
                     </div>
                 <form method="POST" action="overzicht.php">
-                    <div class="modal-body">
-                        <section class="users-edit">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <!-- Nav-tabs -->
-                                            <ul class="nav nav-tabs" role="tablist">
+                   <div class="modal-body">
+                            <!-- Horizontal Form Layout starts -->
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <ul class="nav nav-tabs">
                                                 <li class="nav-item">
-                                                    <a href="#relatie_zakelijk" role="tab" id="information-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="account" aria-selected="true">
-                                                        <i class="ft-user mr-1"></i>
-                                                        <span class="d-none d-sm-block">Zakelijk</span>
-                                                    </a>
+                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klan<?= $klant["Project_ID"] ?>t" aria-controls="home" aria-expanded="true">Klant</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="#relatie_particulier" role="tab" id=" toevoegen_part" class="nav-link d-flex align-items-center" data-toggle="tab" aria-controls="information" aria-selected="false">
-                                                        <i class="ft-info mr-1"></i>
-                                                        <span class="d-none d-sm-block">Particulier</span>
+                                                    <a class="nav-link " id="tab2" data-toggle="tab" href="#Project-details<?= $klant["Project_ID"] ?>" aria-controls="profile" aria-expanded="false">Project details</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " id="tab3" data-toggle="tab" href="#Notities<?= $klant["Project_ID"] ?>" role="button" aria-haspopup="true" aria-expanded="Notities">
+                                                        Notities
                                                     </a>
                                                 </li>
                                             </ul>
-                                             <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="relatie_particulier" aria-expanded="true" aria-labelledby="base-tab11">
-                                                    <div class="row match-height">
-                                                        <div class="col-12">
-                                                            <div class="card">
-                                                                <div class="card-content">
-                                                                    <div class="card-body">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="hidden" class="form-control square" id="parti_status" name="Parti_status" value="Particulier">
-                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Parti_voornaam">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
-                                                                                    <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="Parti_tussenvoegsel">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
-                                                                                    <div class="col-md-6">
-                                                                                        <input type="text" class="form-control square" id="achternaam" name="Parti_achternaam">
-                                                                                    </div>
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="Klant<?= $klant["Project_ID"] ?>" aria-expanded="true" aria-labelledby="base-tab11">
+                                                    <div class="col-12">
+                                                        <div class="card">
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-4 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="Voornaam">Voornaam</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="hidden" class="form-control square"  id="Project_ID" name="klantID">
+                                                                                    <input type="text" class="form-control square"  id="Voornaam" name="Voornaam">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row mb-md-3">
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
-                                                                                    <div class="col-md-4">
-                                                                                        <input type="text" class="form-control square" id="huisnummer" name="Parti_huisnummer">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
-                                                                                    <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="toevoeging" name="Parti_toevoeging">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="straatnaam" name="Parti_straatnaam">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
-                                                                                    <div class="col-md-7">
-                                                                                        <input type="text" class="form-control square" id="postcode" name="Parti_postcode">
-                                                                                    </div>
+                                                                        <div class="col-md-4 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="text" class="form-control square"  id="tussenvoegsel" name="tussenvoegsel">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="Parti_email">
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="Parti_telefoonnummer">
-                                                                                    </div>
+                                                                        <div class="col-md-4 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="text" class="form-control square"  id="achternaam" name="achternaam">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-6 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
-                                                                                    <div class="col-md-9">
-                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="Parti_notities"></textarea>
-                                                                                    </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row mb-md-3">
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-4 col-form-label" for="huisnummer">Huisnummer</label>
+                                                                                <div class="col-md-8">
+                                                                                    <input type="text" class="form-control square" id="huisnummer" name="huisnummer">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="text"  class="form-control square" id="toevoeging" name="toevoeging">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
+                                                                                <div class="col-md-8">
+                                                                                    <input type="text" class="form-control square" id="straat" name="straat">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="postcode">Postcode</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="text" class="form-control square" id="postcode" name="postcode">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Email</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="email">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -253,104 +240,116 @@ klantModal();
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="submit" name="ToevoegenPart"  class="btn btn-outline-light-gray">Save changes</button>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="relatie_zakelijk" aria-labelledby="base-tab12">
-                                                    <div class="row match-height">
-                                                        <div class="col-12">
-                                                            <div class="card">
-                                                                <div class="card-content">
-                                                                    <div class="card-body">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="hidden" class="form-control square" id="zak_status" name="Zak_status" value="Zakelijk">
-                                                                                        <input type="text" class="form-control square" id="Voornaam" name="Zak_voornaam">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
-                                                                                    <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="tussenvoegsel" name="Zak_tussenvoegsel">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
-                                                                                    <div class="col-md-6">
-                                                                                        <input type="text" class="form-control square" id="achternaam" name="Zak_achternaam">
-                                                                                    </div>
+                                                <div class="tab-pane fade" id="Project-details<?= $klant["Project_ID"] ?>" aria-labelledby="base-tab12">
+                                                    <div class="col-12">
+                                                        <div class="card">
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="Project-ID">Project ID</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="hidden" class="form-control square" value="<?= $klant["Project_ID"] ?>" id="Project_ID" name="klantID">
+                                                                                    <input type="text" class="form-control square" readonly " id="Project-ID" name="Project-ID">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row mb-md-3">
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
-                                                                                    <div class="col-md-4">
-                                                                                        <input type="text" class="form-control square" id="huisnummer" name="Zak_huisnummer">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
-                                                                                    <div class="col-md-5">
-                                                                                        <input type="text" class="form-control square" id="toevoeging" name="Zak_toevoeging">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="straatnaam" name="Zak_straatnaam">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-3 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
-                                                                                    <div class="col-md-7">
-                                                                                        <input type="text" class="form-control square" id="postcode" name="Zak_postcode">
-                                                                                    </div>
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="match-datum">Match Datum</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="text" class="form-control square" id="match-datum" name="match_datum">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-6 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="email" class="form-control square" id="horizontal-form-5" name="Zak_email">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="bedrijfsnaam">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-4 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
-                                                                                    <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-7" name="Zak_telefoonnummer">
-                                                                                    </div>
+                                                                    </div>
+                                                                    <div class="row mb-md-3">
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="postcode">Postcode</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="text" class="form-control square"  id="postcode" name="postcode">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-6 col-12">
-                                                                                <div class="form-group row">
-                                                                                    <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
-                                                                                    <div class="col-md-9">
-                                                                                        <textarea id="horizontal-form-9" rows="6" class="form-control square" name="Zak_notities"></textarea>
-                                                                                    </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-6 col-form-label" for="Plaats">Plaats</label>
+                                                                                <div class="col-md-6">
+                                                                                    <input type="text" class="form-control square" id="Plaats" name="plaats">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Gewenst</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="gewenst">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Titel</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="titel">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="categorie">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Omschrijving</label>
+                                                                                <div class="col-md-9">
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="omschrijving"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Materiaal</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text" class="form-control square" id="horizontal-form-7" name="materiaal">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Klant wensen</label>
+                                                                                <div class="col-md-9">
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="Klant_wensen"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Al offertes ontvangen</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="offertes">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Nagebeld</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="nagebeld">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Gewenste aanvang</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="gewenste_aanvang">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -358,18 +357,43 @@ klantModal();
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                            <button type="submit" name="ToevoegenZak" class="btn btn-outline-light-gray">Save changes</button>
                                                     </div>
                                                 </div>
+                                                <div class="tab-pane fade" id="Notities<?= $klant["Project_ID"] ?>" aria-labelledby="base-tab13">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Opmerkingen</label>
+                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-md-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-6 col-form-label" for="afspraakdatum">Afspraakdatum</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="text" class="form-control square" id="afspraakdatum" name="afspraakdatum">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-6 col-form-label" for="Plaats">Klant score</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="text" class="form-control square" " id="Klant_score" name="Klant_score">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
                                             </div>
-                                            <!-- Horizontal Form Layout starts -->
-                                                <!-- Horizontal Form Layout ends -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                    </div>
+                            <!-- Horizontal Form Layout ends -->
+                        </div>
                     </form>
                 </div>
             </div>
