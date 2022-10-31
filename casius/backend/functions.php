@@ -119,7 +119,7 @@ function klantModal()
                                                             <div class="card-content">
                                                                 <div class="card-body">
                                                                     <div class="row">
-                                                                        <div class=" col-12">
+                                                                        <div class="col-md-4 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
                                                                                 <div class="col-md-8">
@@ -128,7 +128,7 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class=" col-12">
+                                                                        <div class="col-md-4 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
                                                                                 <div class="col-md-5">
@@ -136,7 +136,7 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class=" col-12">
+                                                                        <div class="col-md-4 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
                                                                                 <div class="col-md-6">
@@ -146,7 +146,7 @@ function klantModal()
                                                                         </div>
                                                                     </div>
                                                                     <div class="row mb-md-3">
-                                                                        <div class=" col-12">
+                                                                        <div class="col-md-3 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
                                                                                 <div class="col-md-4">
@@ -154,7 +154,7 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class=" col-12">
+                                                                        <div class="col-md-3 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
                                                                                 <div class="col-md-5">
@@ -162,7 +162,7 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class=" col-12">
+                                                                        <div class="col-md-3 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
                                                                                 <div class="col-md-8">
@@ -170,7 +170,7 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class=" col-12">
+                                                                        <div class="col-md-3 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
                                                                                 <div class="col-md-7">
