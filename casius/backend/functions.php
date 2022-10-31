@@ -219,7 +219,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="match-datum">Match Datum</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="text" class="form-control square" value="<?= $klant["Achternaam"] ?>" id="match-datum" name="match_datum">
+                                                                                    <input type="text" class="form-control square" value="<?= $klant["match_datum"] ?>" id="match-datum" name="match_datum">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
