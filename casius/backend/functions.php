@@ -113,7 +113,7 @@ function klantModal()
                                                 </li>
                                             </ul>
                                             <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="Klant" aria-expanded="true" aria-labelledby="base-tab11">
+                                                <div role="tabpanel" class="tab-pane fade active" id="Klant" aria-expanded="true" aria-labelledby="base-tab11">
                                                     <div class="col-12">
                                                         <div class="card">
                                                             <div class="card-content">
@@ -200,7 +200,7 @@ function klantModal()
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane" id="Project-details" aria-labelledby="base-tab12">
+                                                <div class="tab-pane fade" id="Project-details" aria-labelledby="base-tab12">
                                                     <div class="col-12">
                                                         <div class="card">
                                                             <div class="card-content">
@@ -287,7 +287,7 @@ function klantModal()
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane" id="Notities" aria-labelledby="base-tab13">
+                                                <div class="tab-pane fade" id="Notities" aria-labelledby="base-tab13">
                                                 <div class="col-md-9">
                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
                                                 </div>
