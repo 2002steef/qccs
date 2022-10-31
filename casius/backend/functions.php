@@ -246,13 +246,10 @@ function klantModal()
                                                                         <div class="col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Gewenst</label>
-                                                                                <div class="col-md-3">
+                                                                                <div class="col-md-9">
                                                                                 <fieldset class="form-group">
                                                                                     <select name="categorie" class="custom-select" id="customSelectMd">
                                                                                         <option selected hidden><?= $klant["categorie"] ?></option>
-                                                                                        <option  value="Timmerman & Meubelmaker">Timmerman & Meubelmaker</option>
-                                                                                        <option  value="Vloerlegger & Parketteur">Vloerlegger & Parketteur</option>
-                                                                                        <option  value="Loodgieter & Installateur">Loodgieter & Installateur</option>
                                                                                     </select>
                                                                                 </fieldset>
                                                                                 </div>
