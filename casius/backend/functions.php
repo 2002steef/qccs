@@ -104,13 +104,13 @@ function klantModal()
                                         <div class="card-body">
                                             <ul class="nav nav-tabs">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="Klant" data-toggle="tab" href="#Klant" aria-controls="home" aria-expanded="true">Klant</a>
+                                                    <a class="nav-link active" id="Klant" data-toggle="tab" href="#Klant" aria-controls="home" aria-expanded="true">Klant</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" id="Project-details" data-toggle="tab" href="#Project-details" aria-controls="profile" aria-expanded="false">Project details</a>
+                                                    <a class="nav-link " id="Project-details" data-toggle="tab" href="#Project-details" aria-controls="profile" aria-expanded="false">Project details</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link dropdown-toggle" id="Notities" data-toggle="tab" href="Notities" role="button" aria-haspopup="true" aria-expanded="Notities">
+                                                    <a class="nav-link " id="Notities" data-toggle="tab" href="Notities" role="button" aria-haspopup="true" aria-expanded="Notities">
                                                         Notities
                                                     </a>
                                                 </li>
