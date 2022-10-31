@@ -36,25 +36,6 @@ function UpdateUser()
 		$stmt->execute();
 	}
 }
-function PartklantInfoTabel()
-{
-    global $mysqli;
-    $DataMasseuse = "SELECT * FROM `klanten` WHERE `status` = 'Particulier'";
-    $stmt = $mysqli->prepare($DataMasseuse);
-    $stmt->execute();
-    $resultKlant = $stmt->get_result();
-    while ($klant = $resultKlant->fetch_array()) { ?>
-        <tr>
-            <td><?= $klant["Project_ID"] ?></td>
-            <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
-            <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["Project_ID"] ?>">
-                    Meer info
-                </a>
-            </td>
-        </tr>
-    <?php }
-}
 function KlantInfoTabel()
 {
     global $mysqli;
@@ -78,7 +59,7 @@ function KlantInfoTabel()
 function klantModal()
 {
     global $mysqli;
-    $DataKlant = "SELECT * FROM `klanten` WHERE `Project_ID` ";
+    $DataKlant = "SELECT * FROM `klanten`8 ";
     $stmt = $mysqli->prepare($DataKlant);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
