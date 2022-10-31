@@ -121,8 +121,8 @@ function klantModal()
                                                                     <div class="row">
                                                                         <div class="col-md-4 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-4 col-form-label" for="Voornaam">Voornaam</label>
-                                                                                <div class="col-md-8">
+                                                                                <label class="col-md-6 col-form-label" for="Voornaam">Voornaam</label>
+                                                                                <div class="col-md-6">
                                                                                     <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
                                                                                     <input type="text" class="form-control square" value="<?= $klant["Voornaam"] ?>" id="Voornaam" name="Voornaam">
                                                                                 </div>
@@ -130,8 +130,8 @@ function klantModal()
                                                                         </div>
                                                                         <div class="col-md-4 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-7 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
-                                                                                <div class="col-md-5">
+                                                                                <label class="col-md-6 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
+                                                                                <div class="col-md-6">
                                                                                     <input type="text" class="form-control square" value="<?= $klant["Tussenvoegsel"] ?>" id="tussenvoegsel" name="tussenvoegsel">
                                                                                 </div>
                                                                             </div>
@@ -146,7 +146,7 @@ function klantModal()
                                                                         </div>
                                                                     </div>
                                                                     <div class="row mb-md-3">
-                                                                        <div class="col-md-3 col-12">
+                                                                        <div class="col-md-6 col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-8 col-form-label" for="huisnummer">Huisnummer</label>
                                                                                 <div class="col-md-4">
@@ -154,26 +154,26 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-3 col-12">
+                                                                        <div class="col-md-6 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-7 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
-                                                                                <div class="col-md-5">
+                                                                                <label class="col-md-6 col-form-label" for="toevoeging">Huisnummer toevoeging</label>
+                                                                                <div class="col-md-6">
                                                                                     <input type="text" value="<?= $klant["huisnummerToevoeging"] ?>" class="form-control square" id="toevoeging" name="toevoeging">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-3 col-12">
+                                                                        <div class="col-md-6 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
-                                                                                <div class="col-md-8">
+                                                                                <label class="col-md-6 col-form-label" for="straatnaam">Straatnaam</label>
+                                                                                <div class="col-md-6">
                                                                                     <input type="text" class="form-control square" value="<?= $klant["straat"] ?>" id="straat" name="straat">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-3 col-12">
+                                                                        <div class="col-md-6 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-5 col-form-label" for="postcode">Postcode</label>
-                                                                                <div class="col-md-7">
+                                                                                <label class="col-md-6 col-form-label" for="postcode">Postcode</label>
+                                                                                <div class="col-md-6">
                                                                                     <input type="text" class="form-control square" value="<?= $klant["postcode"] ?>" id="postcode" name="postcode">
                                                                                 </div>
                                                                             </div>
