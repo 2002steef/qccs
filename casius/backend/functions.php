@@ -327,18 +327,16 @@ function klantModal()
                                                         </div>
                                                     </div>
                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div class="form-group col-md-6 row">
-                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Materiaal</label>
-                                                                <div class="col-md-3">
-                                                                    <input type="text" value="<?= $klant["afspraakdatum"] ?>" class="form-control square" id="horizontal-form-7" name="materiaal">
-                                                                </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <label class="col-md-6 col-form-label" for="horizontal-form-5">Materiaal</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" value="<?= $klant["afspraakdatum"] ?>" class="form-control square" id="horizontal-form-7" name="materiaal">
                                                             </div>
-                                                            <div class="form-group col-md-6 ">
-                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Klant score</label>
-                                                                <div class="col-md-3">
-                                                                    <input type="text" value="<?= $klant["klant_score"] ?>" class="form-control square" id="horizontal-form-7" name="klant_score">
-                                                                </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <label class="col-md-6 col-form-label" for="horizontal-form-7">Klant score</label>
+                                                            <div class="col-md-6">
+                                                                <input type="text" value="<?= $klant["klant_score"] ?>" class="form-control square" id="horizontal-form-7" name="klant_score">
                                                             </div>
                                                         </div>
                                                     </div>
