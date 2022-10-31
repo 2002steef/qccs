@@ -45,7 +45,6 @@ if (isset($_POST['subforgot'])) {
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 <div class="main-panel">
     <!-- BEGIN : Main Content-->
-    <div class="main-content">
         <!--Forgot Password Starts-->
         <section id="forgot-password" class="auth-height">
             <div class="row full-height-vh m-0 d-flex align-items-center justify-content-center">
@@ -83,7 +82,6 @@ if (isset($_POST['subforgot'])) {
             </div>
         </section>
         <!--Forgot Password Ends-->
-    </div>
     <?php
     include "partials/footer.php";
     ?>
