@@ -95,7 +95,7 @@ function klantModal()
                         </div>
                         <div class="modal-body">
                             <!-- Horizontal Form Layout starts -->
-                            <div class="col-xl-6 col-lg-12">
+                            <div class="col-xl-12 col-lg-12">
                                 <div class="card">
                                     <div class="card-content">
                                         <div class="card-body">
