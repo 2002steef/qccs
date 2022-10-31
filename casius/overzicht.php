@@ -300,7 +300,7 @@ klantModal();
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row mb-md-3">
+                                                                    <div class="row ">
                                                                             <div class="col-md-6 col-12">
                                                                                 <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
