@@ -219,7 +219,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="match-datum">Match Datum</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="text" class="form-control square" value="<?= $klant["match_datum"] ?>" id="match-datum" name="Match Datum">
+                                                                                    <input type="text" class="form-control square" value="<?= $klant["match_datum"] ?>" id="match-datum" name="match_Datum">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -279,7 +279,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Materiaal</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text" value="<?= $klant["materiaal"] ?>" class="form-control square" id="horizontal-form-7" name="Materiaal">
+                                                                                    <input type="text" value="<?= $klant["materiaal"] ?>" class="form-control square" id="horizontal-form-7" name="materiaal">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
