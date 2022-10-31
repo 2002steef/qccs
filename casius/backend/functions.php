@@ -318,9 +318,28 @@ function klantModal()
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="Notities" aria-labelledby="base-tab13">
-                                                <div class="col-md-9">
-                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
-                                                </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Opmerkingen</label>
+                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-7">Nagebeld</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" value="<?= $klant["nagebeld"] ?>" class="form-control square" id="horizontal-form-7" name="nagebeld">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 col-form-label" for="horizontal-form-7">Gewenste aanvang</label>
+                                                            <div class="col-md-9">
+                                                                <input type="text" value="<?= $klant["gewenste_aanvang"] ?>" class="form-control square" id="horizontal-form-7" name="gewenste_aanvang">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
