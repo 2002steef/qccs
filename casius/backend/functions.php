@@ -97,47 +97,37 @@ function klantModal()
                             <!-- Horizontal Form Layout starts -->
                             <div class="col-xl-6 col-lg-12">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Tabs with dropdown</h4>
-                                    </div>
                                     <div class="card-content">
                                         <div class="card-body">
                                             <ul class="nav nav-tabs">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" id="Klant" data-toggle="tab" href="#Klant" aria-controls="home" aria-expanded="true">Klant</a>
+                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klant" aria-controls="home" aria-expanded="true">Klant</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link " id="Project-details" data-toggle="tab" href="#Project-details" aria-controls="profile" aria-expanded="false">Project details</a>
+                                                    <a class="nav-link " id="tab2" data-toggle="tab" href="#Project-details" aria-controls="profile" aria-expanded="false">Project details</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link " id="Notities" data-toggle="tab" href="Notities" role="button" aria-haspopup="true" aria-expanded="Notities">
+                                                    <a class="nav-link " id="tab3" data-toggle="tab" href="Notities" role="button" aria-haspopup="true" aria-expanded="Notities">
                                                         Notities
                                                     </a>
                                                 </li>
                                             </ul>
                                             <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane"  role="tabpanel" id="Klant" aria-labelledby="Klant-tab" aria-expanded="true">
-                                                      <div>
-                                                      hallo
-                                                      </div>
-                                                    </div>
-                                                <div class="tab-pane show" id="Project-details" role="tabpanel" aria-labelledby="Project-details-tab" aria-expanded="false">
-                                                   
-                                                 </div>
-                                                <div class="tab-pane" id="Notities" role="tabpanel" aria-labelledby="Notities-tab" aria-expanded="false">
-                                                    <div class="form-group row">
-                                                        <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
-                                                            <div class="col-md-9">
-                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
-                                                            </div>
-                                                    </div>                                               
+                                                <div role="tabpanel" class="tab-pane active" id="Klant" aria-expanded="true" aria-labelledby="base-tab11">
+                                                    <p class="m-0">Oat cake marzipan cake lollipop caramels wafer pie jelly beans. Icing halvah chocolate cake carrot cake. Jelly beans carrot cake marshmallow gingerbread chocolate cake. Gummies cupcake croissant.</p>
+                                                </div>
+                                                <div class="tab-pane" id="Project-details" aria-labelledby="base-tab12">
+                                                    <p class="m-0">Sugar plum tootsie roll biscuit caramels. Liquorice brownie pastry cotton candy oat cake fruitcake jelly chupa chups. Pudding caramels pastry powder cake soufflé wafer caramels. Jelly-o pie cupcake.
+                                                    </p>
+                                                </div>
+                                                <div class="tab-pane" id="Notities" aria-labelledby="base-tab13">
+                                                    <p class="m-0">Biscuit ice cream halvah candy canes bear claw ice cream cake chocolate bar donut. Toffee cotton candy liquorice. Oat cake lemon drops gingerbread dessert caramels. Sweet dessert jujubes powder sweet sesame snaps.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
                             <!-- Horizontal Form Layout ends -->
                         </div>
                         <div class="modal-footer">
