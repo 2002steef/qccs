@@ -242,14 +242,12 @@ function klantModal()
                                                                      <div class="row">
                                                                         <div class="col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
-                                                                                <div class="col-md-3">
+                                                                                <label class="col-md-6 col-form-label" for="horizontal-form-5">Categorie</label>
+                                                                                <div class="col-md-6">
                                                                                     <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="categorie">
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-md-3 col-form-label" for="sub_categorie">Sub categorie</label>
-                                                                                <div class="col-md-3">
+                                                                                <label class="col-md-6 col-form-label" for="sub_categorie">Sub categorie</label>
+                                                                                <div class="col-md-6">
                                                                                     <input type="text" value="<?= $klant["sub_categorie"] ?>" class="form-control square" id="horizontal-form-7" name="sub_categorie">
                                                                                 </div>
                                                                             </div>
