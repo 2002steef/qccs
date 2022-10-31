@@ -334,7 +334,7 @@ function klantModal()
                                                                     <input type="text" value="<?= $klant["afspraakdatum"] ?>" class="form-control square" id="horizontal-form-7" name="materiaal">
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group row">
+                                                            <div class="form-group ">
                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Klant score</label>
                                                                 <div class="col-md-3">
                                                                     <input type="text" value="<?= $klant["klant_score"] ?>" class="form-control square" id="horizontal-form-7" name="klant_score">
