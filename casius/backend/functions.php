@@ -269,7 +269,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Omschrijving</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text" value="<?= $klant["omschrijving"] ?>" class="form-control square" id="horizontal-form-7" name="titel">
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="omschrijving"><?= $klant["omschrijving"] ?></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
