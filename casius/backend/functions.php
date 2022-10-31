@@ -258,6 +258,22 @@ function klantModal()
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="titel">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Omschrijving</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text" value="<?= $klant["titel"] ?>" class="form-control square" id="horizontal-form-7" name="titel">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
