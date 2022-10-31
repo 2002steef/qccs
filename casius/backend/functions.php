@@ -328,13 +328,13 @@ function klantModal()
                                                     </div>
                                                    <div class="row">
                                                         <div class="col-12">
-                                                            <div class="form-group row">
+                                                            <div class="form-group col-md-6 row">
                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Materiaal</label>
                                                                 <div class="col-md-3">
                                                                     <input type="text" value="<?= $klant["afspraakdatum"] ?>" class="form-control square" id="horizontal-form-7" name="materiaal">
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group ">
+                                                            <div class="form-group col-md-6 ">
                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Klant score</label>
                                                                 <div class="col-md-3">
                                                                     <input type="text" value="<?= $klant["klant_score"] ?>" class="form-control square" id="horizontal-form-7" name="klant_score">
