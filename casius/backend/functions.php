@@ -82,7 +82,7 @@ function klantModal()
                                         <div class="card-body">
                                             <ul class="nav nav-tabs">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klant<?= $klant["Project_ID"] ?>t" aria-controls="home" aria-expanded="true">Klant</a>
+                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klant<?= $klant["Project_ID"] ?>" aria-controls="home" aria-expanded="true">Klant</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link " id="tab2" data-toggle="tab" href="#Project-details<?= $klant["Project_ID"] ?>" aria-controls="profile" aria-expanded="false">Project details</a>
