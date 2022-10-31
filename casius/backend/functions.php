@@ -243,9 +243,13 @@ function klantModal()
                                                                         <div class="col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
-                                                                                <div class="col-md-9">
+                                                                                <div class="col-md-3">
                                                                                     <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="categorie">
                                                                                 </div>
+                                                                            </div>
+                                                                             <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Sub categorie</label>
+                                                                                  <input type="text"  class="form-control col-md-3 square" id="horizontal-form-7" name="sub_categorie">
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Omschrijving</label>
