@@ -55,10 +55,10 @@ function PartklantInfoTabel()
         </tr>
     <?php }
 }
-function ZakklantInfoTabel()
+function KlantInfoTabel()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `klanten` WHERE `status` = 'Zakelijk'";
+    $DataMasseuse = "SELECT * FROM `klanten`";
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
