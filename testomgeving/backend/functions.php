@@ -349,13 +349,28 @@ function password_reset($password, $confirmpassword, $email)
     if (empty($password) or empty($confirmpassword)) {
         exit('Not all fields are filled in.');
     }
-    if ($password == $confirmpassword) {
-        $sqlUpdate = "UPDATE `users` SET `password`= ? WHERE email  = ?";
-        $stmt = $mysqli->prepare($sqlUpdate);
-        $stmt->bind_param('ss', $password, $email);
-        $stmt->execute();
-        echo "Gelukt!";
-    } else {
+        if ($password == $confirmpassword) {
+            $sqlUpdate = "UPDATE `bedrijven` SET `password`= ? WHERE email  = ?";
+            $stmt = $mysqli->prepare($sqlUpdate);
+            $stmt->bind_param('ss', $password, $email);
+            $stmt->execute();
+            $result = $stmt->num_rows();
+            if ($result < 1) {
+                $stmt->Close();
+                $sqlUpdate = "UPDATE `masseuses` SET `password`= ? WHERE email  = ?";
+                $stmt = $mysqli->prepare($sqlUpdate);
+                $stmt->bind_param('ss', $password, $email);
+                $stmt->execute();
+                 $result = $stmt->num_rows();
+                if ($result < 1) {
+                    $stmt->Close();
+                    $sqlUpdate = "UPDATE `masseuses` SET `password`= ? WHERE email  = ?";
+                    $stmt = $mysqli->prepare($sqlUpdate);
+                    $stmt->bind_param('ss', $password, $email);
+                    $stmt->execute();
+                     }
+                 }
+        } else {
         echo "Passwords do not match.";
     }
 }

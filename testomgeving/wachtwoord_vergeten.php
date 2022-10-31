@@ -2,32 +2,6 @@
 include "backend/functions.php";
 include "partials/header.php";
 
-if (isset($_POST['subforgot'])) {
-    $email = $_REQUEST['email'];
-    global $mysqli;
-    $stmt = $mysqli->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    if ($result) {
-        $token = bin2hex(random_bytes(50));
-        $stmt = $mysqli->prepare("UPDATE users SET reset_token = ? WHERE email = ?");
-        $stmt->bind_param("ss", $token, $email);
-        $stmt->execute();
-        $stmt->close();
-        if ($email > 0) {
-            $to = $email;
-            $subject = "Wachtwoord vergeten";
-            $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " <br> Reset your password with this link .Click or open in new tab<br>";
-            $msg = wordwrap($msg, 70);
-            $headers = "From: Admin@qccs.nl";
-            mail($to, $subject, $msg, $headers);
-            header('location:index.php');
-        } else echo "'$email' komt niet voor in de database";
-    }
-}
-
-
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
