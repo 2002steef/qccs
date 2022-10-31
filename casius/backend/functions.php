@@ -48,7 +48,7 @@ function KlantInfoTabel()
             <td><?= $klant["Project_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target=".klantInfo<?= $klant["Project_ID"] ?>">
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["Project_ID"] ?>">
                     Meer info
                 </a>
             </td>
@@ -65,7 +65,7 @@ function klantModal()
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) { ?>
         <form action="" method="POST">
-            <div class="modal fade text-left klantInfo<?= $klant["Project_ID"] ?>" " tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+            <div class="modal fade text-left" id="klantInfo<?= $klant["Project_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -82,19 +82,19 @@ function klantModal()
                                         <div class="card-body">
                                             <ul class="nav nav-tabs">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klant" aria-controls="home" aria-expanded="true">Klant</a>
+                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klan<?= $klant["Project_ID"] ?>t" aria-controls="home" aria-expanded="true">Klant</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link " id="tab2" data-toggle="tab" href="#Project-details" aria-controls="profile" aria-expanded="false">Project details</a>
+                                                    <a class="nav-link " id="tab2" data-toggle="tab" href="#Project-details<?= $klant["Project_ID"] ?>" aria-controls="profile" aria-expanded="false">Project details</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link " id="tab3" data-toggle="tab" href="#Notities" role="button" aria-haspopup="true" aria-expanded="Notities">
+                                                    <a class="nav-link " id="tab3" data-toggle="tab" href="#Notities<?= $klant["Project_ID"] ?>" role="button" aria-haspopup="true" aria-expanded="Notities">
                                                         Notities
                                                     </a>
                                                 </li>
                                             </ul>
                                             <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="Klant" aria-expanded="true" aria-labelledby="base-tab11">
+                                                <div role="tabpanel" class="tab-pane active" id="Klant<?= $klant["Project_ID"] ?>" aria-expanded="true" aria-labelledby="base-tab11">
                                                     <div class="col-12">
                                                         <div class="card">
                                                             <div class="card-content">
@@ -181,7 +181,7 @@ function klantModal()
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="Project-details" aria-labelledby="base-tab12">
+                                                <div class="tab-pane fade" id="Project-details<?= $klant["Project_ID"] ?>" aria-labelledby="base-tab12">
                                                     <div class="col-12">
                                                         <div class="card">
                                                             <div class="card-content">
@@ -298,7 +298,7 @@ function klantModal()
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="Notities" aria-labelledby="base-tab13">
+                                                <div class="tab-pane fade" id="Notities<?= $klant["Project_ID"] ?>" aria-labelledby="base-tab13">
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <div class="form-group row">
