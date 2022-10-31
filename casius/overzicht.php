@@ -303,7 +303,7 @@ klantModal();
                                                                     <div class="row ">
                                                                             <div class="col-md-6 col-12">
                                                                                 <div class="form-group row">
-                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
+                                                                                <label class="col-md-6 col-form-label" for="horizontal-form-5">Categorie</label>
                                                                                 <div class="col-md-6">
                                                                                     <select name="categorieSelect" class="custom-select" id="categorieSelect">
                                                                                         <option selected hidden>Kies een categorie...</option>
@@ -315,7 +315,7 @@ klantModal();
                                                                             </div>
                                                                             <div class="col-md-6 col-12">
                                                                                 <div class="form-group row">
-                                                                                    <label class="col-md-3 col-form-label" for="horizontal-form-5">Sub categorie</label>
+                                                                                    <label class="col-md-5 col-form-label" for="horizontal-form-5">Sub categorie</label>
                                                                                     <div class="col-md-7">
                                                                                         <input type="text"  class="form-control square" id="horizontal-form-7" name="sub_categorie">
                                                                                     </div>
