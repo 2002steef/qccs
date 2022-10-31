@@ -1,6 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
+// include "backend/voucherMaken.php";
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
@@ -83,7 +84,7 @@ if (!isset($_SESSION["loggedin"])) {
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="table">
-                                                        <table  class="table thead-dark table-bordered">
+                                                        <table class="table thead-dark table-bordered">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Masseuse</th>
@@ -108,6 +109,52 @@ if (!isset($_SESSION["loggedin"])) {
                 </div>
             </div>
         </div>
+
+
+        <!-- BEGIN POPUP MODAL -->
+
+        <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title popupEdit" id="myModalLabel1">-masseusebedrijf-</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Voucher gebruiken?</h5>
+                        <p>
+                            Weet u zeker dat u de voucher wilt gebruiken bij <span class="popupEdit">-masseusebedrijf-</span> ? <br><br>
+                            Zodra u op accepteren klikt, zal er een voucher naar uw mail gestuurd worden<br><Br>
+                            Vervolgens zal het er contact met u worden opgenomen door <span class="popupEdit">-masseusebedrijf-</span> om een afspraak te plannen.<br><br>
+                            Wanneer u bij <span class="popupEdit">-masseusebedrijf-</span> langs gaat, geeft u de code van de voucher. De masseuse zal deze verzilveren en de massage geven.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <form action="backend/voucherMaken.php" method="post">
+                            <input type="number" name="modalMasseuseID" value="" id="modalMasseuseID">
+                            <button type="submit" name="acceptTermsVoucher" class="btn btn-outline-light-grey">accepteer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function changepopup(bedrijfNaam, masseuseID) {
+                // console.log(masseuseID);
+                let Replace = bedrijfNaam;
+                document.getElementsByClassName("popupEdit")[0].innerHTML = Replace;
+                document.getElementsByClassName("popupEdit")[1].innerHTML = Replace;
+                document.getElementsByClassName("popupEdit")[2].innerHTML = Replace;
+                document.getElementsByClassName("popupEdit")[3].innerHTML = Replace;
+                document.getElementById('modalMasseuseID').value = masseuseID;
+            }
+        </script>
+
+        <!-- END POPUP MODAL -->
+
         <!-- END : End Main Content-->
 
         <!-- Scroll to top button -->
@@ -125,6 +172,6 @@ if (!isset($_SESSION["loggedin"])) {
     <script src="assets/js/tabel-scroll.js">
     </script>
     <script src="assets/js/postcode-api.js"></script>
-
+    <script src="assets/js/components-modal.min.js"></script>
 </body>
 <!-- END : Body-->

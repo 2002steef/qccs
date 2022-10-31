@@ -56,11 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
 
                     // }
-                } else {
-                    // Incorrect password
-                    //                $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
-                    header("Location:../index.php?login=foutecombi");
-                }
+                } 
             } elseif ($stmtMw->num_rows == 0) {
                 $stmtBd = $mysqli->prepare('SELECT `bedrijfID`, `userName`, `Password`, `email`  FROM `bedrijven` WHERE email = ?');
                 $stmtBd->bind_param('s', $_POST['email']);
@@ -151,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             }
-            elseif($stmt->num_rows < 1 ) {
+            elseif($stmtMs->num_rows < 1 ) {
                 // Incorrect password
                 header("Location:../index.php?login=foutecombi");
             }

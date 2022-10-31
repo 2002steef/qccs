@@ -1,10 +1,7 @@
-<!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
-
-<!DOCTYPE html>
-<html class="loading" lang="en">
 <!-- BEGIN : Head-->
 <?php
 include "header.php";
+$row = userInfo();
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
@@ -41,11 +38,11 @@ include "header.php";
                         <li class="dropdown nav-item mr-1"><a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                                 <div class="user d-md-flex d-none mr-2"><span class="text-right text-light-gray">Jerry</span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
 
-                                <img class="avatar" src="app-assets/img/jerry.jpg" alt="avatar" height="35" width="35">
+                                <img class="avatar" src="app-assets/img/uploads/<?php echo $row["image_url"] ?>" alt="avatar" height="35" width="35">
 
                             </a>
 
-                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="page-account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
+                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"><a class="dropdown-item" href="account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
                                     <div class="d-flex align-items-center"><i class="ft-edit mr-2 text-light-gray"></i><span>Profiel settings</span></div>
                                 </a>
                                 <div class="dropdown-divider"></div>
@@ -76,12 +73,6 @@ include "header.php";
         <div class="sidebar-content main-menu-content">
             <div class="nav-container">
                 <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation">
-                    <li class=" nav-item">
-                        <a href="https://pixinvent.com/apex-angular-4-bootstrap-admin-template/html-documentation" target="_blank">
-                            <i class="ft-book text-light-gray"></i>
-                            <span class="menu-title text-light-gray" data-i18n="Documentation">Documentation</span>
-                        </a>
-                    </li>
                     <li class="nav-item ">
 
                         <a href="overzicht.php">
@@ -90,7 +81,7 @@ include "header.php";
                         </a>
                     </li>
                     <li>
-                        <a class="text-light-gray" href="account-settings.php/user_ID=<?= $_SESSION["id"] ?>">
+                        <a class="text-light-gray" href="account-settings.php?user_ID=<?= $_SESSION["id"] ?>">
                             <i class="ft-settings text-light-gray"></i>
                             <span class=" menu-title text text-light-gray">Account Settings</span>
                         </a>

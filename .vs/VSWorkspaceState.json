@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\casius"
+    "\\casius",
+    "\\casius\\app-assets\\css",
+    "\\liveomgeving\\backend",
+    "\\testomgeving"
   ],
+  "SelectedNode": "\\testomgeving\\page-account-settings.php",
   "PreviewInSolutionExplorer": false
 }

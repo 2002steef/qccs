@@ -125,7 +125,7 @@ include "backend/voucherFunctions.php";
 
             <!-- POPUP STARTS -->
 
-            <div id="popupBackground">
+            <!-- <div id="popupBackground">
                 <div id="popupContent">
                     <h1 class="popupText">Weet u zeker dat u bij -masseusebedrijf- een afspraak wilt maken?</h1>
                     <p class="popupText">
@@ -147,7 +147,42 @@ include "backend/voucherFunctions.php";
                     document.getElementById('popupBackground').style.display = 'none';
                     document.getElementById('popupContent').style.display = 'none';
                 })
-            </script>
+            </script> -->
+
+
+            <div class="col-lg-4 col-md-6 col-12 mb-2">
+                <h6>Default Modal</h6>
+                <p>Toggle a modal via JavaScript by clicking the button above.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#default">Launch Modal</button>
+                <!-- Modal -->
+                <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel1">-masseusebedrijf-</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Voucher gebruiken?</h5>
+                                <p>
+                                    Weet u zeker dat u de voucher wilt gebruiken bij -masseusebedrijf- ? <br><br>
+                                    Zodra u op accepteren klikt, zal er een voucher naar uw mail gestuurd worden<br><Br>
+                                    Vervolgens zal het er contact met u worden opgenomen door -masseusebedrijf- om een afspraak te plannen.<br><br>
+                                    Wanneer u bij -masseusebedrijf- langs gaat, geeft u de code van de voucher. De masseuse zal deze verzilveren en de massage geven.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn bg-light-secondary" data-dismiss="modal">accepteer</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- POPUP END -->
 
@@ -181,6 +216,7 @@ include "backend/voucherFunctions.php";
     <script src="app-assets/js/scroll-top.js"></script>
     <!-- END APEX JS-->
     <!-- BEGIN PAGE LEVEL JS-->
+    <script src="app-assets/js/components-modal.min.js"></script>
     <!-- END PAGE LEVEL JS-->
     <!-- BEGIN: Custom CSS-->
     <script src="assets/js/scripts.js"></script>

@@ -1,4 +1,7 @@
 <?php
+
+use Google\Service\CloudNaturalLanguage\Document;
+
 include "db.php";
 session_start();
 include "error.php";
@@ -635,12 +638,12 @@ function masseuseInfo()
                 </a>
                 <br>
                 <br>
-                <a class="btn btn-outline-light-grey" id="btnMaakAfspraak">
-                    Maak Afspraak
-                </a>
+                <button type="button" onclick='changepopup("<?= $masseuse["bedrijfsNaam"] ?>", "<?= $masseuse["masseuseID"] ?>")' class="btn btn-outline-light-grey" data-toggle="modal" data-target="#default">Maak afspraak</button>
             </td>
         </tr>
     <?php }
+
+    
 }
 function bedrijfsInfo()
 {
@@ -833,41 +836,38 @@ function BewerkDienstenModal()
                                 <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                             </button>
                         </div>
-                        <div class="modal-body">                                    
+                        <div class="modal-body">
                             <input type="hidden" name="masseuseID" value="<?= $masseuse["masseuseID"] ?>">
-                                    <p><input type="checkbox" name="dienst[]" value="Body To Body Massage" /> Body To Body Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Body To Head Massage" /> Body To Head Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Voet Massage" /> Voet Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Thaise Massage" /> Thaise Massage</p>
-                                    <p><input type="checkbox" name="dienst[]" value="Italiaanse Massage" /> Italiaanse Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Body To Body Massage" /> Body To Body Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Body To Head Massage" /> Body To Head Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Voet Massage" /> Voet Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Thaise Massage" /> Thaise Massage</p>
+                            <p><input type="checkbox" name="dienst[]" value="Italiaanse Massage" /> Italiaanse Massage</p>
                         </div>
                         <div class="modal-footer">
-                            <button  name="submit" type="submit" class="btn bg-light-secondary">Opslaan</button>
+                            <button name="submit" type="submit" class="btn bg-light-secondary">Opslaan</button>
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <?php
-        
+    <?php
+
     }
-    if(isset($_POST["submit"]))
-        {
+    if (isset($_POST["submit"])) {
         global $mysqli;
         $id = $_POST["masseuseID"];
-         $for_query = '';
-         if(!empty($_POST["dienst"]))
-         {
-          foreach($_POST["dienst"] as $dienst)
-          {
-           $for_query .= $dienst . ', ';
-          }
-          $for_query = substr($for_query, 0, -2);
-          $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = $id";
+        $for_query = '';
+        if (!empty($_POST["dienst"])) {
+            foreach ($_POST["dienst"] as $dienst) {
+                $for_query .= $dienst . ', ';
+            }
+            $for_query = substr($for_query, 0, -2);
+            $query = "UPDATE masseuses SET skills = '$for_query' WHERE masseuseID = $id";
 
-          $stmt = $mysqli->prepare($query);
-          $stmt->execute();
+            $stmt = $mysqli->prepare($query);
+            $stmt->execute();
         }
     }
 }
@@ -882,7 +882,7 @@ function MasseuseParagraafModal()
 
     while ($masseuse = $resultMasseuse->fetch_array()) {
 
-        ?>
+    ?>
         <div class="modal fade text-left" id="paragraaf<?= $masseuse["masseuseID"] ?>" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">

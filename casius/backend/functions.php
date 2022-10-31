@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
 require_once "db.php";
 session_start();
@@ -8,16 +9,56 @@ function klantInfo()
     global $mysqli;
     $sql = "SELECT * FROM klanten where klant_ID = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('i', $_GET['userID']);
+    $stmt->bind_param('i', $_GET['klant_ID']);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
 }
 
-function klantInfoTabel()
+function userInfo()
 {
     global $mysqli;
-    $DataMasseuse = "SELECT * FROM `klanten`";
+    $sql = "SELECT * FROM `login` where user_ID = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('i', $_SESSION['id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+}
+function UpdateUser()
+{
+    if(isset($_POST["btnUserUpdate"])){
+		global $mysqli;
+
+		$sql = "UPDATE `login` SET userName = ?, email = ? WHERE user_ID = ?";
+		$stmt = $mysqli->prepare($sql);
+		$stmt->bind_param('ssi',$_POST["name"],$_POST["email"], $_GET['user_ID']);
+		$stmt->execute();
+	}
+}
+function PartklantInfoTabel()
+{
+    global $mysqli;
+    $DataMasseuse = "SELECT * FROM `klanten` WHERE `status` = 'Particulier'";
+    $stmt = $mysqli->prepare($DataMasseuse);
+    $stmt->execute();
+    $resultKlant = $stmt->get_result();
+    while ($klant = $resultKlant->fetch_array()) { ?>
+        <tr>
+            <td><?= $klant["klant_ID"] ?></td>
+            <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
+            <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>">
+                    Meer info
+                </a>
+            </td>
+        </tr>
+    <?php }
+}
+function ZakklantInfoTabel()
+{
+    global $mysqli;
+    $DataMasseuse = "SELECT * FROM `klanten` WHERE `status` = 'Zakelijk'";
     $stmt = $mysqli->prepare($DataMasseuse);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
@@ -204,7 +245,7 @@ function UploadPic()
 
         echo "<pre>";
         print_r($_FILES['my_image']);
-        echo "</pre>";
+        echo "</pre>"; 
 
         $img_name = $_FILES['my_image']['name'];
         $img_size = $_FILES['my_image']['size'];
@@ -214,7 +255,7 @@ function UploadPic()
         if ($error === 0) {
             if ($img_size > 1250000) {
                 $em = "Sorry, your file is too large.";
-                header("Location: overzicht.php?error=$em");
+                header("Location: account-settings.php.php?user_ID=$id&error=$em");
             } else {
                 $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
                 $img_ex_lc = strtolower($img_ex);
@@ -225,18 +266,18 @@ function UploadPic()
                     $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
                     $img_upload_path = 'app-assets/img/uploads/' . $new_img_name;
                     move_uploaded_file($tmp_name, $img_upload_path);
-
+                    $id = $_SESSION['id'];
                     // Insert into Database
-                    $sql_pic = "UPDATE `login` SET `image_url` = ? WHERE id = ?";
+                    $sql_pic = "UPDATE `login` SET `image_url` = ? WHERE user_ID = ?";
                     $stmt = $mysqli->prepare($sql_pic);
                     $stmt->bind_param(
-                        "si", $new_img_name, $_SESSION['id']
+                        "si", $new_img_name,$id 
                     );
                     $stmt->execute();
-                    header("Location: account-settings.php");
+                    header("Location: account-settings.php?user_ID=$id");
                 } else {
                     $em = "You can't upload files of this type";
-                    header("Location: overzicht.php?error=$em");
+                    header("Location: account-settings.php.php?user_ID=$id&error=$em");
                 }
             }
         }
@@ -245,88 +286,76 @@ function UploadPic()
 
 function ToevoegenParticulier()
 {
-    global $mysqli;
-    $sql = "INSERT INTO `klanten`(
-    `Voornaam`,
-    `Tussenvoegsel`,
-    `Achternaam`,
-    `Email`,
-    `Telefoonnummer`,
-    `straat`,
-    `postcode`,
-    `huisnummer`,
-    `huisnummerToevoeging`,
-    `notities`,
-    `status`,
-            )
-            VALUES(
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?',
-                '?'             
-                )";
-    $stmt = $mysqli->prepare($sql);
-    if(empty($_POST["Parti_tussenvoegsel"])){
-		$tussenvoegsel = " ";
+    if (isset($_POST["ToevoegenPart"])) {
+        global $mysqli;
+        $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param('s', $_POST["Parti_email"]);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0 ) {
+			header("Location: overzicht.php");
+			exit();
+        }else{
+            $stmt->close();
+            $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
+                    `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
+                    VALUES
+                    (?,?,?,?,?,?,?,?,?,?,?)";
+            $stmt = $mysqli->prepare($sql);
+            if(empty($_POST["Parti_tussenvoegsel"])){
+		        $tussenvoegsel = " ";
+	        }
+	        if(empty($_POST["Parti_toevoeging"])){
+		        $toevoeging = " ";
+	        }
+            $stmt->bind_param('sssssssssss',
+                $_POST["Parti_voornaam"],$tussenvoegsel,$_POST["Parti_achternaam"],$_POST["Parti_email"]
+                ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
+                $_POST["Parti_notities"],$_POST["Parti_status"]);
+            $stmt->execute();
+            $stmt->close();
+			header("Location:overzicht.php");
+			exit();
+		}
 	}
-	if(empty($_POST["Parti_toevoeging"])){
-		$toevoeging = " ";
-	}
-    $stmt->bind_param('sssssssssss',$_POST["Parti_voornaam"],$tussenvoegsel,$_POST["Parti_achternaam"],$_POST["Parti_email"]
-        ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
-        $_POST["Parti_notities"],$_POST["Parti_status"]);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    if($result->num_rows > 0){
-		echo "Toegoegen gelukt !";
-							  }
+       
 }
 function ToevoegenZakelijk()
 {
-    global $mysqli;
-    $sql = "INSERT INTO `klanten`(
-    `Voornaam`,
-    `Tussenvoegsel`,
-    `Achternaam`,
-    `Email`,
-    `Telefoonnummer`,
-    `straat`,
-    `postcode`,
-    `huisnummer`,
-    `huisnummerToevoeging`,
-    `notities`,
-    `status`,
-    `bedrijfsnaam`
-)
-VALUES(
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',
-    '?',    
-    )";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('ssssssssssss',$_POST["Zak_voornaam"],$_POST["Zak_tussenvoegsel"],$_POST["Zak_achternaam"],$_POST["Zak_email"]
-        ,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$_POST["Zak_toevoeging"],
-        $_POST["Zak_notities"],$_POST["Zak_status"],$_POST["Zak_bedrijfsnaam"]);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    return $result->fetch_array();
-	if($result->num_rows > 0){
-		echo "Toegoegen gelukt !";
-	}
+if (isset($_POST["ToevoegenZak"])) {
+	 global $mysqli;
+        $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param('s', $_POST["Zak_email"]);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0 ) {
+			header("Location: overzicht.php");
+			exit();
+        }else{
+            $stmt->close();
+			$sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`, `Email`,`Telefoonnummer`,`straat`,
+                    `postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`, `bedrijfsnaam`)
+                     VALUES
+                    (?,?,?,?,?,?,?,?,?,?,?,?)";
+			$stmt = $mysqli->prepare($sql);
+			if(empty($_POST["Zak_tussenvoegsel"])){
+				$tussenvoegsel = " ";
+			}
+			if(empty($_POST["Zak_toevoeging"])){
+				$toevoeging = " ";
+			}
+			$stmt->bind_param('ssssssssssss',
+				$_POST["Zak_voornaam"],$tussenvoegsel,$_POST["Zak_achternaam"],$_POST["Zak_email"]
+				,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$toevoeging,
+				$_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
+			$stmt->execute();
+			$stmt->Close();
+			header("Location:overzicht.php");
+			exit();
+		}
+    }
 }

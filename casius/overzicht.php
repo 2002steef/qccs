@@ -2,7 +2,6 @@
 <?php
 include "backend/functions.php";
 klantModal();
-
 klantInfo();
 
     include "partials/header.php";
@@ -104,8 +103,8 @@ klantInfo();
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <?php
-                                                                    klantInfoTabel();
+                                                                    <?php 
+                                                                    ZakklantInfoTabel();   
                                                                     ?>
                                                                 </tbody>
                                                             </table>
@@ -157,7 +156,7 @@ klantInfo();
                                                                 </thead>
                                                                 <tbody>
                                                                     <?php
-                                                                    klantInfoTabel();
+                                                                   PartklantInfoTabel();
                                                                     ?>
                                                                 </tbody>
                                                             </table>
@@ -193,7 +192,7 @@ klantInfo();
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
                     </div>
-                <form method="POST">
+                <form method="POST" action="overzicht.php">
                     <div class="modal-body">
                         <section class="users-edit">
                             <div class="row">
@@ -203,15 +202,15 @@ klantInfo();
                                             <!-- Nav-tabs -->
                                             <ul class="nav nav-tabs" role="tablist">
                                                 <li class="nav-item">
-                                                    <a href="#relatie_particulier" role="tab" id="toevoegen_part" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="account" aria-selected="true">
+                                                    <a href="#relatie_zakelijk" role="tab" id="information-tab" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="account" aria-selected="true">
                                                         <i class="ft-user mr-1"></i>
-                                                        <span class="d-none d-sm-block">Particulier</span>
+                                                        <span class="d-none d-sm-block">Zakelijk</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="#relatie_zakelijk" role="tab" id="information-tab" class="nav-link d-flex align-items-center" data-toggle="tab" aria-controls="information" aria-selected="false">
+                                                    <a href="#relatie_particulier" role="tab" id=" toevoegen_part" class="nav-link d-flex align-items-center" data-toggle="tab" aria-controls="information" aria-selected="false">
                                                         <i class="ft-info mr-1"></i>
-                                                        <span class="d-none d-sm-block">Zakelijk</span>
+                                                        <span class="d-none d-sm-block">Particulier</span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -312,7 +311,8 @@ klantInfo();
                                                                 </div>
                                                             </div>
                                                         </div>
-
+                                                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="submit" name="ToevoegenPart"  class="btn btn-outline-light-gray">Save changes</button>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="relatie_zakelijk" aria-labelledby="base-tab12">
@@ -393,7 +393,7 @@ klantInfo();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-4 col-form-label" for="horizontal-form-6">Bedrijf</label>
                                                                                     <div class="col-md-8">
-                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="Zak_website">
+                                                                                        <input type="text" class="form-control square" id="horizontal-form-6" name="bedrijfsnaam">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
@@ -416,15 +416,13 @@ klantInfo();
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" name="ToevoegenZak" class="btn btn-outline-light-gray">Save changes</button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- Horizontal Form Layout starts -->
                                                 <!-- Horizontal Form Layout ends -->
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                                            <button type="submit" name="ToevoegenKlant" class="btn btn-outline-light-gray">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
