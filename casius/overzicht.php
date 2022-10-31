@@ -300,21 +300,30 @@ klantModal();
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
-                                                                        <div class="col-12">
-                                                                            <div class="form-group row">
+                                                                    <div class="row mb-md-3">
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
+                                                                                <div class="col-md-6">
                                                                                     <select name="categorieSelect" class="custom-select" id="categorieSelect">
                                                                                         <option selected hidden>Kies een categorie...</option>
                                                                                         <option  value="Timmerman & Meubelmaker">Timmerman & Meubelmaker</option>
                                                                                         <option  value="Loodgieter & Installateur">Loodgieter & Installateur</option>
                                                                                         <option  value="Vloerlegger & Parketteur">Vloerlegger & Parketteur</option>
-                                                                                    </select>
+                                                                                    </select>                                                                                        </div>
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Sub categorie</label>
-                                                                                  <input type="text"  class="form-control square" id="horizontal-form-7" name="sub_categorie">
+                                                                            <div class="col-md-6 col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-3 col-form-label" for="horizontal-form-5">Sub categorie</label>
+                                                                                    <div class="col-md-7">
+                                                                                        <input type="text"  class="form-control square" id="horizontal-form-7" name="sub_categorie">
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
+                                                                        </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Omschrijving</label>
                                                                                 <div class="col-md-9">
