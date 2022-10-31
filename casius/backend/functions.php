@@ -59,7 +59,7 @@ function KlantInfoTabel()
 function klantModal()
 {
     global $mysqli;
-    $DataKlant = "SELECT * FROM `klanten`8 ";
+    $DataKlant = "SELECT * FROM `klanten` ";
     $stmt = $mysqli->prepare($DataKlant);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
