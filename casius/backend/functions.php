@@ -239,18 +239,24 @@ function klantModal()
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
+                                                                     <div class="row">
                                                                         <div class="col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
-                                                                                <div class="col-md-3">
+                                                                                <div class="col-md-9">
                                                                                     <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="categorie">
                                                                                 </div>
                                                                             </div>
-                                                                             <div class="form-group row">
-                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Sub categorie</label>
-                                                                                  <input type="text"  class="form-control col-md-3 square" id="horizontal-form-7" name="sub_categorie">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="sub_categorie">Sub categorie</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text" value="<?= $klant["sub_categorie"] ?>" class="form-control square" id="horizontal-form-7" name="sub_categorie">
+                                                                                </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Omschrijving</label>
                                                                                 <div class="col-md-9">
