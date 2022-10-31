@@ -188,14 +188,8 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-2 col-form-label" for="horizontal-form-6">Bedrijf</label>
-                                                                                <div class="col-md-10">
-                                                                                    <input type="text" class="form-control square" id="horizontal-form-6" name="website">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-md-2 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
-                                                                                <div class="col-md-10">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
+                                                                                <div class="col-md-9">
                                                                                     <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
                                                                                 </div>
                                                                             </div>
