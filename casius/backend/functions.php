@@ -206,28 +206,20 @@ function klantModal()
                                                             <div class="card-content">
                                                                 <div class="card-body">
                                                                     <div class="row">
-                                                                        <div class="col-md-4 col-12">
+                                                                        <div class="col-md-6 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-6 col-form-label" for="Voornaam">Voornaam</label>
+                                                                                <label class="col-md-6 col-form-label" for="Voornaam">Project ID</label>
                                                                                 <div class="col-md-6">
                                                                                     <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
-                                                                                    <input type="text" class="form-control square" value="<?= $klant["Voornaam"] ?>" id="Voornaam" name="Voornaam">
+                                                                                    <input type="text" class="form-control square" readonly value="<?= $klant["klant_ID"] ?>" id="Project-details" name="Project-details">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-4 col-12">
+                                                                        <div class="col-md-6 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-6 col-form-label" for="tussenvoegsel">Tussenvoegsel</label>
+                                                                                <label class="col-md-6 col-form-label" for="match-datum">Match Datum</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="text" class="form-control square" value="<?= $klant["Tussenvoegsel"] ?>" id="tussenvoegsel" name="tussenvoegsel">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-4 col-12">
-                                                                            <div class="form-group row">
-                                                                                <label class="col-md-6 col-form-label" for="achternaam">Achternaam</label>
-                                                                                <div class="col-md-6">
-                                                                                    <input type="text" class="form-control square" value="<?= $klant["Achternaam"] ?>" id="achternaam" name="achternaam">
+                                                                                    <input type="text" class="form-control square" value="<?= $klant["Achternaam"] ?>" id="match-datum" name="Match Datum">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
