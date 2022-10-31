@@ -113,7 +113,7 @@ function klantModal()
                                                 </li>
                                             </ul>
                                             <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active fade" id="Klant" aria-expanded="true" aria-labelledby="base-tab11">
+                                                <div role="tabpanel" class="tab-pane active" id="Klant" aria-expanded="true" aria-labelledby="base-tab11">
                                                     <div class="col-12">
                                                         <div class="card">
                                                             <div class="card-content">
