@@ -305,7 +305,6 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
                                                                                <fieldset class="form-group">
-                                                                                    <label for="categorieSelect">Masseuse</label>
                                                                                     <select name="categorieSelect" class="custom-select" id="categorieSelect">
                                                                                         <option selected hidden>Kies een categorie...</option>
                                                                                         <option  value="Timmerman & Meubelmaker">Timmerman & Meubelmaker</option>
