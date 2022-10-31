@@ -246,13 +246,13 @@ function klantModal()
                                                                         <div class="col-12">
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Gewenst</label>
-                                                                                <div class="col-md-4">
+                                                                                <div class="col-md-9">
                                                                                     <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="titel">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-6 col-form-label" for="horizontal-form-7">Titel</label>
-                                                                                <div class="col-md-6">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Titel</label>
+                                                                                <div class="col-md-9">
                                                                                     <input type="text" value="<?= $klant["titel"] ?>" class="form-control square" id="horizontal-form-7" name="titel">
                                                                                 </div>
                                                                             </div>
