@@ -48,7 +48,7 @@ function KlantInfoTabel()
             <td><?= $klant["Project_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["Project_ID"] ?>">
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target=".klantInfo<?= $klant["Project_ID"] ?>">
                     Meer info
                 </a>
             </td>
@@ -65,7 +65,7 @@ function klantModal()
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) { ?>
         <form action="" method="POST">
-            <div class="modal fade text-left" id="klantInfo<?= $klant["Project_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+            <div class="modal fade text-left klantInfo<?= $klant["Project_ID"] ?>" " tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
