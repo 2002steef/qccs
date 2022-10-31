@@ -102,7 +102,6 @@ function klantModal()
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <p>You can activate a tab navigation by simply specifying <code>data-toggle="tab"</code> on an element.</p>
                                             <ul class="nav nav-tabs">
                                                 <li class="nav-item">
                                                     <a class="nav-link" id="Klant" data-toggle="tab" href="#Klant" aria-controls="home" aria-expanded="true">Klant</a>
@@ -112,7 +111,7 @@ function klantModal()
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link dropdown-toggle" id="Notities" data-toggle="tab" href="Notities" role="button" aria-haspopup="true" aria-expanded="Notities">
-                                                        Dropdown
+                                                        Notities
                                                     </a>
                                                 </li>
                                             </ul>
@@ -221,7 +220,6 @@ function klantModal()
                                                         </div>                         
                                                     </div>
                                                 <div class="tab-pane show" id="Project-details" role="tabpanel" aria-labelledby="Project-details-tab" aria-expanded="false">
-                                                    <div class="row match-height">
                                                     <div class="col-12">
                                                         <div class="card">
                                                             <div class="card-content">
@@ -308,14 +306,6 @@ function klantModal()
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-6 col-12">
-                                                                            <div class="form-group row">
-                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
-                                                                                <div class="col-md-9">
-                                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -324,7 +314,12 @@ function klantModal()
                                                         </div>   
                                                     </div>
                                                 <div class="tab-pane" id="Notities" role="tabpanel" aria-labelledby="Notities-tab" aria-expanded="false">
-                                                    <p class="m-0">Cake croissant lemon drops gummi bears carrot cake biscuit cupcake croissant. Macaroon lemon drops muffin jelly sugar plum chocolate cupcake danish icing. Soufflé tootsie roll lemon drops sweet roll cake icing cookie halvah cupcake.</p>
+                                                    <div class="form-group row">
+                                                        <label class="col-md-3 col-form-label" for="horizontal-form-9">Notities</label>
+                                                            <div class="col-md-9">
+                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
+                                                            </div>
+                                                    </div>                                               
                                                 </div>
                                             </div>
                                         </div>
