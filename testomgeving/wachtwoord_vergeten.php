@@ -43,7 +43,6 @@ if (isset($_POST['subforgot'])) {
 <body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static blank-page"
       data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu">
 <!-- ////////////////////////////////////////////////////////////////////////////-->
-<div class="main-panel">
     <!-- BEGIN : Main Content-->
         <!--Forgot Password Starts-->
         <section id="forgot-password" class="auth-height">
@@ -86,8 +85,6 @@ if (isset($_POST['subforgot'])) {
     include "partials/footer.php";
     ?>
     <!-- END : End Main Content-->
-</div>
-
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 <!-- END : Body-->
 </body>
