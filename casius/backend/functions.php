@@ -432,11 +432,11 @@ function UploadPic()
 
 function ToevoegenParticulier()
 {
-    if (isset($_POST["ToevoegenPart"])) {
+    if (isset($_POST["ToevoegenKlant"])) {
         global $mysqli;
         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param('s', $_POST["Parti_email"]);
+        $stmt->bind_param('s', $_POST["email"]);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -445,21 +445,27 @@ function ToevoegenParticulier()
 			exit();
         }else{
             $stmt->close();
-            $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`,`Email`,`Telefoonnummer`,
-                    `straat`,`postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`)
+            $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Email`, 
+            `Telefoonnummer`, `straat`, `postcode`, `plaats`, `huisnummer`, `huisnummerToevoeging`, `opmerkingen`,
+            `categorie`, `sub_categorie`, `titel`, `omschrijving`, `materiaal`, `klant_wensen`, `offertes`, `nagebeld`,
+            `gewenste_aanvang`, `afspraakdatum`, `klant_score`) 
                     VALUES
-                    (?,?,?,?,?,?,?,?,?,?,?)";
+                    (?,?,?,?,?,
+                     ?,?,?,?,?,
+                     ?,?,?,?,?,
+                     ?,?,?,?,?,
+                     ?,?,?)";
             $stmt = $mysqli->prepare($sql);
-            if(empty($_POST["Parti_tussenvoegsel"])){
+            if(empty($_POST["tussenvoegsel"])){
 		        $tussenvoegsel = " ";
 	        }
-	        if(empty($_POST["Parti_toevoeging"])){
+	        if(empty($_POST["toevoeging"])){
 		        $toevoeging = " ";
 	        }
             $stmt->bind_param('sssssssssss',
-                $_POST["Parti_voornaam"],$tussenvoegsel,$_POST["Parti_achternaam"],$_POST["Parti_email"]
-                ,$_POST["Parti_telefoonnummer"] ,$_POST["Parti_straatnaam"],$_POST["Parti_postcode"],$_POST["Parti_huisnummer"],$toevoeging,
-                $_POST["Parti_notities"],$_POST["Parti_status"]);
+                $_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
+                ,$_POST["telefoonnummer"] ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$toevoeging,
+                $_POST["notities"],$_POST["status"]);
             $stmt->execute();
             $stmt->close();
 			header("Location:overzicht.php");

@@ -410,6 +410,10 @@ klantModal();
                             </div>
                             <!-- Horizontal Form Layout ends -->
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" name="toevoegenKlant" class="btn btn-outline-light-gray">Save changes</button>
+                        </div>
                     </form>
                 </div>
             </div>
