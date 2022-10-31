@@ -327,21 +327,20 @@ function klantModal()
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-12">
-                                                            <div class="form-group row">
-                                                                <label class="col-md-5 col-form-label" for="horizontal-form-7">Nagebeld</label>
-                                                                <div class="col-md-7">
-                                                                    <input type="text" value="<?= $klant["nagebeld"] ?>" class="form-control square" id="horizontal-form-7" name="nagebeld">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="col-md-5 col-form-label" for="horizontal-form-7">Gewenste aanvang</label>
-                                                                <div class="col-md-7">
-                                                                    <input type="text" value="<?= $klant["gewenste_aanvang"] ?>" class="form-control square" id="horizontal-form-7" name="gewenste_aanvang">
-                                                                </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-5 col-form-label" for="horizontal-form-7">Nagebeld</label>
+                                                            <div class="col-md-7">
+                                                                <input type="text" value="<?= $klant["nagebeld"] ?>" class="form-control square" id="horizontal-form-7" name="nagebeld">
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-md-5 col-form-label" for="horizontal-form-7">Gewenste aanvang</label>
+                                                            <div class="col-md-7">
+                                                                <input type="text" value="<?= $klant["gewenste_aanvang"] ?>" class="form-control square" id="horizontal-form-7" name="gewenste_aanvang">
+                                                            </div>
+                                                        </div>
+                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
