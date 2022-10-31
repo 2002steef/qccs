@@ -164,8 +164,8 @@ function klantModal()
                                                                         </div>
                                                                         <div class="col-md-6 col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-5 col-form-label" for="straatnaam">Straatnaam</label>
-                                                                                <div class="col-md-7">
+                                                                                <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
+                                                                                <div class="col-md-8">
                                                                                     <input type="text" class="form-control square" value="<?= $klant["straat"] ?>" id="straat" name="straat">
                                                                                 </div>
                                                                             </div>
@@ -182,8 +182,8 @@ function klantModal()
                                                                     <div class="row">
                                                                         <div class="col-12">
                                                                             <div class="form-group row">
-                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Email</label>
-                                                                                <div class="col-md-9">
+                                                                                <label class="col-md-4 col-form-label" for="horizontal-form-5">Email</label>
+                                                                                <div class="col-md-8">
                                                                                     <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="email">
                                                                                 </div>
                                                                             </div>
