@@ -47,6 +47,7 @@ if (isset($_POST['subforgot'])) {
     <!-- BEGIN : Main Content-->
         <!--Forgot Password Starts-->
         <section id="forgot-password" class="auth-height">
+            <div class="row full-height-vh m-0 d-flex align-items-center justify-content-center">
                 <div class="col-md-7 col-12">
                     <div class="card overflow-hidden">
                         <div class="card-content">
@@ -78,6 +79,7 @@ if (isset($_POST['subforgot'])) {
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <!--Forgot Password Ends-->
     <?php
