@@ -61,7 +61,7 @@ function klantModal()
     global $mysqli;
     $DataKlant = "SELECT * FROM `klanten` WHERE `Project_ID` = ?  ";
     $stmt = $mysqli->prepare($DataKlant);
-    $stmt->bind_param("i", $_POST["Project_ID"]);
+    $stmt->bind_param("i", $_GET["Project_ID"]);
     $stmt->execute();
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) { ?>
