@@ -219,7 +219,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="match-datum">Match Datum</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="text" class="form-control square" value="<?= $klant["Achternaam"] ?>" id="match-datum" name="Match Datum">
+                                                                                    <input type="text" class="form-control square" value="<?= $klant["match_datum"] ?>" id="match-datum" name="Match Datum">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -237,7 +237,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="Plaats">Plaats</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="text" class="form-control square" value="<?= $klant["plaats"] ?>" id="Plaats" name="Plaats">
+                                                                                    <input type="text" class="form-control square" value="<?= $klant["plaats"] ?>" id="Plaats" name="plaats">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -247,7 +247,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Gewenst</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="Gewenst">
+                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="gewenst">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
@@ -263,7 +263,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="Categorie">
+                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="categorie">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
