@@ -247,7 +247,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Gewenst</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="titel">
+                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="Gewenst">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
@@ -263,13 +263,51 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Categorie</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="titel">
+                                                                                    <input type="text" value="<?= $klant["categorie"] ?>" class="form-control square" id="horizontal-form-7" name="Categorie">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Omschrijving</label>
                                                                                 <div class="col-md-9">
                                                                                      <textarea id="horizontal-form-9" rows="6" class="form-control square" name="omschrijving"><?= $klant["omschrijving"] ?></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Materiaal</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text" value="<?= $klant["materiaal"] ?>" class="form-control square" id="horizontal-form-7" name="Materiaal">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Klant wensen</label>
+                                                                                <div class="col-md-9">
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="Klant_wensen"><?= $klant["klant_wensen"] ?></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-5">Al offertes ontvangen</label>
+                                                                                <div class="col-md-9">
+                                                                                    <input type="text" value="<?= $klant["offertes"] ?>" class="form-control square" id="horizontal-form-7" name="offertes">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Nagebeld</label>
+                                                                                <div class="col-md-9">
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="omschrijving"><?= $klant["nagebeld"] ?></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-3 col-form-label" for="horizontal-form-7">Gewenste aanvang</label>
+                                                                                <div class="col-md-9">
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="omschrijving"><?= $klant["gewenste_aanvang"] ?></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
