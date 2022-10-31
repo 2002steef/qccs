@@ -7,9 +7,9 @@ session_start();
 function klantInfo()
 {
     global $mysqli;
-    $sql = "SELECT * FROM klanten where klant_ID = ?";
+    $sql = "SELECT * FROM klanten where Project_ID = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param('i', $_GET['klant_ID']);
+    $stmt->bind_param('i', $_GET['Project_ID']);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
@@ -45,10 +45,10 @@ function PartklantInfoTabel()
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) { ?>
         <tr>
-            <td><?= $klant["klant_ID"] ?></td>
+            <td><?= $klant["Project_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>">
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["Project_ID"] ?>">
                     Meer info
                 </a>
             </td>
@@ -64,10 +64,10 @@ function ZakklantInfoTabel()
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) { ?>
         <tr>
-            <td><?= $klant["klant_ID"] ?></td>
+            <td><?= $klant["Project_ID"] ?></td>
             <td><?= $klant["Voornaam"] ?> <?= $klant["Tussenvoegsel"] ?> <?= $klant["Achternaam"] ?></td>
             <td></span><?= $klant["straat"] ?> <?= $klant["huisnummer"] ?> <?= $klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["klant_ID"] ?>">
+            <td><a class="btn btn-outline-light-gray" data-toggle="modal" data-target="#klantInfo<?= $klant["Project_ID"] ?>">
                     Meer info
                 </a>
             </td>
@@ -84,7 +84,7 @@ function klantModal()
     $resultKlant = $stmt->get_result();
     while ($klant = $resultKlant->fetch_array()) { ?>
         <form action="" method="POST">
-            <div class="modal fade text-left" id="klantInfo<?= $klant["klant_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
+            <div class="modal fade text-left" id="klantInfo<?= $klant["Project_ID"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -123,7 +123,7 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="Voornaam">Voornaam</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
+                                                                                    <input type="hidden" class="form-control square" value="<?= $klant["Project_ID"] ?>" id="Project_ID" name="klantID">
                                                                                     <input type="text" class="form-control square" value="<?= $klant["Voornaam"] ?>" id="Voornaam" name="Voornaam">
                                                                                 </div>
                                                                             </div>
@@ -210,8 +210,8 @@ function klantModal()
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="Project-ID">Project ID</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="hidden" class="form-control square" value="<?= $klant["klant_ID"] ?>" id="klant_ID" name="klantID">
-                                                                                    <input type="text" class="form-control square" readonly value="<?= $klant["klant_ID"] ?>" id="Project-ID" name="Project-ID">
+                                                                                    <input type="hidden" class="form-control square" value="<?= $klant["Project_ID"] ?>" id="Project_ID" name="klantID">
+                                                                                    <input type="text" class="form-control square" readonly value="<?= $klant["Project_ID"] ?>" id="Project-ID" name="Project-ID">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -352,7 +352,7 @@ function klantModal()
         $query = "UPDATE `klanten` SET `Voornaam`=?,`Tussenvoegsel`=?,
            `Achternaam`=?,`Email`=?,`Telefoonnummer`=?,`straat`=?,`postcode`=?
            ,`huisnummer`=?,`huisnummerToevoeging`=?,`notities`=?
-           WHERE klant_ID = ?";
+           WHERE Project_ID = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param(
             'ssssssssssi',
