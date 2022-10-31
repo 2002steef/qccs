@@ -41,15 +41,9 @@ klantInfo();
                                     <section id="file-export">
                                         <ul class="nav nav-tabs text-light-gray" role="tablist" id="tabs">
                                             <li class="nav-item active">
-                                                <a href="#ZakelijkeKlanten" role="tab" id="Zakelijke-Klanten" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="ZakelijkeKlanten" aria-selected="true">
+                                                <a href="#Klanten" role="tab" id="Klanten" class="nav-link d-flex align-items-center active" data-toggle="tab" aria-controls="Klanten" aria-selected="true">
                                                     <i class="ft-user mr-1"></i>
-                                                    <span class="d-none d-sm-block text-light-gray">Zakelijke Klanten</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item active">
-                                                <a href="#ParticuliereKlanten" role="tab" id="Particuliere-Klanten" class="nav-link d-flex align-items-center" data-toggle="tab" aria-controls="ParticuliereKlanten" aria-selected="true">
-                                                    <i class="ft-user mr-1"></i>
-                                                    <span class="d-none d-sm-block text-light-gray">Particuliere Klanten</span>
+                                                    <span class="d-none d-sm-block text-light-gray">Klanten</span>
                                                 </a>
                                             </li>
                                             <li class="nav-tabs">
@@ -60,7 +54,7 @@ klantInfo();
                                             </li>
                                         </ul>
                                         <div class="tab-content">
-                                            <div class="tab-pane fade mt-2 show active" id="ZakelijkeKlanten" role="tabpanel" aria-labelledby="account-tab">
+                                            <div class="tab-pane fade mt-2 show active" id="Klanten" role="tabpanel" aria-labelledby="account-tab">
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="table-responsive">
