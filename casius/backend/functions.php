@@ -381,11 +381,11 @@ function klantModal()
             if(empty($_POST["opmerkingen"])){
 		        $opmerkingen = " ";
 	        }
-        $stmt->bind_param('sssssssssssssssssssssss',
+        $stmt->bind_param('sssssssssssssssssssssssi',
                 $_POST["match_datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
                 ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
                 $opmerkingen,$_POST["categorieSelect"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"]
-                ,$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$afspraakdatum,$klantScore);
+                ,$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$afspraakdatum,$klantScore,$_POST["Project_ID"]);
         $stmt->execute();
         header("Location:overzicht.php");
     }
