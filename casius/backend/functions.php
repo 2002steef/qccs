@@ -484,19 +484,17 @@ function ToevoegenKlanten()
                 $_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$afspraakdatum,$klantScore);
             $stmt->execute();
             $stmt->close();
-			header("Location:overzicht.php");
-			exit();
 		}
 	}
        
 }
-function ToevoegenZakelijk()
+function ToevoegenTest()
 {
-if (isset($_POST["ToevoegenZak"])) {
+if (isset($_POST["ToevoegenKlant"])) {
 	 global $mysqli;
         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param('s', $_POST["Zak_email"]);
+        $stmt->bind_param('s', $_POST["email"]);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -506,20 +504,20 @@ if (isset($_POST["ToevoegenZak"])) {
         }else{
             $stmt->close();
 			$sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`, `Email`,`Telefoonnummer`,`straat`,
-                    `postcode`,`huisnummer`,`huisnummerToevoeging`,`notities`,`status`, `bedrijfsnaam`)
+                    `postcode`,`huisnummer`,`huisnummerToevoeging`)
                      VALUES
-                    (?,?,?,?,?,?,?,?,?,?,?,?)";
+                    (?,?,?,?,?,
+                     ?,?,?,?)";
 			$stmt = $mysqli->prepare($sql);
-			if(empty($_POST["Zak_tussenvoegsel"])){
+			if(empty($_POST["tussenvoegsel"])){
 				$tussenvoegsel = " ";
 			}
-			if(empty($_POST["Zak_toevoeging"])){
+			if(empty($_POST["toevoeging"])){
 				$toevoeging = " ";
 			}
-			$stmt->bind_param('ssssssssssss',
-				$_POST["Zak_voornaam"],$tussenvoegsel,$_POST["Zak_achternaam"],$_POST["Zak_email"]
-				,$_POST["Zak_telefoonnummer"] ,$_POST["Zak_straatnaam"],$_POST["Zak_postcode"],$_POST["Zak_huisnummer"],$toevoeging,
-				$_POST["Zak_notities"],$_POST["Zak_status"],$_POST["bedrijfsnaam"]);
+			$stmt->bind_param('sssssssss',
+				$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
+				,$_POST["telefoonnummer"] ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$toevoeging);
 			$stmt->execute();
 			$stmt->Close();
 			header("Location:overzicht.php");
