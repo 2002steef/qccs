@@ -438,7 +438,7 @@ function UploadPic()
 
 function ToevoegenKlanten()
 {
-    if (isset($_POST["ToevoegenKlant"])) {
+    if (isset($_POST["toevoegenKlant"])) {
         global $mysqli;
         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
         $stmt = $mysqli->prepare($sql);
@@ -490,7 +490,7 @@ function ToevoegenKlanten()
 }
 function ToevoegenTest()
 {
-    if (isset($_POST["ToevoegenKlant"])) {
+    if (isset($_POST["toevoegenKlant"])) {
 	     global $mysqli;
             $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
             $stmt = $mysqli->prepare($sql);

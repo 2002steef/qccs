@@ -440,7 +440,7 @@ klantModal();
     <?php
     include "partials/footer.php";
     ToevoegenKlanten();
-    ToevoegenTest();
+    //ToevoegenTest();
     ?>
     <script>
         /*
