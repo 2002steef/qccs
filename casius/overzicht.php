@@ -143,7 +143,7 @@ klantModal();
                                         <div class="card-body">
                                             <ul class="nav nav-tabs">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klan<?= $klant["Project_ID"] ?>t" aria-controls="home" aria-expanded="true">Klant</a>
+                                                    <a class="nav-link active" id="tab1" data-toggle="tab" href="#Klant<?= $klant["Project_ID"] ?>" aria-controls="home" aria-expanded="true">Klant</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="nav-link " id="tab2" data-toggle="tab" href="#Project-details<?= $klant["Project_ID"] ?>" aria-controls="profile" aria-expanded="false">Project details</a>
@@ -166,7 +166,7 @@ klantModal();
                                                                                 <label class="col-md-6 col-form-label" for="Voornaam">Voornaam</label>
                                                                                 <div class="col-md-6">
                                                                                     <input type="hidden" class="form-control square"  id="Project_ID" name="klantID">
-                                                                                    <input type="text" class="form-control square"  id="Voornaam" name="Voornaam">
+                                                                                    <input type="text" class="form-control square"  id="Voornaam" name="voornaam">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -209,6 +209,14 @@ klantModal();
                                                                                 <label class="col-md-4 col-form-label" for="straatnaam">Straatnaam</label>
                                                                                 <div class="col-md-8">
                                                                                     <input type="text" class="form-control square" id="straat" name="straat">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-12">
+                                                                            <div class="form-group row">
+                                                                                <label class="col-md-4 col-form-label" for="plaats">Plaats</label>
+                                                                                <div class="col-md-8">
+                                                                                    <input type="text" class="form-control square" id="plaats" name="plaats">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -304,13 +312,14 @@ klantModal();
                                                                             <div class="col-md-6 col-12">
                                                                                 <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="horizontal-form-5">Categorie</label>
-                                                                                <div class="col-md-6">
-                                                                                    <select name="categorieSelect" class="custom-select" id="categorieSelect">
-                                                                                        <option selected hidden>Kies een categorie...</option>
-                                                                                        <option  value="Timmerman & Meubelmaker">Timmerman & Meubelmaker</option>
-                                                                                        <option  value="Loodgieter & Installateur">Loodgieter & Installateur</option>
-                                                                                        <option  value="Vloerlegger & Parketteur">Vloerlegger & Parketteur</option>
-                                                                                    </select>                                                                                        </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <select name="categorieSelect" class="custom-select" id="categorieSelect">
+                                                                                            <option selected hidden>Kies een categorie...</option>
+                                                                                            <option  value="Timmerman & Meubelmaker">Timmerman & Meubelmaker</option>
+                                                                                            <option  value="Loodgieter & Installateur">Loodgieter & Installateur</option>
+                                                                                            <option  value="Vloerlegger & Parketteur">Vloerlegger & Parketteur</option>
+                                                                                        </select>                                                                                        
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6 col-12">
@@ -430,8 +439,7 @@ klantModal();
     </div>
     <?php
     include "partials/footer.php";
-    ToevoegenParticulier();
-	ToevoegenZakelijk();
+    ToevoegenKlanten();
     ?>
     <script>
         /*
@@ -526,7 +534,7 @@ klantModal();
 
         function maak_leeg() {
             document.getElementById("straat").value = "";
-            document.getElementById("straa").value = "";
+            document.getElementById("straat").value = "";
         }
     </script>
 

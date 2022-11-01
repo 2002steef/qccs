@@ -430,7 +430,7 @@ function UploadPic()
     }
 }
 
-function ToevoegenParticulier()
+function ToevoegenKlanten()
 {
     if (isset($_POST["ToevoegenKlant"])) {
         global $mysqli;
@@ -462,10 +462,17 @@ function ToevoegenParticulier()
 	        if(empty($_POST["toevoeging"])){
 		        $toevoeging = " ";
 	        }
-            $stmt->bind_param('sssssssssss',
-                $_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
-                ,$_POST["telefoonnummer"] ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$toevoeging,
-                $_POST["notities"],$_POST["status"]);
+            if(empty($_POST["afspraakdatum"])){
+		        $tussenvoegsel = " ";
+	        }
+	        if(empty($_POST["klant_score"])){
+		        $toevoeging = " ";
+	        }
+            $stmt->bind_param('sssssssssssssssssssssss',
+                $_POST["match_datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
+                ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
+                $_POST["opmerkingen"],$_POST["categorie"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"]
+                ,$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$aanvraag,$klantScore);
             $stmt->execute();
             $stmt->close();
 			header("Location:overzicht.php");
