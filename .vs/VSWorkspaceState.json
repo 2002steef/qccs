@@ -3,9 +3,10 @@
     "",
     "\\casius",
     "\\casius\\backend",
+    "\\casius\\partials",
     "\\josh",
     "\\josh\\backend"
   ],
-  "SelectedNode": "\\josh\\popupTest.php",
+  "SelectedNode": "\\casius\\partials\\navbar.php",
   "PreviewInSolutionExplorer": false
 }
