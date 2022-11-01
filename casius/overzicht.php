@@ -165,7 +165,6 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="Voornaam">Voornaam</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="hidden" class="form-control square"  id="Project_ID" name="klantID">
                                                                                     <input type="text" class="form-control square"  id="Voornaam" name="voornaam">
                                                                                 </div>
                                                                             </div>
@@ -260,8 +259,7 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="Project-ID">Project ID</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="hidden" class="form-control square" id="Project_ID" name="klantID">
-                                                                                    <input type="text" class="form-control square" readonly " id="Project-ID" name="Project-ID">
+                                                                                <input type="text" class="form-control square" readonly " id="Project-ID" name="Project-ID">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -269,7 +267,7 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="match-datum">Match Datum</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="text" class="form-control square" id="match-datum" name="match_datum">
+                                                                                    <input type="text" class="form-control square" id="match-datum" name="match-datum">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -326,7 +324,7 @@ klantModal();
                                                                                 <div class="form-group row">
                                                                                     <label class="col-md-5 col-form-label" for="horizontal-form-5">Sub categorie</label>
                                                                                     <div class="col-md-7">
-                                                                                        <input type="text"  class="form-control square" id="horizontal-form-7" name="sub_categorie">
+                                                                                        <input type="text"  class="form-control square" id="horizontal-form-7" name="sub-categorie">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -352,7 +350,7 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Klant wensen</label>
                                                                                 <div class="col-md-9">
-                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="klant_wensen"></textarea>
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="klant-wensen"></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -374,7 +372,7 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Gewenste aanvang</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="gewenste_aanvang">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="gewenste-aanvang">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
