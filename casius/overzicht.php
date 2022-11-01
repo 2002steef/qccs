@@ -352,7 +352,7 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Klant wensen</label>
                                                                                 <div class="col-md-9">
-                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="Klant_wensen"></textarea>
+                                                                                     <textarea id="horizontal-form-9" rows="6" class="form-control square" name="klant_wensen"></textarea>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

@@ -315,7 +315,7 @@ function klantModal()
                                                         <div class="col-12">
                                                             <div class="form-group row">
                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Opmerkingen</label>
-                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["notities"] ?></textarea>
+                                                                <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"><?= $klant["opmerkingen"] ?></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -332,7 +332,7 @@ function klantModal()
                                                             <div class="form-group row">
                                                                 <label class="col-md-6 col-form-label" for="Plaats">Klant score</label>
                                                                 <div class="col-md-6">
-                                                                    <input type="text" class="form-control square" value="<?= $klant["Klant_score"] ?>" id="Klant_score" name="Klant_score">
+                                                                    <input type="text" class="form-control square" value="<?= $klant["klant_score"] ?>" id="Klant_score" name="Klant_score">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -357,28 +357,20 @@ function klantModal()
     }
     if (isset($_POST['updateKlant'])) {
 
-         $voornaam = ucfirst($_POST['Voornaam']);
+         $voornaam = ucfirst($_POST['voornaam']);
         $straatnaam = ucfirst($_POST['straat']);
 
-        $query = "UPDATE `klanten` SET `Voornaam`=?,`Tussenvoegsel`=?,
-           `Achternaam`=?,`Email`=?,`Telefoonnummer`=?,`straat`=?,`postcode`=?
-           ,`huisnummer`=?,`huisnummerToevoeging`=?,`notities`=?
+        $query = "UPDATE `klanten` SET`match_datum`=?, `Voornaam`=?, `Tussenvoegsel`=?, `Achternaam`=?, `Email`=?, 
+            `Telefoonnummer`=?, `straat`=?, `postcode`=?, `plaats`=?, `huisnummer`=?, `huisnummerToevoeging`=?, `opmerkingen`=?,
+            `categorie`=?, `sub_categorie`=?, `titel`=?, `omschrijving`=?, `materiaal`=?, `klant_wensen`=?, `offertes`=?, `nagebeld`=?,
+            `gewenste_aanvang`=?, `afspraakdatum`=?, `klant_score`=?
            WHERE Project_ID = ?";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param(
-            'ssssssssssi',
-            $voornaam,
-            $_POST["tussenvoegsel"],
-            $_POST["achternaam"],
-            $_POST["email"],
-            $straatnaam,
-            $_POST['straat'],
-            $_POST["postcode"],
-            $_POST["huisnummer"],
-            $_POST["toevoeging"],
-            $_POST["notities"],
-            $_POST["klantID"]
-        );
+        $stmt->bind_param('sssssssssssssssssssssss',
+                $_POST["match_datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
+                ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
+                $_POST["opmerkingen"],$_POST["categorieSelect"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"]
+                ,$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$aanvraag,$klantScore);
         $stmt->execute();
         header("Location:overzicht.php");
     }
@@ -466,13 +458,16 @@ function ToevoegenKlanten()
 		        $tussenvoegsel = " ";
 	        }
 	        if(empty($_POST["klant_score"])){
-		        $toevoeging = " ";
+		        $klantScore = " ";
+	        } 
+            if(empty($_POST["opmerkingen"])){
+		        $opmerkingen = " ";
 	        }
             $stmt->bind_param('sssssssssssssssssssssss',
-                $_POST["match_datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
-                ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
-                $_POST["opmerkingen"],$_POST["categorie"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"]
-                ,$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$aanvraag,$klantScore);
+                $_POST["match_datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"],
+                $_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
+                $opmerkingen,$_POST["categorieSelect"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"],
+                $_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$aanvraag,$klantScore);
             $stmt->execute();
             $stmt->close();
 			header("Location:overzicht.php");
