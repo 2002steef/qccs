@@ -406,7 +406,7 @@ klantModal();
                                                             <div class="form-group row">
                                                                 <label class="col-md-6 col-form-label" for="Plaats">Klant score</label>
                                                                 <div class="col-md-6">
-                                                                    <input type="text" class="form-control square" " id="Klant_score" name="Klant_score">
+                                                                    <input type="text" class="form-control square" " id="Klant_score" name="klant_score">
                                                                 </div>
                                                             </div>
                                                         </div>
