@@ -490,38 +490,39 @@ function ToevoegenKlanten()
 }
 function ToevoegenTest()
 {
-if (isset($_POST["ToevoegenKlant"])) {
-	 global $mysqli;
-        $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param('s', $_POST["email"]);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    if (isset($_POST["ToevoegenKlant"])) {
+	     global $mysqli;
+            $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param('s', $_POST["email"]);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-        if ($result->num_rows > 0 ) {
-			header("Location: overzicht.php");
-			exit();
-        }else{
-            $stmt->close();
-			$sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`, `Email`,`Telefoonnummer`,`straat`,
-                    `postcode`,`huisnummer`,`huisnummerToevoeging`)
-                     VALUES
-                    (?,?,?,?,?,
-                     ?,?,?,?)";
-			$stmt = $mysqli->prepare($sql);
-			if(empty($_POST["tussenvoegsel"])){
-				$tussenvoegsel = " ";
-			}
-			if(empty($_POST["toevoeging"])){
-				$toevoeging = " ";
-			}
-			$stmt->bind_param('sssssssss',
-				$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
-				,$_POST["telefoonnummer"] ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$toevoeging);
-			$stmt->execute();
-			$stmt->Close();
-			header("Location:overzicht.php");
-			exit();
-		}
-    }
+            if ($result->num_rows > 0 ) {
+			    header("Location: overzicht.php");
+			    exit();
+            }else{
+                $stmt->close();
+			    $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`, `Email`,`Telefoonnummer`,`straat`,
+                        `postcode`,`huisnummer`,`huisnummerToevoeging`)
+                         VALUES
+                        (?,?,?,?,?,
+                         ?,?,?,?)";
+			    $stmt = $mysqli->prepare($sql);
+			    if(empty($_POST["tussenvoegsel"])){
+				    $tussenvoegsel = " ";
+			    }
+			    if(empty($_POST["toevoeging"])){
+				    $toevoeging = " ";
+			    }
+			    $stmt->bind_param('sssssssss',
+				    $_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
+				    ,$_POST["telefoonnummer"] ,$_POST["straatnaam"],$_POST["postcode"],$_POST["huisnummer"],$toevoeging);
+			    $stmt->execute();
+			    $stmt->Close();
+			    header("Location:overzicht.php");
+			    exit();
+		    }
+          
+     }
 }
