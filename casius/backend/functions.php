@@ -475,7 +475,6 @@ function ToevoegenKlanten()
         $stmt->close();
 	}
 }
-ToevoegenKlanten();
 function ToevoegenTest()
 {
     if (isset($_POST["toevoegenKlant"])) {
