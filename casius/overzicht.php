@@ -134,7 +134,7 @@ klantModal();
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
                     </div>
-                <form method="POST" action="overzicht.php">
+                <form method="POST">
                    <div class="modal-body">
                             <!-- Horizontal Form Layout starts -->
                             <div class="col-xl-12 col-lg-12">
@@ -416,7 +416,7 @@ klantModal();
                                 </div>
                             </div>
                             <!-- Horizontal Form Layout ends -->
-                        </div>
+                   </div>
                         <div class="modal-footer">
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                             <button type="submit" name="toevoegenKlant" class="btn btn-outline-light-gray">Opslaan</button>
