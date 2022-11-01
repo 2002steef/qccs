@@ -387,8 +387,6 @@ function klantModal()
                 $opmerkingen,$_POST["categorieSelect"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"]
                 ,$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$afspraakdatum,$klantScore,$_POST["Project_ID"]);
         $stmt->execute();
-        header("Location:overzicht.php");
-        exit();
     }
 }
 
