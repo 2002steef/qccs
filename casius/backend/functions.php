@@ -445,8 +445,8 @@ function ToevoegenKlanten()
         $stmt->bind_param('s', $_POST["email"]);
         $stmt->execute();
         $result = $stmt->get_result();
-
-        if ($result->num_rows > 0 ) {
+        echo "hallo";
+       /* if ($result->num_rows > 0 ) {
 			header("Location: overzicht.php");
 			exit();
         }else{
@@ -484,7 +484,7 @@ function ToevoegenKlanten()
                 $_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$afspraakdatum,$klantScore);
             $stmt->execute();
             $stmt->close();
-		}
+		}*/
 	}
 }
 ToevoegenKlanten();
