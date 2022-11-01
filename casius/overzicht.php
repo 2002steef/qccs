@@ -234,13 +234,13 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-5">Email</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="email" value="<?= $klant["Email"] ?>" class="form-control square" id="horizontal-form-5" name="email">
+                                                                                    <input type="email"  class="form-control square" id="horizontal-form-5" name="email">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-3 col-form-label" for="horizontal-form-7">Telefoonnummer</label>
                                                                                 <div class="col-md-9">
-                                                                                    <input type="text" value="<?= $klant["Telefoonnummer"] ?>" class="form-control square" id="horizontal-form-7" name="telefoonnummer">
+                                                                                    <input type="text"  class="form-control square" id="horizontal-form-7" name="telefoonnummer">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -260,7 +260,7 @@ klantModal();
                                                                             <div class="form-group row">
                                                                                 <label class="col-md-6 col-form-label" for="Project-ID">Project ID</label>
                                                                                 <div class="col-md-6">
-                                                                                    <input type="hidden" class="form-control square" value="<?= $klant["Project_ID"] ?>" id="Project_ID" name="klantID">
+                                                                                    <input type="hidden" class="form-control square" id="Project_ID" name="klantID">
                                                                                     <input type="text" class="form-control square" readonly " id="Project-ID" name="Project-ID">
                                                                                 </div>
                                                                             </div>
