@@ -286,6 +286,7 @@
 </form>
 <?PHP 
  error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+ include "backend/functions.php";
 if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
     $voornaam = $_POST["voornaam"];
