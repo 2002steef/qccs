@@ -462,7 +462,6 @@ klantModal();
         $stmt->bind_param('s',
             $_POST["voornaam"]);
         $stmt->execute();
-        $stmt->close();
 	}
     //ToevoegenTest();
     ?>
