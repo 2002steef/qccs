@@ -288,10 +288,10 @@
 
 if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
-    $sql = "INSERT INTO `klanten`(`Voornaam` ) 
+    $query = "INSERT INTO `klanten`(`Voornaam`) 
             VALUES
             (?)";
-    $stmt = $mysqli->prepare($sql);
+    $stmt = $mysqli->prepare($query);
     if(empty($_POST["tussenvoegsel"])){
 		$tussenvoegsel = " ";
 	}
