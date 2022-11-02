@@ -125,6 +125,7 @@ klantModal();
         <!-- Modals -->
         
             <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+            <form method="POST">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -133,7 +134,6 @@ klantModal();
                                 <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                             </button>
                         </div>
-              <form method="POST">
                     <div class="col-xl-12 col-lg-12">
                         <div class="card">
                             <div class="card-content">
@@ -399,9 +399,10 @@ klantModal();
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
                         <button type="submit" name="toevoegenKlant" class="btn btn-outline-light-gray">Opslaan</button>
                     </div>
-                    </form>
+                    
                     </div>
-                </div>
+                    </div>
+                </form>
             </div>
    
         </section>
