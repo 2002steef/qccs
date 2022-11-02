@@ -456,7 +456,7 @@ function ToevoegenKlanten()
                 $_POST["match-datum"],$_POST["voornaam"],$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"]
                 ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$_POST["toevoeging"],
                 $_POST["opmerkingen"],$_POST["categorieSelect"],$_POST["sub-categorie"],$_POST["titel"],$_POST["omschrijving"]
-                ,$_POST["materiaal"],$_POST["klant-wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$afspraakdatum,($_POST["klant_score"]);
+                ,$_POST["materiaal"],$_POST["klant-wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$_POST["afspraakdatum"],$_POST["klant_score"]);
         $stmt->execute();
         $stmt->close();
 	}
