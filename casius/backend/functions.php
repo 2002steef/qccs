@@ -440,16 +440,7 @@ function ToevoegenKlanten()
 {
     if (isset($_POST["toevoegenKlant"])) {
         global $mysqli;
-         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
-            $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param('s', $_POST["email"]);
-            $stmt->execute();
-            $result = $stmt->get_result();
-
-            if ($result->num_rows > 0 ) {
-			    header("Location: overzicht.php");
-			    exit();
-            }else{
+      
         $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Email`,
         `Telefoonnummer`, `straat`, `postcode`, `plaats`, `huisnummer`, `huisnummerToevoeging`, `omschrijving`,
         `categorie`, `sub_categorie`, `titel`, `opmerkingen`, `materiaal`, `klant_wensen`, `offertes`, `nagebeld`,
@@ -468,7 +459,6 @@ function ToevoegenKlanten()
                 ,$_POST["materiaal"],$_POST["klant-wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$_POST["afspraakdatum"],$_POST["klant_score"]);
         $stmt->execute();
         $stmt->close();
-        }
 	}
 }
 function ToevoegenTest()
