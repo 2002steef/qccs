@@ -437,32 +437,7 @@ klantModal();
     </div>
     <?php
     include "partials/footer.php";
- 
-    if (isset($_POST["toevoegenKlant"])) {
-        global $mysqli;
-        $sql = "INSERT INTO `klanten`(`Voornaam` ) 
-                VALUES
-                (?)";
-        $stmt = $mysqli->prepare($sql);
-        if(empty($_POST["tussenvoegsel"])){
-		    $tussenvoegsel = " ";
-	    }
-	    if(empty($_POST["toevoeging"])){
-		    $toevoeging = " ";
-	    }
-        if(empty($_POST["afspraakdatum"])){
-		    $afspraakdatum = " ";
-	    }
-	    if(empty($_POST["klant_score"])){
-		    $klantScore = " ";
-	    } 
-        if(empty($_POST["opmerkingen"])){
-		    $opmerkingen = " ";
-	    }
-        $stmt->bind_param('s',
-            $_POST["voornaam"]);
-        $stmt->execute();
-	}
+    ToevoegenKlanten();
     //ToevoegenTest();
     ?>
     <script>
