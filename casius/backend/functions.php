@@ -453,30 +453,7 @@ function UploadPic()
 }
 
 function ToevoegenKlanten()
-{
-
-    if (isset($_POST["toevoegenKlant"]))
-    {
-        global $mysqli;
-
-        $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Email`,
-        `Telefoonnummer`, `straat`, `postcode`, `plaats`, `huisnummer`, `huisnummerToevoeging`, `omschrijving`,
-        `categorie`, `sub_categorie`, `titel`, `opmerkingen`, `materiaal`, `klant_wensen`, `offertes`, `nagebeld`,
-        `gewenste_aanvang`, `afspraakdatum`, `klant_score`)
-        VALUES
-        (?,?,?,?,?,
-         ?,?,?,?,?,
-         ?,?,?,?,?,
-         ?,?,?,?,?,
-         ?,?,?)";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param('sssssssssssssssssssssss', $_POST["match-datum"], $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["email"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["plaats"], $_POST["huisnummer"], $_POST["toevoeging"], $_POST["omschrijving"], $_POST["categorieSelect"], $_POST["sub-categorie"], $_POST["titel"], $_POST["opmerkingen"], $_POST["materiaal"], $_POST["klant-wensen"], $_POST["offertes"], $_POST["nagebeld"], $_POST["gewenste-aanvang"], $_POST["afspraakdatum"], $_POST["klant_score"]);
-        $stmt->execute();
-        $stmt->close();
-    }
-}
-function ToevoegenTest()
-{ ?>
+{?>
 <div aria-hidden="true" aria-labelledby="myModalLabel17" class="modal fade text-left" id="large" role="dialog" tabindex="-1">
 			<form method="post">
 				<div class="modal-dialog modal-xl" role="document">
@@ -757,47 +734,25 @@ function ToevoegenTest()
 				</div>
 			</form>
 		</div>
-
 <?php
     if (isset($_POST["toevoegenKlant"]))
     {
         global $mysqli;
-        $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
+        $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Email`,
+        `Telefoonnummer`, `straat`, `postcode`, `plaats`, `huisnummer`, `huisnummerToevoeging`, `omschrijving`,
+        `categorie`, `sub_categorie`, `titel`, `opmerkingen`, `materiaal`, `klant_wensen`, `offertes`, `nagebeld`,
+        `gewenste_aanvang`, `afspraakdatum`, `klant_score`)
+        VALUES
+        (?,?,?,?,?,
+         ?,?,?,?,?,
+         ?,?,?,?,?,
+         ?,?,?,?,?,
+         ?,?,?)";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param('s', $_POST["email"]);
+        $stmt->bind_param('sssssssssssssssssssssss', $_POST["match-datum"], $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"], $_POST["email"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["plaats"], $_POST["huisnummer"], $_POST["toevoeging"], $_POST["omschrijving"], $_POST["categorieSelect"], $_POST["sub-categorie"], $_POST["titel"], $_POST["opmerkingen"], $_POST["materiaal"], $_POST["klant-wensen"], $_POST["offertes"], $_POST["nagebeld"], $_POST["gewenste-aanvang"], $_POST["afspraakdatum"], $_POST["klant_score"]);
         $stmt->execute();
-        $result = $stmt->get_result();
-
-        if ($result->num_rows > 0)
-        {
-            header("Location: overzicht.php");
-            exit();
-        }
-        else
-        {
-            $stmt->close();
-            $sql = "INSERT INTO `klanten`(`Voornaam`,`Tussenvoegsel`,`Achternaam`, `Email`,`Telefoonnummer`,`straat`,
-                        `postcode`,`huisnummer`,`huisnummerToevoeging`)
-                         VALUES
-                        (?,?,?,?,?,
-                         ?,?,?,?)";
-            $stmt = $mysqli->prepare($sql);
-            if (empty($_POST["tussenvoegsel"]))
-            {
-                $tussenvoegsel = " ";
-            }
-            if (empty($_POST["toevoeging"]))
-            {
-                $toevoeging = " ";
-            }
-            $stmt->bind_param('sssssssss', $_POST["voornaam"], $tussenvoegsel, $_POST["achternaam"], $_POST["email"], $_POST["telefoonnummer"], $_POST["straatnaam"], $_POST["postcode"], $_POST["huisnummer"], $toevoeging);
-            $stmt->execute();
-            $stmt->Close();
-            header("Location:overzicht.php");
-            exit();
-        }
-
+        $stmt->close();
     }
 }
-ToevoegenTest();
+
 
