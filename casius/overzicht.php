@@ -392,19 +392,18 @@ klantModal();
                                                     </div>
                                                 </div>
                                             </div>
-                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                         <!-- Horizontal Form Layout ends -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
-                        <button type="submit" name="toevoegenKlant" class="btn btn-outline-light-gray">Opslaan</button>
-                    </div>
-                    
-                    </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
+                                <button type="submit" name="toevoegenKlant" class="btn btn-outline-light-gray">Opslaan</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
