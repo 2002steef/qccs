@@ -124,7 +124,7 @@ klantModal();
     <div class="col-lg-3 col-md-6 col-12">
         <!-- Button trigger modal -->
         <!-- Modals -->
-        <form method="POST">
+        <form method="POST" action="functions.php">
             <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
