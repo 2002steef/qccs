@@ -120,10 +120,14 @@ klantModal();
         <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
     </div>
-    <div class="col-lg-3 col-md-6 col-12">
+   
+    <!-- /////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+     <div class="col-lg-3 col-md-6 col-12">
         <!-- Button trigger modal -->
         <!-- Modals -->
-        
             <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
             <form method="POST">
                 <div class="modal-dialog modal-xl" role="document">
@@ -404,16 +408,7 @@ klantModal();
                     </div>
                 </form>
             </div>
-   
         </section>
-    </div>
-    <!-- /////////////////////////////////////////////////////////////////////////////-->
-
-    <div class="sidenav-overlay"></div>
-    <div class="drag-target"></div>
-    <div class="col-lg-3 col-md-6 col-12">
-        <!-- Modal -->
-
     </div>
     <?php
     include "partials/footer.php";
