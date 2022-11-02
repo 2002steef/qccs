@@ -282,7 +282,7 @@ if (isset($_POST["toevoegenKlant"])) {
          ?,?,?,?,?,
          ?,?,?*/)";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param('sssss',
+        $stmt->bind_param('sss',
                 $_POST["match-datum"],$_POST["voornaam"],$_POST["tussenvoegsel"]/*,$_POST["achternaam"],$_POST["email"]
                 ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$_POST["toevoeging"],
                 $_POST["opmerkingen"],$_POST["categorieSelect"],$_POST["sub-categorie"],$_POST["titel"],$_POST["omschrijving"]
