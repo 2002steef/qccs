@@ -451,26 +451,11 @@ function ToevoegenKlanten()
          ?,?,?,?,?,
          ?,?,?)";
         $stmt = $mysqli->prepare($sql);
-        if(empty($_POST["tussenvoegsel"])){
-		    $tussenvoegsel = " ";
-	    }
-	    if(empty($_POST["toevoeging"])){
-		    $toevoeging = " ";
-	    }
-        if(empty($_POST["afspraakdatum"])){
-		    $afspraakdatum = " ";
-	    }
-	    if(empty($_POST["klant_score"])){
-		    $klantScore = " ";
-	    } 
-        if(empty($_POST["opmerkingen"])){
-		    $opmerkingen = " ";
-	    }
-        $stmt->bind_param('sssssssssssssssssssssss',
-                $_POST["match-datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
-                ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
-                $opmerkingen,$_POST["categorieSelect"],$_POST["sub-categorie"],$_POST["titel"],$_POST["omschrijving"]
-                ,$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$afspraakdatum,$klantScore);
+         $stmt->bind_param('sssssssssssssssssssssss',
+                $_POST["match-datum"],$_POST["voornaam"],$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"]
+                ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$_POST["toevoeging"],
+                $_POST["opmerkingen"],$_POST["categorieSelect"],$_POST["sub-categorie"],$_POST["titel"],$_POST["omschrijving"]
+                ,$_POST["materiaal"],$_POST["klant-wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$afspraakdatum,($_POST["klant_score"]);
         $stmt->execute();
         $stmt->close();
 	}

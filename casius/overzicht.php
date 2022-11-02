@@ -47,7 +47,7 @@ klantModal();
                                                 </a>
                                             </li>
                                             <li class="nav-tabs">
-                                                <a type="button" class="nav-link d-flex align-items-end" href="toevoegen.php">
+                                                <a type="button" class="nav-link d-flex align-items-end" data-toggle="modal" data-target="#large">
                                                     <i class="ft-plus mr-1"></i>
                                                     <span class="d-none d-sm-block text-light-gray">Toevoegen</span>
                                                 </a>
