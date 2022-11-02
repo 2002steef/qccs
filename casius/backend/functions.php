@@ -440,7 +440,7 @@ function ToevoegenKlanten()
 {
     if (isset($_POST["toevoegenKlant"])) {
         global $mysqli;
-        $sql = "INSERT INTO `klanten`(`match_datum`, ) 
+        $sql = "INSERT INTO `klanten`(`match_datum` ) 
                 VALUES
                 (?)";
         $stmt = $mysqli->prepare($sql);
