@@ -291,11 +291,7 @@ if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
         $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`)
         VALUES
-        (?,?,?,?,?,
-         ?,?,?,?,?,
-         ?,?,?,?,?,
-         ?,?,?,?,?,
-         ?,?,?)";
+        (?,?)";
         $stmt = $mysqli->prepare($sql);
         if(empty($_POST["tussenvoegsel"])){
 		    $tussenvoegsel = " ";
