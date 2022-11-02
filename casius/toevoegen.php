@@ -292,21 +292,6 @@ if (isset($_POST["toevoegenKlant"])) {
             VALUES
             (?)";
     $stmt = $mysqli->prepare($query);
-    if(empty($_POST["tussenvoegsel"])){
-		$tussenvoegsel = " ";
-	}
-	if(empty($_POST["toevoeging"])){
-		$toevoeging = " ";
-	}
-    if(empty($_POST["afspraakdatum"])){
-		$afspraakdatum = " ";
-	}
-	if(empty($_POST["klant_score"])){
-		$klantScore = " ";
-	} 
-    if(empty($_POST["opmerkingen"])){
-		$opmerkingen = " ";
-	}
     $stmt->bind_param('s',
         $_POST["voornaam"]);
     $stmt->execute();
