@@ -47,7 +47,7 @@ klantModal();
                                                 </a>
                                             </li>
                                             <li class="nav-tabs">
-                                                <a type="button" class="nav-link d-flex align-items-end" data-toggle="modal" data-target="#large">
+                                                <a type="button" class="nav-link d-flex align-items-end" href="toevoegen.php">
                                                     <i class="ft-plus mr-1"></i>
                                                     <span class="d-none d-sm-block text-light-gray">Toevoegen</span>
                                                 </a>
@@ -124,7 +124,7 @@ klantModal();
     <div class="col-lg-3 col-md-6 col-12">
         <!-- Button trigger modal -->
         <!-- Modals -->
-        <form method="POST">
+        
             <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
@@ -134,7 +134,7 @@ klantModal();
                                 <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                             </button>
                         </div>
-                
+                <form method="POST">
                        <div class="modal-body">
                                 <!-- Horizontal Form Layout starts -->
                                 <div class="col-xl-12 col-lg-12">
