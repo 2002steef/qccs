@@ -134,10 +134,11 @@ klantModal();
                                 <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                             </button>
                         </div>
-                <form method="POST">
+                
                        <div class="modal-body">
                                 <!-- Horizontal Form Layout starts -->
                                 <div class="col-xl-12 col-lg-12">
+                                <form method="POST">
                                     <div class="card">
                                         <div class="card-content">
                                             <div class="card-body">
@@ -422,9 +423,10 @@ klantModal();
                                 <button type="submit" name="toevoegenKlant" class="btn btn-outline-light-gray">Opslaan</button>
                             </div>
                     </div>
+                       </form>
                 </div>
             </div>
-        </form>
+     
         </section>
     </div>
     <!-- /////////////////////////////////////////////////////////////////////////////-->
