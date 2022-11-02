@@ -405,8 +405,8 @@ klantModal();
                             </div>
                         </div>
                     </div>
-                </form>
             </div>
+            </form>
         </section>
     </div>
     <?php
