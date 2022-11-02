@@ -290,10 +290,7 @@ if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
     $query = "INSERT INTO `klanten`(`Voornaam`) 
             VALUES
-            (?)";
-    $stmt = $mysqli->prepare($query);
-    $stmt->bind_param('s',
-        $_POST["voornaam"]);
+            ($_POST["voornaam"])";
     $stmt->execute();
     $stmt->close();
 }
