@@ -289,7 +289,7 @@
 if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
     $voornaam = $_POST["voornaam"];
-    $query = "INSERT INTO `klanten`(`Voornaam`) 
+    $stmt = "INSERT INTO `klanten`(`Voornaam`) 
             VALUES
             ($voornaam)";
     $stmt->execute();
