@@ -466,7 +466,7 @@ function ToevoegenKlanten()
         if(empty($_POST["opmerkingen"])){
 		    $opmerkingen = " ";
 	    }
-        $stmt->bind_param('sssssssssssssssssssssssi',
+        $stmt->bind_param('sssssssssssssssssssssss',
                 $_POST["match_datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
                 ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
                 $opmerkingen,$_POST["categorieSelect"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"]
