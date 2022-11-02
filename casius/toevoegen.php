@@ -285,7 +285,7 @@
 </div>
 </form>
 <?PHP 
-
+ error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
     $voornaam = $_POST["voornaam"];
