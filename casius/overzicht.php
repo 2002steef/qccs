@@ -386,7 +386,7 @@ klantModal();
                                                             <div class="col-12">
                                                                 <div class="form-group row">
                                                                     <label class="col-md-3 col-form-label" for="horizontal-form-7">Opmerkingen</label>
-                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="notities"></textarea>
+                                                                    <textarea id="horizontal-form-9" rows="6" class="form-control square" name="opmerkingen"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
