@@ -440,25 +440,35 @@ function ToevoegenKlanten()
 {
     if (isset($_POST["toevoegenKlant"])) {
         global $mysqli;
-        $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Email`/*,
-        `Telefoonnummer`, `straat`, `postcode`, `plaats`, `huisnummer`, `huisnummerToevoeging`, `opmerkingen`,
-        `categorie`, `sub_categorie`, `titel`, `omschrijving`, `materiaal`, `klant_wensen`, `offertes`, `nagebeld`,
-        `gewenste_aanvang`, `afspraakdatum`, `klant_score`*/)
+         $sql = "SELECT * FROM `klanten` WHERE `Email` = ? ";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param('s', $_POST["email"]);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0 ) {
+			    header("Location: overzicht.php");
+			    exit();
+            }else{
+        $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Email`,
+        `Telefoonnummer`, `straat`, `postcode`, `plaats`, `huisnummer`, `huisnummerToevoeging`, `omschrijving`,
+        `categorie`, `sub_categorie`, `titel`, `opmerkingen`, `materiaal`, `klant_wensen`, `offertes`, `nagebeld`,
+        `gewenste_aanvang`, `afspraakdatum`, `klant_score`)
         VALUES
-        (?,?,?,?,?/*,
+        (?,?,?,?,?,
          ?,?,?,?,?,
          ?,?,?,?,?,
          ?,?,?,?,?,
-         ?,?,?*/)";
+         ?,?,?)";
         $stmt = $mysqli->prepare($sql);
-    
-        $stmt->bind_param('sssss',
-                $_POST["match-datum"],$_POST["voornaam"],$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"]/*
+        $stmt->bind_param('sssssssssssssssssssssss',
+                $_POST["match-datum"],$_POST["voornaam"],$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"]
                 ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$_POST["toevoeging"],
-                $_POST["opmerkingen"],$_POST["categorieSelect"],$_POST["sub-categorie"],$_POST["titel"],$_POST["omschrijving"]
-                ,$_POST["materiaal"],$_POST["klant-wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$_POST["afspraakdatum"],$_POST["klant_score"]*/);
+                $_POST["omschrijving"],$_POST["categorieSelect"],$_POST["sub-categorie"],$_POST["titel"],$_POST["opmerkingen"]
+                ,$_POST["materiaal"],$_POST["klant-wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$_POST["afspraakdatum"],$_POST["klant_score"]);
         $stmt->execute();
         $stmt->close();
+        }
 	}
 }
 function ToevoegenTest()
