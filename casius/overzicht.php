@@ -437,8 +437,7 @@ klantModal();
     </div>
     <?php
     include "partials/footer.php";
-    function ToevoegenKlanten()
-{
+ 
     if (isset($_POST["toevoegenKlant"])) {
         global $mysqli;
         $sql = "INSERT INTO `klanten`(`Voornaam` ) 
@@ -465,7 +464,6 @@ klantModal();
         $stmt->execute();
         $stmt->close();
 	}
-}
     //ToevoegenTest();
     ?>
     <script>
