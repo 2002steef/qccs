@@ -124,7 +124,7 @@ klantModal();
     <div class="col-lg-3 col-md-6 col-12">
         <!-- Button trigger modal -->
         <!-- Modals -->
-        <form method="POST" action="functions.php">
+        <form method="POST">
             <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
@@ -437,7 +437,35 @@ klantModal();
     </div>
     <?php
     include "partials/footer.php";
-    
+    function ToevoegenKlanten()
+{
+    if (isset($_POST["toevoegenKlant"])) {
+        global $mysqli;
+        $sql = "INSERT INTO `klanten`(`Voornaam` ) 
+                VALUES
+                (?)";
+        $stmt = $mysqli->prepare($sql);
+        if(empty($_POST["tussenvoegsel"])){
+		    $tussenvoegsel = " ";
+	    }
+	    if(empty($_POST["toevoeging"])){
+		    $toevoeging = " ";
+	    }
+        if(empty($_POST["afspraakdatum"])){
+		    $afspraakdatum = " ";
+	    }
+	    if(empty($_POST["klant_score"])){
+		    $klantScore = " ";
+	    } 
+        if(empty($_POST["opmerkingen"])){
+		    $opmerkingen = " ";
+	    }
+        $stmt->bind_param('s',
+            $_POST["voornaam"]);
+        $stmt->execute();
+        $stmt->close();
+	}
+}
     //ToevoegenTest();
     ?>
     <script>
