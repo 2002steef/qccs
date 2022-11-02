@@ -124,7 +124,7 @@ klantModal();
     <div class="col-lg-3 col-md-6 col-12">
         <!-- Button trigger modal -->
         <!-- Modals -->
-        
+        <form medthod="POST">
             <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
@@ -138,7 +138,6 @@ klantModal();
                        <div class="modal-body">
                                 <!-- Horizontal Form Layout starts -->
                                 <div class="col-xl-12 col-lg-12">
-                                <form method="POST">
                                     <div class="card">
                                         <div class="card-content">
                                             <div class="card-body">
@@ -423,10 +422,9 @@ klantModal();
                                 <button type="submit" name="toevoegenKlant" class="btn btn-outline-light-gray">Opslaan</button>
                             </div>
                     </div>
-                       </form>
                 </div>
             </div>
-     
+     </form>
         </section>
     </div>
     <!-- /////////////////////////////////////////////////////////////////////////////-->
