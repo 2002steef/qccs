@@ -293,5 +293,5 @@ if (isset($_POST["toevoegenKlant"])) {
             VALUES
             ($voornaam)";
     $stmt->execute();
-    $stmt->close();
+    $stmt->close(); 
 }
