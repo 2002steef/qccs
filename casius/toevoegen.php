@@ -288,9 +288,10 @@
 
 if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
+    $voornaam = $_POST["voornaam"];
     $query = "INSERT INTO `klanten`(`Voornaam`) 
             VALUES
-            ($_POST["voornaam"])";
+            ($voornaam)";
     $stmt->execute();
     $stmt->close();
 }
