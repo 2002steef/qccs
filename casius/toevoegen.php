@@ -289,9 +289,16 @@
  include "backend/db.php";
 if (isset($_POST["toevoegenKlant"])) {
     global $mysqli;
-        $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`)
+        $sql = "INSERT INTO `klanten`(`match_datum`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Email`,
+        `Telefoonnummer`, `straat`, `postcode`, `plaats`, `huisnummer`, `huisnummerToevoeging`, `opmerkingen`,
+        `categorie`, `sub_categorie`, `titel`, `omschrijving`, `materiaal`, `klant_wensen`, `offertes`, `nagebeld`,
+        `gewenste_aanvang`, `afspraakdatum`, `klant_score`)
         VALUES
-        (?,?)";
+        (?,?,?,?,?,
+         ?,?,?,?,?,
+         ?,?,?,?,?,
+         ?,?,?,?,?,
+         ?,?,?)";
         $stmt = $mysqli->prepare($sql);
         if(empty($_POST["tussenvoegsel"])){
 		    $tussenvoegsel = " ";
@@ -308,8 +315,11 @@ if (isset($_POST["toevoegenKlant"])) {
         if(empty($_POST["opmerkingen"])){
 		    $opmerkingen = " ";
 	    }
-        $stmt->bind_param('ss'
-                $_POST["match_datum"],$_POST["voornaam"]);
+        $stmt->bind_param('sssssssssssssssssssssss'
+                $_POST["match_datum"],$_POST["voornaam"],$tussenvoegsel,$_POST["achternaam"],$_POST["email"]
+                ,$_POST["telefoonnummer"] ,$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$toevoeging,
+                $opmerkingen,$_POST["categorieSelect"],$_POST["sub-categorie"],$_POST["titel"],$_POST["omschrijving"]
+                ,$_POST["materiaal"],$_POST["klant-wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste-aanvang"],$afspraakdatum,$klantScore);
         $stmt->execute();
         $stmt->close();
 }
