@@ -1,7 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
-
+ToevoegenKlanten();
 klantInfo();
 klantModal();
     include "partials/header.php";
@@ -437,7 +437,7 @@ klantModal();
     </div>
     <?php
     include "partials/footer.php";
-    ToevoegenKlanten();
+    
     //ToevoegenTest();
     ?>
     <script>
