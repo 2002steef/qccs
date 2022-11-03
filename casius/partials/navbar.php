@@ -28,13 +28,6 @@ $row = userInfo();
             <div class="navbar-container">
                 <div class="collapse navbar-collapse d-block" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="i18n-dropdown dropdown nav-item mr-2"><a class="nav-link d-flex align-items-center dropdown-toggle dropdown-language text-light-gray" id="dropdown-flag" href="javascript:;" data-toggle="dropdown"><img class="langimg selected-flag" src="app-assets/img/flags/nl.png" alt="flag"><span class="selected-language d-md-flex d-none light-gray">Nederlands</span></a>
-                            <div class="dropdown-menu dropdown-menu-right text-left" aria-labelledby="dropdown-flag">
-                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="en"><img class="langimg mr-2" src="app-assets/img/flags/us.png" alt="flag"><span class="font-small-3 light-gray">English</span></a>
-                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="es"><img class="langimg mr-2" src="app-assets/img/flags/nl.png" alt="flag"><span class="font-small-3 light-gray">Nederlands</span></a>
-                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="pt"><img class="langimg mr-2" src="app-assets/img/flags/pt.png" alt="flag"><span class="font-small-3 light-gray">Portuguese</span></a>
-                            <a class="dropdown-item text-light-gray" href="javascript:;" data-language="de"><img class="langimg mr-2" src="assets/img/flags/de.png" alt="flag"><span class="font-small-3 light-gray">German</span></a></div>
-                        </li>
                         <li class="dropdown nav-item mr-1"><a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                                 <div class="user d-md-flex d-none mr-2"><span class="text-right text-light-gray">Jerry</span><span class="text-right text-muted font-small-3 light-gray">Beschikbaar</span></div>
 
@@ -64,8 +57,8 @@ $row = userInfo();
 
         <div class="sidebar-header">
             <div class="logo clearfix"><a class="logo-text float-left" href="overzicht.php">
-                    <div class="logo-img"><img height="50" width="50" src="app-assets/img/logo_qccs.png" alt="BMA Logo" /><span class="text light-gray">Casius</span></div>
-                </a><a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i class="toggle-icon ft-toggle-right light-gray" data-toggle="expanded"></i></a><a class="nav-close d-block d-lg-block d-xl-none" id="sidebarClose" href="javascript:;"><i class="ft-x"></i></a></div>
+                    <div class="logo-img"><img height="50" width="150" src="app-assets/img/Logo-experstatwork-.png" alt="experstatwork Logo" /></div>
+                </a><a class="nav-toggle text-light-gray d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i class="toggle-icon ft-toggle-right text-light-gray" data-toggle="expanded"></i></a><a class="nav-close d-block d-lg-block d-xl-none" id="sidebarClose" href="javascript:;"><i class="ft-x"></i></a></div>
         </div>
         <!--     Sidebar Header Ends-->
         <!--     / main menu header-->

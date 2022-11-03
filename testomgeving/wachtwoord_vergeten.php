@@ -2,32 +2,6 @@
 include "backend/functions.php";
 include "partials/header.php";
 
-if (isset($_POST['subforgot'])) {
-    $email = $_REQUEST['email'];
-    global $mysqli;
-    $stmt = $mysqli->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    if ($result) {
-        $token = bin2hex(random_bytes(50));
-        $stmt = $mysqli->prepare("UPDATE users SET reset_token = ? WHERE email = ?");
-        $stmt->bind_param("ss", $token, $email);
-        $stmt->execute();
-        $stmt->close();
-        if ($email > 0) {
-            $to = $email;
-            $subject = "Wachtwoord vergeten";
-            $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " <br> Reset your password with this link .Click or open in new tab<br>";
-            $msg = wordwrap($msg, 70);
-            $headers = "From: Admin@qccs.nl";
-            mail($to, $subject, $msg, $headers);
-            header('location:index.php');
-        } else echo "'$email' komt niet voor in de database";
-    }
-}
-
-
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
@@ -40,12 +14,10 @@ if (isset($_POST['subforgot'])) {
 
 <!-- BEGIN : Body-->
 
-<body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static layout-dark layout-transparent bg-glass-2 blank-page"
+<body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static blank-page"
       data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu">
 <!-- ////////////////////////////////////////////////////////////////////////////-->
-<div class="main-panel">
     <!-- BEGIN : Main Content-->
-    <div class="main-content">
         <!--Forgot Password Starts-->
         <section id="forgot-password" class="auth-height">
             <div class="row full-height-vh m-0 d-flex align-items-center justify-content-center">
@@ -83,13 +55,10 @@ if (isset($_POST['subforgot'])) {
             </div>
         </section>
         <!--Forgot Password Ends-->
-    </div>
     <?php
     include "partials/footer.php";
     ?>
     <!-- END : End Main Content-->
-</div>
-
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 <!-- END : Body-->
 </body>

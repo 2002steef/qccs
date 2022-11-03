@@ -1,4 +1,7 @@
 <?php
+// session_start();
+
+include("functions.php");
 
 function createRandomVoucher(
     int $length = 10,
@@ -21,38 +24,41 @@ function InsertVoucher($voucher)
     $username = "relatietest";
     $password = "Rb4x4y7*3";
     $db = "test_relatiebeheer";
-    $userID = "3";
-    $masseuseID = "1";
+    $userID = $_SESSION["id"];
+    $masseuseID = $_POST['modalMasseuseID'];
     $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
-    // if ($mysqli->num_rows > 0) {
-    //     echo ('<script>console.log("toegevoegd")</script>');
-    // }
 }
 
-function getEmail(){
+function getEmail()
+{
     $medewerkerID = $_SESSION["id"];
     $sql = "SELECT email FROM medewerkers where userID = $medewerkerID";
     global $mysqli;
-    $stmt = $mysqli->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    while ($rowMd = $result->fetch_array()) {
-        return($rowMd['email']);
-    }
+    $result = $mysqli->query($sql);
+    $rows = $result->fetch_assoc();
+    return($rows['email']);
+    // return $result;
 }
 
 
-function voucherGebruiken(){
+function voucherGebruiken()
+{
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    $email = 'steefertjappie@gmail.com';
-    if ($email) {
-        $to = $email;
-        $subject = "Voucher code";
-        $msg = "Uw voucher code is . $voucher ";
-        $msg = wordwrap($msg, 70);
-        $headers = "From: Admin@bma.nl";
-        mail($to, $subject, $msg, $headers);
-    }
+    $email = getEmail();
+    $to = $email;
+    $subject = "Voucher code";
+    $msg = "Uw voucher code is . $voucher ";
+    $msg = wordwrap($msg, 70);
+    $headers = "From: Admin@bma.nl";
+    // echo($to. " " .$subject. " " . $msg. " " . $headers);
+    mail($to, $subject, $msg, $headers);
+    header("location: ../voucherGebruikt.php");
 }
+
+VoucherGebruiken();
+
+// getEmail();
+
+    // mail('steefertjappie@gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl');
