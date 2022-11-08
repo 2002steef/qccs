@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     }
                 }
-                else{
+                else {
                     // Incorrect password
                     header("Location:../index.php?login=foutecombi");
                 }
