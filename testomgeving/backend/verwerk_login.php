@@ -147,10 +147,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             }
-            else {
+            echo ("test");
+            // else {
                 // Incorrect password
-                header("Location:../index.php?login=foutecombi");
-            }
+                // header("Location:../index.php?login=foutecombi");
+            // }
             $stmtMs->close();
         }
     }
