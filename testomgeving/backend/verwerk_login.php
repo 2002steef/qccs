@@ -146,9 +146,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     }
                 }
+                elseif($stmtMs->num_rows < 1 ) {
+                    // Incorrect password
+                    header("Location:../index.php?login=foutecombi");
+                }
             }
-            // echo ("test");
-            else {
+            elseif($stmtMs->num_rows < 1 ) {
                 // Incorrect password
                 header("Location:../index.php?login=foutecombi");
             }
