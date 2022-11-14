@@ -10,7 +10,7 @@ include "partials/header.php";
 ?>
 <!-- BEGIN : Body-->
 
-<body class="vertical-layout vertical-menu 2-columns navbar-static" data-bg-img="bg-glass-1" data-menu="vertical-menu">
+<body class="vertical-layout vertical-menu navbar-static" data-bg-img="bg-glass-1" data-menu="vertical-menu">
     <?php
     include "partials/navbar.php";
     ?>
