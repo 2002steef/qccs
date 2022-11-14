@@ -5,28 +5,17 @@ $masseuse = GetMasseuse();
 
 <!DOCTYPE html>
 <html class="loading" lang="en">
-
-<!-- BEGIN : Head-->
 <?php
 include "partials/header.php";
 ?>
-<!-- END : Head-->
-
 <!-- BEGIN : Body-->
 
 <body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 2-columns  navbar-static layout-dark layout-transparent bg-glass-2" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="2-columns">
-
-    <!-- Navbar (Header) begins -->
     <?php
     include "partials/navbar.php";
     ?>
-    <!-- Navbar (Header) Ends-->
-
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">
-
-
-
         <div class="main-panel">
             <!-- BEGIN : Main Content-->
             <div class="main-content">
@@ -90,22 +79,14 @@ include "partials/header.php";
                 </div>
             </div>
             <!-- END : End Main Content-->
-
-            <!-- BEGIN : Footer-->
-            <?php 
-            include "partials/footer.php";
-            ?>
-            <!-- End : Footer-->
             <!-- Scroll to top button -->
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
-
         </div>
     </div>
-    <!-- ////////////////////////////////////////////////////////////////////////////-->
-
-    <!-- <div class="sidenav-overlay"></div>
-    <div class="drag-target"></div> -->
-
+    
+    <?php
+    include "partials/footer.php";
+    ?>
 </body>
 <!-- END : Body-->
 
