@@ -14,6 +14,11 @@ include "partials/header.php";
 <!-- BEGIN : Body-->
 
 <body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 2-columns  navbar-static layout-dark layout-transparent bg-glass-2" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="2-columns">
+
+    <!-- Navbar (Header) begins -->
+    <?php
+    include "partials/navbar.php";
+    ?>
     <!-- Navbar (Header) Ends-->
 
     <!-- ////////////////////////////////////////////////////////////////////////////-->
@@ -53,20 +58,20 @@ include "partials/header.php";
 
 
                                                         <!-- <div class="col-md-6 col-12"> -->
-                                                            <!-- <fieldset class="form-group">
+                                                        <!-- <fieldset class="form-group">
                                                                 <label for="customSelectMs">Masseuse</label>
                                                                 <select name="masseuseVerzilveren" class="custom-select" id="customSelectMs">
                                                                     <option selected hidden>Kies een masseuse...</option>
-                                                                   <?php 
-                                                                //    GetMasseuseInfo() 
-                                                                   ;?>
+                                                                   <?php
+                                                                        //    GetMasseuseInfo() 
+                                                                    ; ?>
                                                                 </select>
                                                             </fieldset> -->
                                                         <!-- </div> -->
 
 
 
-                                                        
+
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherVerzilveren">verzilver Voucher</button>
@@ -86,9 +91,9 @@ include "partials/header.php";
             <!-- END : End Main Content-->
 
             <!-- BEGIN : Footer-->
-            <footer class="footer undefined undefined">
-                <p class="clearfix text-muted m-0"><span>Copyright &copy; 2020 &nbsp;</span><a href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" id="pixinventLink" target="_blank">PIXINVENT</a><span class="d-none d-sm-inline-block">, All rights reserved.</span></p>
-            </footer>
+            <?php 
+            include "partials/footer.php";
+            ?>
             <!-- End : Footer-->
             <!-- Scroll to top button -->
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
