@@ -14,31 +14,31 @@ include "backend/voucherFunctions.php";
     <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Voucher verzilveren</title>
-    <link rel="shortcut icon" type="image/x-icon" href="app-assets/img/ico/favicon.ico">
-    <link rel="shortcut icon" type="image/png" href="app-assets/img/ico/favicon-32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="assets/img/ico/favicon-32.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
     <!-- BEGIN VENDOR CSS-->
     <!-- font icons-->
-    <link rel="stylesheet" type="text/css" href="app-assets/fonts/feather/style.min.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/perfect-scrollbar.min.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/prism.min.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/switchery.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/css/switchery.min.css">
     <!-- END VENDOR CSS-->
     <!-- BEGIN APEX CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/layout-dark.css">
-    <link rel="stylesheet" href="app-assets/css/plugins/switchery.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/themes/layout-dark.css">
+    <link rel="stylesheet" href="assets/css/plugins/switchery.css">
     <!-- END APEX CSS-->
     <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/horizontal-menu.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/core/menu/horizontal-menu.css">
     <!-- END Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -135,17 +135,17 @@ include "backend/voucherFunctions.php";
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
     <!-- BEGIN VENDOR JS-->
-    <script src="app-assets/vendors/js/vendors.min.js"></script>
-    <script src="app-assets/vendors/js/switchery.min.js"></script>
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <script src="assets/vendors/js/switchery.min.js"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN APEX JS-->
-    <script src="app-assets/js/core/app-menu.js"></script>
-    <script src="app-assets/js/core/app.js"></script>
-    <script src="app-assets/js/notification-sidebar.js"></script>
-    <script src="app-assets/js/customizer.js"></script>
-    <script src="app-assets/js/scroll-top.js"></script>
+    <script src="assets/js/core/app-menu.js"></script>
+    <script src="assets/js/core/app.js"></script>
+    <script src="assets/js/notification-sidebar.js"></script>
+    <script src="assets/js/customizer.js"></script>
+    <script src="assets/js/scroll-top.js"></script>
     <!-- END APEX JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     <!-- END PAGE LEVEL JS-->
