@@ -1,5 +1,5 @@
 <?php
-include "backend/functions.php";
+include "functions.php";
 // if (isset($_POST['VoucherVerzilveren'])) {
     $servername = "localhost";
     $username = "relatietest";
