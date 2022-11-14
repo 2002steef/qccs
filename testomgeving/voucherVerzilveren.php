@@ -76,14 +76,14 @@ include "backend/voucherFunctions.php";
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <p>vul in</p>
+                                            <!-- <p>vul in</p> -->
 
                                             <div class="row">
                                                 <!-- block button -->
 
                                                 <form action="" method="POST">
                                                     <div class="form-group mb-2 mb-md-0">
-                                                        <label class="label_txt">Vouchercode</label>
+                                                        <label class="label_txt">Vul hier de Vouchercode in:</label>
                                                         <input type="text" name="VoucherCodeVerzilveren" class="form-control">
 
 
