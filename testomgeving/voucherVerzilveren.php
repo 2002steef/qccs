@@ -57,6 +57,12 @@ include "partials/header.php";
                                                     if (isset($_GET['success'])) {
                                                         echo('<script>alert("goed")</script>');
                                                     }
+                                                    if (isset($_GET['codeAlreadyUsed'])) {
+                                                        echo('<script>alert("al gebruikt")</script>');
+                                                    }
+                                                    if (isset($_GET['codeError'])) {
+                                                        echo('<script>alert("incorrect")</script>');
+                                                    }
                                                 ?>
                                             </div>
                                         </div>
