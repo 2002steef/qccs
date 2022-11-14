@@ -10,7 +10,7 @@ include "partials/header.php";
 ?>
 <!-- BEGIN : Body-->
 
-<body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 2-columns  navbar-static layout-dark layout-transparent bg-glass-2" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="2-columns">
+<body class="vertical-layout vertical-menu 2-columns navbar-static" data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
     <?php
     include "partials/navbar.php";
     ?>
@@ -83,7 +83,7 @@ include "partials/header.php";
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
         </div>
     </div>
-    
+
     <?php
     include "partials/footer.php";
     ?>
