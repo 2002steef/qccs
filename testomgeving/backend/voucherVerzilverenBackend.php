@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['VoucherVerzilveren'])) {
+// if (isset($_POST['VoucherVerzilveren'])) {
     $servername = "localhost";
     $username = "relatietest";
     $password = "Rb4x4y7*3";
@@ -14,6 +14,6 @@ if (isset($_POST['VoucherVerzilveren'])) {
     } else {
         // TODO function voor error code klopt niet
     }
-}
+// }
 
 ?>

@@ -42,7 +42,7 @@ include "partials/header.php";
                                             <div class="row">
                                                 <!-- block button -->
 
-                                                <form action="" method="POST">
+                                                <form action="backend/voucherVerzilverenBackend.php" method="POST">
                                                     <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Vul hier de Vouchercode in:</label>
                                                         <input type="text" name="VoucherCodeVerzilveren" class="form-control">
