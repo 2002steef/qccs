@@ -108,12 +108,6 @@ $rowMw = Getuser();
                             <span class=" menu-title text light-gray">Masseuse Profiel</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="light-gray" href="voucherVerzilveren.php?<?= $_SESSION["id"] ?>">
-                            <i class="ft-user light-gray"></i>
-                            <span class=" menu-title text light-gray">Voucher Verzilveren</span>
-                        </a>
-                    </li>
                 <?php } elseif ($_SESSION["status"] == "bedrijf") {
                 ?>
                     <li>
