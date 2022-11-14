@@ -1,4 +1,7 @@
 <?php
+
+use Google\Service\AIPlatformNotebooks\Location;
+
 include "functions.php";
 // if (isset($_POST['VoucherVerzilveren'])) {
     $servername = "localhost";
@@ -11,8 +14,9 @@ include "functions.php";
     $result = $mysqli->query("SELECT * FROM vouchers WHERE masseuseID = '" . $masseuseID . "' && voucherCode = '" . $voucher . "'");
     if ($result->num_rows > 0) {
         $mysqli->query("UPDATE vouchers SET status = 0 WHERE masseuseID = '" . $masseuseID . "' && voucherCode ='" . $voucher . "'");
+        header("Location:../voucherVerzilveren.php?success");
     } else {
-        // TODO function voor error code klopt niet
+        header("Location:../voucherVerzilveren.php?codeError");
     }
 // }
 
