@@ -88,13 +88,15 @@ include "backend/voucherFunctions.php";
 
 
                                                         <!-- <div class="col-md-6 col-12"> -->
-                                                            <fieldset class="form-group">
+                                                            <!-- <fieldset class="form-group">
                                                                 <label for="customSelectMs">Masseuse</label>
                                                                 <select name="masseuseVerzilveren" class="custom-select" id="customSelectMs">
                                                                     <option selected hidden>Kies een masseuse...</option>
-                                                                   <?php GetMasseuseInfo() ;?>
+                                                                   <?php 
+                                                                //    GetMasseuseInfo() 
+                                                                   ;?>
                                                                 </select>
-                                                            </fieldset>
+                                                            </fieldset> -->
                                                         <!-- </div> -->
 
 
