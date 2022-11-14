@@ -1,5 +1,5 @@
 <?php
-// include "backend/voucherFunctions.php";
+include "backend/functions.php";
 ?>
 
 <!DOCTYPE html>
