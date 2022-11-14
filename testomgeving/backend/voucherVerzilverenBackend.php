@@ -14,9 +14,9 @@ include "functions.php";
     $result = $mysqli->query("SELECT * FROM vouchers WHERE masseuseID = '" . $masseuseID . "' && voucherCode = '" . $voucher . "'");
     if ($result->num_rows > 0) {
         $mysqli->query("UPDATE vouchers SET status = 0 WHERE masseuseID = '" . $masseuseID . "' && voucherCode ='" . $voucher . "'");
-        header("Location:../voucherVerzilveren.php?success=1");
+        header("Location:../voucherVerzilveren.php?success");
     } else {
-        header("Location:../voucherVerzilveren.php?codeError=1");
+        header("Location:../voucherVerzilveren.php?codeError");
     }
 // }
 
