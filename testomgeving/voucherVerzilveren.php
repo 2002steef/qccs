@@ -1,6 +1,6 @@
 <?php
 include "backend/functions.php";
-$masseuse = GetMasseuse();
+// $masseuse = GetMasseuse();
 ?>
 
 <!DOCTYPE html>
@@ -42,32 +42,22 @@ include "partials/header.php";
                                             <div class="row">
                                                 <!-- block button -->
 
-                                                <form action="" method="POST">
+                                                <form action="backend/voucherVerzilverenBackend.php" method="POST">
                                                     <div class="form-group mb-2 mb-md-0">
                                                         <label class="label_txt">Vul hier de Vouchercode in:</label>
                                                         <input type="text" name="VoucherCodeVerzilveren" class="form-control">
-
-
-                                                        <!-- <div class="col-md-6 col-12"> -->
-                                                        <!-- <fieldset class="form-group">
-                                                                <label for="customSelectMs">Masseuse</label>
-                                                                <select name="masseuseVerzilveren" class="custom-select" id="customSelectMs">
-                                                                    <option selected hidden>Kies een masseuse...</option>
-                                                                   <?php
-                                                                        //    GetMasseuseInfo() 
-                                                                    ; ?>
-                                                                </select>
-                                                            </fieldset> -->
-                                                        <!-- </div> -->
-
-
-
-
                                                     </div>
                                                     <div class="col-12 mb-2 mb-md-0">
                                                         <button type="submit" class="btn btn-outline-primary btn-block" name="VoucherVerzilveren">verzilver Voucher</button>
                                                     </div>
                                                 </form>
+                                                
+
+                                                <?php 
+                                                    if (isset($_GET['success'])) {
+                                                        echo('<script>alert("goed")</script>');
+                                                    }
+                                                ?>
                                             </div>
                                         </div>
                                     </div>
