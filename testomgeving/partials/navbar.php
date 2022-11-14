@@ -6,7 +6,7 @@
 <?php
 include "header.php";
 $rowBd = GetBedrijf();
-$rowMs = GetMasseuse();
+$rowMs = GetMasseuseInfo();
 $rowMw = Getuser();
 ?>
 <!-- END : Head-->
