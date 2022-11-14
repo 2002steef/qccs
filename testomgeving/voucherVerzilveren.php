@@ -1,5 +1,5 @@
 <?php
-include "backend/voucherFunctions.php";
+// include "backend/voucherFunctions.php";
 ?>
 
 <!DOCTYPE html>
@@ -102,26 +102,9 @@ include "partials/header.php";
     </div>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
 
-    <div class="sidenav-overlay"></div>
-    <div class="drag-target"></div>
-    <!-- BEGIN VENDOR JS-->
-    <script src="assets/vendors/js/vendors.min.js"></script>
-    <script src="assets/vendors/js/switchery.min.js"></script>
-    <!-- BEGIN VENDOR JS-->
-    <!-- BEGIN PAGE VENDOR JS-->
-    <!-- END PAGE VENDOR JS-->
-    <!-- BEGIN APEX JS-->
-    <script src="assets/js/core/app-menu.js"></script>
-    <script src="assets/js/core/app.js"></script>
-    <script src="assets/js/notification-sidebar.js"></script>
-    <script src="assets/js/customizer.js"></script>
-    <script src="assets/js/scroll-top.js"></script>
-    <!-- END APEX JS-->
-    <!-- BEGIN PAGE LEVEL JS-->
-    <!-- END PAGE LEVEL JS-->
-    <!-- BEGIN: Custom CSS-->
-    <script src="assets/js/scripts.js"></script>
-    <!-- END: Custom CSS-->
+    <!-- <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div> -->
+
 </body>
 <!-- END : Body-->
 
