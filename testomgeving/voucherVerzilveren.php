@@ -29,7 +29,8 @@ include "partials/header.php";
                     <!-- Block level buttons start -->
                     <section id="block-level-buttons">
                         <div class="row">
-                            <div class="col-6 ">
+                            <div class="col-3"></div>
+                            <div class="col-6">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title">Voucher verzilveren</h4>
