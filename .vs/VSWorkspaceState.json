@@ -3,9 +3,9 @@
     "",
     "\\casius",
     "\\casius\\backend",
-    "\\casius\\partials",
     "\\josh",
     "\\josh\\backend"
   ],
+  "SelectedNode": "\\casius\\backend\\fnctLogin.php",
   "PreviewInSolutionExplorer": false
 }
