@@ -1,6 +1,6 @@
 <?php
 include "backend/functions.php";
-$masseuse = GetMasseuseInfo();
+$masseuse = GetMasseuse();
 ?>
 
 <!DOCTYPE html>

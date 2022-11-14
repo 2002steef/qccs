@@ -109,7 +109,7 @@ $rowMw = Getuser();
                         </a>
                     </li>
                     <li>
-                        <a class="light-gray" href="voucherVerzilveren.php?<?= $_SESSION["id"] ?>">
+                        <a class="light-gray" href="voucherVerzilveren.php?masseuseID=<?= $_SESSION["id"] ?>">
                             <i class="ft-user light-gray"></i>
                             <span class=" menu-title text light-gray">Voucher Verzilveren</span>
                         </a>
