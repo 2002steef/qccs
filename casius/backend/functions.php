@@ -367,8 +367,8 @@ function klantModal()
 
         $query = "UPDATE `klanten` SET `match_datum`=?, `Voornaam`=?, `Tussenvoegsel`=?, `Achternaam`=?/*, `Email`=?, 
             `Telefoonnummer`=?, `straat`=?, `postcode`=?, `plaats`=?, `huisnummer`=?, `huisnummerToevoeging`=?, `opmerkingen`=?,
-            `categorie`=?, `sub_categorie`=?, `titel`=?, `omschrijving`=?, `materiaal`=?, `klant_wensen`=?, `offertes`=?, `nagebeld`=?,*/
-            `gewenste_aanvang`=?, `afspraakdatum`=?, `klant_score`=?
+            `categorie`=?, `sub_categorie`=?, `titel`=?, `omschrijving`=?, `materiaal`=?, `klant_wensen`=?, `offertes`=?, `nagebeld`=?,
+            `gewenste_aanvang`=?, `afspraakdatum`=?, `klant_score`=?*/
            WHERE Project_ID = ?";
         $stmt = $mysqli->prepare($query);
       
