@@ -372,7 +372,7 @@ function klantModal()
            WHERE Project_ID = ?";
         $stmt = $mysqli->prepare($query);
       
-        $stmt->bind_param('ssssi', $_POST["match-datum"], $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"]
+        $stmt->bind_param('ssssi', $_POST["match-datum"], $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"],
         /*$_POST["email"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["plaats"], $_POST["huisnummer"],
         $toevoeging, $opmerkingen, $_POST["categorieSelect"], $_POST["sub_categorie"], $_POST["titel"], $_POST["omschrijving"],
         $_POST["materiaal"], $_POST["klant_wensen"], $_POST["offertes"], $_POST["nagebeld"], $_POST["gewenste_aanvang"], $afspraakdatum, $klantScore,*/ $_GET["Project_ID"]);
