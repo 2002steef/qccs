@@ -315,7 +315,8 @@ function Getpersonnel()
 ?>
         <tr>
             <td><?= $rowPersonnel["userID"] ?></td>
-            <td><?= $rowPersonnel["voornaam"] . " " . $rowPersonnel["tussenvoegsel"] . " " . $rowPersonnel["achternaam"] ?></td>
+            <td><?= $rowPersonnel["voornaam"]?></td>
+            <td><?= $rowPersonnel["tussenvoegsel"] . " " . $rowPersonnel["achternaam"] ?></td>
             <td><?= $rowPersonnel["userID"] ?></td>
             <td><?= $rowPersonnel["telefoon"] ?></td>
             <td>
