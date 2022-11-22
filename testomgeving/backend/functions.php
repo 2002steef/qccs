@@ -329,15 +329,15 @@ function Getpersonnel()
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a data-toggle="modal" data-target="#info<?= $rowPersonnel["userID"] ?>" href="modals.php?<?= $rowPersonnel["id"] ?>">
+                        <a data-toggle="modal" data-target="#info<?= $rowPersonnel["userID"] ?>" href="modals.php?<?= $rowPersonnel["userID"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="klanten_overzicht.php?custof=<?php echo $_GET['membof']; ?>&membof=<?php echo $_GET['membof']; ?>">
                             <i class="ft-arrow-down"></i>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </td>
         </tr>
