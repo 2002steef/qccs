@@ -10,4 +10,4 @@ $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 18);
 $pdf->Cell(60, 20, 'je voucher is:');
-$pdf->Output('../vouchers/' . $fileNaam);
+$pdf->Output('F', '../vouchers/' . $fileNaam);
