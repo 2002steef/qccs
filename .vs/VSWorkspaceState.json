@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\casius",
-    "\\casius\\backend",
     "\\josh",
-    "\\josh\\backend"
+    "\\josh\\backend",
+    "\\testomgeving",
+    "\\testomgeving\\partials"
   ],
-  "SelectedNode": "\\casius\\backend\\fnctLogin.php",
   "PreviewInSolutionExplorer": false
 }
