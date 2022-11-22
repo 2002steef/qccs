@@ -59,7 +59,7 @@ function voucherGebruiken()
     $mailing->Subject = "Voucher code";
     $mailing->Body      = $bodytext;
     $mailing->AddAddress($email);
-    $mailing->AddAttachment( "../vouchers/user".$_SESSION['id']."Voucher.pdf");
+    $mailing->AddAttachment( "../vouchers/user1Voucher.pdf");
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
