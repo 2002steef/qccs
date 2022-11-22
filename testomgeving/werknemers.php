@@ -20,7 +20,7 @@ include "partials/header.php";
 <!-- Navbar (Header) Ends-->
 <div class="wrapper">
     <?php
-    include "partials/navbar_admin.php";
+    include "partials/navbar.php";
     ?>
 
     <div class="main-panel">

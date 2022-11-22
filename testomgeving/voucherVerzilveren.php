@@ -53,7 +53,7 @@ include "partials/header.php";
                                                 </form>
                                                 
 
-                                                <?php 
+                                                <?php
                                                     if (isset($_GET['success'])) {
                                                         echo('<script>alert("goed")</script>');
                                                     }
