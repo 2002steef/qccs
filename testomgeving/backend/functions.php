@@ -323,12 +323,12 @@ function Getpersonnel()
                     <div class="col-md-0">
                     </div>
                     <div class="col-md-4">
-                        <a href="#" data-toggle="modal" data-target="#editPersonnel<?= $rowPersonnel["id"] ?>">
+                        <a href="#" data-toggle="modal" data-target="#editPersonnel<?= $rowPersonnel["userID"] ?>">
                             <i class="ft-edit"></i>
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a data-toggle="modal" data-target="#info<?= $rowPersonnel["id"] ?>" href="modals.php?<?= $rowPersonnel["id"] ?>">
+                        <a data-toggle="modal" data-target="#info<?= $rowPersonnel["userID"] ?>" href="modals.php?<?= $rowPersonnel["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
