@@ -4,7 +4,8 @@ require "pdfp/fpdf.php";
 $datum = date("d F Y");
 $fileNaam = "user" . $_SESSION['id'] . "Voucher.pdf";
 
-fopen($fileNaam, 'w+');
+$f = fopen($fileNaam, 'w+');
+fclose($f);
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 18);
