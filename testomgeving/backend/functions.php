@@ -300,12 +300,15 @@ function UploadBanner()
 function Getpersonnel()
 {
     global $mysqli;
-    $DataCustomer = "SELECT `userID`, `userName`, `Password`, `email`, `voornaam`, `tussenvoegsel`,
-     `achternaam`, `telefoon`, `straat`, `huisNummer`, `huisNummerToevoeging`, `postcode`, `plaats`
-    FROM `medewerkers` 
-    WHERE userID = ?";
+    $DataCustomer = 
+    "SELECT medewerkers.userID, medewerkers.voornaam, medewerkers.tussenvoegsel, medewerkers.achternaam, medewerkers.plaats, 
+    medewerkers.straat, medewerkers.huisNummer, medewerkers.telefoon FROM `medewerkers` 
+    INNER JOIN bedrijfmedewerkerlink ON bedrijfmedewerkerlink.userID = medewerkers.userID 
+    WHERE bedrijfmedewerkerlink.bedrijfID = ?";
+
+
     $stmt = $mysqli->prepare($DataCustomer);
-    $stmt->bind_param("i", $_GET["membof"]);
+    $stmt->bind_param("i", $_SESSION['id']);
     $stmt->execute();
     $resultPersonnel = $stmt->get_result();
     while ($rowPersonnel = mysqli_fetch_array($resultPersonnel)) {

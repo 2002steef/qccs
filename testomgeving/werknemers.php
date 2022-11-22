@@ -45,7 +45,7 @@ include "partials/header.php";
                                                     <th>Voornaam</th>
                                                     <th>Achternaam</th>
                                                     <th>Adres</th>
-                                                    <th>Rol</th>
+                                                    <!-- <th>Rol</th> -->
                                                     <th>Telefoonnummer</th>
                                                     <th>Edit</th>
                                                 </tr>
