@@ -83,6 +83,8 @@ include "partials/header.php";
 
     <?php
     include "partials/footer.php";
+
+    voucherToPdf();
     ?>
 </body>
 <!-- END : Body-->
