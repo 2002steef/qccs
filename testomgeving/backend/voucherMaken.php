@@ -1,8 +1,8 @@
 <?php
-// session_start();
+include "voucherPDF.php";
 require_once('phpMailer/src/PHPMailer.php');
+
 use PHPMailer\PHPMailer\PHPMailer;
-use phpMailer\src\Exception;
 
 include("functions.php");
 include "voucherPDF.php";
@@ -49,6 +49,7 @@ function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
+    voucherPDF($voucher);
     $email = getEmail();
     $bodytext = "
     <h1>Dit is header in de mail body.</h1><br>
@@ -57,9 +58,10 @@ function voucherGebruiken()
     $mailing = new PHPMailer();
     $mailing->SetFrom('Admin@bma.nl');
     $mailing->Subject = "Voucher code";
-    $mailing->Body      = $bodytext;
+    $mailing->Body = $bodytext;
+    $mailing->isHTML(true);
     $mailing->AddAddress($email);
-    $mailing->AddAttachment( "../vouchers/user1Voucher.pdf");
+    $mailing->AddAttachment("../vouchers/user1Voucher.pdf");
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
