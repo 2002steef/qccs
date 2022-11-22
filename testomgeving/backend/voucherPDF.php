@@ -1,5 +1,5 @@
 <?php
-
+include "functions.php";
                 $datum = date("d F Y");
                 $fileNaam = $_SESSION['id']."Voucher";
 
