@@ -1,9 +1,6 @@
 <?php
-include "voucherPDF.php";
 require_once('phpMailer/src/PHPMailer.php');
-
 use PHPMailer\PHPMailer\PHPMailer;
-
 include("functions.php");
 include "voucherPDF.php";
 function createRandomVoucher(
