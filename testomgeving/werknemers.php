@@ -20,7 +20,7 @@ include "partials/header.php";
 <!-- Navbar (Header) Ends-->
 <div class="wrapper">
     <?php
-    include "partials/navbar_admin.php";
+    include "partials/navbar.php";
     ?>
 
     <div class="main-panel">
@@ -45,7 +45,7 @@ include "partials/header.php";
                                                     <th>Voornaam</th>
                                                     <th>Achternaam</th>
                                                     <th>Adres</th>
-                                                    <th>Rol</th>
+                                                    <!-- <th>Rol</th> -->
                                                     <th>Telefoonnummer</th>
                                                     <th>Edit</th>
                                                 </tr>

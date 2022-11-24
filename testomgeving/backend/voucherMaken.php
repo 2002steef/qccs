@@ -1,8 +1,8 @@
 <?php
-// session_start();
-
+require_once('phpMailer/src/PHPMailer.php');
+use PHPMailer\PHPMailer\PHPMailer;
 include("functions.php");
-
+include "voucherPDF.php";
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -37,7 +37,7 @@ function getEmail()
     global $mysqli;
     $result = $mysqli->query($sql);
     $rows = $result->fetch_assoc();
-    return($rows['email']);
+    return ($rows['email']);
     // return $result;
 }
 
@@ -46,14 +46,20 @@ function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
+    voucherPDF($voucher);
     $email = getEmail();
-    $to = $email;
-    $subject = "Voucher code";
-    $msg = "Uw voucher code is . $voucher ";
-    $msg = wordwrap($msg, 70);
-    $headers = "From: Admin@bma.nl";
-    // echo($to. " " .$subject. " " . $msg. " " . $headers);
-    mail($to, $subject, $msg, $headers);
+    $bodytext = "
+    <h1>Dit is header in de mail body.</h1><br>
+    <p>paragraaf</p>
+    ";
+    $mailing = new PHPMailer();
+    $mailing->SetFrom('Admin@bma.nl');
+    $mailing->Subject = "Voucher code";
+    $mailing->Body = $bodytext;
+    $mailing->isHTML(true);
+    $mailing->AddAddress($email);
+    $mailing->AddAttachment("../vouchers/user".$_SESSION['id']."Voucher.pdf");
+    $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
 

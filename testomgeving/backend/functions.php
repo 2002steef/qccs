@@ -300,38 +300,32 @@ function UploadBanner()
 function Getpersonnel()
 {
     global $mysqli;
-    $DataCustomer = "SELECT `userID`, `userName`, `Password`, `email`, `voornaam`, `tussenvoegsel`,
-     `achternaam`, `telefoon`, `straat`, `huisNummer`, `huisNummerToevoeging`, `postcode`, `plaats`
-    FROM `medewerkers` 
-    WHERE userID = ?";
+    $DataCustomer = 
+    "SELECT medewerkers.userID, medewerkers.voornaam, medewerkers.tussenvoegsel, medewerkers.achternaam, medewerkers.plaats, 
+    medewerkers.straat, medewerkers.huisNummer, medewerkers.telefoon FROM `medewerkers` 
+    INNER JOIN bedrijfmedewerkerlink ON bedrijfmedewerkerlink.userID = medewerkers.userID 
+    WHERE bedrijfmedewerkerlink.bedrijfID = ?";
+
+
     $stmt = $mysqli->prepare($DataCustomer);
-    $stmt->bind_param("i", $_GET["membof"]);
+    $stmt->bind_param("i", $_SESSION['id']);
     $stmt->execute();
     $resultPersonnel = $stmt->get_result();
     while ($rowPersonnel = mysqli_fetch_array($resultPersonnel)) {
 ?>
         <tr>
             <td><?= $rowPersonnel["userID"] ?></td>
-            <td><?= $rowPersonnel["voornaam"] . " " . $rowPersonnel["tussenvoegsel"] . " " . $rowPersonnel["achternaam"] ?></td>
-            <td><?= $rowPersonnel["email"] ?></td>
+            <td><?= $rowPersonnel["voornaam"]?></td>
+            <td><?= $rowPersonnel["tussenvoegsel"] . " " . $rowPersonnel["achternaam"] ?></td>
+            <td><?= $rowPersonnel["userID"] ?></td>
             <td><?= $rowPersonnel["telefoon"] ?></td>
             <td>
                 <div class="row">
                     <div class="col-md-0">
                     </div>
                     <div class="col-md-4">
-                        <a href="#" data-toggle="modal" data-target="#editPersonnel<?= $rowPersonnel["id"] ?>">
+                        <a href="#" data-toggle="modal" data-target="#editPersonnel<?= $rowPersonnel["userID"] ?>">
                             <i class="ft-edit"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a data-toggle="modal" data-target="#info<?= $rowPersonnel["id"] ?>" href="modals.php?<?= $rowPersonnel["id"] ?>">
-                            <i class="ft-eye"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="klanten_overzicht.php?custof=<?php echo $_GET['membof']; ?>&membof=<?php echo $_GET['membof']; ?>">
-                            <i class="ft-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -340,6 +334,9 @@ function Getpersonnel()
     <?php
     }
 }
+
+
+
 
 
 

@@ -6,7 +6,7 @@
 <?php
 include "header.php";
 $rowBd = GetBedrijf();
-$rowMs = GetMasseuse();
+$rowMs = GetMasseuseInfo();
 $rowMw = Getuser();
 ?>
 <!-- END : Head-->
@@ -106,6 +106,12 @@ $rowMw = Getuser();
                         <a class="light-gray" href="masseuse_profiel.php?masseuseID=<?= $_SESSION["id"] ?>">
                             <i class="ft-user light-gray"></i>
                             <span class=" menu-title text light-gray">Masseuse Profiel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="light-gray" href="voucherVerzilveren.php?masseuseID=<?= $_SESSION["id"] ?>">
+                            <i class="ft-user light-gray"></i>
+                            <span class=" menu-title text light-gray">Voucher Verzilveren</span>
                         </a>
                     </li>
                 <?php } elseif ($_SESSION["status"] == "bedrijf") {

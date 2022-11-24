@@ -1,9 +1,8 @@
 <?php
 include "backend/functions.php";
 $masseuse = GetMasseuse();
-
-
 ?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <?php
@@ -72,20 +71,21 @@ include "partials/header.php";
                                                 <div class="card-content">
                                                     <div class="card-body">
                                                         <ul class="list-unstyled mb-0">
-                                                            
-                                                                <?php
-                                                                $skills = explode(',', $masseuse["skills"]);
-                                                                foreach ($skills as $dienst) {
-                                                                    echo"
+
+                                                            <?php
+                                                            $skills = explode(',', $masseuse["skills"]);
+                                                            foreach ($skills as $dienst) {
+                                                                echo "
                                                                     <li class='d-flex align-items-center'>
                                                                     <span class='ft-tag'></span> {$dienst}" . "<br>
-                                                                    </li>";} ?>
-                                                            
+                                                                    </li>";
+                                                            } ?>
+
                                                         </ul>
                                                     </div>
-                                                    <?php if(isset($_SESSION["status"]) &&$_SESSION["status"] == "masseuse"){ ?>
-                                                    <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
-                                                <?php }?>
+                                                    <?php if (isset($_SESSION["status"]) && $_SESSION["status"] == "masseuse") { ?>
+                                                        <a href="" class="btn btn-outline-light-grey float-right float-bottom cursor-pointer" data-target="#diensten<?= $masseuse["masseuseID"] ?>" data-toggle="modal">Bewerk diensten</a>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
