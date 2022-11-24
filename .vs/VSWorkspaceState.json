@@ -3,9 +3,8 @@
     "",
     "\\casius",
     "\\casius\\backend",
-    "\\casius\\partials",
-    "\\josh",
-    "\\josh\\backend"
+    "\\casius\\partials"
   ],
+  "SelectedNode": "\\casius\\backend\\functions.php",
   "PreviewInSolutionExplorer": false
 }
