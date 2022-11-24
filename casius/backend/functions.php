@@ -362,20 +362,11 @@ function klantModal()
     if (isset($_POST['updateKlant']))
     {
 
-        $voornaam = ucfirst($_POST['voornaam']);
-        $straatnaam = ucfirst($_POST['straat']);
 
-        $query = "UPDATE `klanten` SET `match_datum`=?, `Voornaam`=?, `Tussenvoegsel`=?, `Achternaam`=?/*, `Email`=?, 
-            `Telefoonnummer`=?, `straat`=?, `postcode`=?, `plaats`=?, `huisnummer`=?, `huisnummerToevoeging`=?, `opmerkingen`=?,
-            `categorie`=?, `sub_categorie`=?, `titel`=?, `omschrijving`=?, `materiaal`=?, `klant_wensen`=?, `offertes`=?, `nagebeld`=?,
-            `gewenste_aanvang`=?, `afspraakdatum`=?, `klant_score`=?*/
-           WHERE Project_ID = ?";
+        $query = "UPDATE `klanten` SET `match_datum`=? WHERE Project_ID = ?";
         $stmt = $mysqli->prepare($query);
       
-        $stmt->bind_param('ssssi', $_POST["match-datum"], $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"],
-        /*$_POST["email"], $_POST["telefoonnummer"], $_POST["straat"], $_POST["postcode"], $_POST["plaats"], $_POST["huisnummer"],
-        $toevoeging, $opmerkingen, $_POST["categorieSelect"], $_POST["sub_categorie"], $_POST["titel"], $_POST["omschrijving"],
-        $_POST["materiaal"], $_POST["klant_wensen"], $_POST["offertes"], $_POST["nagebeld"], $_POST["gewenste_aanvang"], $afspraakdatum, $klantScore,*/ $_POST["Project_ID"]);
+        $stmt->bind_param('si', $_POST["match-datum"],  $_POST["Project_ID"]);
         $stmt->execute();
     }
 }
