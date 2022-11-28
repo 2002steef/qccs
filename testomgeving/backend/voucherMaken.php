@@ -55,10 +55,10 @@ function voucherGebruiken()
     $mailing = new PHPMailer();
     $mailing->SetFrom('Admin@bma.nl');
     $mailing->Subject = "Voucher code";
-    $mailing->Body = $bodytext;
-    $mailing->isHTML(true);
+    $mailing->Body = "testing";
+    // $mailing->isHTML(true);
     $mailing->AddAddress($email);
-    $mailing->AddAttachment("../vouchers/user".$_SESSION['id']."Voucher.pdf");
+    $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
