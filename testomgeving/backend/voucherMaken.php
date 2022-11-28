@@ -46,7 +46,7 @@ function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    // voucherPDF($voucher);
+    voucherPDF($voucher);
     $email = getEmail();
     $bodytext = "
     <h1>Dit is header in de mail body.</h1><br>
@@ -56,15 +56,11 @@ function voucherGebruiken()
     $mailing->SetFrom('Admin@bma.nl');
     $mailing->Subject = "Voucher code";
     $mailing->Body = $bodytext;
-    // $mailing->isHTML(true);
+    $mailing->isHTML(true);
     $mailing->AddAddress($email);
-    // $mailing->AddAttachment("../vouchers/user".$_SESSION['id']."Voucher.pdf");
+    $mailing->AddAttachment("../vouchers/user".$_SESSION['id']."Voucher.pdf");
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
 
 VoucherGebruiken();
-
-// getEmail();
-
-    // mail('steefertjappie@gmail.com', 'voucher code', 'voucher is:code', 'From: Admin@qccs.nl');
