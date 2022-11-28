@@ -56,7 +56,7 @@ function voucherGebruiken()
     $mailing->SetFrom('Admin@bma.nl');
     $mailing->Subject = "Voucher code";
     $mailing->Body = $bodytext;
-    $mailing->isHTML(true);
+    // $mailing->isHTML(true);
     $mailing->AddAddress($email);
     // $mailing->AddAttachment("../vouchers/user".$_SESSION['id']."Voucher.pdf");
     $mailing->Send();
