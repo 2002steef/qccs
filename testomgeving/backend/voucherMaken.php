@@ -1,5 +1,4 @@
 <?php
-include "db.php";
 require_once('phpMailer/src/PHPMailer.php');
 use PHPMailer\PHPMailer\PHPMailer;
 include("functions.php");
