@@ -1,4 +1,5 @@
 <?php
+include "db.php";
 require_once('phpMailer/src/PHPMailer.php');
 use PHPMailer\PHPMailer\PHPMailer;
 include("functions.php");
@@ -20,13 +21,9 @@ function createRandomVoucher(
 
 function InsertVoucher($voucher)
 {
-    $servername = "localhost";
-    $username = "relatietest";
-    $password = "Rb4x4y7*3";
-    $db = "test_relatiebeheer";
+   global $mysqli;
     $userID = $_SESSION["id"];
     $masseuseID = $_POST['modalMasseuseID'];
-    $mysqli = new mysqli("$servername", "$username", "$password", "$db");
     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
 }
 
