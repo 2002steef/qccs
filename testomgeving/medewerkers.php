@@ -84,7 +84,7 @@ if (!isset($_SESSION["loggedin"])) {
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="table">
-                                                        <table class="table thead-dark table-bordered">
+                                                        <table class="table thead-dark table-bordered datatable">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Masseuse</th>
