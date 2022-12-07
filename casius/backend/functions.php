@@ -363,11 +363,7 @@ function klantModal()
     {
 
         echo $_POST["Project_ID"];
-        $query = "UPDATE `klanten` SET `match_datum`=? WHERE Project_ID = ?";
-        $stmt = $mysqli->prepare($query);
-      
-        $stmt->bind_param('si', $_POST["match-datum"],  $_POST["Project_ID"]);
-        $stmt->execute();
+       
     }
 }
 
