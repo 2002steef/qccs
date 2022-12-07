@@ -362,7 +362,7 @@ function klantModal()
     if (isset($_POST['updateKlant']))
     {
 
-        echo $_POST["Project_ID"];
+        echo $_GET["Project_ID"];
        
     }
 }
