@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\josh",
-    "\\josh\\backend",
+    "\\casius\\partials",
     "\\testomgeving",
-    "\\testomgeving\\partials"
+    "\\testomgeving\\backend"
   ],
+  "SelectedNode": "\\testomgeving\\backend\\voucherMaken.php",
   "PreviewInSolutionExplorer": false
 }
