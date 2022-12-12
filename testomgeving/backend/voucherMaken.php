@@ -54,8 +54,8 @@ function voucherGebruiken()
     $mail->isHTML(true);
     $mail->Body = $bodytext;
     // $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
-    $mail->send();
-
+    $mail->send();       
+    header("location: ../voucherGebruikt.php");
 }
 // $testmsg = "bericht";
 // mail("steef.van.der.poel@gmail.com", "test",$testmsg);
