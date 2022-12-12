@@ -66,7 +66,7 @@ function voucherGebruiken()
 voucherGebruiken();
 
 function voucherTest(){
-    $to      = 'joshuastage1ccs@gmail.com';
+    $to      = 'joshuastageqccs@gmail.com';
     $subject = 'testmail';
     $message = 'hello';
     $headers = 'From: Admin@QCCS.com' . "\r\n" .
