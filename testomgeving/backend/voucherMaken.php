@@ -62,4 +62,4 @@ function voucherGebruiken()
 }
 $testmsg = "bericht";
 mail("steef.van.der.poel@gmail.com", "test",$testmsg);
-VoucherGebruiken();
+voucherGebruiken();
