@@ -53,7 +53,7 @@ function voucherGebruiken()
     $mail->Subject = "Voucher code";
     $mail->isHTML(true);
     $mail->Body = $bodytext;
-    // $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
+    $mail->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
     $mail->send();
     print_r($mail);
     // header("location: ../voucherGebruikt.php");
@@ -61,4 +61,4 @@ function voucherGebruiken()
 $testmsg = "bericht";
 mail("steef.van.der.poel@gmail.com", "test",$testmsg);
 
-// voucherGebruiken();
+voucherGebruiken();
