@@ -54,11 +54,7 @@ function voucherGebruiken()
     $mail->isHTML(true);
     $mail->Body = $bodytext;
     // $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
-    if($mail->send()){
-        header("location: ../voucherGebruikt.php");
-    } else {
-        header("location: ../voucherGebruikt.php/ERRORMAIL");
-    }
+    $mail->send();
 
 }
 // $testmsg = "bericht";
