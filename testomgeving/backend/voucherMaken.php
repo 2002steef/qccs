@@ -55,7 +55,7 @@ function voucherGebruiken()
     $mailing->Body = "testing";
     // $mailing->isHTML(true);
     $mailing->AddAddress($email);
-    $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
+    $mailing->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
