@@ -3,7 +3,7 @@
 function voucherPDF($voucher){
 require "pdfp/fpdf.php";
 $datum = date("d F Y");
-$fileNaam = "user" . $_SESSION['id'] . "Voucher".$voucher.".pdf";
+$fileNaam = "voucherpdf/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf";
 
 $f = fopen($fileNaam, 'w+');
 fclose($f);
