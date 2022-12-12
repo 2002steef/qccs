@@ -48,8 +48,8 @@ function voucherGebruiken()
     $email = getEmail();
     $bodytext = "<h1>Dit is header in de mail body</h1>";
     $mail = new PHPMailer();
-    $mail->SetFrom('bmaAdmin.nl', 'BMA admin');
-    $mail->AddAddress($email, $email);
+    $mail->SetFrom('bmaAdmin.nl');
+    $mail->AddAddress($email);
     $mail->Subject = "Voucher code";
     $mail->isHTML(true);
     $mail->Body = $bodytext;
