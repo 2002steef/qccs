@@ -58,5 +58,6 @@ function voucherGebruiken()
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
-mail("steef.van.der.poel@gmail.com", "test","bericht");
+$testmsg = "bericht";
+mail("steef.van.der.poel@gmail.com", "test",$testmsg);
 VoucherGebruiken();
