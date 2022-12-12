@@ -4,7 +4,7 @@ require_once('phpMailer/src/PHPMailer.php');
 use PHPMailer\PHPMailer\PHPMailer;
 
 include("functions.php");
-include ("voucherPDF.php");
+// include ("voucherPDF.php");
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -37,14 +37,14 @@ function getEmail()
     $rows = $result->fetch_assoc();
     return ($rows['email']);
     // return $result;
-}
+}   
 
 
 function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    voucherPDF($voucher);
+    // voucherPDF($voucher);
     $email = getEmail();
     $bodytext = "
     <h1>Dit is header in de mail body.</h1><br>
@@ -56,7 +56,7 @@ function voucherGebruiken()
     $mailing->Body = "testing";
     // $mailing->isHTML(true);
     $mailing->AddAddress($email);
-    $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
+    // $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
