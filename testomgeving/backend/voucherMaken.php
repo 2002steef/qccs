@@ -4,7 +4,7 @@ require_once('phpMailer/src/PHPMailer.php');
 use PHPMailer\PHPMailer\PHPMailer;
 
 include("functions.php");
-// include ("voucherPDF.php");
+include ("voucherPDF.php");
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -44,19 +44,24 @@ function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    // voucherPDF($voucher);
+    voucherPDF($voucher);
     $email = getEmail();
-    $bodytext = "Dit is header in de mail body";
-    $mailing = new PHPMailer();
-    $mailing->SetFrom('bmaAdmin.nl');
-    $mailing->Subject = "Voucher code";
-    $mailing->Body = $bodytext;
-    // $mailing->isHTML(true);
-    $mailing->AddAddress($email);
+    $bodytext = "<h1>Dit is header in de mail body</h1>";
+    $mail = new PHPMailer();
+    $mail->SetFrom('bmaAdmin.nl', 'BMA admin');
+    $mail->AddAddress($email, $email);
+    $mail->Subject = "Voucher code";
+    $mailing->isHTML(true);
+    $mail->Body = $bodytext;
     // $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
-    $mailing->Send();
-    header("location: ../voucherGebruikt.php");
+    if($mail->send()){
+        header("location: ../voucherGebruikt.php");
+    } else {
+        header("location: ../voucherGebruikt.php/ERRORMAIL");
+    }
+
 }
-$testmsg = "bericht";
-mail("steef.van.der.poel@gmail.com", "test",$testmsg);
+// $testmsg = "bericht";
+// mail("steef.van.der.poel@gmail.com", "test",$testmsg);
+
 voucherGebruiken();
