@@ -44,6 +44,7 @@ function voucherGebruiken()
     InsertVoucher($voucher);
     voucherPDF($voucher);
     $email = getEmail();
+    
     $bodytext = "
     <h1>Dit is header in de mail body.</h1><br>
     <p>paragraaf</p>
@@ -54,9 +55,9 @@ function voucherGebruiken()
     $mailing->Body = "testing";
     // $mailing->isHTML(true);
     $mailing->AddAddress($email);
-    $mailing->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf");
+    $mailing->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
     $mailing->Send();
     header("location: ../voucherGebruikt.php");
 }
-// mail("steef.van.der.poel@gmail.com", "test",$testmsg);
+
 VoucherGebruiken();
