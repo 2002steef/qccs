@@ -1,12 +1,15 @@
 <?php
+
 require_once('phpMailer/src/PHPMailer.php');
 use PHPMailer\PHPMailer\PHPMailer;
+
 include("functions.php");
-include "voucherPDF.php";
+include("voucherPDF.php");
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-): string {
+): string
+{
     if ($length < 1) {
         throw new \RangeException("Length must be a positive integer");
     }
@@ -20,7 +23,7 @@ function createRandomVoucher(
 
 function InsertVoucher($voucher)
 {
-   global $mysqli;
+    global $mysqli;
     $userID = $_SESSION["id"];
     $masseuseID = $_POST['modalMasseuseID'];
     $mysqli->query("INSERT INTO `vouchers` (`userID`, `masseuseID`, `voucherCode`, `status`) VALUES ('$userID', '$masseuseID', '$voucher', '1')");
@@ -44,20 +47,20 @@ function voucherGebruiken()
     InsertVoucher($voucher);
     voucherPDF($voucher);
     $email = getEmail();
-    
-    $bodytext = "
-    <h1>Dit is header in de mail body.</h1><br>
-    <p>paragraaf</p>
-    ";
-    $mailing = new PHPMailer();
-    $mailing->SetFrom('Admin@bma.nl');
-    $mailing->Subject = "Voucher code";
-    $mailing->Body = "testing";
-    // $mailing->isHTML(true);
-    $mailing->AddAddress($email);
-    $mailing->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher".$voucher.".pdf");
-    $mailing->Send();
-    header("location: ../voucherGebruikt.php");
+    $bodytext = "Dit is header in de mail body";
+    $mail = new PHPMailer();
+    $mail->SetFrom('admin@bma.nl');
+    $mail->AddAddress($email);
+    $mail->Subject = "Voucher code";
+    // $mail->isHTML(true);
+    $mail->Body = $bodytext;
+    $mail->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf");
+    $mail->send();
+    print_r($mail);
+    // header("location: ../voucherGebruikt.php");
+    $testmsg = "bericht";
+    mail("steef.van.der.poel@gmail.com", "test", $testmsg);
 }
 
-VoucherGebruiken();
+
+voucherGebruiken();
