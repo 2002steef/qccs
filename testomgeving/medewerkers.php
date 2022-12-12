@@ -79,7 +79,6 @@ if (!isset($_SESSION["loggedin"])) {
                                                 </a>
                                             </li>
                                         </ul>
-
                                         <div class="tab-pane fade mt-2 show active light-gray" id="Particulier" role="tabpanel" aria-labelledby="account-tab">
                                             <div class="row">
                                                 <div class="col-12">
@@ -109,10 +108,7 @@ if (!isset($_SESSION["loggedin"])) {
                 </div>
             </div>
         </div>
-
-
         <!-- BEGIN POPUP MODAL -->
-
         <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
