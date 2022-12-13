@@ -48,7 +48,6 @@ function voucherGebruiken()
     InsertVoucher($voucher);
     voucherPDF($voucher);
     $email = getEmail();
-    mail("steef.van.der.poel@gmail.com", "test","bericht");
     $bodytext = "
     <h1>Dit is header in de mail body.</h1><br>
     <p>paragraaf</p>
