@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            main {
+                background-color: lightgray;
+                width: 60%;
+                position: absolute;
+                top: 25vh;
+                left: 2vw;
+            }
+            .box {
+                display: flex;
+            }
+            main div div {
+                display: flex;
+            }
+
+            div div p {
+                background-color: white;
+                color: black;
+                margin: 4px;
+                width: 200px;
+                height: 20px;
+            }
+
+            h2 {
+                font-size: 30px;
+                transform: rotate(-90deg);
+                position: absolute;
+                right: 24vw;
+                top: 42vh;
+            }
+
+            h5 {
+                padding-top: 0.5vh;
+                padding-bottom: 0.8vh;
+            }
+
+            h6 {
+                font-size: 12px;
+                transform: rotate(-90deg);
+                position: absolute;
+                right: 25vw;
+                top: 43.5vh;
+            }
+
+            #text-under {
+                padding-top: 1vh;
+                padding-bottom: 0.5vh;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Bedrijfs massage abonnement</h1>
+            <p><b>Uitgegeven voor:</b></p>
+            <div id="box">
+                <div id="companyname" class="form-group">
+                    <p>[Massagebedrijfsnaam]</p>
+                </div>
+                <div>
+                    <div id="name" class="form-group">
+                        <p for="name">[Voornaam]</p>
+                    </div>
+                    <div id="name2" class="form-group">
+                        <p for="name2">[Tussenvoegsel]</p>
+                    </div>
+                    <div id="name3" class="form-group">
+                        <p for="name3">[Achternaam]</p>
+                    </div>
+                </div>
+                <div id="email" class="form-group">
+                    <p for="email">[E-Mail]</p>
+                </div>
+                <div id="phone" class="form-group">
+                    <p for="phone">[Telefoonnummer]</p>
+                </div>
+                <h5>Contactgegevens [Massagebedrijfsnaam]</h5>
+                <p>Contactpersoon</p>
+                <div>
+                    <div id="name" class="form-group">
+                        <p for="name">[Masseusenaam]</p>
+                    </div>
+                    <div>
+                        <div id="name" class="form-group">
+                            <p for="name">[Adres]</p>
+                        </div>
+                        <div id="name" class="form-group">
+                            <p for="name">[E-mail]</p>
+                        </div>
+                    </div>    
+                </div>
+
+                <div>
+                    <div>                         
+                        <div id="name" class="form-group">
+                            <p for="name">[Nummer]</p>
+                        </div>
+                    </div>  
+                    <div id="name" class="form-group">
+                        <p for="name">[Postcode en Plaats]</p>
+                    </div>
+                </div>
+            </div>    
+            <p id="text-under">De voucher code is enkel af te nemen bij [Massagebedrijfsnaam].
+                <br>
+                U kunt contact opnemen met uw contactpersoon met de onderstaande gegevens voor het maken van een afspraak.
+            </p>
+        </main>
+        
+        <h6>
+            Hier vind u uw [Massagebedrijfsnaam] vouchercode
+            <br>
+            Deze kunt u verzilveren bij: [Massagebedrijfsnaam]
+        </h6>
+
+        <h2>[Placeholder]</h2>
+
+        
+
+    </body>
+</html>     
