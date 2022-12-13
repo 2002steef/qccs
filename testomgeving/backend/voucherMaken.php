@@ -63,14 +63,14 @@ function voucherGebruiken()
     $testmsg = "bericht";
     mail("steef.van.der.poel@gmail.com", "test", $testmsg);
 
-voucherGebruiken();
+// voucherGebruiken();
 
     function voucherTest(){
-    $to      = 'joshuastageqccs@gmail.com';
+    $to      = 'steef.van.der.poel@gmail.com';
     $subject = 'testmail';
     $message = 'hello';
-    $headers = 'From: Admin@QCCS.com' . "\r\n" .
-        'Reply-To: Admin@QCCS.com' . "\r\n" .
+    $headers = 'From: Admin@betaomgeving.com' . "\r\n" .
+        'Reply-To: Admin@betaomgeving.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
     mail($to, $subject, $message, $headers);
