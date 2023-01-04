@@ -50,7 +50,7 @@ function KlantInfoTabel()
             <td><?=$klant["Project_ID"] ?></td>
             <td><?=$klant["Voornaam"] ?> <?=$klant["Tussenvoegsel"] ?> <?=$klant["Achternaam"] ?></td>
             <td></span><?=$klant["straat"] ?> <?=$klant["huisnummer"] ?> <?=$klant["postcode"] ?></td>
-            <td><a class="btn btn-outline-light-gray" href="<?=$klant["Project_ID"] ?>">
+            <td><a class="btn btn-outline-light-gray" href="bewerken.php?Klant=<?=$klant["Project_ID"] ?>">
                     Meer info
                 </a>
             </td>
