@@ -1,8 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
-klantInfo();
-klantModal();
+$klant = klantInfo();
     include "partials/header.php";
 ?><!-- END : Head-->
 <!-- BEGIN : Body-->
