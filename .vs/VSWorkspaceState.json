@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\casius\\partials",
-    "\\testomgeving",
-    "\\testomgeving\\backend"
+    "\\casius",
+    "\\casius\\backend",
+    "\\casius\\partials"
   ],
-  "SelectedNode": "\\testomgeving\\backend\\voucherMaken.php",
+  "SelectedNode": "\\casius\\backend\\functions.php",
   "PreviewInSolutionExplorer": false
 }
