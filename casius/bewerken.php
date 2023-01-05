@@ -291,7 +291,7 @@ $klant = klantInfo();
 										</div>
 									</div>
 								</div>
-								<input type="submit" name="Submit" class="btn-outline-light-gray" />
+								<input type="submit" name="Submit" class="btn btn-outline-light-gray" />
 							</div>
 						</div>
 					</div>
