@@ -291,6 +291,7 @@ $klant = klantInfo();
 										</div>
 									</div>
 								</div>
+								<input type="submit" name="Submit" class="btn-outline-light-gray" />
 							</div>
 						</div>
 					</div>
@@ -305,10 +306,6 @@ $klant = klantInfo();
 	</div><!-- /////////////////////////////////////////////////////////////////////////////-->
 	<div class="sidenav-overlay"></div>
 	<div class="drag-target"></div>
-	<div class="col-lg-3 col-md-6 col-12">
-		<!-- Button trigger modal -->
-		<!-- Modals -->
-	</div>
 	<?php
 	include "partials/footer.php";
     ?>

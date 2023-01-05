@@ -3,7 +3,9 @@
     "",
     "\\casius",
     "\\casius\\backend",
-    "\\casius\\partials"
+    "\\casius\\partials",
+    "\\testomgeving",
+    "\\testomgeving\\backend"
   ],
   "SelectedNode": "\\casius\\backend\\functions.php",
   "PreviewInSolutionExplorer": false
