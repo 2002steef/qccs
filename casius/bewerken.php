@@ -21,7 +21,7 @@ $klant = klantInfo();
 		<div class="main-content">
 			<div class="content-overlay"></div>
 			<div class="content-wrapper">
-				<form>
+				<form method="POST">
 				<div class="col-xl-12 col-lg-12">
 					<div class="card">
 						<div class="card-content">
