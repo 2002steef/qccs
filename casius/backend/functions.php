@@ -60,7 +60,7 @@ function KlantInfoTabel()
 }
 
 function UpdateKlant(){
-	if(isset($_POST["Submit"])){
+	if(isset($_POST["btnSubmit"])){
         global $mysq;
 		$sql = "   UPDATE  `klanten` SET  `Voornaam` = ? , `Tussenvoegsel`= ?,`Achternaam`= ?,`Email`= ?,`Telefoonnummer`= ?,`straat`= ?,`postcode`= ?,`plaats`= ?,`huisnummer`= ?,`huisnummerToevoeging`= ?,`opmerkingen`= ?,
            `status`= ?,`categorie`= ?,`sub_categorie`= ?,`titel`= ?,`omschrijving`= ?,`materiaal`= ?,`klant_wensen`= ?,`offertes`= ?,`nagebeld`= ?,`gewenste_aanvang`= ?,`afspraakdatum`= ?,`klant_score`= ?
@@ -71,9 +71,6 @@ function UpdateKlant(){
 			 $_POST["opmerkingen"],$_POST["status"],$_POST["categorie"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"],$_POST["materiaal"],$_POST["klant_wensen"]
 			 ,$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$_POST["afspraakdatum"],$_POST["klant_score"],$_GET["Project_ID"]);
 		$stmt->execute();
-		if($stmt->num_rows > 0){
-			echo "Gelukt";
-		}
 	}
 }
 
