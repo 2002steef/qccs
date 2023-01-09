@@ -56,7 +56,7 @@ function voucherGebruiken()
     $mail->Body = $bodytext;
     $mail->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf");
     $mail->send();
-    print_r($mail);
+    // print_r($mail);
     header("location: ../voucherGebruikt.php");
 }
 
