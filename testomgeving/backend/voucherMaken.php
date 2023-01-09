@@ -47,12 +47,12 @@ function voucherGebruiken()
     InsertVoucher($voucher);
     voucherPDF($voucher);
     $email = getEmail();
-    $bodytext = "Dit is header in de mail body";
+    $bodytext = "<h1>testHeader</h1><br><p>testParagraaf</p>";
     $mail = new PHPMailer();
     $mail->SetFrom('bma@betaomgeving.nl');
     $mail->AddAddress($email);
     $mail->Subject = "Voucher code";
-    // $mail->isHTML(true);
+    $mail->isHTML(true);
     $mail->Body = $bodytext;
     $mail->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf");
     $mail->send();
