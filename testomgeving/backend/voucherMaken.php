@@ -1,6 +1,7 @@
 <?php
 
-require_once('phpMailer/src/PHPMailer.php');
+require('phpMailer/src/PHPMailer.php');
+
 use PHPMailer\PHPMailer\PHPMailer;
 
 include("functions.php");
@@ -8,8 +9,7 @@ include("voucherPDF.php");
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-): string
-{
+): string {
     if ($length < 1) {
         throw new \RangeException("Length must be a positive integer");
     }
@@ -56,23 +56,11 @@ function voucherGebruiken()
     $mail->Body = $bodytext;
     $mail->AddAttachment("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf");
     $mail->send();
-    // print_r($mail);
+    print_r($mail);
     // header("location: ../voucherGebruikt.php");
 }
 
-    $testmsg = "bericht";
-    mail("steef.van.der.poel@gmail.com", "test", $testmsg);
-
-// voucherGebruiken();
-
-    function voucherTest(){
-    $to      = 'steef.van.der.poel@gmail.com';
-    $subject = 'testmail';
-    $message = 'hello';
-    $headers = 'From: Admin@betaomgeving.com' . "\r\n" .
-        'Reply-To: Admin@betaomgeving.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-
-    mail($to, $subject, $message, $headers);
-}
-voucherTest();
+voucherGebruiken();
+    // Dit werkt
+    // $testmsg = "bericht";
+    // mail("steef.van.der.poel@gmail.com", "test", $testmsg);
