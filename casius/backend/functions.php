@@ -61,6 +61,7 @@ function KlantInfoTabel()
 
 function UpdateKlant(){
 	if(isset($_POST["btnSubmit"])){
+
         global $mysqli;
 		$sql = "UPDATE  klanten SET  Voornaam = ? , Tussenvoegsel= ?,Achternaam= ?,Email= ?,Telefoonnummer= ?,straat= ?,postcode= ?,plaats= ?,huisnummer= ?,huisnummerToevoeging= ?,opmerkingen= ?,
            status= ?,categorie= ?,sub_categorie= ?,titel= ?,omschrijving= ?,materiaal= ?,klant_wensen= ?,offertes= ?,nagebeld= ?,gewenste_aanvang= ?,afspraakdatum= ?,klant_score= ?

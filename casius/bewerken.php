@@ -291,7 +291,7 @@ $klant = klantInfo();
 										</div>
 									</div>
 								</div>
-								<input type="submit" name="btnSubmit" class="btn btn-outline-light-gray" />
+								<button name="btnSubmit" type="submit" class="btn btn-outline-light-gray mr-sm-2 mb-1">Save Changes</button>
 							</div>
 						</div>
 					</div>
