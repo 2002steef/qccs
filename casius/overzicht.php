@@ -55,7 +55,7 @@ klantModal();
 												<div class="row">
 													<div class="col-12">
 														<div class="">
-															<table class="table file-export text-light-gray">
+															<table class="table table-striped table-bordered file-export text-light-gray">
 																<thead>
 																	<tr>
 																		<th colspan="1">ID</th>
@@ -66,7 +66,7 @@ klantModal();
 																</thead>
 																<tbody>
 																	<?php
-								                                        KlantInfoTabel();
+							                                        KlantInfoTabel();
 																	?>
 																</tbody>
 															</table>
