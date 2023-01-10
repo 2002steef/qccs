@@ -6,6 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 include("functions.php");
 include("voucherPDF.php");
+include("voucherPDF2.php");
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
