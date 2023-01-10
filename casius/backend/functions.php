@@ -65,8 +65,7 @@ function UpdateKlant(){
         global $mysqli;
 		$sql = "UPDATE  `klanten` SET  Voornaam = ? WHERE Project_ID =  ?";
 		$stmt = $mysqli->prepare($sql);
-		$stmt->bind_param('si',
-			$_POST["voornaam"],$_GET["Project_ID"]);
+		$stmt->bind_param('si', $_POST["voornaam"],$_GET["Project_ID"]);
 		$stmt->execute();
 	}
 }
