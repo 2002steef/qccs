@@ -58,7 +58,7 @@ klantModal();
 															<table class="table table-striped table-bordered zero-configuration text-light-gray">
 																<thead>
 																	<tr>
-																		<th colspan="1">ID</th>
+																		<th >ID</th>
 																		<th>Klant Naam</th>
 																		<th>Adres</th>
 																		<th colspan="1">Extra info</th>
