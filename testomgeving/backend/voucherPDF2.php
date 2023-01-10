@@ -14,7 +14,10 @@ function voucherPDF2($voucher)
     $html = '<h1>dit is een header</h1>';
     $html .= '<p>dit is een paragraaf</p>';
     $dompdf->loadHtml($html);
-    $dompdf->setPaper('A6', "landscape");
+
+    $customSize = array(0, 0, 36, 360);
+    $dompdf->setPaper($customSize);
+    
     $dompdf->render();
     // $dompdf->stream("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", ["Attachment" => 0]);
     
