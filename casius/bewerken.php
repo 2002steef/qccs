@@ -21,7 +21,6 @@ $klant = klantInfo();
 		<div class="main-content">
 			<div class="content-overlay"></div>
 			<div class="content-wrapper">
-				<form method="POST">
 				<div class="col-xl-12 col-lg-12">
 					<div class="card">
 						<div class="card-content">
@@ -39,6 +38,7 @@ $klant = klantInfo();
 										</a>
 									</li>
 								</ul>
+								<form method="POST">
 								<div class="tab-content">
 									<div role="tabpanel" class="tab-pane active" id="Klant<?=$klant["Project_ID"] ?>" aria-expanded="true" aria-labelledby="base-tab11">
 										<div class="col-12">
@@ -293,10 +293,11 @@ $klant = klantInfo();
 								</div>
 								<button name="btnSubmit" type="submit" class="btn btn-outline-light-gray mr-sm-2 mb-1">Save Changes</button>
 							</div>
+							</form>
 						</div>
 					</div>
 				</div>
-				</form>
+				
 			</div>
 		</div><!-- END : End Main Content-->
 		<!-- Scroll to top button -->
