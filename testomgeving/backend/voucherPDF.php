@@ -1,7 +1,6 @@
 <?php
 
 use Dompdf\Dompdf;
-use Google\Service\AlertCenter\Attachment;
 
 require_once 'dompdf/autoload.inc.php';
 

@@ -5,7 +5,8 @@ require('phpMailer/src/PHPMailer.php');
 use PHPMailer\PHPMailer\PHPMailer;
 
 include("functions.php");
-include("voucherPDF.php");
+// include("voucherPDF.php");
+include("voucherPDF2.php");
 function createRandomVoucher(
     int $length = 10,
     string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -45,7 +46,7 @@ function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    voucherPDF($voucher);
+    voucherPDF2($voucher);
     $email = getEmail();
     $bodytext = "<h1>testHeader</h1><br><p>testParagraaf</p>";
     $mail = new PHPMailer();
