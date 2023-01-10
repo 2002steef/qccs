@@ -28,12 +28,12 @@ include "partials/header.php";
 													<img src="app-assets/img/gallery/forgot.png" alt="" class="img-fluid" width="260" height="230" />
 												</div>
 												<div class="col-lg-6 col-md-12 px-4 py-3">
-													<h4 class="mb-2 card-title">Recover Password</h4>
-													<p class="card-text mb-3">Please enter your email address and we'll send you instructions on how to reset your password.</p>
+													<h4 class="mb-2 card-title">Wachtwoord Vergeten</h4>
+													<p class="card-text mb-3">Vul uw email in om een wachtwoord reset link te krijgen.</p>
 													<input type="email" class="form-control mb-3" placeholder="Email" />
 													<div class="d-flex flex-sm-row flex-column justify-content-between">
-														<a href="auth-login.html" class="btn bg-light-primary mb-2 mb-sm-0">Back To Login</a>
-														<button class="btn btn-primary ml-sm-1">Recover</button>
+														<a href="auth-login.html" class="btn bg-light-primary mb-2 mb-sm-0">Terug Naar Login</a>
+														<button class="btn btn-primary ml-sm-1">Mail Versturen</button>
 													</div>
 												</div>
 											</div>
