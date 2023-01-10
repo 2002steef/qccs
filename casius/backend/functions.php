@@ -66,7 +66,7 @@ function UpdateKlant(){
 		$sql = "UPDATE  klanten SET  Voornaam = ? , Tussenvoegsel= ?,Achternaam= ?
            WHERE Project_ID =  ?";
 		$stmt = $mysqli->prepare($sql);
-		$stmt->bind_param('ssssssssissssssssssssssi',
+		$stmt->bind_param('sssi',
 			$_POST["Voornaam"],$_POST["Tussenvoegsel"],$_POST["Achternaam"],$_GET["Project_ID"]);
 		$stmt->execute();
 	}
