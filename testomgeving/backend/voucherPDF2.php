@@ -15,7 +15,7 @@ function voucherPDF2($voucher)
     $html .= '<p>dit is een paragraaf</p>';
     $dompdf->loadHtml($html);
 
-    $customSize = array(0, 0, 360, 108);
+    $customSize = array(0, 0, 1000, 300);
     $dompdf->setPaper($customSize);
     
     $dompdf->render();
