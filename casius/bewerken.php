@@ -49,7 +49,7 @@ $klant = klantInfo();
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-outline-light-gray" name="btnSubmit"></button>		
+					<button type="submit" class="btn btn-outline-light-gray" name="btnSubmit">Save Changes</button>		
 				</form>
 			</div>
 		</div><!-- END : End Main Content-->
