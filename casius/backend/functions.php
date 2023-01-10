@@ -63,11 +63,10 @@ function UpdateKlant(){
 	if(isset($_POST["btnSubmit"])){
 
         global $mysqli;
-		$sql = "UPDATE  `klanten` SET  Voornaam = ? , Tussenvoegsel = ?, Achternaam = ?
-           WHERE Project_ID =  ?";
+		$sql = "UPDATE  `klanten` SET  Voornaam = ? WHERE Project_ID =  ?";
 		$stmt = $mysqli->prepare($sql);
-		$stmt->bind_param('sssi',
-			$_POST["Voornaam"],$_POST["Tussenvoegsel"],$_POST["Achternaam"],$_GET["Project_ID"]);
+		$stmt->bind_param('si',
+			$_POST["voornaam"],$_GET["Project_ID"]);
 		$stmt->execute();
 	}
 }
