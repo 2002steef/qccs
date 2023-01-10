@@ -54,7 +54,6 @@ function KlantInfoTabel()
                     Meer info
                 </a>
             </td>
-            <td></td>
         </tr>
     <?php
     }

@@ -62,7 +62,6 @@ klantModal();
 																		<th>Klant Naam</th>
 																		<th>Adres</th>
 																		<th colspan="1">Extra info</th>
-																		<th></th>
 																	</tr>
 																</thead>
 																<tbody>
