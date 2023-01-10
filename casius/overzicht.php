@@ -54,37 +54,8 @@ klantModal();
 											<div aria-labelledby="account-tab" class="tab-pane fade mt-2 show active" id="Klanten" role="tabpanel">
 												<div class="row">
 													<div class="col-12">
-														<div class="table table-striped table-bordered file-export">
-															<div>
-																<?php
-																if (isset($_GET["toevoegenPart"])) {
-																	if ($_GET["toevoegenPart"] == "empty") {
-																		echo "<p class='text-danger'>Vul alle velden in aub</p>";
-																	} elseif ($_GET["toevoegenPart"] == "namefout") {
-																		echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
-																	} elseif ($_GET["toevoegenPart"] == "telfout") {
-																		echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
-																	} elseif ($_GET["toevoegenPart"] == "mailfout") {
-																		echo "<p class='text-danger'>Email klopt niet</p>";
-																	} elseif ($_GET["toevoegenPart"] == "emaildupli") {
-																		echo "<p class='text-danger'>Email bestaat al</p>";
-																	} elseif ($_GET["toevoegenPart"] == "straatfout") {
-																		echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
-																	} elseif ($_GET["toevoegenPart"] == "postcodefout") {
-																		echo "<p class='text-danger'>Ongeldige postcode ! </p>";
-																	}
-																	if ($_GET["toevoegenPart"] == "succes") {
-																		echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
-																	}
-																	if ($_GET["toevoegenPart"] == "Formulier") {
-																		echo "<p class='text-success'>Email succesvol verstuurd !</p>";
-																	} else {
-																		echo "<p class='text-danger'>Email is niet succesvol verstuurd !</p>";
-																	}
-																}
-																?>
-															</div>
-															<table class="table table-striped table-bordered file-export text-light-gray">
+														<div class="">
+															<table class="table file-export text-light-gray">
 																<thead>
 																	<tr>
 																		<th colspan="1">ID</th>
@@ -95,7 +66,7 @@ klantModal();
 																</thead>
 																<tbody>
 																	<?php
-																	                                                                                                                                        KlantInfoTabel();
+								                                        KlantInfoTabel();
 																	?>
 																</tbody>
 															</table>
