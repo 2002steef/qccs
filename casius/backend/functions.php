@@ -68,7 +68,7 @@ opmerkingen= ?,status= ?,categorie= ?,sub_categorie= ?,titel= ?,omschrijving= ?,
  WHERE Project_ID =  ?";
 		$stmt = $mysqli->prepare($sql);
 		$stmt->bind_param('sssssssssssssssssssssssi',
-            $_POST["voornaam"],$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["Email"],$_POST["Telefoonnummer"],$_POST["straat"],$_POST["postcode"],$_POST["plaats"],
+            $_POST["voornaam"],$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"],$_POST["telefoonnummer"],$_POST["straat"],$_POST["postcode"],$_POST["plaats"],
             $_POST["huisnummer"],$_POST["huisnummerToevoeging"],$_POST["opmerkingen"],$_POST["status"],$_POST["categorie"],$_POST["sub_categorie"],$_POST["titel"],
             $_POST["omschrijving"],$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$_POST["afspraakdatum"],
             $_POST["klant_score"],$_GET["Project_ID"]);
