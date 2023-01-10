@@ -2,7 +2,7 @@
 
 use Dompdf\Dompdf;
 
-// require_once 'dompdf/autoload.inc.php';
+require_once 'dompdf/autoload.inc.php';
 
 function voucherPDF2($voucher){
 $dompdf = new Dompdf;
