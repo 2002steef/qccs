@@ -63,14 +63,11 @@ function UpdateKlant(){
 	if(isset($_POST["btnSubmit"])){
 
         global $mysqli;
-		$sql = "UPDATE  klanten SET  Voornaam = ? , Tussenvoegsel= ?,Achternaam= ?,Email= ?,Telefoonnummer= ?,straat= ?,postcode= ?,plaats= ?,huisnummer= ?,huisnummerToevoeging= ?,opmerkingen= ?,
-           status= ?,categorie= ?,sub_categorie= ?,titel= ?,omschrijving= ?,materiaal= ?,klant_wensen= ?,offertes= ?,nagebeld= ?,gewenste_aanvang= ?,afspraakdatum= ?,klant_score= ?
+		$sql = "UPDATE  klanten SET  Voornaam = ? , Tussenvoegsel= ?,Achternaam= ?
            WHERE Project_ID =  ?";
 		$stmt = $mysqli->prepare($sql);
 		$stmt->bind_param('ssssssssissssssssssssssi',
-			$_POST["Voornaam"],$_POST["Tussenvoegsel"],$_POST["Achternaam"],$_POST["Email"],$_POST["Telefoonnummer"],$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$_POST["huisnummerToevoeging"],
-			 $_POST["opmerkingen"],$_POST["status"],$_POST["categorie"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"],$_POST["materiaal"],$_POST["klant_wensen"]
-			 ,$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$_POST["afspraakdatum"],$_POST["klant_score"],$_GET["Project_ID"]);
+			$_POST["Voornaam"],$_POST["Tussenvoegsel"],$_POST["Achternaam"],$_GET["Project_ID"]);
 		$stmt->execute();
 	}
 }
