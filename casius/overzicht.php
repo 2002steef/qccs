@@ -54,7 +54,7 @@ klantModal();
 											<div aria-labelledby="account-tab" class="tab-pane fade mt-2 show active" id="Klanten" role="tabpanel">
 												<div class="row">
 													<div class="col-12">
-														<div class="table-responsive">
+														<div class="table table-responsive zero-configuration">
 															<div>
 																<?php
 																if (isset($_GET["toevoegenPart"])) {
@@ -94,9 +94,9 @@ klantModal();
 																	</tr>
 																</thead>
 																<tbody>
-																	<?php 
-																	                                                                                                                                        KlantInfoTabel();   
-																	                                                                                                                                        ?>
+																	<?php
+																	                                                                                                                                        KlantInfoTabel();
+																	?>
 																</tbody>
 															</table>
 														</div>
