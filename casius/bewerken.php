@@ -2,6 +2,7 @@
 <?php
 include "backend/functions.php";
 $klant = klantInfo();
+
     include "partials/header.php";
 ?><!-- END : Head-->
 <!-- BEGIN : Body-->
@@ -62,7 +63,8 @@ $klant = klantInfo();
 	<div class="drag-target"></div>
 	<?php
 	include "partials/footer.php";
-    ?>
+	UpdateKlant();
+	?>
 
 </body>
 </html>
