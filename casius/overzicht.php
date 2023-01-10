@@ -55,7 +55,7 @@ klantModal();
 												<div class="row">
 													<div class="col-12">
 														<div class="">
-															<table class="table table-striped table-bordered zero-configuration text-light-gray">
+															<table class="table table-striped table-bordered zero-configuration">
 																<thead>
 																	<tr>
 																		<th >ID</th>
