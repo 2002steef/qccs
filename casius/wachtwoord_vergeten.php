@@ -22,22 +22,24 @@ include "partials/header.php";
 							<div class="col-md-7 col-12">
 								<div class="card overflow-hidden">
 									<div class="card-content">
-										<div class="card-body auth-img">
-											<div class="row m-0">
-												<div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center text-center auth-img-bg py-2">
-													<img src="app-assets/img/gallery/forgot.png" alt="" class="img-fluid" width="260" height="230" />
-												</div>
-												<div class="col-lg-6 col-md-12 px-4 py-3">
-													<h4 class="mb-2 card-title">Wachtwoord Vergeten</h4>
-													<p class="card-text mb-3">Vul uw email in om een wachtwoord reset link te krijgen.</p>
-													<input type="email" class="form-control mb-3" placeholder="Email" />
-													<div class="d-flex flex-sm-row flex-column justify-content-between">
-														<a href="auth-login.html" class="btn bg-light-primary mb-2 mb-sm-0">Terug Naar Login</a>
-														<button class="btn btn-primary ml-sm-1">Mail Versturen</button>
+										<form method="post">
+											<div class="card-body auth-img">
+												<div class="row m-0">
+													<div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center text-center auth-img-bg py-2">
+														<img src="app-assets/img/gallery/forgot.png" alt="" class="img-fluid" width="260" height="230" />
+													</div>
+													<div class="col-lg-6 col-md-12 px-4 py-3">
+														<h4 class="mb-2 card-title">Wachtwoord Vergeten</h4>
+														<p class="card-text mb-3">Vul uw email in om een wachtwoord reset link te krijgen.</p>
+														<input type="email" class="form-control mb-3" placeholder="Email" />
+														<div class="d-flex flex-sm-row flex-column justify-content-between">
+															<a href="index.php" class="btn bg-light-primary mb-2 mb-sm-0">Terug Naar Login</a>
+															<button class="btn btn-primary ml-sm-1" type="submit">Mail Versturen</button>
+														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+										</form>
 									</div>
 								</div>
 							</div>
