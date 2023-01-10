@@ -15,7 +15,7 @@ klantModal();
 	<!-- Navbar (Header) Starts-->
 	<?php
 	        include "partials/navbar.php";
-	        ?><!-- ////////////////////////////////////////////////////////////////////////////-->
+    ?><!-- ////////////////////////////////////////////////////////////////////////////-->
 	<!-- / main menu-->
 	<div class="main-panel">
 		<!-- BEGIN : Main Content-->
@@ -55,7 +55,7 @@ klantModal();
 												<div class="row">
 													<div class="col-12">
 														<div class="">
-															<table class="table table-striped table-bordered file-export text-light-gray">
+															<table class="table table-striped table-bordered zero-configuration text-light-gray">
 																<thead>
 																	<tr>
 																		<th colspan="1">ID</th>
