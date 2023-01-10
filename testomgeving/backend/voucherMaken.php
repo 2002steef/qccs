@@ -46,7 +46,7 @@ function voucherGebruiken()
 {
     $voucher = createRandomVoucher();
     InsertVoucher($voucher);
-    voucherPDF($voucher);
+    voucherPDF2($voucher);
     $email = getEmail();
     $bodytext = "<h1>testHeader</h1><br><p>testParagraaf</p>";
     $mail = new PHPMailer();
