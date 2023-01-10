@@ -6,8 +6,9 @@ require_once 'dompdf/autoload.inc.php';
 
 function voucherPDF2($voucher)
 {
-    $newFile = fopen("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", 'W+');
-    fclose($newFile);
+    $filename = "voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf";
+    $f = fopen($filename, 'w+');
+    fclose($f);
 
     $dompdf = new Dompdf;
     $html = '<h1>dit is een header</h1>';
