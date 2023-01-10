@@ -19,5 +19,5 @@ function voucherPDF2($voucher)
     $customSize = array(0, 0, 360, 360);
     $dompdf->setPaper($customSize);
     $output = $dompdf->output();
-    file_put_contents("../vouchers/voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", $output);
+    file_put_contents("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", $output);
 }
