@@ -293,7 +293,8 @@ $klant = klantInfo();
 												</div>
 											</div>
 										</div>
-										<button type="submit" class="btn btn-outline-light-gray" name="btnSubmit">Save Changes</button>
+										<button type="submit" class="btn btn-outline-light-gray" name="btnSubmit">Opslaan</button>
+										<button type="submit" class="btn btn-outline-light-gray" name="btnDelete">Klant Verwijderen</button>
 									</form>
 								</div>
 							</div>
