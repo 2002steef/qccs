@@ -12,8 +12,6 @@ include "partials/header.php";
 
 <body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="1-column">
 	<!-- ////////////////////////////////////////////////////////////////////////////-->
-	<div class="wrapper">
-		<div class="main-panel">
 			<!-- BEGIN : Main Content-->
 			<div class="main-content">
 				<div class="content-overlay"></div>
@@ -27,7 +25,7 @@ include "partials/header.php";
 										<div class="card-body auth-img">
 											<div class="row m-0">
 												<div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center text-center auth-img-bg py-2">
-													<img src="../../../app-assets/img/gallery/forgot.png" alt="" class="img-fluid" width="260" height="230" />
+													<img src="app-assets/img/gallery/forgot.png" alt="" class="img-fluid" width="260" height="230" />
 												</div>
 												<div class="col-lg-6 col-md-12 px-4 py-3">
 													<h4 class="mb-2 card-title">Recover Password</h4>
@@ -50,8 +48,6 @@ include "partials/header.php";
 				</div>
 			</div>
 			<!-- END : End Main Content-->
-		</div>
-	</div>
 </body>
 <!-- END : Body-->
 </html>
