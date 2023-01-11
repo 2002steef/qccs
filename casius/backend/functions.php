@@ -767,9 +767,10 @@ function PassReset(){
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('s',$_POST["passEmail"]);
         $stmt->execute();
-        if($stmt->num_rows < 1){
+        if($stmt->num_rows === 0){
 			header("Location: wachtwoord_vergeten.php?email");
-		}elseif($stmt->num_rows > 0){
+		}elseif($stmt->num_rows === 1){
+
             $to = $_POST["passEmail"];
             $msg = "Hierbij een link om uw wachtwoord te resetten";
             $subject = "Wachtwoord reset";
