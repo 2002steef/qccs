@@ -769,6 +769,12 @@ function PassReset(){
         $stmt->execute();
         if($stmt->num_rows < 1){
 			header("Location: wachtwoord_vergeten.php?email");
+		}elseif($stmt->num_rows > 0){
+            $to = $_POST["passEmail"];
+            $msg = "Hierbij een link om uw wachtwoord te resetten";
+            $subject = "Wachtwoord reset";
+            $header = "From: Admin@casius.com";
+			mail($to,$subject,$msg,$header);
 		}
 	}
 }
