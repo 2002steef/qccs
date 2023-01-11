@@ -49,7 +49,7 @@ function KlantInfoTabel()
         <tr>
             <td><?=$klant["Project_ID"] ?></td>
             <td><?=$klant["Voornaam"] ?> <?=$klant["Tussenvoegsel"] ?> <?=$klant["Achternaam"] ?></td>
-            <td></span><?=$klant["straat"] ?> <?=$klant["huisnummer"] ?> <?=$klant["postcode"] ?></td>
+            <td><span><?=$klant["straat"] ?> <?=$klant["huisnummer"] ?> <?=$klant["postcode"] ?></span></td>
             <td><a class="btn btn-outline-light-gray" href="bewerken.php?Project_ID=<?=$klant["Project_ID"] ?>">
                     Meer info
                 </a>
@@ -63,14 +63,15 @@ function UpdateKlant(){
 	if(isset($_POST["btnSubmit"])){
 
         global $mysqli;
-		$sql = "UPDATE  klanten SET  Voornaam = ? , Tussenvoegsel= ?,Achternaam= ?,Email= ?,Telefoonnummer= ?,straat= ?,postcode= ?,plaats= ?,huisnummer= ?,huisnummerToevoeging= ?,opmerkingen= ?,
-           status= ?,categorie= ?,sub_categorie= ?,titel= ?,omschrijving= ?,materiaal= ?,klant_wensen= ?,offertes= ?,nagebeld= ?,gewenste_aanvang= ?,afspraakdatum= ?,klant_score= ?
-           WHERE Project_ID =  ?";
+		$sql = "UPDATE  `klanten` SET  Voornaam = ?,Tussenvoegsel = ?, Achternaam = ?,Email= ?,Telefoonnummer= ?,straat= ?,postcode= ?,plaats= ?,huisnummer= ?,huisnummerToevoeging= ?,
+opmerkingen= ?,status= ?,categorie= ?,sub_categorie= ?,titel= ?,omschrijving= ?,materiaal= ?,klant_wensen= ?,offertes= ?,nagebeld= ?,gewenste_aanvang= ?,afspraakdatum= ?,klant_score= ?
+ WHERE Project_ID =  ?";
 		$stmt = $mysqli->prepare($sql);
-		$stmt->bind_param('ssssssssissssssssssssssi',
-			$_POST["Voornaam"],$_POST["Tussenvoegsel"],$_POST["Achternaam"],$_POST["Email"],$_POST["Telefoonnummer"],$_POST["straat"],$_POST["postcode"],$_POST["plaats"],$_POST["huisnummer"],$_POST["huisnummerToevoeging"],
-			 $_POST["opmerkingen"],$_POST["status"],$_POST["categorie"],$_POST["sub_categorie"],$_POST["titel"],$_POST["omschrijving"],$_POST["materiaal"],$_POST["klant_wensen"]
-			 ,$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$_POST["afspraakdatum"],$_POST["klant_score"],$_GET["Project_ID"]);
+		$stmt->bind_param('sssssssssssssssssssssssi',
+            $_POST["voornaam"],$_POST["tussenvoegsel"],$_POST["achternaam"],$_POST["email"],$_POST["telefoonnummer"],$_POST["straat"],$_POST["postcode"],$_POST["plaats"],
+            $_POST["huisnummer"],$_POST["huisnummerToevoeging"],$_POST["opmerkingen"],$_POST["status"],$_POST["categorie"],$_POST["sub_categorie"],$_POST["titel"],
+            $_POST["omschrijving"],$_POST["materiaal"],$_POST["klant_wensen"],$_POST["offertes"],$_POST["nagebeld"],$_POST["gewenste_aanvang"],$_POST["afspraakdatum"],
+            $_POST["klant_score"],$_GET["Project_ID"]);
 		$stmt->execute();
 	}
 }
@@ -109,7 +110,7 @@ function klantModal()
                                                     <a class="nav-link " id="tab2" data-toggle="tab" href="#Project-details<?=$klant["Project_ID"] ?>" aria-controls="profile" aria-expanded="false">Project details</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link " id="tab3" data-toggle="tab" href="#Notities<?=$klant["Project_ID"] ?>" role="button" aria-haspopup="true" aria-expanded="Notities">
+                                                    <a class="nav-link " id="tab3" data-toggle="tab" href="#Notities<?=$klant["Project_ID"] ?>" role="button" aria-haspopup="true" >
                                                         Notities
                                                     </a>
                                                 </li>
@@ -394,7 +395,7 @@ function UploadPic()
     if (isset($_POST['submitpic']) && isset($_FILES['my_image']))
     {
         global $mysqli;
-
+        $id = $_SESSION['id'];
         echo "<pre>";
         print_r($_FILES['my_image']);
         echo "</pre>";
@@ -466,7 +467,7 @@ function ToevoegenKlanten()
 												<a aria-controls="profile" aria-expanded="false" class="nav-link" data-toggle="tab" href="#Project-details" id="tab2">Project details</a>
 											</li>
 											<li class="nav-item">
-												<a aria-expanded="Notities" aria-haspopup="true" class="nav-link" data-toggle="tab" href="#Notities" id="tab3" role="button">Notities</a>
+												<a  aria-haspopup="true" class="nav-link" data-toggle="tab" href="#Notities" id="tab3" role="button">Notities</a>
 											</li>
 										</ul>
 										<div class="tab-content">
@@ -574,7 +575,7 @@ function ToevoegenKlanten()
 																		<div class="form-group row">
 																			<label class="col-md-6 col-form-label" for="Project-ID">Project ID</label>
 																			<div class="col-md-6">
-																				<input class="form-control square" name="Project-ID" readonly="id=&quot;project-id&quot;" type="text">
+																				<input class="form-control square" name="Project-ID" readonly type="text">
 																			</div>
 																		</div>
 																	</div>
