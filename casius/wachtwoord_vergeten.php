@@ -5,6 +5,7 @@
 <?php
 include "backend/functions.php";
 include "partials/header.php";
+PassReset();
 
 ?>
 <!-- END : Head-->
