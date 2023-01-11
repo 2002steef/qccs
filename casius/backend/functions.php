@@ -760,4 +760,15 @@ function ToevoegenKlanten()
     }
 }
 
-
+function PassReset(){
+	if(isset($_POST["passEmail"])){
+		global $mysqli;
+        $sql = "SELECT * from login WHERE email = ?";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param('s',$_POST["passEmail"]);
+        $stmt->execute();
+        if($stmt->num_rows < 1){
+			header("Location: wachtwoord_vergeten.php?email");
+		}
+	}
+}
