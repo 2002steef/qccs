@@ -20,10 +20,9 @@ function voucherPDF2($voucher)
         box-sizing: border-box;
     }
 
-    /* main {
-        
-        width: 550pt;
-    } */
+    body {
+        background-color: lightgray;
+    }
 
     .backWhite {
         background-color: white;
@@ -58,7 +57,6 @@ function voucherPDF2($voucher)
     #voucher {
         width: 550pt;
         height: 290pt;
-        background-color: lightgray;
     }
 
     #voucherDetail {
