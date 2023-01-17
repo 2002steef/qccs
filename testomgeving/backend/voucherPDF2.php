@@ -118,37 +118,32 @@ function voucherPDF2($voucher)
                     </div>
 
                     <div id="masseuseContact2">
-                    <div>
-                        <div id="masseuseCityAndPlace" class="form-group">
-                            <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
+                        <div>
+                            <div id="masseuseCityAndPlace" class="form-group">
+                                <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
+                            </div>
+                        </div>
+                        <div id="masseuseStreetAndNumber" class="form-group">
+                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
                         </div>
                     </div>
-                    <div id="masseuseStreetAndNumber" class="form-group">
-                        <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
-                    </div>
                 </div>
+                
+                <div id="voucherDetail">
+                    <h6 id="voucherDetailText">
+                        Hier vind u uw BMA vouchercode
+                        <br>
+                        Deze kunt u verzilveren bij: [masseusePlaceHolder]
+                    </h6>
+                    <h2 id="voucherCode">Soy9UPJycE</h2>
+                </div>
+
             </div>
 
-            <p id="text-under">De voucher code is enkel af te nemen bij [masseusePlaceHolder].
-                <br>
-                U kunt contact opnemen met uw contactpersoon met de onderstaande gegevens voor het maken van een
-                afspraak.
-            </p>
-            <div id="voucherDetail">
-                <h6 id="voucherDetailText">
-                    Hier vind u uw BMA vouchercode
-                    <br>
-                    Deze kunt u verzilveren bij: [masseusePlaceHolder]
-                </h6>
-                <h2 id="voucherCode">Soy9UPJycE</h2>
-            </div>
-
-        </div>
-
-    </main>
+        </main>
 
 
-</div>
+    </div>
 
 
 </body>
