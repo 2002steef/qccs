@@ -21,7 +21,8 @@ function voucherPDF2($voucher)
     }
 
     body {
-        background; linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);;
+        background: rgb(254, 187, 253);
+        background; linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);
     }
 
     .backWhite {
