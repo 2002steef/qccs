@@ -20,7 +20,10 @@ function voucherPDF2($voucher)
             box-sizing: border-box;
         }
 
-        body {}
+        body {
+            background: rgb(254, 187, 253);
+            background: linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);
+        }
 
         .backWhite {
             background-color: white;
@@ -59,8 +62,7 @@ function voucherPDF2($voucher)
         #voucher {
             width: 550pt;
             height: 290pt;
-            background: rgb(254, 187, 253);
-            background: linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);
+            
         }
 
         #voucherDetail {
