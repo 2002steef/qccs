@@ -68,7 +68,7 @@ function voucherPDF2($voucher)
             display: flex;
         }
         #voucherSpreader{
-            width:20%;
+            // width:20%;
         }
     </style>
 </head>
