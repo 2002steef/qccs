@@ -127,6 +127,9 @@ function voucherPDF2($voucher)
                         <div id="masseuseStreetAndNumber" class="form-group">
                             <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
                         </div>
+                        <div id="masseuseStreetAndNumber2" class="form-group">
+                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
+                        </div>
                     </div>
                 </div>
                 
