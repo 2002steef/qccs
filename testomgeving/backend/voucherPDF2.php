@@ -68,6 +68,7 @@ function voucherPDF2($voucher)
         #voucherDetail {
             width: 100%;
             text-align: center;
+            margin-top: 20pt;
         }
 
         #voucherDetailText {
