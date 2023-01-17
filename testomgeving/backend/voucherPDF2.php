@@ -73,10 +73,12 @@ function voucherPDF2($voucher)
 
         #voucherDetailText {
             width: 40%;
+            float: left;
         }
 
         #voucherCode {
             width: 60%;
+            float: right;
         }
     </style>
 </head>
