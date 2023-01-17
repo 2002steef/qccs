@@ -3,8 +3,9 @@
 <!-- BEGIN : Head-->
 
 <?php
-
+include "backend/functions.php";
 include "partials/header.php";
+PassReset();
 
 ?>
 <!-- END : Head-->
@@ -30,8 +31,9 @@ include "partials/header.php";
 													</div>
 													<div class="col-lg-6 col-md-12 px-4 py-3">
 														<h4 class="mb-2 card-title">Wachtwoord Vergeten</h4>
+														<?php if(isset($_GET["email"])){echo "<p class='text-danger'> Email bestaat niet. </p>";} ?>
 														<p class="card-text mb-3">Vul uw email in om een wachtwoord reset link te krijgen.</p>
-														<input type="email" class="form-control mb-3" placeholder="Email" />
+														<input type="email" class="form-control mb-3" placeholder="Email" name="passEmail" />
 														<div class="d-flex flex-sm-row flex-column justify-content-between">
 															<a href="index.php" class="btn bg-light-primary mb-2 mb-sm-0">Terug Naar Login</a>
 															<button class="btn btn-primary ml-sm-1" type="submit">Mail Versturen</button>

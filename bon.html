@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            main {
+                background-color: lightgray;
+                width: 2105px;
+                position: absolute;
+                top: 620px;
+                left: 70px;
+            }
+            .box {
+                display: flex;
+            }
+            main div div {
+                display: flex;
+            }
 
-<head>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            div div p {
+                background-color: white;
+                color: black;
+                margin: 4px;
+                width: 200px;
+                height: 20px;
+            }
 
         main {
             background-color: lightgray;
@@ -106,10 +126,21 @@
                         <div id="masseuseStreetAndNumber" class="form-group">
                             <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
                         </div>
+                    </div>    
+                </div>
+
+                <div>
+                    <div>                         
+                        <div id="name" class="form-group">
+                            <p for="name">[Nummer]</p>
+                        </div>
+                    </div>  
+                    <div id="name" class="form-group">
+                        <p for="name">[Postcode en Plaats]</p>
                     </div>
                 </div>
-            </div>
-            <p id="text-under">De voucher code is enkel af te nemen bij [masseusePlaceHolder].
+            </div>    
+            <p id="text-under">De voucher code is enkel af te nemen bij [Massagebedrijfsnaam].
                 <br>
                 U kunt contact opnemen met uw contactpersoon met de onderstaande gegevens voor het maken van een
                 afspraak.
@@ -128,7 +159,7 @@
 
     </div>
 
+        
 
-</body>
-
-</html>
+    </body>
+</html>     
