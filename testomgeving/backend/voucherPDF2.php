@@ -118,17 +118,17 @@ function voucherPDF2($voucher)
                     </div>
 
                     <div id="masseuseContact2">
-                        <div>
-                            <div id="masseuseCityAndPlace" class="form-group">
-                                <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
-                            </div>
+                    <div>
+                        <div id="masseuseCityAndPlace" class="form-group">
+                            <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
                         </div>
-                        <div id="masseuseStreetAndNumber" class="form-group">
-                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
-                        </div>
+                    </div>
+                    <div id="masseuseStreetAndNumber" class="form-group">
+                        <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
                     </div>
                 </div>
             </div>
+
             <p id="text-under">De voucher code is enkel af te nemen bij [masseusePlaceHolder].
                 <br>
                 U kunt contact opnemen met uw contactpersoon met de onderstaande gegevens voor het maken van een
@@ -142,10 +142,13 @@ function voucherPDF2($voucher)
                 </h6>
                 <h2 id="voucherCode">Soy9UPJycE</h2>
             </div>
-        </main>
+
+        </div>
+
+    </main>
 
 
-    </div>
+</div>
 
 
 </body>
