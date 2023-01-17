@@ -9,15 +9,10 @@
             box-sizing: border-box;
         }
 
-        main {
-            background-color: lightgray;
-            /* width: 60%;
-            position: absolute;
-            top: 25vh;
-            left: 2vw; */
-            /* height: 400pt; */
+        /* main {
+            
             width: 550pt;
-        }
+        } */
 
         .backWhite {
             background-color: white;
@@ -51,13 +46,23 @@
 
         #voucher {
             width: 550pt;
-            height: 340pt;
+            height: 290pt;
+            background-color: lightgray;
         }
-        #voucherDetail{
-            display: flex;
+
+        #voucherDetail {
+            width: 100%;
+            text-align: center;
         }
-        #voucherSpreader{
-            width:150pt;
+
+        #voucherDetailText {
+            width: 40%;
+            float: left;
+        }
+
+        #voucherCode {
+            width: 60%;
+            float: right;
         }
     </style>
 </head>
@@ -77,7 +82,7 @@
                 <div id="gebruikerEmail" class="form-group">
                     <p class="backWhite" for="email">[emailPlaceHolder]</p>
                 </div>
-                <div id="gebruikerPhone class="form-group">
+                <div id="gebruikerPhone class=" form-group">
                     <p class="backWhite" for="phone">[phonePlaceHolder]</p>
                 </div>
                 <p><b>Contactgegevens Massagebedrijfsnaam:</b></p>
@@ -115,12 +120,11 @@
                 afspraak.
             </p>
             <div id="voucherDetail">
-                <h6>
+                <h6 id="voucherDetailText">
                     Hier vind u uw BMA vouchercode
                     <br>
                     Deze kunt u verzilveren bij: [masseusePlaceHolder]
                 </h6>
-                <div id="voucherSpreader"></div>
                 <h2 id="voucherCode">Soy9UPJycE</h2>
             </div>
         </main>
