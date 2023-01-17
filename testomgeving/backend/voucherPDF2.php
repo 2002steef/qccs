@@ -151,7 +151,7 @@ function voucherPDF2($voucher)
 
     $dompdf->loadHtml($html);
 
-    $customSize = array(0, 0, 550, 290);
+    $customSize = array(0, 0, 550, 330);
     $dompdf->setPaper($customSize);
 
     $dompdf->render();
