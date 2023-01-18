@@ -28,7 +28,7 @@ if (isset($_POST['btnPassSubmit'])) {
             mail($to, $subject, $msg, $headers);
             header('location:/casius.php');
         } else{ 
-			echo "$email' komt niet voor in de database";
+			echo "$email komt niet voor in de database";
 		}
     }
 }
