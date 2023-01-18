@@ -6,6 +6,33 @@
 include "backend/functions.php";
 include "partials/header.php";
 
+if (isset($_POST['btnPassSubmit'])) {
+    $email = $_REQUEST['email'];
+    global $mysqli;
+    $stmt = $mysqli->prepare("SELECT * FROM login WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result) {
+        $token = bin2hex(random_bytes(25));
+        $stmt = $mysqli->prepare("UPDATE login SET reset_token = ? WHERE email = ?");
+        $stmt->bind_param("ss", $token, $email);
+        $stmt->execute();
+        $stmt->close();
+        if ($email > 0) {
+            $to = $email;
+            $subject = "Wachtwoord vergeten";
+            $msg = "Uw wachtwoord reset link <br>https://program.betaomgeving.nl/casius/wachtwoord_new.php?token=" . $token . " <br>Reset uw wachtwoord met deze link. Klick of open in een nieuw browser tablad <br>";
+            $msg = wordwrap($msg, 70);
+            $headers = "From: Admin@Casius.nl";
+            mail($to, $subject, $msg, $headers);
+            header('location:/casius.php');
+        } else echo "'$email' komt niet voor in de database";
+    }
+}
+
+
+
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
@@ -55,6 +82,3 @@ include "partials/header.php";
 </body>
 <!-- END : Body-->
 </html>
-<?php
-PassReset();
-?>
