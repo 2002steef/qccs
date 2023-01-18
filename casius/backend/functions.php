@@ -763,7 +763,7 @@ function ToevoegenKlanten()
 function PassReset(){
 	if(isset($_POST["btnPassSubmit"])){
 		global $mysqli;
-        $sql = "SELECT * from login WHERE email = ?";
+        $sql = "SELECT email from login WHERE email = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('s',$_POST["passEmail"]);
         $stmt->execute();
