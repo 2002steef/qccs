@@ -7,7 +7,7 @@ include "backend/functions.php";
 include "partials/header.php";
 
 if (isset($_POST['btnPassSubmit'])) {
-    $email = $_POST['email'];
+    $email = $_POST['passEmail'];
     global $mysqli;
     $stmt = $mysqli->prepare("SELECT * FROM login WHERE email = ?");
     $stmt->bind_param("s", $email);
@@ -27,7 +27,7 @@ if (isset($_POST['btnPassSubmit'])) {
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);
             header('location:/casius.php');
-        } else{ 
+        } else{
 			echo "$email komt niet voor in de database";
 		}
     }
