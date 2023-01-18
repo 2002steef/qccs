@@ -26,7 +26,7 @@ if (isset($_POST['btnPassSubmit'])) {
             $msg = wordwrap($msg, 70);
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);
-            header('location:/casius.php');
+            header('location:/casius/index.php');
         } else{
 			echo "$email komt niet voor in de database";
 		}
