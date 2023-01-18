@@ -762,10 +762,20 @@ function ToevoegenKlanten()
 
 function PassReset(){
 	if(isset($_POST["btnPassSubmit"])){
-		$to = $_POST["passEmail"];
-		$msg = "Hierbij een link om uw wachtwoord te resetten";
-		$subject = "Wachtwoord reset";
-		$header = "From: Admin@casius.com";
-		mail($to,$subject,$msg,$header);
+		global $mysqli;
+        $sql = "SELECT email from login WHERE email = ?";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param('s',$_POST["passEmail"]);
+        $stmt->execute();
+        $stmt->bind_result($email);
+        if($stmt->num_rows === 0){
+			header("Location: wachtwoord_vergeten.php?email");
+		}elseif($stmt->num_rows === 1){
+            $to = $email;
+            $msg = "Hierbij een link om uw wachtwoord te resetten";
+            $subject = "Wachtwoord reset";
+            $header = "From: Admin@casius.com";
+			mail($to,$subject,$msg,$header);
+		}
 	}
 }
