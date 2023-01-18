@@ -772,7 +772,10 @@ function PassReset(){
             $msg = "Hierbij een link om uw wachtwoord te resetten";
             $subject = "Wachtwoord reset";
             $header = "From: Admin@casius.com";
-			mail($to,$subject,$msg,$header);
+			;
+            if(mail($to,$subject,$msg,$header) == true){
+				echo "Mail is verstuurd";
+			}
 			header("Location: wachtwoord_vergeten.php?email");
 		}elseif($stmt->num_rows === 1){
 
