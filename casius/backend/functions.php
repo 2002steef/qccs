@@ -767,8 +767,9 @@ function PassReset(){
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('s',$_POST["passEmail"]);
         $stmt->execute();
+        $stmt->bind_result($email);
         if($stmt->num_rows === 0){
-			$to = $_POST["passEmail"];
+			$to = $email;
             $msg = "Hierbij een link om uw wachtwoord te resetten";
             $subject = "Wachtwoord reset";
             $header = "From: Admin@casius.com";
