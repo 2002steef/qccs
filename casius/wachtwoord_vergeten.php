@@ -22,7 +22,7 @@ if (isset($_POST['btnPassSubmit'])) {
         if ($email > 0) {
             $to = $email;
             $subject = "Wachtwoord vergeten";
-            $msg = "Uw wachtwoord reset link <br>https://program.betaomgeving.nl/casius/wachtwoord_new.php?token=" . $token . " <br>Reset uw wachtwoord met deze link. Klick of open in een nieuw browser tablad <br>";
+            $msg = "Uw wachtwoord reset link https://program.betaomgeving.nl/casius/wachtwoord_new.php?token=" . $token . " Reset uw wachtwoord met deze link. Klick of open in een nieuw browser tablad ";
             $msg = wordwrap($msg, 70);
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);

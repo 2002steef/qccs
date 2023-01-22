@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <?php
 include "backend/functions.php";
-?>
-<html class="loading" lang="en">
-<?php
 include "partials/header.php";
-?>
-<body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static blank-page" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="1-column">
-	<?php
+
 	if (isset($_GET['token'])) {
 		$token = $_GET['token'];
 	}
@@ -37,16 +32,9 @@ include "partials/header.php";
 		$resultToken = $stmt->get_result();
 		if ($res = $resultToken->fetch_array()) {
 			$email = $res['email'];
-		}
-		if (isset($email) != '') {
-			$emailtok = $email;
-		} else {
-			$error[] = 'Deze sessie is niet langer meer geldig, helaas! lol';
-			$hide = 1;
-		}
-		if (!isset($error)) {
-			$options = array("cost" => 4);
-			$resetpassSql = "UPDATE `login` SET password=? WHERE email= ?";
+			if (isset($email) && !empty($email) ) {
+
+			$resetpassSql = "UPDATE `login` SET password = ? WHERE email= ?";
 			$stmt = $mysqli->prepare($resetpassSql);
 			$stmt->bind_param("ss", $password,$emailtok);
 			$stmt->execute();
@@ -56,19 +44,23 @@ include "partials/header.php";
 				$success = "<div></span>
 						<br>Je wachtwoord is succesvol gewijzigd<br>
 						<a href='index.php'>klik hier om in te loggen</a> </div>";
-				$sqldel = "UPDATE `users` SET reset_token = '' WHERE email=?";
+				$sqldel = "UPDATE `login` SET reset_token = '' WHERE email=?";
 				$stmt = $mysqli->prepare($sqldel);
 				$stmt->bind_param("s", $emailtok);
 				$stmt->execute();
 
-				$hide = 1;
+				
+				}else {
+				$error[] = 'Deze sessie is niet langer meer geldig';
+				}
 			}
 		}
+
 		$stmt->close();
 
 	}
-	?>
-	
+    ?>
+	<body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static blank-page" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="1-column">
 	<div class="login_form ">
 		<section id="forgot-password" class="auth-height">
 			<div class="row full-height-vh m-0 d-flex align-items-center justify-content-center">
@@ -92,12 +84,10 @@ include "partials/header.php";
 										echo $success;
 									}
 									?>
-									<?php if(!isset($hide)){ ?>
 									<div class="col-lg-6 col-md-12 px-4 py-3">
 										<h4 class="mb-2 card-title">Recover Password</h4>
 										<p class="card-text mb-3">
-											Please enter your email address and we'll send you
-                                        instructions on how to reset your password.
+											Vul uw nieuw wachtwoord in.
 										</p>
 										<form method="post">
 											<label class="password">Wachtwoord</label>
@@ -116,9 +106,6 @@ include "partials/header.php";
                                                 wachtwoord
 												</button>
 											</div>
-											<?php
-										  }
-											?>
 										</form>
 									</div>
 								</div>
