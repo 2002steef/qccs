@@ -30,7 +30,7 @@ include "partials/header.php";
 		if (strlen($password) > 50) { // Max
 			$error[] = 'Password: Max length 50 Characters Not allowed';
 		}
-		$fetchresultok = "SELECT email FROM `users` WHERE reset_token=?";
+		$fetchresultok = "SELECT email FROM `login` WHERE reset_token=?";
 		$stmt = $mysqli->prepare($fetchresultok);
 		$stmt->bind_param("s", $token);
 		$stmt->execute();
@@ -46,7 +46,7 @@ include "partials/header.php";
 		}
 		if (!isset($error)) {
 			$options = array("cost" => 4);
-			$resetpassSql = "UPDATE `users` SET password=? WHERE email= ?";
+			$resetpassSql = "UPDATE `login` SET password=? WHERE email= ?";
 			$stmt = $mysqli->prepare($resetpassSql);
 			$stmt->bind_param("ss", $password,$emailtok);
 			$stmt->execute();
