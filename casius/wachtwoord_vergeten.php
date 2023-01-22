@@ -14,7 +14,7 @@ if (isset($_POST['btnPassSubmit'])) {
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result) {
-        $token = bin2hex(random_bytes(25));
+        $token = bin2hex(random_bytes(50));
         $stmt = $mysqli->prepare("UPDATE login SET reset_token = ? WHERE email = ?");
         $stmt->bind_param("ss", $token, $email);
         $stmt->execute();
