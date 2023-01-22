@@ -6,7 +6,7 @@ include "backend/functions.php";
 <?php
 include "partials/header.php";
 ?>
-<body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static layout-dark layout-transparent bg-glass-2 blank-page" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="1-column">
+<body class="horizontal-layout horizontal-menu horizontal-menu-padding navbar-static 1-column auth-page navbar-static blank-page" data-bg-img="bg-glass-2" data-open="hover" data-menu="horizontal-menu" data-col="1-column">
 	<?php
 	if (isset($_GET['token'])) {
 		$token = $_GET['token'];
@@ -67,8 +67,8 @@ include "partials/header.php";
 		$stmt->close();
 
 	}
-    ?>
-	<br />
+	?>
+	
 	<div class="login_form ">
 		<section id="forgot-password" class="auth-height">
 			<div class="row full-height-vh m-0 d-flex align-items-center justify-content-center">
@@ -78,7 +78,7 @@ include "partials/header.php";
 							<div class="card-body auth-img">
 								<div class="row m-0">
 									<div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center text-center auth-img-bg py-2">
-										<img src="assets2/img/logo2.png"
+										<img src="app-assets/img/logo.png"
 											class="logo img-fluid" />
 
 									</div>
@@ -91,7 +91,7 @@ include "partials/header.php";
 									if(isset($success)){
 										echo $success;
 									}
-                                    ?>
+									?>
 									<?php if(!isset($hide)){ ?>
 									<div class="col-lg-6 col-md-12 px-4 py-3">
 										<h4 class="mb-2 card-title">Recover Password</h4>
@@ -118,7 +118,7 @@ include "partials/header.php";
 											</div>
 											<?php
 										  }
-                                            ?>
+											?>
 										</form>
 									</div>
 								</div>
@@ -128,6 +128,7 @@ include "partials/header.php";
 				</div>
 			</div>
 		</section>
+	</div>
 		<?php
 		include "partials/footer.php";
         ?>
