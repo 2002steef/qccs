@@ -781,3 +781,28 @@ function PassReset(){
 		}
 	}
 }
+
+function gebruikerToevoegen(){
+	if(isset($_POST["btnGebruikerToev"])){
+		global $mysqli;
+        $email = $_POST['gebruiker_toevoegen'];
+        $randPass = bin2hex(random_bytes(12));
+
+        $sql = "INSERT INTO `login`('email','password')VALUES(?,?)";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param('ss',$email,$randPass);
+        $stmt->execute();
+        if($stmt->num_rows > 0){
+			$to = $email;
+            $subject = "Account aangemaakt";
+            $msg = "Er is een Casius account voor u aangemaakt. Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
+            $msg = "Bij deze uw inlog gegevens : ";
+            $msg = "Email: " .  " " . $email;
+            $msg = "Wachtwoord: " .  " " . $randPass;
+
+            $msg = wordwrap($msg, 70);
+            $headers = "From: Admin@Casius.nl";
+            mail($to, $subject, $msg, $headers);
+		}
+	}
+}

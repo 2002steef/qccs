@@ -1,6 +1,6 @@
 <?php
 include "backend/functions.php";
-
+gebruikerToevoegen();
 
 $user = $_SESSION['name'];
 $id = $_SESSION['id'];
@@ -176,7 +176,7 @@ include "partials/header.php";
 													<div class="form-group">
 														<label for="retype-new-password">Gebruiker Toevoegen</label>
 														<div class="controls">
-															<input type="email" name="gebruiker-toevoegen" id="gebruiker-toevoegen" class="form-control" placeholder="Email" required />
+															<input type="email" name="gebruiker_toevoegen" id="gebruiker-toevoegen" class="form-control" placeholder="Email" required />
 														</div>
 													</div>
 													<div class="d-flex flex-sm-row flex-column justify-content-end">
