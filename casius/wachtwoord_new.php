@@ -9,6 +9,9 @@ include "partials/header.php";
 	//form for submit
 	if (isset($_POST['sub_set'])) {
 		global $mysqli;
+		$password = $_POST['wachtwoord'];
+		$passwordConfirm = $_POST['wachtwoordHerhaal'];
+
 
 		if ($password == '') {
 			$error[] = 'Please enter the password.';
@@ -83,7 +86,7 @@ include "partials/header.php";
 									if(isset($success)){
 										echo $success;
 									}
-									?>
+                                    ?>
 									<div class="col-lg-6 col-md-12 px-4 py-3">
 										<h4 class="mb-2 card-title">Recover Password</h4>
 										<p class="card-text mb-3">
@@ -91,10 +94,10 @@ include "partials/header.php";
 										</p>
 										<form method="post">
 											<label class="password">Wachtwoord</label>
-											<input type="password" name="password" class="form-control"
+											<input type="password" name="wachtwoord" class="form-control"
 												required />
 											<label class="passwordConfirm">Bevestig Wachtwoord</label>
-											<input type="password" name="passwordConfirm" class="form-control"
+											<input type="password" name="wachtwoordHerhaal" class="form-control"
 												required />
 											<div class="d-flex flex-sm-row flex-column justify-content-between">
 												<a href="index.php" class="btn bg-light-primary mb-2 mb-sm-0 mt-1">
