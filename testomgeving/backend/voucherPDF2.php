@@ -172,7 +172,7 @@ function voucherPDF2($voucher)
         global $mysqli;
         $result = $mysqli->query($sql);
         $rows = $result->fetch_assoc();
-        return ($rows);
+        return ($rows["voornaam"]." ".$rows["tussenvoegsel"." ".$rows["achternaam"]]);
     }
     $medewerkerNaam = medewerkerNaam();
     $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
