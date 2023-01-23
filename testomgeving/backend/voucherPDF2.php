@@ -149,7 +149,7 @@ function voucherPDF2($voucher)
 </body>
     ';
     
-    function getCompanyName(){
+    function bedrijfNaam(){
         $sql = "SELECT bedrijven.userName FROM `bedrijven`
         INNER JOIN bedrijfmedewerkerlink
         ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
@@ -159,7 +159,7 @@ function voucherPDF2($voucher)
         $rows = $result->fetch_assoc();
         return ($rows['userName']);
     }
-    $bedrijfNaam = getCompanyName();
+    $bedrijfNaam = bedrijfNaam();
 
     str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
 
