@@ -787,7 +787,7 @@ function gebruikerToevoegen(){
 		global $mysqli;
         $email = $_POST['gebruiker_toevoegen'];
         $randPass = bin2hex(random_bytes(12));
-        $sqlCheck = "SELECT * FROM `login` WHERE EMAIL = ? ";
+        $sqlCheck = "SELECT * FROM `login` WHERE email = ? ";
         $stmt = $mysqli->prepare($sqlCheck);
         $stmt->bind_param('s',$email);
         $stmt->execute();
