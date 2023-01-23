@@ -788,7 +788,7 @@ function gebruikerToevoegen(){
         $email = $_POST['gebruiker_toevoegen'];
         $randPass = bin2hex(random_bytes(12));
 
-        $sql = "INSERT INTO `login`('email','password')VALUES(?,?)";
+        $sql = "INSERT INTO `login`(`email`,`password`)VALUES(?,?)";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('ss',$email,$randPass);
         $stmt->execute();
