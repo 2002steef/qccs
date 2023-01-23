@@ -796,8 +796,11 @@ function gebruikerToevoegen(){
 			$to = $email;
             $subject = "Account aangemaakt";
             $msg = "Er is een Casius account voor u aangemaakt. Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
+            $msg .='<br>';
             $msg .= "Bij deze uw inlog gegevens : ";
+			$msg .='<br>';
             $msg .= "Email: " .  " " . $email;
+			$msg .='<br>';
             $msg .= "Wachtwoord: " .  " " . $randPass;
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);
