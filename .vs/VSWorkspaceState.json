@@ -3,9 +3,15 @@
     "",
     "\\casius",
     "\\casius\\backend",
+    "\\casius\\partials",
+    "\\liveomgeving",
     "\\testomgeving",
     "\\testomgeving\\backend"
   ],
-  "SelectedNode": "\\casius\\bewerken.php",
+<<<<<<< HEAD
+  "SelectedNode": "\\casius\\wachtwoord_vergeten.php",
+=======
+  "SelectedNode": "\\liveomgeving\\wachtwoord_vergeten.php",
+>>>>>>> 581d03b74d14b39f524fba967574e6a0cf249e77
   "PreviewInSolutionExplorer": false
 }

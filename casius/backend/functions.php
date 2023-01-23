@@ -761,21 +761,60 @@ function ToevoegenKlanten()
 }
 
 function PassReset(){
-	if(isset($_POST["passEmail"])){
+	if(isset($_POST["btnPassSubmit"])){
 		global $mysqli;
-        $sql = "SELECT * from login WHERE email = ?";
+        $sql = "SELECT email from login WHERE email = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('s',$_POST["passEmail"]);
         $stmt->execute();
-        if($stmt->num_rows === 0){
+        $stmt->bind_result($email);
+        if($stmt->num_rows < 1){
+            $stmt->close();
 			header("Location: wachtwoord_vergeten.php?email");
-		}elseif($stmt->num_rows === 1){
-
-            $to = $_POST["passEmail"];
+		}
+        if($stmt->num_rows > 0){
+            $to = $email;
             $msg = "Hierbij een link om uw wachtwoord te resetten";
             $subject = "Wachtwoord reset";
             $header = "From: Admin@casius.com";
 			mail($to,$subject,$msg,$header);
+		}
+	}
+}
+
+function gebruikerToevoegen(){
+	if(isset($_POST["btnGebruikerToev"])){
+		global $mysqli;
+        $email = $_POST['gebruiker_toevoegen'];
+        $randPass = bin2hex(random_bytes(12));
+        $sqlCheck = "SELECT * FROM `login` WHERE email = ? ";
+        $stmt = $mysqli->prepare($sqlCheck);
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $res = $stmt->get_result();
+        if($res->num_rows < 1){
+            $stmt->close();
+			$sql = "INSERT INTO `login`(`email`,`password`)VALUES(?,?)";
+			$stmt = $mysqli->prepare($sql);
+			$stmt->bind_param('ss',$email,$randPass);
+			$stmt->execute();
+			if($stmt->affected_rows > 0){
+				$to = $email;
+				$subject = "Account aangemaakt";
+				$msg = "Er is een Casius account voor u aangemaakt.\r\n Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
+				
+				$msg .= "\r\n Bij deze uw inlog gegevens :";
+				$msg .= "\r\n Email: " .  " " . $email;
+				$msg .= "\r\n Wachtwoord: " .  " " . $randPass;
+				$headers = "From: Admin@Casius.nl";
+				mail($to, $subject, $msg, $headers);
+				if(mail($to, $subject, $msg, $headers) == true){
+					header("Location:overzicht.php");
+				}
+			}
+		}
+        else{
+			$errMsg =  "Er bestaat al een account met dit email";
 		}
 	}
 }
