@@ -814,7 +814,7 @@ function gebruikerToevoegen(){
 			}
 		}
         else{
-			echo "Er bestaat al een account met dit email";
+			$errMsg =  "Er bestaat al een account met dit email";
 		}
 	}
 }
