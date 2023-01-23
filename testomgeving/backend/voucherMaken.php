@@ -56,20 +56,8 @@ function voucherGebruiken()
     $mail->Body = $bodytext;
     $mail->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf");
     $mail->send();
-    // header("location: ../voucherGebruikt.php");
+    header("location: ../voucherGebruikt.php");
 }
 
 
-// voucherGebruiken();
-function bedrijfNaam(){
-    $sql = "SELECT bedrijven.userName FROM `bedrijven`
-    INNER JOIN bedrijfmedewerkerlink
-    ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
-    WHERE bedrijfmedewerkerlink.userID = 2;";
-    global $mysqli;
-    $result = $mysqli->query($sql);
-    $rows = $result->fetch_assoc();
-    return ($rows['userName']);
-}
-$bedrijfNaam = bedrijfNaam();
-echo($bedrijfNaam);
+voucherGebruiken();

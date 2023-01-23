@@ -149,19 +149,19 @@ function voucherPDF2($voucher)
 </body>
     ';
     
-    // function bedrijfNaam(){
-    //     $sql = "SELECT bedrijven.userName FROM `bedrijven`
-    //     INNER JOIN bedrijfmedewerkerlink
-    //     ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
-    //     WHERE bedrijfmedewerkerlink.userID = 2;";
-    //     global $mysqli;
-    //     $result = $mysqli->query($sql);
-    //     $rows = $result->fetch_assoc();
-    //     return ($rows['userName']);
-    // }
-    // $bedrijfNaam = bedrijfNaam();
+    function bedrijfNaam(){
+        $sql = "SELECT bedrijven.userName FROM `bedrijven`
+        INNER JOIN bedrijfmedewerkerlink
+        ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
+        WHERE bedrijfmedewerkerlink.userID = 2;";
+        global $mysqli;
+        $result = $mysqli->query($sql);
+        $rows = $result->fetch_assoc();
+        return ($rows['userName']);
+    }
+    $bedrijfNaam = bedrijfNaam();
 
-    str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
+    str_replace("[bedrijfNaamPlaceHolder]", "testBedrijf", $html);
 
 
     $dompdf->loadHtml($html);
