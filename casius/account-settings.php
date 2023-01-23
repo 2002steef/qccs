@@ -172,7 +172,7 @@ include "partials/header.php";
 											</div>
 											<!--Gebruiker toevoegen -->
 											<div class="tab-pane" id="gebruiker-toevoegen" role="tabpanel" aria-labelledby="gebruiker-toevoegen-tab">
-												<?php if(isset($errMsg)){ echo $errMsg };?>
+												<?php if(isset($errMsg)){ echo $errMsg } ?>
 												<form method="post">
 													<div class="form-group">
 														<label for="retype-new-password">Gebruiker Toevoegen</label>
