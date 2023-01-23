@@ -803,6 +803,9 @@ function gebruikerToevoegen(){
             $msg = wordwrap($msg, 70);
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);
+            if(mail($to, $subject, $msg, $headers) == true){
+				header("Location:overzicht.php");
+			}
 		}
 	}
 }
