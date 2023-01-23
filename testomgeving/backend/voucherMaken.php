@@ -38,7 +38,6 @@ function getEmail()
     $result = $mysqli->query($sql);
     $rows = $result->fetch_assoc();
     return ($rows['email']);
-    // return $result;
 }
 
 
@@ -57,11 +56,8 @@ function voucherGebruiken()
     $mail->Body = $bodytext;
     $mail->AddAttachment("../vouchers/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf");
     $mail->send();
-    // print_r($mail);
     header("location: ../voucherGebruikt.php");
 }
 
+
 voucherGebruiken();
-    // Dit werkt
-    // $testmsg = "bericht";
-    // mail("steef.van.der.poel@gmail.com", "test", $testmsg);

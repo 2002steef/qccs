@@ -6,10 +6,6 @@ require_once 'dompdf/autoload.inc.php';
 
 function voucherPDF2($voucher)
 {
-    // $filename = "voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf";
-    // $f = fopen($filename, 'w+');
-    // fclose($f);
-
     $dompdf = new Dompdf;
     $html = '
     <head>
@@ -152,17 +148,26 @@ function voucherPDF2($voucher)
 
 </body>
     ';
+    
+    function getCompanyName(){
+        $sql = "SELECT bedrijven.userName FROM `bedrijven`
+        INNER JOIN bedrijfmedewerkerlink
+        ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
+        WHERE bedrijfmedewerkerlink.userID = 2;";
+        global $mysqli;
+        $result = $mysqli->query($sql);
+        $rows = $result->fetch_assoc();
+        return ($rows['userName']);
+    }
+    $bedrijfNaam = getCompanyName();
 
+    str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
 
 
     $dompdf->loadHtml($html);
-
     $customSize = array(0, 0, 550, 290);
     $dompdf->setPaper($customSize);
-
     $dompdf->render();
-    // $dompdf->stream("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", ["Attachment" => 0]);
-
     $output = $dompdf->output();
     file_put_contents("../vouchers/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", $output);
 }
