@@ -9,7 +9,7 @@ include "partials/header.php";
 	//form for submit
 	if (isset($_POST['sub_set'])) {
 		global $mysqli;
-		extract($_POST);
+
 		if ($password == '') {
 			$error[] = 'Please enter the password.';
 		}

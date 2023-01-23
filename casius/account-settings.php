@@ -59,6 +59,18 @@ include "partials/header.php";
 										<span class="align-middle">Wachtwoord veranderen</span>
 									</a>
 								</li>
+								<?php 
+								if($_SESSION['rank'] == "baas")
+								{?>
+								<li class="nav-item">
+									<a class="nav-link" id="add-user-tab" data-toggle="tab" href="#gebruiker-toevoegen" role="tab" aria-controls="gebruiker-toevoegen" aria-selected="false">
+										<i class="ft-lock mr-1 align-middle"></i>
+										<span class="align-middle">Gebruiker toevoegen</span>
+									</a>
+								</li>
+								<?php 
+								}
+								?>
 						
 							</ul>
 						</div>
@@ -158,7 +170,21 @@ include "partials/header.php";
 													</div>
 												</form>
 											</div>
-
+											<!--Gebruiker toevoegen -->
+											<div class="tab-pane" id="gebruiker-toevoegen" role="tabpanel" aria-labelledby="gebruiker-toevoegen-tab">
+												<form method="post">
+													<div class="form-group">
+														<label for="retype-new-password">Gebruiker Toevoegen</label>
+														<div class="controls">
+															<input type="email" name="gebruiker-toevoegen" id="gebruiker-toevoegen" class="form-control" placeholder="Email" required />
+														</div>
+													</div>
+													<div class="d-flex flex-sm-row flex-column justify-content-end">
+														<button name="btnGebruikerToev" type="submit" class="btn btn-outline-light-gray mr-sm-2 mb-1">Gebruiker toevoegen</button>
+														<button type="reset" class="btn btn-outline-light-gray mb-1">Cancel</button>
+													</div>
+												</form>
+											</div>
 										</div>
 									</div>
 								</div>
