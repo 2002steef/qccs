@@ -177,13 +177,13 @@ function voucherPDF2($voucher)
         }
 
         $medewerkerGegevens = medewerkerGegevens();
-        $medewerkerNaam = $medewerkerGegevens[0]." ".$medewerkerGegevens[1]." ".$medewerkerGegevens[2];
+        $medewerkerNaam = $medewerkerGegevens["voornaam"]." ".$medewerkerGegevens["tussenvoegsel"]." ".$medewerkerGegevens["achternaam"];
         
         $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
 
-        $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens[3], $html);
+        $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens["email"], $html);
 
-        $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens[4], $html);
+        $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens["telefoon"], $html);
     
 
     $dompdf->loadHtml($html);
