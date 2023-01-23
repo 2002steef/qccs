@@ -792,7 +792,7 @@ function gebruikerToevoegen(){
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param('ss',$email,$randPass);
         $stmt->execute();
-        if($stmt->num_rows > 0){
+        if($stmt->affected_rows > 0){
 			$to = $email;
             $subject = "Account aangemaakt";
             $msg = "Er is een Casius account voor u aangemaakt. Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
