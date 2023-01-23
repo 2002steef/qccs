@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            /* margin: 0; */
+            /* padding: 0; */
+        }
+
+        #voucherContainer {
+            width: 830pt;
+            height: 340pt;
+            display: flex;
+        }
+
+        #horizontal {
+            width: 700pt;
+            background: rgb(254, 187, 253);
+            background: linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);
+            width: 71%;
+            padding-left: 5%;
+            ;
+        }
+
+        #vertical {
+            width: 29%;
+        }
+
+        #vertical div {
+            transform: rotate(-90deg);
+
+        }
+
+        #vertical div p {
+            margin-top: 35%;
+            width: 60%;
+        }
+
+        #consumerContact {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #masseuseContact1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #masseuseContact2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 50%;
+            margin-left: 10%;
+        }
+        #inVertical{
+            /* text-align: center; */
+        }
+        #voucherCode{
+            position: absolute;
+            font-size: 60px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="voucherContainer">
+        <div id="horizontal">
+            <div id="consumerContact">
+                <h1>Bedrijfs massage abbonnement</h1>
+                <p>Uitgegeven voor:</p>
+                <input type="text" value="{bedrijfPlaceHolder}">
+                <input type="text" value="{namePlaceHolder}">
+                <input type="text" value="{emailPlaceHolder}">
+                <input type="text" value="{phonePlaceHolder}">
+                <p>Massagebedrijf:</p>
+            </div>
+            <div id="masseuseContact1">
+                <input type="text" value="{massesueNamePlaceHolder}">
+                <input type="text" value="{masseusePhonePlacHolder}">
+                <input type="text" value="{masseuseEmailPlaceHolder}">
+            </div>
+            <div id="masseuseContact2">
+                <input type="text" value="{adressPlaceHolder}">
+                <input type="text" value="{postalAndCityPlaceHolder}">
+            </div>
+            <p>De voucher code is enkel af te nemen bij {massesueNamePlaceHolder}.
+                U kunt contact opnemen met uw contactpersoon met de onderstande gegevens voor het maken van een
+                afspraak.</p>
+        </div>
+        <div id="vertical">
+            <div id="inVertical">
+                <h1 id="voucherCode"><b>Code</b></h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

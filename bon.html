@@ -1,129 +1,144 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            main {
-                background-color: lightgray;
-                width: 60%;
-                position: absolute;
-                top: 25vh;
-                left: 2vw;
-            }
-            .box {
-                display: flex;
-            }
-            main div div {
-                display: flex;
-            }
 
-            div div p {
-                background-color: white;
-                color: black;
-                margin: 4px;
-                width: 200px;
-                height: 20px;
-            }
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            h2 {
-                font-size: 30px;
-                transform: rotate(-90deg);
-                position: absolute;
-                right: 24vw;
-                top: 42vh;
-            }
+        body {
+            background: rgb(254, 187, 253);
+            background: linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);
+        }
 
-            h5 {
-                padding-top: 0.5vh;
-                padding-bottom: 0.8vh;
-            }
+        .backWhite {
+            background-color: white;
+            color: black;
+            margin: 4px;
+            width: 350px;
+            height: 20px;
+        }
 
-            h6 {
-                font-size: 12px;
-                transform: rotate(-90deg);
-                position: absolute;
-                right: 25vw;
-                top: 43.5vh;
-            }
+        h2 {
+            margin-top: 30pt;
+            font-size: 35px;
 
-            #text-under {
-                padding-top: 1vh;
-                padding-bottom: 0.5vh;
-            }
+        }
+
+        h6 {
+            margin-top: 30pt;
+            font-size: 12px;
+
+        }
+
+        #masseuseContactTotal {
+            display: flex;
+        }
+
+        #masseuseContact1 {
+            width: 50%;
+            float: left;
+        }
+
+        #masseuseContact2 {
+            width: 50%;
+            float: right;
+        }
+
+        #voucher {
+            width: 550pt;
+            height: 290pt;
             
-        </style>
-    </head>
-    <body>
+        }
+
+        #voucherDetail {
+            width: 100%;
+            text-align: center;
+            margin-top: 40pt;
+        }
+
+        #voucherDetailText {
+            width: 40%;
+            /* float: left; */
+        }
+
+        #voucherCode {
+            width: 60%;
+            /* float: right; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="voucher">
         <main>
             <h1>Bedrijfs massage abonnement</h1>
             <p><b>Uitgegeven voor:</b></p>
             <div id="box">
-                <div id="companyname" class="form-group">
-                    <p>[Massagebedrijfsnaam]</p>
+                <div id="companyName" class="form-group">
+                    <p class="backWhite">[bedrijfNaamPlaceHolder]</p>
                 </div>
-                <div>
-                    <div id="name" class="form-group">
-                        <p for="name">[Voornaam]</p>
-                    </div>
-                    <div id="name2" class="form-group">
-                        <p for="name2">[Tussenvoegsel]</p>
-                    </div>
-                    <div id="name3" class="form-group">
-                        <p for="name3">[Achternaam]</p>
-                    </div>
+                <div id="gebruikerName" class="form-group">
+                    <p class="backWhite" for="name">[naamPlaceHolder]</p>
                 </div>
-                <div id="email" class="form-group">
-                    <p for="email">[E-Mail]</p>
+                <div id="gebruikerEmail" class="form-group">
+                    <p class="backWhite" for="email">[emailPlaceHolder]</p>
                 </div>
-                <div id="phone" class="form-group">
-                    <p for="phone">[Telefoonnummer]</p>
+                <div id="gebruikerPhone class=" form-group">
+                    <p class="backWhite" for="phone">[phonePlaceHolder]</p>
                 </div>
-                <h5>Contactgegevens [Massagebedrijfsnaam]</h5>
-                <p>Contactpersoon</p>
-                <div>
-                    <div id="name" class="form-group">
-                        <p for="name">[Masseusenaam]</p>
-                    </div>
-                    <div>
-                        <div id="name" class="form-group">
-                            <p for="name">[Adres]</p>
+                <p><b>Contactgegevens Massagebedrijfsnaam:</b></p>
+
+                <div id="masseuseContactTotal">
+                    <div id="masseuseContact1">
+                        <div id="masseuseNaam" class="form-group">
+                            <p class="backWhite" for="name">[masseuseNaamPlaceHolder]</p>
                         </div>
-                        <div id="name" class="form-group">
-                            <p for="name">[E-mail]</p>
+
+                        <div id="masseusePhone" class="form-group">
+                            <p class="backWhite" for="name">[masseusePhonePlaceHolder]</p>
                         </div>
-                    </div>    
+                        <div id="masseuseMail" class="form-group">
+                            <p class="backWhite" for="name">[masseuseEmailPlaceHolder]</p>
+                        </div>
+
+                    </div>
+
+                    <div id="masseuseContact2">
+                        <div>
+                            <div id="masseuseCityAndPlace" class="form-group">
+                                <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
+                            </div>
+                        </div>
+                        <div id="masseuseStreetAndNumber" class="form-group">
+                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
+                        </div>
+                        <div id="masseuseStreetAndNumber2" class="form-group">
+                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="voucherDetail">
+                    <h6 id="voucherDetailText">
+                        Hier vind u uw BMA vouchercode
+                        <br>
+                        Deze kunt u verzilveren bij: [masseusePlaceHolder]
+                    </h6>
+                    <h2 id="voucherCode">Soy9UPJycE</h2>
                 </div>
 
-                <div>
-                    <div>                         
-                        <div id="name" class="form-group">
-                            <p for="name">[Nummer]</p>
-                        </div>
-                    </div>  
-                    <div id="name" class="form-group">
-                        <p for="name">[Postcode en Plaats]</p>
-                    </div>
-                </div>
-            </div>    
-            <p id="text-under">De voucher code is enkel af te nemen bij [Massagebedrijfsnaam].
-                <br>
-                U kunt contact opnemen met uw contactpersoon met de onderstaande gegevens voor het maken van een afspraak.
-            </p>
+            </div>
+
         </main>
-        
-        <h6>
-            Hier vind u uw [Massagebedrijfsnaam] vouchercode
-            <br>
-            Deze kunt u verzilveren bij: [Massagebedrijfsnaam]
-        </h6>
 
-        <h2>[Placeholder]</h2>
 
-        
+    </div>
 
-    </body>
-</html>     
+
+</body>
+
+</html>
