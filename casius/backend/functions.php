@@ -799,8 +799,6 @@ function gebruikerToevoegen(){
             $msg = "Bij deze uw inlog gegevens : ";
             $msg = "Email: " .  " " . $email;
             $msg = "Wachtwoord: " .  " " . $randPass;
-
-            $msg = wordwrap($msg, 70);
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);
             if(mail($to, $subject, $msg, $headers) == true){
