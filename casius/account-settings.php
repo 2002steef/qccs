@@ -60,7 +60,7 @@ include "partials/header.php";
 									</a>
 								</li>
 								<?php 
-								if($_SESSION['rank'] == "baas")
+								if($_SESSION['rank'] == "Baas")
 								{?>
 								<li class="nav-item">
 									<a class="nav-link" id="add-user-tab" data-toggle="tab" href="#gebruiker-toevoegen" role="tab" aria-controls="gebruiker-toevoegen" aria-selected="false">
