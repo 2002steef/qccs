@@ -795,13 +795,11 @@ function gebruikerToevoegen(){
         if($stmt->affected_rows > 0){
 			$to = $email;
             $subject = "Account aangemaakt";
-            $msg = "Er is een Casius account voor u aangemaakt. Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
-            $msg .='<br>';
-            $msg .= "Bij deze uw inlog gegevens : ";
-			$msg .='<br>';
-            $msg .= "Email: " .  " " . $email;
-			$msg .='<br>';
-            $msg .= "Wachtwoord: " .  " " . $randPass;
+            $msg = "Er is een Casius account voor u aangemaakt.\r\n Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
+        
+            $msg .= "\r\n Bij deze uw inlog gegevens :";
+            $msg .= "\r\n Email: " .  " " . $email;
+            $msg .= "\r\n Wachtwoord: " .  " " . $randPass;
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);
             if(mail($to, $subject, $msg, $headers) == true){
