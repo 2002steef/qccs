@@ -172,18 +172,18 @@ function voucherPDF2($voucher)
             $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `medewerkers` WHERE userID = " . $medewerkerID;
             global $mysqli;
             $result = $mysqli->query($sql);
-            $rows = $result->fetch_assoc();
+            $rows = $result->fetch_array();
             return ($rows);
         }
 
         $medewerkerGegevens = medewerkerGegevens();
-        $medewerkerNaam = $medewerkerGegevens["voornaam"]." ".$medewerkerGegevens["tussenvoegsel"]." ".$medewerkerGegevens["achternaam"];
+        $medewerkerNaam = $medewerkerGegevens[0]." ".$medewerkerGegevens[1]." ".$medewerkerGegevens[2];
         
         $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
 
-        $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens["email"], $html);
+        $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens[3], $html);
 
-        $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens["telefoon"], $html);
+        $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens[4], $html);
     
 
     $dompdf->loadHtml($html);
