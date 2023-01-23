@@ -37,7 +37,7 @@ include "partials/header.php";
 
 			$resetpassSql = "UPDATE `login` SET password = ? WHERE email= ?";
 			$stmt = $mysqli->prepare($resetpassSql);
-			$stmt->bind_param("ss", $password,$emailtok);
+			$stmt->bind_param("ss", $password,$email);
 			$stmt->execute();
 			$resultresetpass = $stmt->affected_rows;
 
