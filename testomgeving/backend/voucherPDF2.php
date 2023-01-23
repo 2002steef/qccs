@@ -160,9 +160,7 @@ function voucherPDF2($voucher)
         return ($rows['userName']);
     }
     $bedrijfNaam = bedrijfNaam();
-
-    str_replace("[bedrijfNaamPlaceHolder]", "testBedrijf", $html);
-
+    $html = str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
 
     $dompdf->loadHtml($html);
     $customSize = array(0, 0, 550, 290);
