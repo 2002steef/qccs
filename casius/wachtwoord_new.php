@@ -33,8 +33,6 @@ include "partials/header.php";
 		$resultToken = $stmt->get_result();
 		if ($res = $resultToken->fetch_array()) {
 			$email = $res['email'];
-			if (isset($email) && !empty($email) ) {
-
 			$resetpassSql = "UPDATE `login` SET password = ? WHERE email= ?";
 			$stmt = $mysqli->prepare($resetpassSql);
 			$stmt->bind_param("ss", $password,$email);
@@ -50,13 +48,10 @@ include "partials/header.php";
 				$stmt->bind_param("s", $emailtok);
 				$stmt->execute();
 
-				
 				}else {
 				$error[] = 'Deze sessie is niet langer meer geldig';
 				}
 			}
-		}
-
 		$stmt->close();
 
 	}
