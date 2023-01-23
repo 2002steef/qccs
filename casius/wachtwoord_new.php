@@ -3,15 +3,13 @@
 include "backend/functions.php";
 include "partials/header.php";
 
-	if (isset($_GET['token'])) {
-		$token = $_GET['token'];
-	}
+
 	//form for submit
 	if (isset($_POST['sub_set'])) {
 		global $mysqli;
 		$password = $_POST['wachtwoord'];
 		$passwordConfirm = $_POST['wachtwoordHerhaal'];
-
+		$token = $_GET['token'];
 
 		if ($password == '') {
 			$error[] = 'Please enter the password.';
@@ -28,7 +26,7 @@ include "partials/header.php";
 		if (strlen($password) > 50) { // Max
 			$error[] = 'Password: Max length 50 Characters Not allowed';
 		}
-		$fetchresultok = "SELECT email FROM `login` WHERE reset_token=?";
+		$fetchresultok = "SELECT email FROM `login` WHERE reset_token = ?";
 		$stmt = $mysqli->prepare($fetchresultok);
 		$stmt->bind_param("s", $token);
 		$stmt->execute();
