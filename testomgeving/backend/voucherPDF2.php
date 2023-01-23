@@ -164,5 +164,5 @@ function voucherPDF2($voucher)
     // $dompdf->stream("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", ["Attachment" => 0]);
 
     $output = $dompdf->output();
-    file_put_contents("voucherpdf/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", $output);
+    file_put_contents("../vouchers/user" . $_SESSION['id'] . "Voucher" . $voucher . ".pdf", $output);
 }
