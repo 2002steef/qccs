@@ -787,23 +787,29 @@ function gebruikerToevoegen(){
 		global $mysqli;
         $email = $_POST['gebruiker_toevoegen'];
         $randPass = bin2hex(random_bytes(12));
-
-        $sql = "INSERT INTO `login`(`email`,`password`)VALUES(?,?)";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param('ss',$email,$randPass);
+        $sqlCheck = "SELECT * FROM `login` WHERE EMAIL = ? ";
+        $stmt = $mysqli->prepare($sqlCheck);
+        $stmt->bind_param('s',$email);
         $stmt->execute();
-        if($stmt->affected_rows > 0){
-			$to = $email;
-            $subject = "Account aangemaakt";
-            $msg = "Er is een Casius account voor u aangemaakt.\r\n Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
-        
-            $msg .= "\r\n Bij deze uw inlog gegevens :";
-            $msg .= "\r\n Email: " .  " " . $email;
-            $msg .= "\r\n Wachtwoord: " .  " " . $randPass;
-            $headers = "From: Admin@Casius.nl";
-            mail($to, $subject, $msg, $headers);
-            if(mail($to, $subject, $msg, $headers) == true){
-				header("Location:overzicht.php");
+        if($stmt->num_rows < 1){
+            $stmt->close();
+			$sql = "INSERT INTO `login`(`email`,`password`)VALUES(?,?)";
+			$stmt = $mysqli->prepare($sql);
+			$stmt->bind_param('ss',$email,$randPass);
+			$stmt->execute();
+			if($stmt->affected_rows > 0){
+				$to = $email;
+				$subject = "Account aangemaakt";
+				$msg = "Er is een Casius account voor u aangemaakt.\r\n Log in en verander uw gebruikersnaam wachtwoord zo snel mogelijk. ";
+				
+				$msg .= "\r\n Bij deze uw inlog gegevens :";
+				$msg .= "\r\n Email: " .  " " . $email;
+				$msg .= "\r\n Wachtwoord: " .  " " . $randPass;
+				$headers = "From: Admin@Casius.nl";
+				mail($to, $subject, $msg, $headers);
+				if(mail($to, $subject, $msg, $headers) == true){
+					header("Location:overzicht.php");
+				}
 			}
 		}
 	}
