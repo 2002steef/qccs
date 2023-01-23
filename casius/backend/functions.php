@@ -791,7 +791,8 @@ function gebruikerToevoegen(){
         $stmt = $mysqli->prepare($sqlCheck);
         $stmt->bind_param('s',$email);
         $stmt->execute();
-        if($stmt->num_rows < 1){
+        $res = $stmt->get_result();
+        if($res->num_rows < 1){
             $stmt->close();
 			$sql = "INSERT INTO `login`(`email`,`password`)VALUES(?,?)";
 			$stmt = $mysqli->prepare($sql);
