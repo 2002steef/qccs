@@ -150,10 +150,11 @@ function voucherPDF2($voucher)
     ';
     
     function bedrijfNaam(){
+        $medewerkerID = $_SESSION["id"];
         $sql = "SELECT bedrijven.userName FROM `bedrijven`
         INNER JOIN bedrijfmedewerkerlink
         ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
-        WHERE bedrijfmedewerkerlink.userID = 2;";
+        WHERE bedrijfmedewerkerlink.userID = ".$medewerkerID.";";
         global $mysqli;
         $result = $mysqli->query($sql);
         $rows = $result->fetch_assoc();
