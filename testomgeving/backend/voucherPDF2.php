@@ -176,10 +176,15 @@ function voucherPDF2($voucher)
             return ($rows);
         }
 
+        function masseuseGegevens(){
+            $masseuseID = $_POST['modalMasseuseID'];
+            $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `masseuses` WHERE userID = " . $masseuseID;
+        }
+
         $medewerkerGegevens = medewerkerGegevens();
         $medewerkerNaam = $medewerkerGegevens[0]." ".$medewerkerGegevens[1]." ".$medewerkerGegevens[2];
         
-        $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
+        $html = str_replace("[naamPlaceHolder]", "https://www.w3schools.com/php/func_mysqli_fetch_assoc.asp", $html);
 
         $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens[3], $html);
 
