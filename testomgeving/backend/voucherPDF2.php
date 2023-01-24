@@ -137,7 +137,7 @@ function voucherPDF2($voucher)
                         <br>
                         Deze kunt u verzilveren bij: [masseusePlaceHolder]
                     </h6>
-                    <h2 id="voucherCode">Soy9UPJycE</h2>
+                    <h2 id="voucherCode">[voucherPlaceHolder]</h2>
                 </div>
 
             </div>
@@ -211,6 +211,8 @@ function voucherPDF2($voucher)
     $html = str_replace("[streetAndHouseNumberPlaceHolder]", $masseuseAdres, $html);
 
     $html = str_replace("[postalAndCityPlaceHolder]", $masseusePostal, $html);
+
+    $html = str_replace("[voucherPlaceHolder]", $voucher, $html);
 
     $dompdf->loadHtml($html);
     $customSize = array(0, 0, 550, 290);
