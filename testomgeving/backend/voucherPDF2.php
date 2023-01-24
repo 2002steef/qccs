@@ -181,11 +181,20 @@ function voucherPDF2($voucher)
     function masseuseGegevens()
     {
         $masseuseID = $_POST['modalMasseuseID'];
-        $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `masseuses` WHERE userID = " . $masseuseID;
+        $sql = "SELECT voornaam, tussenvoegsel, achternaam, telefoon, email, postcode, plaats, straat, huisNummer
+        FROM `masseuses` WHERE masseuseID = " . $masseuseID;
+        global $mysqli;
+        $result = $mysqli->query($sql);
+        $rows = $result->fetch_array();
+        return ($rows);
     }
 
     $medewerkerGegevens = medewerkerGegevens();
+    $masseuseGegevens = masseuseGegevens();
     $medewerkerNaam = $medewerkerGegevens[0] . " " . $medewerkerGegevens[1] . " " . $medewerkerGegevens[2];
+    $masseuseNaam = $masseuseGegevens[0] . " " . $masseuseGegevens[1] . " " . $masseuseGegevens[2];
+    $masseuseAdres = $masseuseGegevens[7] . " " . $masseuseGegevens[8];
+    $masseusePostal = $masseuseGegevens[5] . " " . $masseuseGegevens[6];
 
     $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
 
@@ -193,6 +202,15 @@ function voucherPDF2($voucher)
 
     $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens[4], $html);
 
+    $html = str_replace("[masseuseNaamPlaceHolder]", $masseuseNaam, $html);
+
+    $html = str_replace("[masseusePhonePlaceHolder]", $masseuseGegevens[3], $html);
+
+    $html = str_replace("[masseuseEmailPlaceHolder]", $masseuseGegevens[4], $html);
+
+    $html = str_replace("[masseusePhonePlaceHolder]", $masseuseAdres, $html);
+
+    $html = str_replace("[masseusePhonePlaceHolder]", $masseusePostal, $html);
 
     $dompdf->loadHtml($html);
     $customSize = array(0, 0, 550, 290);
