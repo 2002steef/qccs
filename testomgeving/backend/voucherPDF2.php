@@ -208,9 +208,9 @@ function voucherPDF2($voucher)
 
     $html = str_replace("[masseuseEmailPlaceHolder]", $masseuseGegevens[4], $html);
 
-    $html = str_replace("[masseusePhonePlaceHolder]", $masseuseAdres, $html);
+    $html = str_replace("[streetAndHouseNumberPlaceHolder]", $masseuseAdres, $html);
 
-    $html = str_replace("[masseusePhonePlaceHolder]", $masseusePostal, $html);
+    $html = str_replace("[postalAndCityPlaceHolder]", $masseusePostal, $html);
 
     $dompdf->loadHtml($html);
     $customSize = array(0, 0, 550, 290);
