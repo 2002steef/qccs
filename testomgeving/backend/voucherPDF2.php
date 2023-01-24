@@ -115,15 +115,17 @@ function voucherPDF2($voucher)
                     </div>
 
                     <div id="masseuseContact2">
-                        <div>
-                        <div id="masseuseStreetAndNumber" class="form-group">
-                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
-                        </div>
+                        
                             <div id="masseuseCityAndPlace" class="form-group">
                                 <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
                             </div>
-                        </div>
                         
+                        <div id="masseuseStreetAndNumber" class="form-group">
+                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
+                        </div>
+                        <div id="masseuseStreetAndNumber2" class="form-group">
+                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -148,47 +150,46 @@ function voucherPDF2($voucher)
     ';
 
 
-    function bedrijfNaam()
-    {
-        $medewerkerID = $_SESSION["id"];
-        $sql = "SELECT bedrijven.userName FROM `bedrijven`
+        function bedrijfNaam()
+        {
+            $medewerkerID = $_SESSION["id"];
+            $sql = "SELECT bedrijven.userName FROM `bedrijven`
         INNER JOIN bedrijfmedewerkerlink
         ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
         WHERE bedrijfmedewerkerlink.userID = " . $medewerkerID . ";";
-        global $mysqli;
-        $result = $mysqli->query($sql);
-        $rows = $result->fetch_assoc();
-        return ($rows['userName']);
-    }
+            global $mysqli;
+            $result = $mysqli->query($sql);
+            $rows = $result->fetch_assoc();
+            return ($rows['userName']);
+        }
 
-    $bedrijfNaam = bedrijfNaam();
-    $html = str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
+        $bedrijfNaam = bedrijfNaam();
+        $html = str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
 
-    function medewerkerGegevens()
-    {
-        $medewerkerID = $_SESSION["id"];
-        $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `medewerkers` WHERE userID = " . $medewerkerID;
-        global $mysqli;
-        $result = $mysqli->query($sql);
-        $rows = $result->fetch_array();
-        return ($rows);
-    }
+        function medewerkerGegevens()
+        {
+            $medewerkerID = $_SESSION["id"];
+            $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `medewerkers` WHERE userID = " . $medewerkerID;
+            global $mysqli;
+            $result = $mysqli->query($sql);
+            $rows = $result->fetch_array();
+            return ($rows);
+        }
 
-    function masseuseGegevens()
-    {
-        $masseuseID = $_POST['modalMasseuseID'];
-        $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `masseuses` WHERE userID = " . $masseuseID;
-    }
+        function masseuseGegevens(){
+            $masseuseID = $_POST['modalMasseuseID'];
+            $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `masseuses` WHERE userID = " . $masseuseID;
+        }
 
-    $medewerkerGegevens = medewerkerGegevens();
-    $medewerkerNaam = $medewerkerGegevens[0] . " " . $medewerkerGegevens[1] . " " . $medewerkerGegevens[2];
+        $medewerkerGegevens = medewerkerGegevens();
+        $medewerkerNaam = $medewerkerGegevens[0]." ".$medewerkerGegevens[1]." ".$medewerkerGegevens[2];
+        
+        $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
 
-    $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
+        $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens[3], $html);
 
-    $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens[3], $html);
-
-    $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens[4], $html);
-
+        $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens[4], $html);
+    
 
     $dompdf->loadHtml($html);
     $customSize = array(0, 0, 550, 290);
