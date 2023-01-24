@@ -194,7 +194,7 @@ function voucherPDF2($voucher)
     $medewerkerNaam = $medewerkerGegevens[0] . " " . $medewerkerGegevens[1] . " " . $medewerkerGegevens[2];
     $masseuseNaam = $masseuseGegevens[0] . " " . $masseuseGegevens[1] . " " . $masseuseGegevens[2];
     $masseuseAdres = $masseuseGegevens[7] . " " . $masseuseGegevens[8];
-    $masseusePostal = $masseuseGegevens[5] . " " . $masseuseGegevens[6];
+    $masseusePostal = $masseuseGegevens[5] . ", " . $masseuseGegevens[6];
 
     $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
 
