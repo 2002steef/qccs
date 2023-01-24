@@ -20,6 +20,9 @@ function voucherPDF2($voucher)
             background: rgb(254, 187, 253);
             background: linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);
         }
+        .invis {
+            color: rgb(254, 187, 253);
+        }
 
         .backWhite {
             background-color: white;
@@ -123,7 +126,7 @@ function voucherPDF2($voucher)
                             <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
                         </div>
                         <div id="masseuseStreetAndNumber2" class="form-group">
-                            <p></p>
+                            <p class="invis"></p>
                         </div>
                     </div>
                 </div>
