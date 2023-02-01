@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$password = trim($_POST["wachtwoord"]);
 	}
 
-    if (empty($username_err) && empty($password_err)) {
+    if (!empty($username_err) && !empty($password_err)) {
 
         $_SESSION['email'] = $_POST['email'];
         if ($stmt = $mysqli->prepare('SELECT `user_ID`, `userName`, `password`, `email`,`rank` FROM `login` WHERE email = ?')) {
