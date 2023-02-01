@@ -28,11 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['rank'] = $rank;
                     header("Location:../overzicht.php");
                 }
-                else {
-                    // Incorrect password
-                    header("Location:../index.php?login=foutecombi");
-                }
+
             }
+			else {
+				// Incorrect password
+				header("Location:../index.php?login=foutecombi");
+			}
         }
     }
 }
