@@ -48,7 +48,7 @@ include "partials/header.php";
 				$stmt->bind_param("s", $emailtok);
 				$stmt->execute();
 
-				}else {
+			}else {
 				$error[] = 'Deze sessie is niet langer meer geldig';
 				}
 		$stmt->close();

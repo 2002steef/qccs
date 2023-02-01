@@ -3,11 +3,22 @@
 include "functions.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $mysqli;
-    if (!isset($_POST['email'], $_POST['wachtwoord'])) {
-        // Could not get the data that should have been sent.
-        header("Location:../index.php?login=leeg");
-    }
-    if (isset($_POST['email'], $_POST['wachtwoord'])) {
+
+	if(empty(trim($_POST["email"]))){
+		$username_err = "Vul uw email in.";
+	} else{
+		$username = trim($_POST["email"]);
+	}
+
+	// Check if password is empty
+	if(empty(trim($_POST["wachtwoord"]))){
+		$password_err = "Vul uw wachtwoord in.";
+	} else{
+		$password = trim($_POST["wachtwoord"]);
+	}
+
+    if (empty($username_err) && empty($password_err)) {
+
         $_SESSION['email'] = $_POST['email'];
         if ($stmt = $mysqli->prepare('SELECT `user_ID`, `userName`, `password`, `email`,`rank` FROM `login` WHERE email = ?')) {
             // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
@@ -30,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
                 else {
                     // Incorrect password
-                    header("Location:../index.php?login=foutecombi");
+                    header("Location:../index.php");
                 }
             }
         }
