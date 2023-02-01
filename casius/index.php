@@ -31,10 +31,15 @@ include "partials/header.php";
                                                 <div class="col-lg-6 col-12 px-4 py-3">
                                                     <h4 class="mb-2 card-title">Login</h4>
 													<?php
-                                                    if(!empty($login_err)){
-                                                        echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                                                    if (isset($_GET["login"])){
+                                                        if ($_GET["login"] == "foutecombi"){
+                                                            echo "<p class='text-danger'>Je hebt geen geldige combinatie van email en wachtwoord ! </p>";
+                                                        }
+														if ($_GET["login"] == "leeg"){
+                                                            echo "<p class='text-danger'>Vul alle velden in ! </p>";
+                                                        }
                                                     }
-													?>
+                                                    ?>
                                                     <p>Welkom terug Jerry, log in om verder te gaan.</p>
                                                     <input type="text" name="email" class="form-control mb-3" placeholder="E-mail" value="<?php if (isset($_SESSION['email'])){echo $_SESSION['email'];} ?>">
                                                     <input type="password" name="wachtwoord" class="form-control mb-2" placeholder="Wachtwoord">
