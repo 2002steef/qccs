@@ -9,6 +9,46 @@ include "partials/header.php";
     header("location: overzicht.php");
     exit();
 }
+    <!-- login functie -->
+<?php
+include "functions.php";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    global $mysqli;
+    if (!isset($_POST['email'], $_POST['wachtwoord'])) {
+        // Could not get the data that should have been sent.
+       $errMsg = "Vul iets in !";
+    }
+    if (isset($_POST['email'], $_POST['wachtwoord'])) {
+        $_SESSION['email'] = $_POST['email'];
+        if ($stmt = $mysqli->prepare('SELECT `user_ID`, `userName`, `password`, `email`,`rank` FROM `login` WHERE email = ?')) {
+            // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+            $stmt->bind_param('s', $_POST['email']);
+            $stmt->execute();
+
+            // Store the result so we can check if the account exists in the database.
+            $stmt->store_result();
+
+            if ($stmt->num_rows > 0) {
+                $stmt->bind_result($id, $userName, $password, $email,$rank);
+                $stmt->fetch();
+                if ($_POST['wachtwoord'] == $password) {
+                    session_regenerate_id();
+                    $_SESSION['loggedin'] = true;
+                    $_SESSION['name'] = $username;
+                    $_SESSION['id'] = $id;
+                    $_SESSION['rank'] = $rank;
+                    header("Location:../overzicht.php");
+                }
+
+            }
+			else {
+				// Incorrect password
+
+			$errMsg = "Onjuiste gebruikersnaam of wachtwoord !";
+			}
+        }
+    }
+}
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
@@ -17,7 +57,7 @@ include "partials/header.php";
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">            <!-- BEGIN : Main Content-->
                     <!--Login Page Starts-->
-                    <form method="post" action="backend/fnctLogin.php" >
+                    <form method="post" action="" >
                     <section id="login" class="auth-height">
                         <div class="row full-height-vh m-0">
                             <div class="col-12 d-flex align-items-center justify-content-center">
@@ -31,15 +71,10 @@ include "partials/header.php";
                                                 <div class="col-lg-6 col-12 px-4 py-3">
                                                     <h4 class="mb-2 card-title">Login</h4>
 													<?php
-                                                    if (isset($_GET["login"])){
-                                                        if ($_GET["login"] == "foutecombi"){
-                                                            echo "<p class='text-danger'>Je hebt geen geldige combinatie van email en wachtwoord ! </p>";
+                                                        if(!empty($errMsg)){
+                                                         echo '<div class="alert alert-danger">' . $errMsg . '</div>';
                                                         }
-														if ($_GET["login"] == "leeg"){
-                                                            echo "<p class='text-danger'>Vul alle velden in ! </p>";
-                                                        }
-                                                    }
-                                                    ?>
+													?>
                                                     <p>Welkom terug Jerry, log in om verder te gaan.</p>
                                                     <input type="text" name="email" class="form-control mb-3" placeholder="E-mail" value="<?php if (isset($_SESSION['email'])){echo $_SESSION['email'];} ?>">
                                                     <input type="password" name="wachtwoord" class="form-control mb-2" placeholder="Wachtwoord">
