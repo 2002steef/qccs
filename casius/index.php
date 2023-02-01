@@ -9,8 +9,7 @@ include "partials/header.php";
     header("location: overzicht.php");
     exit();
 }
-    <!-- login functie -->
-<?php
+ 
 include "functions.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $mysqli;
