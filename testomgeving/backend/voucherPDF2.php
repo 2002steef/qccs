@@ -20,6 +20,9 @@ function voucherPDF2($voucher)
             background: rgb(254, 187, 253);
             background: linear-gradient(135deg, rgba(254, 187, 253, 1) 0%, rgba(245, 226, 243, 1) 100%);
         }
+        .invis {
+            color: rgb(254, 187, 253);
+        }
 
         .backWhite {
             background-color: white;
@@ -115,16 +118,15 @@ function voucherPDF2($voucher)
                     </div>
 
                     <div id="masseuseContact2">
-                        <div>
-                            <div id="masseuseCityAndPlace" class="form-group">
-                                <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
-                            </div>
-                        </div>
+                        
                         <div id="masseuseStreetAndNumber" class="form-group">
                             <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
                         </div>
+                        <div id="masseuseCityAndPlace" class="form-group">
+                            <p class="backWhite" for="name">[postalAndCityPlaceHolder]</p>
+                        </div>
                         <div id="masseuseStreetAndNumber2" class="form-group">
-                            <p class="backWhite" for="name">[streetAndHouseNumberPlaceHolder]</p>
+                            <p class="invis">.</p>
                         </div>
                     </div>
                 </div>
@@ -135,7 +137,7 @@ function voucherPDF2($voucher)
                         <br>
                         Deze kunt u verzilveren bij: [masseusePlaceHolder]
                     </h6>
-                    <h2 id="voucherCode">Soy9UPJycE</h2>
+                    <h2 id="voucherCode">[voucherPlaceHolder]</h2>
                 </div>
 
             </div>
@@ -150,41 +152,67 @@ function voucherPDF2($voucher)
     ';
 
 
-        function bedrijfNaam()
-        {
-            $medewerkerID = $_SESSION["id"];
-            $sql = "SELECT bedrijven.userName FROM `bedrijven`
+    function bedrijfNaam()
+    {
+        $medewerkerID = $_SESSION["id"];
+        $sql = "SELECT bedrijven.userName FROM `bedrijven`
         INNER JOIN bedrijfmedewerkerlink
         ON bedrijfmedewerkerlink.bedrijfID = bedrijven.bedrijfID
         WHERE bedrijfmedewerkerlink.userID = " . $medewerkerID . ";";
-            global $mysqli;
-            $result = $mysqli->query($sql);
-            $rows = $result->fetch_assoc();
-            return ($rows['userName']);
-        }
+        global $mysqli;
+        $result = $mysqli->query($sql);
+        $rows = $result->fetch_assoc();
+        return ($rows['userName']);
+    }
 
-        $bedrijfNaam = bedrijfNaam();
-        $html = str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
+    $bedrijfNaam = bedrijfNaam();
+    $html = str_replace("[bedrijfNaamPlaceHolder]", $bedrijfNaam, $html);
 
-        function medewerkerGegevens()
-        {
-            $medewerkerID = $_SESSION["id"];
-            $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `medewerkers` WHERE userID = " . $medewerkerID;
-            global $mysqli;
-            $result = $mysqli->query($sql);
-            $rows = $result->fetch_assoc();
-            return ($rows);
-        }
+    function medewerkerGegevens()
+    {
+        $medewerkerID = $_SESSION["id"];
+        $sql = "SELECT voornaam, tussenvoegsel, achternaam, email, telefoon FROM `medewerkers` WHERE userID = " . $medewerkerID;
+        global $mysqli;
+        $result = $mysqli->query($sql);
+        $rows = $result->fetch_array();
+        return ($rows);
+    }
 
-        $medewerkerGegevens = medewerkerGegevens();
-        $medewerkerNaam = $medewerkerGegevens[0]." ".$medewerkerGegevens[1]." ".$medewerkerGegevens[2];
-        
-        $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
+    function masseuseGegevens()
+    {
+        $masseuseID = $_POST['modalMasseuseID'];
+        $sql = "SELECT voornaam, tussenvoegsel, achternaam, telefoon, email, postcode, plaats, straat, huisNummer
+        FROM `masseuses` WHERE masseuseID = " . $masseuseID;
+        global $mysqli;
+        $result = $mysqli->query($sql);
+        $rows = $result->fetch_array();
+        return ($rows);
+    }
 
-        $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens[3], $html);
+    $medewerkerGegevens = medewerkerGegevens();
+    $masseuseGegevens = masseuseGegevens();
+    $medewerkerNaam = $medewerkerGegevens[0] . " " . $medewerkerGegevens[1] . " " . $medewerkerGegevens[2];
+    $masseuseNaam = $masseuseGegevens[0] . " " . $masseuseGegevens[1] . " " . $masseuseGegevens[2];
+    $masseuseAdres = $masseuseGegevens[7] . " " . $masseuseGegevens[8];
+    $masseusePostal = $masseuseGegevens[5] . ", " . $masseuseGegevens[6];
 
-        $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens[4], $html);
-    
+    $html = str_replace("[naamPlaceHolder]", $medewerkerNaam, $html);
+
+    $html = str_replace("[emailPlaceHolder]", $medewerkerGegevens[3], $html);
+
+    $html = str_replace("[phonePlaceHolder]", $medewerkerGegevens[4], $html);
+
+    $html = str_replace("[masseuseNaamPlaceHolder]", $masseuseNaam, $html);
+
+    $html = str_replace("[masseusePhonePlaceHolder]", $masseuseGegevens[3], $html);
+
+    $html = str_replace("[masseuseEmailPlaceHolder]", $masseuseGegevens[4], $html);
+
+    $html = str_replace("[streetAndHouseNumberPlaceHolder]", $masseuseAdres, $html);
+
+    $html = str_replace("[postalAndCityPlaceHolder]", $masseusePostal, $html);
+
+    $html = str_replace("[voucherPlaceHolder]", $voucher, $html);
 
     $dompdf->loadHtml($html);
     $customSize = array(0, 0, 550, 290);
