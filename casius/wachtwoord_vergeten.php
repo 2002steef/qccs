@@ -26,7 +26,7 @@ if (isset($_POST['btnPassSubmit'])) {
             $msg = wordwrap($msg, 70);
             $headers = "From: Admin@Casius.nl";
             mail($to, $subject, $msg, $headers);
-            header('location:/casius/index.php');
+			$error[] = "Er is een resetmail gestuurd"  ;
         } else{
 			echo "$email komt niet voor in de database";
 		}
@@ -59,8 +59,11 @@ if (isset($_POST['btnPassSubmit'])) {
 													</div>
 													<div class="col-lg-6 col-md-12 px-4 py-3">
 														<h4 class="mb-2 card-title">Wachtwoord Vergeten</h4>
-														<?php if(isset($_POST["btnPassSubmit"])){echo "<p class='text-danger'> Als er een account bestaat met het ingevoerde email is er een link om uw wachtwoord te reseetten 
-																									naar toe gestuurd</p>";} ?>
+														<?php if(isset($error)){
+										foreach($error as $error){
+											echo '<div class="errmsg">'.$error.'</div><br>';
+										}
+									} ?>
 														<p class="card-text mb-3">Vul uw email in om een wachtwoord reset link te krijgen.</p>
 														<input type="email" class="form-control mb-3" placeholder="Email" name="passEmail" />
 														<div class="d-flex flex-sm-row flex-column justify-content-between">
