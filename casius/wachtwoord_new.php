@@ -31,22 +31,21 @@ include "partials/header.php";
 		$stmt->bind_param("s", $token);
 		$stmt->execute();
 		$resultToken = $stmt->get_result();
-		$stmt->close();
+		
+		
 			$email = $res['email'];
 			$resetpassSql = "UPDATE `login` SET password = ? WHERE email= ?";
-			$stmt = $mysqli->prepare($resetpassSql);
-			$stmt->bind_param("ss", $password,$email);
-			$stmt->execute();
-			$resultresetpass = $stmt->affected_rows;
-
+			$stmt2 = $mysqli->prepare($resetpassSql);
+			$stmt2->bind_param("ss", $password,$email);
+			$stmt2->execute();
+			$resultresetpass = $stmt2->affected_rows;
+		
 			if ($resultresetpass > 0) {
 				$success = "<div></span>
 						<br>Je wachtwoord is succesvol gewijzigd<br>
 						<a href='index.php'>klik hier om in te loggen</a> </div>";
 				$sqldel = "UPDATE `login` SET reset_token = '' WHERE email=?";
-				$stmt = $mysqli->prepare($sqldel);
-				$stmt->bind_param("s", $emailtok);
-				$stmt->execute();
+				
 
 			}else {
 				$error[] = 'Deze sessie is niet langer meer geldig';
