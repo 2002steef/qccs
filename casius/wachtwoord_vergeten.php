@@ -28,7 +28,7 @@ if (isset($_POST['btnPassSubmit'])) {
             mail($to, $subject, $msg, $headers);
 			$error[] = "Er is een resetmail gestuurd"  ;
         } else{
-			echo "$email komt niet voor in de database";
+			$error[] ="Email komt niet voor in de database";
 		}
     }
 }
