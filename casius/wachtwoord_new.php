@@ -5,7 +5,7 @@ include "partials/header.php";
 
 
 	//form for submit
-	if (isset($_POST['sub_set'])) {
+	if (isset($_POST['subSet'])) {
 		global $mysqli;
 		$password = $_POST['wachtwoord'];
 		$passwordConfirm = $_POST['wachtwoordHerhaal'];
@@ -31,7 +31,7 @@ include "partials/header.php";
 		$stmt->bind_param("s", $token);
 		$stmt->execute();
 		$resultToken = $stmt->get_result();
-		
+		$stmt->close();
 			$email = $res['email'];
 			$resetpassSql = "UPDATE `login` SET password = ? WHERE email= ?";
 			$stmt = $mysqli->prepare($resetpassSql);
@@ -96,7 +96,7 @@ include "partials/header.php";
 													Back
                                                 To Login
 												</a>
-												<button class="btn btn-primary ml-sm-1 mt-1" type="submit" name="sub_set">
+												<button class="btn btn-primary ml-sm-1 mt-1" type="submit" name="subSet">
 													Wijzig
                                                 wachtwoord
 												</button>
